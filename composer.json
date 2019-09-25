@@ -1,0 +1,36 @@
+{
+    "name": "bitmovin/bitmovin-api-sdk-php",
+    "description": "This is the Bitmovin API SDK for PHP",
+    "version": "1.24.0-ALPHA0",
+    "authors": [
+        {
+            "name": "Bitmovin Inc",
+            "email": "support@bitmovin.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "nesbot/carbon": "^2.17"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "^1.2",
+        "psr/log": "^1.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BitmovinApiSdk\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BitmovinApiSdk\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always --verbose --testdox"
+    }
+}
