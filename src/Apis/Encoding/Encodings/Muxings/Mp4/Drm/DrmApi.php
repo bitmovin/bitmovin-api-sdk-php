@@ -13,6 +13,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp4\Drm\Clearkey\ClearkeyApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp4\Drm\Widevine\WidevineApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp4\Drm\Marlin\MarlinApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp4\Drm\Cenc\CencApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp4\Drm\Speke\SpekeApi;
 
 class DrmApi
 {
@@ -34,6 +35,9 @@ class DrmApi
     /** @var CencApi */
     public $cenc;
 
+    /** @var SpekeApi */
+    public $speke;
+
     /**
      * DrmApi constructor.
      *
@@ -49,6 +53,7 @@ class DrmApi
         $this->widevine = new WidevineApi(null, $this->httpWrapper);
         $this->marlin = new MarlinApi(null, $this->httpWrapper);
         $this->cenc = new CencApi(null, $this->httpWrapper);
+        $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
 
     /**

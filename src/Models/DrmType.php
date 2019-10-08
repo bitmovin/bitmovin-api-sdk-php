@@ -28,6 +28,9 @@ class DrmType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const CENC = 'CENC';
 
+    /** @var string */
+    private const SPEKE = 'SPEKE';
+
     /**
      * @param string $value
      * @return DrmType
@@ -115,6 +118,16 @@ class DrmType extends \BitmovinApiSdk\Common\Enum
     public static function CENC()
     {
         return new DrmType(self::CENC);
+    }
+
+    /**
+     * The type of the drm
+     *
+     * @return DrmType
+     */
+    public static function SPEKE()
+    {
+        return new DrmType(self::SPEKE);
     }
 }
 

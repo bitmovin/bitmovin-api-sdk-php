@@ -40,6 +40,9 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const TEXT = 'TEXT';
 
+    /** @var string */
+    private const SEGMENTED_RAW = 'SEGMENTED_RAW';
+
     /**
      * @param string $value
      * @return MuxingType
@@ -167,6 +170,16 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     public static function TEXT()
     {
         return new MuxingType(self::TEXT);
+    }
+
+    /**
+     * SEGMENTED_RAW
+     *
+     * @return MuxingType
+     */
+    public static function SEGMENTED_RAW()
+    {
+        return new MuxingType(self::SEGMENTED_RAW);
     }
 }
 

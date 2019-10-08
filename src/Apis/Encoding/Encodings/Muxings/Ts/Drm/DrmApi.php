@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Ts\Drm\Fairplay\FairplayApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Ts\Drm\Aes\AesApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Ts\Drm\Speke\SpekeApi;
 
 class DrmApi
 {
@@ -21,6 +22,9 @@ class DrmApi
 
     /** @var AesApi */
     public $aes;
+
+    /** @var SpekeApi */
+    public $speke;
 
     /**
      * DrmApi constructor.
@@ -34,6 +38,7 @@ class DrmApi
 
         $this->fairplay = new FairplayApi(null, $this->httpWrapper);
         $this->aes = new AesApi(null, $this->httpWrapper);
+        $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
 
     /**

@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Webm\Drm\Cenc\CencApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Webm\Drm\Speke\SpekeApi;
 
 class DrmApi
 {
@@ -17,6 +18,9 @@ class DrmApi
 
     /** @var CencApi */
     public $cenc;
+
+    /** @var SpekeApi */
+    public $speke;
 
     /**
      * DrmApi constructor.
@@ -29,6 +33,7 @@ class DrmApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->cenc = new CencApi(null, $this->httpWrapper);
+        $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
 
     /**

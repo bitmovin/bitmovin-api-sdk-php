@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Customdata\CustomdataApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Drm\DrmApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Captions\CaptionsApi;
 
 class CmafApi
@@ -18,6 +19,9 @@ class CmafApi
 
     /** @var CustomdataApi */
     public $customdata;
+
+    /** @var DrmApi */
+    public $drm;
 
     /** @var CaptionsApi */
     public $captions;
@@ -33,6 +37,7 @@ class CmafApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->customdata = new CustomdataApi(null, $this->httpWrapper);
+        $this->drm = new DrmApi(null, $this->httpWrapper);
         $this->captions = new CaptionsApi(null, $this->httpWrapper);
     }
 

@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveTs\Drm\Fairplay\FairplayApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveTs\Drm\Speke\SpekeApi;
 
 class DrmApi
 {
@@ -17,6 +18,9 @@ class DrmApi
 
     /** @var FairplayApi */
     public $fairplay;
+
+    /** @var SpekeApi */
+    public $speke;
 
     /**
      * DrmApi constructor.
@@ -29,6 +33,7 @@ class DrmApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->fairplay = new FairplayApi(null, $this->httpWrapper);
+        $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
 
     /**

@@ -19,6 +19,7 @@ class Drm extends BitmovinResource
         "CLEARKEY" => ClearKeyDrm::class,
         "AES" => AesEncryptionDrm::class,
         "CENC" => CencDrm::class,
+        "SPEKE" => SpekeDrm::class,
     ];
 
     public function __construct($attributes = null)

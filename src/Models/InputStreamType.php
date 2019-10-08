@@ -31,6 +31,9 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const CAPTION_CEA708 = 'CAPTION_CEA708';
 
+    /** @var string */
+    private const DVB_TELETEXT = 'DVB_TELETEXT';
+
     /**
      * @param string $value
      * @return InputStreamType
@@ -128,6 +131,16 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function CAPTION_CEA708()
     {
         return new InputStreamType(self::CAPTION_CEA708);
+    }
+
+    /**
+     * DVB_TELETEXT
+     *
+     * @return InputStreamType
+     */
+    public static function DVB_TELETEXT()
+    {
+        return new InputStreamType(self::DVB_TELETEXT);
     }
 }
 

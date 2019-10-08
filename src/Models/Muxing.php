@@ -41,6 +41,7 @@ class Muxing extends BitmovinResource
         "BROADCAST_TS" => BroadcastTsMuxing::class,
         "CHUNKED_TEXT" => ChunkedTextMuxing::class,
         "TEXT" => TextMuxing::class,
+        "SEGMENTED_RAW" => SegmentedRawMuxing::class,
     ];
 
     public function __construct($attributes = null)
