@@ -16,10 +16,18 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     /** @var int */
     public $position;
 
+    /** @var PaddingSequence */
+    public $paddingBefore;
+
+    /** @var PaddingSequence */
+    public $paddingAfter;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
+        $this->paddingBefore = ObjectMapper::map($this->paddingBefore, PaddingSequence::class);
+        $this->paddingAfter = ObjectMapper::map($this->paddingAfter, PaddingSequence::class);
     }
 
     /**
@@ -57,6 +65,32 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function position(int $position)
     {
         $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+     *
+     * @param PaddingSequence $paddingBefore
+     * @return $this
+     */
+    public function paddingBefore(PaddingSequence $paddingBefore)
+    {
+        $this->paddingBefore = $paddingBefore;
+
+        return $this;
+    }
+
+    /**
+     * Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+     *
+     * @param PaddingSequence $paddingAfter
+     * @return $this
+     */
+    public function paddingAfter(PaddingSequence $paddingAfter)
+    {
+        $this->paddingAfter = $paddingAfter;
 
         return $this;
     }

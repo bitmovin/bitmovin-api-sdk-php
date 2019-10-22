@@ -13,6 +13,9 @@ class StatisticsResolution extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const UHD = 'UHD';
 
+    /** @var string */
+    private const UHD_8_K = 'UHD_8K';
+
     /**
      * @param string $value
      * @return StatisticsResolution
@@ -50,6 +53,16 @@ class StatisticsResolution extends \BitmovinApiSdk\Common\Enum
     public static function UHD()
     {
         return new StatisticsResolution(self::UHD);
+    }
+
+    /**
+     * UHD_8_K
+     *
+     * @return StatisticsResolution
+     */
+    public static function UHD_8_K()
+    {
+        return new StatisticsResolution(self::UHD_8_K);
     }
 }
 
