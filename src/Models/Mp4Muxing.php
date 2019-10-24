@@ -22,6 +22,9 @@ class Mp4Muxing extends Muxing
     /** @var InternalChunkLength */
     public $internalChunkLength;
 
+    /** @var DolbyVisionMuxingConfiguration */
+    public $dolbyVisionConfiguration;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -29,6 +32,7 @@ class Mp4Muxing extends Muxing
         $this->timeCode = ObjectMapper::map($this->timeCode, TimeCode::class);
         $this->fragmentedMP4MuxingManifestType = ObjectMapper::map($this->fragmentedMP4MuxingManifestType, FragmentedMp4MuxingManifestType::class);
         $this->internalChunkLength = ObjectMapper::map($this->internalChunkLength, InternalChunkLength::class);
+        $this->dolbyVisionConfiguration = ObjectMapper::map($this->dolbyVisionConfiguration, DolbyVisionMuxingConfiguration::class);
     }
 
     /**
@@ -92,6 +96,19 @@ class Mp4Muxing extends Muxing
     public function internalChunkLength(InternalChunkLength $internalChunkLength)
     {
         $this->internalChunkLength = $internalChunkLength;
+
+        return $this;
+    }
+
+    /**
+     * Dolby Vision specific configuration
+     *
+     * @param DolbyVisionMuxingConfiguration $dolbyVisionConfiguration
+     * @return $this
+     */
+    public function dolbyVisionConfiguration(DolbyVisionMuxingConfiguration $dolbyVisionConfiguration)
+    {
+        $this->dolbyVisionConfiguration = $dolbyVisionConfiguration;
 
         return $this;
     }

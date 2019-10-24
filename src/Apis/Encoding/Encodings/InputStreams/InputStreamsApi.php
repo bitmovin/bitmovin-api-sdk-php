@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Type\TypeApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\AudioMix\AudioMixApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Ingest\IngestApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Sidecar\SidecarApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Concatenation\ConcatenationApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\File\FileApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Trimming\TrimmingApi;
@@ -30,6 +31,9 @@ class InputStreamsApi
 
     /** @var IngestApi */
     public $ingest;
+
+    /** @var SidecarApi */
+    public $sidecar;
 
     /** @var ConcatenationApi */
     public $concatenation;
@@ -59,6 +63,7 @@ class InputStreamsApi
         $this->type = new TypeApi(null, $this->httpWrapper);
         $this->audioMix = new AudioMixApi(null, $this->httpWrapper);
         $this->ingest = new IngestApi(null, $this->httpWrapper);
+        $this->sidecar = new SidecarApi(null, $this->httpWrapper);
         $this->concatenation = new ConcatenationApi(null, $this->httpWrapper);
         $this->file = new FileApi(null, $this->httpWrapper);
         $this->trimming = new TrimmingApi(null, $this->httpWrapper);

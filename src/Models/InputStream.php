@@ -14,6 +14,7 @@ class InputStream extends BitmovinResource
         "TRIMMING_TIME_CODE_TRACK" => TimecodeTrackTrimmingInputStream::class,
         "TRIMMING_H264_PICTURE_TIMING" => H264PictureTimingTrimmingInputStream::class,
         "AUDIO_MIX" => AudioMixInputStream::class,
+        "SIDECAR_DOLBY_VISION_METADATA" => DolbyVisionMetadataIngestInputStream::class,
         "CAPTION_CEA608" => Cea608CaptionInputStream::class,
         "CAPTION_CEA708" => Cea708CaptionInputStream::class,
         "FILE" => FileInputStream::class,

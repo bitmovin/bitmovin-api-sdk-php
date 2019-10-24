@@ -20,6 +20,9 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     private const TRIMMING_H264_PICTURE_TIMING = 'TRIMMING_H264_PICTURE_TIMING';
 
     /** @var string */
+    private const SIDECAR_DOLBY_VISION_METADATA = 'SIDECAR_DOLBY_VISION_METADATA';
+
+    /** @var string */
     private const AUDIO_MIX = 'AUDIO_MIX';
 
     /** @var string */
@@ -91,6 +94,16 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function TRIMMING_H264_PICTURE_TIMING()
     {
         return new InputStreamType(self::TRIMMING_H264_PICTURE_TIMING);
+    }
+
+    /**
+     * SIDECAR_DOLBY_VISION_METADATA
+     *
+     * @return InputStreamType
+     */
+    public static function SIDECAR_DOLBY_VISION_METADATA()
+    {
+        return new InputStreamType(self::SIDECAR_DOLBY_VISION_METADATA);
     }
 
     /**

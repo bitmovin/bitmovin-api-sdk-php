@@ -19,6 +19,9 @@ class Status extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const ERROR = 'ERROR';
 
+    /** @var string */
+    private const CANCELED = 'CANCELED';
+
     /**
      * @param string $value
      * @return Status
@@ -76,6 +79,16 @@ class Status extends \BitmovinApiSdk\Common\Enum
     public static function ERROR()
     {
         return new Status(self::ERROR);
+    }
+
+    /**
+     * The process has been canceled by the user. This is a final state
+     *
+     * @return Status
+     */
+    public static function CANCELED()
+    {
+        return new Status(self::CANCELED);
     }
 }
 

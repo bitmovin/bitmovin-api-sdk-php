@@ -15,6 +15,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Filters\FiltersApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\BurnInSubtitles\BurnInSubtitlesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Captions\CaptionsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Bifs\BifsApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Hdr\HdrApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Thumbnails\ThumbnailsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Sprites\SpritesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Qc\QcApi;
@@ -45,6 +46,9 @@ class StreamsApi
     /** @var BifsApi */
     public $bifs;
 
+    /** @var HdrApi */
+    public $hdr;
+
     /** @var ThumbnailsApi */
     public $thumbnails;
 
@@ -71,6 +75,7 @@ class StreamsApi
         $this->burnInSubtitles = new BurnInSubtitlesApi(null, $this->httpWrapper);
         $this->captions = new CaptionsApi(null, $this->httpWrapper);
         $this->bifs = new BifsApi(null, $this->httpWrapper);
+        $this->hdr = new HdrApi(null, $this->httpWrapper);
         $this->thumbnails = new ThumbnailsApi(null, $this->httpWrapper);
         $this->sprites = new SpritesApi(null, $this->httpWrapper);
         $this->qc = new QcApi(null, $this->httpWrapper);
