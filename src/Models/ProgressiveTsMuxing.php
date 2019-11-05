@@ -16,14 +16,10 @@ class ProgressiveTsMuxing extends Muxing
     /** @var int */
     public $startOffset;
 
-    /** @var InternalChunkLength */
-    public $internalChunkLength;
-
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
-        $this->internalChunkLength = ObjectMapper::map($this->internalChunkLength, InternalChunkLength::class);
     }
 
     /**
@@ -61,19 +57,6 @@ class ProgressiveTsMuxing extends Muxing
     public function startOffset(int $startOffset)
     {
         $this->startOffset = $startOffset;
-
-        return $this;
-    }
-
-    /**
-     * Modifies the internal chunk length used for chunked encoding
-     *
-     * @param InternalChunkLength $internalChunkLength
-     * @return $this
-     */
-    public function internalChunkLength(InternalChunkLength $internalChunkLength)
-    {
-        $this->internalChunkLength = $internalChunkLength;
 
         return $this;
     }

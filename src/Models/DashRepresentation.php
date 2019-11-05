@@ -13,6 +13,9 @@ class DashRepresentation extends BitmovinResponse
     /** @var string */
     public $muxingId;
 
+    /** @var string */
+    public $dependencyId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -41,6 +44,19 @@ class DashRepresentation extends BitmovinResponse
     public function muxingId(string $muxingId)
     {
         $this->muxingId = $muxingId;
+
+        return $this;
+    }
+
+    /**
+     * Used to signal a dependency with another representation. The representation may belong to a different adaptation set
+     *
+     * @param string $dependencyId
+     * @return $this
+     */
+    public function dependencyId(string $dependencyId)
+    {
+        $this->dependencyId = $dependencyId;
 
         return $this;
     }

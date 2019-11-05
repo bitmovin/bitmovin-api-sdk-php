@@ -113,6 +113,9 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AZURE_AUSTRALIA_SOUTHEAST = 'AZURE_AUSTRALIA_SOUTHEAST';
 
     /** @var string */
+    private const AZURE_AUSTRALIA_EAST = 'AZURE_AUSTRALIA_EAST';
+
+    /** @var string */
     private const NORTH_AMERICA = 'NORTH_AMERICA';
 
     /** @var string */
@@ -512,6 +515,16 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AZURE_AUSTRALIA_SOUTHEAST()
     {
         return new CloudRegion(self::AZURE_AUSTRALIA_SOUTHEAST);
+    }
+
+    /**
+     * AZURE_AUSTRALIA_EAST
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_AUSTRALIA_EAST()
+    {
+        return new CloudRegion(self::AZURE_AUSTRALIA_EAST);
     }
 
     /**

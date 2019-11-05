@@ -5,10 +5,25 @@ namespace BitmovinApiSdk\Models;
 class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
+    private const LIVE_ULTRAHIGH_QUALITY = 'LIVE_ULTRAHIGH_QUALITY';
+
+    /** @var string */
+    private const LIVE_VERYHIGH_QUALITY = 'LIVE_VERYHIGH_QUALITY';
+
+    /** @var string */
     private const LIVE_HIGH_QUALITY = 'LIVE_HIGH_QUALITY';
 
     /** @var string */
+    private const LIVE_STANDARD = 'LIVE_STANDARD';
+
+    /** @var string */
     private const LIVE_LOW_LATENCY = 'LIVE_LOW_LATENCY';
+
+    /** @var string */
+    private const LIVE_LOWER_LATENCY = 'LIVE_LOWER_LATENCY';
+
+    /** @var string */
+    private const LIVE_VERYLOW_LATENCY = 'LIVE_VERYLOW_LATENCY';
 
     /** @var string */
     private const VOD_HIGH_QUALITY = 'VOD_HIGH_QUALITY';
@@ -44,6 +59,26 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * LIVE_ULTRAHIGH_QUALITY
+     *
+     * @return PresetConfiguration
+     */
+    public static function LIVE_ULTRAHIGH_QUALITY()
+    {
+        return new PresetConfiguration(self::LIVE_ULTRAHIGH_QUALITY);
+    }
+
+    /**
+     * LIVE_VERYHIGH_QUALITY
+     *
+     * @return PresetConfiguration
+     */
+    public static function LIVE_VERYHIGH_QUALITY()
+    {
+        return new PresetConfiguration(self::LIVE_VERYHIGH_QUALITY);
+    }
+
+    /**
      * LIVE_HIGH_QUALITY
      *
      * @return PresetConfiguration
@@ -54,6 +89,16 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * LIVE_STANDARD
+     *
+     * @return PresetConfiguration
+     */
+    public static function LIVE_STANDARD()
+    {
+        return new PresetConfiguration(self::LIVE_STANDARD);
+    }
+
+    /**
      * LIVE_LOW_LATENCY
      *
      * @return PresetConfiguration
@@ -61,6 +106,26 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     public static function LIVE_LOW_LATENCY()
     {
         return new PresetConfiguration(self::LIVE_LOW_LATENCY);
+    }
+
+    /**
+     * LIVE_LOWER_LATENCY
+     *
+     * @return PresetConfiguration
+     */
+    public static function LIVE_LOWER_LATENCY()
+    {
+        return new PresetConfiguration(self::LIVE_LOWER_LATENCY);
+    }
+
+    /**
+     * LIVE_VERYLOW_LATENCY
+     *
+     * @return PresetConfiguration
+     */
+    public static function LIVE_VERYLOW_LATENCY()
+    {
+        return new PresetConfiguration(self::LIVE_VERYLOW_LATENCY);
     }
 
     /**

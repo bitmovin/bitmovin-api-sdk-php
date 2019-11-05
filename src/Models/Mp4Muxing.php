@@ -19,9 +19,6 @@ class Mp4Muxing extends Muxing
     /** @var FragmentedMp4MuxingManifestType */
     public $fragmentedMP4MuxingManifestType;
 
-    /** @var InternalChunkLength */
-    public $internalChunkLength;
-
     /** @var DolbyVisionMuxingConfiguration */
     public $dolbyVisionConfiguration;
 
@@ -31,7 +28,6 @@ class Mp4Muxing extends Muxing
         
         $this->timeCode = ObjectMapper::map($this->timeCode, TimeCode::class);
         $this->fragmentedMP4MuxingManifestType = ObjectMapper::map($this->fragmentedMP4MuxingManifestType, FragmentedMp4MuxingManifestType::class);
-        $this->internalChunkLength = ObjectMapper::map($this->internalChunkLength, InternalChunkLength::class);
         $this->dolbyVisionConfiguration = ObjectMapper::map($this->dolbyVisionConfiguration, DolbyVisionMuxingConfiguration::class);
     }
 
@@ -83,19 +79,6 @@ class Mp4Muxing extends Muxing
     public function fragmentedMP4MuxingManifestType(FragmentedMp4MuxingManifestType $fragmentedMP4MuxingManifestType)
     {
         $this->fragmentedMP4MuxingManifestType = $fragmentedMP4MuxingManifestType;
-
-        return $this;
-    }
-
-    /**
-     * Modifies the internal chunk length used for chunked encoding
-     *
-     * @param InternalChunkLength $internalChunkLength
-     * @return $this
-     */
-    public function internalChunkLength(InternalChunkLength $internalChunkLength)
-    {
-        $this->internalChunkLength = $internalChunkLength;
 
         return $this;
     }
