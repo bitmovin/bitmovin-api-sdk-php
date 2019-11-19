@@ -81,4 +81,22 @@ class OrganizationsApi
 
         return ObjectMapper::map($response, OrganizationPaginationResponse::class);
     }
+
+    /**
+     * Update Organization
+     *
+     * @param string $organizationId
+     * @param \BitmovinApiSdk\Models\UpdateOrganizationRequest $updateOrganizationRequest
+     * @return \BitmovinApiSdk\Models\Organization
+     * @throws BitmovinApiException
+     */
+    public function update(string $organizationId, \BitmovinApiSdk\Models\UpdateOrganizationRequest $updateOrganizationRequest) : \BitmovinApiSdk\Models\Organization
+    {
+        $pathParams = [
+            'organization_id' => $organizationId,
+        ];
+        $response = $this->httpWrapper->request('PUT','/account/organizations/{organization_id}', $pathParams,  null, $updateOrganizationRequest, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Organization::class);
+    }
 }

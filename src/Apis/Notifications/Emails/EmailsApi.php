@@ -8,12 +8,16 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Notifications\Emails\UsageReports\UsageReportsApi;
 use BitmovinApiSdk\Apis\Notifications\Emails\Encoding\EncodingApi;
 
 class EmailsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var UsageReportsApi */
+    public $usageReports;
 
     /** @var EncodingApi */
     public $encoding;
@@ -28,6 +32,7 @@ class EmailsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->usageReports = new UsageReportsApi(null, $this->httpWrapper);
         $this->encoding = new EncodingApi(null, $this->httpWrapper);
     }
 

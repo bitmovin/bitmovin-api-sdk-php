@@ -25,37 +25,14 @@ class AccountInformation extends BitmovinResource
     /** @var string */
     public $company;
 
+    /** @var bool */
+    public $isVerified;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
         $this->apiKeys = ObjectMapper::map($this->apiKeys, AccountApiKey::class);
-    }
-
-    /**
-     * Email address of the account. (required)
-     *
-     * @param string $email
-     * @return $this
-     */
-    public function email(string $email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * ApiKeys associated with the account (required)
-     *
-     * @param \BitmovinApiSdk\Models\AccountApiKey[] $apiKeys
-     * @return $this
-     */
-    public function apiKeys(array $apiKeys)
-    {
-        $this->apiKeys = $apiKeys;
-
-        return $this;
     }
 
     /**

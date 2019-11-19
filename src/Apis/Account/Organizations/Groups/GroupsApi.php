@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantsApi;
+use BitmovinApiSdk\Apis\Account\Organizations\Groups\Invitations\InvitationsApi;
 use BitmovinApiSdk\Apis\Account\Organizations\Groups\Permissions\PermissionsApi;
 
 class GroupsApi
@@ -18,6 +19,9 @@ class GroupsApi
 
     /** @var TenantsApi */
     public $tenants;
+
+    /** @var InvitationsApi */
+    public $invitations;
 
     /** @var PermissionsApi */
     public $permissions;
@@ -33,6 +37,7 @@ class GroupsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->tenants = new TenantsApi(null, $this->httpWrapper);
+        $this->invitations = new InvitationsApi(null, $this->httpWrapper);
         $this->permissions = new PermissionsApi(null, $this->httpWrapper);
     }
 

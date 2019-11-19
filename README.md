@@ -32,7 +32,7 @@ To install the API client with composer, add the following to your composer.json
 {
 "require":
   {
-    "bitmovin/bitmovin-api-sdk-php": "1.28.0-ALPHA0"
+    "bitmovin/bitmovin-api-sdk-php": "1.29.0-ALPHA0"
   }
 }
 ```
@@ -41,7 +41,7 @@ Then run `php composer.phar install`
 
 OR
 
-run the following command: `php composer.phar require bitmovin/bitmovin-api-sdk-php:1.28.0-ALPHA0`
+run the following command: `php composer.phar require bitmovin/bitmovin-api-sdk-php:1.29.0-ALPHA0`
 
 ## Initialization
 

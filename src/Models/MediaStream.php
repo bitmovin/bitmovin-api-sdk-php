@@ -10,7 +10,7 @@ class MediaStream extends BitmovinResponse
     /** @var int */
     public $position;
 
-    /** @var int */
+    /** @var float */
     public $duration;
 
     /** @var string */
@@ -38,10 +38,10 @@ class MediaStream extends BitmovinResponse
     /**
      * Duration of the stream in seconds
      *
-     * @param int $duration
+     * @param float $duration
      * @return $this
      */
-    public function duration(int $duration)
+    public function duration(float $duration)
     {
         $this->duration = $duration;
 
