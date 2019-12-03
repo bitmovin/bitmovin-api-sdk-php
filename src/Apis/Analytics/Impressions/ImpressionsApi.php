@@ -43,4 +43,19 @@ class ImpressionsApi
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsImpressionDetails::class);
     }
+
+    /**
+     * List impressions
+     *
+     * @param \BitmovinApiSdk\Models\AnalyticsImpressionsQuery $analyticsImpressionsQuery
+     * @return \BitmovinApiSdk\Models\AnalyticsImpressionsResponse
+     * @throws BitmovinApiException
+     */
+    public function getImpressions(\BitmovinApiSdk\Models\AnalyticsImpressionsQuery $analyticsImpressionsQuery) : \BitmovinApiSdk\Models\AnalyticsImpressionsResponse
+    {
+        
+        $response = $this->httpWrapper->request('POST','/analytics/impressions', [],  null, $analyticsImpressionsQuery, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsImpressionsResponse::class);
+    }
 }

@@ -22,6 +22,9 @@ class WebmMuxing extends Muxing
     /** @var string */
     public $initSegmentNameTemplate;
 
+    /** @var int */
+    public $segmentsMuxed;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
