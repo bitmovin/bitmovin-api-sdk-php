@@ -25,11 +25,15 @@ class PlayReadyDrm extends Drm
     /** @var string */
     public $kid;
 
+    /** @var PlayReadyAdditionalInformation */
+    public $additionalInformation;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
         $this->method = ObjectMapper::map($this->method, PlayReadyEncryptionMethod::class);
+        $this->additionalInformation = ObjectMapper::map($this->additionalInformation, PlayReadyAdditionalInformation::class);
     }
 
     /**
@@ -106,6 +110,19 @@ class PlayReadyDrm extends Drm
     public function kid(string $kid)
     {
         $this->kid = $kid;
+
+        return $this;
+    }
+
+    /**
+     * additionalInformation
+     *
+     * @param PlayReadyAdditionalInformation $additionalInformation
+     * @return $this
+     */
+    public function additionalInformation(PlayReadyAdditionalInformation $additionalInformation)
+    {
+        $this->additionalInformation = $additionalInformation;
 
         return $this;
     }

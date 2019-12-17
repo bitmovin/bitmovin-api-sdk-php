@@ -13,10 +13,14 @@ class CencPlayReady extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $pssh;
 
+    /** @var PlayReadyAdditionalInformation */
+    public $additionalInformation;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
+        $this->additionalInformation = ObjectMapper::map($this->additionalInformation, PlayReadyAdditionalInformation::class);
     }
 
     /**
@@ -41,6 +45,19 @@ class CencPlayReady extends \BitmovinApiSdk\Common\ApiResource
     public function pssh(string $pssh)
     {
         $this->pssh = $pssh;
+
+        return $this;
+    }
+
+    /**
+     * additionalInformation
+     *
+     * @param PlayReadyAdditionalInformation $additionalInformation
+     * @return $this
+     */
+    public function additionalInformation(PlayReadyAdditionalInformation $additionalInformation)
+    {
+        $this->additionalInformation = $additionalInformation;
 
         return $this;
     }

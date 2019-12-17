@@ -16,11 +16,15 @@ class AnalyticsResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\AnalyticsColumnLabel[] */
     public $columnLabels;
 
+    /** @var \BitmovinApiSdk\Models\AnalyticsContextDescription[] */
+    public $contextDescription;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
         $this->columnLabels = ObjectMapper::map($this->columnLabels, AnalyticsColumnLabel::class);
+        $this->contextDescription = ObjectMapper::map($this->contextDescription, AnalyticsContextDescription::class);
     }
 
     /**
@@ -58,6 +62,19 @@ class AnalyticsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function columnLabels(array $columnLabels)
     {
         $this->columnLabels = $columnLabels;
+
+        return $this;
+    }
+
+    /**
+     * contextDescription
+     *
+     * @param \BitmovinApiSdk\Models\AnalyticsContextDescription[] $contextDescription
+     * @return $this
+     */
+    public function contextDescription(array $contextDescription)
+    {
+        $this->contextDescription = $contextDescription;
 
         return $this;
     }

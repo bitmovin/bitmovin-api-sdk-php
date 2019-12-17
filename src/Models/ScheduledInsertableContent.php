@@ -41,7 +41,7 @@ class ScheduledInsertableContent extends BitmovinResource
     }
 
     /**
-     * Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
      *
      * @param Carbon $runAt
      * @return $this
@@ -54,7 +54,7 @@ class ScheduledInsertableContent extends BitmovinResource
     }
 
     /**
-     * Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration.
+     * Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration. This property is required if the insertable content is an image.
      *
      * @param float $durationInSeconds
      * @return $this

@@ -22,12 +22,16 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     /** @var PaddingSequence */
     public $paddingAfter;
 
+    /** @var AspectMode */
+    public $aspectMode;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
         $this->paddingBefore = ObjectMapper::map($this->paddingBefore, PaddingSequence::class);
         $this->paddingAfter = ObjectMapper::map($this->paddingAfter, PaddingSequence::class);
+        $this->aspectMode = ObjectMapper::map($this->aspectMode, AspectMode::class);
     }
 
     /**
@@ -91,6 +95,19 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function paddingAfter(PaddingSequence $paddingAfter)
     {
         $this->paddingAfter = $paddingAfter;
+
+        return $this;
+    }
+
+    /**
+     * Specifies the aspect mode that is used when adapting to the main input stream&#39;s aspect ratio
+     *
+     * @param AspectMode $aspectMode
+     * @return $this
+     */
+    public function aspectMode(AspectMode $aspectMode)
+    {
+        $this->aspectMode = $aspectMode;
 
         return $this;
     }
