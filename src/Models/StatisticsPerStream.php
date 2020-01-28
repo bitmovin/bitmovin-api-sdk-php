@@ -61,6 +61,12 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $psnrMultiplicator;
 
+    /** @var \BitmovinApiSdk\Models\DolbyVisionPerStreamMode */
+    public $dolbyVisionMode;
+
+    /** @var float */
+    public $dolbyVisionMultiplicator;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -70,6 +76,7 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
         $this->encodingMode = ObjectMapper::map($this->encodingMode, EncodingMode::class);
         $this->perTitleResultStream = ObjectMapper::map($this->perTitleResultStream, StatisticsPerTitleStream::class);
         $this->psnrMode = ObjectMapper::map($this->psnrMode, PsnrPerStreamMode::class);
+        $this->dolbyVisionMode = ObjectMapper::map($this->dolbyVisionMode, DolbyVisionPerStreamMode::class);
     }
 
     /**
@@ -302,6 +309,32 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function psnrMultiplicator(float $psnrMultiplicator)
     {
         $this->psnrMultiplicator = $psnrMultiplicator;
+
+        return $this;
+    }
+
+    /**
+     * dolbyVisionMode
+     *
+     * @param \BitmovinApiSdk\Models\DolbyVisionPerStreamMode $dolbyVisionMode
+     * @return $this
+     */
+    public function dolbyVisionMode(\BitmovinApiSdk\Models\DolbyVisionPerStreamMode $dolbyVisionMode)
+    {
+        $this->dolbyVisionMode = $dolbyVisionMode;
+
+        return $this;
+    }
+
+    /**
+     * The output minutes multiplicator for Dolby Vision streams
+     *
+     * @param float $dolbyVisionMultiplicator
+     * @return $this
+     */
+    public function dolbyVisionMultiplicator(float $dolbyVisionMultiplicator)
+    {
+        $this->dolbyVisionMultiplicator = $dolbyVisionMultiplicator;
 
         return $this;
     }
