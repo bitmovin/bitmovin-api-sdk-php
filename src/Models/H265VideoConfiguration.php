@@ -289,6 +289,9 @@ class H265VideoConfiguration extends VideoConfiguration
     /** @var bool */
     public $lowpassDct;
 
+    /** @var Cea608708SubtitleConfiguration */
+    public $cea608708SubtitleConfig;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -312,6 +315,7 @@ class H265VideoConfiguration extends VideoConfiguration
         $this->maximumTransformUnitSize = ObjectMapper::map($this->maximumTransformUnitSize, MaxTransformUnitSize::class);
         $this->forceFlush = ObjectMapper::map($this->forceFlush, ForceFlushMode::class);
         $this->quantizationGroupSize = ObjectMapper::map($this->quantizationGroupSize, QuantizationGroupSize::class);
+        $this->cea608708SubtitleConfig = ObjectMapper::map($this->cea608708SubtitleConfig, Cea608708SubtitleConfiguration::class);
     }
 
     /**
@@ -1532,6 +1536,19 @@ class H265VideoConfiguration extends VideoConfiguration
     public function lowpassDct(bool $lowpassDct)
     {
         $this->lowpassDct = $lowpassDct;
+
+        return $this;
+    }
+
+    /**
+     * Defines whether CEA 608/708 subtitles are extracted from the input video stream
+     *
+     * @param Cea608708SubtitleConfiguration $cea608708SubtitleConfig
+     * @return $this
+     */
+    public function cea608708SubtitleConfig(Cea608708SubtitleConfiguration $cea608708SubtitleConfig)
+    {
+        $this->cea608708SubtitleConfig = $cea608708SubtitleConfig;
 
         return $this;
     }

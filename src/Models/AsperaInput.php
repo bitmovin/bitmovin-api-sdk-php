@@ -25,6 +25,12 @@ class AsperaInput extends Input
     /** @var string */
     public $token;
 
+    /** @var int */
+    public $sshPort;
+
+    /** @var int */
+    public $faspPort;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -105,6 +111,32 @@ class AsperaInput extends Input
     public function token(string $token)
     {
         $this->token = $token;
+
+        return $this;
+    }
+
+    /**
+     * Set the TCP port to be used for fasp session initiation
+     *
+     * @param int $sshPort
+     * @return $this
+     */
+    public function sshPort(int $sshPort)
+    {
+        $this->sshPort = $sshPort;
+
+        return $this;
+    }
+
+    /**
+     * Set the UDP port to be used by fasp for data transfer
+     *
+     * @param int $faspPort
+     * @return $this
+     */
+    public function faspPort(int $faspPort)
+    {
+        $this->faspPort = $faspPort;
 
         return $this;
     }
