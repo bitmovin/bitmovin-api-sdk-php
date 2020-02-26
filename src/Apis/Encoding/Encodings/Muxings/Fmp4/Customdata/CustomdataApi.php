@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * fMP4 Muxing Custom Data
+     * fMP4 muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -37,7 +37,7 @@ class ProgressiveMovApi
     }
 
     /**
-     * Add Progressive MOV Muxing
+     * Add Progressive MOV muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ProgressiveMovMuxing $progressiveMovMuxing
@@ -55,7 +55,7 @@ class ProgressiveMovApi
     }
 
     /**
-     * Delete Progressive MOV Muxing
+     * Delete Progressive MOV muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +74,7 @@ class ProgressiveMovApi
     }
 
     /**
-     * Progressive MOV Muxing Details
+     * Progressive MOV muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +93,7 @@ class ProgressiveMovApi
     }
 
     /**
-     * List Progressive MOV Muxings
+     * List Progressive MOV muxings
      *
      * @param string $encodingId
      * @param ProgressiveMovMuxingListQueryParams|null $queryParams

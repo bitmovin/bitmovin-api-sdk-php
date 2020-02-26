@@ -32,7 +32,7 @@ class AesApi
     }
 
     /**
-     * Add AES Encryption to TS Segment
+     * Add AES Encryption to TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -52,7 +52,7 @@ class AesApi
     }
 
     /**
-     * Delete AES Encryption from TS Segment
+     * Delete AES Encryption from TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -73,7 +73,7 @@ class AesApi
     }
 
     /**
-     * AES Encryption Details of TS Segment
+     * AES Encryption Details of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -94,7 +94,7 @@ class AesApi
     }
 
     /**
-     * List AES Encryption of TS Segment
+     * List AES Encryption of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -32,7 +32,7 @@ class FrameIdApi
     }
 
     /**
-     * Add Frame ID ID3 Tag to Progressive TS Muxing
+     * Add Frame ID ID3 Tag to Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -52,7 +52,7 @@ class FrameIdApi
     }
 
     /**
-     * Delete Frame ID ID3 Tag of Progressive TS Muxing
+     * Delete Frame ID ID3 Tag of Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -73,7 +73,7 @@ class FrameIdApi
     }
 
     /**
-     * Frame ID ID3 Tag Details of Progressive TS Muxing
+     * Frame ID ID3 Tag Details of Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -94,7 +94,7 @@ class FrameIdApi
     }
 
     /**
-     * List Frame ID ID3 Tags of Progressive TS Muxing
+     * List Frame ID ID3 Tags of Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

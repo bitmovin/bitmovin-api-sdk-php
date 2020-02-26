@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to TS Segment
+     * Add SPEKE DRM key provider to TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -52,7 +52,7 @@ class SpekeApi
     }
 
     /**
-     * Delete SPEKE DRM from TS Segment
+     * Delete SPEKE DRM from TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -73,7 +73,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of TS Segment
+     * SPEKE DRM Details of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -94,7 +94,7 @@ class SpekeApi
     }
 
     /**
-     * List SPEKE DRM of TS Segment
+     * List SPEKE DRM of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -32,7 +32,7 @@ class RawApi
     }
 
     /**
-     * Add Raw ID3 Tag to Progressive TS Muxing
+     * Add Raw ID3 Tag to Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -52,7 +52,7 @@ class RawApi
     }
 
     /**
-     * Delete Raw ID3 Tag of Progressive TS Muxing
+     * Delete Raw ID3 Tag of Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -73,7 +73,7 @@ class RawApi
     }
 
     /**
-     * Raw ID3 Tag Details of Progressive TS Muxing
+     * Raw ID3 Tag Details of Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -94,7 +94,7 @@ class RawApi
     }
 
     /**
-     * List Raw ID3 Tags of Progressive TS Muxing
+     * List Raw ID3 Tags of Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

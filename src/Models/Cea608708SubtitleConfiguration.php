@@ -10,10 +10,14 @@ class Cea608708SubtitleConfiguration extends \BitmovinApiSdk\Common\ApiResource
     /** @var bool */
     public $passthroughActivated;
 
+    /** @var PassthroughMode */
+    public $passthroughMode;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
+        $this->passthroughMode = ObjectMapper::map($this->passthroughMode, PassthroughMode::class);
     }
 
     /**
@@ -25,6 +29,19 @@ class Cea608708SubtitleConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function passthroughActivated(bool $passthroughActivated)
     {
         $this->passthroughActivated = $passthroughActivated;
+
+        return $this;
+    }
+
+    /**
+     * passthroughMode
+     *
+     * @param PassthroughMode $passthroughMode
+     * @return $this
+     */
+    public function passthroughMode(PassthroughMode $passthroughMode)
+    {
+        $this->passthroughMode = $passthroughMode;
 
         return $this;
     }

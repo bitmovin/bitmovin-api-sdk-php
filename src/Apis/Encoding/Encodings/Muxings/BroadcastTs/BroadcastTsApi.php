@@ -37,7 +37,7 @@ class BroadcastTsApi
     }
 
     /**
-     * Add Broadcast TS Muxing
+     * Add Broadcast TS muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\BroadcastTsMuxing $broadcastTsMuxing
@@ -55,7 +55,7 @@ class BroadcastTsApi
     }
 
     /**
-     * Delete Broadcast TS Muxing
+     * Delete Broadcast TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +74,7 @@ class BroadcastTsApi
     }
 
     /**
-     * Broadcast TS Muxing Details
+     * Broadcast TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +93,7 @@ class BroadcastTsApi
     }
 
     /**
-     * List Broadcast TS Muxings
+     * List Broadcast TS muxings
      *
      * @param string $encodingId
      * @param BroadcastTsMuxingListQueryParams|null $queryParams

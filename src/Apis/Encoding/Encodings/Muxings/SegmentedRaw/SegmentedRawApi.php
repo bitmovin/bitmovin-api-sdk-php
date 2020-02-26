@@ -32,7 +32,7 @@ class SegmentedRawApi
     }
 
     /**
-     * Add Segmented RAW Muxing
+     * Add Segmented RAW muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\SegmentedRawMuxing $segmentedRawMuxing
@@ -50,7 +50,7 @@ class SegmentedRawApi
     }
 
     /**
-     * Delete Segmented RAW Muxing
+     * Delete Segmented RAW muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -69,7 +69,7 @@ class SegmentedRawApi
     }
 
     /**
-     * Segmented RAW Muxing Details
+     * Segmented RAW muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -88,7 +88,7 @@ class SegmentedRawApi
     }
 
     /**
-     * List Segmented RAW Muxings
+     * List Segmented RAW muxings
      *
      * @param string $encodingId
      * @param SegmentedRawMuxingListQueryParams|null $queryParams

@@ -22,12 +22,16 @@ class StatisticsPerLabel extends Statistics
     /** @var \BitmovinApiSdk\Models\BillableEncodingFeatureMinutes[] */
     public $billableFeatureMinutes;
 
+    /** @var \BitmovinApiSdk\Models\EgressInformation[] */
+    public $billableEgressBytes;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
         $this->billableEncodingMinutes = ObjectMapper::map($this->billableEncodingMinutes, BillableEncodingMinutes::class);
         $this->billableFeatureMinutes = ObjectMapper::map($this->billableFeatureMinutes, BillableEncodingFeatureMinutes::class);
+        $this->billableEgressBytes = ObjectMapper::map($this->billableEgressBytes, EgressInformation::class);
     }
 
     /**

@@ -37,7 +37,7 @@ class Mp3Api
     }
 
     /**
-     * Add MP3 Muxing
+     * Add MP3 muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Mp3Muxing $mp3Muxing
@@ -55,7 +55,7 @@ class Mp3Api
     }
 
     /**
-     * Delete MP3 Muxing
+     * Delete MP3 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +74,7 @@ class Mp3Api
     }
 
     /**
-     * MP3 Muxing Details
+     * MP3 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +93,7 @@ class Mp3Api
     }
 
     /**
-     * List MP3 Muxings
+     * List MP3 muxings
      *
      * @param string $encodingId
      * @param Mp3MuxingListQueryParams|null $queryParams

@@ -27,7 +27,7 @@ class InformationApi
     }
 
     /**
-     * Progressive MOV Muxing Information
+     * Progressive MOV muxing Information
      *
      * @param string $encodingId
      * @param string $muxingId

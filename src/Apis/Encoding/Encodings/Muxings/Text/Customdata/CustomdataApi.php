@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * Text Muxing custom data
+     * Text muxing custom data
      *
      * @param string $encodingId
      * @param string $muxingId

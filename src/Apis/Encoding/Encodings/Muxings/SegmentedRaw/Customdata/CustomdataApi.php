@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * Segmented RAW Muxing Custom Data
+     * Segmented RAW muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

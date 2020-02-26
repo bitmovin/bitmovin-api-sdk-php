@@ -22,6 +22,9 @@ class Status extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const CANCELED = 'CANCELED';
 
+    /** @var string */
+    private const TRANSFER_ERROR = 'TRANSFER_ERROR';
+
     /**
      * @param string $value
      * @return Status
@@ -89,6 +92,16 @@ class Status extends \BitmovinApiSdk\Common\Enum
     public static function CANCELED()
     {
         return new Status(self::CANCELED);
+    }
+
+    /**
+     * The process has finished successfully, but at least one transfer to a configured output failed. The transfer attempt can be retried.
+     *
+     * @return Status
+     */
+    public static function TRANSFER_ERROR()
+    {
+        return new Status(self::TRANSFER_ERROR);
     }
 }
 

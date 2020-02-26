@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * Broadcast TS Muxing Custom Data
+     * Broadcast TS muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

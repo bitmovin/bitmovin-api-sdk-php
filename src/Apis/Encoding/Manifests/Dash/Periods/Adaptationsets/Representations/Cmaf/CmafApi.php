@@ -8,16 +8,12 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Cmaf\Drm\DrmApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Cmaf\Contentprotection\ContentprotectionApi;
 
 class CmafApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
-
-    /** @var DrmApi */
-    public $drm;
 
     /** @var ContentprotectionApi */
     public $contentprotection;
@@ -32,7 +28,6 @@ class CmafApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
-        $this->drm = new DrmApi(null, $this->httpWrapper);
         $this->contentprotection = new ContentprotectionApi(null, $this->httpWrapper);
     }
 

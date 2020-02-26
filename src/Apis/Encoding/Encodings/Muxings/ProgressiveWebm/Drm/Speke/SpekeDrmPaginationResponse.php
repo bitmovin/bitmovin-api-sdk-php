@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Drm\Speke;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Drm\Speke;
 
 use \BitmovinApiSdk\Common\ObjectMapper;
 use \BitmovinApiSdk\Models\SpekeDrm;

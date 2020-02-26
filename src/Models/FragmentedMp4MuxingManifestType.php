@@ -59,7 +59,7 @@ class FragmentedMp4MuxingManifestType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Dont create a manifest
+     * Do not create a manifest
      *
      * @return FragmentedMp4MuxingManifestType
      */

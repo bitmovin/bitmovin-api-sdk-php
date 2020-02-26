@@ -1,10 +1,10 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Cmaf\Drm\Contentprotection;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Drm\Cenc;
 
 use BitmovinApiSdk\Common\QueryParams;
 
-class ContentProtectionListQueryParams implements QueryParams
+class CencDrmListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -13,18 +13,18 @@ class ContentProtectionListQueryParams implements QueryParams
     private $limit;
 
     /**
-     * @return ContentProtectionListQueryParams
+     * @return CencDrmListQueryParams
      */
-    public static function create(): ContentProtectionListQueryParams
+    public static function create(): CencDrmListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return ContentProtectionListQueryParams
+     * @return CencDrmListQueryParams
      */
-    public function offset(int $offset): ContentProtectionListQueryParams
+    public function offset(int $offset): CencDrmListQueryParams
     {
         $this->offset = $offset;
 
@@ -33,9 +33,9 @@ class ContentProtectionListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return ContentProtectionListQueryParams
+     * @return CencDrmListQueryParams
      */
-    public function limit(int $limit): ContentProtectionListQueryParams
+    public function limit(int $limit): CencDrmListQueryParams
     {
         $this->limit = $limit;
 

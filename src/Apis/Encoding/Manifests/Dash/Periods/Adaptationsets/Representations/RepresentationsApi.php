@@ -13,6 +13,7 @@ use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Represent
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Cmaf\CmafApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Mp4\Mp4Api;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Webm\WebmApi;
+use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\ProgressiveWebm\ProgressiveWebmApi;
 
 class RepresentationsApi
 {
@@ -34,6 +35,9 @@ class RepresentationsApi
     /** @var WebmApi */
     public $webm;
 
+    /** @var ProgressiveWebmApi */
+    public $progressiveWebm;
+
     /**
      * RepresentationsApi constructor.
      *
@@ -49,5 +53,6 @@ class RepresentationsApi
         $this->cmaf = new CmafApi(null, $this->httpWrapper);
         $this->mp4 = new Mp4Api(null, $this->httpWrapper);
         $this->webm = new WebmApi(null, $this->httpWrapper);
+        $this->progressiveWebm = new ProgressiveWebmApi(null, $this->httpWrapper);
     }
 }

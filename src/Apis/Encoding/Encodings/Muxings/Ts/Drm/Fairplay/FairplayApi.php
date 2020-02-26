@@ -32,7 +32,7 @@ class FairplayApi
     }
 
     /**
-     * Add FairPlay DRM to TS Segment
+     * Add FairPlay DRM to TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -52,7 +52,7 @@ class FairplayApi
     }
 
     /**
-     * Delete FairPlay DRM from TS Segment
+     * Delete FairPlay DRM from TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -73,7 +73,7 @@ class FairplayApi
     }
 
     /**
-     * FairPlay DRM Details of TS Segment
+     * FairPlay DRM Details of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -94,7 +94,7 @@ class FairplayApi
     }
 
     /**
-     * List FairPlay DRMs of TS Segment
+     * List FairPlay DRMs of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

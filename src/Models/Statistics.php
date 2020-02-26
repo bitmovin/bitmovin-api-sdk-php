@@ -13,36 +13,13 @@ class Statistics extends \BitmovinApiSdk\Common\ApiResource
     /** @var int */
     public $timeEncodedTotal;
 
+    /** @var int */
+    public $bytesEgressTotal;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
-    }
-
-    /**
-     * Bytes encoded total. (required)
-     *
-     * @param int $bytesEncodedTotal
-     * @return $this
-     */
-    public function bytesEncodedTotal(int $bytesEncodedTotal)
-    {
-        $this->bytesEncodedTotal = $bytesEncodedTotal;
-
-        return $this;
-    }
-
-    /**
-     * Time in seconds encoded for all contained daily statistics. (required)
-     *
-     * @param int $timeEncodedTotal
-     * @return $this
-     */
-    public function timeEncodedTotal(int $timeEncodedTotal)
-    {
-        $this->timeEncodedTotal = $timeEncodedTotal;
-
-        return $this;
     }
 }
 

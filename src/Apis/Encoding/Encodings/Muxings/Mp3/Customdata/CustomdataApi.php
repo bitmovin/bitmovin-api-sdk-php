@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * MP3 Muxing Custom Data
+     * MP3 muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

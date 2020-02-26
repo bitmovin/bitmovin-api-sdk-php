@@ -5,10 +5,10 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class DashCmafDrmRepresentation extends DashCmafRepresentation
+class DashProgressiveWebmRepresentation extends DashRepresentation
 {
     /** @var string */
-    public $drmId;
+    public $filePath;
 
     public function __construct($attributes = null)
     {
@@ -17,14 +17,14 @@ class DashCmafDrmRepresentation extends DashCmafRepresentation
     }
 
     /**
-     * DRM Id (required)
+     * Path to the Progressive WebM file (required)
      *
-     * @param string $drmId
+     * @param string $filePath
      * @return $this
      */
-    public function drmId(string $drmId)
+    public function filePath(string $filePath)
     {
-        $this->drmId = $drmId;
+        $this->filePath = $filePath;
 
         return $this;
     }

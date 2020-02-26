@@ -31,6 +31,9 @@ class DailyStatistics extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\BillableEncodingFeatureMinutes[] */
     public $billableFeatureMinutes;
 
+    /** @var \BitmovinApiSdk\Models\EgressInformation[] */
+    public $billableEgressBytes;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -38,6 +41,7 @@ class DailyStatistics extends \BitmovinApiSdk\Common\ApiResource
         $this->date = ObjectMapper::map($this->date, Carbon::class);
         $this->billableEncodingMinutes = ObjectMapper::map($this->billableEncodingMinutes, BillableEncodingMinutes::class);
         $this->billableFeatureMinutes = ObjectMapper::map($this->billableFeatureMinutes, BillableEncodingFeatureMinutes::class);
+        $this->billableEgressBytes = ObjectMapper::map($this->billableEgressBytes, EgressInformation::class);
     }
 
     /**

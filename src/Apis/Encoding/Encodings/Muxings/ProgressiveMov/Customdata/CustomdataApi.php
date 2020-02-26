@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * Progressive MOV Muxing Custom Data
+     * Progressive MOV muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

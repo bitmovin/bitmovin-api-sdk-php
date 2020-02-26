@@ -32,7 +32,7 @@ class TextApi
     }
 
     /**
-     * Add Text Muxing
+     * Add Text muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\TextMuxing $textMuxing
@@ -50,7 +50,7 @@ class TextApi
     }
 
     /**
-     * Delete Text Muxing
+     * Delete Text muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -69,7 +69,7 @@ class TextApi
     }
 
     /**
-     * Text Muxing Details
+     * Text muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -88,7 +88,7 @@ class TextApi
     }
 
     /**
-     * List Text Muxings
+     * List Text muxings
      *
      * @param string $encodingId
      * @param TextMuxingListQueryParams|null $queryParams

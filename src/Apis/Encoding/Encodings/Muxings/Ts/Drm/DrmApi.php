@@ -42,7 +42,7 @@ class DrmApi
     }
 
     /**
-     * List all DRM configurations of TS Muxing
+     * List all DRM configurations of TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

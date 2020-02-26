@@ -96,7 +96,7 @@ class VideoConfiguration extends CodecConfiguration
     }
 
     /**
-     * pixelFormat
+     * Describes the color encoding, bit depth, and chroma subsampling of each pixel in the output image.
      *
      * @param PixelFormat $pixelFormat
      * @return $this

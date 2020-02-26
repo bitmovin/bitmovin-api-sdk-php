@@ -37,7 +37,7 @@ class WebmApi
     }
 
     /**
-     * Add WebM Segment Muxing
+     * Add WebM muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\WebmMuxing $webmMuxing
@@ -55,7 +55,7 @@ class WebmApi
     }
 
     /**
-     * Delete WebM Muxing
+     * Delete WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +74,7 @@ class WebmApi
     }
 
     /**
-     * WebM Segment Muxing Details
+     * WebM muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +93,7 @@ class WebmApi
     }
 
     /**
-     * List WebM Segment Muxings
+     * List WebM muxings
      *
      * @param string $encodingId
      * @param WebmMuxingListQueryParams|null $queryParams

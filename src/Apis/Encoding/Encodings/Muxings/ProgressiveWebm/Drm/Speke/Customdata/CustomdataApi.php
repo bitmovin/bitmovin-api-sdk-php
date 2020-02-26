@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Drm\Speke\Customdata;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Drm\Speke\Customdata;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * SPEKE DRM Custom Data of CMAF
+     * SPEKE DRM Custom Data of Progressive WebM
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -42,7 +42,7 @@ class CustomdataApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}/drm/speke/{drm_id}/customData', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}/drm/speke/{drm_id}/customData', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomData::class);
     }

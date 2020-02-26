@@ -1,30 +1,30 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Drm\Speke;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\TransferRetries;
 
 use BitmovinApiSdk\Common\QueryParams;
 
-class SpekeDrmListQueryParams implements QueryParams
+class TransferRetryListQueryParams implements QueryParams
 {
-    /** @var string */
+    /** @var int */
     private $offset;
 
-    /** @var string */
+    /** @var int */
     private $limit;
 
     /**
-     * @return SpekeDrmListQueryParams
+     * @return TransferRetryListQueryParams
      */
-    public static function create(): SpekeDrmListQueryParams
+    public static function create(): TransferRetryListQueryParams
     {
         return new static();
     }
 
     /**
-     * @param string $offset
-     * @return SpekeDrmListQueryParams
+     * @param int $offset
+     * @return TransferRetryListQueryParams
      */
-    public function offset(string $offset): SpekeDrmListQueryParams
+    public function offset(int $offset): TransferRetryListQueryParams
     {
         $this->offset = $offset;
 
@@ -32,10 +32,10 @@ class SpekeDrmListQueryParams implements QueryParams
     }
 
     /**
-     * @param string $limit
-     * @return SpekeDrmListQueryParams
+     * @param int $limit
+     * @return TransferRetryListQueryParams
      */
-    public function limit(string $limit): SpekeDrmListQueryParams
+    public function limit(int $limit): TransferRetryListQueryParams
     {
         $this->limit = $limit;
 

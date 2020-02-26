@@ -67,7 +67,7 @@ class DrmApi
     }
 
     /**
-     * List all DRMs of FMP4 Muxing
+     * List all DRMs of FMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

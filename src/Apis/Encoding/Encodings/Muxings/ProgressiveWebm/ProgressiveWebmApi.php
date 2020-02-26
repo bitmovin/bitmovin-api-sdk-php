@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Customdata\CustomdataApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Information\InformationApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Drm\DrmApi;
 
 class ProgressiveWebmApi
 {
@@ -21,6 +22,9 @@ class ProgressiveWebmApi
 
     /** @var InformationApi */
     public $information;
+
+    /** @var DrmApi */
+    public $drm;
 
     /**
      * ProgressiveWebmApi constructor.
@@ -34,10 +38,11 @@ class ProgressiveWebmApi
 
         $this->customdata = new CustomdataApi(null, $this->httpWrapper);
         $this->information = new InformationApi(null, $this->httpWrapper);
+        $this->drm = new DrmApi(null, $this->httpWrapper);
     }
 
     /**
-     * Add Progressive WebM Muxing
+     * Add Progressive WebM muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ProgressiveWebmMuxing $progressiveWebmMuxing
@@ -55,7 +60,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * Delete Progressive WebM Muxing
+     * Delete Progressive WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +79,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * Progressive WebM Muxing Details
+     * Progressive WebM muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +98,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * List Progressive WebM Muxings
+     * List Progressive WebM muxings
      *
      * @param string $encodingId
      * @param ProgressiveWebmMuxingListQueryParams|null $queryParams

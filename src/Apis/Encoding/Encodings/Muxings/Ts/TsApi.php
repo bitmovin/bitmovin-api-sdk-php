@@ -37,7 +37,7 @@ class TsApi
     }
 
     /**
-     * Add TS Segment Muxing
+     * Add TS muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\TsMuxing $tsMuxing
@@ -55,7 +55,7 @@ class TsApi
     }
 
     /**
-     * Delete TS Segment Muxing
+     * Delete TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +74,7 @@ class TsApi
     }
 
     /**
-     * TS Segment Muxing Details
+     * TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +93,7 @@ class TsApi
     }
 
     /**
-     * List TS Segment Muxings
+     * List TS muxings
      *
      * @param string $encodingId
      * @param TsMuxingListQueryParams|null $queryParams

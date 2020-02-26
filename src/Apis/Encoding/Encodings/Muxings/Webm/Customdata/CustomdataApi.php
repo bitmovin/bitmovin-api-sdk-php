@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * WebM Muxing Custom Data
+     * WebM muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

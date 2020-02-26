@@ -27,7 +27,7 @@ class InformationApi
     }
 
     /**
-     * MP4 Muxing Information
+     * MP4 muxing Information
      *
      * @param string $encodingId
      * @param string $muxingId

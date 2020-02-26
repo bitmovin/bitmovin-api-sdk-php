@@ -37,7 +37,7 @@ class Fmp4Api
     }
 
     /**
-     * Add fMP4 Segment Muxing
+     * Add fMP4 muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Fmp4Muxing $fmp4Muxing
@@ -55,7 +55,7 @@ class Fmp4Api
     }
 
     /**
-     * Delete fMP4 Muxing
+     * Delete fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -74,7 +74,7 @@ class Fmp4Api
     }
 
     /**
-     * fMP4 Segment Muxing Details
+     * fMP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -93,7 +93,7 @@ class Fmp4Api
     }
 
     /**
-     * List fMP4 Segment Muxings
+     * List fMP4 muxings
      *
      * @param string $encodingId
      * @param Fmp4MuxingListQueryParams|null $queryParams

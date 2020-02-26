@@ -27,7 +27,7 @@ class InformationApi
     }
 
     /**
-     * Progressive WebM Muxing Information
+     * Progressive WebM muxing Information
      *
      * @param string $encodingId
      * @param string $muxingId

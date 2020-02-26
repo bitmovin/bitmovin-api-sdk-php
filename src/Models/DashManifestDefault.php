@@ -13,15 +13,19 @@ class DashManifestDefault extends DashManifest
     /** @var DashManifestDefaultVersion */
     public $version;
 
+    /** @var \BitmovinApiSdk\Models\DefaultDashManifestPeriod[] */
+    public $periods;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         
         $this->version = ObjectMapper::map($this->version, DashManifestDefaultVersion::class);
+        $this->periods = ObjectMapper::map($this->periods, DefaultDashManifestPeriod::class);
     }
 
     /**
-     * The id of the encoding to create a default manifest from (required)
+     * The id of the encoding to create a default manifest from. Required: encodingId or periods
      *
      * @param string $encodingId
      * @return $this
@@ -42,6 +46,19 @@ class DashManifestDefault extends DashManifest
     public function version(DashManifestDefaultVersion $version)
     {
         $this->version = $version;
+
+        return $this;
+    }
+
+    /**
+     * Adds a period for every item. Required: encodingId or periods
+     *
+     * @param \BitmovinApiSdk\Models\DefaultDashManifestPeriod[] $periods
+     * @return $this
+     */
+    public function periods(array $periods)
+    {
+        $this->periods = $periods;
 
         return $this;
     }

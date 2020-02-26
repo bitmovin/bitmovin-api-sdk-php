@@ -1,10 +1,10 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Cmaf\Drm;
+namespace BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\ProgressiveWebm;
 
 use BitmovinApiSdk\Common\QueryParams;
 
-class DashCmafDrmRepresentationListQueryParams implements QueryParams
+class DashProgressiveWebmRepresentationListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -13,18 +13,18 @@ class DashCmafDrmRepresentationListQueryParams implements QueryParams
     private $limit;
 
     /**
-     * @return DashCmafDrmRepresentationListQueryParams
+     * @return DashProgressiveWebmRepresentationListQueryParams
      */
-    public static function create(): DashCmafDrmRepresentationListQueryParams
+    public static function create(): DashProgressiveWebmRepresentationListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return DashCmafDrmRepresentationListQueryParams
+     * @return DashProgressiveWebmRepresentationListQueryParams
      */
-    public function offset(int $offset): DashCmafDrmRepresentationListQueryParams
+    public function offset(int $offset): DashProgressiveWebmRepresentationListQueryParams
     {
         $this->offset = $offset;
 
@@ -33,9 +33,9 @@ class DashCmafDrmRepresentationListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return DashCmafDrmRepresentationListQueryParams
+     * @return DashProgressiveWebmRepresentationListQueryParams
      */
-    public function limit(int $limit): DashCmafDrmRepresentationListQueryParams
+    public function limit(int $limit): DashProgressiveWebmRepresentationListQueryParams
     {
         $this->limit = $limit;
 

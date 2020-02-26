@@ -27,7 +27,7 @@ class InformationApi
     }
 
     /**
-     * Broadcast TS Muxing Information
+     * Broadcast TS muxing Information
      *
      * @param string $encodingId
      * @param string $muxingId

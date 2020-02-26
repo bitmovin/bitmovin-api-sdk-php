@@ -27,7 +27,7 @@ class InformationApi
     }
 
     /**
-     * MP3 Muxing Information
+     * MP3 muxing Information
      *
      * @param string $encodingId
      * @param string $muxingId

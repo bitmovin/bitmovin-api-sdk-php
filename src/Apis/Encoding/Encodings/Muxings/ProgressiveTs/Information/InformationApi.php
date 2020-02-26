@@ -27,7 +27,7 @@ class InformationApi
     }
 
     /**
-     * Progressive TS Muxing Information
+     * Progressive TS muxing Information
      *
      * @param string $encodingId
      * @param string $muxingId

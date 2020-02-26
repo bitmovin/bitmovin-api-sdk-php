@@ -27,7 +27,7 @@ class CustomdataApi
     }
 
     /**
-     * Progressive TS Muxing Custom Data
+     * Progressive TS muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

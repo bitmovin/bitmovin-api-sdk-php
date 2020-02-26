@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Drm\Speke;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Drm\Cenc;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -8,9 +8,9 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\Drm\Speke\Customdata\CustomdataApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\Drm\Cenc\Customdata\CustomdataApi;
 
-class SpekeApi
+class CencApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
@@ -19,7 +19,7 @@ class SpekeApi
     public $customdata;
 
     /**
-     * SpekeApi constructor.
+     * CencApi constructor.
      *
      * @param Configuration $config
      * @param HttpWrapper $httpWrapper
@@ -32,27 +32,27 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to CMAF
+     * Add CENC DRM to Progressive WebM
      *
      * @param string $encodingId
      * @param string $muxingId
-     * @param \BitmovinApiSdk\Models\SpekeDrm $spekeDrm
-     * @return \BitmovinApiSdk\Models\SpekeDrm
+     * @param \BitmovinApiSdk\Models\CencDrm $cencDrm
+     * @return \BitmovinApiSdk\Models\CencDrm
      * @throws BitmovinApiException
      */
-    public function create(string $encodingId, string $muxingId, \BitmovinApiSdk\Models\SpekeDrm $spekeDrm) : \BitmovinApiSdk\Models\SpekeDrm
+    public function create(string $encodingId, string $muxingId, \BitmovinApiSdk\Models\CencDrm $cencDrm) : \BitmovinApiSdk\Models\CencDrm
     {
         $pathParams = [
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}/drm/speke', $pathParams,  null, $spekeDrm, true);
+        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}/drm/cenc', $pathParams,  null, $cencDrm, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\SpekeDrm::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\CencDrm::class);
     }
 
     /**
-     * Delete SPEKE DRM from CMAF
+     * Delete CENC DRM from Progressive WebM
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -67,49 +67,49 @@ class SpekeApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}/drm/speke/{drm_id}', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}/drm/cenc/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
 
     /**
-     * SPEKE DRM Details of CMAF
+     * CENC DRM Details of Progressive WebM
      *
      * @param string $encodingId
      * @param string $muxingId
      * @param string $drmId
-     * @return \BitmovinApiSdk\Models\SpekeDrm
+     * @return \BitmovinApiSdk\Models\CencDrm
      * @throws BitmovinApiException
      */
-    public function get(string $encodingId, string $muxingId, string $drmId) : \BitmovinApiSdk\Models\SpekeDrm
+    public function get(string $encodingId, string $muxingId, string $drmId) : \BitmovinApiSdk\Models\CencDrm
     {
         $pathParams = [
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}/drm/speke/{drm_id}', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}/drm/cenc/{drm_id}', $pathParams,  null, null, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\SpekeDrm::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\CencDrm::class);
     }
 
     /**
-     * List SPEKE DRM of CMAF
+     * List CENC DRM configurations of Progressive WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
-     * @param SpekeDrmListQueryParams|null $queryParams
-     * @return SpekeDrmPaginationResponse
+     * @param CencDrmListQueryParams|null $queryParams
+     * @return CencDrmPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(string $encodingId, string $muxingId, SpekeDrmListQueryParams $queryParams = null) : SpekeDrmPaginationResponse
+    public function list(string $encodingId, string $muxingId, CencDrmListQueryParams $queryParams = null) : CencDrmPaginationResponse
     {
         $pathParams = [
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}/drm/speke', $pathParams, $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}/drm/cenc', $pathParams, $queryParams, null, true);
 
-        return ObjectMapper::map($response, SpekeDrmPaginationResponse::class);
+        return ObjectMapper::map($response, CencDrmPaginationResponse::class);
     }
 }
