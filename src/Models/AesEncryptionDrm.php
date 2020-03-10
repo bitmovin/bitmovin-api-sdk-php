@@ -22,7 +22,6 @@ class AesEncryptionDrm extends Drm
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->method = ObjectMapper::map($this->method, AesEncryptionMethod::class);
     }
 

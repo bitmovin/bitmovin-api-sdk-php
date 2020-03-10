@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DolbyVisionApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class DolbyVisionApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision', $pathParams,  null, $dolbyVisionMetadata, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision', $pathParams,  null, $dolbyVisionMetadata, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DolbyVisionMetadata::class);
     }
@@ -62,7 +62,8 @@ class DolbyVisionApi
             'stream_id' => $streamId,
             'hdr_id' => $hdrId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision/{hdr_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision/{hdr_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -83,7 +84,8 @@ class DolbyVisionApi
             'stream_id' => $streamId,
             'hdr_id' => $hdrId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision/{hdr_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision/{hdr_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DolbyVisionMetadata::class);
     }
@@ -103,7 +105,8 @@ class DolbyVisionApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/hdr/dolby-vision', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DolbyVisionMetadataPaginationResponse::class);
     }

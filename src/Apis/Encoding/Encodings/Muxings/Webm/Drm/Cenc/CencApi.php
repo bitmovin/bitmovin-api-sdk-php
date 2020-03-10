@@ -46,7 +46,8 @@ class CencApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc', $pathParams,  null, $cencDrm, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc', $pathParams,  null, $cencDrm, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CencDrm::class);
     }
@@ -67,7 +68,8 @@ class CencApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc/{drm_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class CencApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc/{drm_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CencDrm::class);
     }
@@ -108,7 +111,8 @@ class CencApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/webm/{muxing_id}/drm/cenc', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, CencDrmPaginationResponse::class);
     }

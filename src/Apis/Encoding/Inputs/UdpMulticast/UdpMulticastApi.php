@@ -40,8 +40,7 @@ class UdpMulticastApi
      */
     public function create(\BitmovinApiSdk\Models\UdpMulticastInput $udpMulticastInput) : \BitmovinApiSdk\Models\UdpMulticastInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/udp-multicast', [],  null, $udpMulticastInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/udp-multicast', [],  null, $udpMulticastInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\UdpMulticastInput::class);
     }
@@ -58,7 +57,8 @@ class UdpMulticastApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/udp-multicast/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/udp-multicast/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\UdpMulticastInput::class);
     }
@@ -75,7 +75,8 @@ class UdpMulticastApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/udp-multicast/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/udp-multicast/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\UdpMulticastInput::class);
     }
@@ -89,8 +90,7 @@ class UdpMulticastApi
      */
     public function list(UdpMulticastInputListQueryParams $queryParams = null) : UdpMulticastInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/udp-multicast', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/udp-multicast', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, UdpMulticastInputPaginationResponse::class);
     }

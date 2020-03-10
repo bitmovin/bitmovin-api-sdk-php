@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class TenantsApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class TenantsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('POST','/account/organizations/{organization_id}/groups/{group_id}/tenants', $pathParams,  null, $tenant, true);
+
+        $response = $this->httpWrapper->request('POST', '/account/organizations/{organization_id}/groups/{group_id}/tenants', $pathParams,  null, $tenant, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Tenant::class);
     }
@@ -62,7 +62,8 @@ class TenantsApi
             'group_id' => $groupId,
             'tenant_id' => $tenantId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/account/organizations/{organization_id}/groups/{group_id}/tenants/{tenant_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/account/organizations/{organization_id}/groups/{group_id}/tenants/{tenant_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -83,7 +84,8 @@ class TenantsApi
             'group_id' => $groupId,
             'tenant_id' => $tenantId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/groups/{group_id}/tenants/{tenant_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}/tenants/{tenant_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Tenant::class);
     }
@@ -102,7 +104,8 @@ class TenantsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/groups/{group_id}/tenants', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}/tenants', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, TenantPaginationResponse::class);
     }

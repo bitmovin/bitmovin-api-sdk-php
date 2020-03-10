@@ -40,8 +40,7 @@ class SrtApi
      */
     public function create(\BitmovinApiSdk\Models\SrtInput $srtInput) : \BitmovinApiSdk\Models\SrtInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/srt', [],  null, $srtInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/srt', [],  null, $srtInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SrtInput::class);
     }
@@ -58,7 +57,8 @@ class SrtApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/srt/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/srt/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SrtInput::class);
     }
@@ -75,7 +75,8 @@ class SrtApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/srt/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/srt/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SrtInput::class);
     }
@@ -89,8 +90,7 @@ class SrtApi
      */
     public function list(SrtInputListQueryParams $queryParams = null) : SrtInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/srt', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/srt', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, SrtInputPaginationResponse::class);
     }

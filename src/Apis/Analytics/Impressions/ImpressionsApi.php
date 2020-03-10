@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ImpressionsApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class ImpressionsApi
         $pathParams = [
             'impression_id' => $impressionId,
         ];
-        $response = $this->httpWrapper->request('POST','/analytics/impressions/{impression_id}', $pathParams,  null, $analyticsLicenseKey, true);
+
+        $response = $this->httpWrapper->request('POST', '/analytics/impressions/{impression_id}', $pathParams,  null, $analyticsLicenseKey, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsImpressionDetails::class);
     }
@@ -53,8 +53,7 @@ class ImpressionsApi
      */
     public function getImpressions(\BitmovinApiSdk\Models\AnalyticsImpressionsQuery $analyticsImpressionsQuery) : \BitmovinApiSdk\Models\AnalyticsImpressionsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/impressions', [],  null, $analyticsImpressionsQuery, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/impressions', [],  null, $analyticsImpressionsQuery, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsImpressionsResponse::class);
     }

@@ -28,7 +28,6 @@ class WebmMuxing extends Muxing
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

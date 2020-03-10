@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class FinishedApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class FinishedApi
      */
     public function create(\BitmovinApiSdk\Models\Webhook $webhook) : WebhookPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/notifications/webhooks/encoding/manifest/finished', [],  null, $webhook, true);
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/manifest/finished', [],  null, $webhook, true);
 
         return ObjectMapper::map($response, WebhookPaginationResponse::class);
     }
@@ -54,7 +52,8 @@ class FinishedApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/webhooks/encoding/manifest/{manifest_id}/finished', $pathParams,  null, $webhook, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/manifest/{manifest_id}/finished', $pathParams,  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
@@ -72,7 +71,8 @@ class FinishedApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('PUT','/notifications/webhooks/encoding/manifest/finished/{notification_id}', $pathParams,  null, $webhook, true);
+
+        $response = $this->httpWrapper->request('PUT', '/notifications/webhooks/encoding/manifest/finished/{notification_id}', $pathParams,  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }

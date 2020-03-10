@@ -43,7 +43,8 @@ class VersionsApi
         $pathParams = [
             'channel_name' => $channelName,
         ];
-        $response = $this->httpWrapper->request('GET','/player/channels/{channel_name}/versions', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/channels/{channel_name}/versions', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, PlayerVersionPaginationResponse::class);
     }

@@ -40,8 +40,7 @@ class AwsApi
      */
     public function create(\BitmovinApiSdk\Models\AwsAccount $awsAccount) : \BitmovinApiSdk\Models\AwsAccount
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/infrastructure/aws', [],  null, $awsAccount, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/infrastructure/aws', [],  null, $awsAccount, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AwsAccount::class);
     }
@@ -58,7 +57,8 @@ class AwsApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/infrastructure/aws/{infrastructure_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/infrastructure/aws/{infrastructure_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AwsAccount::class);
     }
@@ -75,7 +75,8 @@ class AwsApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/aws/{infrastructure_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/aws/{infrastructure_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AwsAccount::class);
     }
@@ -89,8 +90,7 @@ class AwsApi
      */
     public function list(AwsAccountListQueryParams $queryParams = null) : AwsAccountPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/aws', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/aws', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AwsAccountPaginationResponse::class);
     }

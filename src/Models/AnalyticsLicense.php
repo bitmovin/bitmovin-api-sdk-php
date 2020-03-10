@@ -37,7 +37,6 @@ class AnalyticsLicense extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->domains = ObjectMapper::map($this->domains, AnalyticsLicenseDomain::class);
         $this->customDataFieldLabels = ObjectMapper::map($this->customDataFieldLabels, AnalyticsLicenseCustomDataFieldLabels::class);

@@ -40,8 +40,7 @@ class SftpApi
      */
     public function create(\BitmovinApiSdk\Models\SftpOutput $sftpOutput) : \BitmovinApiSdk\Models\SftpOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/sftp', [],  null, $sftpOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/sftp', [],  null, $sftpOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SftpOutput::class);
     }
@@ -58,7 +57,8 @@ class SftpApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/sftp/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/sftp/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SftpOutput::class);
     }
@@ -75,7 +75,8 @@ class SftpApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/sftp/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/sftp/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SftpOutput::class);
     }
@@ -89,8 +90,7 @@ class SftpApi
      */
     public function list(SftpOutputListQueryParams $queryParams = null) : SftpOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/sftp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/sftp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, SftpOutputPaginationResponse::class);
     }

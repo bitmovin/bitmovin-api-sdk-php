@@ -25,7 +25,6 @@ class ScaleFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->scalingAlgorithm = ObjectMapper::map($this->scalingAlgorithm, ScalingAlgorithm::class);
     }
 

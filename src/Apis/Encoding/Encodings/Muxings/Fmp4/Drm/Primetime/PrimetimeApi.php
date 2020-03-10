@@ -46,7 +46,8 @@ class PrimetimeApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime', $pathParams,  null, $primeTimeDrm, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime', $pathParams,  null, $primeTimeDrm, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PrimeTimeDrm::class);
     }
@@ -67,7 +68,8 @@ class PrimetimeApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime/{drm_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class PrimetimeApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime/{drm_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PrimeTimeDrm::class);
     }
@@ -108,7 +111,8 @@ class PrimetimeApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/primetime', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, PrimeTimeDrmPaginationResponse::class);
     }

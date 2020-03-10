@@ -22,7 +22,6 @@ class DashManifest extends Manifest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->profile = ObjectMapper::map($this->profile, DashProfile::class);
         $this->namespaces = ObjectMapper::map($this->namespaces, XmlNamespace::class);
         $this->utcTimings = ObjectMapper::map($this->utcTimings, UtcTiming::class);

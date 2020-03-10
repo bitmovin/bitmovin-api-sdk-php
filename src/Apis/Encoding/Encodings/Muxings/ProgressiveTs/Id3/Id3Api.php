@@ -56,7 +56,8 @@ class Id3Api
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, Id3TagPaginationResponse::class);
     }

@@ -44,7 +44,8 @@ class SccApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/captions/scc', $pathParams,  null, $convertSccCaption, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/captions/scc', $pathParams,  null, $convertSccCaption, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ConvertSccCaption::class);
     }
@@ -63,7 +64,8 @@ class SccApi
             'encoding_id' => $encodingId,
             'captions_id' => $captionsId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/captions/scc/{captions_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/captions/scc/{captions_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -82,7 +84,8 @@ class SccApi
             'encoding_id' => $encodingId,
             'captions_id' => $captionsId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/captions/scc/{captions_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/captions/scc/{captions_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ConvertSccCaption::class);
     }
@@ -100,7 +103,8 @@ class SccApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/captions/scc', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/captions/scc', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ConvertSccCaptionPaginationResponse::class);
     }

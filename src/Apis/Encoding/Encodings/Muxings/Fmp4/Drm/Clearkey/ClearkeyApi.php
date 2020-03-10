@@ -46,7 +46,8 @@ class ClearkeyApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey', $pathParams,  null, $clearKeyDrm, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey', $pathParams,  null, $clearKeyDrm, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ClearKeyDrm::class);
     }
@@ -67,7 +68,8 @@ class ClearkeyApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey/{drm_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class ClearkeyApi
             'muxing_id' => $muxingId,
             'drm_id' => $drmId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey/{drm_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey/{drm_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ClearKeyDrm::class);
     }
@@ -108,7 +111,8 @@ class ClearkeyApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/clearkey', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ClearKeyDrmPaginationResponse::class);
     }

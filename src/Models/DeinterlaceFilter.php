@@ -22,7 +22,6 @@ class DeinterlaceFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->parity = ObjectMapper::map($this->parity, PictureFieldParity::class);
         $this->mode = ObjectMapper::map($this->mode, DeinterlaceMode::class);
         $this->frameSelectionMode = ObjectMapper::map($this->frameSelectionMode, DeinterlaceFrameSelectionMode::class);

@@ -28,7 +28,6 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->hlsManifests = ObjectMapper::map($this->hlsManifests, LiveHlsManifest::class);
         $this->dashManifests = ObjectMapper::map($this->dashManifests, LiveDashManifest::class);
         $this->liveEncodingMode = ObjectMapper::map($this->liveEncodingMode, EncodingMode::class);

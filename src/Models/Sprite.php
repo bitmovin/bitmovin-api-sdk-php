@@ -37,7 +37,6 @@ class Sprite extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->unit = ObjectMapper::map($this->unit, SpriteUnit::class);
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
     }

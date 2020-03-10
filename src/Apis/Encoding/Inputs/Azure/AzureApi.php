@@ -40,8 +40,7 @@ class AzureApi
      */
     public function create(\BitmovinApiSdk\Models\AzureInput $azureInput) : \BitmovinApiSdk\Models\AzureInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/azure', [],  null, $azureInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/azure', [],  null, $azureInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AzureInput::class);
     }
@@ -58,7 +57,8 @@ class AzureApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/azure/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/azure/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AzureInput::class);
     }
@@ -75,7 +75,8 @@ class AzureApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/azure/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/azure/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AzureInput::class);
     }
@@ -89,8 +90,7 @@ class AzureApi
      */
     public function list(AzureInputListQueryParams $queryParams = null) : AzureInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/azure', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/azure', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AzureInputPaginationResponse::class);
     }

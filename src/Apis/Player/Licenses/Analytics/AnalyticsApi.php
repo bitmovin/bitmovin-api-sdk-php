@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class AnalyticsApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class AnalyticsApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('POST','/player/licenses/{license_id}/analytics', $pathParams,  null, $playerLicenseAnalytics, true);
+
+        $response = $this->httpWrapper->request('POST', '/player/licenses/{license_id}/analytics', $pathParams,  null, $playerLicenseAnalytics, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerLicenseAnalytics::class);
     }
@@ -56,7 +56,8 @@ class AnalyticsApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/player/licenses/{license_id}/analytics', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/player/licenses/{license_id}/analytics', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerLicenseAnalytics::class);
     }

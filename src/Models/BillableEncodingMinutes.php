@@ -25,7 +25,6 @@ class BillableEncodingMinutes extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->encodingMode = ObjectMapper::map($this->encodingMode, EncodingMode::class);
         $this->codec = ObjectMapper::map($this->codec, CodecConfigType::class);
         $this->perTitleResultStream = ObjectMapper::map($this->perTitleResultStream, StatisticsPerTitleStream::class);

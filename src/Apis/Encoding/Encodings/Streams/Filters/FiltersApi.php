@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class FiltersApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class FiltersApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams,  null, $streamFilter, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams,  null, $streamFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamFilterList::class);
     }
@@ -62,7 +62,8 @@ class FiltersApi
             'stream_id' => $streamId,
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/filters/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/filters/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -81,7 +82,8 @@ class FiltersApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponseList::class);
     }
@@ -101,7 +103,8 @@ class FiltersApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamFilterList::class);
     }

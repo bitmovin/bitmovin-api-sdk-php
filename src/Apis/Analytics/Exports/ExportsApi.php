@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ExportsApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class ExportsApi
      */
     public function create(\BitmovinApiSdk\Models\AnalyticsExportTask $analyticsExportTask) : \BitmovinApiSdk\Models\AnalyticsExportTask
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/exports', [],  null, $analyticsExportTask, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/exports', [],  null, $analyticsExportTask, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsExportTask::class);
     }
@@ -53,7 +51,8 @@ class ExportsApi
         $pathParams = [
             'export_task_id' => $exportTaskId,
         ];
-        $response = $this->httpWrapper->request('GET','/analytics/exports/{export_task_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/analytics/exports/{export_task_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsExportTask::class);
     }
@@ -67,8 +66,7 @@ class ExportsApi
      */
     public function list(AnalyticsExportTaskListQueryParams $queryParams = null) : AnalyticsExportTaskPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/analytics/exports', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/analytics/exports', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AnalyticsExportTaskPaginationResponse::class);
     }

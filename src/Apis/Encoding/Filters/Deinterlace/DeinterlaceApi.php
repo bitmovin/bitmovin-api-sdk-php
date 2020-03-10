@@ -40,8 +40,7 @@ class DeinterlaceApi
      */
     public function create(\BitmovinApiSdk\Models\DeinterlaceFilter $deinterlaceFilter) : \BitmovinApiSdk\Models\DeinterlaceFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/deinterlace', [],  null, $deinterlaceFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/deinterlace', [],  null, $deinterlaceFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DeinterlaceFilter::class);
     }
@@ -58,7 +57,8 @@ class DeinterlaceApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/deinterlace/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/deinterlace/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class DeinterlaceApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/deinterlace/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/deinterlace/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DeinterlaceFilter::class);
     }
@@ -89,8 +90,7 @@ class DeinterlaceApi
      */
     public function list(DeinterlaceFilterListQueryParams $queryParams = null) : DeinterlaceFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/deinterlace', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/deinterlace', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, DeinterlaceFilterPaginationResponse::class);
     }

@@ -49,7 +49,8 @@ class SidecarsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/sidecars', $pathParams,  null, $sidecarFile, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/sidecars', $pathParams,  null, $sidecarFile, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SidecarFile::class);
     }
@@ -68,7 +69,8 @@ class SidecarsApi
             'encoding_id' => $encodingId,
             'sidecar_id' => $sidecarId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -87,7 +89,8 @@ class SidecarsApi
             'encoding_id' => $encodingId,
             'sidecar_id' => $sidecarId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SidecarFile::class);
     }
@@ -105,7 +108,8 @@ class SidecarsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/sidecars', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/sidecars', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SidecarFilePaginationResponse::class);
     }

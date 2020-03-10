@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DolbyVisionMetadataIngestApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class DolbyVisionMetadataIngestApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest', $pathParams,  null, $dolbyVisionMetadataIngestInputStream, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest', $pathParams,  null, $dolbyVisionMetadataIngestInputStream, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DolbyVisionMetadataIngestInputStream::class);
     }
@@ -58,7 +58,8 @@ class DolbyVisionMetadataIngestApi
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest/{input_stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest/{input_stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class DolbyVisionMetadataIngestApi
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest/{input_stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest/{input_stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DolbyVisionMetadataIngestInputStream::class);
     }
@@ -95,7 +97,8 @@ class DolbyVisionMetadataIngestApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/sidecar/dolby-vision-metadata-ingest', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DolbyVisionMetadataIngestInputStreamPaginationResponse::class);
     }

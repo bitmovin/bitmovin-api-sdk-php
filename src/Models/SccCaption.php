@@ -13,7 +13,6 @@ class SccCaption extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->input = ObjectMapper::map($this->input, InputPath::class);
     }
 

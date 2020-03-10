@@ -40,8 +40,7 @@ class LicensesApi
      */
     public function create(\BitmovinApiSdk\Models\AnalyticsLicense $analyticsLicense) : \BitmovinApiSdk\Models\AnalyticsLicense
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/licenses', [],  null, $analyticsLicense, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/licenses', [],  null, $analyticsLicense, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsLicense::class);
     }
@@ -58,7 +57,8 @@ class LicensesApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('GET','/analytics/licenses/{license_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/analytics/licenses/{license_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsLicense::class);
     }
@@ -71,8 +71,7 @@ class LicensesApi
      */
     public function list() : AnalyticsLicensePaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/analytics/licenses', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/analytics/licenses', [],  null, null, true);
 
         return ObjectMapper::map($response, AnalyticsLicensePaginationResponse::class);
     }
@@ -90,7 +89,8 @@ class LicensesApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('PUT','/analytics/licenses/{license_id}', $pathParams,  null, $analyticsLicenseUpdateRequest, true);
+
+        $response = $this->httpWrapper->request('PUT', '/analytics/licenses/{license_id}', $pathParams,  null, $analyticsLicenseUpdateRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsLicense::class);
     }

@@ -40,8 +40,7 @@ class HttpsApi
      */
     public function create(\BitmovinApiSdk\Models\HttpsInput $httpsInput) : \BitmovinApiSdk\Models\HttpsInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/https', [],  null, $httpsInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/https', [],  null, $httpsInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HttpsInput::class);
     }
@@ -58,7 +57,8 @@ class HttpsApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/https/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/https/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HttpsInput::class);
     }
@@ -75,7 +75,8 @@ class HttpsApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/https/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/https/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HttpsInput::class);
     }
@@ -89,8 +90,7 @@ class HttpsApi
      */
     public function list(HttpsInputListQueryParams $queryParams = null) : HttpsInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/https', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/https', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, HttpsInputPaginationResponse::class);
     }

@@ -40,8 +40,7 @@ class GcsApi
      */
     public function create(\BitmovinApiSdk\Models\GcsOutput $gcsOutput) : \BitmovinApiSdk\Models\GcsOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/gcs', [],  null, $gcsOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/gcs', [],  null, $gcsOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsOutput::class);
     }
@@ -58,7 +57,8 @@ class GcsApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/gcs/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/gcs/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsOutput::class);
     }
@@ -75,7 +75,8 @@ class GcsApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/gcs/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/gcs/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsOutput::class);
     }
@@ -89,8 +90,7 @@ class GcsApi
      */
     public function list(GcsOutputListQueryParams $queryParams = null) : GcsOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/gcs', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/gcs', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, GcsOutputPaginationResponse::class);
     }

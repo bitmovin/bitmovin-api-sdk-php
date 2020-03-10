@@ -10,7 +10,6 @@ class AdAnalyticsCountQueryRequest extends AdAnalyticsQueryRequest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 }
 

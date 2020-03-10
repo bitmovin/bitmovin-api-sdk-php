@@ -40,8 +40,7 @@ class S3RoleBasedApi
      */
     public function create(\BitmovinApiSdk\Models\S3RoleBasedOutput $s3RoleBasedOutput) : \BitmovinApiSdk\Models\S3RoleBasedOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/s3-role-based', [],  null, $s3RoleBasedOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/s3-role-based', [],  null, $s3RoleBasedOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedOutput::class);
     }
@@ -58,7 +57,8 @@ class S3RoleBasedApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/s3-role-based/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/s3-role-based/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedOutput::class);
     }
@@ -75,7 +75,8 @@ class S3RoleBasedApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/s3-role-based/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/s3-role-based/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedOutput::class);
     }
@@ -89,8 +90,7 @@ class S3RoleBasedApi
      */
     public function list(S3RoleBasedOutputListQueryParams $queryParams = null) : S3RoleBasedOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/s3-role-based', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/s3-role-based', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, S3RoleBasedOutputPaginationResponse::class);
     }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ProgressiveWebmApi
 {
     /** @var HttpWrapper */
@@ -43,7 +42,8 @@ class ProgressiveWebmApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm', $pathParams,  null, $dashProgressiveWebmRepresentation, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm', $pathParams,  null, $dashProgressiveWebmRepresentation, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashProgressiveWebmRepresentation::class);
     }
@@ -66,7 +66,8 @@ class ProgressiveWebmApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -89,7 +90,8 @@ class ProgressiveWebmApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashProgressiveWebmRepresentation::class);
     }
@@ -111,7 +113,8 @@ class ProgressiveWebmApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/progressive-webm', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DashProgressiveWebmRepresentationPaginationResponse::class);
     }

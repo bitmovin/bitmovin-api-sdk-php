@@ -25,7 +25,6 @@ class BitmovinResource extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->modifiedAt = ObjectMapper::map($this->modifiedAt, Carbon::class);
     }

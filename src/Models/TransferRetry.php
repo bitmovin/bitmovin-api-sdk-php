@@ -22,7 +22,6 @@ class TransferRetry extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->status = ObjectMapper::map($this->status, Status::class);
         $this->startedAt = ObjectMapper::map($this->startedAt, Carbon::class);
         $this->finishedAt = ObjectMapper::map($this->finishedAt, Carbon::class);

@@ -16,7 +16,6 @@ class SmoothStreamingManifest extends Manifest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class IframeApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class IframeApi
             'manifest_id' => $manifestId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe', $pathParams,  null, $iFramePlaylist, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe', $pathParams,  null, $iFramePlaylist, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\IFramePlaylist::class);
     }
@@ -62,7 +62,8 @@ class IframeApi
             'stream_id' => $streamId,
             'iframe_id' => $iframeId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe/{iframe_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe/{iframe_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -83,7 +84,8 @@ class IframeApi
             'stream_id' => $streamId,
             'iframe_id' => $iframeId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe/{iframe_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe/{iframe_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\IFramePlaylist::class);
     }
@@ -103,7 +105,8 @@ class IframeApi
             'manifest_id' => $manifestId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/iframe', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, IFramePlaylistPaginationResponse::class);
     }

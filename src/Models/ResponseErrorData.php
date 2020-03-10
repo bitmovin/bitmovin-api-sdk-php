@@ -25,7 +25,6 @@ class ResponseErrorData extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->links = ObjectMapper::map($this->links, Link::class);
         $this->details = ObjectMapper::map($this->details, Message::class);
     }

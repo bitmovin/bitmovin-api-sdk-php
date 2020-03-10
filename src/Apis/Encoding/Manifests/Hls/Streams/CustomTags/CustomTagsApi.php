@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class CustomTagsApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class CustomTagsApi
             'manifest_id' => $manifestId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags', $pathParams,  null, $customTag, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags', $pathParams,  null, $customTag, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomTag::class);
     }
@@ -62,7 +62,8 @@ class CustomTagsApi
             'stream_id' => $streamId,
             'custom_tag_id' => $customTagId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags/{custom_tag_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags/{custom_tag_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -83,7 +84,8 @@ class CustomTagsApi
             'stream_id' => $streamId,
             'custom_tag_id' => $customTagId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags/{custom_tag_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags/{custom_tag_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomTag::class);
     }
@@ -103,7 +105,8 @@ class CustomTagsApi
             'manifest_id' => $manifestId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}/custom-tags', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, CustomTagPaginationResponse::class);
     }

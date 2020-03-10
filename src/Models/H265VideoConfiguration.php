@@ -295,7 +295,6 @@ class H265VideoConfiguration extends VideoConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, PresetConfiguration::class);
         $this->profile = ObjectMapper::map($this->profile, ProfileH265::class);
         $this->level = ObjectMapper::map($this->level, LevelH265::class);

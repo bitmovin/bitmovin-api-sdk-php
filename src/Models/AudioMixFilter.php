@@ -16,7 +16,6 @@ class AudioMixFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->channelLayout = ObjectMapper::map($this->channelLayout, AudioMixChannelLayout::class);
         $this->audioMixChannels = ObjectMapper::map($this->audioMixChannels, AudioMixChannel::class);
     }

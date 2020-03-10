@@ -48,7 +48,8 @@ class CmafApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf', $pathParams,  null, $dashCmafRepresentation, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf', $pathParams,  null, $dashCmafRepresentation, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashCmafRepresentation::class);
     }
@@ -71,7 +72,8 @@ class CmafApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -94,7 +96,8 @@ class CmafApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashCmafRepresentation::class);
     }
@@ -116,7 +119,8 @@ class CmafApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/cmaf', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DashCmafRepresentationPaginationResponse::class);
     }

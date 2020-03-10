@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class CountApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class CountApi
      */
     public function create(\BitmovinApiSdk\Models\AdAnalyticsCountQueryRequest $adAnalyticsCountQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/ads/queries/count', [],  null, $adAnalyticsCountQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/ads/queries/count', [],  null, $adAnalyticsCountQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

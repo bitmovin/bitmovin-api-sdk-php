@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DailyApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class DailyApi
      */
     public function list(DailyStatisticsListQueryParams $queryParams = null) : DailyStatisticsPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/daily', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/daily', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, DailyStatisticsPaginationResponse::class);
     }
@@ -56,7 +54,8 @@ class DailyApi
             'from' => $from->format('Y-m-d'),
             'to' => $to->format('Y-m-d'),
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/daily/{from}/{to}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/daily/{from}/{to}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DailyStatisticsPaginationResponse::class);
     }

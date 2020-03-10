@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class StreamsApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class StreamsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/{encoding_id}/live-statistics/streams', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/{encoding_id}/live-statistics/streams', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, StreamInfosPaginationResponse::class);
     }

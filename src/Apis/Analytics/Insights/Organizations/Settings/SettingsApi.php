@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class SettingsApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class SettingsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('GET','/analytics/insights/organizations/{organization_id}/settings', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/analytics/insights/organizations/{organization_id}/settings', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsInsightsOrganizationSettings::class);
     }
@@ -56,7 +56,8 @@ class SettingsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('PUT','/analytics/insights/organizations/{organization_id}/settings', $pathParams,  null, $analyticsInsightsOrganizationSettingsRequest, true);
+
+        $response = $this->httpWrapper->request('PUT', '/analytics/insights/organizations/{organization_id}/settings', $pathParams,  null, $analyticsInsightsOrganizationSettingsRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsInsightsOrganizationSettings::class);
     }

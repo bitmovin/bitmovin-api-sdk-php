@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class VodApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class VodApi
      */
     public function list(EncodingStatisticsVodListQueryParams $queryParams = null) : EncodingStatisticsVodPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/vod', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/vod', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingStatisticsVodPaginationResponse::class);
     }
@@ -56,7 +54,8 @@ class VodApi
             'from' => $from->format('Y-m-d'),
             'to' => $to->format('Y-m-d'),
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/vod/{from}/{to}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/vod/{from}/{to}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingStatisticsVodPaginationResponse::class);
     }

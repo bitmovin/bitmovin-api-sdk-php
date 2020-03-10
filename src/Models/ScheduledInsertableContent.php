@@ -22,7 +22,6 @@ class ScheduledInsertableContent extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->runAt = ObjectMapper::map($this->runAt, Carbon::class);
         $this->status = ObjectMapper::map($this->status, ScheduledInsertableContentStatus::class);
     }

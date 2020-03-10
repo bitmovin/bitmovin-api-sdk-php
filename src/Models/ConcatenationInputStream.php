@@ -13,7 +13,6 @@ class ConcatenationInputStream extends InputStream
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->concatenation = ObjectMapper::map($this->concatenation, ConcatenationInputConfiguration::class);
     }
 

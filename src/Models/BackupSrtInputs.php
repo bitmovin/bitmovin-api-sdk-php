@@ -16,7 +16,6 @@ class BackupSrtInputs extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->srtInputs = ObjectMapper::map($this->srtInputs, SrtInput::class);
     }
 

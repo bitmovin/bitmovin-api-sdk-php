@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class LatestApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class LatestApi
         $pathParams = [
             'channel_name' => $channelName,
         ];
-        $response = $this->httpWrapper->request('GET','/player/channels/{channel_name}/versions/latest', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/channels/{channel_name}/versions/latest', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerVersion::class);
     }

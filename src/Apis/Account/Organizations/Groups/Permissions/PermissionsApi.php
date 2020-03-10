@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class PermissionsApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class PermissionsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('POST','/account/organizations/{organization_id}/groups/{group_id}/permissions', $pathParams,  null, $acl, true);
+
+        $response = $this->httpWrapper->request('POST', '/account/organizations/{organization_id}/groups/{group_id}/permissions', $pathParams,  null, $acl, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Acl::class);
     }
@@ -62,7 +62,8 @@ class PermissionsApi
             'group_id' => $groupId,
             'permission_id' => $permissionId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/account/organizations/{organization_id}/groups/{group_id}/permissions/{permission_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/account/organizations/{organization_id}/groups/{group_id}/permissions/{permission_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -81,7 +82,8 @@ class PermissionsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/groups/{group_id}/permissions', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}/permissions', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, AclPaginationResponse::class);
     }

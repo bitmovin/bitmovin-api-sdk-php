@@ -40,8 +40,7 @@ class UnsharpApi
      */
     public function create(\BitmovinApiSdk\Models\UnsharpFilter $unsharpFilter) : \BitmovinApiSdk\Models\UnsharpFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/unsharp', [],  null, $unsharpFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/unsharp', [],  null, $unsharpFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\UnsharpFilter::class);
     }
@@ -58,7 +57,8 @@ class UnsharpApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/unsharp/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/unsharp/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class UnsharpApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/unsharp/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/unsharp/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\UnsharpFilter::class);
     }
@@ -89,8 +90,7 @@ class UnsharpApi
      */
     public function list(UnsharpFilterListQueryParams $queryParams = null) : UnsharpFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/unsharp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/unsharp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, UnsharpFilterPaginationResponse::class);
     }

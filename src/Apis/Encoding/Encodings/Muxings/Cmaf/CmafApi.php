@@ -49,7 +49,8 @@ class CmafApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/cmaf', $pathParams,  null, $cmafMuxing, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/cmaf', $pathParams,  null, $cmafMuxing, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CmafMuxing::class);
     }
@@ -68,7 +69,8 @@ class CmafApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -87,7 +89,8 @@ class CmafApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/cmaf/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CmafMuxing::class);
     }
@@ -105,7 +108,8 @@ class CmafApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/cmaf', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/cmaf', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, CmafMuxingPaginationResponse::class);
     }

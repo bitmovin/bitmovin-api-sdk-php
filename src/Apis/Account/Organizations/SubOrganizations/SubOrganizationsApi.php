@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class SubOrganizationsApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class SubOrganizationsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/sub-organizations', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/sub-organizations', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, OrganizationPaginationResponse::class);
     }

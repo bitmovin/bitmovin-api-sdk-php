@@ -27,7 +27,6 @@ class Output extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->acl = ObjectMapper::map($this->acl, AclEntry::class);
     }
 

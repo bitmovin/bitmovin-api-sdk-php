@@ -55,8 +55,7 @@ class SmoothApi
      */
     public function create(\BitmovinApiSdk\Models\SmoothStreamingManifest $smoothStreamingManifest) : \BitmovinApiSdk\Models\SmoothStreamingManifest
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/smooth', [],  null, $smoothStreamingManifest, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/smooth', [],  null, $smoothStreamingManifest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothStreamingManifest::class);
     }
@@ -73,7 +72,8 @@ class SmoothApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/smooth/{manifest_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/smooth/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -90,7 +90,8 @@ class SmoothApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth/{manifest_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothStreamingManifest::class);
     }
@@ -104,8 +105,7 @@ class SmoothApi
      */
     public function list(SmoothStreamingManifestListQueryParams $queryParams = null) : SmoothStreamingManifestPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, SmoothStreamingManifestPaginationResponse::class);
     }
@@ -122,7 +122,8 @@ class SmoothApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/smooth/{manifest_id}/start', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/smooth/{manifest_id}/start', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -139,7 +140,8 @@ class SmoothApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth/{manifest_id}/status', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}/status', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Task::class);
     }
@@ -156,7 +158,8 @@ class SmoothApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/smooth/{manifest_id}/stop', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/smooth/{manifest_id}/stop', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

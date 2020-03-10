@@ -39,8 +39,7 @@ class ChannelsApi
      */
     public function list() : PlayerChannelPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/player/channels', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/player/channels', [],  null, null, true);
 
         return ObjectMapper::map($response, PlayerChannelPaginationResponse::class);
     }

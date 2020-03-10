@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class MinApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class MinApi
      */
     public function create(\BitmovinApiSdk\Models\AdAnalyticsMinQueryRequest $adAnalyticsMinQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/ads/queries/min', [],  null, $adAnalyticsMinQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/ads/queries/min', [],  null, $adAnalyticsMinQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

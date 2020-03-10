@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class StatesApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class StatesApi
             'notification_id' => $notificationId,
             'resource_id' => $resourceId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/{notification_id}/states/{resource_id}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/{notification_id}/states/{resource_id}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, NotificationStateEntryPaginationResponse::class);
     }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class RedundantRtmpApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class RedundantRtmpApi
      */
     public function create(\BitmovinApiSdk\Models\RedundantRtmpInput $redundantRtmpInput) : \BitmovinApiSdk\Models\RedundantRtmpInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/redundant-rtmp', [],  null, $redundantRtmpInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/redundant-rtmp', [],  null, $redundantRtmpInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\RedundantRtmpInput::class);
     }
@@ -53,7 +51,8 @@ class RedundantRtmpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/redundant-rtmp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/redundant-rtmp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -70,7 +69,8 @@ class RedundantRtmpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/redundant-rtmp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/redundant-rtmp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\RedundantRtmpInput::class);
     }
@@ -84,8 +84,7 @@ class RedundantRtmpApi
      */
     public function list(RedundantRtmpInputListQueryParams $queryParams = null) : RedundantRtmpInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/redundant-rtmp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/redundant-rtmp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, RedundantRtmpInputPaginationResponse::class);
     }

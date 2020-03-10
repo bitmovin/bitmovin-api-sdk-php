@@ -31,7 +31,6 @@ class GenericS3Input extends Input
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->signatureVersion = ObjectMapper::map($this->signatureVersion, S3SignatureVersion::class);
     }
 

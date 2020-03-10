@@ -34,7 +34,6 @@ class AdAnalyticsQueryRequest extends AnalyticsQueryTimeframe
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->filters = ObjectMapper::map($this->filters, AdAnalyticsAbstractFilter::class);
         $this->orderBy = ObjectMapper::map($this->orderBy, AdAnalyticsOrderByEntry::class);
         $this->dimension = ObjectMapper::map($this->dimension, AdAnalyticsAttribute::class);

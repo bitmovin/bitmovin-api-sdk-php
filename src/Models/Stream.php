@@ -49,7 +49,6 @@ class Stream extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->inputStreams = ObjectMapper::map($this->inputStreams, StreamInput::class);
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
         $this->conditions = ObjectMapper::map($this->conditions, AbstractCondition::class);

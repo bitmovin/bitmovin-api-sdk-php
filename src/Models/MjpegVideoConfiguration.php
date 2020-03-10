@@ -25,7 +25,6 @@ class MjpegVideoConfiguration extends CodecConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->pixelFormat = ObjectMapper::map($this->pixelFormat, PixelFormat::class);
     }
 

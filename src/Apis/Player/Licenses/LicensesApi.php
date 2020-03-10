@@ -50,8 +50,7 @@ class LicensesApi
      */
     public function create(\BitmovinApiSdk\Models\PlayerLicense $playerLicense) : \BitmovinApiSdk\Models\PlayerLicense
     {
-        
-        $response = $this->httpWrapper->request('POST','/player/licenses', [],  null, $playerLicense, true);
+        $response = $this->httpWrapper->request('POST', '/player/licenses', [],  null, $playerLicense, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerLicense::class);
     }
@@ -68,7 +67,8 @@ class LicensesApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('GET','/player/licenses/{license_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/licenses/{license_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerLicense::class);
     }
@@ -82,8 +82,7 @@ class LicensesApi
      */
     public function list(PlayerLicenseListQueryParams $queryParams = null) : PlayerLicensePaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/player/licenses', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/player/licenses', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, PlayerLicensePaginationResponse::class);
     }

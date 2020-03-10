@@ -16,7 +16,6 @@ class RedundantRtmpInput extends Input
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->ingestPoints = ObjectMapper::map($this->ingestPoints, RtmpIngestPoint::class);
     }
 

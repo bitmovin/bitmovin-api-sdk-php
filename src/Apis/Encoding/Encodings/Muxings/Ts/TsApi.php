@@ -49,7 +49,8 @@ class TsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/ts', $pathParams,  null, $tsMuxing, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/ts', $pathParams,  null, $tsMuxing, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TsMuxing::class);
     }
@@ -68,7 +69,8 @@ class TsApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/ts/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/ts/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -87,7 +89,8 @@ class TsApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/ts/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/ts/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TsMuxing::class);
     }
@@ -105,7 +108,8 @@ class TsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/ts', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/ts', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, TsMuxingPaginationResponse::class);
     }

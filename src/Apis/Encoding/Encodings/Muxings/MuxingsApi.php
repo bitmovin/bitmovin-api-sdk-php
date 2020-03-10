@@ -104,7 +104,8 @@ class MuxingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, MuxingPaginationResponse::class);
     }

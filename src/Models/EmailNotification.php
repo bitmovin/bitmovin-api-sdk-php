@@ -13,7 +13,6 @@ class EmailNotification extends Notification
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

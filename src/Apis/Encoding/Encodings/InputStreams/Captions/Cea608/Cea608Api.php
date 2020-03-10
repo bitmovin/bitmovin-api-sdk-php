@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class Cea608Api
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class Cea608Api
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/input-streams/captions/cea608', $pathParams,  null, $cea608CaptionInputStream, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/input-streams/captions/cea608', $pathParams,  null, $cea608CaptionInputStream, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Cea608CaptionInputStream::class);
     }
@@ -58,7 +58,8 @@ class Cea608Api
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/input-streams/captions/cea608/{input_stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/input-streams/captions/cea608/{input_stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class Cea608Api
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/captions/cea608/{input_stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/captions/cea608/{input_stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Cea608CaptionInputStream::class);
     }
@@ -95,7 +97,8 @@ class Cea608Api
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/captions/cea608', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/captions/cea608', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, Cea608CaptionInputStreamPaginationResponse::class);
     }

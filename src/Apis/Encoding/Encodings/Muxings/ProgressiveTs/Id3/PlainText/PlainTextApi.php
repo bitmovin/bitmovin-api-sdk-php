@@ -46,7 +46,8 @@ class PlainTextApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text', $pathParams,  null, $plaintextId3Tag, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text', $pathParams,  null, $plaintextId3Tag, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlaintextId3Tag::class);
     }
@@ -67,7 +68,8 @@ class PlainTextApi
             'muxing_id' => $muxingId,
             'id3_tag_id' => $id3TagId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text/{id3_tag_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text/{id3_tag_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class PlainTextApi
             'muxing_id' => $muxingId,
             'id3_tag_id' => $id3TagId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text/{id3_tag_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text/{id3_tag_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlaintextId3Tag::class);
     }
@@ -108,7 +111,8 @@ class PlainTextApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/plain-text', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, PlaintextId3TagPaginationResponse::class);
     }

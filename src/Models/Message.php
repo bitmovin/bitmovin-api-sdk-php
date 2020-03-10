@@ -28,7 +28,6 @@ class Message extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->type = ObjectMapper::map($this->type, MessageType::class);
         $this->links = ObjectMapper::map($this->links, Link::class);
         $this->date = ObjectMapper::map($this->date, Carbon::class);

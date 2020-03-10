@@ -40,8 +40,7 @@ class Vp9Api
      */
     public function create(\BitmovinApiSdk\Models\Vp9VideoConfiguration $vp9VideoConfiguration) : \BitmovinApiSdk\Models\Vp9VideoConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/video/vp9', [],  null, $vp9VideoConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/video/vp9', [],  null, $vp9VideoConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Vp9VideoConfiguration::class);
     }
@@ -58,7 +57,8 @@ class Vp9Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/video/vp9/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/video/vp9/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class Vp9Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/vp9/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/vp9/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Vp9VideoConfiguration::class);
     }
@@ -89,8 +90,7 @@ class Vp9Api
      */
     public function list(Vp9VideoConfigurationListQueryParams $queryParams = null) : Vp9VideoConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/vp9', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/vp9', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, Vp9VideoConfigurationPaginationResponse::class);
     }

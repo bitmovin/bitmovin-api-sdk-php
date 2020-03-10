@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ErrorDefinitionsApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class ErrorDefinitionsApi
      */
     public function list(EncodingErrorDefinitionListQueryParams $queryParams = null) : EncodingErrorDefinitionPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/error-definitions', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/error-definitions', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingErrorDefinitionPaginationResponse::class);
     }

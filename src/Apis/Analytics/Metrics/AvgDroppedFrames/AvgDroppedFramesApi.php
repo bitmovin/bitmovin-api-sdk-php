@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class AvgDroppedFramesApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class AvgDroppedFramesApi
      */
     public function create(\BitmovinApiSdk\Models\AnalyticsMetricsQueryRequest $analyticsMetricsQueryRequest) : \BitmovinApiSdk\Models\AnalyticsAvgDroppedFramesResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/metrics/avg-dropped-frames', [],  null, $analyticsMetricsQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/metrics/avg-dropped-frames', [],  null, $analyticsMetricsQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsAvgDroppedFramesResponse::class);
     }

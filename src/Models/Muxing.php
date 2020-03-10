@@ -47,7 +47,6 @@ class Muxing extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->streams = ObjectMapper::map($this->streams, MuxingStream::class);
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
         $this->ignoredBy = ObjectMapper::map($this->ignoredBy, Ignoring::class);

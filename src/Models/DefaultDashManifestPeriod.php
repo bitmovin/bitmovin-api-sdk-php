@@ -16,7 +16,6 @@ class DefaultDashManifestPeriod extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->adaptationSets = ObjectMapper::map($this->adaptationSets, DefaultManifestCondition::class);
     }
 

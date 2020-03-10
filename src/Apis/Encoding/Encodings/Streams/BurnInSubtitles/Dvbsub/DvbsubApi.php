@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DvbsubApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class DvbsubApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub', $pathParams,  null, $burnInSubtitleDvbSub, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub', $pathParams,  null, $burnInSubtitleDvbSub, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BurnInSubtitleDvbSub::class);
     }
@@ -62,7 +62,8 @@ class DvbsubApi
             'stream_id' => $streamId,
             'subtitle_id' => $subtitleId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub/{subtitle_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub/{subtitle_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -83,7 +84,8 @@ class DvbsubApi
             'stream_id' => $streamId,
             'subtitle_id' => $subtitleId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub/{subtitle_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub/{subtitle_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BurnInSubtitleDvbSub::class);
     }
@@ -103,7 +105,8 @@ class DvbsubApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/burn-in-subtitles/dvbsub', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, BurnInSubtitleDvbSubPaginationResponse::class);
     }

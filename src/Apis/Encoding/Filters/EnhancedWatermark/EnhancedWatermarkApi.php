@@ -40,8 +40,7 @@ class EnhancedWatermarkApi
      */
     public function create(\BitmovinApiSdk\Models\EnhancedWatermarkFilter $enhancedWatermarkFilter) : \BitmovinApiSdk\Models\EnhancedWatermarkFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/enhanced-watermark', [],  null, $enhancedWatermarkFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/enhanced-watermark', [],  null, $enhancedWatermarkFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EnhancedWatermarkFilter::class);
     }
@@ -58,7 +57,8 @@ class EnhancedWatermarkApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/enhanced-watermark/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/enhanced-watermark/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class EnhancedWatermarkApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/enhanced-watermark/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/enhanced-watermark/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EnhancedWatermarkFilter::class);
     }
@@ -89,8 +90,7 @@ class EnhancedWatermarkApi
      */
     public function list(EnhancedWatermarkFilterListQueryParams $queryParams = null) : EnhancedWatermarkFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/enhanced-watermark', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/enhanced-watermark', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EnhancedWatermarkFilterPaginationResponse::class);
     }

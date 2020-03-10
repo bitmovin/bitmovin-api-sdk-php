@@ -55,7 +55,6 @@ class StreamInfo extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->audioGroups = ObjectMapper::map($this->audioGroups, AudioGroupConfiguration::class);
     }
 

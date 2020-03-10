@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class PercentileApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class PercentileApi
      */
     public function create(\BitmovinApiSdk\Models\AdAnalyticsPercentileQueryRequest $adAnalyticsPercentileQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/ads/queries/percentile', [],  null, $adAnalyticsPercentileQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/ads/queries/percentile', [],  null, $adAnalyticsPercentileQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

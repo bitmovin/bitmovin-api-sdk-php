@@ -22,7 +22,6 @@ class PlayerThirdPartyLicensing extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->errorAction = ObjectMapper::map($this->errorAction, PlayerThirdPartyLicensingErrorAction::class);
         $this->timeoutAction = ObjectMapper::map($this->timeoutAction, PlayerThirdPartyLicensingErrorAction::class);
     }

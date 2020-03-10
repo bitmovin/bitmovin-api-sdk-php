@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DefaultApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class DefaultApi
      */
     public function create(\BitmovinApiSdk\Models\HlsManifestDefault $hlsManifestDefault) : \BitmovinApiSdk\Models\HlsManifestDefault
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/default', [],  null, $hlsManifestDefault, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/default', [],  null, $hlsManifestDefault, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HlsManifestDefault::class);
     }

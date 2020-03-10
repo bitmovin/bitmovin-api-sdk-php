@@ -29,8 +29,7 @@ class ObjectMapper
 
     private static function calculateType($value, string $type) : string
     {
-        if(isset($type::$discriminatorMapping))
-        {
+        if (isset($type::$discriminatorMapping)) {
             $discriminatorMapping = $type::$discriminatorMapping;
 
             if (isset($value->type) && isset($discriminatorMapping[$value->type])) {

@@ -22,7 +22,6 @@ class EmailNotificationWithStreamConditionsRequest extends \BitmovinApiSdk\Commo
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->conditions = ObjectMapper::map($this->conditions, AbstractCondition::class);
     }
 

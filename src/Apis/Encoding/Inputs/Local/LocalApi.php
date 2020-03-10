@@ -40,8 +40,7 @@ class LocalApi
      */
     public function create(\BitmovinApiSdk\Models\LocalInput $localInput) : \BitmovinApiSdk\Models\LocalInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/local', [],  null, $localInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/local', [],  null, $localInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LocalInput::class);
     }
@@ -58,7 +57,8 @@ class LocalApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/local/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/local/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class LocalApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/local/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/local/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LocalInput::class);
     }
@@ -89,8 +90,7 @@ class LocalApi
      */
     public function list(LocalInputListQueryParams $queryParams = null) : LocalInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/local', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/local', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, LocalInputPaginationResponse::class);
     }

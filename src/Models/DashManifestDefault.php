@@ -19,7 +19,6 @@ class DashManifestDefault extends DashManifest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->version = ObjectMapper::map($this->version, DashManifestDefaultVersion::class);
         $this->periods = ObjectMapper::map($this->periods, DefaultDashManifestPeriod::class);
     }

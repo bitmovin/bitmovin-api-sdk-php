@@ -40,8 +40,7 @@ class S3RoleBasedApi
      */
     public function create(\BitmovinApiSdk\Models\S3RoleBasedInput $s3RoleBasedInput) : \BitmovinApiSdk\Models\S3RoleBasedInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/s3-role-based', [],  null, $s3RoleBasedInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/s3-role-based', [],  null, $s3RoleBasedInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedInput::class);
     }
@@ -58,7 +57,8 @@ class S3RoleBasedApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/s3-role-based/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/s3-role-based/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedInput::class);
     }
@@ -75,7 +75,8 @@ class S3RoleBasedApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/s3-role-based/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/s3-role-based/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedInput::class);
     }
@@ -89,8 +90,7 @@ class S3RoleBasedApi
      */
     public function list(S3RoleBasedInputListQueryParams $queryParams = null) : S3RoleBasedInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/s3-role-based', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/s3-role-based', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, S3RoleBasedInputPaginationResponse::class);
     }

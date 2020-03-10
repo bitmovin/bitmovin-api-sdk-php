@@ -135,8 +135,7 @@ class InputsApi
      */
     public function list(InputListQueryParams $queryParams = null) : InputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, InputPaginationResponse::class);
     }

@@ -25,7 +25,6 @@ class CustomTag extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->positionMode = ObjectMapper::map($this->positionMode, PositionMode::class);
     }
 

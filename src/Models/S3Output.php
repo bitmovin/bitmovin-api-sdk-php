@@ -28,7 +28,6 @@ class S3Output extends Output
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, AwsCloudRegion::class);
         $this->signatureVersion = ObjectMapper::map($this->signatureVersion, S3SignatureVersion::class);
     }

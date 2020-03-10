@@ -70,7 +70,6 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->codec = ObjectMapper::map($this->codec, CodecConfigType::class);
         $this->resolution = ObjectMapper::map($this->resolution, StatisticsResolution::class);
         $this->encodingMode = ObjectMapper::map($this->encodingMode, EncodingMode::class);

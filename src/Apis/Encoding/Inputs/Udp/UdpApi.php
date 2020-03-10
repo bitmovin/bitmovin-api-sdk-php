@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class UdpApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class UdpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/udp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/udp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\UdpInput::class);
     }
@@ -52,8 +52,7 @@ class UdpApi
      */
     public function list(UdpInputListQueryParams $queryParams = null) : UdpInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/udp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/udp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, UdpInputPaginationResponse::class);
     }

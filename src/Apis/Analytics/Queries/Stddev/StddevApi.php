@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class StddevApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class StddevApi
      */
     public function create(\BitmovinApiSdk\Models\AnalyticsStddevQueryRequest $analyticsStddevQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/queries/stddev', [],  null, $analyticsStddevQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/queries/stddev', [],  null, $analyticsStddevQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

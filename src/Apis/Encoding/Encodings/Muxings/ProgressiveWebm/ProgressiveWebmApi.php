@@ -54,7 +54,8 @@ class ProgressiveWebmApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/progressive-webm', $pathParams,  null, $progressiveWebmMuxing, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/progressive-webm', $pathParams,  null, $progressiveWebmMuxing, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ProgressiveWebmMuxing::class);
     }
@@ -73,7 +74,8 @@ class ProgressiveWebmApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -92,7 +94,8 @@ class ProgressiveWebmApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ProgressiveWebmMuxing::class);
     }
@@ -110,7 +113,8 @@ class ProgressiveWebmApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-webm', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-webm', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ProgressiveWebmMuxingPaginationResponse::class);
     }

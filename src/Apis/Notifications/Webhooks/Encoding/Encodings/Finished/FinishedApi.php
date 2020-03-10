@@ -40,8 +40,7 @@ class FinishedApi
      */
     public function create(\BitmovinApiSdk\Models\Webhook $webhook) : \BitmovinApiSdk\Models\Webhook
     {
-        
-        $response = $this->httpWrapper->request('POST','/notifications/webhooks/encoding/encodings/finished', [],  null, $webhook, true);
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/encodings/finished', [],  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
@@ -59,7 +58,8 @@ class FinishedApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/webhooks/encoding/encodings/{encoding_id}/finished', $pathParams,  null, $webhook, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/encodings/{encoding_id}/finished', $pathParams,  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
@@ -78,7 +78,8 @@ class FinishedApi
             'encoding_id' => $encodingId,
             'webhook_id' => $webhookId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/notifications/webhooks/encoding/encodings/{encoding_id}/finished/{webhook_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/notifications/webhooks/encoding/encodings/{encoding_id}/finished/{webhook_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -95,7 +96,8 @@ class FinishedApi
         $pathParams = [
             'webhook_id' => $webhookId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/notifications/webhooks/encoding/encodings/finished/{webhook_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/notifications/webhooks/encoding/encodings/finished/{webhook_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -114,7 +116,8 @@ class FinishedApi
             'encoding_id' => $encodingId,
             'webhook_id' => $webhookId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/webhooks/encoding/encodings/{encoding_id}/finished/{webhook_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/{encoding_id}/finished/{webhook_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
@@ -131,7 +134,8 @@ class FinishedApi
         $pathParams = [
             'webhook_id' => $webhookId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/webhooks/encoding/encodings/finished/{webhook_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/finished/{webhook_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
@@ -145,8 +149,7 @@ class FinishedApi
      */
     public function list(WebhookListQueryParams $queryParams = null) : WebhookPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/notifications/webhooks/encoding/encodings/finished', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/finished', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, WebhookPaginationResponse::class);
     }
@@ -164,7 +167,8 @@ class FinishedApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/webhooks/encoding/encodings/{encoding_id}/finished', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/{encoding_id}/finished', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, WebhookPaginationResponse::class);
     }

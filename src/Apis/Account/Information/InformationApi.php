@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class InformationApi
 {
     /** @var HttpWrapper */
@@ -34,8 +33,7 @@ class InformationApi
      */
     public function get() : \BitmovinApiSdk\Models\AccountInformation
     {
-        
-        $response = $this->httpWrapper->request('GET','/account/information', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/account/information', [],  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AccountInformation::class);
     }

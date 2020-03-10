@@ -46,7 +46,8 @@ class ResultsApi
             'encoding_id' => $encodingId,
             'object_detection_id' => $objectDetectionId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/results', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/results', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ObjectDetectionResultPaginationResponse::class);
     }

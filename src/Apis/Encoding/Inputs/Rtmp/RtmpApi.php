@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class RtmpApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class RtmpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/rtmp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/rtmp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\RtmpInput::class);
     }
@@ -52,8 +52,7 @@ class RtmpApi
      */
     public function list(RtmpInputListQueryParams $queryParams = null) : RtmpInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/rtmp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/rtmp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, RtmpInputPaginationResponse::class);
     }

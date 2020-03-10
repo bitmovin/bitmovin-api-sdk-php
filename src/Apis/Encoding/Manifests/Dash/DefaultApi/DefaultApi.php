@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DefaultApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class DefaultApi
      */
     public function create(\BitmovinApiSdk\Models\DashManifestDefault $dashManifestDefault) : \BitmovinApiSdk\Models\DashManifestDefault
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/default', [],  null, $dashManifestDefault, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/default', [],  null, $dashManifestDefault, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashManifestDefault::class);
     }

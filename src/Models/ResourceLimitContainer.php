@@ -16,7 +16,6 @@ class ResourceLimitContainer extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->resource = ObjectMapper::map($this->resource, ResourceType::class);
         $this->limits = ObjectMapper::map($this->limits, ResourceLimit::class);
     }

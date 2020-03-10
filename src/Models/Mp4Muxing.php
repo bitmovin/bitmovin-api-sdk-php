@@ -25,7 +25,6 @@ class Mp4Muxing extends Muxing
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->timeCode = ObjectMapper::map($this->timeCode, TimeCode::class);
         $this->fragmentedMP4MuxingManifestType = ObjectMapper::map($this->fragmentedMP4MuxingManifestType, FragmentedMp4MuxingManifestType::class);
         $this->dolbyVisionConfiguration = ObjectMapper::map($this->dolbyVisionConfiguration, DolbyVisionMuxingConfiguration::class);

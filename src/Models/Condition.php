@@ -19,7 +19,6 @@ class Condition extends AbstractCondition
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->operator = ObjectMapper::map($this->operator, ConditionOperator::class);
     }
 

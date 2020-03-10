@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class Mp4Api
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class Mp4Api
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/smooth/{manifest_id}/representations/mp4', $pathParams,  null, $smoothStreamingRepresentation, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/smooth/{manifest_id}/representations/mp4', $pathParams,  null, $smoothStreamingRepresentation, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothStreamingRepresentation::class);
     }
@@ -58,7 +58,8 @@ class Mp4Api
             'manifest_id' => $manifestId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/smooth/{manifest_id}/representations/mp4/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/smooth/{manifest_id}/representations/mp4/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class Mp4Api
             'manifest_id' => $manifestId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth/{manifest_id}/representations/mp4/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}/representations/mp4/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothStreamingRepresentation::class);
     }
@@ -95,7 +97,8 @@ class Mp4Api
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth/{manifest_id}/representations/mp4', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}/representations/mp4', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SmoothStreamingRepresentationPaginationResponse::class);
     }

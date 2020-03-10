@@ -16,7 +16,6 @@ class AudioMixChannel extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->sourceChannels = ObjectMapper::map($this->sourceChannels, SourceChannel::class);
     }
 

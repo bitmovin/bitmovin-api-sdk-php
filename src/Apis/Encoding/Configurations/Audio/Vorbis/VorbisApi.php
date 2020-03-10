@@ -40,8 +40,7 @@ class VorbisApi
      */
     public function create(\BitmovinApiSdk\Models\VorbisAudioConfiguration $vorbisAudioConfiguration) : \BitmovinApiSdk\Models\VorbisAudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/vorbis', [],  null, $vorbisAudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/vorbis', [],  null, $vorbisAudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\VorbisAudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class VorbisApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/vorbis/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/vorbis/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class VorbisApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/vorbis/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/vorbis/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\VorbisAudioConfiguration::class);
     }
@@ -89,8 +90,7 @@ class VorbisApi
      */
     public function list(VorbisAudioConfigurationListQueryParams $queryParams = null) : VorbisAudioConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/vorbis', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/vorbis', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, VorbisAudioConfigurationPaginationResponse::class);
     }

@@ -19,7 +19,6 @@ class EbuR128SinglePassFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

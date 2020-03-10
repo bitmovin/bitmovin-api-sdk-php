@@ -40,8 +40,7 @@ class RotateApi
      */
     public function create(\BitmovinApiSdk\Models\RotateFilter $rotateFilter) : \BitmovinApiSdk\Models\RotateFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/rotate', [],  null, $rotateFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/rotate', [],  null, $rotateFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\RotateFilter::class);
     }
@@ -58,7 +57,8 @@ class RotateApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/rotate/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/rotate/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class RotateApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/rotate/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/rotate/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\RotateFilter::class);
     }
@@ -89,8 +90,7 @@ class RotateApi
      */
     public function list(RotateFilterListQueryParams $queryParams = null) : RotateFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/rotate', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/rotate', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, RotateFilterPaginationResponse::class);
     }

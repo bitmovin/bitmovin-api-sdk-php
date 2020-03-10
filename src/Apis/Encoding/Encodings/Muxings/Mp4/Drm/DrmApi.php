@@ -70,7 +70,8 @@ class DrmApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/mp4/{muxing_id}/drm', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, DrmPaginationResponse::class);
     }

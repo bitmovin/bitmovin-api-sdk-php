@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class TypeApi
 {
     /** @var HttpWrapper */
@@ -40,7 +39,8 @@ class TypeApi
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/{input_stream_id}/type', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/{input_stream_id}/type', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\InputStreamTypeResponse::class);
     }

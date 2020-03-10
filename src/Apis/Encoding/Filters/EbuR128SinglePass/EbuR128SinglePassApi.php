@@ -40,8 +40,7 @@ class EbuR128SinglePassApi
      */
     public function create(\BitmovinApiSdk\Models\EbuR128SinglePassFilter $ebuR128SinglePassFilter) : \BitmovinApiSdk\Models\EbuR128SinglePassFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/ebu-r128-single-pass', [],  null, $ebuR128SinglePassFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/ebu-r128-single-pass', [],  null, $ebuR128SinglePassFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EbuR128SinglePassFilter::class);
     }
@@ -58,7 +57,8 @@ class EbuR128SinglePassApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/ebu-r128-single-pass/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/ebu-r128-single-pass/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class EbuR128SinglePassApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/ebu-r128-single-pass/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/ebu-r128-single-pass/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EbuR128SinglePassFilter::class);
     }
@@ -89,8 +90,7 @@ class EbuR128SinglePassApi
      */
     public function list(EbuR128SinglePassFilterListQueryParams $queryParams = null) : EbuR128SinglePassFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/ebu-r128-single-pass', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/ebu-r128-single-pass', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EbuR128SinglePassFilterPaginationResponse::class);
     }

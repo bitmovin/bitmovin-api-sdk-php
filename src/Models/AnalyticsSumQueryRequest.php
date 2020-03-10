@@ -10,7 +10,6 @@ class AnalyticsSumQueryRequest extends AnalyticsQueryRequest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 }
 

@@ -40,8 +40,7 @@ class Av1Api
      */
     public function create(\BitmovinApiSdk\Models\Av1VideoConfiguration $av1VideoConfiguration) : \BitmovinApiSdk\Models\Av1VideoConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/video/av1', [],  null, $av1VideoConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/video/av1', [],  null, $av1VideoConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Av1VideoConfiguration::class);
     }
@@ -58,7 +57,8 @@ class Av1Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/video/av1/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/video/av1/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class Av1Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/av1/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/av1/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Av1VideoConfiguration::class);
     }
@@ -89,8 +90,7 @@ class Av1Api
      */
     public function list(Av1VideoConfigurationListQueryParams $queryParams = null) : Av1VideoConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/av1', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/av1', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, Av1VideoConfigurationPaginationResponse::class);
     }

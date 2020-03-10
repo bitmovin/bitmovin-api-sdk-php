@@ -25,7 +25,6 @@ class NotificationStateEntry extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->state = ObjectMapper::map($this->state, NotificationStates::class);
         $this->triggeredAt = ObjectMapper::map($this->triggeredAt, Carbon::class);
     }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class RegionsApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class RegionsApi
             'infrastructure_id' => $infrastructureId,
             'region' => $region,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/infrastructure/aws/{infrastructure_id}/regions/{region}', $pathParams,  null, $awsAccountRegionSettings, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/infrastructure/aws/{infrastructure_id}/regions/{region}', $pathParams,  null, $awsAccountRegionSettings, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AwsAccountRegionSettings::class);
     }
@@ -60,7 +60,8 @@ class RegionsApi
             'infrastructure_id' => $infrastructureId,
             'region' => $region,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/infrastructure/aws/{infrastructure_id}/regions/{region}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/infrastructure/aws/{infrastructure_id}/regions/{region}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AwsAccountRegionSettings::class);
     }
@@ -79,7 +80,8 @@ class RegionsApi
             'infrastructure_id' => $infrastructureId,
             'region' => $region,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/aws/{infrastructure_id}/regions/{region}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/aws/{infrastructure_id}/regions/{region}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AwsAccountRegionSettings::class);
     }
@@ -97,7 +99,8 @@ class RegionsApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/aws/{infrastructure_id}/regions', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/aws/{infrastructure_id}/regions', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, AwsAccountRegionSettingsPaginationResponse::class);
     }

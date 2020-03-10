@@ -85,8 +85,7 @@ class EncodingsApi
      */
     public function create(\BitmovinApiSdk\Models\Encoding $encoding) : \BitmovinApiSdk\Models\Encoding
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/encodings', [],  null, $encoding, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings', [],  null, $encoding, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Encoding::class);
     }
@@ -103,7 +102,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -120,7 +120,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Encoding::class);
     }
@@ -137,7 +138,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/start', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/start', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StartEncodingRequest::class);
     }
@@ -151,8 +153,7 @@ class EncodingsApi
      */
     public function list(EncodingListQueryParams $queryParams = null) : EncodingPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/encodings', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingPaginationResponse::class);
     }
@@ -170,7 +171,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/reprioritize', $pathParams,  null, $reprioritizeEncodingRequest, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/reprioritize', $pathParams,  null, $reprioritizeEncodingRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -188,7 +190,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/reschedule', $pathParams,  null, $rescheduleEncodingRequest, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/reschedule', $pathParams,  null, $rescheduleEncodingRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -206,7 +209,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/start', $pathParams,  null, $startEncodingRequest, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/start', $pathParams,  null, $startEncodingRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -223,7 +227,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/status', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/status', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Task::class);
     }
@@ -240,7 +245,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/stop', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/stop', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class StatusApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class StatusApi
         $pathParams = [
             'custom_build_id' => $customBuildId,
         ];
-        $response = $this->httpWrapper->request('GET','/player/custom-builds/web/{custom_build_id}/status', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/custom-builds/web/{custom_build_id}/status', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomPlayerBuildStatus::class);
     }

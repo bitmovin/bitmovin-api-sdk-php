@@ -55,8 +55,7 @@ class ManifestsApi
      */
     public function list(ManifestListQueryParams $queryParams = null) : ManifestPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/manifests', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, ManifestPaginationResponse::class);
     }

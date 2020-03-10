@@ -34,7 +34,6 @@ class Notification extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->triggeredAt = ObjectMapper::map($this->triggeredAt, Carbon::class);
     }
 

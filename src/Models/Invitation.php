@@ -37,7 +37,6 @@ class Invitation extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->status = ObjectMapper::map($this->status, InvitationStatus::class);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
     }

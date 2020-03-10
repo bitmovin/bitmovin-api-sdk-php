@@ -49,7 +49,8 @@ class EncodingsApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/emails/encoding/encodings/{encoding_id}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/emails/encoding/encodings/{encoding_id}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, EmailNotificationWithStreamConditionsPaginationResponse::class);
     }

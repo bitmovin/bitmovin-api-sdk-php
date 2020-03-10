@@ -40,8 +40,7 @@ class ScaleApi
      */
     public function create(\BitmovinApiSdk\Models\ScaleFilter $scaleFilter) : \BitmovinApiSdk\Models\ScaleFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/scale', [],  null, $scaleFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/scale', [],  null, $scaleFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ScaleFilter::class);
     }
@@ -58,7 +57,8 @@ class ScaleApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/scale/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/scale/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class ScaleApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/scale/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/scale/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ScaleFilter::class);
     }
@@ -89,8 +90,7 @@ class ScaleApi
      */
     public function list(ScaleFilterListQueryParams $queryParams = null) : ScaleFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/scale', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/scale', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, ScaleFilterPaginationResponse::class);
     }

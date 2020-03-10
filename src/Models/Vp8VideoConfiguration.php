@@ -67,7 +67,6 @@ class Vp8VideoConfiguration extends VideoConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->noiseSensitivity = ObjectMapper::map($this->noiseSensitivity, Vp8NoiseSensitivity::class);
         $this->quality = ObjectMapper::map($this->quality, Vp8Quality::class);
         $this->arnrType = ObjectMapper::map($this->arnrType, Vp8ArnrType::class);

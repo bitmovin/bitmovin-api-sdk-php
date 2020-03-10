@@ -89,4 +89,3 @@ class BasePaginationResponse extends ApiResource
         return $this;
     }
 }
-

@@ -49,7 +49,8 @@ class ObjectDetectionApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/machine-learning/object-detection', $pathParams,  null, $objectDetectionConfiguration, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/machine-learning/object-detection', $pathParams,  null, $objectDetectionConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ObjectDetectionConfiguration::class);
     }
@@ -68,7 +69,8 @@ class ObjectDetectionApi
             'encoding_id' => $encodingId,
             'object_detection_id' => $objectDetectionId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -87,7 +89,8 @@ class ObjectDetectionApi
             'encoding_id' => $encodingId,
             'object_detection_id' => $objectDetectionId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ObjectDetectionConfiguration::class);
     }
@@ -105,7 +108,8 @@ class ObjectDetectionApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/machine-learning/object-detection', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/machine-learning/object-detection', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ObjectDetectionConfigurationPaginationResponse::class);
     }

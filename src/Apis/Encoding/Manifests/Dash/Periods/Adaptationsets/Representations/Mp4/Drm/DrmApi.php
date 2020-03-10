@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DrmApi
 {
     /** @var HttpWrapper */
@@ -43,7 +42,8 @@ class DrmApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm', $pathParams,  null, $dashMp4DrmRepresentation, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm', $pathParams,  null, $dashMp4DrmRepresentation, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashMp4DrmRepresentation::class);
     }
@@ -66,7 +66,8 @@ class DrmApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -89,7 +90,8 @@ class DrmApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashMp4DrmRepresentation::class);
     }
@@ -111,7 +113,8 @@ class DrmApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/mp4/drm', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DashMp4DrmRepresentationPaginationResponse::class);
     }

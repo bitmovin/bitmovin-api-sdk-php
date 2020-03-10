@@ -10,7 +10,6 @@ class EncodingErrorEmailNotification extends EmailNotification
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 }
 

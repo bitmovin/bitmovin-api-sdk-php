@@ -6,7 +6,6 @@ use stdClass;
 
 abstract class ApiResource
 {
-
     /**
      * Resource constructor.
      *
@@ -44,28 +43,29 @@ abstract class ApiResource
     }
 
     /**
-     * Create array with values, skip null
-     *
-     * @return array
+     * Create array with values, skip null and empty arrays
      */
-    public function toArray(): array
+    public function toArray()
     {
         $resourceData = array_filter(get_object_vars($this), function ($value) {
-            return ! is_null($value);
+            return !is_null($value) && !(is_array($value) && count($value) == 0);
         });
 
         $resourceData = array_map(function ($value) {
             return $this->mapValue($value);
         }, $resourceData);
 
-        if(isset($this::$discriminatorMapping))
-        {
+        if (isset($this::$discriminatorMapping)) {
             $type = array_search (get_class($this), $this::$discriminatorMapping);
-            if(isset($type))
-            {
+            if (isset($type)) {
                 $resourceData["type"] = $type;
                 unset($resourceData["discriminatorMapping"]);
             }
+        }
+
+        // Return empty object if resource data is empty
+        if (count($resourceData) === 0) {
+            return new stdClass();
         }
 
         return $resourceData;
@@ -73,16 +73,13 @@ abstract class ApiResource
 
     private function mapValue($value)
     {
-        if($value instanceof \DateTime)
-        {
+        if ($value instanceof \DateTime) {
             return $value->format(DATE_ATOM);
         }
-        else if($value instanceof ApiResource)
-        {
+        elseif ($value instanceof ApiResource) {
             return $value->toArray();
         }
-        else if(is_array($value))
-        {
+        elseif (is_array($value)) {
             return array_map(function ($innerValue)
             {
                 return $this->mapValue($innerValue);

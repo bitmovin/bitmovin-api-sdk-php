@@ -40,8 +40,7 @@ class GenericS3Api
      */
     public function create(\BitmovinApiSdk\Models\GenericS3Output $genericS3Output) : \BitmovinApiSdk\Models\GenericS3Output
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/generic-s3', [],  null, $genericS3Output, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/generic-s3', [],  null, $genericS3Output, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GenericS3Output::class);
     }
@@ -58,7 +57,8 @@ class GenericS3Api
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/generic-s3/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/generic-s3/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GenericS3Output::class);
     }
@@ -75,7 +75,8 @@ class GenericS3Api
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/generic-s3/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/generic-s3/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GenericS3Output::class);
     }
@@ -89,8 +90,7 @@ class GenericS3Api
      */
     public function list(GenericS3OutputListQueryParams $queryParams = null) : GenericS3OutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/generic-s3', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/generic-s3', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, GenericS3OutputPaginationResponse::class);
     }

@@ -13,7 +13,6 @@ class AdAnalyticsLessThanFilter extends AdAnalyticsAbstractFilter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

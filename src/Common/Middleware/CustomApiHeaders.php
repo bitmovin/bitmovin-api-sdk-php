@@ -7,28 +7,22 @@ use Psr\Http\Message\RequestInterface;
 
 class CustomApiHeaders
 {
-    /** @var string */
-    private $X_API_CLIENT_CONFIGURATION_KEY = "x-api-client";
-
-    /** @var string */
-    private $X_API_CLIENT = "bitmovin-java-api";
-
-    /** @var string */
-    private $apiKey;
-
     /** @var array */
     private $headers;
 
-    public function __construct(string $apiKey)
+    public function __construct(string $apiKey, ?string $tenantOrgId)
     {
-        $this->apiKey = $apiKey;
         $this->headers = [
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
-            'X-Api-Key' => $this->apiKey,
-            'X-Api-Client' => $this->X_API_CLIENT,
-            'X-Api-Client-Version' => $this->X_API_CLIENT_CONFIGURATION_KEY,
+            'X-Api-Key' => $apiKey,
+            'X-Api-Client' => 'bitmovin-api-sdk-php',
+            'X-Api-Client-Version' => '1.36.0-ALPHA0',
         ];
+
+        if ($tenantOrgId !== null) {
+            $this->headers['X-Tenant-Org-Id'] = $tenantOrgId;
+        }
     }
 
     /**

@@ -31,7 +31,6 @@ class AccountInformation extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->apiKeys = ObjectMapper::map($this->apiKeys, AccountApiKey::class);
     }
 

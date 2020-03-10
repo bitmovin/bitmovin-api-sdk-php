@@ -40,8 +40,7 @@ class H264Api
      */
     public function create(\BitmovinApiSdk\Models\H264VideoConfiguration $h264VideoConfiguration) : \BitmovinApiSdk\Models\H264VideoConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/video/h264', [],  null, $h264VideoConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/video/h264', [],  null, $h264VideoConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\H264VideoConfiguration::class);
     }
@@ -58,7 +57,8 @@ class H264Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/video/h264/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/video/h264/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class H264Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/h264/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/h264/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\H264VideoConfiguration::class);
     }
@@ -89,8 +90,7 @@ class H264Api
      */
     public function list(H264VideoConfigurationListQueryParams $queryParams = null) : H264VideoConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/h264', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/h264', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, H264VideoConfigurationPaginationResponse::class);
     }

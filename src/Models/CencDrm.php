@@ -37,7 +37,6 @@ class CencDrm extends Drm
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->encryptionMode = ObjectMapper::map($this->encryptionMode, EncryptionMode::class);
         $this->ivSize = ObjectMapper::map($this->ivSize, IvSize::class);
         $this->widevine = ObjectMapper::map($this->widevine, CencWidevine::class);

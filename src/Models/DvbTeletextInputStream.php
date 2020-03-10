@@ -25,7 +25,6 @@ class DvbTeletextInputStream extends InputStream
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->selectionMode = ObjectMapper::map($this->selectionMode, StreamSelectionMode::class);
     }
 

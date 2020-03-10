@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DomainsApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class DomainsApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('POST','/analytics/licenses/{license_id}/domains', $pathParams,  null, $domain, true);
+
+        $response = $this->httpWrapper->request('POST', '/analytics/licenses/{license_id}/domains', $pathParams,  null, $domain, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Domain::class);
     }
@@ -58,7 +58,8 @@ class DomainsApi
             'license_id' => $licenseId,
             'domain_id' => $domainId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/analytics/licenses/{license_id}/domains/{domain_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/analytics/licenses/{license_id}/domains/{domain_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +76,8 @@ class DomainsApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('GET','/analytics/licenses/{license_id}/domains', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/analytics/licenses/{license_id}/domains', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DomainList::class);
     }

@@ -64,7 +64,6 @@ class StreamInfosDetails extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->mediaType = ObjectMapper::map($this->mediaType, MediaType::class);
         $this->codec = ObjectMapper::map($this->codec, LiveEncodingCodec::class);
     }

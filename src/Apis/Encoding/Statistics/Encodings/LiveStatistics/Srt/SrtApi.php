@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class SrtApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class SrtApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/{encoding_id}/live-statistics/srt', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/{encoding_id}/live-statistics/srt', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SrtStatisticsPaginationResponse::class);
     }
@@ -59,7 +59,8 @@ class SrtApi
             'encoding_id' => $encodingId,
             'srt_input_id' => $srtInputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/{encoding_id}/live-statistics/srt/{srt_input_id}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/{encoding_id}/live-statistics/srt/{srt_input_id}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SrtStatisticsPaginationResponse::class);
     }

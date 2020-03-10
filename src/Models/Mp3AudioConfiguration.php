@@ -13,7 +13,6 @@ class Mp3AudioConfiguration extends AudioConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->channelLayout = ObjectMapper::map($this->channelLayout, ChannelLayout::class);
     }
 

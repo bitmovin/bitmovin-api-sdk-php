@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class VttApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class VttApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/media/vtt', $pathParams,  null, $vttMediaInfo, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/media/vtt', $pathParams,  null, $vttMediaInfo, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\VttMediaInfo::class);
     }
@@ -58,7 +58,8 @@ class VttApi
             'manifest_id' => $manifestId,
             'media_id' => $mediaId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/hls/{manifest_id}/media/vtt/{media_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/hls/{manifest_id}/media/vtt/{media_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class VttApi
             'manifest_id' => $manifestId,
             'media_id' => $mediaId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/media/vtt/{media_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/media/vtt/{media_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\VttMediaInfo::class);
     }
@@ -95,7 +97,8 @@ class VttApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/media/vtt', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/media/vtt', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, VttMediaInfoPaginationResponse::class);
     }

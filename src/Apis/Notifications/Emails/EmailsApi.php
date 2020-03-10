@@ -45,8 +45,7 @@ class EmailsApi
      */
     public function list(NotificationListQueryParams $queryParams = null) : NotificationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/notifications/emails', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/notifications/emails', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, NotificationPaginationResponse::class);
     }

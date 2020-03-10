@@ -40,8 +40,7 @@ class InterlaceApi
      */
     public function create(\BitmovinApiSdk\Models\InterlaceFilter $interlaceFilter) : \BitmovinApiSdk\Models\InterlaceFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/interlace', [],  null, $interlaceFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/interlace', [],  null, $interlaceFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\InterlaceFilter::class);
     }
@@ -58,7 +57,8 @@ class InterlaceApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/interlace/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/interlace/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class InterlaceApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/interlace/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/interlace/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\InterlaceFilter::class);
     }
@@ -89,8 +90,7 @@ class InterlaceApi
      */
     public function list(InterlaceFilterListQueryParams $queryParams = null) : InterlaceFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/interlace', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/interlace', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, InterlaceFilterPaginationResponse::class);
     }

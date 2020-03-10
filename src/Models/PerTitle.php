@@ -19,7 +19,6 @@ class PerTitle extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->h264Configuration = ObjectMapper::map($this->h264Configuration, H264PerTitleConfiguration::class);
         $this->h265Configuration = ObjectMapper::map($this->h265Configuration, H265PerTitleConfiguration::class);
         $this->vp9Configuration = ObjectMapper::map($this->vp9Configuration, Vp9PerTitleConfiguration::class);

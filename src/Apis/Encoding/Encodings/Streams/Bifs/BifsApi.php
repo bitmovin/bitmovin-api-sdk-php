@@ -46,7 +46,8 @@ class BifsApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs', $pathParams,  null, $bif, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs', $pathParams,  null, $bif, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Bif::class);
     }
@@ -67,7 +68,8 @@ class BifsApi
             'stream_id' => $streamId,
             'bif_id' => $bifId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs/{bif_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs/{bif_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class BifsApi
             'stream_id' => $streamId,
             'bif_id' => $bifId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs/{bif_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs/{bif_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Bif::class);
     }
@@ -108,7 +111,8 @@ class BifsApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/bifs', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, BifPaginationResponse::class);
     }

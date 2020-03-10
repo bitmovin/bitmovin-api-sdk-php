@@ -16,7 +16,6 @@ class HeAacV1AudioConfiguration extends AudioConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->channelLayout = ObjectMapper::map($this->channelLayout, AacChannelLayout::class);
         $this->signaling = ObjectMapper::map($this->signaling, HeAacV1Signaling::class);
     }

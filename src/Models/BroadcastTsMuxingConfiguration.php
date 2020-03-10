@@ -22,7 +22,6 @@ class BroadcastTsMuxingConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->transport = ObjectMapper::map($this->transport, BroadcastTsTransportConfiguration::class);
         $this->program = ObjectMapper::map($this->program, BroadcastTsProgramConfiguration::class);
         $this->videoStreams = ObjectMapper::map($this->videoStreams, BroadcastTsVideoInputStreamConfiguration::class);

@@ -40,8 +40,7 @@ class TextApi
      */
     public function create(\BitmovinApiSdk\Models\TextFilter $textFilter) : \BitmovinApiSdk\Models\TextFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/text', [],  null, $textFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/text', [],  null, $textFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TextFilter::class);
     }
@@ -58,7 +57,8 @@ class TextApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/text/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/text/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class TextApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/text/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/text/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TextFilter::class);
     }
@@ -89,8 +90,7 @@ class TextApi
      */
     public function list(TextFilterListQueryParams $queryParams = null) : TextFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/text', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/text', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, TextFilterPaginationResponse::class);
     }

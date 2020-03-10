@@ -16,7 +16,6 @@ class BurnInSubtitleSrt extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->characterEncoding = ObjectMapper::map($this->characterEncoding, CaptionCharacterEncoding::class);
         $this->input = ObjectMapper::map($this->input, InputPath::class);
     }

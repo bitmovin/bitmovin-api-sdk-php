@@ -22,7 +22,6 @@ class SidecarFile extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
         $this->errorMode = ObjectMapper::map($this->errorMode, SidecarErrorMode::class);
     }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class CustomdataApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class CustomdataApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/generic-s3/{output_id}/customData', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/generic-s3/{output_id}/customData', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomData::class);
     }

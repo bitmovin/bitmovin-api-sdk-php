@@ -37,7 +37,6 @@ class DailyStatistics extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->date = ObjectMapper::map($this->date, Carbon::class);
         $this->billableEncodingMinutes = ObjectMapper::map($this->billableEncodingMinutes, BillableEncodingMinutes::class);
         $this->billableFeatureMinutes = ObjectMapper::map($this->billableFeatureMinutes, BillableEncodingFeatureMinutes::class);

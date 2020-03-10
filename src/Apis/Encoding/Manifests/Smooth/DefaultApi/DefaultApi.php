@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DefaultApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class DefaultApi
      */
     public function create(\BitmovinApiSdk\Models\SmoothManifestDefault $smoothManifestDefault) : \BitmovinApiSdk\Models\SmoothManifestDefault
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/smooth/default', [],  null, $smoothManifestDefault, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/smooth/default', [],  null, $smoothManifestDefault, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothManifestDefault::class);
     }

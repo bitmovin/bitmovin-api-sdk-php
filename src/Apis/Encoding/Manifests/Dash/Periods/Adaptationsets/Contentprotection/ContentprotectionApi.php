@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ContentprotectionApi
 {
     /** @var HttpWrapper */
@@ -43,7 +42,8 @@ class ContentprotectionApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection', $pathParams,  null, $contentProtection, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection', $pathParams,  null, $contentProtection, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ContentProtection::class);
     }
@@ -66,7 +66,8 @@ class ContentprotectionApi
             'adaptationset_id' => $adaptationsetId,
             'contentprotection_id' => $contentprotectionId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection/{contentprotection_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection/{contentprotection_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -89,7 +90,8 @@ class ContentprotectionApi
             'adaptationset_id' => $adaptationsetId,
             'contentprotection_id' => $contentprotectionId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection/{contentprotection_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection/{contentprotection_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ContentProtection::class);
     }
@@ -111,7 +113,8 @@ class ContentprotectionApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/contentprotection', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ContentProtectionPaginationResponse::class);
     }

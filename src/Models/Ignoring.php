@@ -16,7 +16,6 @@ class Ignoring extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->ignoredBy = ObjectMapper::map($this->ignoredBy, IgnoredBy::class);
     }
 }

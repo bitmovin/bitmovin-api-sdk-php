@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class StatusApi
 {
     /** @var HttpWrapper */
@@ -30,7 +29,6 @@ class StatusApi
      * Kubernetes Cluster Status
      *
      * @param string $infrastructureId
-     * @return \BitmovinApiSdk\Models\void
      * @throws BitmovinApiException
      */
     public function get(string $infrastructureId)
@@ -38,6 +36,7 @@ class StatusApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes/{infrastructure_id}/status', $pathParams,  null, null, false);
+
+        $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes/{infrastructure_id}/status', $pathParams,  null, null, false);
     }
 }

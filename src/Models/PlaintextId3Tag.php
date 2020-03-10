@@ -16,7 +16,6 @@ class PlaintextId3Tag extends Id3Tag
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

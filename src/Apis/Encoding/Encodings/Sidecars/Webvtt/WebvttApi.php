@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class WebvttApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class WebvttApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/sidecars/webvtt', $pathParams,  null, $webVttSidecarFile, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/sidecars/webvtt', $pathParams,  null, $webVttSidecarFile, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WebVttSidecarFile::class);
     }
@@ -58,7 +58,8 @@ class WebvttApi
             'encoding_id' => $encodingId,
             'sidecar_id' => $sidecarId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class WebvttApi
             'encoding_id' => $encodingId,
             'sidecar_id' => $sidecarId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WebVttSidecarFile::class);
     }

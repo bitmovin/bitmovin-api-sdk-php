@@ -60,8 +60,7 @@ class KubernetesApi
      */
     public function create(\BitmovinApiSdk\Models\KubernetesCluster $kubernetesCluster) : \BitmovinApiSdk\Models\KubernetesCluster
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/infrastructure/kubernetes', [],  null, $kubernetesCluster, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/infrastructure/kubernetes', [],  null, $kubernetesCluster, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\KubernetesCluster::class);
     }
@@ -78,7 +77,8 @@ class KubernetesApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/infrastructure/kubernetes/{infrastructure_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/infrastructure/kubernetes/{infrastructure_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -95,7 +95,8 @@ class KubernetesApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes/{infrastructure_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes/{infrastructure_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\KubernetesCluster::class);
     }
@@ -109,8 +110,7 @@ class KubernetesApi
      */
     public function list(KubernetesClusterListQueryParams $queryParams = null) : KubernetesClusterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, KubernetesClusterPaginationResponse::class);
     }

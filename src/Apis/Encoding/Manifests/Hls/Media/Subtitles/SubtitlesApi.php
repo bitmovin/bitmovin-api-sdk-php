@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class SubtitlesApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class SubtitlesApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/media/subtitles', $pathParams,  null, $subtitlesMediaInfo, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/media/subtitles', $pathParams,  null, $subtitlesMediaInfo, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SubtitlesMediaInfo::class);
     }
@@ -58,7 +58,8 @@ class SubtitlesApi
             'manifest_id' => $manifestId,
             'media_id' => $mediaId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/hls/{manifest_id}/media/subtitles/{media_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/hls/{manifest_id}/media/subtitles/{media_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class SubtitlesApi
             'manifest_id' => $manifestId,
             'media_id' => $mediaId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/media/subtitles/{media_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/media/subtitles/{media_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SubtitlesMediaInfo::class);
     }
@@ -95,7 +97,8 @@ class SubtitlesApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/media/subtitles', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/media/subtitles', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SubtitlesMediaInfoPaginationResponse::class);
     }

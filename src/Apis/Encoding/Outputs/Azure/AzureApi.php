@@ -40,8 +40,7 @@ class AzureApi
      */
     public function create(\BitmovinApiSdk\Models\AzureOutput $azureOutput) : \BitmovinApiSdk\Models\AzureOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/azure', [],  null, $azureOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/azure', [],  null, $azureOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AzureOutput::class);
     }
@@ -58,7 +57,8 @@ class AzureApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/azure/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/azure/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AzureOutput::class);
     }
@@ -75,7 +75,8 @@ class AzureApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/azure/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/azure/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AzureOutput::class);
     }
@@ -89,8 +90,7 @@ class AzureApi
      */
     public function list(AzureOutputListQueryParams $queryParams = null) : AzureOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/azure', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/azure', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AzureOutputPaginationResponse::class);
     }

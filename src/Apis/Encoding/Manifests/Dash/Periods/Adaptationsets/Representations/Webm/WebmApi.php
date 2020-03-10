@@ -48,7 +48,8 @@ class WebmApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm', $pathParams,  null, $dashWebmRepresentation, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm', $pathParams,  null, $dashWebmRepresentation, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashWebmRepresentation::class);
     }
@@ -71,7 +72,8 @@ class WebmApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -94,7 +96,8 @@ class WebmApi
             'adaptationset_id' => $adaptationsetId,
             'representation_id' => $representationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm/{representation_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm/{representation_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashWebmRepresentation::class);
     }
@@ -116,7 +119,8 @@ class WebmApi
             'period_id' => $periodId,
             'adaptationset_id' => $adaptationsetId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations/webm', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DashWebmRepresentationPaginationResponse::class);
     }

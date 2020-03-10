@@ -46,7 +46,8 @@ class SccApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc', $pathParams,  null, $sccCaption, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc', $pathParams,  null, $sccCaption, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SccCaption::class);
     }
@@ -67,7 +68,8 @@ class SccApi
             'stream_id' => $streamId,
             'captions_id' => $captionsId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc/{captions_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc/{captions_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class SccApi
             'stream_id' => $streamId,
             'captions_id' => $captionsId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc/{captions_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc/{captions_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SccCaption::class);
     }
@@ -108,7 +111,8 @@ class SccApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/captions/608-708/scc', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SccCaptionPaginationResponse::class);
     }

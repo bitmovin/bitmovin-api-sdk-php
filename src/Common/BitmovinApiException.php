@@ -1,64 +1,76 @@
 <?php
 
 namespace BitmovinApiSdk\Common;
-
+use BitmovinApiSdk\Models\ResponseError;
+use BitmovinApiSdk\Models\ResponseErrorData;
+use BitmovinApiSdk\Models\ResponseStatus;
 use Exception;
 
 class BitmovinApiException extends Exception
 {
-
     /** @var int */
-    private $httpStatus;
+    private $httpStatusCode;
 
-    /** @var string */
-    private $developerMessage;
-
-    /** @var array */
-    private $details;
+    /** @var ResponseError */
+    private $responseError;
 
     /**
      * BitmovinApiException constructor.
      *
-     * @param int $httpStatus
+     * @param int $httpStatusCode
      * @param string $message
-     * @param string $developerMessage
-     * @param array $details
+     * @param ResponseError $responseError
+     * @param Exception $innerException
      */
     public function __construct(
-        int $httpStatus,
         string $message,
-        string $developerMessage,
-        array $details = []
+        int $httpStatusCode,
+        ResponseError $responseError = null,
+        Exception $innerException = null
     )
     {
-        parent::__construct($message);
-        $this->httpStatus = $httpStatus;
-        $this->message = $message;
-        $this->developerMessage = $developerMessage;
-        $this->details = $details;
+        parent::__construct($message, $innerException);
+        $this->httpStatusCode = $httpStatusCode;
+        $this->responseError = $responseError;
     }
 
     /**
      * @return int
      */
-    public function getStatusCode(): int
+    public function getHttpStatusCode(): int
     {
-    	return $this->httpStatus;
+        return $this->httpStatusCode;
     }
 
     /**
      * @return string
      */
-    public function getDeveloperMessage(): string
+    public function getRequestId(): string
     {
-    	return $this->developerMessage;
+        return $this->responseError->requestId;
     }
 
     /**
-     * @return array
+     * @return ResponseStatus
      */
-    public function getDetails(): array
+    public function getResponseStatus(): ResponseStatus
     {
-    	return $this->details;
+        return $this->responseError->status ?? ResponseStatus::ERROR();
+    }
+
+    /**
+     * @return ResponseErrorData
+     */
+    public function getResponseErrorData()
+    {
+        return $this->responseError->data;
+    }
+
+    /**
+     * @return int
+     */
+    public function getErrorCode(): int
+    {
+        return $this->responseError->data->code;
     }
 }

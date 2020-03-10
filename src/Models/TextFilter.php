@@ -64,7 +64,6 @@ class TextFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->font = ObjectMapper::map($this->font, TextFilterFont::class);
     }
 

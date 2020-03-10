@@ -16,7 +16,6 @@ class InterlaceFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->mode = ObjectMapper::map($this->mode, InterlaceMode::class);
         $this->verticalLowPassFilteringMode = ObjectMapper::map($this->verticalLowPassFilteringMode, VerticalLowPassFilteringMode::class);
     }

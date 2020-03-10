@@ -49,7 +49,8 @@ class Mp3Api
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/mp3', $pathParams,  null, $mp3Muxing, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/mp3', $pathParams,  null, $mp3Muxing, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp3Muxing::class);
     }
@@ -68,7 +69,8 @@ class Mp3Api
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/mp3/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/mp3/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -87,7 +89,8 @@ class Mp3Api
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/mp3/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/mp3/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp3Muxing::class);
     }
@@ -105,7 +108,8 @@ class Mp3Api
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/mp3', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/mp3', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, Mp3MuxingPaginationResponse::class);
     }

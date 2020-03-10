@@ -19,7 +19,6 @@ class DolbyVisionMetadata extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->profile = ObjectMapper::map($this->profile, DolbyVisionProfile::class);
         $this->metadataSource = ObjectMapper::map($this->metadataSource, DolbyVisionMetadataSource::class);
     }

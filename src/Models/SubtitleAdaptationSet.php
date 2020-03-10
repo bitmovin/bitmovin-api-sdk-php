@@ -13,7 +13,6 @@ class SubtitleAdaptationSet extends AdaptationSet
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

@@ -49,8 +49,7 @@ class StatisticsApi
      */
     public function get() : \BitmovinApiSdk\Models\Statistics
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/statistics', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics', [],  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Statistics::class);
     }
@@ -70,7 +69,8 @@ class StatisticsApi
             'from' => $from->format('Y-m-d'),
             'to' => $to->format('Y-m-d'),
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/{from}/{to}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/{from}/{to}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, StatisticsPaginationResponse::class);
     }

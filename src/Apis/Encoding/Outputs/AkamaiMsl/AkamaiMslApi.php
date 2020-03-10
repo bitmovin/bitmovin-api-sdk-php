@@ -40,8 +40,7 @@ class AkamaiMslApi
      */
     public function create(\BitmovinApiSdk\Models\AkamaiMslOutput $akamaiMslOutput) : \BitmovinApiSdk\Models\AkamaiMslOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/akamai-msl', [],  null, $akamaiMslOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/akamai-msl', [],  null, $akamaiMslOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AkamaiMslOutput::class);
     }
@@ -58,7 +57,8 @@ class AkamaiMslApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/akamai-msl/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/akamai-msl/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class AkamaiMslApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/akamai-msl/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/akamai-msl/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AkamaiMslOutput::class);
     }
@@ -89,8 +90,7 @@ class AkamaiMslApi
      */
     public function list(AkamaiMslOutputListQueryParams $queryParams = null) : AkamaiMslOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/akamai-msl', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/akamai-msl', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AkamaiMslOutputPaginationResponse::class);
     }

@@ -55,8 +55,7 @@ class HlsApi
      */
     public function create(\BitmovinApiSdk\Models\HlsManifest $hlsManifest) : \BitmovinApiSdk\Models\HlsManifest
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls', [],  null, $hlsManifest, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls', [],  null, $hlsManifest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HlsManifest::class);
     }
@@ -73,7 +72,8 @@ class HlsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/hls/{manifest_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/hls/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -90,7 +90,8 @@ class HlsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HlsManifest::class);
     }
@@ -104,8 +105,7 @@ class HlsApi
      */
     public function list(HlsManifestListQueryParams $queryParams = null) : HlsManifestPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, HlsManifestPaginationResponse::class);
     }
@@ -122,7 +122,8 @@ class HlsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/start', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/start', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -139,7 +140,8 @@ class HlsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/status', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/status', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Task::class);
     }
@@ -156,7 +158,8 @@ class HlsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/stop', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/stop', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

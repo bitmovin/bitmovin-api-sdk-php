@@ -31,7 +31,6 @@ class PerTitleConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->autoRepresentations = ObjectMapper::map($this->autoRepresentations, AutoRepresentation::class);
         $this->fixedResolutionAndBitrateConfiguration = ObjectMapper::map($this->fixedResolutionAndBitrateConfiguration, PerTitleFixedResolutionAndBitrateConfiguration::class);
     }

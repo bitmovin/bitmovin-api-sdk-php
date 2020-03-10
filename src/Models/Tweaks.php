@@ -13,7 +13,6 @@ class Tweaks extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->audioVideoSyncMode = ObjectMapper::map($this->audioVideoSyncMode, AudioVideoSyncMode::class);
     }
 

@@ -19,7 +19,6 @@ class HlsManifest extends Manifest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->hlsMediaPlaylistVersion = ObjectMapper::map($this->hlsMediaPlaylistVersion, HlsVersion::class);
         $this->hlsMasterPlaylistVersion = ObjectMapper::map($this->hlsMasterPlaylistVersion, HlsVersion::class);
     }

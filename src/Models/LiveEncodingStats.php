@@ -19,7 +19,6 @@ class LiveEncodingStats extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->status = ObjectMapper::map($this->status, LiveEncodingStatus::class);
         $this->events = ObjectMapper::map($this->events, LiveEncodingStatsEvent::class);
         $this->statistics = ObjectMapper::map($this->statistics, StreamInfos::class);

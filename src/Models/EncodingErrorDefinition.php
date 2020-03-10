@@ -25,7 +25,6 @@ class EncodingErrorDefinition extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->retryHint = ObjectMapper::map($this->retryHint, ErrorRetryHint::class);
     }
 

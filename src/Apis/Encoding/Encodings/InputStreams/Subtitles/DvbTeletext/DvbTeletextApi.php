@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DvbTeletextApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class DvbTeletextApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext', $pathParams,  null, $dvbTeletextInputStream, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext', $pathParams,  null, $dvbTeletextInputStream, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DvbTeletextInputStream::class);
     }
@@ -58,7 +58,8 @@ class DvbTeletextApi
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext/{input_stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext/{input_stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class DvbTeletextApi
             'encoding_id' => $encodingId,
             'input_stream_id' => $inputStreamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext/{input_stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext/{input_stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DvbTeletextInputStream::class);
     }
@@ -95,7 +97,8 @@ class DvbTeletextApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/input-streams/subtitles/dvb-teletext', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, DvbTeletextInputStreamPaginationResponse::class);
     }

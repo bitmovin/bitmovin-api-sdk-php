@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class MedianApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class MedianApi
      */
     public function create(\BitmovinApiSdk\Models\AdAnalyticsMedianQueryRequest $adAnalyticsMedianQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/ads/queries/median', [],  null, $adAnalyticsMedianQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/ads/queries/median', [],  null, $adAnalyticsMedianQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

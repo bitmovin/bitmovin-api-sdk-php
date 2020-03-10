@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ByTimestampApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class ByTimestampApi
             'encoding_id' => $encodingId,
             'object_detection_id' => $objectDetectionId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/results/by-timestamp', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/machine-learning/object-detection/{object_detection_id}/results/by-timestamp', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ObjectDetectionTimestampResultPaginationResponse::class);
     }

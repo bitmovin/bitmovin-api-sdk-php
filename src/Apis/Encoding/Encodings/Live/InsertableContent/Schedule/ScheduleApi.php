@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ScheduleApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class ScheduleApi
             'encoding_id' => $encodingId,
             'content_id' => $contentId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/live/insertable-content/{content_id}/schedule', $pathParams,  null, $scheduledInsertableContent, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/insertable-content/{content_id}/schedule', $pathParams,  null, $scheduledInsertableContent, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ScheduledInsertableContent::class);
     }
@@ -62,7 +62,8 @@ class ScheduleApi
             'content_id' => $contentId,
             'scheduled_content_id' => $scheduledContentId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/live/insertable-content/{content_id}/schedule/{scheduled_content_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/live/insertable-content/{content_id}/schedule/{scheduled_content_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

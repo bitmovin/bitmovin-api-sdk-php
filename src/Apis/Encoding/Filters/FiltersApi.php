@@ -110,8 +110,7 @@ class FiltersApi
      */
     public function list(FilterListQueryParams $queryParams = null) : FilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, FilterPaginationResponse::class);
     }

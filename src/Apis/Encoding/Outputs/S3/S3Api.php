@@ -40,8 +40,7 @@ class S3Api
      */
     public function create(\BitmovinApiSdk\Models\S3Output $s3Output) : \BitmovinApiSdk\Models\S3Output
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/s3', [],  null, $s3Output, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/s3', [],  null, $s3Output, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3Output::class);
     }
@@ -58,7 +57,8 @@ class S3Api
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/s3/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/s3/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3Output::class);
     }
@@ -75,7 +75,8 @@ class S3Api
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/s3/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/s3/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3Output::class);
     }
@@ -89,8 +90,7 @@ class S3Api
      */
     public function list(S3OutputListQueryParams $queryParams = null) : S3OutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/s3', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/s3', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, S3OutputPaginationResponse::class);
     }

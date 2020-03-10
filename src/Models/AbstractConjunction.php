@@ -13,7 +13,6 @@ class AbstractConjunction extends AbstractCondition
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->conditions = ObjectMapper::map($this->conditions, AbstractCondition::class);
     }
 

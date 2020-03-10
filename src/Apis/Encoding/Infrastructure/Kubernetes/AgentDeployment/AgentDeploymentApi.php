@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class AgentDeploymentApi
 {
     /** @var HttpWrapper */
@@ -30,7 +29,6 @@ class AgentDeploymentApi
      * Download bitmovin-agent deployment
      *
      * @param string $infrastructureId
-     * @return \BitmovinApiSdk\Models\void
      * @throws BitmovinApiException
      */
     public function get(string $infrastructureId)
@@ -38,6 +36,7 @@ class AgentDeploymentApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes/{infrastructure_id}/agent-deployment', $pathParams,  null, null, false);
+
+        $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes/{infrastructure_id}/agent-deployment', $pathParams,  null, null, false);
     }
 }

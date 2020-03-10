@@ -85,7 +85,6 @@ class Av1VideoConfiguration extends VideoConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->keyPlacementMode = ObjectMapper::map($this->keyPlacementMode, Av1KeyPlacementMode::class);
         $this->adaptiveQuantMode = ObjectMapper::map($this->adaptiveQuantMode, Av1AdaptiveQuantMode::class);
     }

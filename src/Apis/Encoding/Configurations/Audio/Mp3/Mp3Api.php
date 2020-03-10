@@ -40,8 +40,7 @@ class Mp3Api
      */
     public function create(\BitmovinApiSdk\Models\Mp3AudioConfiguration $mp3AudioConfiguration) : \BitmovinApiSdk\Models\Mp3AudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/mp3', [],  null, $mp3AudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/mp3', [],  null, $mp3AudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp3AudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class Mp3Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/mp3/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/mp3/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class Mp3Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/mp3/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/mp3/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp3AudioConfiguration::class);
     }
@@ -89,8 +90,7 @@ class Mp3Api
      */
     public function list(Mp3AudioConfigurationListQueryParams $queryParams = null) : Mp3AudioConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/mp3', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/mp3', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, Mp3AudioConfigurationPaginationResponse::class);
     }

@@ -10,7 +10,6 @@ class EncodingStatisticsLive extends EncodingStatistics
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 }
 

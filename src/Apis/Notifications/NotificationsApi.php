@@ -53,7 +53,8 @@ class NotificationsApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/notifications/{notification_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/notifications/{notification_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -70,7 +71,8 @@ class NotificationsApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/{notification_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/{notification_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Notification::class);
     }
@@ -84,8 +86,7 @@ class NotificationsApi
      */
     public function list(NotificationListQueryParams $queryParams = null) : NotificationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/notifications', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/notifications', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, NotificationPaginationResponse::class);
     }
@@ -103,7 +104,8 @@ class NotificationsApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/{notification_id}/states', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/{notification_id}/states', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, NotificationStateEntryPaginationResponse::class);
     }
@@ -120,7 +122,8 @@ class NotificationsApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/{notification_id}/mute', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/{notification_id}/mute', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -137,7 +140,8 @@ class NotificationsApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/{notification_id}/unmute', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/{notification_id}/unmute', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

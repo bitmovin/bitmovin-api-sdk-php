@@ -34,7 +34,6 @@ class SrtInput extends Input
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->mode = ObjectMapper::map($this->mode, SrtMode::class);
         $this->backupSrtInputs = ObjectMapper::map($this->backupSrtInputs, BackupSrtInputs::class);
     }

@@ -49,7 +49,6 @@ class EncodingStats extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->date = ObjectMapper::map($this->date, Carbon::class);
         $this->billableEgressBytes = ObjectMapper::map($this->billableEgressBytes, EgressInformation::class);
         $this->billableEncodingMinutes = ObjectMapper::map($this->billableEncodingMinutes, BillableEncodingMinutes::class);

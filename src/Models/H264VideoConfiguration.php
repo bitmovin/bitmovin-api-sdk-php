@@ -142,7 +142,6 @@ class H264VideoConfiguration extends VideoConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, PresetConfiguration::class);
         $this->profile = ObjectMapper::map($this->profile, ProfileH264::class);
         $this->mvPredictionMode = ObjectMapper::map($this->mvPredictionMode, MvPredictionMode::class);

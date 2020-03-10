@@ -40,8 +40,7 @@ class GcsApi
      */
     public function create(\BitmovinApiSdk\Models\GcsInput $gcsInput) : \BitmovinApiSdk\Models\GcsInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/gcs', [],  null, $gcsInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/gcs', [],  null, $gcsInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsInput::class);
     }
@@ -58,7 +57,8 @@ class GcsApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/gcs/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/gcs/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsInput::class);
     }
@@ -75,7 +75,8 @@ class GcsApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/gcs/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/gcs/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsInput::class);
     }
@@ -89,8 +90,7 @@ class GcsApi
      */
     public function list(GcsInputListQueryParams $queryParams = null) : GcsInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/gcs', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/gcs', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, GcsInputPaginationResponse::class);
     }

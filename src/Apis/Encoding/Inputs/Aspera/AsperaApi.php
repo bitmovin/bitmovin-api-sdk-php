@@ -40,8 +40,7 @@ class AsperaApi
      */
     public function create(\BitmovinApiSdk\Models\AsperaInput $asperaInput) : \BitmovinApiSdk\Models\AsperaInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/aspera', [],  null, $asperaInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/aspera', [],  null, $asperaInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AsperaInput::class);
     }
@@ -58,7 +57,8 @@ class AsperaApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/aspera/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/aspera/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AsperaInput::class);
     }
@@ -75,7 +75,8 @@ class AsperaApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/aspera/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/aspera/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AsperaInput::class);
     }
@@ -89,8 +90,7 @@ class AsperaApi
      */
     public function list(AsperaInputListQueryParams $queryParams = null) : AsperaInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/aspera', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/aspera', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AsperaInputPaginationResponse::class);
     }

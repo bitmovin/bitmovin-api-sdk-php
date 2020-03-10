@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class DomainsApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class DomainsApi
      */
     public function create(\BitmovinApiSdk\Models\CustomWebPlayerBuildDomain $customWebPlayerBuildDomain) : \BitmovinApiSdk\Models\CustomWebPlayerBuildDomain
     {
-        
-        $response = $this->httpWrapper->request('POST','/player/custom-builds/web/domains', [],  null, $customWebPlayerBuildDomain, true);
+        $response = $this->httpWrapper->request('POST', '/player/custom-builds/web/domains', [],  null, $customWebPlayerBuildDomain, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomWebPlayerBuildDomain::class);
     }
@@ -53,7 +51,8 @@ class DomainsApi
         $pathParams = [
             'domain_id' => $domainId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/player/custom-builds/web/domains/{domain_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/player/custom-builds/web/domains/{domain_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -70,7 +69,8 @@ class DomainsApi
         $pathParams = [
             'domain_id' => $domainId,
         ];
-        $response = $this->httpWrapper->request('GET','/player/custom-builds/web/domains/{domain_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/custom-builds/web/domains/{domain_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomWebPlayerBuildDomain::class);
     }
@@ -83,8 +83,7 @@ class DomainsApi
      */
     public function list() : CustomWebPlayerBuildDomainPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/player/custom-builds/web/domains', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/player/custom-builds/web/domains', [],  null, null, true);
 
         return ObjectMapper::map($response, CustomWebPlayerBuildDomainPaginationResponse::class);
     }

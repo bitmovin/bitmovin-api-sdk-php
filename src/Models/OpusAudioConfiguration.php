@@ -13,7 +13,6 @@ class OpusAudioConfiguration extends AudioConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->channelLayout = ObjectMapper::map($this->channelLayout, OpusChannelLayout::class);
     }
 

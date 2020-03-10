@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class LiveInputStreamChangedApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class LiveInputStreamChangedApi
      */
     public function create(\BitmovinApiSdk\Models\EmailNotificationWithStreamConditionsRequest $emailNotificationWithStreamConditionsRequest) : \BitmovinApiSdk\Models\EmailNotificationWithStreamConditions
     {
-        
-        $response = $this->httpWrapper->request('POST','/notifications/emails/encoding/encodings/live-input-stream-changed', [],  null, $emailNotificationWithStreamConditionsRequest, true);
+        $response = $this->httpWrapper->request('POST', '/notifications/emails/encoding/encodings/live-input-stream-changed', [],  null, $emailNotificationWithStreamConditionsRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EmailNotificationWithStreamConditions::class);
     }
@@ -54,7 +52,8 @@ class LiveInputStreamChangedApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/emails/encoding/encodings/{encoding_id}/live-input-stream-changed', $pathParams,  null, $emailNotificationWithStreamConditionsRequest, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/emails/encoding/encodings/{encoding_id}/live-input-stream-changed', $pathParams,  null, $emailNotificationWithStreamConditionsRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EmailNotificationWithStreamConditions::class);
     }
@@ -72,7 +71,8 @@ class LiveInputStreamChangedApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('PUT','/notifications/emails/encoding/encodings/live-input-stream-changed/{notification_id}', $pathParams,  null, $emailNotificationWithStreamConditionsRequest, true);
+
+        $response = $this->httpWrapper->request('PUT', '/notifications/emails/encoding/encodings/live-input-stream-changed/{notification_id}', $pathParams,  null, $emailNotificationWithStreamConditionsRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EmailNotificationWithStreamConditions::class);
     }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class SumApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class SumApi
      */
     public function create(\BitmovinApiSdk\Models\AnalyticsSumQueryRequest $analyticsSumQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/queries/sum', [],  null, $analyticsSumQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/queries/sum', [],  null, $analyticsSumQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

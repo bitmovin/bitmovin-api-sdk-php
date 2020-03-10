@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class CustomXmlElementsApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class CustomXmlElementsApi
             'manifest_id' => $manifestId,
             'period_id' => $periodId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements', $pathParams,  null, $customXmlElement, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements', $pathParams,  null, $customXmlElement, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomXmlElement::class);
     }
@@ -62,7 +62,8 @@ class CustomXmlElementsApi
             'period_id' => $periodId,
             'custom_xml_element_id' => $customXmlElementId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements/{custom_xml_element_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements/{custom_xml_element_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -83,7 +84,8 @@ class CustomXmlElementsApi
             'period_id' => $periodId,
             'custom_xml_element_id' => $customXmlElementId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements/{custom_xml_element_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements/{custom_xml_element_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomXmlElement::class);
     }
@@ -103,7 +105,8 @@ class CustomXmlElementsApi
             'manifest_id' => $manifestId,
             'period_id' => $periodId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/custom-xml-elements', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, CustomXmlElementPaginationResponse::class);
     }

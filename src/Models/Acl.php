@@ -19,7 +19,6 @@ class Acl extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->policy = ObjectMapper::map($this->policy, Policy::class);
         $this->permissions = ObjectMapper::map($this->permissions, Permission::class);
     }

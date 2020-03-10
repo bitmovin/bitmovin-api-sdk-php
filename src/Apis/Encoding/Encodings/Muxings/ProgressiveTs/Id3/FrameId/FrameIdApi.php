@@ -46,7 +46,8 @@ class FrameIdApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id', $pathParams,  null, $frameIdId3Tag, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id', $pathParams,  null, $frameIdId3Tag, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\FrameIdId3Tag::class);
     }
@@ -67,7 +68,8 @@ class FrameIdApi
             'muxing_id' => $muxingId,
             'id3_tag_id' => $id3TagId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id/{id3_tag_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id/{id3_tag_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class FrameIdApi
             'muxing_id' => $muxingId,
             'id3_tag_id' => $id3TagId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id/{id3_tag_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id/{id3_tag_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\FrameIdId3Tag::class);
     }
@@ -108,7 +111,8 @@ class FrameIdApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/id3/frame-id', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, FrameIdId3TagPaginationResponse::class);
     }

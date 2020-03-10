@@ -16,7 +16,6 @@ class AdAnalyticsOrderByEntry extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->name = ObjectMapper::map($this->name, AdAnalyticsAttribute::class);
         $this->order = ObjectMapper::map($this->order, AnalyticsOrder::class);
     }

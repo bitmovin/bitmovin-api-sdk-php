@@ -19,7 +19,6 @@ class PerTitleFixedResolutionAndBitrateConfiguration extends \BitmovinApiSdk\Com
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->forcedRenditionAboveHighestFixedRepresentationCalculationMode = ObjectMapper::map($this->forcedRenditionAboveHighestFixedRepresentationCalculationMode, PerTitleFixedResolutionAndBitrateConfigurationMode::class);
     }
 

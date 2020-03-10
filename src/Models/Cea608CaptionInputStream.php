@@ -19,7 +19,6 @@ class Cea608CaptionInputStream extends InputStream
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->channel = ObjectMapper::map($this->channel, Cea608ChannelType::class);
     }
 

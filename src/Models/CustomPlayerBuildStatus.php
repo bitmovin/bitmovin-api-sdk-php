@@ -25,7 +25,6 @@ class CustomPlayerBuildStatus extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->status = ObjectMapper::map($this->status, Status::class);
         $this->messages = ObjectMapper::map($this->messages, Message::class);
     }

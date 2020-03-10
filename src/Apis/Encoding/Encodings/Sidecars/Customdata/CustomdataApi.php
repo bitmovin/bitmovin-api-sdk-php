@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class CustomdataApi
 {
     /** @var HttpWrapper */
@@ -40,7 +39,8 @@ class CustomdataApi
             'encoding_id' => $encodingId,
             'sidecar_id' => $sidecarId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}/customData', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/sidecars/{sidecar_id}/customData', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomData::class);
     }

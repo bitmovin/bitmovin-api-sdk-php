@@ -25,7 +25,6 @@ class Webhook extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->method = ObjectMapper::map($this->method, WebhookHttpMethod::class);
         $this->encryption = ObjectMapper::map($this->encryption, WebhookEncryption::class);
         $this->signature = ObjectMapper::map($this->signature, WebhookSignature::class);

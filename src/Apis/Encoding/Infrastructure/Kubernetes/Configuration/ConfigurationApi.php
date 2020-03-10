@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ConfigurationApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class ConfigurationApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes/{infrastructure_id}/configuration', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes/{infrastructure_id}/configuration', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\KubernetesClusterConfiguration::class);
     }
@@ -56,7 +56,8 @@ class ConfigurationApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('PUT','/encoding/infrastructure/kubernetes/{infrastructure_id}/configuration', $pathParams,  null, $kubernetesClusterConfiguration, true);
+
+        $response = $this->httpWrapper->request('PUT', '/encoding/infrastructure/kubernetes/{infrastructure_id}/configuration', $pathParams,  null, $kubernetesClusterConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\KubernetesClusterConfiguration::class);
     }

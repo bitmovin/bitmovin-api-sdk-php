@@ -16,7 +16,6 @@ class AppliedStreamSettings extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

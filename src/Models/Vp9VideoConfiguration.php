@@ -106,7 +106,6 @@ class Vp9VideoConfiguration extends VideoConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, PresetConfiguration::class);
         $this->quality = ObjectMapper::map($this->quality, Vp9Quality::class);
         $this->aqMode = ObjectMapper::map($this->aqMode, Vp9AqMode::class);

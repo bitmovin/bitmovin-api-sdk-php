@@ -13,7 +13,6 @@ class ProgressiveTsMuxingInformation extends ProgressiveMuxingInformation
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->byteRanges = ObjectMapper::map($this->byteRanges, ProgressiveTsMuxingInformationByteRanges::class);
     }
 }

@@ -8,35 +8,34 @@ use BitmovinApiSdk\Common\ObjectMapper;
 class BillableEncodingMinutesDetails extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var float */
-    public $uNKNOWN;
+    public $UNKNOWN;
 
     /** @var float */
-    public $aUDIO;
+    public $AUDIO;
 
     /** @var float */
-    public $sD;
+    public $SD;
 
     /** @var float */
-    public $hD;
+    public $HD;
 
     /** @var float */
-    public $uHD;
+    public $UHD;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**
      * Only set if resolution information is not present.
      *
-     * @param float $uNKNOWN
+     * @param float $UNKNOWN
      * @return $this
      */
-    public function uNKNOWN(float $uNKNOWN)
+    public function UNKNOWN(float $UNKNOWN)
     {
-        $this->uNKNOWN = $uNKNOWN;
+        $this->UNKNOWN = $UNKNOWN;
 
         return $this;
     }
@@ -44,12 +43,12 @@ class BillableEncodingMinutesDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * Billable minutes for audio. Available if stream is an audio stream.
      *
-     * @param float $aUDIO
+     * @param float $AUDIO
      * @return $this
      */
-    public function aUDIO(float $aUDIO)
+    public function AUDIO(float $AUDIO)
     {
-        $this->aUDIO = $aUDIO;
+        $this->AUDIO = $AUDIO;
 
         return $this;
     }
@@ -57,12 +56,12 @@ class BillableEncodingMinutesDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * Billable minutes for SD resolutions.
      *
-     * @param float $sD
+     * @param float $SD
      * @return $this
      */
-    public function sD(float $sD)
+    public function SD(float $SD)
     {
-        $this->sD = $sD;
+        $this->SD = $SD;
 
         return $this;
     }
@@ -70,12 +69,12 @@ class BillableEncodingMinutesDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * Billable minutes for HD resolutions.
      *
-     * @param float $hD
+     * @param float $HD
      * @return $this
      */
-    public function hD(float $hD)
+    public function HD(float $HD)
     {
-        $this->hD = $hD;
+        $this->HD = $HD;
 
         return $this;
     }
@@ -83,12 +82,12 @@ class BillableEncodingMinutesDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * Billable minutes for UHD resolutions.
      *
-     * @param float $uHD
+     * @param float $UHD
      * @return $this
      */
-    public function uHD(float $uHD)
+    public function UHD(float $UHD)
     {
-        $this->uHD = $uHD;
+        $this->UHD = $UHD;
 
         return $this;
     }

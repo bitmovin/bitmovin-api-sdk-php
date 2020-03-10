@@ -16,7 +16,6 @@ class InsertableContent extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->inputs = ObjectMapper::map($this->inputs, InsertableContentInput::class);
         $this->status = ObjectMapper::map($this->status, InsertableContentStatus::class);
     }

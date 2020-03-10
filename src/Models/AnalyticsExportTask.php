@@ -40,7 +40,6 @@ class AnalyticsExportTask extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->startTime = ObjectMapper::map($this->startTime, Carbon::class);
         $this->endTime = ObjectMapper::map($this->endTime, Carbon::class);
         $this->output = ObjectMapper::map($this->output, AnalyticsExportTaskOutputTarget::class);

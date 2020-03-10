@@ -40,8 +40,7 @@ class AacApi
      */
     public function create(\BitmovinApiSdk\Models\AacAudioConfiguration $aacAudioConfiguration) : \BitmovinApiSdk\Models\AacAudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/aac', [],  null, $aacAudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/aac', [],  null, $aacAudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AacAudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class AacApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/aac/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/aac/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class AacApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/aac/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/aac/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AacAudioConfiguration::class);
     }
@@ -89,8 +90,7 @@ class AacApi
      */
     public function list(AacAudioConfigurationListQueryParams $queryParams = null) : AacAudioConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/aac', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/aac', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AacAudioConfigurationPaginationResponse::class);
     }

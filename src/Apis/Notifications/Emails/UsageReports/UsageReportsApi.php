@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class UsageReportsApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class UsageReportsApi
      */
     public function list(EmailNotificationListQueryParams $queryParams = null) : EmailNotificationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/notifications/emails/usage-reports', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/notifications/emails/usage-reports', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EmailNotificationPaginationResponse::class);
     }

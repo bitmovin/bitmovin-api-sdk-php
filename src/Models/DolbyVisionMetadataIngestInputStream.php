@@ -16,7 +16,6 @@ class DolbyVisionMetadataIngestInputStream extends InputStream
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

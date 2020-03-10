@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class AvgConcurrentviewersApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class AvgConcurrentviewersApi
      */
     public function create(\BitmovinApiSdk\Models\AnalyticsMetricsQueryRequest $analyticsMetricsQueryRequest) : \BitmovinApiSdk\Models\AnalyticsAvgConcurrentViewersResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/metrics/avg-concurrentviewers', [],  null, $analyticsMetricsQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/metrics/avg-concurrentviewers', [],  null, $analyticsMetricsQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsAvgConcurrentViewersResponse::class);
     }

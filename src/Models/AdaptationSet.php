@@ -19,7 +19,6 @@ class AdaptationSet extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->customAttributes = ObjectMapper::map($this->customAttributes, CustomAttribute::class);
         $this->roles = ObjectMapper::map($this->roles, AdaptationSetRole::class);
         $this->accessibilities = ObjectMapper::map($this->accessibilities, Accessibility::class);

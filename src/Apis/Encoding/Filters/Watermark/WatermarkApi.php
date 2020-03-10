@@ -40,8 +40,7 @@ class WatermarkApi
      */
     public function create(\BitmovinApiSdk\Models\WatermarkFilter $watermarkFilter) : \BitmovinApiSdk\Models\WatermarkFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/watermark', [],  null, $watermarkFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/watermark', [],  null, $watermarkFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WatermarkFilter::class);
     }
@@ -58,7 +57,8 @@ class WatermarkApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/watermark/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/watermark/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class WatermarkApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/watermark/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/watermark/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WatermarkFilter::class);
     }
@@ -89,8 +90,7 @@ class WatermarkApi
      */
     public function list(WatermarkFilterListQueryParams $queryParams = null) : WatermarkFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/watermark', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/watermark', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, WatermarkFilterPaginationResponse::class);
     }

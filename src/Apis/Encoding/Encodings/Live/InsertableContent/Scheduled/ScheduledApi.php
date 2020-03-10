@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ScheduledApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class ScheduledApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/live/insertable-content/scheduled', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/live/insertable-content/scheduled', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ScheduledInsertableContentPaginationResponse::class);
     }

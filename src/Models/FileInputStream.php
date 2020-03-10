@@ -19,7 +19,6 @@ class FileInputStream extends InputStream
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->fileType = ObjectMapper::map($this->fileType, FileInputStreamType::class);
     }
 

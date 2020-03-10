@@ -25,7 +25,6 @@ class BroadcastTsInputStreamConfiguration extends \BitmovinApiSdk\Common\ApiReso
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->setRaiOnAu = ObjectMapper::map($this->setRaiOnAu, RaiUnit::class);
     }
 

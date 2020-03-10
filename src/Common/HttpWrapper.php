@@ -4,26 +4,21 @@ namespace BitmovinApiSdk\Common;
 
 use stdClass;
 use GuzzleHttp\Client;
-use Psr\Log\LoggerInterface;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\ClientInterface;
 
 use BitmovinApiSdk\Configuration;
 use BitmovinApiSdk\Common\Middleware\CustomApiHeaders;
+use BitmovinApiSdk\Common\Middleware\ErrorHandler;
+use BitmovinApiSdk\Common\Middleware\LoggingHandler;
 
 class HttpWrapper
 {
     /** @var string */
     private $baseUrl;
 
-    /** @var string */
-    private $apiKey;
-
     /** @var ClientInterface */
     protected $httpClient;
-
-    /** @var LoggerInterface */
-    private $logger;
 
     /**
      * HttpWrapper constructor.
@@ -32,15 +27,19 @@ class HttpWrapper
      */
     public function __construct(Configuration $config)
     {
-        $this->apiKey = $config->apiKey;
         $this->baseUrl = $config->baseUrl;
-        $this->logger = $config->logger;
 
         if ($config->httpClient) {
             $this->httpClient = $config->httpClient;
         } else {
             $stack = HandlerStack::create();
-            $stack->push(new CustomApiHeaders($this->apiKey));
+
+            $stack->push(new CustomApiHeaders($config->apiKey, $config->tenantOrgId));
+            $stack->push(new ErrorHandler());
+
+            if ($config->logger !== null) {
+                $stack->push(new LoggingHandler($config->logger));
+            }
 
             $this->httpClient = new Client([
                 'base_uri' => $this->baseUrl,
@@ -77,15 +76,12 @@ class HttpWrapper
         } elseif ($body) {
             $bodyJson = $body;
 
-            if($body instanceof ApiResource)
-            {
+            if ($body instanceof ApiResource) {
                 $bodyJson = $body->toArray();
             }
 
             $options = ['json' => $bodyJson];
         }
-
-        $this->logRequestIfEnabled($method, $endpoint, $options);
 
         $arguments = [$method, $endpoint];
 
@@ -96,40 +92,13 @@ class HttpWrapper
         $response = $this->httpClient->request(...$arguments);
 
         $responseBody = $response->getBody();
-        $statusCode = $response->getStatusCode();
-        $this->throwExceptionForHttpStatusCode($statusCode, $responseBody);
-        $this->logResponseIfEnabled($responseBody);
+        $result = json_decode($responseBody);
 
-        if(!$deserializeResponse)
-        {
+        if (!$deserializeResponse) {
             return;
         }
 
-        $result = json_decode($responseBody);
-
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            throw new BitmovinApiException($statusCode, 'There was a problem while trying to decode the JSON response.',
-                '', ['responseBody' => $responseBody]);
-        }
-
         return $result->data->result;
-    }
-
-    /**
-     * @param int $statusCode
-     * @param string $responseBody
-     * @throws BitmovinApiException
-     */
-    private function throwExceptionForHttpStatusCode(int $statusCode, string $responseBody)
-    {
-        if ($statusCode > 299) {
-            $response = json_decode($responseBody);
-            $message = $response->data->message ?? $response->message ?? '';
-            $developerMessage = $response->data->developerMessage ?? '';
-            $details = $response->data->details ?? [];
-
-            throw new BitmovinApiException($statusCode, $message, $developerMessage, $details);
-        }
     }
 
     /**
@@ -145,27 +114,4 @@ class HttpWrapper
 
         return $endpoint = $this->baseUrl . $endpoint;
     }
-
-    /**
-     * @param string $method
-     * @param string $endpoint
-     * @param array $options
-     */
-    private function logRequestIfEnabled(string $method, string $endpoint, array $options)
-    {
-        if ($this->logger) {
-            $this->logger->info('Bitmovin Request - Outgoing '.$method.' request to '.$endpoint, $options);
-        }
-    }
-
-    /**
-     * @param string $responseBody
-     */
-    private function logResponseIfEnabled(string $responseBody)
-    {
-        if ($this->logger) {
-            $this->logger->info('Bitmovin Request Response: '.$responseBody);
-        }
-    }
-
 }

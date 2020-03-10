@@ -28,7 +28,6 @@ class StatisticsPerLabel extends Statistics
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->billableEncodingMinutes = ObjectMapper::map($this->billableEncodingMinutes, BillableEncodingMinutes::class);
         $this->billableFeatureMinutes = ObjectMapper::map($this->billableFeatureMinutes, BillableEncodingFeatureMinutes::class);
         $this->billableEgressBytes = ObjectMapper::map($this->billableEgressBytes, EgressInformation::class);

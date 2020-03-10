@@ -19,7 +19,6 @@ class CencPlayReady extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->additionalInformation = ObjectMapper::map($this->additionalInformation, PlayReadyAdditionalInformation::class);
     }
 

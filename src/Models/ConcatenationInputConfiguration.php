@@ -28,7 +28,6 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->paddingBefore = ObjectMapper::map($this->paddingBefore, PaddingSequence::class);
         $this->paddingAfter = ObjectMapper::map($this->paddingAfter, PaddingSequence::class);
         $this->aspectMode = ObjectMapper::map($this->aspectMode, AspectMode::class);

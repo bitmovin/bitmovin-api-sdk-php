@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ErrorApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class ErrorApi
      */
     public function create(\BitmovinApiSdk\Models\EncodingErrorEmailNotification $encodingErrorEmailNotification) : EncodingErrorEmailNotificationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/notifications/emails/encoding/encodings/error', [],  null, $encodingErrorEmailNotification, true);
+        $response = $this->httpWrapper->request('POST', '/notifications/emails/encoding/encodings/error', [],  null, $encodingErrorEmailNotification, true);
 
         return ObjectMapper::map($response, EncodingErrorEmailNotificationPaginationResponse::class);
     }
@@ -54,7 +52,8 @@ class ErrorApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/emails/encoding/encodings/{encoding_id}/error', $pathParams,  null, $emailNotification, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/emails/encoding/encodings/{encoding_id}/error', $pathParams,  null, $emailNotification, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EmailNotification::class);
     }
@@ -72,7 +71,8 @@ class ErrorApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('PUT','/notifications/emails/encoding/encodings/error/{notification_id}', $pathParams,  null, $emailNotification, true);
+
+        $response = $this->httpWrapper->request('PUT', '/notifications/emails/encoding/encodings/error/{notification_id}', $pathParams,  null, $emailNotification, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\EmailNotification::class);
     }

@@ -37,7 +37,6 @@ class AnalyticsQueryRequest extends AnalyticsQueryTimeframe
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->filters = ObjectMapper::map($this->filters, AnalyticsAbstractFilter::class);
         $this->orderBy = ObjectMapper::map($this->orderBy, AnalyticsOrderByEntry::class);
         $this->dimension = ObjectMapper::map($this->dimension, AnalyticsAttribute::class);

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class LiveApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class LiveApi
      */
     public function list(EncodingStatisticsLiveListQueryParams $queryParams = null) : EncodingStatisticsLivePaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/live', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/live', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingStatisticsLivePaginationResponse::class);
     }
@@ -56,7 +54,8 @@ class LiveApi
             'from' => $from->format('Y-m-d'),
             'to' => $to->format('Y-m-d'),
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/statistics/encodings/live/{from}/{to}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/live/{from}/{to}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingStatisticsLivePaginationResponse::class);
     }

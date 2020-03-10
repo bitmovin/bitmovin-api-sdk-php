@@ -13,7 +13,6 @@ class WebVttSidecarFile extends SidecarFile
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->segmentation = ObjectMapper::map($this->segmentation, WebVttSidecarFileSegmentation::class);
     }
 

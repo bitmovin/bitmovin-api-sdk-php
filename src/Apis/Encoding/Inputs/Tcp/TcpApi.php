@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class TcpApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class TcpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/tcp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/tcp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TcpInput::class);
     }
@@ -52,8 +52,7 @@ class TcpApi
      */
     public function list(TcpInputListQueryParams $queryParams = null) : TcpInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/tcp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/tcp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, TcpInputPaginationResponse::class);
     }

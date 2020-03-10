@@ -16,7 +16,6 @@ class LiveEncodingStatsEvent extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->time = ObjectMapper::map($this->time, Carbon::class);
         $this->details = ObjectMapper::map($this->details, LiveEncodingStatsEventDetails::class);
     }

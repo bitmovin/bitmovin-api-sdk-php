@@ -40,8 +40,7 @@ class LiveMediaIngestApi
      */
     public function create(\BitmovinApiSdk\Models\LiveMediaIngestOutput $liveMediaIngestOutput) : \BitmovinApiSdk\Models\LiveMediaIngestOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/live-media-ingest', [],  null, $liveMediaIngestOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/live-media-ingest', [],  null, $liveMediaIngestOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveMediaIngestOutput::class);
     }
@@ -58,7 +57,8 @@ class LiveMediaIngestApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/live-media-ingest/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/live-media-ingest/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class LiveMediaIngestApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/live-media-ingest/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/live-media-ingest/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveMediaIngestOutput::class);
     }
@@ -89,8 +90,7 @@ class LiveMediaIngestApi
      */
     public function list(LiveMediaIngestOutputListQueryParams $queryParams = null) : LiveMediaIngestOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/live-media-ingest', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/live-media-ingest', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, LiveMediaIngestOutputPaginationResponse::class);
     }

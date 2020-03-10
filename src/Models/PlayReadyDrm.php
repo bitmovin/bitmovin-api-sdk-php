@@ -31,7 +31,6 @@ class PlayReadyDrm extends Drm
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->method = ObjectMapper::map($this->method, PlayReadyEncryptionMethod::class);
         $this->additionalInformation = ObjectMapper::map($this->additionalInformation, PlayReadyAdditionalInformation::class);
     }

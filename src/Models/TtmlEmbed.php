@@ -13,7 +13,6 @@ class TtmlEmbed extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->inputStream = ObjectMapper::map($this->inputStream, StreamInput::class);
     }
 

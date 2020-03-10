@@ -25,7 +25,6 @@ class ConvertSccCaption extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->input = ObjectMapper::map($this->input, InputPath::class);
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
         $this->outputFormat = ObjectMapper::map($this->outputFormat, StreamCaptionOutputFormat::class);

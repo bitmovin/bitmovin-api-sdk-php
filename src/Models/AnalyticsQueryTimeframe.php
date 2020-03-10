@@ -16,7 +16,6 @@ class AnalyticsQueryTimeframe extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->start = ObjectMapper::map($this->start, Carbon::class);
         $this->end = ObjectMapper::map($this->end, Carbon::class);
     }

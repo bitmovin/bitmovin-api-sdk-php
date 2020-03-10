@@ -40,8 +40,7 @@ class AkamaiNetstorageApi
      */
     public function create(\BitmovinApiSdk\Models\AkamaiNetStorageInput $akamaiNetStorageInput) : \BitmovinApiSdk\Models\AkamaiNetStorageInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/akamai-netstorage', [],  null, $akamaiNetStorageInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/akamai-netstorage', [],  null, $akamaiNetStorageInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AkamaiNetStorageInput::class);
     }
@@ -58,7 +57,8 @@ class AkamaiNetstorageApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/akamai-netstorage/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/akamai-netstorage/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AkamaiNetStorageInput::class);
     }
@@ -75,7 +75,8 @@ class AkamaiNetstorageApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/akamai-netstorage/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/akamai-netstorage/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AkamaiNetStorageInput::class);
     }
@@ -89,8 +90,7 @@ class AkamaiNetstorageApi
      */
     public function list(AkamaiNetStorageInputListQueryParams $queryParams = null) : AkamaiNetStorageInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/akamai-netstorage', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/akamai-netstorage', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AkamaiNetStorageInputPaginationResponse::class);
     }

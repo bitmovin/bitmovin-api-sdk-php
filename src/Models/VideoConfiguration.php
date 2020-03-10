@@ -37,7 +37,6 @@ class VideoConfiguration extends CodecConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->pixelFormat = ObjectMapper::map($this->pixelFormat, PixelFormat::class);
         $this->colorConfig = ObjectMapper::map($this->colorConfig, ColorConfig::class);
         $this->encodingMode = ObjectMapper::map($this->encodingMode, EncodingMode::class);

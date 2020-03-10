@@ -22,7 +22,6 @@ class AnalyticsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->columnLabels = ObjectMapper::map($this->columnLabels, AnalyticsColumnLabel::class);
         $this->contextDescription = ObjectMapper::map($this->contextDescription, AnalyticsContextDescription::class);
     }

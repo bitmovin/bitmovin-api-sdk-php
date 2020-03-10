@@ -54,7 +54,8 @@ class InsertableContentApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/live/insertable-content', $pathParams,  null, $insertableContent, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/insertable-content', $pathParams,  null, $insertableContent, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\InsertableContent::class);
     }
@@ -72,7 +73,8 @@ class InsertableContentApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/live/insertable-content', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/live/insertable-content', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, InsertableContentPaginationResponse::class);
     }

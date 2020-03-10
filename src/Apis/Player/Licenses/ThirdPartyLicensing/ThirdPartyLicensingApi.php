@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ThirdPartyLicensingApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class ThirdPartyLicensingApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('POST','/player/licenses/{license_id}/third-party-licensing', $pathParams,  null, $playerThirdPartyLicensing, true);
+
+        $response = $this->httpWrapper->request('POST', '/player/licenses/{license_id}/third-party-licensing', $pathParams,  null, $playerThirdPartyLicensing, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerThirdPartyLicensing::class);
     }
@@ -56,7 +56,8 @@ class ThirdPartyLicensingApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/player/licenses/{license_id}/third-party-licensing', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/player/licenses/{license_id}/third-party-licensing', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -73,7 +74,8 @@ class ThirdPartyLicensingApi
         $pathParams = [
             'license_id' => $licenseId,
         ];
-        $response = $this->httpWrapper->request('GET','/player/licenses/{license_id}/third-party-licensing', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/licenses/{license_id}/third-party-licensing', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerThirdPartyLicensing::class);
     }

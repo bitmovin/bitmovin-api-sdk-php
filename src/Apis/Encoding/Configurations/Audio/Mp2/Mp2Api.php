@@ -40,8 +40,7 @@ class Mp2Api
      */
     public function create(\BitmovinApiSdk\Models\Mp2AudioConfiguration $mp2AudioConfiguration) : \BitmovinApiSdk\Models\Mp2AudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/mp2', [],  null, $mp2AudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/mp2', [],  null, $mp2AudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp2AudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class Mp2Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/mp2/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/mp2/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class Mp2Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/mp2/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/mp2/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp2AudioConfiguration::class);
     }

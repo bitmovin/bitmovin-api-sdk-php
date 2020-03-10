@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class GceApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class GceApi
      */
     public function create(\BitmovinApiSdk\Models\GceAccount $gceAccount) : \BitmovinApiSdk\Models\GceAccount
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/infrastructure/gce', [],  null, $gceAccount, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/infrastructure/gce', [],  null, $gceAccount, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GceAccount::class);
     }
@@ -53,7 +51,8 @@ class GceApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/infrastructure/gce/{infrastructure_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/infrastructure/gce/{infrastructure_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GceAccount::class);
     }
@@ -70,7 +69,8 @@ class GceApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/gce/{infrastructure_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/gce/{infrastructure_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\GceAccount::class);
     }
@@ -84,8 +84,7 @@ class GceApi
      */
     public function list(GceAccountListQueryParams $queryParams = null) : GceAccountPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/gce', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/gce', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, GceAccountPaginationResponse::class);
     }

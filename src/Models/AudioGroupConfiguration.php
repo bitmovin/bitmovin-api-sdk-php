@@ -16,7 +16,6 @@ class AudioGroupConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->droppingMode = ObjectMapper::map($this->droppingMode, VariantStreamDroppingMode::class);
         $this->groups = ObjectMapper::map($this->groups, AudioGroup::class);
     }

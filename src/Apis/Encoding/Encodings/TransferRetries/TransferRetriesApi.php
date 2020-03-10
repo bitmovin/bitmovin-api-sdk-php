@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class TransferRetriesApi
 {
     /** @var HttpWrapper */
@@ -38,7 +37,8 @@ class TransferRetriesApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/transfer-retries', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/transfer-retries', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TransferRetry::class);
     }
@@ -57,7 +57,8 @@ class TransferRetriesApi
             'encoding_id' => $encodingId,
             'transfer_retry_id' => $transferRetryId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/transfer-retries/{transfer_retry_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/transfer-retries/{transfer_retry_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\TransferRetry::class);
     }
@@ -75,7 +76,8 @@ class TransferRetriesApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/transfer-retries', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/transfer-retries', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, TransferRetryPaginationResponse::class);
     }

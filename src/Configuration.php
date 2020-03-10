@@ -2,19 +2,21 @@
 
 namespace BitmovinApiSdk;
 
+use BitmovinApiSdk\Common\Logging\BitmovinLoggerInterface;
 use GuzzleHttp\Client;
-use Psr\Log\LoggerInterface;
 
 class Configuration
 {
-
     /** @var string */
     public $apiKey;
 
     /** @var string */
+    public $tenantOrgId;
+
+    /** @var string */
     public $baseUrl = 'https://api.bitmovin.com/v1';
 
-    /** @var LoggerInterface */
+    /** @var BitmovinLoggerInterface */
     public $logger;
 
     /** @var Client */
@@ -37,6 +39,17 @@ class Configuration
     }
 
     /**
+     * @param string $tenantOrgId
+     * @return Configuration
+     */
+    public function tenantOrgId(string $tenantOrgId)
+    {
+        $this->tenantOrgId = $tenantOrgId;
+
+        return $this;
+    }
+
+    /**
      * @param string $baseUrl
      * @return $this
      */
@@ -48,10 +61,10 @@ class Configuration
     }
 
     /**
-     * @param LoggerInterface $logger
+     * @param BitmovinLoggerInterface $logger
      * @return $this
      */
-    public function logger(LoggerInterface $logger)
+    public function logger(BitmovinLoggerInterface $logger)
     {
         $this->logger = $logger;
 
@@ -68,5 +81,4 @@ class Configuration
 
         return $this;
     }
-
 }

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ApiKeysApi
 {
     /** @var HttpWrapper */
@@ -34,8 +33,7 @@ class ApiKeysApi
      */
     public function create() : \BitmovinApiSdk\Models\AccountApiKey
     {
-        
-        $response = $this->httpWrapper->request('POST','/account/api-keys', [],  null, null, true);
+        $response = $this->httpWrapper->request('POST', '/account/api-keys', [],  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AccountApiKey::class);
     }
@@ -52,7 +50,8 @@ class ApiKeysApi
         $pathParams = [
             'api_key_id' => $apiKeyId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/account/api-keys/{api_key_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/account/api-keys/{api_key_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -69,7 +68,8 @@ class ApiKeysApi
         $pathParams = [
             'api_key_id' => $apiKeyId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/api-keys/{api_key_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/api-keys/{api_key_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AccountApiKey::class);
     }
@@ -82,8 +82,7 @@ class ApiKeysApi
      */
     public function list() : AccountApiKeyPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/account/api-keys', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/account/api-keys', [],  null, null, true);
 
         return ObjectMapper::map($response, AccountApiKeyPaginationResponse::class);
     }

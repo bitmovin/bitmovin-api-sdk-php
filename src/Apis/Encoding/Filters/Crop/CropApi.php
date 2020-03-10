@@ -40,8 +40,7 @@ class CropApi
      */
     public function create(\BitmovinApiSdk\Models\CropFilter $cropFilter) : \BitmovinApiSdk\Models\CropFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/crop', [],  null, $cropFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/crop', [],  null, $cropFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CropFilter::class);
     }
@@ -58,7 +57,8 @@ class CropApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/crop/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/crop/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class CropApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/crop/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/crop/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CropFilter::class);
     }
@@ -89,8 +90,7 @@ class CropApi
      */
     public function list(CropFilterListQueryParams $queryParams = null) : CropFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/crop', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/crop', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, CropFilterPaginationResponse::class);
     }

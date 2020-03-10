@@ -40,8 +40,7 @@ class ConformApi
      */
     public function create(\BitmovinApiSdk\Models\ConformFilter $conformFilter) : \BitmovinApiSdk\Models\ConformFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/conform', [],  null, $conformFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/conform', [],  null, $conformFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ConformFilter::class);
     }
@@ -58,7 +57,8 @@ class ConformApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/conform/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/conform/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class ConformApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/conform/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/conform/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ConformFilter::class);
     }
@@ -89,8 +90,7 @@ class ConformApi
      */
     public function list(ConformFilterListQueryParams $queryParams = null) : ConformFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/conform', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/conform', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, ConformFilterPaginationResponse::class);
     }

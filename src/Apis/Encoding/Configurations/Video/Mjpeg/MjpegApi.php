@@ -40,8 +40,7 @@ class MjpegApi
      */
     public function create(\BitmovinApiSdk\Models\MjpegVideoConfiguration $mjpegVideoConfiguration) : \BitmovinApiSdk\Models\MjpegVideoConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/video/mjpeg', [],  null, $mjpegVideoConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/video/mjpeg', [],  null, $mjpegVideoConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\MjpegVideoConfiguration::class);
     }
@@ -58,7 +57,8 @@ class MjpegApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/video/mjpeg/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/video/mjpeg/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class MjpegApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/mjpeg/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/mjpeg/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\MjpegVideoConfiguration::class);
     }
@@ -89,8 +90,7 @@ class MjpegApi
      */
     public function list(MjpegVideoConfigurationListQueryParams $queryParams = null) : MjpegVideoConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/video/mjpeg', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/video/mjpeg', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, MjpegVideoConfigurationPaginationResponse::class);
     }

@@ -22,7 +22,6 @@ class H265PerTitleConfiguration extends PerTitleConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

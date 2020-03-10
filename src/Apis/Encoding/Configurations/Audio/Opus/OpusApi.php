@@ -40,8 +40,7 @@ class OpusApi
      */
     public function create(\BitmovinApiSdk\Models\OpusAudioConfiguration $opusAudioConfiguration) : \BitmovinApiSdk\Models\OpusAudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/opus', [],  null, $opusAudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/opus', [],  null, $opusAudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\OpusAudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class OpusApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/opus/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/opus/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class OpusApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/opus/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/opus/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\OpusAudioConfiguration::class);
     }
@@ -89,8 +90,7 @@ class OpusApi
      */
     public function list(OpusAudioConfigurationListQueryParams $queryParams = null) : OpusAudioConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/opus', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/opus', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, OpusAudioConfigurationPaginationResponse::class);
     }

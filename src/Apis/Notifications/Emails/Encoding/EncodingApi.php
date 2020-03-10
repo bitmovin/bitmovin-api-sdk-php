@@ -40,8 +40,7 @@ class EncodingApi
      */
     public function list(EmailNotificationListQueryParams $queryParams = null) : EmailNotificationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/notifications/emails/encoding', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/notifications/emails/encoding', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, EmailNotificationPaginationResponse::class);
     }

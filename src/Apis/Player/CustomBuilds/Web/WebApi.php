@@ -50,8 +50,7 @@ class WebApi
      */
     public function create(\BitmovinApiSdk\Models\CustomPlayerBuildDetails $customPlayerBuildDetails) : \BitmovinApiSdk\Models\CustomPlayerBuildDetails
     {
-        
-        $response = $this->httpWrapper->request('POST','/player/custom-builds/web', [],  null, $customPlayerBuildDetails, true);
+        $response = $this->httpWrapper->request('POST', '/player/custom-builds/web', [],  null, $customPlayerBuildDetails, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomPlayerBuildDetails::class);
     }
@@ -68,7 +67,8 @@ class WebApi
         $pathParams = [
             'custom_build_id' => $customBuildId,
         ];
-        $response = $this->httpWrapper->request('GET','/player/custom-builds/web/{custom_build_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/player/custom-builds/web/{custom_build_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomPlayerBuildStatus::class);
     }
@@ -81,8 +81,7 @@ class WebApi
      */
     public function list() : CustomPlayerBuildDetailsPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/player/custom-builds/web', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/player/custom-builds/web', [],  null, null, true);
 
         return ObjectMapper::map($response, CustomPlayerBuildDetailsPaginationResponse::class);
     }
@@ -99,7 +98,8 @@ class WebApi
         $pathParams = [
             'custom_build_id' => $customBuildId,
         ];
-        $response = $this->httpWrapper->request('POST','/player/custom-builds/web/{custom_build_id}/start', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/player/custom-builds/web/{custom_build_id}/start', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

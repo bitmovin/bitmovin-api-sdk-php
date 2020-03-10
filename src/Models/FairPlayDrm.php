@@ -19,7 +19,6 @@ class FairPlayDrm extends Drm
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

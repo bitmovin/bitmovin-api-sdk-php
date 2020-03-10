@@ -46,7 +46,6 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->chromaLocation = ObjectMapper::map($this->chromaLocation, ChromaLocation::class);
         $this->colorSpace = ObjectMapper::map($this->colorSpace, ColorSpace::class);
         $this->colorPrimaries = ObjectMapper::map($this->colorPrimaries, ColorPrimaries::class);

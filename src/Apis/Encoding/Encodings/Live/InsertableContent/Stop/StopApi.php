@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class StopApi
 {
     /** @var HttpWrapper */
@@ -30,7 +29,6 @@ class StopApi
      * Stops Currently Running Inserted Content
      *
      * @param string $encodingId
-     * @return \BitmovinApiSdk\Models\void
      * @throws BitmovinApiException
      */
     public function create(string $encodingId)
@@ -38,6 +36,7 @@ class StopApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/live/insertable-content/stop', $pathParams,  null, null, false);
+
+        $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/insertable-content/stop', $pathParams,  null, null, false);
     }
 }

@@ -19,7 +19,6 @@ class AnalyticsMaxConcurrentViewersResponse extends \BitmovinApiSdk\Common\ApiRe
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->columnLabels = ObjectMapper::map($this->columnLabels, AnalyticsColumnLabel::class);
     }
 

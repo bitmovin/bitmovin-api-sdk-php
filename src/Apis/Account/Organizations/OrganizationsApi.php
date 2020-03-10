@@ -45,8 +45,7 @@ class OrganizationsApi
      */
     public function create(\BitmovinApiSdk\Models\Organization $organization) : \BitmovinApiSdk\Models\Organization
     {
-        
-        $response = $this->httpWrapper->request('POST','/account/organizations', [],  null, $organization, true);
+        $response = $this->httpWrapper->request('POST', '/account/organizations', [],  null, $organization, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Organization::class);
     }
@@ -63,7 +62,8 @@ class OrganizationsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Organization::class);
     }
@@ -76,8 +76,7 @@ class OrganizationsApi
      */
     public function list() : OrganizationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/account/organizations', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/account/organizations', [],  null, null, true);
 
         return ObjectMapper::map($response, OrganizationPaginationResponse::class);
     }
@@ -95,7 +94,8 @@ class OrganizationsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('PUT','/account/organizations/{organization_id}', $pathParams,  null, $updateOrganizationRequest, true);
+
+        $response = $this->httpWrapper->request('PUT', '/account/organizations/{organization_id}', $pathParams,  null, $updateOrganizationRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Organization::class);
     }

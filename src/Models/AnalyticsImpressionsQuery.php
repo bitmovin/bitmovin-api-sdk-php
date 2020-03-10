@@ -16,7 +16,6 @@ class AnalyticsImpressionsQuery extends AnalyticsQueryTimeframe
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->filters = ObjectMapper::map($this->filters, AnalyticsAbstractFilter::class);
     }
 

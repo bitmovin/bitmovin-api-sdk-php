@@ -43,7 +43,6 @@ class Subtask extends BitmovinResponse
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->status = ObjectMapper::map($this->status, Status::class);
         $this->messages = ObjectMapper::map($this->messages, Message::class);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);

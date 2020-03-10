@@ -40,8 +40,7 @@ class AudioMixApi
      */
     public function create(\BitmovinApiSdk\Models\AudioMixFilter $audioMixFilter) : \BitmovinApiSdk\Models\AudioMixFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/audio-mix', [],  null, $audioMixFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/audio-mix', [],  null, $audioMixFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AudioMixFilter::class);
     }
@@ -58,7 +57,8 @@ class AudioMixApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/audio-mix/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/audio-mix/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class AudioMixApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/audio-mix/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/audio-mix/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AudioMixFilter::class);
     }
@@ -89,8 +90,7 @@ class AudioMixApi
      */
     public function list(AudioMixFilterListQueryParams $queryParams = null) : AudioMixFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/audio-mix', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/audio-mix', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AudioMixFilterPaginationResponse::class);
     }

@@ -25,7 +25,6 @@ class StreamPerTitleFixedResolutionAndBitrateSettings extends \BitmovinApiSdk\Co
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->bitrateSelectionMode = ObjectMapper::map($this->bitrateSelectionMode, BitrateSelectionMode::class);
     }
 

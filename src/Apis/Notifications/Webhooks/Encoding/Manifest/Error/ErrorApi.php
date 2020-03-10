@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ErrorApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class ErrorApi
      */
     public function create(\BitmovinApiSdk\Models\Webhook $webhook) : WebhookPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/notifications/webhooks/encoding/manifest/error', [],  null, $webhook, true);
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/manifest/error', [],  null, $webhook, true);
 
         return ObjectMapper::map($response, WebhookPaginationResponse::class);
     }
@@ -54,7 +52,8 @@ class ErrorApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/notifications/webhooks/encoding/manifest/{manifest_id}/error', $pathParams,  null, $webhook, true);
+
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/manifest/{manifest_id}/error', $pathParams,  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
@@ -72,7 +71,8 @@ class ErrorApi
         $pathParams = [
             'notification_id' => $notificationId,
         ];
-        $response = $this->httpWrapper->request('PUT','/notifications/webhooks/encoding/manifest/error/{notification_id}', $pathParams,  null, $webhook, true);
+
+        $response = $this->httpWrapper->request('PUT', '/notifications/webhooks/encoding/manifest/error/{notification_id}', $pathParams,  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }

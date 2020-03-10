@@ -13,7 +13,6 @@ class ConformFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

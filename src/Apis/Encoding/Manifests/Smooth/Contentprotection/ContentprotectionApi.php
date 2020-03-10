@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class ContentprotectionApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class ContentprotectionApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/smooth/{manifest_id}/contentprotection', $pathParams,  null, $smoothManifestContentProtection, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/smooth/{manifest_id}/contentprotection', $pathParams,  null, $smoothManifestContentProtection, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothManifestContentProtection::class);
     }
@@ -58,7 +58,8 @@ class ContentprotectionApi
             'manifest_id' => $manifestId,
             'protection_id' => $protectionId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/smooth/{manifest_id}/contentprotection/{protection_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/smooth/{manifest_id}/contentprotection/{protection_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class ContentprotectionApi
             'manifest_id' => $manifestId,
             'protection_id' => $protectionId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth/{manifest_id}/contentprotection/{protection_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}/contentprotection/{protection_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\SmoothManifestContentProtection::class);
     }
@@ -95,7 +97,8 @@ class ContentprotectionApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/smooth/{manifest_id}/contentprotection', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}/contentprotection', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SmoothManifestContentProtectionPaginationResponse::class);
     }

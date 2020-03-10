@@ -16,7 +16,6 @@ class PsnrQualityMetric extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->timeSpan = ObjectMapper::map($this->timeSpan, TimeSpan::class);
     }
 

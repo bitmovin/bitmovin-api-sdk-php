@@ -37,7 +37,6 @@ class Encoding extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, CloudRegion::class);
         $this->infrastructure = ObjectMapper::map($this->infrastructure, InfrastructureSettings::class);
         $this->selectedEncodingMode = ObjectMapper::map($this->selectedEncodingMode, EncodingMode::class);

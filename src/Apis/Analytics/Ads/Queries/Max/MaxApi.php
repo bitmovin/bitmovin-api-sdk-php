@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class MaxApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class MaxApi
      */
     public function create(\BitmovinApiSdk\Models\AdAnalyticsMaxQueryRequest $adAnalyticsMaxQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/ads/queries/max', [],  null, $adAnalyticsMaxQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/ads/queries/max', [],  null, $adAnalyticsMaxQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

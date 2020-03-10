@@ -50,8 +50,7 @@ class DashApi
      */
     public function create(\BitmovinApiSdk\Models\DashManifest $dashManifest) : \BitmovinApiSdk\Models\DashManifest
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash', [],  null, $dashManifest, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash', [],  null, $dashManifest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashManifest::class);
     }
@@ -68,7 +67,8 @@ class DashApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/dash/{manifest_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/dash/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -85,7 +85,8 @@ class DashApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashManifest::class);
     }
@@ -99,8 +100,7 @@ class DashApi
      */
     public function list(DashManifestListQueryParams $queryParams = null) : DashManifestPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, DashManifestPaginationResponse::class);
     }
@@ -117,7 +117,8 @@ class DashApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/start', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/start', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -134,7 +135,8 @@ class DashApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/dash/{manifest_id}/status', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/status', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Task::class);
     }
@@ -151,7 +153,8 @@ class DashApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/dash/{manifest_id}/stop', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/stop', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

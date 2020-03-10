@@ -16,7 +16,6 @@ class CustomPlayerBuildDownload extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->expiresAt = ObjectMapper::map($this->expiresAt, Carbon::class);
     }
 

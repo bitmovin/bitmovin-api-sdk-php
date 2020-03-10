@@ -40,8 +40,7 @@ class FtpApi
      */
     public function create(\BitmovinApiSdk\Models\FtpInput $ftpInput) : \BitmovinApiSdk\Models\FtpInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/ftp', [],  null, $ftpInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/ftp', [],  null, $ftpInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\FtpInput::class);
     }
@@ -58,7 +57,8 @@ class FtpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/ftp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/ftp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\FtpInput::class);
     }
@@ -75,7 +75,8 @@ class FtpApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/ftp/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/ftp/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\FtpInput::class);
     }
@@ -89,8 +90,7 @@ class FtpApi
      */
     public function list(FtpInputListQueryParams $queryParams = null) : FtpInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/ftp', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/ftp', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, FtpInputPaginationResponse::class);
     }

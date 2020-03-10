@@ -22,7 +22,6 @@ class ProgressiveTsMuxingInformationByteRanges extends \BitmovinApiSdk\Common\Ap
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

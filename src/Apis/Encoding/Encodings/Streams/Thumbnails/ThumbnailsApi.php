@@ -46,7 +46,8 @@ class ThumbnailsApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails', $pathParams,  null, $thumbnail, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails', $pathParams,  null, $thumbnail, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Thumbnail::class);
     }
@@ -67,7 +68,8 @@ class ThumbnailsApi
             'stream_id' => $streamId,
             'thumbnail_id' => $thumbnailId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails/{thumbnail_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails/{thumbnail_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class ThumbnailsApi
             'stream_id' => $streamId,
             'thumbnail_id' => $thumbnailId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails/{thumbnail_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails/{thumbnail_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Thumbnail::class);
     }
@@ -108,7 +111,8 @@ class ThumbnailsApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/thumbnails', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ThumbnailPaginationResponse::class);
     }

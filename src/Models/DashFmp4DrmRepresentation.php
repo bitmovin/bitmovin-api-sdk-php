@@ -13,7 +13,6 @@ class DashFmp4DrmRepresentation extends DashFmp4Representation
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

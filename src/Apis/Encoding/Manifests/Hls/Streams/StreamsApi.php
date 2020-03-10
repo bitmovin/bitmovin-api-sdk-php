@@ -49,7 +49,8 @@ class StreamsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/manifests/hls/{manifest_id}/streams', $pathParams,  null, $streamInfo, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/streams', $pathParams,  null, $streamInfo, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamInfo::class);
     }
@@ -68,7 +69,8 @@ class StreamsApi
             'manifest_id' => $manifestId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -87,7 +89,8 @@ class StreamsApi
             'manifest_id' => $manifestId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/streams/{stream_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/streams/{stream_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamInfo::class);
     }
@@ -105,7 +108,8 @@ class StreamsApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/manifests/hls/{manifest_id}/streams', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/streams', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, StreamInfoPaginationResponse::class);
     }

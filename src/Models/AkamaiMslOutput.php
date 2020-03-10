@@ -22,7 +22,6 @@ class AkamaiMslOutput extends Output
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->streamFormat = ObjectMapper::map($this->streamFormat, AkamaiMslStreamFormat::class);
         $this->mslVersion = ObjectMapper::map($this->mslVersion, AkamaiMslVersion::class);
     }

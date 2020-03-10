@@ -40,8 +40,7 @@ class Ac3Api
      */
     public function create(\BitmovinApiSdk\Models\Ac3AudioConfiguration $ac3AudioConfiguration) : \BitmovinApiSdk\Models\Ac3AudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/ac3', [],  null, $ac3AudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/ac3', [],  null, $ac3AudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Ac3AudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class Ac3Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/ac3/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/ac3/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class Ac3Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/ac3/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/ac3/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Ac3AudioConfiguration::class);
     }
@@ -89,8 +90,7 @@ class Ac3Api
      */
     public function list(Ac3AudioConfigurationListQueryParams $queryParams = null) : Ac3AudioConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/ac3', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/ac3', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, Ac3AudioConfigurationPaginationResponse::class);
     }

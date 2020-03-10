@@ -22,7 +22,6 @@ class EgressInformation extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->category = ObjectMapper::map($this->category, EgressCategory::class);
         $this->outputType = ObjectMapper::map($this->outputType, OutputType::class);
         $this->outputRegion = ObjectMapper::map($this->outputRegion, CloudRegion::class);

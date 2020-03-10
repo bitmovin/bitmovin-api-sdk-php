@@ -40,8 +40,7 @@ class HeAacV2Api
      */
     public function create(\BitmovinApiSdk\Models\HeAacV2AudioConfiguration $heAacV2AudioConfiguration) : \BitmovinApiSdk\Models\HeAacV2AudioConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/audio/he-aac-v2', [],  null, $heAacV2AudioConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/audio/he-aac-v2', [],  null, $heAacV2AudioConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HeAacV2AudioConfiguration::class);
     }
@@ -58,7 +57,8 @@ class HeAacV2Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/audio/he-aac-v2/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/audio/he-aac-v2/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class HeAacV2Api
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/he-aac-v2/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/he-aac-v2/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HeAacV2AudioConfiguration::class);
     }
@@ -89,8 +90,7 @@ class HeAacV2Api
      */
     public function list(HeAacV2AudioConfigurationListQueryParams $queryParams = null) : HeAacV2AudioConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/audio/he-aac-v2', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/he-aac-v2', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, HeAacV2AudioConfigurationPaginationResponse::class);
     }

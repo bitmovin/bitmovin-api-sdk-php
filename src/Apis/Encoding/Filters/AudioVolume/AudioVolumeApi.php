@@ -40,8 +40,7 @@ class AudioVolumeApi
      */
     public function create(\BitmovinApiSdk\Models\AudioVolumeFilter $audioVolumeFilter) : \BitmovinApiSdk\Models\AudioVolumeFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/audio-volume', [],  null, $audioVolumeFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/audio-volume', [],  null, $audioVolumeFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AudioVolumeFilter::class);
     }
@@ -58,7 +57,8 @@ class AudioVolumeApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/audio-volume/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/audio-volume/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class AudioVolumeApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/audio-volume/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/audio-volume/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AudioVolumeFilter::class);
     }
@@ -89,8 +90,7 @@ class AudioVolumeApi
      */
     public function list(AudioVolumeFilterListQueryParams $queryParams = null) : AudioVolumeFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/audio-volume', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/audio-volume', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AudioVolumeFilterPaginationResponse::class);
     }

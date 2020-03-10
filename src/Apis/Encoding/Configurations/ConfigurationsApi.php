@@ -55,8 +55,7 @@ class ConfigurationsApi
      */
     public function list(CodecConfigurationListQueryParams $queryParams = null) : CodecConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, CodecConfigurationPaginationResponse::class);
     }

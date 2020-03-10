@@ -28,7 +28,6 @@ class WatermarkFilter extends Filter
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->unit = ObjectMapper::map($this->unit, PositionUnit::class);
     }
 

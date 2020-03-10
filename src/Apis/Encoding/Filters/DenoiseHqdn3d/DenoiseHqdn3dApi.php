@@ -40,8 +40,7 @@ class DenoiseHqdn3dApi
      */
     public function create(\BitmovinApiSdk\Models\DenoiseHqdn3dFilter $denoiseHqdn3dFilter) : \BitmovinApiSdk\Models\DenoiseHqdn3dFilter
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/filters/denoise-hqdn3d', [],  null, $denoiseHqdn3dFilter, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/filters/denoise-hqdn3d', [],  null, $denoiseHqdn3dFilter, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DenoiseHqdn3dFilter::class);
     }
@@ -58,7 +57,8 @@ class DenoiseHqdn3dApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/filters/denoise-hqdn3d/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/filters/denoise-hqdn3d/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class DenoiseHqdn3dApi
         $pathParams = [
             'filter_id' => $filterId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/filters/denoise-hqdn3d/{filter_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/denoise-hqdn3d/{filter_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DenoiseHqdn3dFilter::class);
     }
@@ -89,8 +90,7 @@ class DenoiseHqdn3dApi
      */
     public function list(DenoiseHqdn3dFilterListQueryParams $queryParams = null) : DenoiseHqdn3dFilterPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/filters/denoise-hqdn3d', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/denoise-hqdn3d', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, DenoiseHqdn3dFilterPaginationResponse::class);
     }

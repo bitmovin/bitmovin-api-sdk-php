@@ -40,8 +40,7 @@ class LocalApi
      */
     public function create(\BitmovinApiSdk\Models\LocalOutput $localOutput) : \BitmovinApiSdk\Models\LocalOutput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/outputs/local', [],  null, $localOutput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/local', [],  null, $localOutput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LocalOutput::class);
     }
@@ -58,7 +57,8 @@ class LocalApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/outputs/local/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/outputs/local/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LocalOutput::class);
     }
@@ -75,7 +75,8 @@ class LocalApi
         $pathParams = [
             'output_id' => $outputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/local/{output_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/local/{output_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LocalOutput::class);
     }
@@ -89,8 +90,7 @@ class LocalApi
      */
     public function list(LocalOutputListQueryParams $queryParams = null) : LocalOutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs/local', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/local', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, LocalOutputPaginationResponse::class);
     }

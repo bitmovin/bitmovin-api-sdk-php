@@ -28,7 +28,6 @@ class Thumbnail extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
         $this->unit = ObjectMapper::map($this->unit, ThumbnailUnit::class);
     }

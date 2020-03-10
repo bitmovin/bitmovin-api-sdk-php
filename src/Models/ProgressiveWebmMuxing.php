@@ -19,7 +19,6 @@ class ProgressiveWebmMuxing extends Muxing
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->manifestType = ObjectMapper::map($this->manifestType, ProgressiveWebmMuxingManifestType::class);
     }
 

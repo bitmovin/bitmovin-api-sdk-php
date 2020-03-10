@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class PrewarmedDeploymentApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class PrewarmedDeploymentApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment', $pathParams,  null, $prewarmEncoderSettings, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment', $pathParams,  null, $prewarmEncoderSettings, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PrewarmEncoderSettings::class);
     }
@@ -58,7 +58,8 @@ class PrewarmedDeploymentApi
             'infrastructure_id' => $infrastructureId,
             'deployment_id' => $deploymentId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment/{deployment_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment/{deployment_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class PrewarmedDeploymentApi
             'infrastructure_id' => $infrastructureId,
             'deployment_id' => $deploymentId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment/{deployment_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment/{deployment_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\PrewarmEncoderSettings::class);
     }
@@ -95,7 +97,8 @@ class PrewarmedDeploymentApi
         $pathParams = [
             'infrastructure_id' => $infrastructureId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/kubernetes/{infrastructure_id}/prewarmed-deployment', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, PrewarmEncoderSettingsPaginationResponse::class);
     }

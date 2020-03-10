@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class AvgApi
 {
     /** @var HttpWrapper */
@@ -35,8 +34,7 @@ class AvgApi
      */
     public function create(\BitmovinApiSdk\Models\AdAnalyticsAvgQueryRequest $adAnalyticsAvgQueryRequest) : \BitmovinApiSdk\Models\AnalyticsResponse
     {
-        
-        $response = $this->httpWrapper->request('POST','/analytics/ads/queries/avg', [],  null, $adAnalyticsAvgQueryRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/ads/queries/avg', [],  null, $adAnalyticsAvgQueryRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsResponse::class);
     }

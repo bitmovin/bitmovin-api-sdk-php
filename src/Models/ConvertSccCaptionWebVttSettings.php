@@ -19,7 +19,6 @@ class ConvertSccCaptionWebVttSettings extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->positionMode = ObjectMapper::map($this->positionMode, ConvertSccPositionMode::class);
     }
 

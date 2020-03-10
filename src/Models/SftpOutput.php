@@ -31,7 +31,6 @@ class SftpOutput extends Output
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->transferVersion = ObjectMapper::map($this->transferVersion, TransferVersion::class);
     }
 

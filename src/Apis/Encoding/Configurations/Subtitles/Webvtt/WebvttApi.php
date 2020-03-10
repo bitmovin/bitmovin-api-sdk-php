@@ -40,8 +40,7 @@ class WebvttApi
      */
     public function create(\BitmovinApiSdk\Models\WebVttConfiguration $webVttConfiguration) : \BitmovinApiSdk\Models\WebVttConfiguration
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/configurations/subtitles/webvtt/', [],  null, $webVttConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/subtitles/webvtt/', [],  null, $webVttConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WebVttConfiguration::class);
     }
@@ -58,7 +57,8 @@ class WebvttApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/configurations/subtitles/webvtt/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/configurations/subtitles/webvtt/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -75,7 +75,8 @@ class WebvttApi
         $pathParams = [
             'configuration_id' => $configurationId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/subtitles/webvtt/{configuration_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/subtitles/webvtt/{configuration_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WebVttConfiguration::class);
     }
@@ -89,8 +90,7 @@ class WebvttApi
      */
     public function list(WebVttConfigurationListQueryParams $queryParams = null) : WebVttConfigurationPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/configurations/subtitles/webvtt/', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/subtitles/webvtt/', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, WebVttConfigurationPaginationResponse::class);
     }

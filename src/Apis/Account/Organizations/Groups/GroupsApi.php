@@ -54,7 +54,8 @@ class GroupsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('POST','/account/organizations/{organization_id}/groups', $pathParams,  null, $group, true);
+
+        $response = $this->httpWrapper->request('POST', '/account/organizations/{organization_id}/groups', $pathParams,  null, $group, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Group::class);
     }
@@ -73,7 +74,8 @@ class GroupsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/account/organizations/{organization_id}/groups/{group_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/account/organizations/{organization_id}/groups/{group_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -92,7 +94,8 @@ class GroupsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/groups/{group_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Group::class);
     }
@@ -109,7 +112,8 @@ class GroupsApi
         $pathParams = [
             'organization_id' => $organizationId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/groups', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, GroupPaginationResponse::class);
     }

@@ -19,7 +19,6 @@ class BroadcastTsMuxing extends Muxing
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->configuration = ObjectMapper::map($this->configuration, BroadcastTsMuxingConfiguration::class);
     }
 

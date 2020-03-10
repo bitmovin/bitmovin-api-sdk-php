@@ -40,8 +40,7 @@ class ZixiApi
      */
     public function create(\BitmovinApiSdk\Models\ZixiInput $zixiInput) : \BitmovinApiSdk\Models\ZixiInput
     {
-        
-        $response = $this->httpWrapper->request('POST','/encoding/inputs/zixi', [],  null, $zixiInput, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/inputs/zixi', [],  null, $zixiInput, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ZixiInput::class);
     }
@@ -58,7 +57,8 @@ class ZixiApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/inputs/zixi/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/inputs/zixi/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ZixiInput::class);
     }
@@ -75,7 +75,8 @@ class ZixiApi
         $pathParams = [
             'input_id' => $inputId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/zixi/{input_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/zixi/{input_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ZixiInput::class);
     }
@@ -89,8 +90,7 @@ class ZixiApi
      */
     public function list(ZixiInputListQueryParams $queryParams = null) : ZixiInputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/inputs/zixi', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/zixi', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, ZixiInputPaginationResponse::class);
     }

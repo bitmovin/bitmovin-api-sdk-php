@@ -16,7 +16,6 @@ class AudioMixInputStream extends InputStream
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->channelLayout = ObjectMapper::map($this->channelLayout, AudioMixInputChannelLayout::class);
         $this->audioMixChannels = ObjectMapper::map($this->audioMixChannels, AudioMixInputStreamChannel::class);
     }

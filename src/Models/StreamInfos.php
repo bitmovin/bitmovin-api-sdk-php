@@ -16,7 +16,6 @@ class StreamInfos extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->time = ObjectMapper::map($this->time, Carbon::class);
         $this->streamInfos = ObjectMapper::map($this->streamInfos, StreamInfosDetails::class);
     }

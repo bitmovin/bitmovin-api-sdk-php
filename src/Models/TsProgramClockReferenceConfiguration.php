@@ -16,7 +16,6 @@ class TsProgramClockReferenceConfiguration extends \BitmovinApiSdk\Common\ApiRes
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class KeyframesApi
 {
     /** @var HttpWrapper */
@@ -39,7 +38,8 @@ class KeyframesApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/keyframes', $pathParams,  null, $keyframe, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/keyframes', $pathParams,  null, $keyframe, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Keyframe::class);
     }
@@ -58,7 +58,8 @@ class KeyframesApi
             'encoding_id' => $encodingId,
             'keyframe_id' => $keyframeId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/keyframes/{keyframe_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/keyframes/{keyframe_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -77,7 +78,8 @@ class KeyframesApi
             'encoding_id' => $encodingId,
             'keyframe_id' => $keyframeId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/keyframes/{keyframe_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/keyframes/{keyframe_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Keyframe::class);
     }
@@ -95,7 +97,8 @@ class KeyframesApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/keyframes', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/keyframes', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, KeyframePaginationResponse::class);
     }

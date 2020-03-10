@@ -43,7 +43,8 @@ class LiveApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/live', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/live', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveEncoding::class);
     }
@@ -60,7 +61,8 @@ class LiveApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/live/start', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/live/start', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StartLiveEncodingRequest::class);
     }
@@ -77,7 +79,8 @@ class LiveApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/live/restart', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/restart', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -95,7 +98,8 @@ class LiveApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/live/start', $pathParams,  null, $startLiveEncodingRequest, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/start', $pathParams,  null, $startLiveEncodingRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -112,7 +116,8 @@ class LiveApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/live/stop', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/stop', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

@@ -95,8 +95,7 @@ class OutputsApi
      */
     public function list(OutputListQueryParams $queryParams = null) : OutputPaginationResponse
     {
-        
-        $response = $this->httpWrapper->request('GET','/encoding/outputs', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, OutputPaginationResponse::class);
     }

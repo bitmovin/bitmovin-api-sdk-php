@@ -13,7 +13,6 @@ class MediaInfoTypeResponse extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->type = ObjectMapper::map($this->type, MediaInfoType::class);
     }
 

@@ -40,7 +40,6 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->trimming = ObjectMapper::map($this->trimming, Trimming::class);
         $this->scheduling = ObjectMapper::map($this->scheduling, Scheduling::class);
         $this->tweaks = ObjectMapper::map($this->tweaks, Tweaks::class);

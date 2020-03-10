@@ -16,7 +16,6 @@ class HlsManifestDefault extends HlsManifest
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->version = ObjectMapper::map($this->version, HlsManifestDefaultVersion::class);
     }
 

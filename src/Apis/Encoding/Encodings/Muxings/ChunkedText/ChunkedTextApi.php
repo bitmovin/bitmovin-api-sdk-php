@@ -44,7 +44,8 @@ class ChunkedTextApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/muxings/chunked-text', $pathParams,  null, $chunkedTextMuxing, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/muxings/chunked-text', $pathParams,  null, $chunkedTextMuxing, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ChunkedTextMuxing::class);
     }
@@ -63,7 +64,8 @@ class ChunkedTextApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/muxings/chunked-text/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/muxings/chunked-text/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -82,7 +84,8 @@ class ChunkedTextApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/chunked-text/{muxing_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/chunked-text/{muxing_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\ChunkedTextMuxing::class);
     }
@@ -100,7 +103,8 @@ class ChunkedTextApi
         $pathParams = [
             'encoding_id' => $encodingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/chunked-text', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/chunked-text', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, ChunkedTextMuxingPaginationResponse::class);
     }

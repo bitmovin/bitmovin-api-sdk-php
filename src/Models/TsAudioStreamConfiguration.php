@@ -10,7 +10,6 @@ class TsAudioStreamConfiguration extends TsStreamConfiguration
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 }
 

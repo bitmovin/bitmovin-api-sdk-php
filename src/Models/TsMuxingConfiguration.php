@@ -25,7 +25,6 @@ class TsMuxingConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
         $this->pmt = ObjectMapper::map($this->pmt, TsProgramMapTableConfiguration::class);
         $this->pcr = ObjectMapper::map($this->pcr, TsProgramClockReferenceConfiguration::class);
         $this->videoStreams = ObjectMapper::map($this->videoStreams, TsVideoStreamConfiguration::class);

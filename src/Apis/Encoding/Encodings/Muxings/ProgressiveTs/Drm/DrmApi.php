@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveTs\Drm\Fairplay\FairplayApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveTs\Drm\Aes\AesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveTs\Drm\Speke\SpekeApi;
 
 class DrmApi
@@ -18,6 +19,9 @@ class DrmApi
 
     /** @var FairplayApi */
     public $fairplay;
+
+    /** @var AesApi */
+    public $aes;
 
     /** @var SpekeApi */
     public $speke;
@@ -33,6 +37,7 @@ class DrmApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->fairplay = new FairplayApi(null, $this->httpWrapper);
+        $this->aes = new AesApi(null, $this->httpWrapper);
         $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
 
@@ -50,7 +55,8 @@ class DrmApi
             'encoding_id' => $encodingId,
             'muxing_id' => $muxingId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/drm', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/drm', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, DrmPaginationResponse::class);
     }

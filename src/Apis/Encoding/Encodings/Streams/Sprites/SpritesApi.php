@@ -46,7 +46,8 @@ class SpritesApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('POST','/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites', $pathParams,  null, $sprite, true);
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites', $pathParams,  null, $sprite, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Sprite::class);
     }
@@ -67,7 +68,8 @@ class SpritesApi
             'stream_id' => $streamId,
             'sprite_id' => $spriteId,
         ];
-        $response = $this->httpWrapper->request('DELETE','/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites/{sprite_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites/{sprite_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
@@ -88,7 +90,8 @@ class SpritesApi
             'stream_id' => $streamId,
             'sprite_id' => $spriteId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites/{sprite_id}', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites/{sprite_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Sprite::class);
     }
@@ -108,7 +111,8 @@ class SpritesApi
             'encoding_id' => $encodingId,
             'stream_id' => $streamId,
         ];
-        $response = $this->httpWrapper->request('GET','/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/sprites', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, SpritePaginationResponse::class);
     }

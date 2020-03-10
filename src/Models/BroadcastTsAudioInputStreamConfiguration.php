@@ -16,7 +16,6 @@ class BroadcastTsAudioInputStreamConfiguration extends BroadcastTsInputStreamCon
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        
     }
 
     /**

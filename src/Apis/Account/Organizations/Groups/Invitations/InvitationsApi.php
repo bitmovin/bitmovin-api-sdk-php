@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-
 class InvitationsApi
 {
     /** @var HttpWrapper */
@@ -41,7 +40,8 @@ class InvitationsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('POST','/account/organizations/{organization_id}/groups/{group_id}/invitations', $pathParams,  null, $invitation, true);
+
+        $response = $this->httpWrapper->request('POST', '/account/organizations/{organization_id}/groups/{group_id}/invitations', $pathParams,  null, $invitation, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Invitation::class);
     }
@@ -60,7 +60,8 @@ class InvitationsApi
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
-        $response = $this->httpWrapper->request('GET','/account/organizations/{organization_id}/groups/{group_id}/invitations', $pathParams,  null, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}/invitations', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, InvitationPaginationResponse::class);
     }

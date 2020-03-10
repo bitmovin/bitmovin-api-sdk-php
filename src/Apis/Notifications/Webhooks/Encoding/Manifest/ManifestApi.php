@@ -49,7 +49,8 @@ class ManifestApi
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
-        $response = $this->httpWrapper->request('GET','/notifications/webhooks/encoding/manifest/{manifest_id}', $pathParams, $queryParams, null, true);
+
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/manifest/{manifest_id}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, NotificationPaginationResponse::class);
     }
