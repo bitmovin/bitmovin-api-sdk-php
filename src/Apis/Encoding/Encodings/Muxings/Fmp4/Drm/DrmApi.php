@@ -15,6 +15,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Fairplay\FairplayApi
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Marlin\MarlinApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Clearkey\ClearkeyApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Cenc\CencApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Aes\AesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Speke\SpekeApi;
 
 class DrmApi
@@ -43,6 +44,9 @@ class DrmApi
     /** @var CencApi */
     public $cenc;
 
+    /** @var AesApi */
+    public $aes;
+
     /** @var SpekeApi */
     public $speke;
 
@@ -63,6 +67,7 @@ class DrmApi
         $this->marlin = new MarlinApi(null, $this->httpWrapper);
         $this->clearkey = new ClearkeyApi(null, $this->httpWrapper);
         $this->cenc = new CencApi(null, $this->httpWrapper);
+        $this->aes = new AesApi(null, $this->httpWrapper);
         $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
 
