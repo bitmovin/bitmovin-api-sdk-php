@@ -29,14 +29,14 @@ class ErrorApi
      * Add Manifest Error Webhook (All Manifests)
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
-     * @return WebhookPaginationResponse
+     * @return \BitmovinApiSdk\Models\Webhook
      * @throws BitmovinApiException
      */
-    public function create(\BitmovinApiSdk\Models\Webhook $webhook) : WebhookPaginationResponse
+    public function create(\BitmovinApiSdk\Models\Webhook $webhook) : \BitmovinApiSdk\Models\Webhook
     {
         $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/manifest/error', [],  null, $webhook, true);
 
-        return ObjectMapper::map($response, WebhookPaginationResponse::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
     }
 
     /**
@@ -56,6 +56,24 @@ class ErrorApi
         $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/manifest/{manifest_id}/error', $pathParams,  null, $webhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Webhook::class);
+    }
+
+    /**
+     * Delete Manifest Error Webhook
+     *
+     * @param string $notificationId
+     * @return \BitmovinApiSdk\Models\BitmovinResponse
+     * @throws BitmovinApiException
+     */
+    public function delete(string $notificationId) : \BitmovinApiSdk\Models\BitmovinResponse
+    {
+        $pathParams = [
+            'notification_id' => $notificationId,
+        ];
+
+        $response = $this->httpWrapper->request('DELETE', '/notifications/webhooks/encoding/manifest/error/{notification_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
 
     /**

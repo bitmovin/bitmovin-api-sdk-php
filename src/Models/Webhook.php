@@ -22,6 +22,9 @@ class Webhook extends BitmovinResource
     /** @var WebhookSignature */
     public $signature;
 
+    /** @var object */
+    public $schema;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -91,6 +94,19 @@ class Webhook extends BitmovinResource
     public function signature(WebhookSignature $signature)
     {
         $this->signature = $signature;
+
+        return $this;
+    }
+
+    /**
+     * The json schema of the data that is send as webhook payload
+     *
+     * @param object $schema
+     * @return $this
+     */
+    public function schema(object $schema)
+    {
+        $this->schema = $schema;
 
         return $this;
     }

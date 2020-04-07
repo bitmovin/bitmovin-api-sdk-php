@@ -31,5 +31,18 @@ class WebhookSignature extends \BitmovinApiSdk\Common\ApiResource
 
         return $this;
     }
+
+    /**
+     * The key of the signature (required)
+     *
+     * @param string $key
+     * @return $this
+     */
+    public function key(string $key)
+    {
+        $this->key = $key;
+
+        return $this;
+    }
 }
 

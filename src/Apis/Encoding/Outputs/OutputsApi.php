@@ -14,6 +14,7 @@ use BitmovinApiSdk\Apis\Encoding\Outputs\S3RoleBased\S3RoleBasedApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\GenericS3\GenericS3Api;
 use BitmovinApiSdk\Apis\Encoding\Outputs\Local\LocalApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\Gcs\GcsApi;
+use BitmovinApiSdk\Apis\Encoding\Outputs\GcsServiceAccount\GcsServiceAccountApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\Ftp\FtpApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\Sftp\SftpApi;
@@ -43,6 +44,9 @@ class OutputsApi
 
     /** @var GcsApi */
     public $gcs;
+
+    /** @var GcsServiceAccountApi */
+    public $gcsServiceAccount;
 
     /** @var AzureApi */
     public $azure;
@@ -78,6 +82,7 @@ class OutputsApi
         $this->genericS3 = new GenericS3Api(null, $this->httpWrapper);
         $this->local = new LocalApi(null, $this->httpWrapper);
         $this->gcs = new GcsApi(null, $this->httpWrapper);
+        $this->gcsServiceAccount = new GcsServiceAccountApi(null, $this->httpWrapper);
         $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->ftp = new FtpApi(null, $this->httpWrapper);
         $this->sftp = new SftpApi(null, $this->httpWrapper);

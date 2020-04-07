@@ -22,6 +22,7 @@ class Output extends BitmovinResource
         "SFTP" => SftpOutput::class,
         "AKAMAI_MSL" => AkamaiMslOutput::class,
         "LIVE_MEDIA_INGEST" => LiveMediaIngestOutput::class,
+        "GCS_SERVICE_ACCOUNT" => GcsServiceAccountOutput::class,
     ];
 
     public function __construct($attributes = null)

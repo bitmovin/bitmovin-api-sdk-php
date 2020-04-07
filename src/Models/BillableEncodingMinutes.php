@@ -19,6 +19,9 @@ class BillableEncodingMinutes extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\PsnrPerStreamMode */
     public $psnrMode;
 
+    /** @var string */
+    public $preset;
+
     /** @var \BitmovinApiSdk\Models\BillableEncodingMinutesDetails */
     public $billableMinutes;
 

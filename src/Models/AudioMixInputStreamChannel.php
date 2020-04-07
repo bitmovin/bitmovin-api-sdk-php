@@ -16,10 +16,14 @@ class AudioMixInputStreamChannel extends \BitmovinApiSdk\Common\ApiResource
     /** @var int */
     public $outputChannelNumber;
 
+    /** @var \BitmovinApiSdk\Models\AudioMixInputStreamSourceChannel[] */
+    public $sourceChannels;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->outputChannelType = ObjectMapper::map($this->outputChannelType, AudioMixChannelType::class);
+        $this->sourceChannels = ObjectMapper::map($this->sourceChannels, AudioMixInputStreamSourceChannel::class);
     }
 
     /**
@@ -57,6 +61,19 @@ class AudioMixInputStreamChannel extends \BitmovinApiSdk\Common\ApiResource
     public function outputChannelNumber(int $outputChannelNumber)
     {
         $this->outputChannelNumber = $outputChannelNumber;
+
+        return $this;
+    }
+
+    /**
+     * List of source channels to be mixed
+     *
+     * @param \BitmovinApiSdk\Models\AudioMixInputStreamSourceChannel[] $sourceChannels
+     * @return $this
+     */
+    public function sourceChannels(array $sourceChannels)
+    {
+        $this->sourceChannels = $sourceChannels;
 
         return $this;
     }

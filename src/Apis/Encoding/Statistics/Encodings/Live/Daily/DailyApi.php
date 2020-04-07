@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Live;
+namespace BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Live\Daily;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -8,18 +8,13 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Live\Daily\DailyApi;
-
-class LiveApi
+class DailyApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
 
-    /** @var DailyApi */
-    public $daily;
-
     /**
-     * LiveApi constructor.
+     * DailyApi constructor.
      *
      * @param Configuration $config
      * @param HttpWrapper $httpWrapper
@@ -28,25 +23,10 @@ class LiveApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
-        $this->daily = new DailyApi(null, $this->httpWrapper);
     }
 
     /**
-     * List Live Encoding Statistics
-     *
-     * @param EncodingStatisticsLiveListQueryParams|null $queryParams
-     * @return EncodingStatisticsLivePaginationResponse
-     * @throws BitmovinApiException
-     */
-    public function list(EncodingStatisticsLiveListQueryParams $queryParams = null) : EncodingStatisticsLivePaginationResponse
-    {
-        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/live', [], $queryParams, null, true);
-
-        return ObjectMapper::map($response, EncodingStatisticsLivePaginationResponse::class);
-    }
-
-    /**
-     * List live encoding statistics within specific dates
+     * List daily live encoding statistics within specific dates
      *
      * @param Carbon $from
      * @param Carbon $to
@@ -61,7 +41,7 @@ class LiveApi
             'to' => $to->format('Y-m-d'),
         ];
 
-        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/live/{from}/{to}', $pathParams, $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/live/daily/{from}/{to}', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, EncodingStatisticsLivePaginationResponse::class);
     }

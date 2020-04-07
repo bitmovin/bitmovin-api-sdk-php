@@ -37,6 +37,9 @@ class OutputType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const LIVE_MEDIA_INGEST = 'LIVE_MEDIA_INGEST';
 
+    /** @var string */
+    private const GCS_SERVICE_ACCOUNT = 'GCS_SERVICE_ACCOUNT';
+
     /**
      * @param string $value
      * @return OutputType
@@ -154,6 +157,16 @@ class OutputType extends \BitmovinApiSdk\Common\Enum
     public static function LIVE_MEDIA_INGEST()
     {
         return new OutputType(self::LIVE_MEDIA_INGEST);
+    }
+
+    /**
+     * GCS_SERVICE_ACCOUNT
+     *
+     * @return OutputType
+     */
+    public static function GCS_SERVICE_ACCOUNT()
+    {
+        return new OutputType(self::GCS_SERVICE_ACCOUNT);
     }
 }
 

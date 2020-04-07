@@ -61,6 +61,9 @@ class InputType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const SRT = 'SRT';
 
+    /** @var string */
+    private const GCS_SERVICE_ACCOUNT = 'GCS_SERVICE_ACCOUNT';
+
     /**
      * @param string $value
      * @return InputType
@@ -258,6 +261,16 @@ class InputType extends \BitmovinApiSdk\Common\Enum
     public static function SRT()
     {
         return new InputType(self::SRT);
+    }
+
+    /**
+     * GCS_SERVICE_ACCOUNT
+     *
+     * @return InputType
+     */
+    public static function GCS_SERVICE_ACCOUNT()
+    {
+        return new InputType(self::GCS_SERVICE_ACCOUNT);
     }
 }
 

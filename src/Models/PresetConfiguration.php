@@ -29,6 +29,9 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     private const VOD_HIGH_QUALITY = 'VOD_HIGH_QUALITY';
 
     /** @var string */
+    private const VOD_QUALITY = 'VOD_QUALITY';
+
+    /** @var string */
     private const VOD_HIGH_SPEED = 'VOD_HIGH_SPEED';
 
     /** @var string */
@@ -136,6 +139,16 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     public static function VOD_HIGH_QUALITY()
     {
         return new PresetConfiguration(self::VOD_HIGH_QUALITY);
+    }
+
+    /**
+     * VOD_QUALITY
+     *
+     * @return PresetConfiguration
+     */
+    public static function VOD_QUALITY()
+    {
+        return new PresetConfiguration(self::VOD_QUALITY);
     }
 
     /**

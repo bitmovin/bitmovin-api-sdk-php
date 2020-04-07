@@ -46,7 +46,7 @@ class ErrorApi
     }
 
     /**
-     * Add Encoding Error Webhook for specific Encoding Resource
+     * Add Encoding Error Webhook for specific Encoding Resource. **Note:** A maximum number of 5 webhooks is allowed
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Webhook $webhook

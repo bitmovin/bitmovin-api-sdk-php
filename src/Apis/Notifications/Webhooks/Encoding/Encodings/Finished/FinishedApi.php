@@ -46,7 +46,7 @@ class FinishedApi
     }
 
     /**
-     * Add Encoding Finished Webhook for specific Encoding Resource
+     * Add Encoding Finished Webhook for specific Encoding Resource.
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Webhook $webhook

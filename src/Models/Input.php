@@ -27,6 +27,7 @@ class Input extends BitmovinResource
         "UDP_MULTICAST" => UdpMulticastInput::class,
         "ZIXI" => ZixiInput::class,
         "SRT" => SrtInput::class,
+        "GCS_SERVICE_ACCOUNT" => GcsServiceAccountInput::class,
     ];
 
     public function __construct($attributes = null)
