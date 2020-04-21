@@ -7,6 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class Input extends BitmovinResource
 {
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "AKAMAI_NETSTORAGE" => AkamaiNetStorageInput::class,
         "ASPERA" => AsperaInput::class,

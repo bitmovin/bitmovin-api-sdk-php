@@ -35,4 +35,24 @@ class DrmApi
         $this->cenc = new CencApi(null, $this->httpWrapper);
         $this->speke = new SpekeApi(null, $this->httpWrapper);
     }
+
+    /**
+     * List all DRMs of Progressive WEBM muxing
+     *
+     * @param string $encodingId
+     * @param string $muxingId
+     * @return DrmPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list(string $encodingId, string $muxingId) : DrmPaginationResponse
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+            'muxing_id' => $muxingId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/progressive-webm/{muxing_id}/drm', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, DrmPaginationResponse::class);
+    }
 }

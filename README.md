@@ -32,7 +32,7 @@ To install the API client with composer, add the following to your composer.json
 {
 "require":
   {
-    "bitmovin/bitmovin-api-sdk-php": "1.38.0-ALPHA0"
+    "bitmovin/bitmovin-api-sdk-php": "1.39.0"
   }
 }
 ```
@@ -41,7 +41,7 @@ Then run `php composer.phar install`
 
 OR
 
-run the following command: `php composer.phar require bitmovin/bitmovin-api-sdk-php:1.38.0-ALPHA0`
+run the following command: `php composer.phar require bitmovin/bitmovin-api-sdk-php:1.39.0`
 
 ## Initialization
 
@@ -51,3 +51,12 @@ use BitmovinApiSdk\Configuration;
 
 $bitmovinApi = new BitmovinApi(Configuration::create()->apiKey($apiKey));
 ```
+
+## Examples
+You can find sample workflow scripts in the [Bitmovin API SDK examples](https://github.com/bitmovin/bitmovin-api-sdk-examples) repository.
+
+# Previous API Client (Legacy)
+
+`bitmovin-api-sdk-php` is the latest Bitmovin API client for PHP. It guarantees 100% specification conformity at any given time and access to all features of the API as soon as they are released. 
+
+However, if you need to use the previous version for legacy reasons, you can still find it at [bitmovin-php](https://github.com/bitmovin/bitmovin-php).

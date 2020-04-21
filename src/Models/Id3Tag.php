@@ -16,6 +16,7 @@ class Id3Tag extends BitmovinResource
     /** @var float */
     public $time;
 
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "RAW" => RawId3Tag::class,
         "FRAME_ID" => FrameIdId3Tag::class,

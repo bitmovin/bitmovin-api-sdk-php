@@ -2,14 +2,15 @@
 
 namespace BitmovinApiSdk\Models;
 
-use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class BitmovinResponseList extends array<BitmovinResponse>
+class BitmovinResponseList
 {
-    public function __construct($attributes = null)
+    /** @var BitmovinResponse[] */
+    public $items;
+
+    public function __construct($items = null)
     {
-        parent::__construct($attributes);
+        $this->items = ObjectMapper::map($items, BitmovinResponse::class);
     }
 }
-

@@ -7,6 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class Filter extends BitmovinResource
 {
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "CROP" => CropFilter::class,
         "CONFORM" => ConformFilter::class,

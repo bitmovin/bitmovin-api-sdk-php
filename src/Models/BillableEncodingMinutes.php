@@ -22,6 +22,9 @@ class BillableEncodingMinutes extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $preset;
 
+    /** @var bool */
+    public $live;
+
     /** @var \BitmovinApiSdk\Models\BillableEncodingMinutesDetails */
     public $billableMinutes;
 

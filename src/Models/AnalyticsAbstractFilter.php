@@ -10,6 +10,7 @@ class AnalyticsAbstractFilter extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\AnalyticsAttribute */
     public $name;
 
+    public static $discriminatorName = "operator";
     public static $discriminatorMapping = [
         "IN" => AnalyticsInFilter::class,
         "EQ" => AnalyticsEqualFilter::class,

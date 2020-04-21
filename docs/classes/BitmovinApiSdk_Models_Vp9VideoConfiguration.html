@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - BitmovinApiSdk\Models\Vp9VideoConfiguration</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
+          </li>
+          <li class="separator">Vp9VideoConfiguration</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>Vp9VideoConfiguration</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Vp9VideoConfiguration
+                extends <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">VideoConfiguration</a>
+            {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\PresetConfiguration">PresetConfiguration</span> <a href="#members">$presetConfiguration</a>;
+                    </li><li>public int <a href="#members">$crf</a>;
+                    </li><li>public int <a href="#members">$lagInFrames</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$errorResiliencyEnabled</a>;
+                    </li><li>public int <a href="#members">$tileColumns</a>;
+                    </li><li>public int <a href="#members">$tileRows</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$frameParallel</a>;
+                    </li><li>public int <a href="#members">$maxIntraRate</a>;
+                    </li><li>public int <a href="#members">$qpMin</a>;
+                    </li><li>public int <a href="#members">$qpMax</a>;
+                    </li><li>public int <a href="#members">$rateUndershootPct</a>;
+                    </li><li>public int <a href="#members">$rateOvershootPct</a>;
+                    </li><li>public int <a href="#members">$clientBufferSize</a>;
+                    </li><li>public int <a href="#members">$clientInitialBufferSize</a>;
+                    </li><li>public int <a href="#members">$biasPct</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$noiseSensitivity</a>;
+                    </li><li>public int <a href="#members">$cpuUsed</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$automaticAltRefFramesEnabled</a>;
+                    </li><li>public int <a href="#members">$targetLevel</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$rowMultiThreadingEnabled</a>;
+                    </li><li>public int <a href="#members">$sharpness</a>;
+                    </li><li>public int <a href="#members">$minGop</a>;
+                    </li><li>public int <a href="#members">$maxGop</a>;
+                    </li><li>public float <a href="#members">$minKeyframeInterval</a>;
+                    </li><li>public float <a href="#members">$maxKeyframeInterval</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\Vp9Quality">Vp9Quality</span> <a href="#members">$quality</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$lossless</a>;
+                    </li><li>public int <a href="#members">$staticThresh</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\Vp9AqMode">Vp9AqMode</span> <a href="#members">$aqMode</a>;
+                    </li><li>public int <a href="#members">$arnrMaxFrames</a>;
+                    </li><li>public int <a href="#members">$arnrStrength</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\Vp9ArnrType">Vp9ArnrType</span> <a href="#members">$arnrType</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\VideoConfiguration">VideoConfiguration</span></li><li>public int <a href="#members">$width</a>;
+                        </li><li>public int <a href="#members">$height</a>;
+                        </li><li>public int <a href="#members">$bitrate</a>;
+                        </li><li>public float <a href="#members">$rate</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\PixelFormat">PixelFormat</span> <a href="#members">$pixelFormat</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\ColorConfig">ColorConfig</span> <a href="#members">$colorConfig</a>;
+                        </li><li>public int <a href="#members">$sampleAspectRatioNumerator</a>;
+                        </li><li>public int <a href="#members">$sampleAspectRatioDenominator</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\EncodingMode">EncodingMode</span> <a href="#members">$encodingMode</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public static string <a href="#members">$discriminatorName</a>;
+                        </li><li>public static array <a href="#members">$discriminatorMapping</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
+                        </li><li>public string <a href="#members">$description</a>;
+                        </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
+                        </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$modifiedAt</a>;
+                        </li><li>public mixed <a href="#members">$customData</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/presetConfiguration.html">presetConfiguration</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/crf.html">crf</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/lagInFrames.html">lagInFrames</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/errorResiliencyEnabled.html">errorResiliencyEnabled</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/tileColumns.html">tileColumns</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/tileRows.html">tileRows</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/frameParallel.html">frameParallel</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/maxIntraRate.html">maxIntraRate</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/qpMin.html">qpMin</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/qpMax.html">qpMax</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/rateUndershootPct.html">rateUndershootPct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/rateOvershootPct.html">rateOvershootPct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/clientBufferSize.html">clientBufferSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/clientInitialBufferSize.html">clientInitialBufferSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/biasPct.html">biasPct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/noiseSensitivity.html">noiseSensitivity</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/cpuUsed.html">cpuUsed</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/automaticAltRefFramesEnabled.html">automaticAltRefFramesEnabled</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/targetLevel.html">targetLevel</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/rowMultiThreadingEnabled.html">rowMultiThreadingEnabled</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/sharpness.html">sharpness</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/minGop.html">minGop</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/maxGop.html">maxGop</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/minKeyframeInterval.html">minKeyframeInterval</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/maxKeyframeInterval.html">maxKeyframeInterval</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/quality.html">quality</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/lossless.html">lossless</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/staticThresh.html">staticThresh</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/aqMode.html">aqMode</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/arnrMaxFrames.html">arnrMaxFrames</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/arnrStrength.html">arnrStrength</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/arnrType.html">arnrType</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\VideoConfiguration">VideoConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/__construct.html">__construct</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/width.html">width</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/height.html">height</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/bitrate.html">bitrate</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/rate.html">rate</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/pixelFormat.html">pixelFormat</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/colorConfig.html">colorConfig</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioNumerator.html">sampleAspectRatioNumerator</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioDenominator.html">sampleAspectRatioDenominator</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/encodingMode.html">encodingMode</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\CodecConfiguration" href="../classes/BitmovinApiSdk_Models_CodecConfiguration/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/customData.html">customData</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
+                        </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
+                        </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">BitmovinApiSdk\Models\VideoConfiguration</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="aqMode"><strong>$aqMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\Vp9AqMode" href="../classes/BitmovinApiSdk_Models_Vp9AqMode.html">BitmovinApiSdk\Models\Vp9AqMode</a></li>
+            <li id="arnrMaxFrames"><strong>$arnrMaxFrames</strong>
+                —
+                int</li>
+            <li id="arnrStrength"><strong>$arnrStrength</strong>
+                —
+                int</li>
+            <li id="arnrType"><strong>$arnrType</strong>
+                —
+                <a title="BitmovinApiSdk\Models\Vp9ArnrType" href="../classes/BitmovinApiSdk_Models_Vp9ArnrType.html">BitmovinApiSdk\Models\Vp9ArnrType</a></li>
+            <li id="automaticAltRefFramesEnabled"><strong>$automaticAltRefFramesEnabled</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="biasPct"><strong>$biasPct</strong>
+                —
+                int</li>
+            <li id="bitrate"><strong>$bitrate</strong>
+                —
+                int</li>
+            <li id="clientBufferSize"><strong>$clientBufferSize</strong>
+                —
+                int</li>
+            <li id="clientInitialBufferSize"><strong>$clientInitialBufferSize</strong>
+                —
+                int</li>
+            <li id="colorConfig"><strong>$colorConfig</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig.html">BitmovinApiSdk\Models\ColorConfig</a></li>
+            <li id="cpuUsed"><strong>$cpuUsed</strong>
+                —
+                int</li>
+            <li id="createdAt"><strong>$createdAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="crf"><strong>$crf</strong>
+                —
+                int</li>
+            <li id="customData"><strong>$customData</strong>
+                —
+                mixed</li>
+            <li id="description"><strong>$description</strong>
+                —
+                string</li>
+            <li id="discriminatorMapping">
+              <strong>$discriminatorMapping</strong>
+            </li>
+            <li id="discriminatorName">
+              <strong>$discriminatorName</strong>
+            </li>
+            <li id="encodingMode"><strong>$encodingMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\EncodingMode" href="../classes/BitmovinApiSdk_Models_EncodingMode.html">BitmovinApiSdk\Models\EncodingMode</a></li>
+            <li id="errorResiliencyEnabled"><strong>$errorResiliencyEnabled</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="frameParallel"><strong>$frameParallel</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="height"><strong>$height</strong>
+                —
+                int</li>
+            <li id="id"><strong>$id</strong>
+                —
+                string</li>
+            <li id="lagInFrames"><strong>$lagInFrames</strong>
+                —
+                int</li>
+            <li id="lossless"><strong>$lossless</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="maxGop"><strong>$maxGop</strong>
+                —
+                int</li>
+            <li id="maxIntraRate"><strong>$maxIntraRate</strong>
+                —
+                int</li>
+            <li id="maxKeyframeInterval"><strong>$maxKeyframeInterval</strong>
+                —
+                float</li>
+            <li id="minGop"><strong>$minGop</strong>
+                —
+                int</li>
+            <li id="minKeyframeInterval"><strong>$minKeyframeInterval</strong>
+                —
+                float</li>
+            <li id="modifiedAt"><strong>$modifiedAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string</li>
+            <li id="noiseSensitivity"><strong>$noiseSensitivity</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="pixelFormat"><strong>$pixelFormat</strong>
+                —
+                <a title="BitmovinApiSdk\Models\PixelFormat" href="../classes/BitmovinApiSdk_Models_PixelFormat.html">BitmovinApiSdk\Models\PixelFormat</a></li>
+            <li id="presetConfiguration"><strong>$presetConfiguration</strong>
+                —
+                <a title="BitmovinApiSdk\Models\PresetConfiguration" href="../classes/BitmovinApiSdk_Models_PresetConfiguration.html">BitmovinApiSdk\Models\PresetConfiguration</a></li>
+            <li id="qpMax"><strong>$qpMax</strong>
+                —
+                int</li>
+            <li id="qpMin"><strong>$qpMin</strong>
+                —
+                int</li>
+            <li id="quality"><strong>$quality</strong>
+                —
+                <a title="BitmovinApiSdk\Models\Vp9Quality" href="../classes/BitmovinApiSdk_Models_Vp9Quality.html">BitmovinApiSdk\Models\Vp9Quality</a></li>
+            <li id="rate"><strong>$rate</strong>
+                —
+                float</li>
+            <li id="rateOvershootPct"><strong>$rateOvershootPct</strong>
+                —
+                int</li>
+            <li id="rateUndershootPct"><strong>$rateUndershootPct</strong>
+                —
+                int</li>
+            <li id="rowMultiThreadingEnabled"><strong>$rowMultiThreadingEnabled</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="sampleAspectRatioDenominator"><strong>$sampleAspectRatioDenominator</strong>
+                —
+                int</li>
+            <li id="sampleAspectRatioNumerator"><strong>$sampleAspectRatioNumerator</strong>
+                —
+                int</li>
+            <li id="sharpness"><strong>$sharpness</strong>
+                —
+                int</li>
+            <li id="staticThresh"><strong>$staticThresh</strong>
+                —
+                int</li>
+            <li id="targetLevel"><strong>$targetLevel</strong>
+                —
+                int</li>
+            <li id="tileColumns"><strong>$tileColumns</strong>
+                —
+                int</li>
+            <li id="tileRows"><strong>$tileRows</strong>
+                —
+                int</li>
+            <li id="width"><strong>$width</strong>
+                —
+                int</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/__construct.html">__construct()</a>
+            </li>
+            <li id="aqMode"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/aqMode.html">aqMode()</a>
+                — aqMode</li>
+            <li id="arnrMaxFrames"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/arnrMaxFrames.html">arnrMaxFrames()</a>
+                — altref noise reduction max frame count.</li>
+            <li id="arnrStrength"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/arnrStrength.html">arnrStrength()</a>
+                — altref noise reduction filter strength.</li>
+            <li id="arnrType"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/arnrType.html">arnrType()</a>
+                — arnrType</li>
+            <li id="automaticAltRefFramesEnabled"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/automaticAltRefFramesEnabled.html">automaticAltRefFramesEnabled()</a>
+                — Enable automatic alternate reference frames (2pass only)</li>
+            <li id="biasPct"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/biasPct.html">biasPct()</a>
+                — CBR/VBR bias (0&amp;#x3D;CBR, 100&amp;#x3D;VBR)</li>
+            <li id="clientBufferSize"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/clientBufferSize.html">clientBufferSize()</a>
+                — Client buffer size (ms)</li>
+            <li id="clientInitialBufferSize"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/clientInitialBufferSize.html">clientInitialBufferSize()</a>
+                — Client initial buffer size (ms)</li>
+            <li id="cpuUsed"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/cpuUsed.html">cpuUsed()</a>
+                — Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding. The minimum value for width * height &amp;gt;&amp;#x3D; 1280 * 720 is 2. If the value is too low it will be overridden.</li>
+            <li id="crf"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/crf.html">crf()</a>
+                — Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</li>
+            <li id="errorResiliencyEnabled"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/errorResiliencyEnabled.html">errorResiliencyEnabled()</a>
+                — Enables error resiliency feature</li>
+            <li id="frameParallel"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/frameParallel.html">frameParallel()</a>
+                — Enable frame parallel decodability features</li>
+            <li id="lagInFrames"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/lagInFrames.html">lagInFrames()</a>
+                — Number of frames to look ahead for alternate reference frame selection.</li>
+            <li id="lossless"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/lossless.html">lossless()</a>
+                — Lossless mode</li>
+            <li id="maxGop"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/maxGop.html">maxGop()</a>
+                — Maximum GOP length, the maximum distance between I-frames</li>
+            <li id="maxIntraRate"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/maxIntraRate.html">maxIntraRate()</a>
+                — Maximum I-frame bitrate (percentage) 0&amp;#x3D;unlimited</li>
+            <li id="maxKeyframeInterval"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/maxKeyframeInterval.html">maxKeyframeInterval()</a>
+                — Maximum interval in seconds between key frames</li>
+            <li id="minGop"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/minGop.html">minGop()</a>
+                — Minimum GOP length, the minimum distance between I-frames.</li>
+            <li id="minKeyframeInterval"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/minKeyframeInterval.html">minKeyframeInterval()</a>
+                — Minimum interval in seconds between key frames</li>
+            <li id="noiseSensitivity"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/noiseSensitivity.html">noiseSensitivity()</a>
+                — Enable noise sensitivity on Y channel</li>
+            <li id="presetConfiguration"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/presetConfiguration.html">presetConfiguration()</a>
+                — Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</li>
+            <li id="qpMax"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/qpMax.html">qpMax()</a>
+                — Sets the maximum of quantization factor.</li>
+            <li id="qpMin"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/qpMin.html">qpMin()</a>
+                — Sets the minimum of quantization factor.</li>
+            <li id="quality"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/quality.html">quality()</a>
+                — quality</li>
+            <li id="rateOvershootPct"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/rateOvershootPct.html">rateOvershootPct()</a>
+                — Datarate overshoot (max) target (percentage).</li>
+            <li id="rateUndershootPct"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/rateUndershootPct.html">rateUndershootPct()</a>
+                — Datarate undershoot (min) target (percentage).</li>
+            <li id="rowMultiThreadingEnabled"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/rowMultiThreadingEnabled.html">rowMultiThreadingEnabled()</a>
+                — Enable row based non-deterministic multi-threading</li>
+            <li id="sharpness"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/sharpness.html">sharpness()</a>
+                — Loop filter sharpness.</li>
+            <li id="staticThresh"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/staticThresh.html">staticThresh()</a>
+                — A change threshold on blocks below which they will be skipped by the encoder.</li>
+            <li id="targetLevel"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/targetLevel.html">targetLevel()</a>
+                — Target level (255: off, 0: only keep level stats; 10: level 1.0; 11: level 1.1; ... 62: level 6.2)</li>
+            <li id="tileColumns"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/tileColumns.html">tileColumns()</a>
+                — Number of tile columns to use, log2. Depending on the encoding width there are limitations on this value. The minimum values are 2 for width &amp;gt;&amp;#x3D; 1920 and 1 for width &amp;gt;&amp;#x3D; 1280. The minimum width of each tile is 256 pixels so the maximum values are 0 for width &amp;lt; 256, 1 for width &amp;lt; 512, 2 for width &amp;lt; 1024, 3 for width &amp;lt; 2048, 4 for width &amp;lt; 4096, 5 for width &amp;lt; 8192. If the value is too high or too low it will be overridden.</li>
+            <li id="tileRows"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/tileRows.html">tileRows()</a>
+                — Number of tile rows to use, log2.</li>
+          </ul>
+          <h3>Inherited from <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">BitmovinApiSdk\Models\VideoConfiguration</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="bitrate"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/bitrate.html">bitrate()</a>
+                — Target bitrate for the encoded video in bps. Either bitrate or crf is required.</li>
+            <li id="colorConfig"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/colorConfig.html">colorConfig()</a>
+                — colorConfig</li>
+            <li id="encodingMode"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/encodingMode.html">encodingMode()</a>
+                — The mode of the encoding</li>
+            <li id="height"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/height.html">height()</a>
+                — Height of the encoded video in pixels</li>
+            <li id="pixelFormat"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/pixelFormat.html">pixelFormat()</a>
+                — Describes the color encoding, bit depth, and chroma subsampling of each pixel in the output image.</li>
+            <li id="rate"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/rate.html">rate()</a>
+                — Target frame rate of the encoded video. Must be set for live encodings</li>
+            <li id="sampleAspectRatioDenominator"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioDenominator.html">sampleAspectRatioDenominator()</a>
+                — The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.</li>
+            <li id="sampleAspectRatioNumerator"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioNumerator.html">sampleAspectRatioNumerator()</a>
+                — The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.</li>
+            <li id="width"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/width.html">width()</a>
+                — Width of the encoded video in pixels</li>
+          </ul>
+          <h3>Inherited from <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="customData"><a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/customData.html">customData()</a>
+                — User-specific meta data. This can hold anything.</li>
+            <li id="description"><a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description()</a>
+                — Description of the resource. Can be freely chosen by the user.</li>
+            <li id="name"><a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name()</a>
+                — Name of the resource. Can be freely chosen by the user.</li>
+          </ul>
+          <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="create">
+              <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create()</a>
+            </li>
+            <li id="toArray"><a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray()</a>
+                — Create array with values, skip null and empty arrays</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

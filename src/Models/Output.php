@@ -10,6 +10,7 @@ class Output extends BitmovinResource
     /** @var \BitmovinApiSdk\Models\AclEntry[] */
     public $acl;
 
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "AKAMAI_NETSTORAGE" => AkamaiNetStorageOutput::class,
         "AZURE" => AzureOutput::class,

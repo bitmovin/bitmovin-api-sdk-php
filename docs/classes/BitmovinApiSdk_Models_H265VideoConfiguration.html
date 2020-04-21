@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - BitmovinApiSdk\Models\H265VideoConfiguration</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
+          </li>
+          <li class="separator">H265VideoConfiguration</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>H265VideoConfiguration</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class H265VideoConfiguration
+                extends <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">VideoConfiguration</a>
+            {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\PresetConfiguration">PresetConfiguration</span> <a href="#members">$presetConfiguration</a>;
+                    </li><li>public float <a href="#members">$crf</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ProfileH265">ProfileH265</span> <a href="#members">$profile</a>;
+                    </li><li>public int <a href="#members">$bframes</a>;
+                    </li><li>public int <a href="#members">$refFrames</a>;
+                    </li><li>public int <a href="#members">$qp</a>;
+                    </li><li>public int <a href="#members">$maxBitrate</a>;
+                    </li><li>public int <a href="#members">$minBitrate</a>;
+                    </li><li>public int <a href="#members">$bufsize</a>;
+                    </li><li>public int <a href="#members">$minGop</a>;
+                    </li><li>public int <a href="#members">$maxGop</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$openGop</a>;
+                    </li><li>public float <a href="#members">$minKeyframeInterval</a>;
+                    </li><li>public float <a href="#members">$maxKeyframeInterval</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\LevelH265">LevelH265</span> <a href="#members">$level</a>;
+                    </li><li>public int <a href="#members">$rcLookahead</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\BAdapt">BAdapt</span> <a href="#members">$bAdapt</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\MaxCtuSize">MaxCtuSize</span> <a href="#members">$maxCTUSize</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\TuIntraDepth">TuIntraDepth</span> <a href="#members">$tuIntraDepth</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\TuInterDepth">TuInterDepth</span> <a href="#members">$tuInterDepth</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\MotionSearch">MotionSearch</span> <a href="#members">$motionSearch</a>;
+                    </li><li>public int <a href="#members">$subMe</a>;
+                    </li><li>public int <a href="#members">$motionSearchRange</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$weightPredictionOnPSlice</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$weightPredictionOnBSlice</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$sao</a>;
+                    </li><li>public string <a href="#members">$masterDisplay</a>;
+                    </li><li>public int <a href="#members">$maxContentLightLevel</a>;
+                    </li><li>public int <a href="#members">$maxPictureAverageLightLevel</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$hdr</a>;
+                    </li><li>public int <a href="#members">$sceneCutThreshold</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\AdaptiveQuantMode">AdaptiveQuantMode</span> <a href="#members">$adaptiveQuantizationMode</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$enableHlgSignaling</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\VideoFormat">VideoFormat</span> <a href="#members">$videoFormat</a>;
+                    </li><li>public float <a href="#members">$psyRateDistortionOptimization</a>;
+                    </li><li>public float <a href="#members">$psyRateDistortionOptimizedQuantization</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$enableHrdSignaling</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$cutree</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\MinCodingUnitSize">MinCodingUnitSize</span> <a href="#members">$minCodingUnitSize</a>;
+                    </li><li>public int <a href="#members">$lookaheadSlices</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\LimitReferences">LimitReferences</span> <a href="#members">$limitReferences</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$rectangularMotionPartitionsAnalysis</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$asymetricMotionPartitionsAnalysis</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$limitModes</a>;
+                    </li><li>public int <a href="#members">$maxMerge</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$earlySkip</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$recursionSkip</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$fastSearchForAngularIntraPredictions</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$evaluationOfIntraModesInBSlices</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$signHide</a>;
+                    </li><li>public int <a href="#members">$rateDistortionLevelForModeDecision</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\RateDistortionLevelForQuantization">RateDistortionLevelForQuantization</span> <a href="#members">$rateDistortionLevelForQuantization</a>;
+                    </li><li>public int <a href="#members">$qpMin</a>;
+                    </li><li>public int <a href="#members">$qpMax</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$wavefrontParallelProcessing</a>;
+                    </li><li>public int <a href="#members">$slices</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$copyPicture</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$levelHighTier</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$skipSplitRateDistortionAnalysis</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$codingUnitLossless</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\TransformSkipMode">TransformSkipMode</span> <a href="#members">$transformSkip</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$refineRateDistortionCost</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\LimitTransformUnitDepthRecursionMode">LimitTransformUnitDepthRecursionMode</span> <a href="#members">$limitTransformUnitDepthRecursion</a>;
+                    </li><li>public int <a href="#members">$noiseReductionIntra</a>;
+                    </li><li>public int <a href="#members">$noiseReductionInter</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\RateDistortionPenaltyMode">RateDistortionPenaltyMode</span> <a href="#members">$rateDistortionPenalty</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\MaxTransformUnitSize">MaxTransformUnitSize</span> <a href="#members">$maximumTransformUnitSize</a>;
+                    </li><li>public int <a href="#members">$dynamicRateDistortionStrength</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$ssimRateDistortionOptimization</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$temporalMotionVectorPredictors</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$analyzeSourceFramePixels</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$strongIntraSmoothing</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$constrainedIntraPrediction</a>;
+                    </li><li>public float <a href="#members">$scenecutBias</a>;
+                    </li><li>public int <a href="#members">$allowedRADLBeforeIDR</a>;
+                    </li><li>public int <a href="#members">$gopLookahead</a>;
+                    </li><li>public int <a href="#members">$bframeBias</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ForceFlushMode">ForceFlushMode</span> <a href="#members">$forceFlush</a>;
+                    </li><li>public float <a href="#members">$adaptiveQuantizationStrength</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$adaptiveQuantizationMotion</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\QuantizationGroupSize">QuantizationGroupSize</span> <a href="#members">$quantizationGroupSize</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$strictCbr</a>;
+                    </li><li>public int <a href="#members">$qpOffsetChromaCb</a>;
+                    </li><li>public int <a href="#members">$qpOffsetChromaCr</a>;
+                    </li><li>public float <a href="#members">$ipRatio</a>;
+                    </li><li>public float <a href="#members">$pbRatio</a>;
+                    </li><li>public float <a href="#members">$quantizerCurveCompressionFactor</a>;
+                    </li><li>public int <a href="#members">$qpStep</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$grainOptimizedRateControl</a>;
+                    </li><li>public float <a href="#members">$blurQuants</a>;
+                    </li><li>public float <a href="#members">$blurComplexity</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$saoNonDeblock</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$limitSao</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$lowpassDct</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\Cea608708SubtitleConfiguration">Cea608708SubtitleConfiguration</span> <a href="#members">$cea608708SubtitleConfig</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\VideoConfiguration">VideoConfiguration</span></li><li>public int <a href="#members">$width</a>;
+                        </li><li>public int <a href="#members">$height</a>;
+                        </li><li>public int <a href="#members">$bitrate</a>;
+                        </li><li>public float <a href="#members">$rate</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\PixelFormat">PixelFormat</span> <a href="#members">$pixelFormat</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\ColorConfig">ColorConfig</span> <a href="#members">$colorConfig</a>;
+                        </li><li>public int <a href="#members">$sampleAspectRatioNumerator</a>;
+                        </li><li>public int <a href="#members">$sampleAspectRatioDenominator</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\EncodingMode">EncodingMode</span> <a href="#members">$encodingMode</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public static string <a href="#members">$discriminatorName</a>;
+                        </li><li>public static array <a href="#members">$discriminatorMapping</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
+                        </li><li>public string <a href="#members">$description</a>;
+                        </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
+                        </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$modifiedAt</a>;
+                        </li><li>public mixed <a href="#members">$customData</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/presetConfiguration.html">presetConfiguration</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/crf.html">crf</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/profile.html">profile</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bframes.html">bframes</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/refFrames.html">refFrames</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qp.html">qp</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxBitrate.html">maxBitrate</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minBitrate.html">minBitrate</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bufsize.html">bufsize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minGop.html">minGop</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxGop.html">maxGop</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/openGop.html">openGop</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minKeyframeInterval.html">minKeyframeInterval</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxKeyframeInterval.html">maxKeyframeInterval</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/level.html">level</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rcLookahead.html">rcLookahead</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bAdapt.html">bAdapt</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxCTUSize.html">maxCTUSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/tuIntraDepth.html">tuIntraDepth</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/tuInterDepth.html">tuInterDepth</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/motionSearch.html">motionSearch</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/subMe.html">subMe</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/motionSearchRange.html">motionSearchRange</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/weightPredictionOnPSlice.html">weightPredictionOnPSlice</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/weightPredictionOnBSlice.html">weightPredictionOnBSlice</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/sao.html">sao</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/masterDisplay.html">masterDisplay</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxContentLightLevel.html">maxContentLightLevel</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxPictureAverageLightLevel.html">maxPictureAverageLightLevel</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/hdr.html">hdr</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/sceneCutThreshold.html">sceneCutThreshold</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/adaptiveQuantizationMode.html">adaptiveQuantizationMode</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/enableHlgSignaling.html">enableHlgSignaling</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/videoFormat.html">videoFormat</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/psyRateDistortionOptimization.html">psyRateDistortionOptimization</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/psyRateDistortionOptimizedQuantization.html">psyRateDistortionOptimizedQuantization</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/enableHrdSignaling.html">enableHrdSignaling</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/cutree.html">cutree</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minCodingUnitSize.html">minCodingUnitSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/lookaheadSlices.html">lookaheadSlices</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitReferences.html">limitReferences</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rectangularMotionPartitionsAnalysis.html">rectangularMotionPartitionsAnalysis</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/asymetricMotionPartitionsAnalysis.html">asymetricMotionPartitionsAnalysis</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitModes.html">limitModes</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxMerge.html">maxMerge</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/earlySkip.html">earlySkip</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/recursionSkip.html">recursionSkip</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/fastSearchForAngularIntraPredictions.html">fastSearchForAngularIntraPredictions</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/evaluationOfIntraModesInBSlices.html">evaluationOfIntraModesInBSlices</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/signHide.html">signHide</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rateDistortionLevelForModeDecision.html">rateDistortionLevelForModeDecision</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rateDistortionLevelForQuantization.html">rateDistortionLevelForQuantization</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpMin.html">qpMin</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpMax.html">qpMax</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/wavefrontParallelProcessing.html">wavefrontParallelProcessing</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/slices.html">slices</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/copyPicture.html">copyPicture</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/levelHighTier.html">levelHighTier</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/skipSplitRateDistortionAnalysis.html">skipSplitRateDistortionAnalysis</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/codingUnitLossless.html">codingUnitLossless</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/transformSkip.html">transformSkip</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/refineRateDistortionCost.html">refineRateDistortionCost</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitTransformUnitDepthRecursion.html">limitTransformUnitDepthRecursion</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/noiseReductionIntra.html">noiseReductionIntra</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/noiseReductionInter.html">noiseReductionInter</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rateDistortionPenalty.html">rateDistortionPenalty</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maximumTransformUnitSize.html">maximumTransformUnitSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/dynamicRateDistortionStrength.html">dynamicRateDistortionStrength</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/ssimRateDistortionOptimization.html">ssimRateDistortionOptimization</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/temporalMotionVectorPredictors.html">temporalMotionVectorPredictors</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/analyzeSourceFramePixels.html">analyzeSourceFramePixels</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/strongIntraSmoothing.html">strongIntraSmoothing</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/constrainedIntraPrediction.html">constrainedIntraPrediction</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/scenecutBias.html">scenecutBias</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/allowedRADLBeforeIDR.html">allowedRADLBeforeIDR</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/gopLookahead.html">gopLookahead</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bframeBias.html">bframeBias</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/forceFlush.html">forceFlush</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/adaptiveQuantizationStrength.html">adaptiveQuantizationStrength</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/adaptiveQuantizationMotion.html">adaptiveQuantizationMotion</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/quantizationGroupSize.html">quantizationGroupSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/strictCbr.html">strictCbr</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpOffsetChromaCb.html">qpOffsetChromaCb</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpOffsetChromaCr.html">qpOffsetChromaCr</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/ipRatio.html">ipRatio</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/pbRatio.html">pbRatio</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/quantizerCurveCompressionFactor.html">quantizerCurveCompressionFactor</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpStep.html">qpStep</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/grainOptimizedRateControl.html">grainOptimizedRateControl</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/blurQuants.html">blurQuants</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/blurComplexity.html">blurComplexity</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/saoNonDeblock.html">saoNonDeblock</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitSao.html">limitSao</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/lowpassDct.html">lowpassDct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/cea608708SubtitleConfig.html">cea608708SubtitleConfig</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\VideoConfiguration">VideoConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/__construct.html">__construct</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/width.html">width</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/height.html">height</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/bitrate.html">bitrate</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/rate.html">rate</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/pixelFormat.html">pixelFormat</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/colorConfig.html">colorConfig</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioNumerator.html">sampleAspectRatioNumerator</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioDenominator.html">sampleAspectRatioDenominator</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/encodingMode.html">encodingMode</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\CodecConfiguration" href="../classes/BitmovinApiSdk_Models_CodecConfiguration/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/customData.html">customData</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
+                        </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
+                        </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">BitmovinApiSdk\Models\VideoConfiguration</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="adaptiveQuantizationMode"><strong>$adaptiveQuantizationMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\AdaptiveQuantMode" href="../classes/BitmovinApiSdk_Models_AdaptiveQuantMode.html">BitmovinApiSdk\Models\AdaptiveQuantMode</a></li>
+            <li id="adaptiveQuantizationMotion"><strong>$adaptiveQuantizationMotion</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="adaptiveQuantizationStrength"><strong>$adaptiveQuantizationStrength</strong>
+                —
+                float</li>
+            <li id="allowedRADLBeforeIDR"><strong>$allowedRADLBeforeIDR</strong>
+                —
+                int</li>
+            <li id="analyzeSourceFramePixels"><strong>$analyzeSourceFramePixels</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="asymetricMotionPartitionsAnalysis"><strong>$asymetricMotionPartitionsAnalysis</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="bAdapt"><strong>$bAdapt</strong>
+                —
+                <a title="BitmovinApiSdk\Models\BAdapt" href="../classes/BitmovinApiSdk_Models_BAdapt.html">BitmovinApiSdk\Models\BAdapt</a></li>
+            <li id="bframeBias"><strong>$bframeBias</strong>
+                —
+                int</li>
+            <li id="bframes"><strong>$bframes</strong>
+                —
+                int</li>
+            <li id="bitrate"><strong>$bitrate</strong>
+                —
+                int</li>
+            <li id="blurComplexity"><strong>$blurComplexity</strong>
+                —
+                float</li>
+            <li id="blurQuants"><strong>$blurQuants</strong>
+                —
+                float</li>
+            <li id="bufsize"><strong>$bufsize</strong>
+                —
+                int</li>
+            <li id="cea608708SubtitleConfig"><strong>$cea608708SubtitleConfig</strong>
+                —
+                <a title="BitmovinApiSdk\Models\Cea608708SubtitleConfiguration" href="../classes/BitmovinApiSdk_Models_Cea608708SubtitleConfiguration.html">BitmovinApiSdk\Models\Cea608708SubtitleConfiguration</a></li>
+            <li id="codingUnitLossless"><strong>$codingUnitLossless</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="colorConfig"><strong>$colorConfig</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig.html">BitmovinApiSdk\Models\ColorConfig</a></li>
+            <li id="constrainedIntraPrediction"><strong>$constrainedIntraPrediction</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="copyPicture"><strong>$copyPicture</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="createdAt"><strong>$createdAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="crf"><strong>$crf</strong>
+                —
+                float</li>
+            <li id="customData"><strong>$customData</strong>
+                —
+                mixed</li>
+            <li id="cutree"><strong>$cutree</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="description"><strong>$description</strong>
+                —
+                string</li>
+            <li id="discriminatorMapping">
+              <strong>$discriminatorMapping</strong>
+            </li>
+            <li id="discriminatorName">
+              <strong>$discriminatorName</strong>
+            </li>
+            <li id="dynamicRateDistortionStrength"><strong>$dynamicRateDistortionStrength</strong>
+                —
+                int</li>
+            <li id="earlySkip"><strong>$earlySkip</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="enableHlgSignaling"><strong>$enableHlgSignaling</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="enableHrdSignaling"><strong>$enableHrdSignaling</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="encodingMode"><strong>$encodingMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\EncodingMode" href="../classes/BitmovinApiSdk_Models_EncodingMode.html">BitmovinApiSdk\Models\EncodingMode</a></li>
+            <li id="evaluationOfIntraModesInBSlices"><strong>$evaluationOfIntraModesInBSlices</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="fastSearchForAngularIntraPredictions"><strong>$fastSearchForAngularIntraPredictions</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="forceFlush"><strong>$forceFlush</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ForceFlushMode" href="../classes/BitmovinApiSdk_Models_ForceFlushMode.html">BitmovinApiSdk\Models\ForceFlushMode</a></li>
+            <li id="gopLookahead"><strong>$gopLookahead</strong>
+                —
+                int</li>
+            <li id="grainOptimizedRateControl"><strong>$grainOptimizedRateControl</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="hdr"><strong>$hdr</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="height"><strong>$height</strong>
+                —
+                int</li>
+            <li id="id"><strong>$id</strong>
+                —
+                string</li>
+            <li id="ipRatio"><strong>$ipRatio</strong>
+                —
+                float</li>
+            <li id="level"><strong>$level</strong>
+                —
+                <a title="BitmovinApiSdk\Models\LevelH265" href="../classes/BitmovinApiSdk_Models_LevelH265.html">BitmovinApiSdk\Models\LevelH265</a></li>
+            <li id="levelHighTier"><strong>$levelHighTier</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="limitModes"><strong>$limitModes</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="limitReferences"><strong>$limitReferences</strong>
+                —
+                <a title="BitmovinApiSdk\Models\LimitReferences" href="../classes/BitmovinApiSdk_Models_LimitReferences.html">BitmovinApiSdk\Models\LimitReferences</a></li>
+            <li id="limitSao"><strong>$limitSao</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="limitTransformUnitDepthRecursion"><strong>$limitTransformUnitDepthRecursion</strong>
+                —
+                <a title="BitmovinApiSdk\Models\LimitTransformUnitDepthRecursionMode" href="../classes/BitmovinApiSdk_Models_LimitTransformUnitDepthRecursionMode.html">BitmovinApiSdk\Models\LimitTransformUnitDepthRecursionMode</a></li>
+            <li id="lookaheadSlices"><strong>$lookaheadSlices</strong>
+                —
+                int</li>
+            <li id="lowpassDct"><strong>$lowpassDct</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="masterDisplay"><strong>$masterDisplay</strong>
+                —
+                string</li>
+            <li id="maxBitrate"><strong>$maxBitrate</strong>
+                —
+                int</li>
+            <li id="maxCTUSize"><strong>$maxCTUSize</strong>
+                —
+                <a title="BitmovinApiSdk\Models\MaxCtuSize" href="../classes/BitmovinApiSdk_Models_MaxCtuSize.html">BitmovinApiSdk\Models\MaxCtuSize</a></li>
+            <li id="maxContentLightLevel"><strong>$maxContentLightLevel</strong>
+                —
+                int</li>
+            <li id="maxGop"><strong>$maxGop</strong>
+                —
+                int</li>
+            <li id="maxKeyframeInterval"><strong>$maxKeyframeInterval</strong>
+                —
+                float</li>
+            <li id="maxMerge"><strong>$maxMerge</strong>
+                —
+                int</li>
+            <li id="maxPictureAverageLightLevel"><strong>$maxPictureAverageLightLevel</strong>
+                —
+                int</li>
+            <li id="maximumTransformUnitSize"><strong>$maximumTransformUnitSize</strong>
+                —
+                <a title="BitmovinApiSdk\Models\MaxTransformUnitSize" href="../classes/BitmovinApiSdk_Models_MaxTransformUnitSize.html">BitmovinApiSdk\Models\MaxTransformUnitSize</a></li>
+            <li id="minBitrate"><strong>$minBitrate</strong>
+                —
+                int</li>
+            <li id="minCodingUnitSize"><strong>$minCodingUnitSize</strong>
+                —
+                <a title="BitmovinApiSdk\Models\MinCodingUnitSize" href="../classes/BitmovinApiSdk_Models_MinCodingUnitSize.html">BitmovinApiSdk\Models\MinCodingUnitSize</a></li>
+            <li id="minGop"><strong>$minGop</strong>
+                —
+                int</li>
+            <li id="minKeyframeInterval"><strong>$minKeyframeInterval</strong>
+                —
+                float</li>
+            <li id="modifiedAt"><strong>$modifiedAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="motionSearch"><strong>$motionSearch</strong>
+                —
+                <a title="BitmovinApiSdk\Models\MotionSearch" href="../classes/BitmovinApiSdk_Models_MotionSearch.html">BitmovinApiSdk\Models\MotionSearch</a></li>
+            <li id="motionSearchRange"><strong>$motionSearchRange</strong>
+                —
+                int</li>
+            <li id="name"><strong>$name</strong>
+                —
+                string</li>
+            <li id="noiseReductionInter"><strong>$noiseReductionInter</strong>
+                —
+                int</li>
+            <li id="noiseReductionIntra"><strong>$noiseReductionIntra</strong>
+                —
+                int</li>
+            <li id="openGop"><strong>$openGop</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="pbRatio"><strong>$pbRatio</strong>
+                —
+                float</li>
+            <li id="pixelFormat"><strong>$pixelFormat</strong>
+                —
+                <a title="BitmovinApiSdk\Models\PixelFormat" href="../classes/BitmovinApiSdk_Models_PixelFormat.html">BitmovinApiSdk\Models\PixelFormat</a></li>
+            <li id="presetConfiguration"><strong>$presetConfiguration</strong>
+                —
+                <a title="BitmovinApiSdk\Models\PresetConfiguration" href="../classes/BitmovinApiSdk_Models_PresetConfiguration.html">BitmovinApiSdk\Models\PresetConfiguration</a></li>
+            <li id="profile"><strong>$profile</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ProfileH265" href="../classes/BitmovinApiSdk_Models_ProfileH265.html">BitmovinApiSdk\Models\ProfileH265</a></li>
+            <li id="psyRateDistortionOptimization"><strong>$psyRateDistortionOptimization</strong>
+                —
+                float</li>
+            <li id="psyRateDistortionOptimizedQuantization"><strong>$psyRateDistortionOptimizedQuantization</strong>
+                —
+                float</li>
+            <li id="qp"><strong>$qp</strong>
+                —
+                int</li>
+            <li id="qpMax"><strong>$qpMax</strong>
+                —
+                int</li>
+            <li id="qpMin"><strong>$qpMin</strong>
+                —
+                int</li>
+            <li id="qpOffsetChromaCb"><strong>$qpOffsetChromaCb</strong>
+                —
+                int</li>
+            <li id="qpOffsetChromaCr"><strong>$qpOffsetChromaCr</strong>
+                —
+                int</li>
+            <li id="qpStep"><strong>$qpStep</strong>
+                —
+                int</li>
+            <li id="quantizationGroupSize"><strong>$quantizationGroupSize</strong>
+                —
+                <a title="BitmovinApiSdk\Models\QuantizationGroupSize" href="../classes/BitmovinApiSdk_Models_QuantizationGroupSize.html">BitmovinApiSdk\Models\QuantizationGroupSize</a></li>
+            <li id="quantizerCurveCompressionFactor"><strong>$quantizerCurveCompressionFactor</strong>
+                —
+                float</li>
+            <li id="rate"><strong>$rate</strong>
+                —
+                float</li>
+            <li id="rateDistortionLevelForModeDecision"><strong>$rateDistortionLevelForModeDecision</strong>
+                —
+                int</li>
+            <li id="rateDistortionLevelForQuantization"><strong>$rateDistortionLevelForQuantization</strong>
+                —
+                <a title="BitmovinApiSdk\Models\RateDistortionLevelForQuantization" href="../classes/BitmovinApiSdk_Models_RateDistortionLevelForQuantization.html">BitmovinApiSdk\Models\RateDistortionLevelForQuantization</a></li>
+            <li id="rateDistortionPenalty"><strong>$rateDistortionPenalty</strong>
+                —
+                <a title="BitmovinApiSdk\Models\RateDistortionPenaltyMode" href="../classes/BitmovinApiSdk_Models_RateDistortionPenaltyMode.html">BitmovinApiSdk\Models\RateDistortionPenaltyMode</a></li>
+            <li id="rcLookahead"><strong>$rcLookahead</strong>
+                —
+                int</li>
+            <li id="rectangularMotionPartitionsAnalysis"><strong>$rectangularMotionPartitionsAnalysis</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="recursionSkip"><strong>$recursionSkip</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="refFrames"><strong>$refFrames</strong>
+                —
+                int</li>
+            <li id="refineRateDistortionCost"><strong>$refineRateDistortionCost</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="sampleAspectRatioDenominator"><strong>$sampleAspectRatioDenominator</strong>
+                —
+                int</li>
+            <li id="sampleAspectRatioNumerator"><strong>$sampleAspectRatioNumerator</strong>
+                —
+                int</li>
+            <li id="sao"><strong>$sao</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="saoNonDeblock"><strong>$saoNonDeblock</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="sceneCutThreshold"><strong>$sceneCutThreshold</strong>
+                —
+                int</li>
+            <li id="scenecutBias"><strong>$scenecutBias</strong>
+                —
+                float</li>
+            <li id="signHide"><strong>$signHide</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="skipSplitRateDistortionAnalysis"><strong>$skipSplitRateDistortionAnalysis</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="slices"><strong>$slices</strong>
+                —
+                int</li>
+            <li id="ssimRateDistortionOptimization"><strong>$ssimRateDistortionOptimization</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="strictCbr"><strong>$strictCbr</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="strongIntraSmoothing"><strong>$strongIntraSmoothing</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="subMe"><strong>$subMe</strong>
+                —
+                int</li>
+            <li id="temporalMotionVectorPredictors"><strong>$temporalMotionVectorPredictors</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="transformSkip"><strong>$transformSkip</strong>
+                —
+                <a title="BitmovinApiSdk\Models\TransformSkipMode" href="../classes/BitmovinApiSdk_Models_TransformSkipMode.html">BitmovinApiSdk\Models\TransformSkipMode</a></li>
+            <li id="tuInterDepth"><strong>$tuInterDepth</strong>
+                —
+                <a title="BitmovinApiSdk\Models\TuInterDepth" href="../classes/BitmovinApiSdk_Models_TuInterDepth.html">BitmovinApiSdk\Models\TuInterDepth</a></li>
+            <li id="tuIntraDepth"><strong>$tuIntraDepth</strong>
+                —
+                <a title="BitmovinApiSdk\Models\TuIntraDepth" href="../classes/BitmovinApiSdk_Models_TuIntraDepth.html">BitmovinApiSdk\Models\TuIntraDepth</a></li>
+            <li id="videoFormat"><strong>$videoFormat</strong>
+                —
+                <a title="BitmovinApiSdk\Models\VideoFormat" href="../classes/BitmovinApiSdk_Models_VideoFormat.html">BitmovinApiSdk\Models\VideoFormat</a></li>
+            <li id="wavefrontParallelProcessing"><strong>$wavefrontParallelProcessing</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="weightPredictionOnBSlice"><strong>$weightPredictionOnBSlice</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="weightPredictionOnPSlice"><strong>$weightPredictionOnPSlice</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="width"><strong>$width</strong>
+                —
+                int</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/__construct.html">__construct()</a>
+            </li>
+            <li id="adaptiveQuantizationMode"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/adaptiveQuantizationMode.html">adaptiveQuantizationMode()</a>
+                — Controls the adaptive quantization algorithm</li>
+            <li id="adaptiveQuantizationMotion"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/adaptiveQuantizationMotion.html">adaptiveQuantizationMotion()</a>
+                — Adjust the AQ offsets based on the relative motion of each block with respect to the motion of the frame. Default false.</li>
+            <li id="adaptiveQuantizationStrength"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/adaptiveQuantizationStrength.html">adaptiveQuantizationStrength()</a>
+                — Adjust the strength of the adaptive quantization offsets. Default 1.0.</li>
+            <li id="allowedRADLBeforeIDR"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/allowedRADLBeforeIDR.html">allowedRADLBeforeIDR()</a>
+                — Number of RADL pictures allowed infront of IDR. Requires fixed keyframe interval. Valid values 0 - &amp;#x60;bframes&amp;#x60;. Default 0.</li>
+            <li id="analyzeSourceFramePixels"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/analyzeSourceFramePixels.html">analyzeSourceFramePixels()</a>
+                — Enable motion estimation with source frame pixels, in this mode, motion estimation can be computed independently. Default false.</li>
+            <li id="asymetricMotionPartitionsAnalysis"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/asymetricMotionPartitionsAnalysis.html">asymetricMotionPartitionsAnalysis()</a>
+                — Enable analysis of asymmetric motion partitions.</li>
+            <li id="bAdapt"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bAdapt.html">bAdapt()</a>
+                — Set the level of effort in determining B frame placement</li>
+            <li id="bframeBias"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bframeBias.html">bframeBias()</a>
+                — Bias towards B frames in slicetype decision. The higher the bias the more likely the encoder is to use B frames. Default 0</li>
+            <li id="bframes"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bframes.html">bframes()</a>
+                — Sets the amount of b frames</li>
+            <li id="blurComplexity"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/blurComplexity.html">blurComplexity()</a>
+                — Temporally blur complexity. Default 20.0</li>
+            <li id="blurQuants"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/blurQuants.html">blurQuants()</a>
+                — Temporally blur quants. Default 0.5</li>
+            <li id="bufsize"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bufsize.html">bufsize()</a>
+                — Specify the size of the VBV buffer (kbits)</li>
+            <li id="cea608708SubtitleConfig"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/cea608708SubtitleConfig.html">cea608708SubtitleConfig()</a>
+                — Defines whether CEA 608/708 subtitles are extracted from the input video stream</li>
+            <li id="codingUnitLossless"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/codingUnitLossless.html">codingUnitLossless()</a>
+                — If enabled, consider lossless mode in CU RDO decisions. Default is disabled.</li>
+            <li id="constrainedIntraPrediction"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/constrainedIntraPrediction.html">constrainedIntraPrediction()</a>
+                — When generating intra predictions for blocks in inter slices, only intra-coded reference pixels are used. Default false.</li>
+            <li id="copyPicture"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/copyPicture.html">copyPicture()</a>
+                — Copy buffers of input picture in frame. Default is enabled.</li>
+            <li id="crf"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/crf.html">crf()</a>
+                — Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</li>
+            <li id="cutree"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/cutree.html">cutree()</a>
+                — Enables the use of lookahead’s lowres motion vector fields to determine the amount of reuse of each block to tune adaptive quantization factors.</li>
+            <li id="dynamicRateDistortionStrength"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/dynamicRateDistortionStrength.html">dynamicRateDistortionStrength()</a>
+                — Increases the RD level at points where quality drops due to VBV rate control enforcement. Default 0.</li>
+            <li id="earlySkip"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/earlySkip.html">earlySkip()</a>
+                — Measure 2Nx2N merge candidates first; if no residual is found, additional modes at that depth are not analysed.</li>
+            <li id="enableHlgSignaling"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/enableHlgSignaling.html">enableHlgSignaling()</a>
+                — By enabling this video stream will be signaled as HLG</li>
+            <li id="enableHrdSignaling"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/enableHrdSignaling.html">enableHrdSignaling()</a>
+                — Signal hypothetical reference decoder (HRD) information</li>
+            <li id="evaluationOfIntraModesInBSlices"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/evaluationOfIntraModesInBSlices.html">evaluationOfIntraModesInBSlices()</a>
+                — Enables the evaluation of intra modes in B slices.</li>
+            <li id="fastSearchForAngularIntraPredictions"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/fastSearchForAngularIntraPredictions.html">fastSearchForAngularIntraPredictions()</a>
+                — Enable faster search method for angular intra predictions.</li>
+            <li id="forceFlush"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/forceFlush.html">forceFlush()</a>
+                — Force the encoder to flush frames. Default is DISABLED.</li>
+            <li id="gopLookahead"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/gopLookahead.html">gopLookahead()</a>
+                — Number of frames for GOP boundary decision lookahead. Valid values 0 - &amp;#x60;rcLookahead&amp;#x60;. Default 0</li>
+            <li id="grainOptimizedRateControl"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/grainOptimizedRateControl.html">grainOptimizedRateControl()</a>
+                — Enables a specialised ratecontrol algorithm for film grain content. Default false.</li>
+            <li id="hdr"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/hdr.html">hdr()</a>
+                — Force signaling of HDR parameters in SEI packets. Enabled automatically when masterDisplay or maxContentLightLevel/maxPictureAverageLightLevel are set. Useful when there is a desire to signal 0 values for maxContentLightLevel and maxPictureAverageLightLevel.</li>
+            <li id="ipRatio"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/ipRatio.html">ipRatio()</a>
+                — QP ratio factor between I and P slices. This ratio is used in all of the rate control modes. Default 1.4</li>
+            <li id="level"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/level.html">level()</a>
+                — level</li>
+            <li id="levelHighTier"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/levelHighTier.html">levelHighTier()</a>
+                — If high tier is disabled the encoder will attempt to encode only at the main tier. Default is enabled.</li>
+            <li id="limitModes"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitModes.html">limitModes()</a>
+                — When enabled, will limit modes analyzed for each CU using cost metrics from the 4 sub-CUs. This can significantly improve performance when &amp;#x60;rectangularMotionPartitionsAnalysis&amp;#x60; and/or &amp;#x60;asymetricMotionPartitionsAnalysis&amp;#x60; are enabled at minimal compression efficiency loss.</li>
+            <li id="limitReferences"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitReferences.html">limitReferences()</a>
+                — If enabled, limit references per depth, CU or both.</li>
+            <li id="limitSao"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitSao.html">limitSao()</a>
+                — Limit SAO filter computation by early terminating SAO process based on inter prediction mode, CTU spatial-domain correlations, and relations between luma and chroma. Default false.</li>
+            <li id="limitTransformUnitDepthRecursion"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/limitTransformUnitDepthRecursion.html">limitTransformUnitDepthRecursion()</a>
+                — Enables early exit from transform unit depth recursion, for inter coded blocks. Default is DISABLED.</li>
+            <li id="lookaheadSlices"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/lookaheadSlices.html">lookaheadSlices()</a>
+                — Use multiple worker threads to measure the estimated cost of each frame within the lookahead. The higher this parameter, the less accurate the frame costs will be which will result in less accurate B-frame and scene-cut decisions. Valid range: 0 - 16</li>
+            <li id="lowpassDct"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/lowpassDct.html">lowpassDct()</a>
+                — Will use low-pass subband dct approximation instead of the standard dct for 16x16 and 32x32 blocks. Default false.</li>
+            <li id="masterDisplay"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/masterDisplay.html">masterDisplay()</a>
+                — Set the mastering display color volume SEI info (SMPTE ST 2086). For example &amp;#x60;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&amp;#x60; describes a P3D65 1000-nits monitor, where G(x&amp;#x3D;0.265, y&amp;#x3D;0.690), B(x&amp;#x3D;0.150, y&amp;#x3D;0.060), R(x&amp;#x3D;0.680, y&amp;#x3D;0.320), WP(x&amp;#x3D;0.3127, y&amp;#x3D;0.3290), L(max&amp;#x3D;1000, min&amp;#x3D;0.0001). Part of HDR-10 metadata.</li>
+            <li id="maxBitrate"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxBitrate.html">maxBitrate()</a>
+                — Maximum Bitrate</li>
+            <li id="maxCTUSize"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxCTUSize.html">maxCTUSize()</a>
+                — maxCTUSize</li>
+            <li id="maxContentLightLevel"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxContentLightLevel.html">maxContentLightLevel()</a>
+                — Set the max content light level (MaxCLL). Use together with maxPictureAverageLightLevel (which will be 0 if not set). Part of HDR-10 metadata.</li>
+            <li id="maxGop"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxGop.html">maxGop()</a>
+                — Maximum GOP length, the maximum distance between I-frames</li>
+            <li id="maxKeyframeInterval"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxKeyframeInterval.html">maxKeyframeInterval()</a>
+                — Maximum interval in seconds between key frames</li>
+            <li id="maxMerge"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxMerge.html">maxMerge()</a>
+                — Maximum number of neighbor (spatial and temporal) candidate blocks that the encoder may consider for merging motion predictions. Valid range: 1 - 5</li>
+            <li id="maxPictureAverageLightLevel"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maxPictureAverageLightLevel.html">maxPictureAverageLightLevel()</a>
+                — Set the maximum picture average light level (MaxFALL). Use together with maxContentLightLevel (which will be 0 if not set). Part of HDR-10 metadata.</li>
+            <li id="maximumTransformUnitSize"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/maximumTransformUnitSize.html">maximumTransformUnitSize()</a>
+                — Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.</li>
+            <li id="minBitrate"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minBitrate.html">minBitrate()</a>
+                — Minimum Bitrate</li>
+            <li id="minCodingUnitSize"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minCodingUnitSize.html">minCodingUnitSize()</a>
+                — Minimum CU size (width and height). By using 16 or 32 the encoder will not analyze the cost of CUs below that minimum threshold, saving considerable amounts of compute with a predictable increase in bitrate. This setting has a large effect on performance on the faster presets.</li>
+            <li id="minGop"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minGop.html">minGop()</a>
+                — Minimum GOP length, the minimum distance between I-frames</li>
+            <li id="minKeyframeInterval"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/minKeyframeInterval.html">minKeyframeInterval()</a>
+                — Minimum interval in seconds between key frames</li>
+            <li id="motionSearch"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/motionSearch.html">motionSearch()</a>
+                — motionSearch</li>
+            <li id="motionSearchRange"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/motionSearchRange.html">motionSearchRange()</a>
+                — Set the Motion search range.</li>
+            <li id="noiseReductionInter"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/noiseReductionInter.html">noiseReductionInter()</a>
+                — An integer value, which denotes strength of noise reduction in inter CUs. Default 0.</li>
+            <li id="noiseReductionIntra"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/noiseReductionIntra.html">noiseReductionIntra()</a>
+                — An integer value, which denotes strength of noise reduction in intra CUs. Default 0.</li>
+            <li id="openGop"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/openGop.html">openGop()</a>
+                — Enable open-gop, allows referencing frames from a previous gop</li>
+            <li id="pbRatio"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/pbRatio.html">pbRatio()</a>
+                — QP ratio factor between P and B slices. This ratio is used in all of the rate control modes. Default 1.3</li>
+            <li id="presetConfiguration"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/presetConfiguration.html">presetConfiguration()</a>
+                — Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</li>
+            <li id="profile"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/profile.html">profile()</a>
+                — profile</li>
+            <li id="psyRateDistortionOptimization"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/psyRateDistortionOptimization.html">psyRateDistortionOptimization()</a>
+                — Psycho-visual rate-distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP, RD_REF_ALL, QPRD or FULL_RD</li>
+            <li id="psyRateDistortionOptimizedQuantization"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/psyRateDistortionOptimizedQuantization.html">psyRateDistortionOptimizedQuantization()</a>
+                — Strength of psycho-visual optimizations in quantization. Only has an effect in presets which use RDOQ (rd-levels 4 and 5). The value must be between 0 and 50, 1.0 is typical</li>
+            <li id="qp"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qp.html">qp()</a>
+                — Sets the quantization factor</li>
+            <li id="qpMax"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpMax.html">qpMax()</a>
+                — Sets the maximum of quantization factor. Valid value range: 0 - 69</li>
+            <li id="qpMin"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpMin.html">qpMin()</a>
+                — Sets the minimum of quantization factor. Valid value range: 0 - 69</li>
+            <li id="qpOffsetChromaCb"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpOffsetChromaCb.html">qpOffsetChromaCb()</a>
+                — Offset of Cb chroma QP from the luma QP selected by rate control. This is a general way to spend more or less bits on the chroma channel. Default 0</li>
+            <li id="qpOffsetChromaCr"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpOffsetChromaCr.html">qpOffsetChromaCr()</a>
+                — Offset of Cr chroma QP from the luma QP selected by rate control. This is a general way to spend more or less bits on the chroma channel. Default 0</li>
+            <li id="qpStep"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/qpStep.html">qpStep()</a>
+                — The maximum single adjustment in QP allowed to rate control. Default 4</li>
+            <li id="quantizationGroupSize"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/quantizationGroupSize.html">quantizationGroupSize()</a>
+                — Enable adaptive quantization for sub-CTUs. This parameter specifies the minimum CU size at which QP can be adjusted. Default is same as &amp;#x60;maxCTUSize&amp;#x60;.</li>
+            <li id="quantizerCurveCompressionFactor"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/quantizerCurveCompressionFactor.html">quantizerCurveCompressionFactor()</a>
+                — Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6</li>
+            <li id="rateDistortionLevelForModeDecision"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rateDistortionLevelForModeDecision.html">rateDistortionLevelForModeDecision()</a>
+                — Level of rate-distortion optimization in mode decision. The lower the value the faster the encode, the higher the value higher the compression efficiency. Valid range: 0 - 4</li>
+            <li id="rateDistortionLevelForQuantization"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rateDistortionLevelForQuantization.html">rateDistortionLevelForQuantization()</a>
+                — Specify the amount of rate-distortion analysis to use within quantization.</li>
+            <li id="rateDistortionPenalty"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rateDistortionPenalty.html">rateDistortionPenalty()</a>
+                — Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.</li>
+            <li id="rcLookahead"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rcLookahead.html">rcLookahead()</a>
+                — Number of frames for slice-type decision lookahead</li>
+            <li id="rectangularMotionPartitionsAnalysis"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/rectangularMotionPartitionsAnalysis.html">rectangularMotionPartitionsAnalysis()</a>
+                — Enable analysis of rectangular motion partitions Nx2N and 2NxN.</li>
+            <li id="recursionSkip"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/recursionSkip.html">recursionSkip()</a>
+                — If enabled exits early from CU depth recursion. When a skip CU is found, additional heuristics are used to decide whether to terminate recursion.</li>
+            <li id="refFrames"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/refFrames.html">refFrames()</a>
+                — Sets the amount of reference frames</li>
+            <li id="refineRateDistortionCost"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/refineRateDistortionCost.html">refineRateDistortionCost()</a>
+                — Enable QP based rate distortion refinement. Default is disabled.</li>
+            <li id="sao"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/sao.html">sao()</a>
+                — Toggle sample adaptive offset loop filter</li>
+            <li id="saoNonDeblock"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/saoNonDeblock.html">saoNonDeblock()</a>
+                — Specify how to handle depencency between SAO and deblocking filter. When enabled, non-deblocked pixels are used for SAO analysis. When disabled, SAO analysis skips the right/bottom boundary areas. Default false.</li>
+            <li id="sceneCutThreshold"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/sceneCutThreshold.html">sceneCutThreshold()</a>
+                — Scene Change sensitivity. The higher the value, the more likely an I-Frame will be inserted. Set to 0 to disable it.</li>
+            <li id="scenecutBias"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/scenecutBias.html">scenecutBias()</a>
+                — This value represents the percentage difference between the inter cost and intra cost of a frame used in scenecut detection. Default 5.0.</li>
+            <li id="signHide"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/signHide.html">signHide()</a>
+                — Hide sign bit of one coefficient per coding tree unit.</li>
+            <li id="skipSplitRateDistortionAnalysis"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/skipSplitRateDistortionAnalysis.html">skipSplitRateDistortionAnalysis()</a>
+                — Enable skipping split rate distortion analysis when sum of split CU RD cost larger than one split CU RD cost for intra CU. Default disabled.</li>
+            <li id="slices"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/slices.html">slices()</a>
+                — Encode each incoming frame as multiple parallel slices that may be decoded independently. Default is 1.</li>
+            <li id="ssimRateDistortionOptimization"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/ssimRateDistortionOptimization.html">ssimRateDistortionOptimization()</a>
+                — It is used for mode selection during analysis of CTUs and can achieve significant gain in terms of objective quality metrics SSIM and PSNR. Default false.</li>
+            <li id="strictCbr"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/strictCbr.html">strictCbr()</a>
+                — Enables stricter conditions to control bitrate deviance from the target bitrate in ABR mode. Bit rate adherence is prioritised over quality. Default false.</li>
+            <li id="strongIntraSmoothing"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/strongIntraSmoothing.html">strongIntraSmoothing()</a>
+                — Enable strong intra smoothing for 32x32 intra blocks. Default true.</li>
+            <li id="subMe"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/subMe.html">subMe()</a>
+                — Set the amount of subpel refinement to perform.</li>
+            <li id="temporalMotionVectorPredictors"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/temporalMotionVectorPredictors.html">temporalMotionVectorPredictors()</a>
+                — Enable temporal motion vector predictors in P and B slices. Default true.</li>
+            <li id="transformSkip"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/transformSkip.html">transformSkip()</a>
+                — Enable evaluation of transform skip (bypass DCT but still use quantization) coding for 4x4 TU coded blocks. Default is NONE.</li>
+            <li id="tuInterDepth"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/tuInterDepth.html">tuInterDepth()</a>
+                — tuInterDepth</li>
+            <li id="tuIntraDepth"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/tuIntraDepth.html">tuIntraDepth()</a>
+                — tuIntraDepth</li>
+            <li id="videoFormat"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/videoFormat.html">videoFormat()</a>
+                — Specifies the source format of the original analog video prior to digitizing and encoding</li>
+            <li id="wavefrontParallelProcessing"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/wavefrontParallelProcessing.html">wavefrontParallelProcessing()</a>
+                — The encoder may begin encoding a row as soon as the row above it is at least two CTUs ahead in the encode process. Default is enabled.</li>
+            <li id="weightPredictionOnBSlice"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/weightPredictionOnBSlice.html">weightPredictionOnBSlice()</a>
+                — Enable weighted prediction in B slices</li>
+            <li id="weightPredictionOnPSlice"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/weightPredictionOnPSlice.html">weightPredictionOnPSlice()</a>
+                — Enable weighted prediction in P slices</li>
+          </ul>
+          <h3>Inherited from <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">BitmovinApiSdk\Models\VideoConfiguration</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="bitrate"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/bitrate.html">bitrate()</a>
+                — Target bitrate for the encoded video in bps. Either bitrate or crf is required.</li>
+            <li id="colorConfig"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/colorConfig.html">colorConfig()</a>
+                — colorConfig</li>
+            <li id="encodingMode"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/encodingMode.html">encodingMode()</a>
+                — The mode of the encoding</li>
+            <li id="height"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/height.html">height()</a>
+                — Height of the encoded video in pixels</li>
+            <li id="pixelFormat"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/pixelFormat.html">pixelFormat()</a>
+                — Describes the color encoding, bit depth, and chroma subsampling of each pixel in the output image.</li>
+            <li id="rate"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/rate.html">rate()</a>
+                — Target frame rate of the encoded video. Must be set for live encodings</li>
+            <li id="sampleAspectRatioDenominator"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioDenominator.html">sampleAspectRatioDenominator()</a>
+                — The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.</li>
+            <li id="sampleAspectRatioNumerator"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioNumerator.html">sampleAspectRatioNumerator()</a>
+                — The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.</li>
+            <li id="width"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/width.html">width()</a>
+                — Width of the encoded video in pixels</li>
+          </ul>
+          <h3>Inherited from <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="customData"><a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/customData.html">customData()</a>
+                — User-specific meta data. This can hold anything.</li>
+            <li id="description"><a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description()</a>
+                — Description of the resource. Can be freely chosen by the user.</li>
+            <li id="name"><a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name()</a>
+                — Name of the resource. Can be freely chosen by the user.</li>
+          </ul>
+          <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="create">
+              <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create()</a>
+            </li>
+            <li id="toArray"><a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray()</a>
+                — Create array with values, skip null and empty arrays</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

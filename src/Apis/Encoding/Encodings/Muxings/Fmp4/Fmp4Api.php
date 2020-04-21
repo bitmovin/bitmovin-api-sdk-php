@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Customdata\CustomdataApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Information\InformationApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\DrmApi;
 
 class Fmp4Api
@@ -18,6 +19,9 @@ class Fmp4Api
 
     /** @var CustomdataApi */
     public $customdata;
+
+    /** @var InformationApi */
+    public $information;
 
     /** @var DrmApi */
     public $drm;
@@ -33,6 +37,7 @@ class Fmp4Api
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->customdata = new CustomdataApi(null, $this->httpWrapper);
+        $this->information = new InformationApi(null, $this->httpWrapper);
         $this->drm = new DrmApi(null, $this->httpWrapper);
     }
 

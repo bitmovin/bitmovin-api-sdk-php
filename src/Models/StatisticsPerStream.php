@@ -67,6 +67,18 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $dolbyVisionMultiplicator;
 
+    /** @var string */
+    public $preset;
+
+    /** @var float */
+    public $presetMultiplicator;
+
+    /** @var bool */
+    public $live;
+
+    /** @var float */
+    public $liveMultiplicator;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -76,136 +88,6 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
         $this->perTitleResultStream = ObjectMapper::map($this->perTitleResultStream, StatisticsPerTitleStream::class);
         $this->psnrMode = ObjectMapper::map($this->psnrMode, PsnrPerStreamMode::class);
         $this->dolbyVisionMode = ObjectMapper::map($this->dolbyVisionMode, DolbyVisionPerStreamMode::class);
-    }
-
-    /**
-     * ID of the stream (required)
-     *
-     * @param string $streamId
-     * @return $this
-     */
-    public function streamId(string $streamId)
-    {
-        $this->streamId = $streamId;
-
-        return $this;
-    }
-
-    /**
-     * ID of the condec configuration (required)
-     *
-     * @param string $codecConfigId
-     * @return $this
-     */
-    public function codecConfigId(string $codecConfigId)
-    {
-        $this->codecConfigId = $codecConfigId;
-
-        return $this;
-    }
-
-    /**
-     * Multiplier for the encoded minutes. Depends on muxing type. (required)
-     *
-     * @param float $multiplicator
-     * @return $this
-     */
-    public function multiplicator(float $multiplicator)
-    {
-        $this->multiplicator = $multiplicator;
-
-        return $this;
-    }
-
-    /**
-     * Encoded bytes. (required)
-     *
-     * @param int $encodedBytes
-     * @return $this
-     */
-    public function encodedBytes(int $encodedBytes)
-    {
-        $this->encodedBytes = $encodedBytes;
-
-        return $this;
-    }
-
-    /**
-     * Length of the stream. (required)
-     *
-     * @param float $encodedSeconds
-     * @return $this
-     */
-    public function encodedSeconds(float $encodedSeconds)
-    {
-        $this->encodedSeconds = $encodedSeconds;
-
-        return $this;
-    }
-
-    /**
-     * Minutes you will be charged for (billableMinutes &#x3D; encodedSeconds * multiplicator) (required)
-     *
-     * @param float $billableMinutes
-     * @return $this
-     */
-    public function billableMinutes(float $billableMinutes)
-    {
-        $this->billableMinutes = $billableMinutes;
-
-        return $this;
-    }
-
-    /**
-     * Video width, only if video stream
-     *
-     * @param int $width
-     * @return $this
-     */
-    public function width(int $width)
-    {
-        $this->width = $width;
-
-        return $this;
-    }
-
-    /**
-     * Video height, only if video stream
-     *
-     * @param int $height
-     * @return $this
-     */
-    public function height(int $height)
-    {
-        $this->height = $height;
-
-        return $this;
-    }
-
-    /**
-     * If it&#39; a video stream this value is the FPS, for audio it&#39;s the sample rate. (required)
-     *
-     * @param float $rate
-     * @return $this
-     */
-    public function rate(float $rate)
-    {
-        $this->rate = $rate;
-
-        return $this;
-    }
-
-    /**
-     * Bitrate of the stream (required)
-     *
-     * @param int $bitrate
-     * @return $this
-     */
-    public function bitrate(int $bitrate)
-    {
-        $this->bitrate = $bitrate;
-
-        return $this;
     }
 
     /**
@@ -248,19 +130,6 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The output minutes multiplicator for the given encodingMode
-     *
-     * @param float $encodingModeMultiplicator
-     * @return $this
-     */
-    public function encodingModeMultiplicator(float $encodingModeMultiplicator)
-    {
-        $this->encodingModeMultiplicator = $encodingModeMultiplicator;
-
-        return $this;
-    }
-
-    /**
      * perTitleResultStream
      *
      * @param \BitmovinApiSdk\Models\StatisticsPerTitleStream $perTitleResultStream
@@ -269,19 +138,6 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function perTitleResultStream(\BitmovinApiSdk\Models\StatisticsPerTitleStream $perTitleResultStream)
     {
         $this->perTitleResultStream = $perTitleResultStream;
-
-        return $this;
-    }
-
-    /**
-     * The output minutes multiplicator for per-title
-     *
-     * @param float $perTitleMultiplicator
-     * @return $this
-     */
-    public function perTitleMultiplicator(float $perTitleMultiplicator)
-    {
-        $this->perTitleMultiplicator = $perTitleMultiplicator;
 
         return $this;
     }
@@ -300,19 +156,6 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The output minutes multiplicator for psnr streams
-     *
-     * @param float $psnrMultiplicator
-     * @return $this
-     */
-    public function psnrMultiplicator(float $psnrMultiplicator)
-    {
-        $this->psnrMultiplicator = $psnrMultiplicator;
-
-        return $this;
-    }
-
-    /**
      * dolbyVisionMode
      *
      * @param \BitmovinApiSdk\Models\DolbyVisionPerStreamMode $dolbyVisionMode
@@ -321,19 +164,6 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function dolbyVisionMode(\BitmovinApiSdk\Models\DolbyVisionPerStreamMode $dolbyVisionMode)
     {
         $this->dolbyVisionMode = $dolbyVisionMode;
-
-        return $this;
-    }
-
-    /**
-     * The output minutes multiplicator for Dolby Vision streams
-     *
-     * @param float $dolbyVisionMultiplicator
-     * @return $this
-     */
-    public function dolbyVisionMultiplicator(float $dolbyVisionMultiplicator)
-    {
-        $this->dolbyVisionMultiplicator = $dolbyVisionMultiplicator;
 
         return $this;
     }

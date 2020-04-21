@@ -28,6 +28,7 @@ class Muxing extends BitmovinResource
     /** @var StreamConditionsMode */
     public $streamConditionsMode;
 
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "FMP4" => Fmp4Muxing::class,
         "CMAF" => CmafMuxing::class,

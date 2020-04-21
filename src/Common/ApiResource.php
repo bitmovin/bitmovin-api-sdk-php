@@ -55,10 +55,11 @@ abstract class ApiResource
             return $this->mapValue($value);
         }, $resourceData);
 
-        if (isset($this::$discriminatorMapping)) {
+        if (isset($this::$discriminatorMapping) && isset($this::$discriminatorName)) {
             $type = array_search (get_class($this), $this::$discriminatorMapping);
+
             if (isset($type)) {
-                $resourceData["type"] = $type;
+                $resourceData[$this::$discriminatorName] = $type;
                 unset($resourceData["discriminatorMapping"]);
             }
         }

@@ -7,6 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class InputStream extends BitmovinResource
 {
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "INGEST" => IngestInputStream::class,
         "CONCATENATION" => ConcatenationInputStream::class,

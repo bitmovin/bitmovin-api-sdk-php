@@ -7,6 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class CodecConfiguration extends BitmovinResource
 {
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "AAC" => AacAudioConfiguration::class,
         "HE_AAC_V1" => HeAacV1AudioConfiguration::class,

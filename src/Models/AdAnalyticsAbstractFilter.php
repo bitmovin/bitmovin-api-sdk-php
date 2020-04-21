@@ -10,6 +10,7 @@ class AdAnalyticsAbstractFilter extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\AdAnalyticsAttribute */
     public $name;
 
+    public static $discriminatorName = "operator";
     public static $discriminatorMapping = [
         "IN" => AdAnalyticsInFilter::class,
         "EQ" => AdAnalyticsEqualFilter::class,

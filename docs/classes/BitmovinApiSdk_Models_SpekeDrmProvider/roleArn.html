@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - BitmovinApiSdk\Models\SpekeDrmProvider::roleArn</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.html">Classes</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
+          </li>
+          <li class="separator">
+            <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../../classes/BitmovinApiSdk_Models_SpekeDrmProvider.html">SpekeDrmProvider</a>
+          </li>
+          <li class="separator">roleArn</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>BitmovinApiSdk\Models\SpekeDrmProvider::</small>roleArn</h1>
+        <h4>AWS role that will be assumed for the key exchange in case the provider runs on AWS.  During the key exchange the role will be assumed to be able to access the key provider.  This role has to be created by the owner of the account with the SPEKE server. For Bitmovin to be able to assume this role, the following has to be added to the trust policy of the role:  &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,   \&amp;quot;Principal\&amp;quot;: {     \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerSpekeAccess\&amp;quot;   },   \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;,   \&amp;quot;Condition\&amp;quot;: {     \&amp;quot;StringEquals\&amp;quot;: {       \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot;     }   } } &amp;#x60;&amp;#x60;&amp;#x60; It is recommended to also set the {{externalId}} due to security reasons but it can also be ommitted.  Additionally the role needs a policy similar to the following to be able to invoke the API gateway: &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Version\&amp;quot;: \&amp;quot;2012-10-17\&amp;quot;,   \&amp;quot;Statement\&amp;quot;: [     {       \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,       \&amp;quot;Action\&amp;quot;: [         \&amp;quot;execute-api:Invoke\&amp;quot;       ],       \&amp;quot;Resource\&amp;quot;: [         \&amp;quot;arn:aws:execute-api:{{region}}:*:*_/_*_/POST/_*\&amp;quot;       ]     }   ] } &amp;#x60;&amp;#x60;&amp;#x60; where &amp;#x60;{{region}}&amp;#x60; is the region of the API gateway (for example &amp;#x60;us-west-2&amp;#x60;), the same has to be set in the property &amp;#39;gatewayRegion&amp;#39;. It&amp;#39;s also possible to set &amp;#x60;{{region}&amp;#x60; to &amp;#x60;*&amp;#x60; to give the role access to all regions.</h4>
+        <p/>
+        <ul/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function roleArn(string
+        $roleArn )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$roleArn</code>
+                —
+                string</dt>
+          <dd/>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>$this</dt>
+          <dd><br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

@@ -27,13 +27,13 @@ class ObjectMapper
         return $value ? new $type($value) : $value;
     }
 
-    private static function calculateType($value, string $type) : string
+    private static function calculateType($value, string $type): string
     {
-        if (isset($type::$discriminatorMapping)) {
+        if (isset($type::$discriminatorMapping) && isset($type::$discriminatorName)) {
             $discriminatorMapping = $type::$discriminatorMapping;
-
-            if (isset($value->type) && isset($discriminatorMapping[$value->type])) {
-                $type = $discriminatorMapping[$value->type];
+            $discriminatorName = $type::$discriminatorName;
+            if (isset($value->$discriminatorName) && isset($discriminatorMapping[$value->$discriminatorName])) {
+                $type = $discriminatorMapping[$value->$discriminatorName];
             }
         }
 

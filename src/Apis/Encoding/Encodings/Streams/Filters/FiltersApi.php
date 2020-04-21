@@ -85,7 +85,7 @@ class FiltersApi
 
         $response = $this->httpWrapper->request('DELETE', '/encoding/encodings/{encoding_id}/streams/{stream_id}/filters', $pathParams,  null, null, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponseList::class);
+        return new \BitmovinApiSdk\Models\BitmovinResponseList($response);
     }
 
     /**

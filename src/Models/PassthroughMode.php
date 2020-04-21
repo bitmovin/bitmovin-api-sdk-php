@@ -10,6 +10,9 @@ class PassthroughMode extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const CAPTION_STREAM = 'CAPTION_STREAM';
 
+    /** @var string */
+    private const VIDEO_CAPTION_STREAM = 'VIDEO_CAPTION_STREAM';
+
     /**
      * @param string $value
      * @return PassthroughMode
@@ -20,7 +23,7 @@ class PassthroughMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Configure if the encoding should use the video stream as the passthrough mode or a dedicated caption stream.
+     * Select the embedded captions from the video stream
      *
      * @return PassthroughMode
      */
@@ -30,13 +33,23 @@ class PassthroughMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Configure if the encoding should use the video stream as the passthrough mode or a dedicated caption stream.
+     * Select the captions from a separate caption stream
      *
      * @return PassthroughMode
      */
     public static function CAPTION_STREAM()
     {
         return new PassthroughMode(self::CAPTION_STREAM);
+    }
+
+    /**
+     * Select the captions from the video stream or from the caption stream. Don&#39;t use this option if the input file contains both caption variants.
+     *
+     * @return PassthroughMode
+     */
+    public static function VIDEO_CAPTION_STREAM()
+    {
+        return new PassthroughMode(self::VIDEO_CAPTION_STREAM);
     }
 }
 

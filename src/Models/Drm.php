@@ -10,6 +10,7 @@ class Drm extends BitmovinResource
     /** @var \BitmovinApiSdk\Models\EncodingOutput[] */
     public $outputs;
 
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "WIDEVINE" => WidevineDrm::class,
         "PLAYREADY" => PlayReadyDrm::class,

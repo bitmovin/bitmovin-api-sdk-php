@@ -7,6 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class AbstractCondition extends \BitmovinApiSdk\Common\ApiResource
 {
+    public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "CONDITION" => Condition::class,
         "AND" => AndConjunction::class,
