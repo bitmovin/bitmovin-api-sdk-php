@@ -7,7 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class StreamInfosDetails extends \BitmovinApiSdk\Common\ApiResource
 {
-    /** @var int */
+    /** @var string */
     public $id;
 
     /** @var MediaType */
@@ -71,10 +71,10 @@ class StreamInfosDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * The id of the stream (required)
      *
-     * @param int $id
+     * @param string $id
      * @return $this
      */
-    public function id(int $id)
+    public function id(string $id)
     {
         $this->id = $id;
 
