@@ -32,7 +32,7 @@ class AesApi
     }
 
     /**
-     * Add AES encryption configuration to Progressive TS muxing
+     * Add AES encryption configuration to a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class AesApi
     }
 
     /**
-     * Delete AES encryption configuration from Progressive TS muxing
+     * Delete AES encryption configuration from a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class AesApi
     }
 
     /**
-     * AES encryption Details of Progressive TS muxing
+     * AES encryption Details of a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class AesApi
     }
 
     /**
-     * List AES encryption configurations of Progressive TS muxing
+     * List AES encryption configurations of a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -57,7 +57,7 @@ class DrmApi
     }
 
     /**
-     * List all DRM configurations of MP4 muxing
+     * List all DRM configurations of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

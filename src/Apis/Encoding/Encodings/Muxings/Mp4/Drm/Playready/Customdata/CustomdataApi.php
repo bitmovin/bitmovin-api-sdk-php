@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * PlayReady DRM Custom Data of MP4
+     * PlayReady DRM Custom Data of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

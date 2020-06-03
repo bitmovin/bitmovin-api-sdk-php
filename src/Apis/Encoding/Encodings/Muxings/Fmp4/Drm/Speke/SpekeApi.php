@@ -53,7 +53,7 @@ class SpekeApi
     }
 
     /**
-     * Delete SPEKE DRM from fMP4
+     * Delete SPEKE DRM from an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of fMP4
+     * SPEKE DRM Details of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class SpekeApi
     }
 
     /**
-     * List SPEKE DRM of fMP4
+     * List SPEKE DRM of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

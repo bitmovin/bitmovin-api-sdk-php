@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * CENC DRM Custom Data of fMP4
+     * CENC DRM Custom Data of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -32,7 +32,7 @@ class PlayreadyApi
     }
 
     /**
-     * Add PlayReady DRM to MP4
+     * Add PlayReady DRM to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class PlayreadyApi
     }
 
     /**
-     * Delete PlayReady DRM from MP4
+     * Delete PlayReady DRM from an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class PlayreadyApi
     }
 
     /**
-     * PlayReady DRM Details of MP4
+     * PlayReady DRM Details of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class PlayreadyApi
     }
 
     /**
-     * List PlayReady DRMs of MP4
+     * List PlayReady DRMs of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

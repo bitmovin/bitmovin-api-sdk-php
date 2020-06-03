@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * ClearKey DRM Custom Data of fMP4
+     * ClearKey DRM Custom Data of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

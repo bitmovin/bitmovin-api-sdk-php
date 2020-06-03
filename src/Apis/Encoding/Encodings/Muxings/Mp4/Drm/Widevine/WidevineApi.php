@@ -32,7 +32,7 @@ class WidevineApi
     }
 
     /**
-     * Add Widevine DRM to MP4
+     * Add Widevine DRM to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class WidevineApi
     }
 
     /**
-     * Delete Widevine DRM from MP4
+     * Delete Widevine DRM from an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class WidevineApi
     }
 
     /**
-     * Widevine DRM Details of MP4
+     * Widevine DRM Details of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class WidevineApi
     }
 
     /**
-     * List Widevine DRMs of MP4
+     * List Widevine DRMs of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

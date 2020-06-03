@@ -32,7 +32,7 @@ class AesApi
     }
 
     /**
-     * Add AES Encryption to fMP4
+     * Add AES encryption configuration to fMP4
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class AesApi
     }
 
     /**
-     * Delete AES Encryption from fMP4
+     * Delete AES encryption configuration from an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class AesApi
     }
 
     /**
-     * AES Encryption Details of fMP4
+     * AES encryption Details of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class AesApi
     }
 
     /**
-     * List AES Encryption of fMP4
+     * List AES encryption configurations of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

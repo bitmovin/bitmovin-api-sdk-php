@@ -32,7 +32,7 @@ class FairplayApi
     }
 
     /**
-     * Add FairPlay DRM to Progressive TS
+     * Add FairPlay DRM to a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class FairplayApi
     }
 
     /**
-     * Delete FairPlay DRM from Progressive TS
+     * Delete FairPlay DRM from a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class FairplayApi
     }
 
     /**
-     * FairPlay DRM Details of Progressive TS
+     * FairPlay DRM Details of a Progressive TS
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class FairplayApi
     }
 
     /**
-     * List FairPlay DRMs of Progressive TS
+     * List FairPlay DRMs of a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * FairPlay DRM Custom Data of TS muxing
+     * FairPlay DRM Custom Data of a TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

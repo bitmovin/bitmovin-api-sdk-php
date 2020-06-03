@@ -61,7 +61,7 @@ class InsertableContentApi
     }
 
     /**
-     * List All Inseratble Content Available For A Live Encoding
+     * List All Insertable Content Available For A Live Encoding
      *
      * @param string $encodingId
      * @param InsertableContentListQueryParams|null $queryParams

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * AES Encryption Custom Data of fMP4
+     * AES encryption Custom Data of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

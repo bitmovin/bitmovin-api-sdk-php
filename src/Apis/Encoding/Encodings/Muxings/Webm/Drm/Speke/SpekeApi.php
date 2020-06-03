@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to WebM
+     * Add SPEKE DRM key provider to a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class SpekeApi
     }
 
     /**
-     * Delete SPEKE DRM from WebM
+     * Delete SPEKE DRM from a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of WebM
+     * SPEKE DRM Details of a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class SpekeApi
     }
 
     /**
-     * List SPEKE DRM of WebM
+     * List SPEKE DRM of a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId

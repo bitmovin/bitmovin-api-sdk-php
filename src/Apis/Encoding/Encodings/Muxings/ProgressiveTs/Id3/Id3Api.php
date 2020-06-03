@@ -42,7 +42,7 @@ class Id3Api
     }
 
     /**
-     * List all ID3 Tags of Progressive TS muxing
+     * List all ID3 Tags of a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId

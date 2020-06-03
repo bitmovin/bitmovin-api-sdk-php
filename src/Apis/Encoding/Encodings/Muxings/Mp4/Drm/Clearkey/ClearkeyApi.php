@@ -32,7 +32,7 @@ class ClearkeyApi
     }
 
     /**
-     * Add ClearKey DRM to MP4
+     * Add ClearKey DRM to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class ClearkeyApi
     }
 
     /**
-     * Delete ClearKey DRM from MP4
+     * Delete ClearKey DRM from an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class ClearkeyApi
     }
 
     /**
-     * ClearKey DRM Details of MP4
+     * ClearKey DRM Details of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class ClearkeyApi
     }
 
     /**
-     * List ClearKey DRMs of MP4
+     * List ClearKey DRMs of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

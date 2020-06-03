@@ -32,7 +32,7 @@ class MarlinApi
     }
 
     /**
-     * Add Marlin DRM to MP4
+     * Add Marlin DRM to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class MarlinApi
     }
 
     /**
-     * Delete Marlin DRM from MP4
+     * Delete Marlin DRM from an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class MarlinApi
     }
 
     /**
-     * Marlin DRM Details of MP4
+     * Marlin DRM Details of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class MarlinApi
     }
 
     /**
-     * List Marlin DRMs of MP4
+     * List Marlin DRMs of an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

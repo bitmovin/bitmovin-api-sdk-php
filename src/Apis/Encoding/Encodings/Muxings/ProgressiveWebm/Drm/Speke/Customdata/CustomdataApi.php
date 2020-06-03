@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * SPEKE DRM Custom Data of Progressive WebM
+     * SPEKE DRM Custom Data of a Progressive WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId

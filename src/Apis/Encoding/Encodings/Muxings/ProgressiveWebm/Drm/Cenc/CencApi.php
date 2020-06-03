@@ -32,7 +32,7 @@ class CencApi
     }
 
     /**
-     * Add CENC DRM to Progressive WebM
+     * Add CENC DRM to a Progressive WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class CencApi
     }
 
     /**
-     * Delete CENC DRM from Progressive WebM
+     * Delete CENC DRM from a Progressive WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class CencApi
     }
 
     /**
-     * CENC DRM Details of Progressive WebM
+     * CENC DRM Details of a Progressive WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId

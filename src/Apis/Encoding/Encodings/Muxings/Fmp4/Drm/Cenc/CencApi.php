@@ -32,7 +32,7 @@ class CencApi
     }
 
     /**
-     * Add CENC DRM to fMP4
+     * Add CENC DRM to an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class CencApi
     }
 
     /**
-     * Delete CENC DRM from fMP4
+     * Delete CENC DRM from an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class CencApi
     }
 
     /**
-     * CENC DRM Details of fMP4
+     * CENC DRM Details of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class CencApi
     }
 
     /**
-     * List CENC DRMs of fMP4
+     * List CENC DRMs of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * CENC DRM Custom Data of WebM
+     * CENC DRM Custom Data of a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId

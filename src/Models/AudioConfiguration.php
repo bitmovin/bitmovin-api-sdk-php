@@ -32,7 +32,7 @@ class AudioConfiguration extends CodecConfiguration
     }
 
     /**
-     * Audio sampling rate Hz
+     * Audio sampling rate in Hz
      *
      * @param float $rate
      * @return $this

@@ -32,7 +32,7 @@ class FairplayApi
     }
 
     /**
-     * Add FairPlay DRM to fMP4
+     * Add FairPlay DRM to an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -53,7 +53,7 @@ class FairplayApi
     }
 
     /**
-     * Delete FairPlay DRM from fMP4
+     * Delete FairPlay DRM from an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class FairplayApi
     }
 
     /**
-     * FairPlay DRM Details of fMP4
+     * FairPlay DRM Details of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -97,7 +97,7 @@ class FairplayApi
     }
 
     /**
-     * List FairPlay DRMs of fMP4
+     * List FairPlay DRMs of an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
