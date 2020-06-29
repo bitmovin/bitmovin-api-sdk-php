@@ -37,7 +37,7 @@ class TextFilter extends Filter
     /** @var string */
     public $fontSizeExpression;
 
-    /** @var int */
+    /** @var float */
     public $alpha;
 
     /** @var string */
@@ -60,6 +60,9 @@ class TextFilter extends Filter
 
     /** @var string */
     public $y;
+
+    /** @var string */
+    public $rate;
 
     public function __construct($attributes = null)
     {
@@ -200,10 +203,10 @@ class TextFilter extends Filter
     /**
      * If set, alpha blending for the text is applied. Values are valid between 0.0 and 1.0.
      *
-     * @param int $alpha
+     * @param float $alpha
      * @return $this
      */
-    public function alpha(int $alpha)
+    public function alpha(float $alpha)
     {
         $this->alpha = $alpha;
 
@@ -297,6 +300,19 @@ class TextFilter extends Filter
     public function y(string $y)
     {
         $this->y = $y;
+
+        return $this;
+    }
+
+    /**
+     * rate
+     *
+     * @param string $rate
+     * @return $this
+     */
+    public function rate(string $rate)
+    {
+        $this->rate = $rate;
 
         return $this;
     }

@@ -77,7 +77,7 @@
                     </li><li>public string <a href="#members">$fontColor</a>;
                     </li><li>public int <a href="#members">$fontSize</a>;
                     </li><li>public string <a href="#members">$fontSizeExpression</a>;
-                    </li><li>public int <a href="#members">$alpha</a>;
+                    </li><li>public float <a href="#members">$alpha</a>;
                     </li><li>public string <a href="#members">$shadowColor</a>;
                     </li><li>public int <a href="#members">$shadowX</a>;
                     </li><li>public int <a href="#members">$shadowY</a>;
@@ -85,6 +85,7 @@
                     </li><li>public string <a href="#members">$text</a>;
                     </li><li>public string <a href="#members">$x</a>;
                     </li><li>public string <a href="#members">$y</a>;
+                    </li><li>public string <a href="#members">$rate</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Filter">Filter</span></li><li>public static string <a href="#members">$discriminatorName</a>;
                         </li><li>public static array <a href="#members">$discriminatorMapping</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
@@ -112,6 +113,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/text.html">text</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/x.html">x</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/y.html">y</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/rate.html">rate</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Filter">Filter</span></li><li>public void <a title="BitmovinApiSdk\Models\Filter" href="../classes/BitmovinApiSdk_Models_Filter/__construct.html">__construct</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
@@ -139,7 +141,7 @@
           <ul class="members">
             <li id="alpha"><strong>$alpha</strong>
                 —
-                int</li>
+                float</li>
             <li id="borderWidth"><strong>$borderWidth</strong>
                 —
                 int</li>
@@ -194,6 +196,9 @@
             <li id="name"><strong>$name</strong>
                 —
                 string</li>
+            <li id="rate"><strong>$rate</strong>
+                —
+                string</li>
             <li id="shadowColor"><strong>$shadowColor</strong>
                 —
                 string</li>
@@ -246,6 +251,8 @@
                 — An expression for the Font size. Either fontSize or fontSizeExpression can be set at the same time. The following variables are valid: main_h, h, H for input height and main_w, w, W for the input_width</li>
             <li id="lineSpacing"><a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/lineSpacing.html">lineSpacing()</a>
                 — Line spacing of the border around the box in pixels</li>
+            <li id="rate"><a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/rate.html">rate()</a>
+                — rate</li>
             <li id="shadowColor"><a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/shadowColor.html">shadowColor()</a>
                 — Color of the shadow</li>
             <li id="shadowX"><a title="BitmovinApiSdk\Models\TextFilter" href="../classes/BitmovinApiSdk_Models_TextFilter/shadowX.html">shadowX()</a>

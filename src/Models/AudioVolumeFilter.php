@@ -13,10 +13,14 @@ class AudioVolumeFilter extends Filter
     /** @var \BitmovinApiSdk\Models\AudioVolumeUnit */
     public $unit;
 
+    /** @var \BitmovinApiSdk\Models\AudioVolumeFormat */
+    public $format;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->unit = ObjectMapper::map($this->unit, AudioVolumeUnit::class);
+        $this->format = ObjectMapper::map($this->format, AudioVolumeFormat::class);
     }
 
     /**
@@ -41,6 +45,19 @@ class AudioVolumeFilter extends Filter
     public function unit(\BitmovinApiSdk\Models\AudioVolumeUnit $unit)
     {
         $this->unit = $unit;
+
+        return $this;
+    }
+
+    /**
+     * format
+     *
+     * @param \BitmovinApiSdk\Models\AudioVolumeFormat $format
+     * @return $this
+     */
+    public function format(\BitmovinApiSdk\Models\AudioVolumeFormat $format)
+    {
+        $this->format = $format;
 
         return $this;
     }
