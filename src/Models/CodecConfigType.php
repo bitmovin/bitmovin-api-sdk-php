@@ -8,6 +8,9 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     private const AAC = 'AAC';
 
     /** @var string */
+    private const DTS_PASSTHROUGH = 'DTS_PASSTHROUGH';
+
+    /** @var string */
     private const HE_AAC_V1 = 'HE_AAC_V1';
 
     /** @var string */
@@ -66,6 +69,16 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function AAC()
     {
         return new CodecConfigType(self::AAC);
+    }
+
+    /**
+     * DTS_PASSTHROUGH
+     *
+     * @return CodecConfigType
+     */
+    public static function DTS_PASSTHROUGH()
+    {
+        return new CodecConfigType(self::DTS_PASSTHROUGH);
     }
 
     /**

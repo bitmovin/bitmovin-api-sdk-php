@@ -10,6 +10,9 @@ class Encoding extends BitmovinResource
     /** @var CloudRegion */
     public $cloudRegion;
 
+    /** @var \BitmovinApiSdk\Models\CloudRegion[] */
+    public $fallbackCloudRegions;
+
     /** @var string */
     public $encoderVersion;
 
@@ -38,6 +41,7 @@ class Encoding extends BitmovinResource
     {
         parent::__construct($attributes);
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, CloudRegion::class);
+        $this->fallbackCloudRegions = ObjectMapper::map($this->fallbackCloudRegions, CloudRegion::class);
         $this->infrastructure = ObjectMapper::map($this->infrastructure, InfrastructureSettings::class);
         $this->selectedEncodingMode = ObjectMapper::map($this->selectedEncodingMode, EncodingMode::class);
         $this->selectedCloudRegion = ObjectMapper::map($this->selectedCloudRegion, CloudRegion::class);
@@ -53,6 +57,19 @@ class Encoding extends BitmovinResource
     public function cloudRegion(CloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
+
+        return $this;
+    }
+
+    /**
+     * Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions
+     *
+     * @param \BitmovinApiSdk\Models\CloudRegion[] $fallbackCloudRegions
+     * @return $this
+     */
+    public function fallbackCloudRegions(array $fallbackCloudRegions)
+    {
+        $this->fallbackCloudRegions = $fallbackCloudRegions;
 
         return $this;
     }

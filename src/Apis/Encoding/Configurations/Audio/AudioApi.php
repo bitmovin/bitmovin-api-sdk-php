@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Aac\AacApi;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DtsPassthrough\DtsPassthroughApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV1\HeAacV1Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV2\HeAacV2Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Vorbis\VorbisApi;
@@ -25,6 +26,9 @@ class AudioApi
 
     /** @var AacApi */
     public $aac;
+
+    /** @var DtsPassthroughApi */
+    public $dtsPassthrough;
 
     /** @var HeAacV1Api */
     public $heAacV1;
@@ -61,6 +65,7 @@ class AudioApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->aac = new AacApi(null, $this->httpWrapper);
+        $this->dtsPassthrough = new DtsPassthroughApi(null, $this->httpWrapper);
         $this->heAacV1 = new HeAacV1Api(null, $this->httpWrapper);
         $this->heAacV2 = new HeAacV2Api(null, $this->httpWrapper);
         $this->vorbis = new VorbisApi(null, $this->httpWrapper);

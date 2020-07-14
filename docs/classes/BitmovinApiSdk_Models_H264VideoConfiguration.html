@@ -119,6 +119,7 @@
                         </li><li>public <span title="BitmovinApiSdk\Models\ColorConfig">ColorConfig</span> <a href="#members">$colorConfig</a>;
                         </li><li>public int <a href="#members">$sampleAspectRatioNumerator</a>;
                         </li><li>public int <a href="#members">$sampleAspectRatioDenominator</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\DisplayAspectRatio">DisplayAspectRatio</span> <a href="#members">$displayAspectRatio</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\EncodingMode">EncodingMode</span> <a href="#members">$encodingMode</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public static string <a href="#members">$discriminatorName</a>;
                         </li><li>public static array <a href="#members">$discriminatorMapping</a>;
@@ -182,6 +183,7 @@
                         </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/colorConfig.html">colorConfig</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioNumerator.html">sampleAspectRatioNumerator</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioDenominator.html">sampleAspectRatioDenominator</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/displayAspectRatio.html">displayAspectRatio</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/encodingMode.html">encodingMode</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\CodecConfiguration" href="../classes/BitmovinApiSdk_Models_CodecConfiguration/__construct.html">__construct</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
@@ -265,6 +267,9 @@
             <li id="discriminatorName">
               <strong>$discriminatorName</strong>
             </li>
+            <li id="displayAspectRatio"><strong>$displayAspectRatio</strong>
+                —
+                <a title="BitmovinApiSdk\Models\DisplayAspectRatio" href="../classes/BitmovinApiSdk_Models_DisplayAspectRatio.html">BitmovinApiSdk\Models\DisplayAspectRatio</a></li>
             <li id="encodingMode"><strong>$encodingMode</strong>
                 —
                 <a title="BitmovinApiSdk\Models\EncodingMode" href="../classes/BitmovinApiSdk_Models_EncodingMode.html">BitmovinApiSdk\Models\EncodingMode</a></li>
@@ -497,6 +502,8 @@
                 — Target bitrate for the encoded video in bps. Either bitrate or crf is required.</li>
             <li id="colorConfig"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/colorConfig.html">colorConfig()</a>
                 — colorConfig</li>
+            <li id="displayAspectRatio"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/displayAspectRatio.html">displayAspectRatio()</a>
+                — Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.</li>
             <li id="encodingMode"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/encodingMode.html">encodingMode()</a>
                 — The mode of the encoding</li>
             <li id="height"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/height.html">height()</a>
@@ -506,9 +513,9 @@
             <li id="rate"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/rate.html">rate()</a>
                 — Target frame rate of the encoded video. Must be set for live encodings</li>
             <li id="sampleAspectRatioDenominator"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioDenominator.html">sampleAspectRatioDenominator()</a>
-                — The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.</li>
+                — The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.</li>
             <li id="sampleAspectRatioNumerator"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/sampleAspectRatioNumerator.html">sampleAspectRatioNumerator()</a>
-                — The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.</li>
+                — The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.</li>
             <li id="width"><a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration/width.html">width()</a>
                 — Width of the encoded video in pixels</li>
           </ul>

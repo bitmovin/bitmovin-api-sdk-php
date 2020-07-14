@@ -25,6 +25,9 @@ class AutoRestartConfiguration extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $scheduleExpression;
 
+    /** @var bool */
+    public $restartOnEncoderError;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -104,6 +107,19 @@ class AutoRestartConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function scheduleExpression(string $scheduleExpression)
     {
         $this->scheduleExpression = $scheduleExpression;
+
+        return $this;
+    }
+
+    /**
+     * Defines if the encoding should be restarted in case of an error during encoding.
+     *
+     * @param bool $restartOnEncoderError
+     * @return $this
+     */
+    public function restartOnEncoderError(bool $restartOnEncoderError)
+    {
+        $this->restartOnEncoderError = $restartOnEncoderError;
 
         return $this;
     }

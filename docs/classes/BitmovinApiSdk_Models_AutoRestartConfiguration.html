@@ -73,6 +73,7 @@
                     </li><li>public float <a href="#members">$hlsManifestsUpdateTimeout</a>;
                     </li><li>public float <a href="#members">$dashManifestsUpdateTimeout</a>;
                     </li><li>public string <a href="#members">$scheduleExpression</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$restartOnEncoderError</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/segmentsWrittenTimeout.html">segmentsWrittenTimeout</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/bytesWrittenTimeout.html">bytesWrittenTimeout</a>()
@@ -80,6 +81,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/hlsManifestsUpdateTimeout.html">hlsManifestsUpdateTimeout</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/dashManifestsUpdateTimeout.html">dashManifestsUpdateTimeout</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/scheduleExpression.html">scheduleExpression</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/restartOnEncoderError.html">restartOnEncoderError</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -111,6 +113,9 @@
             <li id="hlsManifestsUpdateTimeout"><strong>$hlsManifestsUpdateTimeout</strong>
                 —
                 float</li>
+            <li id="restartOnEncoderError"><strong>$restartOnEncoderError</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
             <li id="scheduleExpression"><strong>$scheduleExpression</strong>
                 —
                 string</li>
@@ -134,6 +139,8 @@
                 — If no frames were generated for the given number of seconds, a restart is triggered. Minimum: 30.0</li>
             <li id="hlsManifestsUpdateTimeout"><a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/hlsManifestsUpdateTimeout.html">hlsManifestsUpdateTimeout()</a>
                 — If HLS manifests were not updated for the given number of seconds, a restart is triggered. Minimum: 30.0</li>
+            <li id="restartOnEncoderError"><a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/restartOnEncoderError.html">restartOnEncoderError()</a>
+                — Defines if the encoding should be restarted in case of an error during encoding.</li>
             <li id="scheduleExpression"><a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/scheduleExpression.html">scheduleExpression()</a>
                 — Defines a schedule for restarts using the unix crontab syntax. This example would trigger a restart every monday at 05:30 (AM)</li>
             <li id="segmentsWrittenTimeout"><a title="BitmovinApiSdk\Models\AutoRestartConfiguration" href="../classes/BitmovinApiSdk_Models_AutoRestartConfiguration/segmentsWrittenTimeout.html">segmentsWrittenTimeout()</a>

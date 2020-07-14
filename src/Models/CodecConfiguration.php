@@ -10,6 +10,7 @@ class CodecConfiguration extends BitmovinResource
     public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "AAC" => AacAudioConfiguration::class,
+        "DTS_PASSTHROUGH" => DtsPassthroughAudioConfiguration::class,
         "HE_AAC_V1" => HeAacV1AudioConfiguration::class,
         "HE_AAC_V2" => HeAacV2AudioConfiguration::class,
         "H264" => H264VideoConfiguration::class,

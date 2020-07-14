@@ -79,6 +79,9 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $liveMultiplicator;
 
+    /** @var \BitmovinApiSdk\Models\InputFactor */
+    public $inputFactor;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -88,6 +91,7 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
         $this->perTitleResultStream = ObjectMapper::map($this->perTitleResultStream, StatisticsPerTitleStream::class);
         $this->psnrMode = ObjectMapper::map($this->psnrMode, PsnrPerStreamMode::class);
         $this->dolbyVisionMode = ObjectMapper::map($this->dolbyVisionMode, DolbyVisionPerStreamMode::class);
+        $this->inputFactor = ObjectMapper::map($this->inputFactor, InputFactor::class);
     }
 
     /**
@@ -164,6 +168,19 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function dolbyVisionMode(\BitmovinApiSdk\Models\DolbyVisionPerStreamMode $dolbyVisionMode)
     {
         $this->dolbyVisionMode = $dolbyVisionMode;
+
+        return $this;
+    }
+
+    /**
+     * inputFactor
+     *
+     * @param \BitmovinApiSdk\Models\InputFactor $inputFactor
+     * @return $this
+     */
+    public function inputFactor(\BitmovinApiSdk\Models\InputFactor $inputFactor)
+    {
+        $this->inputFactor = $inputFactor;
 
         return $this;
     }

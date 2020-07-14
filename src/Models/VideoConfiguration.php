@@ -31,6 +31,9 @@ class VideoConfiguration extends CodecConfiguration
     /** @var int */
     public $sampleAspectRatioDenominator;
 
+    /** @var DisplayAspectRatio */
+    public $displayAspectRatio;
+
     /** @var EncodingMode */
     public $encodingMode;
 
@@ -39,6 +42,7 @@ class VideoConfiguration extends CodecConfiguration
         parent::__construct($attributes);
         $this->pixelFormat = ObjectMapper::map($this->pixelFormat, PixelFormat::class);
         $this->colorConfig = ObjectMapper::map($this->colorConfig, ColorConfig::class);
+        $this->displayAspectRatio = ObjectMapper::map($this->displayAspectRatio, DisplayAspectRatio::class);
         $this->encodingMode = ObjectMapper::map($this->encodingMode, EncodingMode::class);
     }
 
@@ -121,7 +125,7 @@ class VideoConfiguration extends CodecConfiguration
     }
 
     /**
-     * The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.
+     * The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.
      *
      * @param int $sampleAspectRatioNumerator
      * @return $this
@@ -134,7 +138,7 @@ class VideoConfiguration extends CodecConfiguration
     }
 
     /**
-     * The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.
+     * The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.
      *
      * @param int $sampleAspectRatioDenominator
      * @return $this
@@ -142,6 +146,19 @@ class VideoConfiguration extends CodecConfiguration
     public function sampleAspectRatioDenominator(int $sampleAspectRatioDenominator)
     {
         $this->sampleAspectRatioDenominator = $sampleAspectRatioDenominator;
+
+        return $this;
+    }
+
+    /**
+     * Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.
+     *
+     * @param DisplayAspectRatio $displayAspectRatio
+     * @return $this
+     */
+    public function displayAspectRatio(DisplayAspectRatio $displayAspectRatio)
+    {
+        $this->displayAspectRatio = $displayAspectRatio;
 
         return $this;
     }
