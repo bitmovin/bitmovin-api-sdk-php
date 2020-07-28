@@ -52,6 +52,9 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const AV1 = 'AV1';
 
+    /** @var string */
+    private const DOLBY_ATMOS = 'DOLBY_ATMOS';
+
     /**
      * @param string $value
      * @return CodecConfigType
@@ -219,6 +222,16 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function AV1()
     {
         return new CodecConfigType(self::AV1);
+    }
+
+    /**
+     * DOLBY_ATMOS
+     *
+     * @return CodecConfigType
+     */
+    public static function DOLBY_ATMOS()
+    {
+        return new CodecConfigType(self::DOLBY_ATMOS);
     }
 }
 

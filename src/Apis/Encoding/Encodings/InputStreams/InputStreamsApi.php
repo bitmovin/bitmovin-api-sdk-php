@@ -17,6 +17,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\File\FileApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Trimming\TrimmingApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Subtitles\SubtitlesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Captions\CaptionsApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\DolbyAtmos\DolbyAtmosApi;
 
 class InputStreamsApi
 {
@@ -50,6 +51,9 @@ class InputStreamsApi
     /** @var CaptionsApi */
     public $captions;
 
+    /** @var DolbyAtmosApi */
+    public $dolbyAtmos;
+
     /**
      * InputStreamsApi constructor.
      *
@@ -69,6 +73,7 @@ class InputStreamsApi
         $this->trimming = new TrimmingApi(null, $this->httpWrapper);
         $this->subtitles = new SubtitlesApi(null, $this->httpWrapper);
         $this->captions = new CaptionsApi(null, $this->httpWrapper);
+        $this->dolbyAtmos = new DolbyAtmosApi(null, $this->httpWrapper);
     }
 
     /**

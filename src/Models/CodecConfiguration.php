@@ -25,6 +25,7 @@ class CodecConfiguration extends BitmovinResource
         "VORBIS" => VorbisAudioConfiguration::class,
         "MJPEG" => MjpegVideoConfiguration::class,
         "AV1" => Av1VideoConfiguration::class,
+        "DOLBY_ATMOS" => DolbyAtmosAudioConfiguration::class,
     ];
 
     public function __construct($attributes = null)

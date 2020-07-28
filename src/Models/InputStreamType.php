@@ -37,6 +37,9 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const DVB_TELETEXT = 'DVB_TELETEXT';
 
+    /** @var string */
+    private const DOLBY_ATMOS = 'DOLBY_ATMOS';
+
     /**
      * @param string $value
      * @return InputStreamType
@@ -154,6 +157,16 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function DVB_TELETEXT()
     {
         return new InputStreamType(self::DVB_TELETEXT);
+    }
+
+    /**
+     * DOLBY_ATMOS
+     *
+     * @return InputStreamType
+     */
+    public static function DOLBY_ATMOS()
+    {
+        return new InputStreamType(self::DOLBY_ATMOS);
     }
 }
 

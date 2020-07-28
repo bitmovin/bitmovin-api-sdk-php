@@ -20,6 +20,7 @@ class InputStream extends BitmovinResource
         "CAPTION_CEA708" => Cea708CaptionInputStream::class,
         "FILE" => FileInputStream::class,
         "DVB_TELETEXT" => DvbTeletextInputStream::class,
+        "DOLBY_ATMOS" => DolbyAtmosIngestInputStream::class,
     ];
 
     public function __construct($attributes = null)
