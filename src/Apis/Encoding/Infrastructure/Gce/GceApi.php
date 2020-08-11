@@ -8,10 +8,15 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Infrastructure\Gce\Regions\RegionsApi;
+
 class GceApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var RegionsApi */
+    public $regions;
 
     /**
      * GceApi constructor.
@@ -23,6 +28,7 @@ class GceApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->regions = new RegionsApi(null, $this->httpWrapper);
     }
 
     /**

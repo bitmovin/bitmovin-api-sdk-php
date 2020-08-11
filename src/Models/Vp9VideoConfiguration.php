@@ -113,7 +113,7 @@ class Vp9VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
+     * Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED]
      *
      * @param PresetConfiguration $presetConfiguration
      * @return $this

@@ -34,7 +34,7 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The id of the input stream that should be used for concatenation. Can be either an ingest input stream, or the result of a trimming input stream
+     * The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
      *
      * @param string $inputStreamId
      * @return $this

@@ -35,6 +35,9 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     private const CAPTION_CEA708 = 'CAPTION_CEA708';
 
     /** @var string */
+    private const DVB_SUBTITLE = 'DVB_SUBTITLE';
+
+    /** @var string */
     private const DVB_TELETEXT = 'DVB_TELETEXT';
 
     /** @var string */
@@ -147,6 +150,16 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function CAPTION_CEA708()
     {
         return new InputStreamType(self::CAPTION_CEA708);
+    }
+
+    /**
+     * DVB_SUBTITLE
+     *
+     * @return InputStreamType
+     */
+    public static function DVB_SUBTITLE()
+    {
+        return new InputStreamType(self::DVB_SUBTITLE);
     }
 
     /**

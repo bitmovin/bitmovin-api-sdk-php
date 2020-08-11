@@ -8,12 +8,16 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Subtitles\DvbSubtitle\DvbSubtitleApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\Subtitles\DvbTeletext\DvbTeletextApi;
 
 class SubtitlesApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var DvbSubtitleApi */
+    public $dvbSubtitle;
 
     /** @var DvbTeletextApi */
     public $dvbTeletext;
@@ -28,6 +32,7 @@ class SubtitlesApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->dvbSubtitle = new DvbSubtitleApi(null, $this->httpWrapper);
         $this->dvbTeletext = new DvbTeletextApi(null, $this->httpWrapper);
     }
 }

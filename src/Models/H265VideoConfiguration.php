@@ -318,7 +318,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.
+     * Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED, VOD_HIGH_SPEED, VOD_VERYHIGH_SPEED, VOD_EXTRAHIGH_SPEED, VOD_SUPERHIGH_SPEED, VOD_ULTRAHIGH_SPEED, LIVE_LOW_LATENCY, LIVE_HIGH_QUALITY]
      *
      * @param PresetConfiguration $presetConfiguration
      * @return $this
