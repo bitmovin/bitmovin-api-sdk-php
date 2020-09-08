@@ -107,7 +107,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $createdAt
      * @return $this
@@ -120,7 +120,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask was last updated, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask was last updated, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $updatedAt
      * @return $this
@@ -133,7 +133,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask was started, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $startedAt
      * @return $this
@@ -146,7 +146,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to &#39;QUEUED&#39;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to &#39;QUEUED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $queuedAt
      * @return $this
@@ -159,7 +159,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to to &#39;RUNNING&#39;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $runningAt
      * @return $this
@@ -172,7 +172,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to &#39;FINISHED&#39;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to &#39;FINISHED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $finishedAt
      * @return $this
@@ -185,7 +185,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to &#39;ERROR&#39;, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $errorAt
      * @return $this

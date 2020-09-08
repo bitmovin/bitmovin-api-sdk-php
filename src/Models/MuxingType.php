@@ -23,6 +23,9 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     private const MP3 = 'MP3';
 
     /** @var string */
+    private const MXF = 'MXF';
+
+    /** @var string */
     private const PROGRESSIVE_WEBM = 'PROGRESSIVE_WEBM';
 
     /** @var string */
@@ -110,6 +113,16 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     public static function MP3()
     {
         return new MuxingType(self::MP3);
+    }
+
+    /**
+     * MXF
+     *
+     * @return MuxingType
+     */
+    public static function MXF()
+    {
+        return new MuxingType(self::MXF);
     }
 
     /**

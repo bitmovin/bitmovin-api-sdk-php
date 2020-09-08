@@ -26,6 +26,9 @@ class CodecConfiguration extends BitmovinResource
         "MJPEG" => MjpegVideoConfiguration::class,
         "AV1" => Av1VideoConfiguration::class,
         "DOLBY_ATMOS" => DolbyAtmosAudioConfiguration::class,
+        "H262" => H262VideoConfiguration::class,
+        "PCM" => PcmAudioConfiguration::class,
+        "WEBVTT" => WebVttConfiguration::class,
     ];
 
     public function __construct($attributes = null)

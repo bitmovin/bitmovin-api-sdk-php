@@ -67,7 +67,14 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Encoding
                 extends <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\CloudRegion">CloudRegion</span> <a href="#members">$cloudRegion</a>;
+            {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\EncodingType">EncodingType</span> <a href="#members">$type</a>;
+                    </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$startedAt</a>;
+                    </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$queuedAt</a>;
+                    </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$runningAt</a>;
+                    </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$finishedAt</a>;
+                    </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$errorAt</a>;
+                    </li><li>public int <a href="#members">$progress</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\CloudRegion">CloudRegion</span> <a href="#members">$cloudRegion</a>;
                     </li><li>public array <a href="#members">$fallbackCloudRegions</a>;
                     </li><li>public string <a href="#members">$encoderVersion</a>;
                     </li><li>public string <a href="#members">$infrastructureId</a>;
@@ -129,10 +136,16 @@
             <li id="encoderVersion"><strong>$encoderVersion</strong>
                 —
                 string</li>
+            <li id="errorAt"><strong>$errorAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
             <li id="fallbackCloudRegions"><strong>$fallbackCloudRegions</strong>
                 —
                 <a title="\BitmovinApiSdk\Models\CloudRegion" href="../classes/_BitmovinApiSdk_Models_CloudRegion.html">\BitmovinApiSdk\Models\CloudRegion</a>[]
                     </li>
+            <li id="finishedAt"><strong>$finishedAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
             <li id="id"><strong>$id</strong>
                 —
                 string</li>
@@ -152,6 +165,15 @@
             <li id="name"><strong>$name</strong>
                 —
                 string</li>
+            <li id="progress"><strong>$progress</strong>
+                —
+                int</li>
+            <li id="queuedAt"><strong>$queuedAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="runningAt"><strong>$runningAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
             <li id="selectedCloudRegion"><strong>$selectedCloudRegion</strong>
                 —
                 <a title="BitmovinApiSdk\Models\CloudRegion" href="../classes/BitmovinApiSdk_Models_CloudRegion.html">BitmovinApiSdk\Models\CloudRegion</a></li>
@@ -161,9 +183,15 @@
             <li id="selectedEncodingMode"><strong>$selectedEncodingMode</strong>
                 —
                 <a title="BitmovinApiSdk\Models\EncodingMode" href="../classes/BitmovinApiSdk_Models_EncodingMode.html">BitmovinApiSdk\Models\EncodingMode</a></li>
+            <li id="startedAt"><strong>$startedAt</strong>
+                —
+                <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
             <li id="status"><strong>$status</strong>
                 —
                 <a title="BitmovinApiSdk\Models\Status" href="../classes/BitmovinApiSdk_Models_Status.html">BitmovinApiSdk\Models\Status</a></li>
+            <li id="type"><strong>$type</strong>
+                —
+                <a title="BitmovinApiSdk\Models\EncodingType" href="../classes/BitmovinApiSdk_Models_EncodingType.html">BitmovinApiSdk\Models\EncodingType</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>

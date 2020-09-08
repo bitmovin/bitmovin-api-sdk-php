@@ -64,7 +64,7 @@ class SrtStatistics extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Timestamp when the srt statistics event was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the srt statistics event was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $createdAt
      * @return $this

@@ -30,10 +30,10 @@ class InputsApi
      *
      * @param string $encodingId
      * @param string $streamId
-     * @return StreamDetailsPaginationResponse
+     * @return EncodingStreamInputPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(string $encodingId, string $streamId) : StreamDetailsPaginationResponse
+    public function list(string $encodingId, string $streamId) : EncodingStreamInputPaginationResponse
     {
         $pathParams = [
             'encoding_id' => $encodingId,
@@ -42,6 +42,6 @@ class InputsApi
 
         $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/streams/{stream_id}/inputs', $pathParams,  null, null, true);
 
-        return ObjectMapper::map($response, StreamDetailsPaginationResponse::class);
+        return ObjectMapper::map($response, EncodingStreamInputPaginationResponse::class);
     }
 }

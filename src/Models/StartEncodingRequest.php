@@ -34,6 +34,9 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\ManifestResource[] */
     public $vodHlsManifests;
 
+    /** @var \BitmovinApiSdk\Models\ManifestResource[] */
+    public $vodSmoothManifests;
+
     /** @var PerTitle */
     public $perTitle;
 
@@ -48,6 +51,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->previewHlsManifests = ObjectMapper::map($this->previewHlsManifests, ManifestResource::class);
         $this->vodDashManifests = ObjectMapper::map($this->vodDashManifests, ManifestResource::class);
         $this->vodHlsManifests = ObjectMapper::map($this->vodHlsManifests, ManifestResource::class);
+        $this->vodSmoothManifests = ObjectMapper::map($this->vodSmoothManifests, ManifestResource::class);
         $this->perTitle = ObjectMapper::map($this->perTitle, PerTitle::class);
     }
 
@@ -164,6 +168,19 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function vodHlsManifests(array $vodHlsManifests)
     {
         $this->vodHlsManifests = $vodHlsManifests;
+
+        return $this;
+    }
+
+    /**
+     * List of VoD SMOOTH manifests to be created after encoding finished successfully
+     *
+     * @param \BitmovinApiSdk\Models\ManifestResource[] $vodSmoothManifests
+     * @return $this
+     */
+    public function vodSmoothManifests(array $vodSmoothManifests)
+    {
+        $this->vodSmoothManifests = $vodSmoothManifests;
 
         return $this;
     }

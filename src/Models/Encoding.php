@@ -7,6 +7,27 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class Encoding extends BitmovinResource
 {
+    /** @var EncodingType */
+    public $type;
+
+    /** @var Carbon */
+    public $startedAt;
+
+    /** @var Carbon */
+    public $queuedAt;
+
+    /** @var Carbon */
+    public $runningAt;
+
+    /** @var Carbon */
+    public $finishedAt;
+
+    /** @var Carbon */
+    public $errorAt;
+
+    /** @var int */
+    public $progress;
+
     /** @var CloudRegion */
     public $cloudRegion;
 
@@ -40,6 +61,12 @@ class Encoding extends BitmovinResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->type = ObjectMapper::map($this->type, EncodingType::class);
+        $this->startedAt = ObjectMapper::map($this->startedAt, Carbon::class);
+        $this->queuedAt = ObjectMapper::map($this->queuedAt, Carbon::class);
+        $this->runningAt = ObjectMapper::map($this->runningAt, Carbon::class);
+        $this->finishedAt = ObjectMapper::map($this->finishedAt, Carbon::class);
+        $this->errorAt = ObjectMapper::map($this->errorAt, Carbon::class);
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, CloudRegion::class);
         $this->fallbackCloudRegions = ObjectMapper::map($this->fallbackCloudRegions, CloudRegion::class);
         $this->infrastructure = ObjectMapper::map($this->infrastructure, InfrastructureSettings::class);

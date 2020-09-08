@@ -55,6 +55,15 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const DOLBY_ATMOS = 'DOLBY_ATMOS';
 
+    /** @var string */
+    private const H262 = 'H262';
+
+    /** @var string */
+    private const PCM = 'PCM';
+
+    /** @var string */
+    private const WEBVTT = 'WEBVTT';
+
     /**
      * @param string $value
      * @return CodecConfigType
@@ -232,6 +241,36 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function DOLBY_ATMOS()
     {
         return new CodecConfigType(self::DOLBY_ATMOS);
+    }
+
+    /**
+     * H262
+     *
+     * @return CodecConfigType
+     */
+    public static function H262()
+    {
+        return new CodecConfigType(self::H262);
+    }
+
+    /**
+     * PCM
+     *
+     * @return CodecConfigType
+     */
+    public static function PCM()
+    {
+        return new CodecConfigType(self::PCM);
+    }
+
+    /**
+     * WEBVTT
+     *
+     * @return CodecConfigType
+     */
+    public static function WEBVTT()
+    {
+        return new CodecConfigType(self::WEBVTT);
     }
 }
 

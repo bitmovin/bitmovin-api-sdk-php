@@ -17,6 +17,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Ts\TsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Webm\WebmApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp3\Mp3Api;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mp4\Mp4Api;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Mxf\MxfApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveTs\ProgressiveTsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\BroadcastTs\BroadcastTsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ProgressiveWebm\ProgressiveWebmApi;
@@ -54,6 +55,9 @@ class MuxingsApi
     /** @var Mp4Api */
     public $mp4;
 
+    /** @var MxfApi */
+    public $mxf;
+
     /** @var ProgressiveTsApi */
     public $progressiveTs;
 
@@ -85,6 +89,7 @@ class MuxingsApi
         $this->webm = new WebmApi(null, $this->httpWrapper);
         $this->mp3 = new Mp3Api(null, $this->httpWrapper);
         $this->mp4 = new Mp4Api(null, $this->httpWrapper);
+        $this->mxf = new MxfApi(null, $this->httpWrapper);
         $this->progressiveTs = new ProgressiveTsApi(null, $this->httpWrapper);
         $this->broadcastTs = new BroadcastTsApi(null, $this->httpWrapper);
         $this->progressiveWebm = new ProgressiveWebmApi(null, $this->httpWrapper);

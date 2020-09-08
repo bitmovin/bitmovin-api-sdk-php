@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class WebVttConfiguration extends BitmovinResource
+class WebVttConfiguration extends SubtitleConfiguration
 {
     /** @var bool */
     public $appendOptionalZeroHour;

@@ -66,10 +66,12 @@
         <p/>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class WebVttConfiguration
-                extends <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinResource</a>
+                extends <a title="BitmovinApiSdk\Models\SubtitleConfiguration" href="../classes/BitmovinApiSdk_Models_SubtitleConfiguration.html">SubtitleConfiguration</a>
             {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$appendOptionalZeroHour</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$ignoreRegion</a>;
-                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public static string <a href="#members">$discriminatorName</a>;
+                        </li><li>public static array <a href="#members">$discriminatorMapping</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
                         </li><li>public string <a href="#members">$description</a>;
                         </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
                         </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$modifiedAt</a>;
@@ -78,7 +80,9 @@
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\WebVttConfiguration" href="../classes/BitmovinApiSdk_Models_WebVttConfiguration/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\WebVttConfiguration" href="../classes/BitmovinApiSdk_Models_WebVttConfiguration/appendOptionalZeroHour.html">appendOptionalZeroHour</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\WebVttConfiguration" href="../classes/BitmovinApiSdk_Models_WebVttConfiguration/ignoreRegion.html">ignoreRegion</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\SubtitleConfiguration">SubtitleConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\SubtitleConfiguration" href="../classes/BitmovinApiSdk_Models_SubtitleConfiguration/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\CodecConfiguration">CodecConfiguration</span></li><li>public void <a title="BitmovinApiSdk\Models\CodecConfiguration" href="../classes/BitmovinApiSdk_Models_CodecConfiguration/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/customData.html">customData</a>()
@@ -94,7 +98,7 @@
           <h4>Extends</h4>
           <ul>
             <li>
-              <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a>
+              <a title="BitmovinApiSdk\Models\SubtitleConfiguration" href="../classes/BitmovinApiSdk_Models_SubtitleConfiguration.html">BitmovinApiSdk\Models\SubtitleConfiguration</a>
             </li>
           </ul>
         </div>
@@ -114,6 +118,12 @@
             <li id="description"><strong>$description</strong>
                 —
                 string</li>
+            <li id="discriminatorMapping">
+              <strong>$discriminatorMapping</strong>
+            </li>
+            <li id="discriminatorName">
+              <strong>$discriminatorName</strong>
+            </li>
             <li id="id"><strong>$id</strong>
                 —
                 string</li>

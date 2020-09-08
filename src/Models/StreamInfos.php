@@ -21,7 +21,7 @@ class StreamInfos extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
+     * Timestamp of the event, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (required)
      *
      * @param Carbon $time
      * @return $this

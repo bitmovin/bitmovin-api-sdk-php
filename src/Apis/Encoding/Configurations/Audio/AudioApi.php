@@ -15,6 +15,7 @@ use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV1\HeAacV1Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV2\HeAacV2Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Vorbis\VorbisApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Opus\OpusApi;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Pcm\PcmApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Ac3\Ac3Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Eac3\Eac3Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Mp2\Mp2Api;
@@ -46,6 +47,9 @@ class AudioApi
     /** @var OpusApi */
     public $opus;
 
+    /** @var PcmApi */
+    public $pcm;
+
     /** @var Ac3Api */
     public $ac3;
 
@@ -75,6 +79,7 @@ class AudioApi
         $this->heAacV2 = new HeAacV2Api(null, $this->httpWrapper);
         $this->vorbis = new VorbisApi(null, $this->httpWrapper);
         $this->opus = new OpusApi(null, $this->httpWrapper);
+        $this->pcm = new PcmApi(null, $this->httpWrapper);
         $this->ac3 = new Ac3Api(null, $this->httpWrapper);
         $this->eac3 = new Eac3Api(null, $this->httpWrapper);
         $this->mp2 = new Mp2Api(null, $this->httpWrapper);

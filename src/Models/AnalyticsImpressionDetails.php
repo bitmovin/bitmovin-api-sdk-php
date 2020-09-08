@@ -232,9 +232,16 @@ class AnalyticsImpressionDetails extends BitmovinResponse
     /** @var int */
     public $videoWindowWidth;
 
+    /** @var bool */
+    public $videostartFailed;
+
+    /** @var \BitmovinApiSdk\Models\AnalyticsVideoStartFailedReason */
+    public $videostartFailedReason;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->videostartFailedReason = ObjectMapper::map($this->videostartFailedReason, AnalyticsVideoStartFailedReason::class);
     }
 
     /**
@@ -1208,6 +1215,32 @@ class AnalyticsImpressionDetails extends BitmovinResponse
     public function videoWindowWidth(int $videoWindowWidth)
     {
         $this->videoWindowWidth = $videoWindowWidth;
+
+        return $this;
+    }
+
+    /**
+     * True if starting the video failed
+     *
+     * @param bool $videostartFailed
+     * @return $this
+     */
+    public function videostartFailed(bool $videostartFailed)
+    {
+        $this->videostartFailed = $videostartFailed;
+
+        return $this;
+    }
+
+    /**
+     * videostartFailedReason
+     *
+     * @param \BitmovinApiSdk\Models\AnalyticsVideoStartFailedReason $videostartFailedReason
+     * @return $this
+     */
+    public function videostartFailedReason(\BitmovinApiSdk\Models\AnalyticsVideoStartFailedReason $videostartFailedReason)
+    {
+        $this->videostartFailedReason = $videostartFailedReason;
 
         return $this;
     }

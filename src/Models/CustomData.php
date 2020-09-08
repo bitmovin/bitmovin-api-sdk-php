@@ -33,7 +33,7 @@ class CustomData extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+     * Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $createdAt
      * @return $this
