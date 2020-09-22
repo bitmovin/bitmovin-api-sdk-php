@@ -92,6 +92,24 @@ class OutputsApi
     }
 
     /**
+     * Get Output Details
+     *
+     * @param string $outputId
+     * @return \BitmovinApiSdk\Models\Output
+     * @throws BitmovinApiException
+     */
+    public function get(string $outputId) : \BitmovinApiSdk\Models\Output
+    {
+        $pathParams = [
+            'output_id' => $outputId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/outputs/{output_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Output::class);
+    }
+
+    /**
      * List all Outputs
      *
      * @param OutputListQueryParams|null $queryParams

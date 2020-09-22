@@ -72,6 +72,28 @@ class DrmApi
     }
 
     /**
+     * DRM Details of an fMP4 muxing
+     *
+     * @param string $encodingId
+     * @param string $muxingId
+     * @param string $drmId
+     * @return \BitmovinApiSdk\Models\Drm
+     * @throws BitmovinApiException
+     */
+    public function get(string $encodingId, string $muxingId, string $drmId) : \BitmovinApiSdk\Models\Drm
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+            'muxing_id' => $muxingId,
+            'drm_id' => $drmId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/fmp4/{muxing_id}/drm/{drm_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Drm::class);
+    }
+
+    /**
      * List all DRMs of an fMP4 muxing
      *
      * @param string $encodingId

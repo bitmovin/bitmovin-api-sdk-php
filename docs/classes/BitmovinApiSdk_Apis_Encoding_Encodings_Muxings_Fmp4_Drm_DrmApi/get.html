@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\AnalyticsImpressionDetails::asn</title>
+    <title>phpDox - BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\DrmApi::get</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -36,12 +36,12 @@
             <a href="../../classes.html">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
+            <a href="../../classes.html#BitmovinApiSdk_Apis_Encoding_Encodings_Muxings_Fmp4_Drm">BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm</a>
           </li>
           <li class="separator">
-            <a title="BitmovinApiSdk\Models\AnalyticsImpressionDetails" href="../../classes/BitmovinApiSdk_Models_AnalyticsImpressionDetails.html">AnalyticsImpressionDetails</a>
+            <a title="BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\DrmApi" href="../../classes/BitmovinApiSdk_Apis_Encoding_Encodings_Muxings_Fmp4_Drm_DrmApi.html">DrmApi</a>
           </li>
-          <li class="separator">asn</li>
+          <li class="separator">get</li>
         </ul>
       </div>
       <nav class="box">
@@ -58,32 +58,55 @@
           <li>
             <a href="#return">Return</a>
           </li>
+          <li>
+            <a href="#throws">Throws</a>
+          </li>
         </ul>
       </nav>
       <section>
-        <h1><small>BitmovinApiSdk\Models\AnalyticsImpressionDetails::</small>asn</h1>
-        <h4>Autonomous System Number inferred from the IP address</h4>
+        <h1><small>BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\DrmApi::</small>get</h1>
+        <h4>DRM Details of an fMP4 muxing</h4>
         <p/>
-        <ul/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function asn(int
-        $asn )
+          <code>public function get(string
+        $encodingId,
+            string
+        $muxingId,
+            string
+        $drmId )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$asn</code>
+          <dt><code>$encodingId</code>
                 —
-                int</dt>
+                string</dt>
+          <dd/>
+          <dt><code>$muxingId</code>
+                —
+                string</dt>
+          <dd/>
+          <dt><code>$drmId</code>
+                —
+                string</dt>
           <dd/>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>$this</dt>
+          <dt>Drm</dt>
           <dd><br/>
         </dd>
+        </dl>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="BitmovinApiSdk\Common\BitmovinApiException" href="../../classes/BitmovinApiSdk_Common_BitmovinApiException.html">BitmovinApiException</a>
+            </code>
+          </dt>
+          <dd/>
         </dl>
       </section>
     </div>

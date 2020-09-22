@@ -17,9 +17,6 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const ANALYTICS_VERSION = 'ANALYTICS_VERSION';
 
     /** @var string */
-    private const ASN = 'ASN';
-
-    /** @var string */
     private const AUDIO_BITRATE = 'AUDIO_BITRATE';
 
     /** @var string */
@@ -327,16 +324,6 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function ANALYTICS_VERSION()
     {
         return new AnalyticsAttribute(self::ANALYTICS_VERSION);
-    }
-
-    /**
-     * ASN
-     *
-     * @return AnalyticsAttribute
-     */
-    public static function ASN()
-    {
-        return new AnalyticsAttribute(self::ASN);
     }
 
     /**

@@ -97,6 +97,26 @@ class MuxingsApi
     }
 
     /**
+     * Muxing Details
+     *
+     * @param string $encodingId
+     * @param string $muxingId
+     * @return \BitmovinApiSdk\Models\Muxing
+     * @throws BitmovinApiException
+     */
+    public function get(string $encodingId, string $muxingId) : \BitmovinApiSdk\Models\Muxing
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+            'muxing_id' => $muxingId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/muxings/{muxing_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Muxing::class);
+    }
+
+    /**
      * List All Muxings
      *
      * @param string $encodingId

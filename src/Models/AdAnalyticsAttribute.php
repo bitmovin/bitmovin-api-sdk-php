@@ -95,9 +95,6 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const API_FRAMEWORK = 'API_FRAMEWORK';
 
     /** @var string */
-    private const ASN = 'ASN';
-
-    /** @var string */
     private const AUDIO_BITRATE = 'AUDIO_BITRATE';
 
     /** @var string */
@@ -671,16 +668,6 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function API_FRAMEWORK()
     {
         return new AdAnalyticsAttribute(self::API_FRAMEWORK);
-    }
-
-    /**
-     * ASN
-     *
-     * @return AdAnalyticsAttribute
-     */
-    public static function ASN()
-    {
-        return new AdAnalyticsAttribute(self::ASN);
     }
 
     /**

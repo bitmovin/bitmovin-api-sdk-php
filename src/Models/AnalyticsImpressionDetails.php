@@ -14,9 +14,6 @@ class AnalyticsImpressionDetails extends BitmovinResponse
     public $analyticsVersion;
 
     /** @var int */
-    public $asn;
-
-    /** @var int */
     public $audioBitrate;
 
     /** @var string */
@@ -266,19 +263,6 @@ class AnalyticsImpressionDetails extends BitmovinResponse
     public function analyticsVersion(string $analyticsVersion)
     {
         $this->analyticsVersion = $analyticsVersion;
-
-        return $this;
-    }
-
-    /**
-     * Autonomous System Number inferred from the IP address
-     *
-     * @param int $asn
-     * @return $this
-     */
-    public function asn(int $asn)
-    {
-        $this->asn = $asn;
 
         return $this;
     }

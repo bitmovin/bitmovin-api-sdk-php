@@ -132,6 +132,24 @@ class InputsApi
     }
 
     /**
+     * Get Input Details
+     *
+     * @param string $inputId
+     * @return \BitmovinApiSdk\Models\Input
+     * @throws BitmovinApiException
+     */
+    public function get(string $inputId) : \BitmovinApiSdk\Models\Input
+    {
+        $pathParams = [
+            'input_id' => $inputId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/inputs/{input_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Input::class);
+    }
+
+    /**
      * List all Inputs
      *
      * @param InputListQueryParams|null $queryParams

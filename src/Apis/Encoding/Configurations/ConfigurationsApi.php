@@ -47,6 +47,24 @@ class ConfigurationsApi
     }
 
     /**
+     * Get Codec Configuration Details
+     *
+     * @param string $configurationId
+     * @return \BitmovinApiSdk\Models\CodecConfiguration
+     * @throws BitmovinApiException
+     */
+    public function get(string $configurationId) : \BitmovinApiSdk\Models\CodecConfiguration
+    {
+        $pathParams = [
+            'configuration_id' => $configurationId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/{configuration_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\CodecConfiguration::class);
+    }
+
+    /**
      * List all Codec Configurations
      *
      * @param CodecConfigurationListQueryParams|null $queryParams

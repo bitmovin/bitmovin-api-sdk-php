@@ -13,6 +13,9 @@ class AnalyticsImpressionsQuery extends AnalyticsQueryTimeframe
     /** @var \BitmovinApiSdk\Models\AnalyticsAbstractFilter[] */
     public $filters;
 
+    /** @var int */
+    public $limit;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -41,6 +44,19 @@ class AnalyticsImpressionsQuery extends AnalyticsQueryTimeframe
     public function filters(array $filters)
     {
         $this->filters = $filters;
+
+        return $this;
+    }
+
+    /**
+     * Number of returned impressions
+     *
+     * @param int $limit
+     * @return $this
+     */
+    public function limit(int $limit)
+    {
+        $this->limit = $limit;
 
         return $this;
     }

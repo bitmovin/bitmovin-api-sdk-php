@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Filters\Type\TypeApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Conform\ConformApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Watermark\WatermarkApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\AudioVolume\AudioVolumeApi;
@@ -22,12 +23,14 @@ use BitmovinApiSdk\Apis\Encoding\Filters\Text\TextApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Interlace\InterlaceApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Unsharp\UnsharpApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Scale\ScaleApi;
-use BitmovinApiSdk\Apis\Encoding\Filters\Type\TypeApi;
 
 class FiltersApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var TypeApi */
+    public $type;
 
     /** @var ConformApi */
     public $conform;
@@ -71,9 +74,6 @@ class FiltersApi
     /** @var ScaleApi */
     public $scale;
 
-    /** @var TypeApi */
-    public $type;
-
     /**
      * FiltersApi constructor.
      *
@@ -84,6 +84,7 @@ class FiltersApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->type = new TypeApi(null, $this->httpWrapper);
         $this->conform = new ConformApi(null, $this->httpWrapper);
         $this->watermark = new WatermarkApi(null, $this->httpWrapper);
         $this->audioVolume = new AudioVolumeApi(null, $this->httpWrapper);
@@ -98,7 +99,24 @@ class FiltersApi
         $this->interlace = new InterlaceApi(null, $this->httpWrapper);
         $this->unsharp = new UnsharpApi(null, $this->httpWrapper);
         $this->scale = new ScaleApi(null, $this->httpWrapper);
-        $this->type = new TypeApi(null, $this->httpWrapper);
+    }
+
+    /**
+     * Get Filter Details
+     *
+     * @param string $filterId
+     * @return \BitmovinApiSdk\Models\Filter
+     * @throws BitmovinApiException
+     */
+    public function get(string $filterId) : \BitmovinApiSdk\Models\Filter
+    {
+        $pathParams = [
+            'filter_id' => $filterId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/filters/{filter_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\Filter::class);
     }
 
     /**
