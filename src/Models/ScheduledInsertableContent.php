@@ -40,7 +40,7 @@ class ScheduledInsertableContent extends BitmovinResource
     }
 
     /**
-     * Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
+     * Time to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
      *
      * @param Carbon $runAt
      * @return $this

@@ -68,10 +68,10 @@
         <div class="synopsis">class Scheduling
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
             {<br/><ul class="none"><li>// members</li><li>public int <a href="#members">$priority</a>;
-                    </li><li>public array <a href="#members">$prewarmedInstancePoolIds</a>;
+                    </li><li>public array <a href="#members">$prewarmedEncoderPoolIds</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/priority.html">priority</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/prewarmedInstancePoolIds.html">prewarmedInstancePoolIds</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/prewarmedEncoderPoolIds.html">prewarmedEncoderPoolIds</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -91,7 +91,7 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="prewarmedInstancePoolIds"><strong>$prewarmedInstancePoolIds</strong>
+            <li id="prewarmedEncoderPoolIds"><strong>$prewarmedEncoderPoolIds</strong>
                 —
                 <a title="BitmovinApiSdk\Models\string" href="../classes/BitmovinApiSdk_Models_string.html">BitmovinApiSdk\Models\string</a>[]
                     </li>
@@ -107,8 +107,8 @@
             <li id="__construct">
               <a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/__construct.html">__construct()</a>
             </li>
-            <li id="prewarmedInstancePoolIds"><a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/prewarmedInstancePoolIds.html">prewarmedInstancePoolIds()</a>
-                — List of prewarmed Instance pools. If set, prewarmed instances from pools with these IDs will be used for the Encoding if available. The pool IDs will be tried in the order in which they are passed.</li>
+            <li id="prewarmedEncoderPoolIds"><a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/prewarmedEncoderPoolIds.html">prewarmedEncoderPoolIds()</a>
+                — List of prewarmed encoder pools. If set, prewarmed encoders from pools with these IDs will be used for the encoding if available. The pool IDs will be tried in the order in which they are passed.</li>
             <li id="priority"><a title="BitmovinApiSdk\Models\Scheduling" href="../classes/BitmovinApiSdk_Models_Scheduling/priority.html">priority()</a>
                 — Specify the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.</li>
           </ul>

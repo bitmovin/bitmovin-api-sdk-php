@@ -137,7 +137,7 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const LICENSE_KEY = 'LICENSE_KEY';
 
     /** @var string */
-    private const M3_U8_URL = 'M3U8_URL';
+    private const M3U8_URL = 'M3U8_URL';
 
     /** @var string */
     private const MINUTE = 'MINUTE';
@@ -727,13 +727,13 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * M3_U8_URL
+     * M3U8_URL
      *
      * @return AnalyticsAttribute
      */
-    public static function M3_U8_URL()
+    public static function M3U8_URL()
     {
-        return new AnalyticsAttribute(self::M3_U8_URL);
+        return new AnalyticsAttribute(self::M3U8_URL);
     }
 
     /**

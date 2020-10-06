@@ -4,6 +4,7 @@ namespace BitmovinApiSdk\Apis\Encoding\Encodings;
 
 use BitmovinApiSdk\Common\QueryParams;
 use \BitmovinApiSdk\Models\CloudRegion;
+use \BitmovinApiSdk\Models\EncodingMode;
 
 class EncodingListQueryParams implements QueryParams
 {
@@ -25,8 +26,17 @@ class EncodingListQueryParams implements QueryParams
     /** @var CloudRegion */
     private $cloudRegion;
 
+    /** @var CloudRegion */
+    private $selectedCloudRegion;
+
     /** @var string */
     private $encoderVersion;
+
+    /** @var string */
+    private $selectedEncoderVersion;
+
+    /** @var EncodingMode */
+    private $selectedEncodingMode;
 
     /** @var string */
     private $name;
@@ -109,12 +119,45 @@ class EncodingListQueryParams implements QueryParams
     }
 
     /**
+     * @param CloudRegion $selectedCloudRegion
+     * @return EncodingListQueryParams
+     */
+    public function selectedCloudRegion(CloudRegion $selectedCloudRegion): EncodingListQueryParams
+    {
+        $this->selectedCloudRegion = $selectedCloudRegion;
+
+        return $this;
+    }
+
+    /**
      * @param string $encoderVersion
      * @return EncodingListQueryParams
      */
     public function encoderVersion(string $encoderVersion): EncodingListQueryParams
     {
         $this->encoderVersion = $encoderVersion;
+
+        return $this;
+    }
+
+    /**
+     * @param string $selectedEncoderVersion
+     * @return EncodingListQueryParams
+     */
+    public function selectedEncoderVersion(string $selectedEncoderVersion): EncodingListQueryParams
+    {
+        $this->selectedEncoderVersion = $selectedEncoderVersion;
+
+        return $this;
+    }
+
+    /**
+     * @param EncodingMode $selectedEncodingMode
+     * @return EncodingListQueryParams
+     */
+    public function selectedEncodingMode(EncodingMode $selectedEncodingMode): EncodingListQueryParams
+    {
+        $this->selectedEncodingMode = $selectedEncodingMode;
 
         return $this;
     }

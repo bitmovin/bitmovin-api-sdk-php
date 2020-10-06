@@ -160,9 +160,9 @@
             <li id="createdAt"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/createdAt.html">createdAt()</a>
                 — Timestamp when the subtask was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
             <li id="errorAt"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/errorAt.html">errorAt()</a>
-                — Timestamp when the subtask status changed to &amp;#39;ERROR&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
+                — Timestamp when the subtask status changed to &amp;#39;ERROR&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &amp;#39;ERROR&amp;#39;.</li>
             <li id="finishedAt"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/finishedAt.html">finishedAt()</a>
-                — Timestamp when the subtask status changed to &amp;#39;FINISHED&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
+                — Timestamp when the subtask status changed to a final state like  &amp;#39;FINISHED&amp;#39;, &amp;#39;ERROR&amp;#39;, &amp;#39;CANCELED&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest).</li>
             <li id="messages"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/messages.html">messages()</a>
                 — Task specific messages</li>
             <li id="name"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/name.html">name()</a>
@@ -172,7 +172,7 @@
             <li id="queuedAt"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/queuedAt.html">queuedAt()</a>
                 — Timestamp when the subtask status changed to &amp;#39;QUEUED&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
             <li id="runningAt"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/runningAt.html">runningAt()</a>
-                — Timestamp when the subtask status changed to to &amp;#39;RUNNING&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
+                — Timestamp when the subtask status changed to &amp;#39;RUNNING&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
             <li id="startedAt"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/startedAt.html">startedAt()</a>
                 — Timestamp when the subtask was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</li>
             <li id="status"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/status.html">status()</a>

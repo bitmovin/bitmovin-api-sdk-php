@@ -26,7 +26,7 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     private const AUDIO_MIX = 'AUDIO_MIX';
 
     /** @var string */
-    private const DENOISE_HQDN3_D = 'DENOISE_HQDN3D';
+    private const DENOISE_HQDN3D = 'DENOISE_HQDN3D';
 
     /** @var string */
     private const TEXT = 'TEXT';
@@ -126,13 +126,13 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * DENOISE_HQDN3_D
+     * DENOISE_HQDN3D
      *
      * @return FilterType
      */
-    public static function DENOISE_HQDN3_D()
+    public static function DENOISE_HQDN3D()
     {
-        return new FilterType(self::DENOISE_HQDN3_D);
+        return new FilterType(self::DENOISE_HQDN3D);
     }
 
     /**

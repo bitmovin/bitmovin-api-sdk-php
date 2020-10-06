@@ -159,7 +159,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
      *
      * @param Carbon $runningAt
      * @return $this
@@ -172,7 +172,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to &#39;FINISHED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to a final state like  &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest).
      *
      * @param Carbon $finishedAt
      * @return $this
@@ -185,7 +185,7 @@ class Subtask extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+     * Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;.
      *
      * @param Carbon $errorAt
      * @return $this

@@ -8,7 +8,7 @@ class EncryptionType extends \BitmovinApiSdk\Common\Enum
     private const AES = 'AES';
 
     /** @var string */
-    private const DE_SEDE = 'DESede';
+    private const DESEDE = 'DESede';
 
     /** @var string */
     private const BLOWFISH = 'Blowfish';
@@ -36,13 +36,13 @@ class EncryptionType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * DE_SEDE
+     * DESEDE
      *
      * @return EncryptionType
      */
-    public static function DE_SEDE()
+    public static function DESEDE()
     {
-        return new EncryptionType(self::DE_SEDE);
+        return new EncryptionType(self::DESEDE);
     }
 
     /**

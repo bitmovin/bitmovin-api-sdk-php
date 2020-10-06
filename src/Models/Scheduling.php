@@ -11,7 +11,7 @@ class Scheduling extends \BitmovinApiSdk\Common\ApiResource
     public $priority;
 
     /** @var string[] */
-    public $prewarmedInstancePoolIds;
+    public $prewarmedEncoderPoolIds;
 
     public function __construct($attributes = null)
     {
@@ -32,14 +32,14 @@ class Scheduling extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of prewarmed Instance pools. If set, prewarmed instances from pools with these IDs will be used for the Encoding if available. The pool IDs will be tried in the order in which they are passed.
+     * List of prewarmed encoder pools. If set, prewarmed encoders from pools with these IDs will be used for the encoding if available. The pool IDs will be tried in the order in which they are passed.
      *
-     * @param string[] $prewarmedInstancePoolIds
+     * @param string[] $prewarmedEncoderPoolIds
      * @return $this
      */
-    public function prewarmedInstancePoolIds(array $prewarmedInstancePoolIds)
+    public function prewarmedEncoderPoolIds(array $prewarmedEncoderPoolIds)
     {
-        $this->prewarmedInstancePoolIds = $prewarmedInstancePoolIds;
+        $this->prewarmedEncoderPoolIds = $prewarmedEncoderPoolIds;
 
         return $this;
     }
