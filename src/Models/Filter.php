@@ -15,6 +15,7 @@ class Filter extends BitmovinResource
         "ENHANCED_WATERMARK" => EnhancedWatermarkFilter::class,
         "ROTATE" => RotateFilter::class,
         "DEINTERLACE" => DeinterlaceFilter::class,
+        "ENHANCED_DEINTERLACE" => EnhancedDeinterlaceFilter::class,
         "AUDIO_MIX" => AudioMixFilter::class,
         "DENOISE_HQDN3D" => DenoiseHqdn3dFilter::class,
         "TEXT" => TextFilter::class,

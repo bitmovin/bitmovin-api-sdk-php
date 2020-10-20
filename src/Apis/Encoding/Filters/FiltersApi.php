@@ -16,6 +16,7 @@ use BitmovinApiSdk\Apis\Encoding\Filters\EnhancedWatermark\EnhancedWatermarkApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Crop\CropApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Rotate\RotateApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Deinterlace\DeinterlaceApi;
+use BitmovinApiSdk\Apis\Encoding\Filters\EnhancedDeinterlace\EnhancedDeinterlaceApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\AudioMix\AudioMixApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\DenoiseHqdn3d\DenoiseHqdn3dApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\EbuR128SinglePass\EbuR128SinglePassApi;
@@ -52,6 +53,9 @@ class FiltersApi
 
     /** @var DeinterlaceApi */
     public $deinterlace;
+
+    /** @var EnhancedDeinterlaceApi */
+    public $enhancedDeinterlace;
 
     /** @var AudioMixApi */
     public $audioMix;
@@ -92,6 +96,7 @@ class FiltersApi
         $this->crop = new CropApi(null, $this->httpWrapper);
         $this->rotate = new RotateApi(null, $this->httpWrapper);
         $this->deinterlace = new DeinterlaceApi(null, $this->httpWrapper);
+        $this->enhancedDeinterlace = new EnhancedDeinterlaceApi(null, $this->httpWrapper);
         $this->audioMix = new AudioMixApi(null, $this->httpWrapper);
         $this->denoiseHqdn3d = new DenoiseHqdn3dApi(null, $this->httpWrapper);
         $this->ebuR128SinglePass = new EbuR128SinglePassApi(null, $this->httpWrapper);

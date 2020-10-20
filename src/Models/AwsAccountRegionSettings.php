@@ -10,20 +10,11 @@ class AwsAccountRegionSettings extends BitmovinResource
     /** @var int */
     public $limitParallelEncodings;
 
-    /** @var int */
-    public $maximumAmountOfCoordinatorsAndWorkersInRegion;
-
-    /** @var float */
-    public $maxMoneyToSpendPerMonth;
-
     /** @var string */
     public $securityGroupId;
 
     /** @var string */
     public $subnetId;
-
-    /** @var string[] */
-    public $machineTypes;
 
     /** @var int */
     public $sshPort;
@@ -42,32 +33,6 @@ class AwsAccountRegionSettings extends BitmovinResource
     public function limitParallelEncodings(int $limitParallelEncodings)
     {
         $this->limitParallelEncodings = $limitParallelEncodings;
-
-        return $this;
-    }
-
-    /**
-     * Maximum amount of encoding coordinators and workers allowed in this region at any time. Leave empty for no limit.
-     *
-     * @param int $maximumAmountOfCoordinatorsAndWorkersInRegion
-     * @return $this
-     */
-    public function maximumAmountOfCoordinatorsAndWorkersInRegion(int $maximumAmountOfCoordinatorsAndWorkersInRegion)
-    {
-        $this->maximumAmountOfCoordinatorsAndWorkersInRegion = $maximumAmountOfCoordinatorsAndWorkersInRegion;
-
-        return $this;
-    }
-
-    /**
-     * Limit the amount of money to spend in this region on this account. Leave empty for no limit.
-     *
-     * @param float $maxMoneyToSpendPerMonth
-     * @return $this
-     */
-    public function maxMoneyToSpendPerMonth(float $maxMoneyToSpendPerMonth)
-    {
-        $this->maxMoneyToSpendPerMonth = $maxMoneyToSpendPerMonth;
 
         return $this;
     }
@@ -94,19 +59,6 @@ class AwsAccountRegionSettings extends BitmovinResource
     public function subnetId(string $subnetId)
     {
         $this->subnetId = $subnetId;
-
-        return $this;
-    }
-
-    /**
-     * Which machine types are allowed to be deployed. Leave empty for no machine type restrictions.
-     *
-     * @param string[] $machineTypes
-     * @return $this
-     */
-    public function machineTypes(array $machineTypes)
-    {
-        $this->machineTypes = $machineTypes;
 
         return $this;
     }

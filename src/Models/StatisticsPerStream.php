@@ -79,6 +79,12 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $liveMultiplicator;
 
+    /** @var bool */
+    public $enhancedDeinterlace;
+
+    /** @var float */
+    public $enhancedDeinterlaceMultiplicator;
+
     /** @var \BitmovinApiSdk\Models\InputFactor */
     public $inputFactor;
 

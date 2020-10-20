@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Kubernetes\KubernetesApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Aws\AwsApi;
+use BitmovinApiSdk\Apis\Encoding\Infrastructure\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Gce\GceApi;
 
 class InfrastructureApi
@@ -22,6 +23,9 @@ class InfrastructureApi
 
     /** @var AwsApi */
     public $aws;
+
+    /** @var AzureApi */
+    public $azure;
 
     /** @var GceApi */
     public $gce;
@@ -38,6 +42,7 @@ class InfrastructureApi
 
         $this->kubernetes = new KubernetesApi(null, $this->httpWrapper);
         $this->aws = new AwsApi(null, $this->httpWrapper);
+        $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->gce = new GceApi(null, $this->httpWrapper);
     }
 }

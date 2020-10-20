@@ -68,11 +68,8 @@
         <div class="synopsis">class AwsAccountRegionSettings
                 extends <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinResource</a>
             {<br/><ul class="none"><li>// members</li><li>public int <a href="#members">$limitParallelEncodings</a>;
-                    </li><li>public int <a href="#members">$maximumAmountOfCoordinatorsAndWorkersInRegion</a>;
-                    </li><li>public float <a href="#members">$maxMoneyToSpendPerMonth</a>;
                     </li><li>public string <a href="#members">$securityGroupId</a>;
                     </li><li>public string <a href="#members">$subnetId</a>;
-                    </li><li>public array <a href="#members">$machineTypes</a>;
                     </li><li>public int <a href="#members">$sshPort</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
                         </li><li>public string <a href="#members">$description</a>;
@@ -82,11 +79,8 @@
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/limitParallelEncodings.html">limitParallelEncodings</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/maximumAmountOfCoordinatorsAndWorkersInRegion.html">maximumAmountOfCoordinatorsAndWorkersInRegion</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/maxMoneyToSpendPerMonth.html">maxMoneyToSpendPerMonth</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/securityGroupId.html">securityGroupId</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/subnetId.html">subnetId</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/machineTypes.html">machineTypes</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/sshPort.html">sshPort</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
@@ -127,16 +121,6 @@
             <li id="limitParallelEncodings"><strong>$limitParallelEncodings</strong>
                 —
                 int</li>
-            <li id="machineTypes"><strong>$machineTypes</strong>
-                —
-                <a title="BitmovinApiSdk\Models\string" href="../classes/BitmovinApiSdk_Models_string.html">BitmovinApiSdk\Models\string</a>[]
-                    </li>
-            <li id="maxMoneyToSpendPerMonth"><strong>$maxMoneyToSpendPerMonth</strong>
-                —
-                float</li>
-            <li id="maximumAmountOfCoordinatorsAndWorkersInRegion"><strong>$maximumAmountOfCoordinatorsAndWorkersInRegion</strong>
-                —
-                int</li>
             <li id="modifiedAt"><strong>$modifiedAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -163,12 +147,6 @@
             </li>
             <li id="limitParallelEncodings"><a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/limitParallelEncodings.html">limitParallelEncodings()</a>
                 — Limit for the amount of running encodings at a time. Leave empty for no limit.</li>
-            <li id="machineTypes"><a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/machineTypes.html">machineTypes()</a>
-                — Which machine types are allowed to be deployed. Leave empty for no machine type restrictions.</li>
-            <li id="maxMoneyToSpendPerMonth"><a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/maxMoneyToSpendPerMonth.html">maxMoneyToSpendPerMonth()</a>
-                — Limit the amount of money to spend in this region on this account. Leave empty for no limit.</li>
-            <li id="maximumAmountOfCoordinatorsAndWorkersInRegion"><a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/maximumAmountOfCoordinatorsAndWorkersInRegion.html">maximumAmountOfCoordinatorsAndWorkersInRegion()</a>
-                — Maximum amount of encoding coordinators and workers allowed in this region at any time. Leave empty for no limit.</li>
             <li id="securityGroupId"><a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/securityGroupId.html">securityGroupId()</a>
                 — Id of the security group for encoding instances (required)</li>
             <li id="sshPort"><a title="BitmovinApiSdk\Models\AwsAccountRegionSettings" href="../classes/BitmovinApiSdk_Models_AwsAccountRegionSettings/sshPort.html">sshPort()</a>

@@ -23,6 +23,9 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     private const DEINTERLACE = 'DEINTERLACE';
 
     /** @var string */
+    private const ENHANCED_DEINTERLACE = 'ENHANCED_DEINTERLACE';
+
+    /** @var string */
     private const AUDIO_MIX = 'AUDIO_MIX';
 
     /** @var string */
@@ -113,6 +116,16 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     public static function DEINTERLACE()
     {
         return new FilterType(self::DEINTERLACE);
+    }
+
+    /**
+     * ENHANCED_DEINTERLACE
+     *
+     * @return FilterType
+     */
+    public static function ENHANCED_DEINTERLACE()
+    {
+        return new FilterType(self::ENHANCED_DEINTERLACE);
     }
 
     /**
