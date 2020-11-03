@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\ChunkedText;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class DashChunkedTextRepresentationListQueryParams implements QueryParams
@@ -44,7 +45,12 @@ class DashChunkedTextRepresentationListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -52,7 +58,5 @@ class DashChunkedTextRepresentationListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

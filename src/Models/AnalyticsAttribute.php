@@ -104,6 +104,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const EXPERIMENT_NAME = 'EXPERIMENT_NAME';
 
     /** @var string */
+    private const _FUNCTION = 'FUNCTION';
+
+    /** @var string */
     private const HOUR = 'HOUR';
 
     /** @var string */
@@ -189,6 +192,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
 
     /** @var string */
     private const PROG_URL = 'PROG_URL';
+
+    /** @var string */
+    private const REBUFFER_PERCENTAGE = 'REBUFFER_PERCENTAGE';
 
     /** @var string */
     private const REGION = 'REGION';
@@ -617,6 +623,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * _FUNCTION
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function _FUNCTION()
+    {
+        return new AnalyticsAttribute(self::_FUNCTION);
+    }
+
+    /**
      * HOUR
      *
      * @return AnalyticsAttribute
@@ -904,6 +920,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function PROG_URL()
     {
         return new AnalyticsAttribute(self::PROG_URL);
+    }
+
+    /**
+     * REBUFFER_PERCENTAGE
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function REBUFFER_PERCENTAGE()
+    {
+        return new AnalyticsAttribute(self::REBUFFER_PERCENTAGE);
     }
 
     /**

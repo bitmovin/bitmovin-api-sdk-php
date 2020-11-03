@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Configurations\Video\H264;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class H264VideoConfigurationListQueryParams implements QueryParams
@@ -58,7 +59,12 @@ class H264VideoConfigurationListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -66,7 +72,5 @@ class H264VideoConfigurationListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

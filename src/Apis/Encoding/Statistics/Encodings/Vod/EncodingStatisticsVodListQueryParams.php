@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Vod;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class EncodingStatisticsVodListQueryParams implements QueryParams
@@ -44,7 +45,12 @@ class EncodingStatisticsVodListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -52,7 +58,5 @@ class EncodingStatisticsVodListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Inputs\Tcp;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class TcpInputListQueryParams implements QueryParams
@@ -58,7 +59,12 @@ class TcpInputListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -66,7 +72,5 @@ class TcpInputListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

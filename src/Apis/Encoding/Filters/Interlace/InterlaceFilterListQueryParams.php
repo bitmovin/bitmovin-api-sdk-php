@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Filters\Interlace;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class InterlaceFilterListQueryParams implements QueryParams
@@ -58,7 +59,12 @@ class InterlaceFilterListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -66,7 +72,5 @@ class InterlaceFilterListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Drm\Aes;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class AesEncryptionDrmListQueryParams implements QueryParams
@@ -44,7 +45,12 @@ class AesEncryptionDrmListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -52,7 +58,5 @@ class AesEncryptionDrmListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Streams\Iframe;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
 class IFramePlaylistListQueryParams implements QueryParams
@@ -44,7 +45,12 @@ class IFramePlaylistListQueryParams implements QueryParams
 
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -52,7 +58,5 @@ class IFramePlaylistListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }

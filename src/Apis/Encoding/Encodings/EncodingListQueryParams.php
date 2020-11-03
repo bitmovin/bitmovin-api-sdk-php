@@ -2,6 +2,7 @@
 
 namespace BitmovinApiSdk\Apis\Encoding\Encodings;
 
+use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 use \BitmovinApiSdk\Models\CloudRegion;
 use \BitmovinApiSdk\Models\EncodingMode;
@@ -43,6 +44,18 @@ class EncodingListQueryParams implements QueryParams
 
     /** @var string */
     private $search;
+
+    /** @var Carbon */
+    private $createdAtNewerThan;
+
+    /** @var Carbon */
+    private $createdAtOlderThan;
+
+    /** @var Carbon */
+    private $startedAtNewerThan;
+
+    /** @var Carbon */
+    private $startedAtOlderThan;
 
     /**
      * @return EncodingListQueryParams
@@ -184,9 +197,58 @@ class EncodingListQueryParams implements QueryParams
         return $this;
     }
 
+    /**
+     * @param Carbon $createdAtNewerThan
+     * @return EncodingListQueryParams
+     */
+    public function createdAtNewerThan(Carbon $createdAtNewerThan): EncodingListQueryParams
+    {
+        $this->createdAtNewerThan = $createdAtNewerThan;
+
+        return $this;
+    }
+
+    /**
+     * @param Carbon $createdAtOlderThan
+     * @return EncodingListQueryParams
+     */
+    public function createdAtOlderThan(Carbon $createdAtOlderThan): EncodingListQueryParams
+    {
+        $this->createdAtOlderThan = $createdAtOlderThan;
+
+        return $this;
+    }
+
+    /**
+     * @param Carbon $startedAtNewerThan
+     * @return EncodingListQueryParams
+     */
+    public function startedAtNewerThan(Carbon $startedAtNewerThan): EncodingListQueryParams
+    {
+        $this->startedAtNewerThan = $startedAtNewerThan;
+
+        return $this;
+    }
+
+    /**
+     * @param Carbon $startedAtOlderThan
+     * @return EncodingListQueryParams
+     */
+    public function startedAtOlderThan(Carbon $startedAtOlderThan): EncodingListQueryParams
+    {
+        $this->startedAtOlderThan = $startedAtOlderThan;
+
+        return $this;
+    }
+
     public function toArray(): array
     {
-        $data = array_map(function ($value) {
+        return array_map(function ($value) {
+            if($value instanceof Carbon)
+            {
+                return $value->utc()->toIso8601ZuluString();
+            }
+
             if($value instanceof \JsonSerializable)
             {
                 return $value->jsonSerialize();
@@ -194,7 +256,5 @@ class EncodingListQueryParams implements QueryParams
 
             return $value;
         }, get_object_vars($this));
-
-        return $data;
     }
 }
