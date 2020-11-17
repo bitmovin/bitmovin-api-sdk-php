@@ -12,6 +12,7 @@ use BitmovinApiSdk\Apis\Encoding\Infrastructure\Kubernetes\KubernetesApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Aws\AwsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Gce\GceApi;
+use BitmovinApiSdk\Apis\Encoding\Infrastructure\PrewarmedEncoderPools\PrewarmedEncoderPoolsApi;
 
 class InfrastructureApi
 {
@@ -30,6 +31,9 @@ class InfrastructureApi
     /** @var GceApi */
     public $gce;
 
+    /** @var PrewarmedEncoderPoolsApi */
+    public $prewarmedEncoderPools;
+
     /**
      * InfrastructureApi constructor.
      *
@@ -44,5 +48,6 @@ class InfrastructureApi
         $this->aws = new AwsApi(null, $this->httpWrapper);
         $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->gce = new GceApi(null, $this->httpWrapper);
+        $this->prewarmedEncoderPools = new PrewarmedEncoderPoolsApi(null, $this->httpWrapper);
     }
 }

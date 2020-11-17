@@ -16,11 +16,15 @@ class HlsManifest extends Manifest
     /** @var HlsVersion */
     public $hlsMasterPlaylistVersion;
 
+    /** @var ChannelsAttributeForAudio */
+    public $channelsAttributeForAudio;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->hlsMediaPlaylistVersion = ObjectMapper::map($this->hlsMediaPlaylistVersion, HlsVersion::class);
         $this->hlsMasterPlaylistVersion = ObjectMapper::map($this->hlsMasterPlaylistVersion, HlsVersion::class);
+        $this->channelsAttributeForAudio = ObjectMapper::map($this->channelsAttributeForAudio, ChannelsAttributeForAudio::class);
     }
 
     /**
@@ -58,6 +62,19 @@ class HlsManifest extends Manifest
     public function hlsMasterPlaylistVersion(HlsVersion $hlsMasterPlaylistVersion)
     {
         $this->hlsMasterPlaylistVersion = $hlsMasterPlaylistVersion;
+
+        return $this;
+    }
+
+    /**
+     * Controls the behaviour of the CHANNELS attribute for the EXT-X-VERSION tag
+     *
+     * @param ChannelsAttributeForAudio $channelsAttributeForAudio
+     * @return $this
+     */
+    public function channelsAttributeForAudio(ChannelsAttributeForAudio $channelsAttributeForAudio)
+    {
+        $this->channelsAttributeForAudio = $channelsAttributeForAudio;
 
         return $this;
     }

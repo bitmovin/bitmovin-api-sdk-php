@@ -22,12 +22,16 @@ class SpekeDrmProvider extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $externalId;
 
+    /** @var ExternalIdMode */
+    public $externalIdMode;
+
     /** @var string */
     public $gatewayRegion;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->externalIdMode = ObjectMapper::map($this->externalIdMode, ExternalIdMode::class);
     }
 
     /**
@@ -91,6 +95,19 @@ class SpekeDrmProvider extends \BitmovinApiSdk\Common\ApiResource
     public function externalId(string $externalId)
     {
         $this->externalId = $externalId;
+
+        return $this;
+    }
+
+    /**
+     * externalIdMode
+     *
+     * @param ExternalIdMode $externalIdMode
+     * @return $this
+     */
+    public function externalIdMode(ExternalIdMode $externalIdMode)
+    {
+        $this->externalIdMode = $externalIdMode;
 
         return $this;
     }

@@ -16,9 +16,6 @@ class Webhook extends BitmovinResource
     /** @var bool */
     public $insecureSsl;
 
-    /** @var WebhookEncryption */
-    public $encryption;
-
     /** @var WebhookSignature */
     public $signature;
 
@@ -29,7 +26,6 @@ class Webhook extends BitmovinResource
     {
         parent::__construct($attributes);
         $this->method = ObjectMapper::map($this->method, WebhookHttpMethod::class);
-        $this->encryption = ObjectMapper::map($this->encryption, WebhookEncryption::class);
         $this->signature = ObjectMapper::map($this->signature, WebhookSignature::class);
     }
 
@@ -68,19 +64,6 @@ class Webhook extends BitmovinResource
     public function insecureSsl(bool $insecureSsl)
     {
         $this->insecureSsl = $insecureSsl;
-
-        return $this;
-    }
-
-    /**
-     * Encryption used for the webhook
-     *
-     * @param WebhookEncryption $encryption
-     * @return $this
-     */
-    public function encryption(WebhookEncryption $encryption)
-    {
-        $this->encryption = $encryption;
 
         return $this;
     }
