@@ -20,7 +20,7 @@ class FileInputStreamType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Specifies that the Sidecar file conforms to the TTML standard
+     * Specifies that the sidecar file conforms to the TTML standard
      *
      * @return FileInputStreamType
      */
@@ -30,7 +30,7 @@ class FileInputStreamType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Specifies that the Sidecar file conforms to the WEBVTT standard
+     * Specifies that the sidecar file conforms to the WEBVTT standard
      *
      * @return FileInputStreamType
      */

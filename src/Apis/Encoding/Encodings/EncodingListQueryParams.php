@@ -57,6 +57,12 @@ class EncodingListQueryParams implements QueryParams
     /** @var Carbon */
     private $startedAtOlderThan;
 
+    /** @var Carbon */
+    private $finishedAtNewerThan;
+
+    /** @var Carbon */
+    private $finishedAtOlderThan;
+
     /**
      * @return EncodingListQueryParams
      */
@@ -237,6 +243,28 @@ class EncodingListQueryParams implements QueryParams
     public function startedAtOlderThan(Carbon $startedAtOlderThan): EncodingListQueryParams
     {
         $this->startedAtOlderThan = $startedAtOlderThan;
+
+        return $this;
+    }
+
+    /**
+     * @param Carbon $finishedAtNewerThan
+     * @return EncodingListQueryParams
+     */
+    public function finishedAtNewerThan(Carbon $finishedAtNewerThan): EncodingListQueryParams
+    {
+        $this->finishedAtNewerThan = $finishedAtNewerThan;
+
+        return $this;
+    }
+
+    /**
+     * @param Carbon $finishedAtOlderThan
+     * @return EncodingListQueryParams
+     */
+    public function finishedAtOlderThan(Carbon $finishedAtOlderThan): EncodingListQueryParams
+    {
+        $this->finishedAtOlderThan = $finishedAtOlderThan;
 
         return $this;
     }

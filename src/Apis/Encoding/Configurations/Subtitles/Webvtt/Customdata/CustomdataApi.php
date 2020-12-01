@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * WebVtt Subtitle Configuration Custom Data
+     * WebVtt subtitle configuration custom data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

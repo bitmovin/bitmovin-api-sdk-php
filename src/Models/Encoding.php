@@ -76,19 +76,6 @@ class Encoding extends BitmovinResource
     }
 
     /**
-     * Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;.
-     *
-     * @param Carbon $errorAt
-     * @return $this
-     */
-    public function errorAt(Carbon $errorAt)
-    {
-        $this->errorAt = $errorAt;
-
-        return $this;
-    }
-
-    /**
      * cloudRegion
      *
      * @param CloudRegion $cloudRegion

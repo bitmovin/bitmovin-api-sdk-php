@@ -32,7 +32,7 @@ class WebvttApi
     }
 
     /**
-     * Create WebVtt Subtitle Configuration
+     * Create WebVtt subtitle configuration
      *
      * @param \BitmovinApiSdk\Models\WebVttConfiguration $webVttConfiguration
      * @return \BitmovinApiSdk\Models\WebVttConfiguration
@@ -40,13 +40,13 @@ class WebvttApi
      */
     public function create(\BitmovinApiSdk\Models\WebVttConfiguration $webVttConfiguration) : \BitmovinApiSdk\Models\WebVttConfiguration
     {
-        $response = $this->httpWrapper->request('POST', '/encoding/configurations/subtitles/webvtt/', [],  null, $webVttConfiguration, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/configurations/subtitles/webvtt', [],  null, $webVttConfiguration, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WebVttConfiguration::class);
     }
 
     /**
-     * Delete WebVtt Subtitle Configuration
+     * Delete WebVtt subtitle configuration
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -64,7 +64,7 @@ class WebvttApi
     }
 
     /**
-     * WebVtt Subtitle Configuration Details
+     * WebVtt subtitle configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\WebVttConfiguration
@@ -82,7 +82,7 @@ class WebvttApi
     }
 
     /**
-     * List WebVtt Configurations
+     * List WebVtt subtitle configurations
      *
      * @param WebVttConfigurationListQueryParams|null $queryParams
      * @return WebVttConfigurationPaginationResponse
@@ -90,7 +90,7 @@ class WebvttApi
      */
     public function list(WebVttConfigurationListQueryParams $queryParams = null) : WebVttConfigurationPaginationResponse
     {
-        $response = $this->httpWrapper->request('GET', '/encoding/configurations/subtitles/webvtt/', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/subtitles/webvtt', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, WebVttConfigurationPaginationResponse::class);
     }

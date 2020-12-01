@@ -25,6 +25,9 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var AutoRestartConfiguration */
     public $autoRestartConfiguration;
 
+    /** @var string[] */
+    public $staticIpId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -109,6 +112,19 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function autoRestartConfiguration(AutoRestartConfiguration $autoRestartConfiguration)
     {
         $this->autoRestartConfiguration = $autoRestartConfiguration;
+
+        return $this;
+    }
+
+    /**
+     * The static IP that will be used for the live encoding. If the provider and the region do not match the encoding start call will fail.
+     *
+     * @param string[] $staticIpId
+     * @return $this
+     */
+    public function staticIpId(array $staticIpId)
+    {
+        $this->staticIpId = $staticIpId;
 
         return $this;
     }

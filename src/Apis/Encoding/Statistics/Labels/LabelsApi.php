@@ -40,7 +40,7 @@ class LabelsApi
      */
     public function list(StatisticsPerLabelListQueryParams $queryParams = null) : StatisticsPerLabelPaginationResponse
     {
-        $response = $this->httpWrapper->request('GET', '/encoding/statistics/labels/', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/labels', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, StatisticsPerLabelPaginationResponse::class);
     }
