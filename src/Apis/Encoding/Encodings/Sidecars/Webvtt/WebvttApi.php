@@ -83,4 +83,23 @@ class WebvttApi
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\WebVttSidecarFile::class);
     }
+
+    /**
+     * List WebVTT sidecar files
+     *
+     * @param string $encodingId
+     * @param WebVttSidecarFileListQueryParams|null $queryParams
+     * @return WebVttSidecarFilePaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list(string $encodingId, WebVttSidecarFileListQueryParams $queryParams = null) : WebVttSidecarFilePaginationResponse
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/sidecars/webvtt', $pathParams, $queryParams, null, true);
+
+        return ObjectMapper::map($response, WebVttSidecarFilePaginationResponse::class);
+    }
 }

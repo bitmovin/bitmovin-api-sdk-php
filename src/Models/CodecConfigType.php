@@ -64,6 +64,9 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const WEBVTT = 'WEBVTT';
 
+    /** @var string */
+    private const DVB_SUBTITLE = 'DVB_SUBTITLE';
+
     /**
      * @param string $value
      * @return CodecConfigType
@@ -271,6 +274,16 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function WEBVTT()
     {
         return new CodecConfigType(self::WEBVTT);
+    }
+
+    /**
+     * DVB_SUBTITLE
+     *
+     * @return CodecConfigType
+     */
+    public static function DVB_SUBTITLE()
+    {
+        return new CodecConfigType(self::DVB_SUBTITLE);
     }
 }
 

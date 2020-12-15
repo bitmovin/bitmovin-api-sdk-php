@@ -10,6 +10,9 @@ class FileInputStreamType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const WEBVTT = 'WEBVTT';
 
+    /** @var string */
+    private const SRT = 'SRT';
+
     /**
      * @param string $value
      * @return FileInputStreamType
@@ -37,6 +40,16 @@ class FileInputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function WEBVTT()
     {
         return new FileInputStreamType(self::WEBVTT);
+    }
+
+    /**
+     * Specifies that the sidecar file conforms to the SRT standard
+     *
+     * @return FileInputStreamType
+     */
+    public static function SRT()
+    {
+        return new FileInputStreamType(self::SRT);
     }
 }
 

@@ -29,7 +29,7 @@ class CropFilter extends Filter
     }
 
     /**
-     * Amount of pixels which will be cropped of the input video from the left side.
+     * Amount of pixels that will be cropped of the input video from the left side. Must be zero or a positive value.
      *
      * @param int $left
      * @return $this
@@ -42,7 +42,7 @@ class CropFilter extends Filter
     }
 
     /**
-     * Amount of pixels which will be cropped of the input video from the right side.
+     * Amount of pixels that will be cropped of the input video from the right side. Must be zero or a positive value.
      *
      * @param int $right
      * @return $this
@@ -55,7 +55,7 @@ class CropFilter extends Filter
     }
 
     /**
-     * Amount of pixels which will be cropped of the input video from the top.
+     * Amount of pixels that will be cropped of the input video from the top. Must be zero or a positive value.
      *
      * @param int $top
      * @return $this
@@ -68,7 +68,7 @@ class CropFilter extends Filter
     }
 
     /**
-     * Amount of pixels which will be cropped of the input video from the bottom.
+     * Amount of pixels that will be cropped of the input video from the bottom. Must be zero or a positive value.
      *
      * @param int $bottom
      * @return $this

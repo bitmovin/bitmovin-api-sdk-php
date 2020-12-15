@@ -44,6 +44,9 @@ class Encoding extends BitmovinResource
     public $infrastructure;
 
     /** @var string */
+    public $staticIpId;
+
+    /** @var string */
     public $selectedEncoderVersion;
 
     /** @var EncodingMode */
@@ -136,6 +139,19 @@ class Encoding extends BitmovinResource
     public function infrastructure(InfrastructureSettings $infrastructure)
     {
         $this->infrastructure = $infrastructure;
+
+        return $this;
+    }
+
+    /**
+     * Specify an ID of a Static IP infrastructure resource this encoding should use. A Static IP cannot be used by multiple encodings at once. The encoding will go to an error state if the Static IP is already in use. This is currently only supported for live encodings.
+     *
+     * @param string $staticIpId
+     * @return $this
+     */
+    public function staticIpId(string $staticIpId)
+    {
+        $this->staticIpId = $staticIpId;
 
         return $this;
     }

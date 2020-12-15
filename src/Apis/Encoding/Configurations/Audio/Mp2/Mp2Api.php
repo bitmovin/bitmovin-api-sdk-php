@@ -80,4 +80,18 @@ class Mp2Api
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\Mp2AudioConfiguration::class);
     }
+
+    /**
+     * List MP2 Configurations
+     *
+     * @param Mp2AudioConfigurationListQueryParams|null $queryParams
+     * @return Mp2AudioConfigurationPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list(Mp2AudioConfigurationListQueryParams $queryParams = null) : Mp2AudioConfigurationPaginationResponse
+    {
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/mp2', [], $queryParams, null, true);
+
+        return ObjectMapper::map($response, Mp2AudioConfigurationPaginationResponse::class);
+    }
 }

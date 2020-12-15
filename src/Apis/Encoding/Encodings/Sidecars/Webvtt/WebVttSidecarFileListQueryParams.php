@@ -1,11 +1,11 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Analytics\Alerting\Incidents;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\Sidecars\Webvtt;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class AnalyticsIncidentListByLicenseKeyQueryParams implements QueryParams
+class WebVttSidecarFileListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -14,18 +14,18 @@ class AnalyticsIncidentListByLicenseKeyQueryParams implements QueryParams
     private $limit;
 
     /**
-     * @return AnalyticsIncidentListByLicenseKeyQueryParams
+     * @return WebVttSidecarFileListQueryParams
      */
-    public static function create(): AnalyticsIncidentListByLicenseKeyQueryParams
+    public static function create(): WebVttSidecarFileListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return AnalyticsIncidentListByLicenseKeyQueryParams
+     * @return WebVttSidecarFileListQueryParams
      */
-    public function offset(int $offset): AnalyticsIncidentListByLicenseKeyQueryParams
+    public function offset(int $offset): WebVttSidecarFileListQueryParams
     {
         $this->offset = $offset;
 
@@ -34,9 +34,9 @@ class AnalyticsIncidentListByLicenseKeyQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return AnalyticsIncidentListByLicenseKeyQueryParams
+     * @return WebVttSidecarFileListQueryParams
      */
-    public function limit(int $limit): AnalyticsIncidentListByLicenseKeyQueryParams
+    public function limit(int $limit): WebVttSidecarFileListQueryParams
     {
         $this->limit = $limit;
 

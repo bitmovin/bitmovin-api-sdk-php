@@ -16,7 +16,6 @@ use BitmovinApiSdk\Apis\Analytics\Ads\AdsApi;
 use BitmovinApiSdk\Apis\Analytics\Queries\QueriesApi;
 use BitmovinApiSdk\Apis\Analytics\Licenses\LicensesApi;
 use BitmovinApiSdk\Apis\Analytics\Outputs\OutputsApi;
-use BitmovinApiSdk\Apis\Analytics\Alerting\AlertingApi;
 
 class AnalyticsApi
 {
@@ -47,9 +46,6 @@ class AnalyticsApi
     /** @var OutputsApi */
     public $outputs;
 
-    /** @var AlertingApi */
-    public $alerting;
-
     /**
      * AnalyticsApi constructor.
      *
@@ -68,6 +64,5 @@ class AnalyticsApi
         $this->queries = new QueriesApi(null, $this->httpWrapper);
         $this->licenses = new LicensesApi(null, $this->httpWrapper);
         $this->outputs = new OutputsApi(null, $this->httpWrapper);
-        $this->alerting = new AlertingApi(null, $this->httpWrapper);
     }
 }

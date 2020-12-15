@@ -1,11 +1,11 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Analytics\Alerting\Rules;
+namespace BitmovinApiSdk\Apis\Encoding\Infrastructure\StaticIps;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class AnalyticsAlertingRuleListQueryParams implements QueryParams
+class StaticIpListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -14,18 +14,18 @@ class AnalyticsAlertingRuleListQueryParams implements QueryParams
     private $limit;
 
     /**
-     * @return AnalyticsAlertingRuleListQueryParams
+     * @return StaticIpListQueryParams
      */
-    public static function create(): AnalyticsAlertingRuleListQueryParams
+    public static function create(): StaticIpListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return AnalyticsAlertingRuleListQueryParams
+     * @return StaticIpListQueryParams
      */
-    public function offset(int $offset): AnalyticsAlertingRuleListQueryParams
+    public function offset(int $offset): StaticIpListQueryParams
     {
         $this->offset = $offset;
 
@@ -34,9 +34,9 @@ class AnalyticsAlertingRuleListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return AnalyticsAlertingRuleListQueryParams
+     * @return StaticIpListQueryParams
      */
-    public function limit(int $limit): AnalyticsAlertingRuleListQueryParams
+    public function limit(int $limit): StaticIpListQueryParams
     {
         $this->limit = $limit;
 

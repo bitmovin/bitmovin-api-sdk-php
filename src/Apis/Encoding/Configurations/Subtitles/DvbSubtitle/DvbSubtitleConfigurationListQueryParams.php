@@ -1,11 +1,11 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Analytics\Alerting\Incidents;
+namespace BitmovinApiSdk\Apis\Encoding\Configurations\Subtitles\DvbSubtitle;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class AnalyticsIncidentListQueryParams implements QueryParams
+class DvbSubtitleConfigurationListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -13,19 +13,22 @@ class AnalyticsIncidentListQueryParams implements QueryParams
     /** @var int */
     private $limit;
 
+    /** @var string */
+    private $name;
+
     /**
-     * @return AnalyticsIncidentListQueryParams
+     * @return DvbSubtitleConfigurationListQueryParams
      */
-    public static function create(): AnalyticsIncidentListQueryParams
+    public static function create(): DvbSubtitleConfigurationListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return AnalyticsIncidentListQueryParams
+     * @return DvbSubtitleConfigurationListQueryParams
      */
-    public function offset(int $offset): AnalyticsIncidentListQueryParams
+    public function offset(int $offset): DvbSubtitleConfigurationListQueryParams
     {
         $this->offset = $offset;
 
@@ -34,11 +37,22 @@ class AnalyticsIncidentListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return AnalyticsIncidentListQueryParams
+     * @return DvbSubtitleConfigurationListQueryParams
      */
-    public function limit(int $limit): AnalyticsIncidentListQueryParams
+    public function limit(int $limit): DvbSubtitleConfigurationListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @return DvbSubtitleConfigurationListQueryParams
+     */
+    public function name(string $name): DvbSubtitleConfigurationListQueryParams
+    {
+        $this->name = $name;
 
         return $this;
     }

@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Kubernetes\KubernetesApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Aws\AwsApi;
+use BitmovinApiSdk\Apis\Encoding\Infrastructure\StaticIps\StaticIpsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Gce\GceApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\PrewarmedEncoderPools\PrewarmedEncoderPoolsApi;
@@ -24,6 +25,9 @@ class InfrastructureApi
 
     /** @var AwsApi */
     public $aws;
+
+    /** @var StaticIpsApi */
+    public $staticIps;
 
     /** @var AzureApi */
     public $azure;
@@ -46,6 +50,7 @@ class InfrastructureApi
 
         $this->kubernetes = new KubernetesApi(null, $this->httpWrapper);
         $this->aws = new AwsApi(null, $this->httpWrapper);
+        $this->staticIps = new StaticIpsApi(null, $this->httpWrapper);
         $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->gce = new GceApi(null, $this->httpWrapper);
         $this->prewarmedEncoderPools = new PrewarmedEncoderPoolsApi(null, $this->httpWrapper);
