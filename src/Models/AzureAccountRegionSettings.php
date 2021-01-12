@@ -13,9 +13,13 @@ class AzureAccountRegionSettings extends BitmovinResource
     /** @var string */
     public $subnetName;
 
+    /** @var \BitmovinApiSdk\Models\AzureCloudRegion */
+    public $region;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->region = ObjectMapper::map($this->region, AzureCloudRegion::class);
     }
 
     /**
@@ -40,6 +44,19 @@ class AzureAccountRegionSettings extends BitmovinResource
     public function subnetName(string $subnetName)
     {
         $this->subnetName = $subnetName;
+
+        return $this;
+    }
+
+    /**
+     * region
+     *
+     * @param \BitmovinApiSdk\Models\AzureCloudRegion $region
+     * @return $this
+     */
+    public function region(\BitmovinApiSdk\Models\AzureCloudRegion $region)
+    {
+        $this->region = $region;
 
         return $this;
     }

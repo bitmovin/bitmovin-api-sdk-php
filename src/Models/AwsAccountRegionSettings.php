@@ -19,9 +19,13 @@ class AwsAccountRegionSettings extends BitmovinResource
     /** @var int */
     public $sshPort;
 
+    /** @var \BitmovinApiSdk\Models\AwsCloudRegion */
+    public $region;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->region = ObjectMapper::map($this->region, AwsCloudRegion::class);
     }
 
     /**
@@ -72,6 +76,19 @@ class AwsAccountRegionSettings extends BitmovinResource
     public function sshPort(int $sshPort)
     {
         $this->sshPort = $sshPort;
+
+        return $this;
+    }
+
+    /**
+     * region
+     *
+     * @param \BitmovinApiSdk\Models\AwsCloudRegion $region
+     * @return $this
+     */
+    public function region(\BitmovinApiSdk\Models\AwsCloudRegion $region)
+    {
+        $this->region = $region;
 
         return $this;
     }

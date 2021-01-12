@@ -13,9 +13,13 @@ class GceAccountRegionSettings extends BitmovinResource
     /** @var string */
     public $subnetId;
 
+    /** @var \BitmovinApiSdk\Models\GoogleCloudRegion */
+    public $region;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->region = ObjectMapper::map($this->region, GoogleCloudRegion::class);
     }
 
     /**
@@ -40,6 +44,19 @@ class GceAccountRegionSettings extends BitmovinResource
     public function subnetId(string $subnetId)
     {
         $this->subnetId = $subnetId;
+
+        return $this;
+    }
+
+    /**
+     * region
+     *
+     * @param \BitmovinApiSdk\Models\GoogleCloudRegion $region
+     * @return $this
+     */
+    public function region(\BitmovinApiSdk\Models\GoogleCloudRegion $region)
+    {
+        $this->region = $region;
 
         return $this;
     }

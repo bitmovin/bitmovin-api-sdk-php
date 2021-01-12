@@ -114,19 +114,6 @@ class Stream extends BitmovinResource
     }
 
     /**
-     * Number of encoded segments. Available after encoding finishes.
-     *
-     * @param int $segmentsEncoded
-     * @return $this
-     */
-    public function segmentsEncoded(int $segmentsEncoded)
-    {
-        $this->segmentsEncoded = $segmentsEncoded;
-
-        return $this;
-    }
-
-    /**
      * Conditions to evaluate before creating the stream. If this evaluation fails, the stream won&#39;t be created. All muxings that depend on the stream will also not be created.
      *
      * @param AbstractCondition $conditions
