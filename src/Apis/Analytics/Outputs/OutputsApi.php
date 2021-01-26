@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Analytics\Outputs\S3RoleBased\S3RoleBasedApi;
+use BitmovinApiSdk\Apis\Analytics\Outputs\GcsServiceAccount\GcsServiceAccountApi;
 
 class OutputsApi
 {
@@ -17,6 +18,9 @@ class OutputsApi
 
     /** @var S3RoleBasedApi */
     public $s3RoleBased;
+
+    /** @var GcsServiceAccountApi */
+    public $gcsServiceAccount;
 
     /**
      * OutputsApi constructor.
@@ -29,5 +33,6 @@ class OutputsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->s3RoleBased = new S3RoleBasedApi(null, $this->httpWrapper);
+        $this->gcsServiceAccount = new GcsServiceAccountApi(null, $this->httpWrapper);
     }
 }

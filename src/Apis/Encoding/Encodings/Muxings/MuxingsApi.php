@@ -12,6 +12,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Fmp4Api;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ChunkedText\ChunkedTextApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\CmafApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\SegmentedRaw\SegmentedRawApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\PackedAudio\PackedAudioApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Text\TextApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Ts\TsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Webm\WebmApi;
@@ -39,6 +40,9 @@ class MuxingsApi
 
     /** @var SegmentedRawApi */
     public $segmentedRaw;
+
+    /** @var PackedAudioApi */
+    public $packedAudio;
 
     /** @var TextApi */
     public $text;
@@ -84,6 +88,7 @@ class MuxingsApi
         $this->chunkedText = new ChunkedTextApi(null, $this->httpWrapper);
         $this->cmaf = new CmafApi(null, $this->httpWrapper);
         $this->segmentedRaw = new SegmentedRawApi(null, $this->httpWrapper);
+        $this->packedAudio = new PackedAudioApi(null, $this->httpWrapper);
         $this->text = new TextApi(null, $this->httpWrapper);
         $this->ts = new TsApi(null, $this->httpWrapper);
         $this->webm = new WebmApi(null, $this->httpWrapper);

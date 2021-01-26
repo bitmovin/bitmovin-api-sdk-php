@@ -16,6 +16,9 @@ class BroadcastTsProgramConfiguration extends \BitmovinApiSdk\Common\ApiResource
     /** @var bool */
     public $insertProgramClockRefOnPes;
 
+    /** @var int */
+    public $programClockRefInterval;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -56,6 +59,19 @@ class BroadcastTsProgramConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function insertProgramClockRefOnPes(bool $insertProgramClockRefOnPes)
     {
         $this->insertProgramClockRefOnPes = $insertProgramClockRefOnPes;
+
+        return $this;
+    }
+
+    /**
+     * Interval between Program Clock References (PCRs) in milliseconds. Defines the period between PCR fields inserted in the stream. The default value is 90ms.
+     *
+     * @param int $programClockRefInterval
+     * @return $this
+     */
+    public function programClockRefInterval(int $programClockRefInterval)
+    {
+        $this->programClockRefInterval = $programClockRefInterval;
 
         return $this;
     }

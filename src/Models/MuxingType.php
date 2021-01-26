@@ -46,6 +46,9 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const SEGMENTED_RAW = 'SEGMENTED_RAW';
 
+    /** @var string */
+    private const PACKED_AUDIO = 'PACKED_AUDIO';
+
     /**
      * @param string $value
      * @return MuxingType
@@ -193,6 +196,16 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     public static function SEGMENTED_RAW()
     {
         return new MuxingType(self::SEGMENTED_RAW);
+    }
+
+    /**
+     * PACKED_AUDIO
+     *
+     * @return MuxingType
+     */
+    public static function PACKED_AUDIO()
+    {
+        return new MuxingType(self::PACKED_AUDIO);
     }
 }
 

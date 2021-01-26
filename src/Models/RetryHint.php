@@ -13,6 +13,9 @@ class RetryHint extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const NO_RETRY = 'NO_RETRY';
 
+    /** @var string */
+    private const UNDEFINED = 'UNDEFINED';
+
     /**
      * @param string $value
      * @return RetryHint
@@ -50,6 +53,16 @@ class RetryHint extends \BitmovinApiSdk\Common\Enum
     public static function NO_RETRY()
     {
         return new RetryHint(self::NO_RETRY);
+    }
+
+    /**
+     * Unable to determine if the error is retryable.
+     *
+     * @return RetryHint
+     */
+    public static function UNDEFINED()
+    {
+        return new RetryHint(self::UNDEFINED);
     }
 }
 

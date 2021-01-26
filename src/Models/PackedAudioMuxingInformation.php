@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class AnalyticsImpressionDetails extends array<AnalyticsImpressionSample>
+class PackedAudioMuxingInformation extends FragmentedMuxingInformation
 {
     public function __construct($attributes = null)
     {

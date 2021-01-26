@@ -44,6 +44,7 @@ class Muxing extends BitmovinResource
         "CHUNKED_TEXT" => ChunkedTextMuxing::class,
         "TEXT" => TextMuxing::class,
         "SEGMENTED_RAW" => SegmentedRawMuxing::class,
+        "PACKED_AUDIO" => PackedAudioMuxing::class,
     ];
 
     public function __construct($attributes = null)
