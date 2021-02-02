@@ -85,6 +85,12 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $enhancedDeinterlaceMultiplicator;
 
+    /** @var \BitmovinApiSdk\Models\NexGuardABWatermarkingFeature */
+    public $nexGuardABWatermarkingType;
+
+    /** @var float */
+    public $nexGuardABWatermarkingMultiplicator;
+
     /** @var \BitmovinApiSdk\Models\InputFactor */
     public $inputFactor;
 
@@ -97,6 +103,7 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
         $this->perTitleResultStream = ObjectMapper::map($this->perTitleResultStream, StatisticsPerTitleStream::class);
         $this->psnrMode = ObjectMapper::map($this->psnrMode, PsnrPerStreamMode::class);
         $this->dolbyVisionMode = ObjectMapper::map($this->dolbyVisionMode, DolbyVisionPerStreamMode::class);
+        $this->nexGuardABWatermarkingType = ObjectMapper::map($this->nexGuardABWatermarkingType, NexGuardABWatermarkingFeature::class);
         $this->inputFactor = ObjectMapper::map($this->inputFactor, InputFactor::class);
     }
 
@@ -174,6 +181,19 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function dolbyVisionMode(\BitmovinApiSdk\Models\DolbyVisionPerStreamMode $dolbyVisionMode)
     {
         $this->dolbyVisionMode = $dolbyVisionMode;
+
+        return $this;
+    }
+
+    /**
+     * nexGuardABWatermarkingType
+     *
+     * @param \BitmovinApiSdk\Models\NexGuardABWatermarkingFeature $nexGuardABWatermarkingType
+     * @return $this
+     */
+    public function nexGuardABWatermarkingType(\BitmovinApiSdk\Models\NexGuardABWatermarkingFeature $nexGuardABWatermarkingType)
+    {
+        $this->nexGuardABWatermarkingType = $nexGuardABWatermarkingType;
 
         return $this;
     }

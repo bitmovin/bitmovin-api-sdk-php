@@ -13,9 +13,13 @@ class WebVttConfiguration extends SubtitleConfiguration
     /** @var bool */
     public $ignoreRegion;
 
+    /** @var WebVttCueIdentifierPolicy */
+    public $cueIdentifierPolicy;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->cueIdentifierPolicy = ObjectMapper::map($this->cueIdentifierPolicy, WebVttCueIdentifierPolicy::class);
     }
 
     /**
@@ -40,6 +44,19 @@ class WebVttConfiguration extends SubtitleConfiguration
     public function ignoreRegion(bool $ignoreRegion)
     {
         $this->ignoreRegion = $ignoreRegion;
+
+        return $this;
+    }
+
+    /**
+     * cueIdentifierPolicy
+     *
+     * @param WebVttCueIdentifierPolicy $cueIdentifierPolicy
+     * @return $this
+     */
+    public function cueIdentifierPolicy(WebVttCueIdentifierPolicy $cueIdentifierPolicy)
+    {
+        $this->cueIdentifierPolicy = $cueIdentifierPolicy;
 
         return $this;
     }

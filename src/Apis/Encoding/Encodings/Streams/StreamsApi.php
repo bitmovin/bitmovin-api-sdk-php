@@ -13,6 +13,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Input\InputApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Inputs\InputsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Filters\FiltersApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\BurnInSubtitles\BurnInSubtitlesApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Watermarking\WatermarkingApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Captions\CaptionsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Bifs\BifsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Hdr\HdrApi;
@@ -39,6 +40,9 @@ class StreamsApi
 
     /** @var BurnInSubtitlesApi */
     public $burnInSubtitles;
+
+    /** @var WatermarkingApi */
+    public $watermarking;
 
     /** @var CaptionsApi */
     public $captions;
@@ -73,6 +77,7 @@ class StreamsApi
         $this->inputs = new InputsApi(null, $this->httpWrapper);
         $this->filters = new FiltersApi(null, $this->httpWrapper);
         $this->burnInSubtitles = new BurnInSubtitlesApi(null, $this->httpWrapper);
+        $this->watermarking = new WatermarkingApi(null, $this->httpWrapper);
         $this->captions = new CaptionsApi(null, $this->httpWrapper);
         $this->bifs = new BifsApi(null, $this->httpWrapper);
         $this->hdr = new HdrApi(null, $this->httpWrapper);
