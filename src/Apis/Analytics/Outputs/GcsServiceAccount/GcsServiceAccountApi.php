@@ -34,15 +34,15 @@ class GcsServiceAccountApi
     /**
      * Create Service Account based GCS Output
      *
-     * @param \BitmovinApiSdk\Models\GcsServiceAccountOutput $gcsServiceAccountOutput
-     * @return \BitmovinApiSdk\Models\GcsServiceAccountOutput
+     * @param \BitmovinApiSdk\Models\AnalyticsGcsServiceAccountOutput $analyticsGcsServiceAccountOutput
+     * @return \BitmovinApiSdk\Models\AnalyticsGcsServiceAccountOutput
      * @throws BitmovinApiException
      */
-    public function create(\BitmovinApiSdk\Models\GcsServiceAccountOutput $gcsServiceAccountOutput) : \BitmovinApiSdk\Models\GcsServiceAccountOutput
+    public function create(\BitmovinApiSdk\Models\AnalyticsGcsServiceAccountOutput $analyticsGcsServiceAccountOutput) : \BitmovinApiSdk\Models\AnalyticsGcsServiceAccountOutput
     {
-        $response = $this->httpWrapper->request('POST', '/analytics/outputs/gcs-service-account', [],  null, $gcsServiceAccountOutput, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/outputs/gcs-service-account', [],  null, $analyticsGcsServiceAccountOutput, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\GcsServiceAccountOutput::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsGcsServiceAccountOutput::class);
     }
 
     /**
@@ -84,14 +84,14 @@ class GcsServiceAccountApi
     /**
      * List Service Account based GCS Outputs
      *
-     * @param GcsServiceAccountOutputListQueryParams|null $queryParams
-     * @return GcsServiceAccountOutputPaginationResponse
+     * @param AnalyticsGcsServiceAccountOutputListQueryParams|null $queryParams
+     * @return AnalyticsGcsServiceAccountOutputPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(GcsServiceAccountOutputListQueryParams $queryParams = null) : GcsServiceAccountOutputPaginationResponse
+    public function list(AnalyticsGcsServiceAccountOutputListQueryParams $queryParams = null) : AnalyticsGcsServiceAccountOutputPaginationResponse
     {
         $response = $this->httpWrapper->request('GET', '/analytics/outputs/gcs-service-account', [], $queryParams, null, true);
 
-        return ObjectMapper::map($response, GcsServiceAccountOutputPaginationResponse::class);
+        return ObjectMapper::map($response, AnalyticsGcsServiceAccountOutputPaginationResponse::class);
     }
 }

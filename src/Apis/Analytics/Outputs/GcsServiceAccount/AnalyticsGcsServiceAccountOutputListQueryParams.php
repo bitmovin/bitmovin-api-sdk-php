@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Apis\Analytics\Outputs\GcsServiceAccount;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class GcsServiceAccountOutputListQueryParams implements QueryParams
+class AnalyticsGcsServiceAccountOutputListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -17,18 +17,18 @@ class GcsServiceAccountOutputListQueryParams implements QueryParams
     private $name;
 
     /**
-     * @return GcsServiceAccountOutputListQueryParams
+     * @return AnalyticsGcsServiceAccountOutputListQueryParams
      */
-    public static function create(): GcsServiceAccountOutputListQueryParams
+    public static function create(): AnalyticsGcsServiceAccountOutputListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return GcsServiceAccountOutputListQueryParams
+     * @return AnalyticsGcsServiceAccountOutputListQueryParams
      */
-    public function offset(int $offset): GcsServiceAccountOutputListQueryParams
+    public function offset(int $offset): AnalyticsGcsServiceAccountOutputListQueryParams
     {
         $this->offset = $offset;
 
@@ -37,9 +37,9 @@ class GcsServiceAccountOutputListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return GcsServiceAccountOutputListQueryParams
+     * @return AnalyticsGcsServiceAccountOutputListQueryParams
      */
-    public function limit(int $limit): GcsServiceAccountOutputListQueryParams
+    public function limit(int $limit): AnalyticsGcsServiceAccountOutputListQueryParams
     {
         $this->limit = $limit;
 
@@ -48,9 +48,9 @@ class GcsServiceAccountOutputListQueryParams implements QueryParams
 
     /**
      * @param string $name
-     * @return GcsServiceAccountOutputListQueryParams
+     * @return AnalyticsGcsServiceAccountOutputListQueryParams
      */
-    public function name(string $name): GcsServiceAccountOutputListQueryParams
+    public function name(string $name): AnalyticsGcsServiceAccountOutputListQueryParams
     {
         $this->name = $name;
 

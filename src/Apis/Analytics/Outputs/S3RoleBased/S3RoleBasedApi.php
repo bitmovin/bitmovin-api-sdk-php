@@ -34,15 +34,15 @@ class S3RoleBasedApi
     /**
      * Create S3 Role-based Output
      *
-     * @param \BitmovinApiSdk\Models\S3RoleBasedOutput $s3RoleBasedOutput
-     * @return \BitmovinApiSdk\Models\S3RoleBasedOutput
+     * @param \BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput $analyticsS3RoleBasedOutput
+     * @return \BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput
      * @throws BitmovinApiException
      */
-    public function create(\BitmovinApiSdk\Models\S3RoleBasedOutput $s3RoleBasedOutput) : \BitmovinApiSdk\Models\S3RoleBasedOutput
+    public function create(\BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput $analyticsS3RoleBasedOutput) : \BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput
     {
-        $response = $this->httpWrapper->request('POST', '/analytics/outputs/s3-role-based', [],  null, $s3RoleBasedOutput, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/outputs/s3-role-based', [],  null, $analyticsS3RoleBasedOutput, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\S3RoleBasedOutput::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput::class);
     }
 
     /**
@@ -84,14 +84,14 @@ class S3RoleBasedApi
     /**
      * List S3 Role-based Outputs
      *
-     * @param S3RoleBasedOutputListQueryParams|null $queryParams
-     * @return S3RoleBasedOutputPaginationResponse
+     * @param AnalyticsS3RoleBasedOutputListQueryParams|null $queryParams
+     * @return AnalyticsS3RoleBasedOutputPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(S3RoleBasedOutputListQueryParams $queryParams = null) : S3RoleBasedOutputPaginationResponse
+    public function list(AnalyticsS3RoleBasedOutputListQueryParams $queryParams = null) : AnalyticsS3RoleBasedOutputPaginationResponse
     {
         $response = $this->httpWrapper->request('GET', '/analytics/outputs/s3-role-based', [], $queryParams, null, true);
 
-        return ObjectMapper::map($response, S3RoleBasedOutputPaginationResponse::class);
+        return ObjectMapper::map($response, AnalyticsS3RoleBasedOutputPaginationResponse::class);
     }
 }

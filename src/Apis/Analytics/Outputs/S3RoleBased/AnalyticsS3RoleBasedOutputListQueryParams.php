@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Apis\Analytics\Outputs\S3RoleBased;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class S3RoleBasedOutputListQueryParams implements QueryParams
+class AnalyticsS3RoleBasedOutputListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -17,18 +17,18 @@ class S3RoleBasedOutputListQueryParams implements QueryParams
     private $name;
 
     /**
-     * @return S3RoleBasedOutputListQueryParams
+     * @return AnalyticsS3RoleBasedOutputListQueryParams
      */
-    public static function create(): S3RoleBasedOutputListQueryParams
+    public static function create(): AnalyticsS3RoleBasedOutputListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return S3RoleBasedOutputListQueryParams
+     * @return AnalyticsS3RoleBasedOutputListQueryParams
      */
-    public function offset(int $offset): S3RoleBasedOutputListQueryParams
+    public function offset(int $offset): AnalyticsS3RoleBasedOutputListQueryParams
     {
         $this->offset = $offset;
 
@@ -37,9 +37,9 @@ class S3RoleBasedOutputListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return S3RoleBasedOutputListQueryParams
+     * @return AnalyticsS3RoleBasedOutputListQueryParams
      */
-    public function limit(int $limit): S3RoleBasedOutputListQueryParams
+    public function limit(int $limit): AnalyticsS3RoleBasedOutputListQueryParams
     {
         $this->limit = $limit;
 
@@ -48,9 +48,9 @@ class S3RoleBasedOutputListQueryParams implements QueryParams
 
     /**
      * @param string $name
-     * @return S3RoleBasedOutputListQueryParams
+     * @return AnalyticsS3RoleBasedOutputListQueryParams
      */
-    public function name(string $name): S3RoleBasedOutputListQueryParams
+    public function name(string $name): AnalyticsS3RoleBasedOutputListQueryParams
     {
         $this->name = $name;
 
