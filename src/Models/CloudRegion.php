@@ -140,9 +140,6 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const GOOGLE = 'GOOGLE';
 
     /** @var string */
-    private const KUBERNETES = 'KUBERNETES';
-
-    /** @var string */
     private const EXTERNAL = 'EXTERNAL';
 
     /** @var string */
@@ -605,16 +602,6 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function GOOGLE()
     {
         return new CloudRegion(self::GOOGLE);
-    }
-
-    /**
-     * KUBERNETES
-     *
-     * @return CloudRegion
-     */
-    public static function KUBERNETES()
-    {
-        return new CloudRegion(self::KUBERNETES);
     }
 
     /**

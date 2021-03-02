@@ -8,7 +8,6 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\Encoding\Infrastructure\Kubernetes\KubernetesApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Aws\AwsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\StaticIps\StaticIpsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Azure\AzureApi;
@@ -19,9 +18,6 @@ class InfrastructureApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
-
-    /** @var KubernetesApi */
-    public $kubernetes;
 
     /** @var AwsApi */
     public $aws;
@@ -48,7 +44,6 @@ class InfrastructureApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
-        $this->kubernetes = new KubernetesApi(null, $this->httpWrapper);
         $this->aws = new AwsApi(null, $this->httpWrapper);
         $this->staticIps = new StaticIpsApi(null, $this->httpWrapper);
         $this->azure = new AzureApi(null, $this->httpWrapper);

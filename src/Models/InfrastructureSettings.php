@@ -20,7 +20,7 @@ class InfrastructureSettings extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Id of a custom infrastructure, e.g., Kubernetes Cluster
+     * Id of a custom infrastructure, e.g., AWS Cloud Connect
      *
      * @param string $infrastructureId
      * @return $this
