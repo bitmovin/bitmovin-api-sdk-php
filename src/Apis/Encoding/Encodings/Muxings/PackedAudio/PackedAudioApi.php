@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\PackedAudio\Customdata\CustomdataApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\PackedAudio\Information\InformationApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\PackedAudio\Drm\DrmApi;
 
 class PackedAudioApi
 {
@@ -21,6 +22,9 @@ class PackedAudioApi
 
     /** @var InformationApi */
     public $information;
+
+    /** @var DrmApi */
+    public $drm;
 
     /**
      * PackedAudioApi constructor.
@@ -34,6 +38,7 @@ class PackedAudioApi
 
         $this->customdata = new CustomdataApi(null, $this->httpWrapper);
         $this->information = new InformationApi(null, $this->httpWrapper);
+        $this->drm = new DrmApi(null, $this->httpWrapper);
     }
 
     /**

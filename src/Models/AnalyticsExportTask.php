@@ -37,6 +37,12 @@ class AnalyticsExportTask extends BitmovinResponse
     /** @var Carbon */
     public $finishedAt;
 
+    /** @var \BitmovinApiSdk\Models\AnalyticsExportType */
+    public $type;
+
+    /** @var string[] */
+    public $columns;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -46,6 +52,7 @@ class AnalyticsExportTask extends BitmovinResponse
         $this->status = ObjectMapper::map($this->status, AnalyticsExportStatus::class);
         $this->startedAt = ObjectMapper::map($this->startedAt, Carbon::class);
         $this->finishedAt = ObjectMapper::map($this->finishedAt, Carbon::class);
+        $this->type = ObjectMapper::map($this->type, AnalyticsExportType::class);
     }
 
     /**
@@ -135,6 +142,32 @@ class AnalyticsExportTask extends BitmovinResponse
     public function status(\BitmovinApiSdk\Models\AnalyticsExportStatus $status)
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * type
+     *
+     * @param \BitmovinApiSdk\Models\AnalyticsExportType $type
+     * @return $this
+     */
+    public function type(\BitmovinApiSdk\Models\AnalyticsExportType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * columns
+     *
+     * @param string[] $columns
+     * @return $this
+     */
+    public function columns(array $columns)
+    {
+        $this->columns = $columns;
 
         return $this;
     }

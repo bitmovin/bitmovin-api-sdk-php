@@ -22,10 +22,14 @@ class StreamInput extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $inputStreamId;
 
+    /** @var EncodingStreamInputDetails */
+    public $analysisDetails;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->selectionMode = ObjectMapper::map($this->selectionMode, StreamSelectionMode::class);
+        $this->analysisDetails = ObjectMapper::map($this->analysisDetails, EncodingStreamInputDetails::class);
     }
 
     /**
