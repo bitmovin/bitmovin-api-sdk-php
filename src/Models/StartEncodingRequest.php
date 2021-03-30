@@ -37,6 +37,9 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\ManifestResource[] */
     public $vodSmoothManifests;
 
+    /** @var ManifestGenerator */
+    public $manifestGenerator;
+
     /** @var PerTitle */
     public $perTitle;
 
@@ -52,6 +55,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->vodDashManifests = ObjectMapper::map($this->vodDashManifests, ManifestResource::class);
         $this->vodHlsManifests = ObjectMapper::map($this->vodHlsManifests, ManifestResource::class);
         $this->vodSmoothManifests = ObjectMapper::map($this->vodSmoothManifests, ManifestResource::class);
+        $this->manifestGenerator = ObjectMapper::map($this->manifestGenerator, ManifestGenerator::class);
         $this->perTitle = ObjectMapper::map($this->perTitle, PerTitle::class);
     }
 
@@ -181,6 +185,19 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function vodSmoothManifests(array $vodSmoothManifests)
     {
         $this->vodSmoothManifests = $vodSmoothManifests;
+
+        return $this;
+    }
+
+    /**
+     * Sets the version of the manifest generation engine
+     *
+     * @param ManifestGenerator $manifestGenerator
+     * @return $this
+     */
+    public function manifestGenerator(ManifestGenerator $manifestGenerator)
+    {
+        $this->manifestGenerator = $manifestGenerator;
 
         return $this;
     }

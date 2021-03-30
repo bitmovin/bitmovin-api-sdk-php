@@ -19,6 +19,9 @@ class BroadcastTsMuxingConfiguration extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\BroadcastTsAudioInputStreamConfiguration[] */
     public $audioStreams;
 
+    /** @var \BitmovinApiSdk\Models\BroadcastTsSubtitleInputStreamConfiguration[] */
+    public $subtitleStreams;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -26,6 +29,7 @@ class BroadcastTsMuxingConfiguration extends \BitmovinApiSdk\Common\ApiResource
         $this->program = ObjectMapper::map($this->program, BroadcastTsProgramConfiguration::class);
         $this->videoStreams = ObjectMapper::map($this->videoStreams, BroadcastTsVideoInputStreamConfiguration::class);
         $this->audioStreams = ObjectMapper::map($this->audioStreams, BroadcastTsAudioInputStreamConfiguration::class);
+        $this->subtitleStreams = ObjectMapper::map($this->subtitleStreams, BroadcastTsSubtitleInputStreamConfiguration::class);
     }
 
     /**
@@ -76,6 +80,19 @@ class BroadcastTsMuxingConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function audioStreams(array $audioStreams)
     {
         $this->audioStreams = $audioStreams;
+
+        return $this;
+    }
+
+    /**
+     * subtitleStreams
+     *
+     * @param \BitmovinApiSdk\Models\BroadcastTsSubtitleInputStreamConfiguration[] $subtitleStreams
+     * @return $this
+     */
+    public function subtitleStreams(array $subtitleStreams)
+    {
+        $this->subtitleStreams = $subtitleStreams;
 
         return $this;
     }

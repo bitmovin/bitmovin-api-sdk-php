@@ -22,6 +22,9 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var ReuploadSettings */
     public $reuploadSettings;
 
+    /** @var ManifestGenerator */
+    public $manifestGenerator;
+
     /** @var AutoRestartConfiguration */
     public $autoRestartConfiguration;
 
@@ -32,6 +35,7 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->dashManifests = ObjectMapper::map($this->dashManifests, LiveDashManifest::class);
         $this->liveEncodingMode = ObjectMapper::map($this->liveEncodingMode, EncodingMode::class);
         $this->reuploadSettings = ObjectMapper::map($this->reuploadSettings, ReuploadSettings::class);
+        $this->manifestGenerator = ObjectMapper::map($this->manifestGenerator, ManifestGenerator::class);
         $this->autoRestartConfiguration = ObjectMapper::map($this->autoRestartConfiguration, AutoRestartConfiguration::class);
     }
 
@@ -96,6 +100,19 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function reuploadSettings(ReuploadSettings $reuploadSettings)
     {
         $this->reuploadSettings = $reuploadSettings;
+
+        return $this;
+    }
+
+    /**
+     * Sets the version of the manifest generation engine
+     *
+     * @param ManifestGenerator $manifestGenerator
+     * @return $this
+     */
+    public function manifestGenerator(ManifestGenerator $manifestGenerator)
+    {
+        $this->manifestGenerator = $manifestGenerator;
 
         return $this;
     }
