@@ -25,7 +25,7 @@ class LiveHlsManifest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * HLS manifest ids (required)
+     * HLS manifest id (required)
      *
      * @param string $manifestId
      * @return $this

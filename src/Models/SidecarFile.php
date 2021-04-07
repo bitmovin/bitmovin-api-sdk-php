@@ -19,6 +19,11 @@ class SidecarFile extends BitmovinResource
     /** @var \BitmovinApiSdk\Models\SidecarErrorMode */
     public $errorMode;
 
+    public static $discriminatorName = "type";
+    public static $discriminatorMapping = [
+        "WEB_VTT" => WebVttSidecarFile::class,
+    ];
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);

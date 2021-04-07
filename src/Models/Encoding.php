@@ -37,9 +37,6 @@ class Encoding extends BitmovinResource
     /** @var string */
     public $encoderVersion;
 
-    /** @var string */
-    public $infrastructureId;
-
     /** @var InfrastructureSettings */
     public $infrastructure;
 
@@ -113,19 +110,6 @@ class Encoding extends BitmovinResource
     public function encoderVersion(string $encoderVersion)
     {
         $this->encoderVersion = $encoderVersion;
-
-        return $this;
-    }
-
-    /**
-     * Define an external infrastructure to run the encoding on. Note If you set this value, the &#x60;cloudRegion&#x60; must be &#39;EXTERNAL&#39;.
-     *
-     * @param string $infrastructureId
-     * @return $this
-     */
-    public function infrastructureId(string $infrastructureId)
-    {
-        $this->infrastructureId = $infrastructureId;
 
         return $this;
     }

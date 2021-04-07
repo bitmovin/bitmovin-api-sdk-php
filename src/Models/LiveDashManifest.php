@@ -32,7 +32,7 @@ class LiveDashManifest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Dash manifest ids (required)
+     * Dash manifest id (required)
      *
      * @param string $manifestId
      * @return $this

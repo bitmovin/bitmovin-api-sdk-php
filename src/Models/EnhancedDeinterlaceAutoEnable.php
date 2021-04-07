@@ -30,7 +30,7 @@ class EnhancedDeinterlaceAutoEnable extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * The Enhanced Deinterlace filter will only be applied when interlaced content is signaled in the meta data of the input stream.
+     * The Enhanced Deinterlace Filter will only be applied when interlaced content is signaled in the meta data of the input stream.
      *
      * @return EnhancedDeinterlaceAutoEnable
      */
