@@ -91,6 +91,12 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $nexGuardABWatermarkingMultiplicator;
 
+    /** @var \BitmovinApiSdk\Models\PixelFormatBitDepth */
+    public $pixelFormatBitDepth;
+
+    /** @var float */
+    public $pixelFormatMultiplicator;
+
     /** @var \BitmovinApiSdk\Models\InputFactor */
     public $inputFactor;
 
@@ -104,6 +110,7 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
         $this->psnrMode = ObjectMapper::map($this->psnrMode, PsnrPerStreamMode::class);
         $this->dolbyVisionMode = ObjectMapper::map($this->dolbyVisionMode, DolbyVisionPerStreamMode::class);
         $this->nexGuardABWatermarkingType = ObjectMapper::map($this->nexGuardABWatermarkingType, NexGuardABWatermarkingFeature::class);
+        $this->pixelFormatBitDepth = ObjectMapper::map($this->pixelFormatBitDepth, PixelFormatBitDepth::class);
         $this->inputFactor = ObjectMapper::map($this->inputFactor, InputFactor::class);
     }
 
@@ -194,6 +201,19 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     public function nexGuardABWatermarkingType(\BitmovinApiSdk\Models\NexGuardABWatermarkingFeature $nexGuardABWatermarkingType)
     {
         $this->nexGuardABWatermarkingType = $nexGuardABWatermarkingType;
+
+        return $this;
+    }
+
+    /**
+     * pixelFormatBitDepth
+     *
+     * @param \BitmovinApiSdk\Models\PixelFormatBitDepth $pixelFormatBitDepth
+     * @return $this
+     */
+    public function pixelFormatBitDepth(\BitmovinApiSdk\Models\PixelFormatBitDepth $pixelFormatBitDepth)
+    {
+        $this->pixelFormatBitDepth = $pixelFormatBitDepth;
 
         return $this;
     }

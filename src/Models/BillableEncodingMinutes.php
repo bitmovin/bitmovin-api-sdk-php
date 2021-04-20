@@ -31,6 +31,9 @@ class BillableEncodingMinutes extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\NexGuardABWatermarkingFeature */
     public $nexGuardABWatermarkingType;
 
+    /** @var \BitmovinApiSdk\Models\PixelFormatBitDepth */
+    public $pixelFormatBitDepth;
+
     /** @var \BitmovinApiSdk\Models\BillableEncodingMinutesDetails */
     public $billableMinutes;
 
@@ -42,6 +45,7 @@ class BillableEncodingMinutes extends \BitmovinApiSdk\Common\ApiResource
         $this->perTitleResultStream = ObjectMapper::map($this->perTitleResultStream, StatisticsPerTitleStream::class);
         $this->psnrMode = ObjectMapper::map($this->psnrMode, PsnrPerStreamMode::class);
         $this->nexGuardABWatermarkingType = ObjectMapper::map($this->nexGuardABWatermarkingType, NexGuardABWatermarkingFeature::class);
+        $this->pixelFormatBitDepth = ObjectMapper::map($this->pixelFormatBitDepth, PixelFormatBitDepth::class);
         $this->billableMinutes = ObjectMapper::map($this->billableMinutes, BillableEncodingMinutesDetails::class);
     }
 
@@ -106,6 +110,19 @@ class BillableEncodingMinutes extends \BitmovinApiSdk\Common\ApiResource
     public function nexGuardABWatermarkingType(\BitmovinApiSdk\Models\NexGuardABWatermarkingFeature $nexGuardABWatermarkingType)
     {
         $this->nexGuardABWatermarkingType = $nexGuardABWatermarkingType;
+
+        return $this;
+    }
+
+    /**
+     * pixelFormatBitDepth
+     *
+     * @param \BitmovinApiSdk\Models\PixelFormatBitDepth $pixelFormatBitDepth
+     * @return $this
+     */
+    public function pixelFormatBitDepth(\BitmovinApiSdk\Models\PixelFormatBitDepth $pixelFormatBitDepth)
+    {
+        $this->pixelFormatBitDepth = $pixelFormatBitDepth;
 
         return $this;
     }
