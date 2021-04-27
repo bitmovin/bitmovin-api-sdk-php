@@ -16,10 +16,14 @@ class WebVttConfiguration extends SubtitleConfiguration
     /** @var WebVttCueIdentifierPolicy */
     public $cueIdentifierPolicy;
 
+    /** @var WebVttStyling */
+    public $styling;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->cueIdentifierPolicy = ObjectMapper::map($this->cueIdentifierPolicy, WebVttCueIdentifierPolicy::class);
+        $this->styling = ObjectMapper::map($this->styling, WebVttStyling::class);
     }
 
     /**
@@ -57,6 +61,19 @@ class WebVttConfiguration extends SubtitleConfiguration
     public function cueIdentifierPolicy(WebVttCueIdentifierPolicy $cueIdentifierPolicy)
     {
         $this->cueIdentifierPolicy = $cueIdentifierPolicy;
+
+        return $this;
+    }
+
+    /**
+     * styling
+     *
+     * @param WebVttStyling $styling
+     * @return $this
+     */
+    public function styling(WebVttStyling $styling)
+    {
+        $this->styling = $styling;
 
         return $this;
     }
