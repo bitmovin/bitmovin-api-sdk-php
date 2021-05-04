@@ -67,11 +67,11 @@ class ErrorHandler
             if ($data->code !== null) {
                 $message .= "errorCode: " . $data->code . PHP_EOL;
             }
-            if (count($data->details) > 0) {
+            if (isset($data->details) && count($data->details) > 0) {
                 $message .= "details:" . PHP_EOL;
                 $message .= $this->constructDetails($data->details);
             }
-            if (count($data->links) > 0) {
+            if (isset($data->links) && count($data->links) > 0) {
                 $message .= "links:" . PHP_EOL;
                 $message .= $this->constructLinks($data->links);
             }

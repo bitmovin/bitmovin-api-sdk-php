@@ -19,7 +19,7 @@ class StreamInfosDetails extends \BitmovinApiSdk\Common\ApiResource
     /** @var int */
     public $height;
 
-    /** @var int */
+    /** @var float */
     public $rate;
 
     /** @var LiveEncodingCodec */
@@ -123,10 +123,10 @@ class StreamInfosDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * The rate (sample rate / fps) of the stream (required)
      *
-     * @param int $rate
+     * @param float $rate
      * @return $this
      */
-    public function rate(int $rate)
+    public function rate(float $rate)
     {
         $this->rate = $rate;
 
