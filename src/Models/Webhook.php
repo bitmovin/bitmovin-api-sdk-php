@@ -80,18 +80,5 @@ class Webhook extends BitmovinResource
 
         return $this;
     }
-
-    /**
-     * The json schema of the data that is send as webhook payload
-     *
-     * @param object $schema
-     * @return $this
-     */
-    public function schema(object $schema)
-    {
-        $this->schema = $schema;
-
-        return $this;
-    }
 }
 

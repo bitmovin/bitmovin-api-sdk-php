@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Audio\AudioApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Video\VideoApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Subtitle\SubtitleApi;
+use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Image\ImageApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\RepresentationsApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Contentprotection\ContentprotectionApi;
 
@@ -27,6 +28,9 @@ class AdaptationsetsApi
 
     /** @var SubtitleApi */
     public $subtitle;
+
+    /** @var ImageApi */
+    public $image;
 
     /** @var RepresentationsApi */
     public $representations;
@@ -47,6 +51,7 @@ class AdaptationsetsApi
         $this->audio = new AudioApi(null, $this->httpWrapper);
         $this->video = new VideoApi(null, $this->httpWrapper);
         $this->subtitle = new SubtitleApi(null, $this->httpWrapper);
+        $this->image = new ImageApi(null, $this->httpWrapper);
         $this->representations = new RepresentationsApi(null, $this->httpWrapper);
         $this->contentprotection = new ContentprotectionApi(null, $this->httpWrapper);
     }

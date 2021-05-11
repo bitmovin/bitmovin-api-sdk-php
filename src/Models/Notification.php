@@ -64,19 +64,6 @@ class Notification extends BitmovinResponse
     }
 
     /**
-     * Last time the notification was triggered
-     *
-     * @param Carbon $triggeredAt
-     * @return $this
-     */
-    public function triggeredAt(Carbon $triggeredAt)
-    {
-        $this->triggeredAt = $triggeredAt;
-
-        return $this;
-    }
-
-    /**
      * type
      *
      * @param string $type

@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Vtt\VttApi;
+use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Sprite\SpriteApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Fmp4\Fmp4Api;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\ChunkedText\ChunkedTextApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Cmaf\CmafApi;
@@ -23,6 +24,9 @@ class RepresentationsApi
 
     /** @var VttApi */
     public $vtt;
+
+    /** @var SpriteApi */
+    public $sprite;
 
     /** @var Fmp4Api */
     public $fmp4;
@@ -53,6 +57,7 @@ class RepresentationsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->vtt = new VttApi(null, $this->httpWrapper);
+        $this->sprite = new SpriteApi(null, $this->httpWrapper);
         $this->fmp4 = new Fmp4Api(null, $this->httpWrapper);
         $this->chunkedText = new ChunkedTextApi(null, $this->httpWrapper);
         $this->cmaf = new CmafApi(null, $this->httpWrapper);

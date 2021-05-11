@@ -80,18 +80,5 @@ class NotificationStateEntry extends BitmovinResponse
 
         return $this;
     }
-
-    /**
-     * triggeredAt
-     *
-     * @param Carbon $triggeredAt
-     * @return $this
-     */
-    public function triggeredAt(Carbon $triggeredAt)
-    {
-        $this->triggeredAt = $triggeredAt;
-
-        return $this;
-    }
 }
 
