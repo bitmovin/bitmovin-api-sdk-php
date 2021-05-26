@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Analytics\Outputs\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Analytics\Outputs\S3RoleBased\S3RoleBasedApi;
 use BitmovinApiSdk\Apis\Analytics\Outputs\GcsServiceAccount\GcsServiceAccountApi;
 
@@ -15,6 +16,9 @@ class OutputsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var AzureApi */
+    public $azure;
 
     /** @var S3RoleBasedApi */
     public $s3RoleBased;
@@ -32,6 +36,7 @@ class OutputsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->s3RoleBased = new S3RoleBasedApi(null, $this->httpWrapper);
         $this->gcsServiceAccount = new GcsServiceAccountApi(null, $this->httpWrapper);
     }

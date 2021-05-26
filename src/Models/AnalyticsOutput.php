@@ -14,6 +14,7 @@ class AnalyticsOutput extends BitmovinResource
     public static $discriminatorMapping = [
         "S3_ROLE_BASED" => AnalyticsS3RoleBasedOutput::class,
         "GCS_SERVICE_ACCOUNT" => AnalyticsGcsServiceAccountOutput::class,
+        "AZURE" => AnalyticsAzureOutput::class,
     ];
 
     public function __construct($attributes = null)
