@@ -19,12 +19,16 @@ class HlsManifest extends Manifest
     /** @var ChannelsAttributeForAudio */
     public $channelsAttributeForAudio;
 
+    /** @var HlsTargetDurationRoundingMode */
+    public $targetDurationRoundingMode;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->hlsMediaPlaylistVersion = ObjectMapper::map($this->hlsMediaPlaylistVersion, HlsVersion::class);
         $this->hlsMasterPlaylistVersion = ObjectMapper::map($this->hlsMasterPlaylistVersion, HlsVersion::class);
         $this->channelsAttributeForAudio = ObjectMapper::map($this->channelsAttributeForAudio, ChannelsAttributeForAudio::class);
+        $this->targetDurationRoundingMode = ObjectMapper::map($this->targetDurationRoundingMode, HlsTargetDurationRoundingMode::class);
     }
 
     /**
@@ -75,6 +79,19 @@ class HlsManifest extends Manifest
     public function channelsAttributeForAudio(ChannelsAttributeForAudio $channelsAttributeForAudio)
     {
         $this->channelsAttributeForAudio = $channelsAttributeForAudio;
+
+        return $this;
+    }
+
+    /**
+     * The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer.
+     *
+     * @param HlsTargetDurationRoundingMode $targetDurationRoundingMode
+     * @return $this
+     */
+    public function targetDurationRoundingMode(HlsTargetDurationRoundingMode $targetDurationRoundingMode)
+    {
+        $this->targetDurationRoundingMode = $targetDurationRoundingMode;
 
         return $this;
     }
