@@ -34,7 +34,7 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
+     * The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)
      *
      * @param string $inputStreamId
      * @return $this
@@ -60,7 +60,7 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Position of the stream
+     * A unique integer value that determines concatenation order (required)
      *
      * @param int $position
      * @return $this
@@ -73,7 +73,7 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+     * Inserts a padding sequence (black frames and/or silent audio) before the input stream.
      *
      * @param PaddingSequence $paddingBefore
      * @return $this
@@ -86,7 +86,7 @@ class ConcatenationInputConfiguration extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+     * Inserts a padding sequence (black frames and/or silent audio) after the input stream.
      *
      * @param PaddingSequence $paddingAfter
      * @return $this

@@ -62,7 +62,7 @@ class Stream extends BitmovinResource
     }
 
     /**
-     * inputStreams
+     * Determines the input source(s) for the stream. All video streams of an encoding need to have identical input configurations (required)
      *
      * @param \BitmovinApiSdk\Models\StreamInput[] $inputStreams
      * @return $this
