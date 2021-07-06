@@ -10,6 +10,9 @@ class Thumbnail extends BitmovinResource
     /** @var int */
     public $height;
 
+    /** @var int */
+    public $width;
+
     /** @var string */
     public $pattern;
 
@@ -33,7 +36,7 @@ class Thumbnail extends BitmovinResource
     }
 
     /**
-     * Height of the thumbnail. (required)
+     * Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory.
      *
      * @param int $height
      * @return $this
@@ -46,7 +49,20 @@ class Thumbnail extends BitmovinResource
     }
 
     /**
-     * Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).
+     * Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported
+     *
+     * @param int $width
+     * @return $this
+     */
+    public function width(int $width)
+    {
+        $this->width = $width;
+
+        return $this;
+    }
+
+    /**
+     * Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)
      *
      * @param string $pattern
      * @return $this

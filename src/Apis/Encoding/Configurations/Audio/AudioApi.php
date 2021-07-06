@@ -17,6 +17,8 @@ use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Vorbis\VorbisApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Opus\OpusApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Pcm\PcmApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Ac3\Ac3Api;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DolbyDigital\DolbyDigitalApi;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DolbyDigitalPlus\DolbyDigitalPlusApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Eac3\Eac3Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Mp2\Mp2Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Mp3\Mp3Api;
@@ -53,6 +55,12 @@ class AudioApi
     /** @var Ac3Api */
     public $ac3;
 
+    /** @var DolbyDigitalApi */
+    public $dolbyDigital;
+
+    /** @var DolbyDigitalPlusApi */
+    public $dolbyDigitalPlus;
+
     /** @var Eac3Api */
     public $eac3;
 
@@ -81,6 +89,8 @@ class AudioApi
         $this->opus = new OpusApi(null, $this->httpWrapper);
         $this->pcm = new PcmApi(null, $this->httpWrapper);
         $this->ac3 = new Ac3Api(null, $this->httpWrapper);
+        $this->dolbyDigital = new DolbyDigitalApi(null, $this->httpWrapper);
+        $this->dolbyDigitalPlus = new DolbyDigitalPlusApi(null, $this->httpWrapper);
         $this->eac3 = new Eac3Api(null, $this->httpWrapper);
         $this->mp2 = new Mp2Api(null, $this->httpWrapper);
         $this->mp3 = new Mp3Api(null, $this->httpWrapper);

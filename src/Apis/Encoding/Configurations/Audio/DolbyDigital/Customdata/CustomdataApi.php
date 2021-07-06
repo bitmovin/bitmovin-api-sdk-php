@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Eac3\Customdata;
+namespace BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DolbyDigital\Customdata;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * E-AC3 Codec Configuration Custom Data.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings
+     * Dolby Digital Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData
@@ -38,7 +38,7 @@ class CustomdataApi
             'configuration_id' => $configurationId,
         ];
 
-        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/eac3/{configuration_id}/customData', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/configurations/audio/dolby-digital/{configuration_id}/customData', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomData::class);
     }

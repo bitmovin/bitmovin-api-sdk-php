@@ -41,6 +41,12 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     private const EAC3 = 'EAC3';
 
     /** @var string */
+    private const DD = 'DD';
+
+    /** @var string */
+    private const DDPLUS = 'DDPLUS';
+
+    /** @var string */
     private const OPUS = 'OPUS';
 
     /** @var string */
@@ -194,6 +200,26 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function EAC3()
     {
         return new CodecConfigType(self::EAC3);
+    }
+
+    /**
+     * DD
+     *
+     * @return CodecConfigType
+     */
+    public static function DD()
+    {
+        return new CodecConfigType(self::DD);
+    }
+
+    /**
+     * DDPLUS
+     *
+     * @return CodecConfigType
+     */
+    public static function DDPLUS()
+    {
+        return new CodecConfigType(self::DDPLUS);
     }
 
     /**
