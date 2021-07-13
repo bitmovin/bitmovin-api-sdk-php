@@ -71,6 +71,9 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     private const WEBVTT = 'WEBVTT';
 
     /** @var string */
+    private const IMSC = 'IMSC';
+
+    /** @var string */
     private const DVB_SUBTITLE = 'DVB_SUBTITLE';
 
     /**
@@ -300,6 +303,16 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function WEBVTT()
     {
         return new CodecConfigType(self::WEBVTT);
+    }
+
+    /**
+     * IMSC
+     *
+     * @return CodecConfigType
+     */
+    public static function IMSC()
+    {
+        return new CodecConfigType(self::IMSC);
     }
 
     /**

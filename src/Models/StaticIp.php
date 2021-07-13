@@ -27,7 +27,7 @@ class StaticIp extends BitmovinResponse
     }
 
     /**
-     * Required if the static IP should be created for an AWS infrastructure account.
+     * Required if the static IP should be created for an AWS infrastructure account. If this is left blank the static Ip will be created for the managed cloud.
      *
      * @param string $infrastructureId
      * @return $this

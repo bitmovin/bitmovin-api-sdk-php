@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Configurations\Subtitles\DvbSubtitle\DvbSubtitleApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Subtitles\Webvtt\WebvttApi;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Subtitles\Imsc\ImscApi;
 
 class SubtitlesApi
 {
@@ -21,6 +22,9 @@ class SubtitlesApi
 
     /** @var WebvttApi */
     public $webvtt;
+
+    /** @var ImscApi */
+    public $imsc;
 
     /**
      * SubtitlesApi constructor.
@@ -34,5 +38,6 @@ class SubtitlesApi
 
         $this->dvbSubtitle = new DvbSubtitleApi(null, $this->httpWrapper);
         $this->webvtt = new WebvttApi(null, $this->httpWrapper);
+        $this->imsc = new ImscApi(null, $this->httpWrapper);
     }
 }
