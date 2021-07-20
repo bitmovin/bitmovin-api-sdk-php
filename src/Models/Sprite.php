@@ -46,6 +46,9 @@ class Sprite extends BitmovinResource
     /** @var SpriteCreationMode */
     public $creationMode;
 
+    /** @var ThumbnailAspectMode */
+    public $aspectMode;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -53,6 +56,7 @@ class Sprite extends BitmovinResource
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
         $this->jpegConfig = ObjectMapper::map($this->jpegConfig, SpriteJpegConfig::class);
         $this->creationMode = ObjectMapper::map($this->creationMode, SpriteCreationMode::class);
+        $this->aspectMode = ObjectMapper::map($this->aspectMode, ThumbnailAspectMode::class);
     }
 
     /**
@@ -220,6 +224,19 @@ class Sprite extends BitmovinResource
     public function creationMode(SpriteCreationMode $creationMode)
     {
         $this->creationMode = $creationMode;
+
+        return $this;
+    }
+
+    /**
+     * Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version &#x60;2.85.0&#x60;.
+     *
+     * @param ThumbnailAspectMode $aspectMode
+     * @return $this
+     */
+    public function aspectMode(ThumbnailAspectMode $aspectMode)
+    {
+        $this->aspectMode = $aspectMode;
 
         return $this;
     }

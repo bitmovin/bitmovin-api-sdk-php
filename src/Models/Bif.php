@@ -22,10 +22,14 @@ class Bif extends BitmovinResource
     /** @var \BitmovinApiSdk\Models\EncodingOutput[] */
     public $outputs;
 
+    /** @var ThumbnailAspectMode */
+    public $aspectMode;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->outputs = ObjectMapper::map($this->outputs, EncodingOutput::class);
+        $this->aspectMode = ObjectMapper::map($this->aspectMode, ThumbnailAspectMode::class);
     }
 
     /**
@@ -89,6 +93,19 @@ class Bif extends BitmovinResource
     public function outputs(array $outputs)
     {
         $this->outputs = $outputs;
+
+        return $this;
+    }
+
+    /**
+     * Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version &#x60;2.85.0&#x60;.
+     *
+     * @param ThumbnailAspectMode $aspectMode
+     * @return $this
+     */
+    public function aspectMode(ThumbnailAspectMode $aspectMode)
+    {
+        $this->aspectMode = $aspectMode;
 
         return $this;
     }

@@ -68,7 +68,7 @@ class DvbTeletextInputStream extends InputStream
     }
 
     /**
-     * Position of the stream
+     * Position of the stream, starting from 0.
      *
      * @param int $position
      * @return $this

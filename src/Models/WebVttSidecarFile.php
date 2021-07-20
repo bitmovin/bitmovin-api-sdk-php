@@ -7,7 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class WebVttSidecarFile extends SidecarFile
 {
-    /** @var \BitmovinApiSdk\Models\WebVttSidecarFileSegmentation */
+    /** @var WebVttSidecarFileSegmentation */
     public $segmentation;
 
     public function __construct($attributes = null)
@@ -19,10 +19,10 @@ class WebVttSidecarFile extends SidecarFile
     /**
      * segmentation
      *
-     * @param \BitmovinApiSdk\Models\WebVttSidecarFileSegmentation $segmentation
+     * @param WebVttSidecarFileSegmentation $segmentation
      * @return $this
      */
-    public function segmentation(\BitmovinApiSdk\Models\WebVttSidecarFileSegmentation $segmentation)
+    public function segmentation(WebVttSidecarFileSegmentation $segmentation)
     {
         $this->segmentation = $segmentation;
 
