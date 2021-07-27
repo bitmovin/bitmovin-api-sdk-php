@@ -7,16 +7,16 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class DeinterlaceFilter extends Filter
 {
-    /** @var \BitmovinApiSdk\Models\PictureFieldParity */
+    /** @var PictureFieldParity */
     public $parity;
 
-    /** @var \BitmovinApiSdk\Models\DeinterlaceMode */
+    /** @var DeinterlaceMode */
     public $mode;
 
-    /** @var \BitmovinApiSdk\Models\DeinterlaceFrameSelectionMode */
+    /** @var DeinterlaceFrameSelectionMode */
     public $frameSelectionMode;
 
-    /** @var \BitmovinApiSdk\Models\DeinterlaceAutoEnable */
+    /** @var DeinterlaceAutoEnable */
     public $autoEnable;
 
     public function __construct($attributes = null)
@@ -31,10 +31,10 @@ class DeinterlaceFilter extends Filter
     /**
      * parity
      *
-     * @param \BitmovinApiSdk\Models\PictureFieldParity $parity
+     * @param PictureFieldParity $parity
      * @return $this
      */
-    public function parity(\BitmovinApiSdk\Models\PictureFieldParity $parity)
+    public function parity(PictureFieldParity $parity)
     {
         $this->parity = $parity;
 
@@ -44,10 +44,10 @@ class DeinterlaceFilter extends Filter
     /**
      * mode
      *
-     * @param \BitmovinApiSdk\Models\DeinterlaceMode $mode
+     * @param DeinterlaceMode $mode
      * @return $this
      */
-    public function mode(\BitmovinApiSdk\Models\DeinterlaceMode $mode)
+    public function mode(DeinterlaceMode $mode)
     {
         $this->mode = $mode;
 
@@ -57,10 +57,10 @@ class DeinterlaceFilter extends Filter
     /**
      * frameSelectionMode
      *
-     * @param \BitmovinApiSdk\Models\DeinterlaceFrameSelectionMode $frameSelectionMode
+     * @param DeinterlaceFrameSelectionMode $frameSelectionMode
      * @return $this
      */
-    public function frameSelectionMode(\BitmovinApiSdk\Models\DeinterlaceFrameSelectionMode $frameSelectionMode)
+    public function frameSelectionMode(DeinterlaceFrameSelectionMode $frameSelectionMode)
     {
         $this->frameSelectionMode = $frameSelectionMode;
 
@@ -70,10 +70,10 @@ class DeinterlaceFilter extends Filter
     /**
      * autoEnable
      *
-     * @param \BitmovinApiSdk\Models\DeinterlaceAutoEnable $autoEnable
+     * @param DeinterlaceAutoEnable $autoEnable
      * @return $this
      */
-    public function autoEnable(\BitmovinApiSdk\Models\DeinterlaceAutoEnable $autoEnable)
+    public function autoEnable(DeinterlaceAutoEnable $autoEnable)
     {
         $this->autoEnable = $autoEnable;
 

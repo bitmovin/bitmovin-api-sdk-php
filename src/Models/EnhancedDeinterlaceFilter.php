@@ -7,13 +7,13 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class EnhancedDeinterlaceFilter extends Filter
 {
-    /** @var \BitmovinApiSdk\Models\EnhancedDeinterlaceParity */
+    /** @var EnhancedDeinterlaceParity */
     public $parity;
 
-    /** @var \BitmovinApiSdk\Models\EnhancedDeinterlaceMode */
+    /** @var EnhancedDeinterlaceMode */
     public $mode;
 
-    /** @var \BitmovinApiSdk\Models\EnhancedDeinterlaceAutoEnable */
+    /** @var EnhancedDeinterlaceAutoEnable */
     public $autoEnable;
 
     public function __construct($attributes = null)
@@ -27,10 +27,10 @@ class EnhancedDeinterlaceFilter extends Filter
     /**
      * parity
      *
-     * @param \BitmovinApiSdk\Models\EnhancedDeinterlaceParity $parity
+     * @param EnhancedDeinterlaceParity $parity
      * @return $this
      */
-    public function parity(\BitmovinApiSdk\Models\EnhancedDeinterlaceParity $parity)
+    public function parity(EnhancedDeinterlaceParity $parity)
     {
         $this->parity = $parity;
 
@@ -40,10 +40,10 @@ class EnhancedDeinterlaceFilter extends Filter
     /**
      * mode
      *
-     * @param \BitmovinApiSdk\Models\EnhancedDeinterlaceMode $mode
+     * @param EnhancedDeinterlaceMode $mode
      * @return $this
      */
-    public function mode(\BitmovinApiSdk\Models\EnhancedDeinterlaceMode $mode)
+    public function mode(EnhancedDeinterlaceMode $mode)
     {
         $this->mode = $mode;
 
@@ -53,10 +53,10 @@ class EnhancedDeinterlaceFilter extends Filter
     /**
      * autoEnable
      *
-     * @param \BitmovinApiSdk\Models\EnhancedDeinterlaceAutoEnable $autoEnable
+     * @param EnhancedDeinterlaceAutoEnable $autoEnable
      * @return $this
      */
-    public function autoEnable(\BitmovinApiSdk\Models\EnhancedDeinterlaceAutoEnable $autoEnable)
+    public function autoEnable(EnhancedDeinterlaceAutoEnable $autoEnable)
     {
         $this->autoEnable = $autoEnable;
 

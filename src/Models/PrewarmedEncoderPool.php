@@ -10,19 +10,19 @@ class PrewarmedEncoderPool extends BitmovinResource
     /** @var string */
     public $encoderVersion;
 
-    /** @var \BitmovinApiSdk\Models\CloudRegion */
+    /** @var CloudRegion */
     public $cloudRegion;
 
     /** @var string */
     public $infrastructureId;
 
-    /** @var \BitmovinApiSdk\Models\PrewarmedEncoderDiskSize */
+    /** @var PrewarmedEncoderDiskSize */
     public $diskSize;
 
     /** @var int */
     public $targetPoolSize;
 
-    /** @var \BitmovinApiSdk\Models\PrewarmedEncoderPoolStatus */
+    /** @var PrewarmedEncoderPoolStatus */
     public $status;
 
     public function __construct($attributes = null)
@@ -47,12 +47,12 @@ class PrewarmedEncoderPool extends BitmovinResource
     }
 
     /**
-     * cloudRegion
+     * The cloud region in which the pool&#39;s instances will be running. Must be a specific region (e.g. not &#39;AUTO&#39;, &#39;GOOGLE&#39; or &#39;EUROPE&#39;) (required)
      *
-     * @param \BitmovinApiSdk\Models\CloudRegion $cloudRegion
+     * @param CloudRegion $cloudRegion
      * @return $this
      */
-    public function cloudRegion(\BitmovinApiSdk\Models\CloudRegion $cloudRegion)
+    public function cloudRegion(CloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
 
@@ -73,12 +73,12 @@ class PrewarmedEncoderPool extends BitmovinResource
     }
 
     /**
-     * diskSize
+     * Disk size of the prewarmed instances in GB. Needs to be chosen depending on input file sizes and encoding features used. (required)
      *
-     * @param \BitmovinApiSdk\Models\PrewarmedEncoderDiskSize $diskSize
+     * @param PrewarmedEncoderDiskSize $diskSize
      * @return $this
      */
-    public function diskSize(\BitmovinApiSdk\Models\PrewarmedEncoderDiskSize $diskSize)
+    public function diskSize(PrewarmedEncoderDiskSize $diskSize)
     {
         $this->diskSize = $diskSize;
 
@@ -94,19 +94,6 @@ class PrewarmedEncoderPool extends BitmovinResource
     public function targetPoolSize(int $targetPoolSize)
     {
         $this->targetPoolSize = $targetPoolSize;
-
-        return $this;
-    }
-
-    /**
-     * status
-     *
-     * @param \BitmovinApiSdk\Models\PrewarmedEncoderPoolStatus $status
-     * @return $this
-     */
-    public function status(\BitmovinApiSdk\Models\PrewarmedEncoderPoolStatus $status)
-    {
-        $this->status = $status;
 
         return $this;
     }

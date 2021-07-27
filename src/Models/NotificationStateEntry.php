@@ -7,7 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class NotificationStateEntry extends BitmovinResponse
 {
-    /** @var \BitmovinApiSdk\Models\NotificationStates */
+    /** @var NotificationStates */
     public $state;
 
     /** @var bool */
@@ -32,10 +32,10 @@ class NotificationStateEntry extends BitmovinResponse
     /**
      * state
      *
-     * @param \BitmovinApiSdk\Models\NotificationStates $state
+     * @param NotificationStates $state
      * @return $this
      */
-    public function state(\BitmovinApiSdk\Models\NotificationStates $state)
+    public function state(NotificationStates $state)
     {
         $this->state = $state;
 

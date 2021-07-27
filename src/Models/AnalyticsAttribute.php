@@ -41,6 +41,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CDN_PROVIDER = 'CDN_PROVIDER';
 
     /** @var string */
+    private const CAST_TECH = 'CAST_TECH';
+
+    /** @var string */
     private const CITY = 'CITY';
 
     /** @var string */
@@ -410,6 +413,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function CDN_PROVIDER()
     {
         return new AnalyticsAttribute(self::CDN_PROVIDER);
+    }
+
+    /**
+     * CAST_TECH
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CAST_TECH()
+    {
+        return new AnalyticsAttribute(self::CAST_TECH);
     }
 
     /**

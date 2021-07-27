@@ -7,7 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class Organization extends BitmovinResource
 {
-    /** @var \BitmovinApiSdk\Models\OrganizationType */
+    /** @var OrganizationType */
     public $type;
 
     /** @var string */
@@ -27,12 +27,12 @@ class Organization extends BitmovinResource
     }
 
     /**
-     * type
+     * Specifies the type of the organization in the hierachy. Only sub-organizations can be newly created. (required)
      *
-     * @param \BitmovinApiSdk\Models\OrganizationType $type
+     * @param OrganizationType $type
      * @return $this
      */
-    public function type(\BitmovinApiSdk\Models\OrganizationType $type)
+    public function type(OrganizationType $type)
     {
         $this->type = $type;
 

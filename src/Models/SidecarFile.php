@@ -16,7 +16,7 @@ class SidecarFile extends BitmovinResource
     /** @var \BitmovinApiSdk\Models\EncodingOutput[] */
     public $outputs;
 
-    /** @var \BitmovinApiSdk\Models\SidecarErrorMode */
+    /** @var SidecarErrorMode */
     public $errorMode;
 
     public static $discriminatorName = "type";
@@ -71,12 +71,12 @@ class SidecarFile extends BitmovinResource
     }
 
     /**
-     * errorMode
+     * This defines how errors should be handled
      *
-     * @param \BitmovinApiSdk\Models\SidecarErrorMode $errorMode
+     * @param SidecarErrorMode $errorMode
      * @return $this
      */
-    public function errorMode(\BitmovinApiSdk\Models\SidecarErrorMode $errorMode)
+    public function errorMode(SidecarErrorMode $errorMode)
     {
         $this->errorMode = $errorMode;
 

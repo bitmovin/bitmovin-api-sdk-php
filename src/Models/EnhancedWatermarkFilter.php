@@ -22,7 +22,7 @@ class EnhancedWatermarkFilter extends Filter
     /** @var float */
     public $bottom;
 
-    /** @var \BitmovinApiSdk\Models\PositionUnit */
+    /** @var PositionUnit */
     public $unit;
 
     /** @var float */
@@ -108,10 +108,10 @@ class EnhancedWatermarkFilter extends Filter
     /**
      * unit
      *
-     * @param \BitmovinApiSdk\Models\PositionUnit $unit
+     * @param PositionUnit $unit
      * @return $this
      */
-    public function unit(\BitmovinApiSdk\Models\PositionUnit $unit)
+    public function unit(PositionUnit $unit)
     {
         $this->unit = $unit;
 

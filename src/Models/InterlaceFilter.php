@@ -7,10 +7,10 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class InterlaceFilter extends Filter
 {
-    /** @var \BitmovinApiSdk\Models\InterlaceMode */
+    /** @var InterlaceMode */
     public $mode;
 
-    /** @var \BitmovinApiSdk\Models\VerticalLowPassFilteringMode */
+    /** @var VerticalLowPassFilteringMode */
     public $verticalLowPassFilteringMode;
 
     public function __construct($attributes = null)
@@ -23,10 +23,10 @@ class InterlaceFilter extends Filter
     /**
      * mode
      *
-     * @param \BitmovinApiSdk\Models\InterlaceMode $mode
+     * @param InterlaceMode $mode
      * @return $this
      */
-    public function mode(\BitmovinApiSdk\Models\InterlaceMode $mode)
+    public function mode(InterlaceMode $mode)
     {
         $this->mode = $mode;
 
@@ -36,10 +36,10 @@ class InterlaceFilter extends Filter
     /**
      * verticalLowPassFilteringMode
      *
-     * @param \BitmovinApiSdk\Models\VerticalLowPassFilteringMode $verticalLowPassFilteringMode
+     * @param VerticalLowPassFilteringMode $verticalLowPassFilteringMode
      * @return $this
      */
-    public function verticalLowPassFilteringMode(\BitmovinApiSdk\Models\VerticalLowPassFilteringMode $verticalLowPassFilteringMode)
+    public function verticalLowPassFilteringMode(VerticalLowPassFilteringMode $verticalLowPassFilteringMode)
     {
         $this->verticalLowPassFilteringMode = $verticalLowPassFilteringMode;
 

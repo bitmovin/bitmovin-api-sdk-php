@@ -16,7 +16,7 @@ class AnalyticsQueryRequest extends AnalyticsQueryTimeframe
     /** @var \BitmovinApiSdk\Models\AnalyticsOrderByEntry[] */
     public $orderBy;
 
-    /** @var \BitmovinApiSdk\Models\AnalyticsAttribute */
+    /** @var AnalyticsAttribute */
     public $dimension;
 
     /** @var AnalyticsInterval */
@@ -86,10 +86,10 @@ class AnalyticsQueryRequest extends AnalyticsQueryTimeframe
     /**
      * dimension
      *
-     * @param \BitmovinApiSdk\Models\AnalyticsAttribute $dimension
+     * @param AnalyticsAttribute $dimension
      * @return $this
      */
-    public function dimension(\BitmovinApiSdk\Models\AnalyticsAttribute $dimension)
+    public function dimension(AnalyticsAttribute $dimension)
     {
         $this->dimension = $dimension;
 

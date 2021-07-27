@@ -13,7 +13,7 @@ class GcsServiceAccountOutput extends Output
     /** @var string */
     public $bucketName;
 
-    /** @var \BitmovinApiSdk\Models\GoogleCloudRegion */
+    /** @var GoogleCloudRegion */
     public $cloudRegion;
 
     public function __construct($attributes = null)
@@ -49,12 +49,12 @@ class GcsServiceAccountOutput extends Output
     }
 
     /**
-     * cloudRegion
+     * The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
      *
-     * @param \BitmovinApiSdk\Models\GoogleCloudRegion $cloudRegion
+     * @param GoogleCloudRegion $cloudRegion
      * @return $this
      */
-    public function cloudRegion(\BitmovinApiSdk\Models\GoogleCloudRegion $cloudRegion)
+    public function cloudRegion(GoogleCloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
 

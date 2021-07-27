@@ -10,10 +10,10 @@ class AudioVolumeFilter extends Filter
     /** @var float */
     public $volume;
 
-    /** @var \BitmovinApiSdk\Models\AudioVolumeUnit */
+    /** @var AudioVolumeUnit */
     public $unit;
 
-    /** @var \BitmovinApiSdk\Models\AudioVolumeFormat */
+    /** @var AudioVolumeFormat */
     public $format;
 
     public function __construct($attributes = null)
@@ -39,10 +39,10 @@ class AudioVolumeFilter extends Filter
     /**
      * unit
      *
-     * @param \BitmovinApiSdk\Models\AudioVolumeUnit $unit
+     * @param AudioVolumeUnit $unit
      * @return $this
      */
-    public function unit(\BitmovinApiSdk\Models\AudioVolumeUnit $unit)
+    public function unit(AudioVolumeUnit $unit)
     {
         $this->unit = $unit;
 
@@ -52,10 +52,10 @@ class AudioVolumeFilter extends Filter
     /**
      * format
      *
-     * @param \BitmovinApiSdk\Models\AudioVolumeFormat $format
+     * @param AudioVolumeFormat $format
      * @return $this
      */
-    public function format(\BitmovinApiSdk\Models\AudioVolumeFormat $format)
+    public function format(AudioVolumeFormat $format)
     {
         $this->format = $format;
 

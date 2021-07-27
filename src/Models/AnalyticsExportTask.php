@@ -28,7 +28,7 @@ class AnalyticsExportTask extends BitmovinResponse
     /** @var int */
     public $progress;
 
-    /** @var \BitmovinApiSdk\Models\AnalyticsExportStatus */
+    /** @var AnalyticsExportStatus */
     public $status;
 
     /** @var Carbon */
@@ -37,7 +37,7 @@ class AnalyticsExportTask extends BitmovinResponse
     /** @var Carbon */
     public $finishedAt;
 
-    /** @var \BitmovinApiSdk\Models\AnalyticsExportType */
+    /** @var AnalyticsExportType */
     public $type;
 
     /** @var string[] */
@@ -134,25 +134,12 @@ class AnalyticsExportTask extends BitmovinResponse
     }
 
     /**
-     * status
-     *
-     * @param \BitmovinApiSdk\Models\AnalyticsExportStatus $status
-     * @return $this
-     */
-    public function status(\BitmovinApiSdk\Models\AnalyticsExportStatus $status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    /**
      * type
      *
-     * @param \BitmovinApiSdk\Models\AnalyticsExportType $type
+     * @param AnalyticsExportType $type
      * @return $this
      */
-    public function type(\BitmovinApiSdk\Models\AnalyticsExportType $type)
+    public function type(AnalyticsExportType $type)
     {
         $this->type = $type;
 

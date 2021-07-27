@@ -41,6 +41,9 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public $cdnProvider;
 
     /** @var string */
+    public $castTech;
+
+    /** @var string */
     public $city;
 
     /** @var int */
@@ -268,7 +271,7 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     /** @var bool */
     public $videostartFailed;
 
-    /** @var \BitmovinApiSdk\Models\AnalyticsVideoStartFailedReason */
+    /** @var AnalyticsVideoStartFailedReason */
     public $videostartFailedReason;
 
     public function __construct($attributes = null)
@@ -416,6 +419,19 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public function cdnProvider(string $cdnProvider)
     {
         $this->cdnProvider = $cdnProvider;
+
+        return $this;
+    }
+
+    /**
+     * Casting Technology
+     *
+     * @param string $castTech
+     * @return $this
+     */
+    public function castTech(string $castTech)
+    {
+        $this->castTech = $castTech;
 
         return $this;
     }
@@ -1409,12 +1425,12 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * videostartFailedReason
+     * Reason why starting the video failed
      *
-     * @param \BitmovinApiSdk\Models\AnalyticsVideoStartFailedReason $videostartFailedReason
+     * @param AnalyticsVideoStartFailedReason $videostartFailedReason
      * @return $this
      */
-    public function videostartFailedReason(\BitmovinApiSdk\Models\AnalyticsVideoStartFailedReason $videostartFailedReason)
+    public function videostartFailedReason(AnalyticsVideoStartFailedReason $videostartFailedReason)
     {
         $this->videostartFailedReason = $videostartFailedReason;
 

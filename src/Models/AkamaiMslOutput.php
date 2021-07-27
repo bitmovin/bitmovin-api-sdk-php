@@ -13,10 +13,10 @@ class AkamaiMslOutput extends Output
     /** @var string */
     public $eventName;
 
-    /** @var \BitmovinApiSdk\Models\AkamaiMslStreamFormat */
+    /** @var AkamaiMslStreamFormat */
     public $streamFormat;
 
-    /** @var \BitmovinApiSdk\Models\AkamaiMslVersion */
+    /** @var AkamaiMslVersion */
     public $mslVersion;
 
     public function __construct($attributes = null)
@@ -53,12 +53,12 @@ class AkamaiMslOutput extends Output
     }
 
     /**
-     * streamFormat
+     * The stream format. Only DASH is supported at the moment. (required)
      *
-     * @param \BitmovinApiSdk\Models\AkamaiMslStreamFormat $streamFormat
+     * @param AkamaiMslStreamFormat $streamFormat
      * @return $this
      */
-    public function streamFormat(\BitmovinApiSdk\Models\AkamaiMslStreamFormat $streamFormat)
+    public function streamFormat(AkamaiMslStreamFormat $streamFormat)
     {
         $this->streamFormat = $streamFormat;
 
@@ -66,12 +66,12 @@ class AkamaiMslOutput extends Output
     }
 
     /**
-     * mslVersion
+     * The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
      *
-     * @param \BitmovinApiSdk\Models\AkamaiMslVersion $mslVersion
+     * @param AkamaiMslVersion $mslVersion
      * @return $this
      */
-    public function mslVersion(\BitmovinApiSdk\Models\AkamaiMslVersion $mslVersion)
+    public function mslVersion(AkamaiMslVersion $mslVersion)
     {
         $this->mslVersion = $mslVersion;
 

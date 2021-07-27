@@ -22,7 +22,7 @@ class WatermarkFilter extends Filter
     /** @var int */
     public $bottom;
 
-    /** @var \BitmovinApiSdk\Models\PositionUnit */
+    /** @var PositionUnit */
     public $unit;
 
     public function __construct($attributes = null)
@@ -97,12 +97,12 @@ class WatermarkFilter extends Filter
     }
 
     /**
-     * unit
+     * Specifies if the values of &#39;left&#39;, &#39;right&#39;, &#39;top&#39; and &#39;bottom&#39; are interpreted as pixels or as a percentage of the input video&#39;s dimensions.
      *
-     * @param \BitmovinApiSdk\Models\PositionUnit $unit
+     * @param PositionUnit $unit
      * @return $this
      */
-    public function unit(\BitmovinApiSdk\Models\PositionUnit $unit)
+    public function unit(PositionUnit $unit)
     {
         $this->unit = $unit;
 

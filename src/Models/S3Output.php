@@ -19,10 +19,10 @@ class S3Output extends Output
     /** @var string */
     public $md5MetaTag;
 
-    /** @var \BitmovinApiSdk\Models\AwsCloudRegion */
+    /** @var AwsCloudRegion */
     public $cloudRegion;
 
-    /** @var \BitmovinApiSdk\Models\S3SignatureVersion */
+    /** @var S3SignatureVersion */
     public $signatureVersion;
 
     public function __construct($attributes = null)
@@ -85,12 +85,12 @@ class S3Output extends Output
     }
 
     /**
-     * cloudRegion
+     * The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
      *
-     * @param \BitmovinApiSdk\Models\AwsCloudRegion $cloudRegion
+     * @param AwsCloudRegion $cloudRegion
      * @return $this
      */
-    public function cloudRegion(\BitmovinApiSdk\Models\AwsCloudRegion $cloudRegion)
+    public function cloudRegion(AwsCloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
 
@@ -98,12 +98,12 @@ class S3Output extends Output
     }
 
     /**
-     * signatureVersion
+     * Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
      *
-     * @param \BitmovinApiSdk\Models\S3SignatureVersion $signatureVersion
+     * @param S3SignatureVersion $signatureVersion
      * @return $this
      */
-    public function signatureVersion(\BitmovinApiSdk\Models\S3SignatureVersion $signatureVersion)
+    public function signatureVersion(S3SignatureVersion $signatureVersion)
     {
         $this->signatureVersion = $signatureVersion;
 

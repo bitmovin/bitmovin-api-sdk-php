@@ -10,7 +10,7 @@ class SccCaption extends BitmovinResource
     /** @var InputPath */
     public $input;
 
-    /** @var \BitmovinApiSdk\Models\SmpteTimecodeFlavor */
+    /** @var SmpteTimecodeFlavor */
     public $smpteTimecodeFlavor;
 
     public function __construct($attributes = null)
@@ -34,12 +34,12 @@ class SccCaption extends BitmovinResource
     }
 
     /**
-     * smpteTimecodeFlavor
+     * Flavor of SMPTE timecodes in the SCC file (drop-frame or non-drop)
      *
-     * @param \BitmovinApiSdk\Models\SmpteTimecodeFlavor $smpteTimecodeFlavor
+     * @param SmpteTimecodeFlavor $smpteTimecodeFlavor
      * @return $this
      */
-    public function smpteTimecodeFlavor(\BitmovinApiSdk\Models\SmpteTimecodeFlavor $smpteTimecodeFlavor)
+    public function smpteTimecodeFlavor(SmpteTimecodeFlavor $smpteTimecodeFlavor)
     {
         $this->smpteTimecodeFlavor = $smpteTimecodeFlavor;
 

@@ -10,7 +10,7 @@ class Acl extends BitmovinResource
     /** @var string */
     public $resource;
 
-    /** @var \BitmovinApiSdk\Models\Policy */
+    /** @var Policy */
     public $policy;
 
     /** @var \BitmovinApiSdk\Models\Permission[] */
@@ -39,10 +39,10 @@ class Acl extends BitmovinResource
     /**
      * policy
      *
-     * @param \BitmovinApiSdk\Models\Policy $policy
+     * @param Policy $policy
      * @return $this
      */
-    public function policy(\BitmovinApiSdk\Models\Policy $policy)
+    public function policy(Policy $policy)
     {
         $this->policy = $policy;
 

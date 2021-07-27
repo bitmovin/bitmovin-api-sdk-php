@@ -13,7 +13,7 @@ class ScaleFilter extends Filter
     /** @var int */
     public $height;
 
-    /** @var \BitmovinApiSdk\Models\ScalingAlgorithm */
+    /** @var ScalingAlgorithm */
     public $scalingAlgorithm;
 
     /** @var int */
@@ -57,10 +57,10 @@ class ScaleFilter extends Filter
     /**
      * scalingAlgorithm
      *
-     * @param \BitmovinApiSdk\Models\ScalingAlgorithm $scalingAlgorithm
+     * @param ScalingAlgorithm $scalingAlgorithm
      * @return $this
      */
-    public function scalingAlgorithm(\BitmovinApiSdk\Models\ScalingAlgorithm $scalingAlgorithm)
+    public function scalingAlgorithm(ScalingAlgorithm $scalingAlgorithm)
     {
         $this->scalingAlgorithm = $scalingAlgorithm;
 

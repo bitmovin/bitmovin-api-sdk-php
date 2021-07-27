@@ -7,7 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class TextFilter extends Filter
 {
-    /** @var \BitmovinApiSdk\Models\TextFilterFont */
+    /** @var TextFilterFont */
     public $font;
 
     /** @var bool */
@@ -73,10 +73,10 @@ class TextFilter extends Filter
     /**
      * font
      *
-     * @param \BitmovinApiSdk\Models\TextFilterFont $font
+     * @param TextFilterFont $font
      * @return $this
      */
-    public function font(\BitmovinApiSdk\Models\TextFilterFont $font)
+    public function font(TextFilterFont $font)
     {
         $this->font = $font;
 

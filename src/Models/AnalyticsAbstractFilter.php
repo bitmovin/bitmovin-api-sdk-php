@@ -7,7 +7,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class AnalyticsAbstractFilter extends \BitmovinApiSdk\Common\ApiResource
 {
-    /** @var \BitmovinApiSdk\Models\AnalyticsAttribute */
+    /** @var AnalyticsAttribute */
     public $name;
 
     public static $discriminatorName = "operator";
@@ -32,10 +32,10 @@ class AnalyticsAbstractFilter extends \BitmovinApiSdk\Common\ApiResource
     /**
      * name
      *
-     * @param \BitmovinApiSdk\Models\AnalyticsAttribute $name
+     * @param AnalyticsAttribute $name
      * @return $this
      */
-    public function name(\BitmovinApiSdk\Models\AnalyticsAttribute $name)
+    public function name(AnalyticsAttribute $name)
     {
         $this->name = $name;
 
