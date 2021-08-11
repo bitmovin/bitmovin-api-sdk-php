@@ -10,6 +10,8 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Aac\AacApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DtsPassthrough\DtsPassthroughApi;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Dts\DtsApi;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Dtsx\DtsxApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DolbyAtmos\DolbyAtmosApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV1\HeAacV1Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV2\HeAacV2Api;
@@ -33,6 +35,12 @@ class AudioApi
 
     /** @var DtsPassthroughApi */
     public $dtsPassthrough;
+
+    /** @var DtsApi */
+    public $dts;
+
+    /** @var DtsxApi */
+    public $dtsx;
 
     /** @var DolbyAtmosApi */
     public $dolbyAtmos;
@@ -82,6 +90,8 @@ class AudioApi
 
         $this->aac = new AacApi(null, $this->httpWrapper);
         $this->dtsPassthrough = new DtsPassthroughApi(null, $this->httpWrapper);
+        $this->dts = new DtsApi(null, $this->httpWrapper);
+        $this->dtsx = new DtsxApi(null, $this->httpWrapper);
         $this->dolbyAtmos = new DolbyAtmosApi(null, $this->httpWrapper);
         $this->heAacV1 = new HeAacV1Api(null, $this->httpWrapper);
         $this->heAacV2 = new HeAacV2Api(null, $this->httpWrapper);

@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Analytics\Impressions\Ads\AdsApi;
+use BitmovinApiSdk\Apis\Analytics\Impressions\Errors\ErrorsApi;
 
 class ImpressionsApi
 {
@@ -17,6 +18,9 @@ class ImpressionsApi
 
     /** @var AdsApi */
     public $ads;
+
+    /** @var ErrorsApi */
+    public $errors;
 
     /**
      * ImpressionsApi constructor.
@@ -29,6 +33,7 @@ class ImpressionsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->ads = new AdsApi(null, $this->httpWrapper);
+        $this->errors = new ErrorsApi(null, $this->httpWrapper);
     }
 
     /**
