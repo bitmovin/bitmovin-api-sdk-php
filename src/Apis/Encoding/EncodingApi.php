@@ -16,6 +16,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\EncodingsApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\ManifestsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\InfrastructureApi;
 use BitmovinApiSdk\Apis\Encoding\Statistics\StatisticsApi;
+use BitmovinApiSdk\Apis\Encoding\WatchFolders\WatchFoldersApi;
 use BitmovinApiSdk\Apis\Encoding\ErrorDefinitions\ErrorDefinitionsApi;
 
 class EncodingApi
@@ -47,6 +48,9 @@ class EncodingApi
     /** @var StatisticsApi */
     public $statistics;
 
+    /** @var WatchFoldersApi */
+    public $watchFolders;
+
     /** @var ErrorDefinitionsApi */
     public $errorDefinitions;
 
@@ -68,6 +72,7 @@ class EncodingApi
         $this->manifests = new ManifestsApi(null, $this->httpWrapper);
         $this->infrastructure = new InfrastructureApi(null, $this->httpWrapper);
         $this->statistics = new StatisticsApi(null, $this->httpWrapper);
+        $this->watchFolders = new WatchFoldersApi(null, $this->httpWrapper);
         $this->errorDefinitions = new ErrorDefinitionsApi(null, $this->httpWrapper);
     }
 }

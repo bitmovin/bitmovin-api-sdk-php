@@ -41,6 +41,9 @@ class GoogleCloudRegion extends \BitmovinApiSdk\Common\Enum
     private const EUROPE_WEST_2 = 'EUROPE_WEST_2';
 
     /** @var string */
+    private const EUROPE_WEST_3 = 'EUROPE_WEST_3';
+
+    /** @var string */
     private const EUROPE_WEST_4 = 'EUROPE_WEST_4';
 
     /** @var string */
@@ -182,6 +185,16 @@ class GoogleCloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function EUROPE_WEST_2()
     {
         return new GoogleCloudRegion(self::EUROPE_WEST_2);
+    }
+
+    /**
+     * Frankfurt, Germany
+     *
+     * @return GoogleCloudRegion
+     */
+    public static function EUROPE_WEST_3()
+    {
+        return new GoogleCloudRegion(self::EUROPE_WEST_3);
     }
 
     /**

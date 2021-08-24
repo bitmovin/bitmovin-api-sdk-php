@@ -10,9 +10,6 @@ class ManifestGenerator extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const V2 = 'V2';
 
-    /** @var string */
-    private const V2_BETA = 'V2_BETA';
-
     /**
      * @param string $value
      * @return ManifestGenerator
@@ -40,16 +37,6 @@ class ManifestGenerator extends \BitmovinApiSdk\Common\Enum
     public static function V2()
     {
         return new ManifestGenerator(self::V2);
-    }
-
-    /**
-     * DEPRECATED - Please use V2 instead, this option will be removed soon.
-     *
-     * @return ManifestGenerator
-     */
-    public static function V2_BETA()
-    {
-        return new ManifestGenerator(self::V2_BETA);
     }
 }
 
