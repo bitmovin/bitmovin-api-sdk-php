@@ -74,9 +74,11 @@
                     </li><li>public string <a href="#members">$licenseKey</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\AnalyticsExportTaskOutputTarget">AnalyticsExportTaskOutputTarget</span> <a href="#members">$output</a>;
                     </li><li>public int <a href="#members">$progress</a>;
-                    </li><li>public <span title="\BitmovinApiSdk\Models\AnalyticsExportStatus">AnalyticsExportStatus</span> <a href="#members">$status</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\AnalyticsExportStatus">AnalyticsExportStatus</span> <a href="#members">$status</a>;
                     </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$startedAt</a>;
                     </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$finishedAt</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\AnalyticsExportType">AnalyticsExportType</span> <a href="#members">$type</a>;
+                    </li><li>public array <a href="#members">$columns</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/startTime.html">startTime</a>()
@@ -85,7 +87,8 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/description.html">description</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/licenseKey.html">licenseKey</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/output.html">output</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/status.html">status</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/type.html">type</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/columns.html">columns</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse/__construct.html">__construct</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
@@ -106,6 +109,10 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
+            <li id="columns"><strong>$columns</strong>
+                —
+                <a title="BitmovinApiSdk\Models\string" href="../classes/BitmovinApiSdk_Models_string.html">BitmovinApiSdk\Models\string</a>[]
+                    </li>
             <li id="description"><strong>$description</strong>
                 —
                 string</li>
@@ -138,7 +145,10 @@
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
             <li id="status"><strong>$status</strong>
                 —
-                <a title="\BitmovinApiSdk\Models\AnalyticsExportStatus" href="../classes/_BitmovinApiSdk_Models_AnalyticsExportStatus.html">\BitmovinApiSdk\Models\AnalyticsExportStatus</a></li>
+                <a title="BitmovinApiSdk\Models\AnalyticsExportStatus" href="../classes/BitmovinApiSdk_Models_AnalyticsExportStatus.html">BitmovinApiSdk\Models\AnalyticsExportStatus</a></li>
+            <li id="type"><strong>$type</strong>
+                —
+                <a title="BitmovinApiSdk\Models\AnalyticsExportType" href="../classes/BitmovinApiSdk_Models_AnalyticsExportType.html">BitmovinApiSdk\Models\AnalyticsExportType</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -148,6 +158,8 @@
             <li id="__construct">
               <a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/__construct.html">__construct()</a>
             </li>
+            <li id="columns"><a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/columns.html">columns()</a>
+                — columns</li>
             <li id="description"><a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/description.html">description()</a>
                 — Export task description</li>
             <li id="endTime"><a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/endTime.html">endTime()</a>
@@ -160,8 +172,8 @@
                 — output</li>
             <li id="startTime"><a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/startTime.html">startTime()</a>
                 — Start of timeframe which is exported in UTC format (required)</li>
-            <li id="status"><a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/status.html">status()</a>
-                — status</li>
+            <li id="type"><a title="BitmovinApiSdk\Models\AnalyticsExportTask" href="../classes/BitmovinApiSdk_Models_AnalyticsExportTask/type.html">type()</a>
+                — type</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>
@@ -176,7 +188,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

@@ -71,8 +71,8 @@
                     </li><li>public string <a href="#members">$accessKey</a>;
                     </li><li>public string <a href="#members">$secretKey</a>;
                     </li><li>public string <a href="#members">$md5MetaTag</a>;
-                    </li><li>public <span title="\BitmovinApiSdk\Models\AwsCloudRegion">AwsCloudRegion</span> <a href="#members">$cloudRegion</a>;
-                    </li><li>public <span title="\BitmovinApiSdk\Models\S3SignatureVersion">S3SignatureVersion</span> <a href="#members">$signatureVersion</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\AwsCloudRegion">AwsCloudRegion</span> <a href="#members">$cloudRegion</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\S3SignatureVersion">S3SignatureVersion</span> <a href="#members">$signatureVersion</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Output">Output</span></li><li>public array <a href="#members">$acl</a>;
                         </li><li>public static string <a href="#members">$discriminatorName</a>;
                         </li><li>public static array <a href="#members">$discriminatorMapping</a>;
@@ -127,7 +127,7 @@
                 string</li>
             <li id="cloudRegion"><strong>$cloudRegion</strong>
                 —
-                <a title="\BitmovinApiSdk\Models\AwsCloudRegion" href="../classes/_BitmovinApiSdk_Models_AwsCloudRegion.html">\BitmovinApiSdk\Models\AwsCloudRegion</a></li>
+                <a title="BitmovinApiSdk\Models\AwsCloudRegion" href="../classes/BitmovinApiSdk_Models_AwsCloudRegion.html">BitmovinApiSdk\Models\AwsCloudRegion</a></li>
             <li id="createdAt"><strong>$createdAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -160,7 +160,7 @@
                 string</li>
             <li id="signatureVersion"><strong>$signatureVersion</strong>
                 —
-                <a title="\BitmovinApiSdk\Models\S3SignatureVersion" href="../classes/_BitmovinApiSdk_Models_S3SignatureVersion.html">\BitmovinApiSdk\Models\S3SignatureVersion</a></li>
+                <a title="BitmovinApiSdk\Models\S3SignatureVersion" href="../classes/BitmovinApiSdk_Models_S3SignatureVersion.html">BitmovinApiSdk\Models\S3SignatureVersion</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -175,13 +175,13 @@
             <li id="bucketName"><a title="BitmovinApiSdk\Models\S3Output" href="../classes/BitmovinApiSdk_Models_S3Output/bucketName.html">bucketName()</a>
                 — Amazon S3 bucket name (required)</li>
             <li id="cloudRegion"><a title="BitmovinApiSdk\Models\S3Output" href="../classes/BitmovinApiSdk_Models_S3Output/cloudRegion.html">cloudRegion()</a>
-                — cloudRegion</li>
+                — The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.</li>
             <li id="md5MetaTag"><a title="BitmovinApiSdk\Models\S3Output" href="../classes/BitmovinApiSdk_Models_S3Output/md5MetaTag.html">md5MetaTag()</a>
                 — If set a user defined tag (x-amz-meta-) with that key will be used to store the MD5 hash of the file.</li>
             <li id="secretKey"><a title="BitmovinApiSdk\Models\S3Output" href="../classes/BitmovinApiSdk_Models_S3Output/secretKey.html">secretKey()</a>
                 — Amazon S3 secret key (required)</li>
             <li id="signatureVersion"><a title="BitmovinApiSdk\Models\S3Output" href="../classes/BitmovinApiSdk_Models_S3Output/signatureVersion.html">signatureVersion()</a>
-                — signatureVersion</li>
+                — Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\Output" href="../classes/BitmovinApiSdk_Models_Output.html">BitmovinApiSdk\Models\Output</a></h3>
           <h4>public</h4>
@@ -212,7 +212,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

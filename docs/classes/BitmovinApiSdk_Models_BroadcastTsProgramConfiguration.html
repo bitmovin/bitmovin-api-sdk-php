@@ -70,10 +70,12 @@
             {<br/><ul class="none"><li>// members</li><li>public int <a href="#members">$programNumber</a>;
                     </li><li>public int <a href="#members">$pidForPMT</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$insertProgramClockRefOnPes</a>;
+                    </li><li>public int <a href="#members">$programClockRefInterval</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/programNumber.html">programNumber</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/pidForPMT.html">pidForPMT</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/insertProgramClockRefOnPes.html">insertProgramClockRefOnPes</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/programClockRefInterval.html">programClockRefInterval</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -99,6 +101,9 @@
             <li id="pidForPMT"><strong>$pidForPMT</strong>
                 —
                 int</li>
+            <li id="programClockRefInterval"><strong>$programClockRefInterval</strong>
+                —
+                int</li>
             <li id="programNumber"><strong>$programNumber</strong>
                 —
                 int</li>
@@ -115,6 +120,8 @@
                 — Insert Program Clock References (PCRs) on all packetized elemementary stream packets. When false, indicates that PCRs should be inserted on every PES header. This parameter is effective only when the PCR packet identifier is the same as a video or audio elementary stream.</li>
             <li id="pidForPMT"><a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/pidForPMT.html">pidForPMT()</a>
                 — An integer value. Packet identifier (PID) to use for Program Map Table (PMT). Recommended value is 2 x programNumber.</li>
+            <li id="programClockRefInterval"><a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/programClockRefInterval.html">programClockRefInterval()</a>
+                — Interval between Program Clock References (PCRs) in milliseconds. Defines the period between PCR fields inserted in the stream. The default value is 90ms.</li>
             <li id="programNumber"><a title="BitmovinApiSdk\Models\BroadcastTsProgramConfiguration" href="../classes/BitmovinApiSdk_Models_BroadcastTsProgramConfiguration/programNumber.html">programNumber()</a>
                 — An integer value. Value for program_number field in Program Map Table (PMT). The value zero is reserved for the NIT PID entry in the PAT.</li>
           </ul>
@@ -131,7 +138,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

@@ -76,6 +76,11 @@
                     </li><li>public string <a href="#members">$vttName</a>;
                     </li><li>public array <a href="#members">$outputs</a>;
                     </li><li>public int <a href="#members">$imagesPerFile</a>;
+                    </li><li>public int <a href="#members">$hTiles</a>;
+                    </li><li>public int <a href="#members">$vTiles</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\SpriteJpegConfig">SpriteJpegConfig</span> <a href="#members">$jpegConfig</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\SpriteCreationMode">SpriteCreationMode</span> <a href="#members">$creationMode</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ThumbnailAspectMode">ThumbnailAspectMode</span> <a href="#members">$aspectMode</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
                         </li><li>public string <a href="#members">$description</a>;
                         </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
@@ -92,6 +97,11 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/vttName.html">vttName</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/outputs.html">outputs</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/imagesPerFile.html">imagesPerFile</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/hTiles.html">hTiles</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/vTiles.html">vTiles</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/jpegConfig.html">jpegConfig</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/creationMode.html">creationMode</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/aspectMode.html">aspectMode</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description</a>()
@@ -116,9 +126,15 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
+            <li id="aspectMode"><strong>$aspectMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ThumbnailAspectMode" href="../classes/BitmovinApiSdk_Models_ThumbnailAspectMode.html">BitmovinApiSdk\Models\ThumbnailAspectMode</a></li>
             <li id="createdAt"><strong>$createdAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="creationMode"><strong>$creationMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\SpriteCreationMode" href="../classes/BitmovinApiSdk_Models_SpriteCreationMode.html">BitmovinApiSdk\Models\SpriteCreationMode</a></li>
             <li id="customData"><strong>$customData</strong>
                 —
                 mixed</li>
@@ -131,6 +147,9 @@
             <li id="filename"><strong>$filename</strong>
                 —
                 string</li>
+            <li id="hTiles"><strong>$hTiles</strong>
+                —
+                int</li>
             <li id="height"><strong>$height</strong>
                 —
                 int</li>
@@ -140,6 +159,9 @@
             <li id="imagesPerFile"><strong>$imagesPerFile</strong>
                 —
                 int</li>
+            <li id="jpegConfig"><strong>$jpegConfig</strong>
+                —
+                <a title="BitmovinApiSdk\Models\SpriteJpegConfig" href="../classes/BitmovinApiSdk_Models_SpriteJpegConfig.html">BitmovinApiSdk\Models\SpriteJpegConfig</a></li>
             <li id="modifiedAt"><strong>$modifiedAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -156,6 +178,9 @@
             <li id="unit"><strong>$unit</strong>
                 —
                 <a title="BitmovinApiSdk\Models\SpriteUnit" href="../classes/BitmovinApiSdk_Models_SpriteUnit.html">BitmovinApiSdk\Models\SpriteUnit</a></li>
+            <li id="vTiles"><strong>$vTiles</strong>
+                —
+                int</li>
             <li id="vttName"><strong>$vttName</strong>
                 —
                 string</li>
@@ -171,24 +196,34 @@
             <li id="__construct">
               <a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/__construct.html">__construct()</a>
             </li>
+            <li id="aspectMode"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/aspectMode.html">aspectMode()</a>
+                — Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version &amp;#x60;2.85.0&amp;#x60;.</li>
+            <li id="creationMode"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/creationMode.html">creationMode()</a>
+                — The creation mode for the thumbnails in the Sprite.  Two possible creation modes exist: generate thumbnails starting with the beginning of the video or after the first configured period.  When using distance&amp;#x3D;10 and unit&amp;#x3D;SECONDS and INTERVAL_END, the first image of the sprite is from the second 10 of the video. When using distance&amp;#x3D;10 and unit&amp;#x3D;SECONDS and INTERVAL_START, the first image of the sprite is from the very start of the video, while the second image is from second 10 of the video.  It is recommended to use &amp;#39;INTERVAL_START&amp;#39; when using the sprites for trick play so that there is an additional thumbnail from the beginning of the video.  Only supported starting with encoder version &amp;#x60;2.76.0&amp;#x60;.</li>
             <li id="distance"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/distance.html">distance()</a>
                 — Distance in the given unit between a screenshot</li>
             <li id="filename"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/filename.html">filename()</a>
                 — Filename of the sprite image. If not set, spriteName will be used, but without an extension.</li>
+            <li id="hTiles"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/hTiles.html">hTiles()</a>
+                — Number of rows of images per file.  Has to be set together with vTiles. If this property and vTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder &amp;#39;%number%&amp;#39; in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version &amp;#x60;2.76.0&amp;#x60;.</li>
             <li id="height"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/height.html">height()</a>
-                — Height of one thumbnail (required)</li>
+                — Height of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required</li>
             <li id="imagesPerFile"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/imagesPerFile.html">imagesPerFile()</a>
-                — Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder &amp;#39;%number%&amp;#39; in the spriteName to specify the naming policy.</li>
+                — Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder &amp;#39;%number%&amp;#39; in the spriteName to specify the naming policy. Either this property must be set or hTiles and vTiles.</li>
+            <li id="jpegConfig"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/jpegConfig.html">jpegConfig()</a>
+                — Additional configuration for JPEG sprite generation.  If this property is set the extension of the file must be &amp;#39;.jpg.&amp;#39; or &amp;#39;.jpeg&amp;#39;  Only supported starting with encoder version &amp;#x60;2.76.0&amp;#x60;</li>
             <li id="outputs"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/outputs.html">outputs()</a>
                 — outputs</li>
             <li id="spriteName"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/spriteName.html">spriteName()</a>
-                — Name of the sprite image. File extension \&amp;quot;.jpg\&amp;quot; or \&amp;quot;.png\&amp;quot; is required. (required)</li>
+                — Name of the sprite image. File extension \&amp;quot;.jpg\&amp;quot;/\&amp;quot;.jpeg\&amp;quot; or \&amp;quot;.png\&amp;quot; is required. (required)</li>
             <li id="unit"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/unit.html">unit()</a>
                 — unit</li>
+            <li id="vTiles"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/vTiles.html">vTiles()</a>
+                — Number of columns of images per file.  Has to be set together with hTiles. If this property and hTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder &amp;#39;%number%&amp;#39; in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version &amp;#x60;2.76.0&amp;#x60;.</li>
             <li id="vttName"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/vttName.html">vttName()</a>
-                — Filename of the vtt-file. The file-extension \&amp;quot;.vtt\&amp;quot; is required. (required)</li>
+                — Filename of the vtt-file. The file-extension \&amp;quot;.vtt\&amp;quot; is required.</li>
             <li id="width"><a title="BitmovinApiSdk\Models\Sprite" href="../classes/BitmovinApiSdk_Models_Sprite/width.html">width()</a>
-                — Width of one thumbnail (required)</li>
+                — Width of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a></h3>
           <h4>public</h4>
@@ -213,7 +248,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

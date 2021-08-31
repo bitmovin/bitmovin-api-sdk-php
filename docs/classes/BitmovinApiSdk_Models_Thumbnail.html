@@ -68,11 +68,13 @@
         <div class="synopsis">class Thumbnail
                 extends <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinResource</a>
             {<br/><ul class="none"><li>// members</li><li>public int <a href="#members">$height</a>;
+                    </li><li>public int <a href="#members">$width</a>;
                     </li><li>public string <a href="#members">$pattern</a>;
                     </li><li>public float <a href="#members">$interval</a>;
                     </li><li>public array <a href="#members">$positions</a>;
                     </li><li>public array <a href="#members">$outputs</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\ThumbnailUnit">ThumbnailUnit</span> <a href="#members">$unit</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ThumbnailAspectMode">ThumbnailAspectMode</span> <a href="#members">$aspectMode</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
                         </li><li>public string <a href="#members">$description</a>;
                         </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
@@ -81,11 +83,13 @@
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/height.html">height</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/width.html">width</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/pattern.html">pattern</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/interval.html">interval</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/positions.html">positions</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/outputs.html">outputs</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/unit.html">unit</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/aspectMode.html">aspectMode</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description</a>()
@@ -110,6 +114,9 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
+            <li id="aspectMode"><strong>$aspectMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ThumbnailAspectMode" href="../classes/BitmovinApiSdk_Models_ThumbnailAspectMode.html">BitmovinApiSdk\Models\ThumbnailAspectMode</a></li>
             <li id="createdAt"><strong>$createdAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -148,6 +155,9 @@
             <li id="unit"><strong>$unit</strong>
                 —
                 <a title="BitmovinApiSdk\Models\ThumbnailUnit" href="../classes/BitmovinApiSdk_Models_ThumbnailUnit.html">BitmovinApiSdk\Models\ThumbnailUnit</a></li>
+            <li id="width"><strong>$width</strong>
+                —
+                int</li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -157,18 +167,22 @@
             <li id="__construct">
               <a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/__construct.html">__construct()</a>
             </li>
+            <li id="aspectMode"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/aspectMode.html">aspectMode()</a>
+                — Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version &amp;#x60;2.85.0&amp;#x60;.</li>
             <li id="height"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/height.html">height()</a>
-                — Height of the thumbnail. (required)</li>
+                — Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory.</li>
             <li id="interval"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/interval.html">interval()</a>
                 — The interval in which to create thumbnails. In seconds (E.g. a value of 4 means create a thumbnail every 4 seconds). Mutually exclusive with positions/unit. Has to be equal to or greater than 1.</li>
             <li id="outputs"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/outputs.html">outputs()</a>
                 — outputs</li>
             <li id="pattern"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/pattern.html">pattern()</a>
-                — Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).</li>
+                — Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)</li>
             <li id="positions"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/positions.html">positions()</a>
                 — Position in the unit where the thumbnail should be created from. Mutually exclusive with interval.</li>
             <li id="unit"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/unit.html">unit()</a>
                 — Unit of the values in the positions array.</li>
+            <li id="width"><a title="BitmovinApiSdk\Models\Thumbnail" href="../classes/BitmovinApiSdk_Models_Thumbnail/width.html">width()</a>
+                — Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a></h3>
           <h4>public</h4>
@@ -193,7 +207,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

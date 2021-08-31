@@ -72,6 +72,7 @@
                     </li><li>public string <a href="#members">$password</a>;
                     </li><li>public string <a href="#members">$roleArn</a>;
                     </li><li>public string <a href="#members">$externalId</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ExternalIdMode">ExternalIdMode</span> <a href="#members">$externalIdMode</a>;
                     </li><li>public string <a href="#members">$gatewayRegion</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/url.html">url</a>()
@@ -79,6 +80,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/password.html">password</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/roleArn.html">roleArn</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/externalId.html">externalId</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/externalIdMode.html">externalIdMode</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/gatewayRegion.html">gatewayRegion</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
@@ -102,6 +104,9 @@
             <li id="externalId"><strong>$externalId</strong>
                 —
                 string</li>
+            <li id="externalIdMode"><strong>$externalIdMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ExternalIdMode" href="../classes/BitmovinApiSdk_Models_ExternalIdMode.html">BitmovinApiSdk\Models\ExternalIdMode</a></li>
             <li id="gatewayRegion"><strong>$gatewayRegion</strong>
                 —
                 string</li>
@@ -128,12 +133,14 @@
             </li>
             <li id="externalId"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/externalId.html">externalId()</a>
                 — External ID used together with the IAM role identified by &amp;#x60;roleArn&amp;#x60; to assume access to the SPEKE server on AWS.</li>
+            <li id="externalIdMode"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/externalIdMode.html">externalIdMode()</a>
+                — externalIdMode</li>
             <li id="gatewayRegion"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/gatewayRegion.html">gatewayRegion()</a>
                 — Describes the region of the AWS API Gateway that is used to access the SPEKE server. This property is mandatory when setting &amp;#39;roleArn&amp;#39; and has to indicate in which region the AWS API Gateway is setup. This usually corresponds to the &amp;#x60;{{region}}&amp;#x60; one sets in the execute-api policy for the role as described in &amp;#39;roleArn&amp;#39;.</li>
             <li id="password"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/password.html">password()</a>
                 — Your password for Basic Authentication</li>
             <li id="roleArn"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/roleArn.html">roleArn()</a>
-                — AWS role that will be assumed for the key exchange in case the provider runs on AWS.  During the key exchange the role will be assumed to be able to access the key provider.  This role has to be created by the owner of the account with the SPEKE server. For Bitmovin to be able to assume this role, the following has to be added to the trust policy of the role:  &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,   \&amp;quot;Principal\&amp;quot;: {     \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerSpekeAccess\&amp;quot;   },   \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;,   \&amp;quot;Condition\&amp;quot;: {     \&amp;quot;StringEquals\&amp;quot;: {       \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot;     }   } } &amp;#x60;&amp;#x60;&amp;#x60; It is recommended to also set the {{externalId}} due to security reasons but it can also be ommitted.  Additionally the role needs a policy similar to the following to be able to invoke the API gateway: &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Version\&amp;quot;: \&amp;quot;2012-10-17\&amp;quot;,   \&amp;quot;Statement\&amp;quot;: [     {       \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,       \&amp;quot;Action\&amp;quot;: [         \&amp;quot;execute-api:Invoke\&amp;quot;       ],       \&amp;quot;Resource\&amp;quot;: [         \&amp;quot;arn:aws:execute-api:{{region}}:*:*_/_*_/POST/_*\&amp;quot;       ]     }   ] } &amp;#x60;&amp;#x60;&amp;#x60; where &amp;#x60;{{region}}&amp;#x60; is the region of the API gateway (for example &amp;#x60;us-west-2&amp;#x60;), the same has to be set in the property &amp;#39;gatewayRegion&amp;#39;. It&amp;#39;s also possible to set &amp;#x60;{{region}&amp;#x60; to &amp;#x60;*&amp;#x60; to give the role access to all regions.</li>
+                — AWS role that will be assumed for the key exchange in case the provider runs on AWS.  During the key exchange the role will be assumed to be able to access the key provider.  This role is to be created in the customer&amp;#39;s account and must be granted access to the API Gateway of the SPEKE server. For Bitmovin to be able to assume this role, the following has to be added to the trust policy of the role:  &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,   \&amp;quot;Principal\&amp;quot;: {     \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerSpekeAccess\&amp;quot;   },   \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;,   \&amp;quot;Condition\&amp;quot;: {     \&amp;quot;StringEquals\&amp;quot;: {       \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot;     }   } } &amp;#x60;&amp;#x60;&amp;#x60; It is recommended to also set the {{externalId}} due to security reasons but it can also be ommitted.  Additionally the role needs a policy similar to the following to be able to invoke the API gateway: &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Version\&amp;quot;: \&amp;quot;2012-10-17\&amp;quot;,   \&amp;quot;Statement\&amp;quot;: [     {       \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,       \&amp;quot;Action\&amp;quot;: [         \&amp;quot;execute-api:Invoke\&amp;quot;       ],       \&amp;quot;Resource\&amp;quot;: [         \&amp;quot;arn:aws:execute-api:{{region}}:*:*_/_*_/POST/_*\&amp;quot;       ]     }   ] } &amp;#x60;&amp;#x60;&amp;#x60; where &amp;#x60;{{region}}&amp;#x60; is the region of the API gateway (for example &amp;#x60;us-west-2&amp;#x60;), the same has to be set in the property &amp;#39;gatewayRegion&amp;#39;. It&amp;#39;s also possible to set &amp;#x60;{{region}&amp;#x60; to &amp;#x60;*&amp;#x60; to give the role access to all regions.</li>
             <li id="url"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/url.html">url()</a>
                 — URL of the endpoint (required)</li>
             <li id="username"><a title="BitmovinApiSdk\Models\SpekeDrmProvider" href="../classes/BitmovinApiSdk_Models_SpekeDrmProvider/username.html">username()</a>
@@ -152,7 +159,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput::externalId</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.html">Classes</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
+          </li>
+          <li class="separator">
+            <a title="BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput" href="../../classes/BitmovinApiSdk_Models_AnalyticsS3RoleBasedOutput.html">AnalyticsS3RoleBasedOutput</a>
+          </li>
+          <li class="separator">externalId</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>BitmovinApiSdk\Models\AnalyticsS3RoleBasedOutput::</small>externalId</h1>
+        <h4>External ID used together with the IAM role identified by &amp;#x60;roleArn&amp;#x60; to assume S3 access.  This ID is provided by the API if &amp;#x60;externalIdMode&amp;#x60; is set to &amp;#x60;GLOBAL&amp;#x60; or &amp;#x60;GENERATED&amp;#x60;. If present, it has to be added to the trust policy of the IAM role &amp;#x60;roleArn&amp;#x60; configured above, otherwise the API won&amp;#39;t be able to write to the S3 bucket. An appropriate trust policy would look like this:  &amp;#x60;&amp;#x60;&amp;#x60; {   \&amp;quot;Effect\&amp;quot;: \&amp;quot;Allow\&amp;quot;,   \&amp;quot;Principal\&amp;quot;: {     \&amp;quot;AWS\&amp;quot;: \&amp;quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&amp;quot;   },   \&amp;quot;Action\&amp;quot;: \&amp;quot;sts:AssumeRole\&amp;quot;,   \&amp;quot;Condition\&amp;quot;: {     \&amp;quot;StringEquals\&amp;quot;: {       \&amp;quot;sts:ExternalId\&amp;quot;: \&amp;quot;{{externalId}}\&amp;quot;     }   } } &amp;#x60;&amp;#x60;&amp;#x60;  where \&amp;quot;{{externalId}}\&amp;quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the &amp;#x60;roleArn&amp;#x60; and the &amp;#x60;externalId&amp;#x60; to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won&amp;#39;t be able to write to the S3 bucket. Also if the external ID does not match the one configured for the IAM role on AWS side, Bitmovin won&amp;#39;t be able to access the S3 bucket.  If you need to change the external ID that is used by your IAM role, you need to create a new output, and use the external ID provided by the API to update your IAM role.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html</h4>
+        <p/>
+        <ul/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function externalId(string
+        $externalId )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$externalId</code>
+                —
+                string</dt>
+          <dd/>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>$this</dt>
+          <dd><br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

@@ -159,9 +159,9 @@
             <li id="inputPath"><a title="BitmovinApiSdk\Models\DvbSubtitleInputStream" href="../classes/BitmovinApiSdk_Models_DvbSubtitleInputStream/inputPath.html">inputPath()</a>
                 — Path to media file</li>
             <li id="position"><a title="BitmovinApiSdk\Models\DvbSubtitleInputStream" href="../classes/BitmovinApiSdk_Models_DvbSubtitleInputStream/position.html">position()</a>
-                — Position of the stream</li>
+                — Position of the stream, starting from 0.</li>
             <li id="selectionMode"><a title="BitmovinApiSdk\Models\DvbSubtitleInputStream" href="../classes/BitmovinApiSdk_Models_DvbSubtitleInputStream/selectionMode.html">selectionMode()</a>
-                — Specifies the algorithm how the stream in the input file will be selected. Only POSITION_ABSOLUTE is supported.</li>
+                — Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a></h3>
           <h4>public</h4>
@@ -186,7 +186,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

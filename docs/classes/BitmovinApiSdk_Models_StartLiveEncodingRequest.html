@@ -72,6 +72,7 @@
                     </li><li>public array <a href="#members">$dashManifests</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\EncodingMode">EncodingMode</span> <a href="#members">$liveEncodingMode</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\ReuploadSettings">ReuploadSettings</span> <a href="#members">$reuploadSettings</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ManifestGenerator">ManifestGenerator</span> <a href="#members">$manifestGenerator</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\AutoRestartConfiguration">AutoRestartConfiguration</span> <a href="#members">$autoRestartConfiguration</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/streamKey.html">streamKey</a>()
@@ -79,6 +80,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/dashManifests.html">dashManifests</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/liveEncodingMode.html">liveEncodingMode</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/reuploadSettings.html">reuploadSettings</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/manifestGenerator.html">manifestGenerator</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/autoRestartConfiguration.html">autoRestartConfiguration</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
@@ -113,6 +115,9 @@
             <li id="liveEncodingMode"><strong>$liveEncodingMode</strong>
                 —
                 <a title="BitmovinApiSdk\Models\EncodingMode" href="../classes/BitmovinApiSdk_Models_EncodingMode.html">BitmovinApiSdk\Models\EncodingMode</a></li>
+            <li id="manifestGenerator"><strong>$manifestGenerator</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ManifestGenerator" href="../classes/BitmovinApiSdk_Models_ManifestGenerator.html">BitmovinApiSdk\Models\ManifestGenerator</a></li>
             <li id="reuploadSettings"><strong>$reuploadSettings</strong>
                 —
                 <a title="BitmovinApiSdk\Models\ReuploadSettings" href="../classes/BitmovinApiSdk_Models_ReuploadSettings.html">BitmovinApiSdk\Models\ReuploadSettings</a></li>
@@ -136,6 +141,8 @@
                 — List of Hls manifests to use for this live encoding</li>
             <li id="liveEncodingMode"><a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/liveEncodingMode.html">liveEncodingMode()</a>
                 — The pass mode of the encoding</li>
+            <li id="manifestGenerator"><a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/manifestGenerator.html">manifestGenerator()</a>
+                — Sets the version of the manifest generation engine</li>
             <li id="reuploadSettings"><a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/reuploadSettings.html">reuploadSettings()</a>
                 — Reupload specific files during a live encoding. This can be helpful if an automatic life cycle policy is enabled on the output storage</li>
             <li id="streamKey"><a title="BitmovinApiSdk\Models\StartLiveEncodingRequest" href="../classes/BitmovinApiSdk_Models_StartLiveEncodingRequest/streamKey.html">streamKey()</a>
@@ -154,7 +161,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

@@ -32,19 +32,19 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     private const VOD_QUALITY = 'VOD_QUALITY';
 
     /** @var string */
-    private const VOD_HIGH_SPEED = 'VOD_HIGH_SPEED';
+    private const VOD_STANDARD = 'VOD_STANDARD';
 
     /** @var string */
     private const VOD_SPEED = 'VOD_SPEED';
 
     /** @var string */
-    private const VOD_STANDARD = 'VOD_STANDARD';
-
-    /** @var string */
-    private const VOD_EXTRAHIGH_SPEED = 'VOD_EXTRAHIGH_SPEED';
+    private const VOD_HIGH_SPEED = 'VOD_HIGH_SPEED';
 
     /** @var string */
     private const VOD_VERYHIGH_SPEED = 'VOD_VERYHIGH_SPEED';
+
+    /** @var string */
+    private const VOD_EXTRAHIGH_SPEED = 'VOD_EXTRAHIGH_SPEED';
 
     /** @var string */
     private const VOD_SUPERHIGH_SPEED = 'VOD_SUPERHIGH_SPEED';
@@ -62,7 +62,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_ULTRAHIGH_QUALITY
+     * supported for H264
      *
      * @return PresetConfiguration
      */
@@ -72,7 +72,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_VERYHIGH_QUALITY
+     * supported for H264
      *
      * @return PresetConfiguration
      */
@@ -82,7 +82,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_HIGH_QUALITY
+     * supported for H264, H265
      *
      * @return PresetConfiguration
      */
@@ -92,7 +92,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_STANDARD
+     * supported for H264
      *
      * @return PresetConfiguration
      */
@@ -102,7 +102,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_LOW_LATENCY
+     * supported for H264, H265
      *
      * @return PresetConfiguration
      */
@@ -112,7 +112,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_LOWER_LATENCY
+     * supported for H264
      *
      * @return PresetConfiguration
      */
@@ -122,7 +122,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE_VERYLOW_LATENCY
+     * supported for H264
      *
      * @return PresetConfiguration
      */
@@ -132,7 +132,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * VOD_HIGH_QUALITY
+     * supported for H264, H265, VP9
      *
      * @return PresetConfiguration
      */
@@ -142,7 +142,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * VOD_QUALITY
+     * supported for H264
      *
      * @return PresetConfiguration
      */
@@ -152,27 +152,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * VOD_HIGH_SPEED
-     *
-     * @return PresetConfiguration
-     */
-    public static function VOD_HIGH_SPEED()
-    {
-        return new PresetConfiguration(self::VOD_HIGH_SPEED);
-    }
-
-    /**
-     * VOD_SPEED
-     *
-     * @return PresetConfiguration
-     */
-    public static function VOD_SPEED()
-    {
-        return new PresetConfiguration(self::VOD_SPEED);
-    }
-
-    /**
-     * VOD_STANDARD
+     * supported for H264, H265, VP9
      *
      * @return PresetConfiguration
      */
@@ -182,17 +162,27 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * VOD_EXTRAHIGH_SPEED
+     * supported for H264, H265, VP9
      *
      * @return PresetConfiguration
      */
-    public static function VOD_EXTRAHIGH_SPEED()
+    public static function VOD_SPEED()
     {
-        return new PresetConfiguration(self::VOD_EXTRAHIGH_SPEED);
+        return new PresetConfiguration(self::VOD_SPEED);
     }
 
     /**
-     * VOD_VERYHIGH_SPEED
+     * supported for H264, H265
+     *
+     * @return PresetConfiguration
+     */
+    public static function VOD_HIGH_SPEED()
+    {
+        return new PresetConfiguration(self::VOD_HIGH_SPEED);
+    }
+
+    /**
+     * supported for H264, H265
      *
      * @return PresetConfiguration
      */
@@ -202,7 +192,17 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * VOD_SUPERHIGH_SPEED
+     * supported for H264, H265
+     *
+     * @return PresetConfiguration
+     */
+    public static function VOD_EXTRAHIGH_SPEED()
+    {
+        return new PresetConfiguration(self::VOD_EXTRAHIGH_SPEED);
+    }
+
+    /**
+     * supported for H264, H265
      *
      * @return PresetConfiguration
      */
@@ -212,7 +212,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * VOD_ULTRAHIGH_SPEED
+     * supported for H264, H265
      *
      * @return PresetConfiguration
      */

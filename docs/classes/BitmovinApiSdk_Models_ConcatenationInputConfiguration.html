@@ -129,15 +129,15 @@
             <li id="aspectMode"><a title="BitmovinApiSdk\Models\ConcatenationInputConfiguration" href="../classes/BitmovinApiSdk_Models_ConcatenationInputConfiguration/aspectMode.html">aspectMode()</a>
                 — Specifies the aspect mode that is used when adapting to the main input stream&amp;#39;s aspect ratio</li>
             <li id="inputStreamId"><a title="BitmovinApiSdk\Models\ConcatenationInputConfiguration" href="../classes/BitmovinApiSdk_Models_ConcatenationInputConfiguration/inputStreamId.html">inputStreamId()</a>
-                — The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream</li>
+                — The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)</li>
             <li id="isMain"><a title="BitmovinApiSdk\Models\ConcatenationInputConfiguration" href="../classes/BitmovinApiSdk_Models_ConcatenationInputConfiguration/isMain.html">isMain()</a>
                 — Exactly one input stream of a concatenation must have this set to true, which will be used as reference for scaling, aspect ratio, FPS, sample rate, etc.</li>
             <li id="paddingAfter"><a title="BitmovinApiSdk\Models\ConcatenationInputConfiguration" href="../classes/BitmovinApiSdk_Models_ConcatenationInputConfiguration/paddingAfter.html">paddingAfter()</a>
-                — Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.</li>
+                — Inserts a padding sequence (black frames and/or silent audio) after the input stream.</li>
             <li id="paddingBefore"><a title="BitmovinApiSdk\Models\ConcatenationInputConfiguration" href="../classes/BitmovinApiSdk_Models_ConcatenationInputConfiguration/paddingBefore.html">paddingBefore()</a>
-                — Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.</li>
+                — Inserts a padding sequence (black frames and/or silent audio) before the input stream.</li>
             <li id="position"><a title="BitmovinApiSdk\Models\ConcatenationInputConfiguration" href="../classes/BitmovinApiSdk_Models_ConcatenationInputConfiguration/position.html">position()</a>
-                — Position of the stream</li>
+                — A unique integer value that determines concatenation order (required)</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>
@@ -152,7 +152,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

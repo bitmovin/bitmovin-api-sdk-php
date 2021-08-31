@@ -93,6 +93,10 @@
                     </li><li>public float <a href="#members">$liveMultiplicator</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$enhancedDeinterlace</a>;
                     </li><li>public float <a href="#members">$enhancedDeinterlaceMultiplicator</a>;
+                    </li><li>public <span title="\BitmovinApiSdk\Models\NexGuardABWatermarkingFeature">NexGuardABWatermarkingFeature</span> <a href="#members">$nexGuardABWatermarkingType</a>;
+                    </li><li>public float <a href="#members">$nexGuardABWatermarkingMultiplicator</a>;
+                    </li><li>public <span title="\BitmovinApiSdk\Models\PixelFormatBitDepth">PixelFormatBitDepth</span> <a href="#members">$pixelFormatBitDepth</a>;
+                    </li><li>public float <a href="#members">$pixelFormatMultiplicator</a>;
                     </li><li>public <span title="\BitmovinApiSdk\Models\InputFactor">InputFactor</span> <a href="#members">$inputFactor</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/codec.html">codec</a>()
@@ -101,6 +105,8 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/perTitleResultStream.html">perTitleResultStream</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/psnrMode.html">psnrMode</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/dolbyVisionMode.html">dolbyVisionMode</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/nexGuardABWatermarkingType.html">nexGuardABWatermarkingType</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/pixelFormatBitDepth.html">pixelFormatBitDepth</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/inputFactor.html">inputFactor</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
@@ -172,12 +178,24 @@
             <li id="multiplicator"><strong>$multiplicator</strong>
                 —
                 float</li>
+            <li id="nexGuardABWatermarkingMultiplicator"><strong>$nexGuardABWatermarkingMultiplicator</strong>
+                —
+                float</li>
+            <li id="nexGuardABWatermarkingType"><strong>$nexGuardABWatermarkingType</strong>
+                —
+                <a title="\BitmovinApiSdk\Models\NexGuardABWatermarkingFeature" href="../classes/_BitmovinApiSdk_Models_NexGuardABWatermarkingFeature.html">\BitmovinApiSdk\Models\NexGuardABWatermarkingFeature</a></li>
             <li id="perTitleMultiplicator"><strong>$perTitleMultiplicator</strong>
                 —
                 float</li>
             <li id="perTitleResultStream"><strong>$perTitleResultStream</strong>
                 —
                 <a title="\BitmovinApiSdk\Models\StatisticsPerTitleStream" href="../classes/_BitmovinApiSdk_Models_StatisticsPerTitleStream.html">\BitmovinApiSdk\Models\StatisticsPerTitleStream</a></li>
+            <li id="pixelFormatBitDepth"><strong>$pixelFormatBitDepth</strong>
+                —
+                <a title="\BitmovinApiSdk\Models\PixelFormatBitDepth" href="../classes/_BitmovinApiSdk_Models_PixelFormatBitDepth.html">\BitmovinApiSdk\Models\PixelFormatBitDepth</a></li>
+            <li id="pixelFormatMultiplicator"><strong>$pixelFormatMultiplicator</strong>
+                —
+                float</li>
             <li id="preset"><strong>$preset</strong>
                 —
                 string</li>
@@ -219,8 +237,12 @@
                 — encodingMode</li>
             <li id="inputFactor"><a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/inputFactor.html">inputFactor()</a>
                 — inputFactor</li>
+            <li id="nexGuardABWatermarkingType"><a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/nexGuardABWatermarkingType.html">nexGuardABWatermarkingType()</a>
+                — nexGuardABWatermarkingType</li>
             <li id="perTitleResultStream"><a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/perTitleResultStream.html">perTitleResultStream()</a>
                 — perTitleResultStream</li>
+            <li id="pixelFormatBitDepth"><a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/pixelFormatBitDepth.html">pixelFormatBitDepth()</a>
+                — pixelFormatBitDepth</li>
             <li id="psnrMode"><a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/psnrMode.html">psnrMode()</a>
                 — psnrMode</li>
             <li id="resolution"><a title="BitmovinApiSdk\Models\StatisticsPerStream" href="../classes/BitmovinApiSdk_Models_StatisticsPerStream/resolution.html">resolution()</a>
@@ -239,7 +261,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

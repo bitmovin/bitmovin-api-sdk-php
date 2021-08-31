@@ -67,6 +67,7 @@
             {<br/><ul class="none"><li>// methods</li><li>public static AudioVideoSyncMode <a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/create.html">create</a>()
                     </li><li>public static AudioVideoSyncMode <a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/STANDARD.html">STANDARD</a>()
                     </li><li>public static AudioVideoSyncMode <a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/RESYNC_AT_START.html">RESYNC_AT_START</a>()
+                    </li><li>public static AudioVideoSyncMode <a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/RESYNC_AT_START_AND_END.html">RESYNC_AT_START_AND_END</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\Enum">Enum</span></li><li>public void <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum/__construct.html">__construct</a>()
                         </li><li>public mixed <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum/getValue.html">getValue</a>()
                         </li><li>public mixed <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum/getKey.html">getKey</a>()
@@ -96,9 +97,11 @@
           <h4>public</h4>
           <ul>
             <li id="RESYNC_AT_START"><a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/RESYNC_AT_START.html">RESYNC_AT_START()</a>
-                — Adds a sync at the start of the file. Useful if the source file was cut out of already encoded content.</li>
+                — Drop audio samples or add audio silence samples at the start of the audio stream.</li>
+            <li id="RESYNC_AT_START_AND_END"><a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/RESYNC_AT_START_AND_END.html">RESYNC_AT_START_AND_END()</a>
+                — Adds or drops audio samples at the start.&amp;lt;br&amp;gt; Adds silence audio samples at the end of the audio inputs.&amp;lt;br&amp;gt; This mode does not drop audio samples from the end.</li>
             <li id="STANDARD"><a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/STANDARD.html">STANDARD()</a>
-                — Default audio video sync handling</li>
+                — Do not add or drop any audio samples.</li>
             <li id="create">
               <a title="BitmovinApiSdk\Models\AudioVideoSyncMode" href="../classes/BitmovinApiSdk_Models_AudioVideoSyncMode/create.html">create()</a>
             </li>
@@ -135,7 +138,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

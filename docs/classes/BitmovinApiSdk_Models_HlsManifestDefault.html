@@ -72,6 +72,8 @@
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\HlsManifest">HlsManifest</span></li><li>public string <a href="#members">$manifestName</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\HlsVersion">HlsVersion</span> <a href="#members">$hlsMediaPlaylistVersion</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\HlsVersion">HlsVersion</span> <a href="#members">$hlsMasterPlaylistVersion</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\ChannelsAttributeForAudio">ChannelsAttributeForAudio</span> <a href="#members">$channelsAttributeForAudio</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\HlsTargetDurationRoundingMode">HlsTargetDurationRoundingMode</span> <a href="#members">$targetDurationRoundingMode</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Manifest">Manifest</span></li><li>public <span title="BitmovinApiSdk\Models\ManifestType">ManifestType</span> <a href="#members">$type</a>;
                         </li><li>public array <a href="#members">$outputs</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\Status">Status</span> <a href="#members">$status</a>;
@@ -88,6 +90,8 @@
                         </li><li>public $this <a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/manifestName.html">manifestName</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/hlsMediaPlaylistVersion.html">hlsMediaPlaylistVersion</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/hlsMasterPlaylistVersion.html">hlsMasterPlaylistVersion</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/channelsAttributeForAudio.html">channelsAttributeForAudio</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/targetDurationRoundingMode.html">targetDurationRoundingMode</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Manifest">Manifest</span></li><li>public void <a title="BitmovinApiSdk\Models\Manifest" href="../classes/BitmovinApiSdk_Models_Manifest/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Manifest" href="../classes/BitmovinApiSdk_Models_Manifest/outputs.html">outputs</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Manifest" href="../classes/BitmovinApiSdk_Models_Manifest/status.html">status</a>()
@@ -115,6 +119,9 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
+            <li id="channelsAttributeForAudio"><strong>$channelsAttributeForAudio</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ChannelsAttributeForAudio" href="../classes/BitmovinApiSdk_Models_ChannelsAttributeForAudio.html">BitmovinApiSdk\Models\ChannelsAttributeForAudio</a></li>
             <li id="createdAt"><strong>$createdAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -152,6 +159,9 @@
             <li id="status"><strong>$status</strong>
                 —
                 <a title="BitmovinApiSdk\Models\Status" href="../classes/BitmovinApiSdk_Models_Status.html">BitmovinApiSdk\Models\Status</a></li>
+            <li id="targetDurationRoundingMode"><strong>$targetDurationRoundingMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\HlsTargetDurationRoundingMode" href="../classes/BitmovinApiSdk_Models_HlsTargetDurationRoundingMode.html">BitmovinApiSdk\Models\HlsTargetDurationRoundingMode</a></li>
             <li id="type"><strong>$type</strong>
                 —
                 <a title="BitmovinApiSdk\Models\ManifestType" href="../classes/BitmovinApiSdk_Models_ManifestType.html">BitmovinApiSdk\Models\ManifestType</a></li>
@@ -175,12 +185,16 @@
           <h3>Inherited from <a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest.html">BitmovinApiSdk\Models\HlsManifest</a></h3>
           <h4>public</h4>
           <ul>
+            <li id="channelsAttributeForAudio"><a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/channelsAttributeForAudio.html">channelsAttributeForAudio()</a>
+                — Controls the behaviour of the CHANNELS attribute for the EXT-X-VERSION tag</li>
             <li id="hlsMasterPlaylistVersion"><a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/hlsMasterPlaylistVersion.html">hlsMasterPlaylistVersion()</a>
                 — If this is set, the EXT-X-VERSION tag of the Master Playlist is set to the provided version</li>
             <li id="hlsMediaPlaylistVersion"><a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/hlsMediaPlaylistVersion.html">hlsMediaPlaylistVersion()</a>
                 — If this is set, the EXT-X-VERSION tags of the Media Playlists are set to the provided version</li>
             <li id="manifestName"><a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/manifestName.html">manifestName()</a>
                 — The filename of your manifest. If this is not set, the &amp;#x60;name&amp;#x60; is used as output file name. Either one of &amp;#x60;name&amp;#x60; or &amp;#x60;manifestName&amp;#x60; is required. Be aware that spaces will be replaced with underlines (&amp;#x60;_&amp;#x60;) on the output.</li>
+            <li id="targetDurationRoundingMode"><a title="BitmovinApiSdk\Models\HlsManifest" href="../classes/BitmovinApiSdk_Models_HlsManifest/targetDurationRoundingMode.html">targetDurationRoundingMode()</a>
+                — The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer.</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\Manifest" href="../classes/BitmovinApiSdk_Models_Manifest.html">BitmovinApiSdk\Models\Manifest</a></h3>
           <h4>public</h4>
@@ -213,7 +227,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2020 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>
