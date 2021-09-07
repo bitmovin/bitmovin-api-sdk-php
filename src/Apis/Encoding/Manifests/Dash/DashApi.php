@@ -109,16 +109,17 @@ class DashApi
      * Start DASH Manifest Creation
      *
      * @param string $manifestId
+     * @param object $body
      * @return \BitmovinApiSdk\Models\BitmovinResponse
      * @throws BitmovinApiException
      */
-    public function start(string $manifestId) : \BitmovinApiSdk\Models\BitmovinResponse
+    public function start(string $manifestId, object $body = null) : \BitmovinApiSdk\Models\BitmovinResponse
     {
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
 
-        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/start', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/dash/{manifest_id}/start', $pathParams,  null, $body, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

@@ -19,12 +19,16 @@ class DashManifest extends Manifest
     /** @var \BitmovinApiSdk\Models\UtcTiming[] */
     public $utcTimings;
 
+    /** @var DashEditionCompatibility */
+    public $dashEditionCompatibility;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->profile = ObjectMapper::map($this->profile, DashProfile::class);
         $this->namespaces = ObjectMapper::map($this->namespaces, XmlNamespace::class);
         $this->utcTimings = ObjectMapper::map($this->utcTimings, UtcTiming::class);
+        $this->dashEditionCompatibility = ObjectMapper::map($this->dashEditionCompatibility, DashEditionCompatibility::class);
     }
 
     /**
@@ -75,6 +79,19 @@ class DashManifest extends Manifest
     public function utcTimings(array $utcTimings)
     {
         $this->utcTimings = $utcTimings;
+
+        return $this;
+    }
+
+    /**
+     * The manifest compatibility with the standard DASH Edition.
+     *
+     * @param DashEditionCompatibility $dashEditionCompatibility
+     * @return $this
+     */
+    public function dashEditionCompatibility(DashEditionCompatibility $dashEditionCompatibility)
+    {
+        $this->dashEditionCompatibility = $dashEditionCompatibility;
 
         return $this;
     }
