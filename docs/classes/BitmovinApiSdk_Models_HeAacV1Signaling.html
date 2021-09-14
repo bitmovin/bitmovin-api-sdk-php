@@ -65,10 +65,9 @@
         <div class="synopsis">class HeAacV1Signaling
                 extends <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum.html">Enum</a>
             {<br/><ul class="none"><li>// methods</li><li>public static HeAacV1Signaling <a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/create.html">create</a>()
-                    </li><li>public static HeAacV1Signaling <a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/DEFAULT.html">DEFAULT</a>()
                     </li><li>public static HeAacV1Signaling <a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/IMPLICIT.html">IMPLICIT</a>()
                     </li><li>public static HeAacV1Signaling <a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/EXPLICIT_SBR.html">EXPLICIT_SBR</a>()
-                    </li><li>public static HeAacV1Signaling <a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/EXPLICIT_HIERACHICAL.html">EXPLICIT_HIERACHICAL</a>()
+                    </li><li>public static HeAacV1Signaling <a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/EXPLICIT_HIERARCHICAL.html">EXPLICIT_HIERARCHICAL</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\Enum">Enum</span></li><li>public void <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum/__construct.html">__construct</a>()
                         </li><li>public mixed <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum/getValue.html">getValue</a>()
                         </li><li>public mixed <a title="BitmovinApiSdk\Common\Enum" href="../classes/BitmovinApiSdk_Common_Enum/getKey.html">getKey</a>()
@@ -97,12 +96,10 @@
         <div class="styled">
           <h4>public</h4>
           <ul>
-            <li id="DEFAULT"><a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/DEFAULT.html">DEFAULT()</a>
-                — Choose signaling implicitly (explicit hierarchical by default, implicit if global header is disabled).</li>
-            <li id="EXPLICIT_HIERACHICAL"><a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/EXPLICIT_HIERACHICAL.html">EXPLICIT_HIERACHICAL()</a>
-                — Explicit hierarchical signaling.</li>
+            <li id="EXPLICIT_HIERARCHICAL"><a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/EXPLICIT_HIERARCHICAL.html">EXPLICIT_HIERARCHICAL()</a>
+                — Explicit hierarchical signaling. This is not backwards compatible.</li>
             <li id="EXPLICIT_SBR"><a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/EXPLICIT_SBR.html">EXPLICIT_SBR()</a>
-                — Explicit SBR, implicit PS signaling.</li>
+                — Explicit SBR signaling. This is backwards compatible.</li>
             <li id="IMPLICIT"><a title="BitmovinApiSdk\Models\HeAacV1Signaling" href="../classes/BitmovinApiSdk_Models_HeAacV1Signaling/IMPLICIT.html">IMPLICIT()</a>
                 — Implicit backwards compatible signaling.</li>
             <li id="create">

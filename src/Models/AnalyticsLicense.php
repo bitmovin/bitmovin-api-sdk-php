@@ -34,12 +34,16 @@ class AnalyticsLicense extends BitmovinResponse
     /** @var AnalyticsLicenseCustomDataFieldLabels */
     public $customDataFieldLabels;
 
+    /** @var \BitmovinApiSdk\Models\AnalyticsLicenseFeatures */
+    public $features;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->domains = ObjectMapper::map($this->domains, AnalyticsLicenseDomain::class);
         $this->customDataFieldLabels = ObjectMapper::map($this->customDataFieldLabels, AnalyticsLicenseCustomDataFieldLabels::class);
+        $this->features = ObjectMapper::map($this->features, AnalyticsLicenseFeatures::class);
     }
 
     /**
@@ -64,6 +68,19 @@ class AnalyticsLicense extends BitmovinResponse
     public function customDataFieldLabels(AnalyticsLicenseCustomDataFieldLabels $customDataFieldLabels)
     {
         $this->customDataFieldLabels = $customDataFieldLabels;
+
+        return $this;
+    }
+
+    /**
+     * features
+     *
+     * @param \BitmovinApiSdk\Models\AnalyticsLicenseFeatures $features
+     * @return $this
+     */
+    public function features(\BitmovinApiSdk\Models\AnalyticsLicenseFeatures $features)
+    {
+        $this->features = $features;
 
         return $this;
     }

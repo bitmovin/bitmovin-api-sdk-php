@@ -31,6 +31,9 @@ class Notification extends BitmovinResponse
     /** @var bool */
     public $muted;
 
+    /** @var mixed */
+    public $customData;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -124,6 +127,19 @@ class Notification extends BitmovinResponse
     public function muted(bool $muted)
     {
         $this->muted = $muted;
+
+        return $this;
+    }
+
+    /**
+     * User-specific meta data. This can hold anything.
+     *
+     * @param mixed $customData
+     * @return $this
+     */
+    public function customData(array $customData)
+    {
+        $this->customData = $customData;
 
         return $this;
     }

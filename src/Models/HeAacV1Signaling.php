@@ -5,16 +5,13 @@ namespace BitmovinApiSdk\Models;
 class HeAacV1Signaling extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
-    private const DEFAULT = 'DEFAULT';
-
-    /** @var string */
     private const IMPLICIT = 'IMPLICIT';
 
     /** @var string */
     private const EXPLICIT_SBR = 'EXPLICIT_SBR';
 
     /** @var string */
-    private const EXPLICIT_HIERACHICAL = 'EXPLICIT_HIERACHICAL';
+    private const EXPLICIT_HIERARCHICAL = 'EXPLICIT_HIERARCHICAL';
 
     /**
      * @param string $value
@@ -23,16 +20,6 @@ class HeAacV1Signaling extends \BitmovinApiSdk\Common\Enum
     public static function create(string $value)
     {
         return new static($value);
-    }
-
-    /**
-     * Choose signaling implicitly (explicit hierarchical by default, implicit if global header is disabled).
-     *
-     * @return HeAacV1Signaling
-     */
-    public static function DEFAULT()
-    {
-        return new HeAacV1Signaling(self::DEFAULT);
     }
 
     /**
@@ -46,7 +33,7 @@ class HeAacV1Signaling extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Explicit SBR, implicit PS signaling.
+     * Explicit SBR signaling. This is backwards compatible.
      *
      * @return HeAacV1Signaling
      */
@@ -56,13 +43,13 @@ class HeAacV1Signaling extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Explicit hierarchical signaling.
+     * Explicit hierarchical signaling. This is not backwards compatible.
      *
      * @return HeAacV1Signaling
      */
-    public static function EXPLICIT_HIERACHICAL()
+    public static function EXPLICIT_HIERARCHICAL()
     {
-        return new HeAacV1Signaling(self::EXPLICIT_HIERACHICAL);
+        return new HeAacV1Signaling(self::EXPLICIT_HIERARCHICAL);
     }
 }
 

@@ -28,6 +28,9 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var AutoRestartConfiguration */
     public $autoRestartConfiguration;
 
+    /** @var LiveAutoShutdownConfiguration */
+    public $autoShutdownConfiguration;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -37,6 +40,7 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->reuploadSettings = ObjectMapper::map($this->reuploadSettings, ReuploadSettings::class);
         $this->manifestGenerator = ObjectMapper::map($this->manifestGenerator, ManifestGenerator::class);
         $this->autoRestartConfiguration = ObjectMapper::map($this->autoRestartConfiguration, AutoRestartConfiguration::class);
+        $this->autoShutdownConfiguration = ObjectMapper::map($this->autoShutdownConfiguration, LiveAutoShutdownConfiguration::class);
     }
 
     /**
@@ -126,6 +130,19 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function autoRestartConfiguration(AutoRestartConfiguration $autoRestartConfiguration)
     {
         $this->autoRestartConfiguration = $autoRestartConfiguration;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for auto shutdown of the live encoding
+     *
+     * @param LiveAutoShutdownConfiguration $autoShutdownConfiguration
+     * @return $this
+     */
+    public function autoShutdownConfiguration(LiveAutoShutdownConfiguration $autoShutdownConfiguration)
+    {
+        $this->autoShutdownConfiguration = $autoShutdownConfiguration;
 
         return $this;
     }

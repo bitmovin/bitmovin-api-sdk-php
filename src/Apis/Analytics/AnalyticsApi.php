@@ -15,6 +15,7 @@ use BitmovinApiSdk\Apis\Analytics\Metrics\MetricsApi;
 use BitmovinApiSdk\Apis\Analytics\Ads\AdsApi;
 use BitmovinApiSdk\Apis\Analytics\Queries\QueriesApi;
 use BitmovinApiSdk\Apis\Analytics\Licenses\LicensesApi;
+use BitmovinApiSdk\Apis\Analytics\VirtualLicenses\VirtualLicensesApi;
 use BitmovinApiSdk\Apis\Analytics\Outputs\OutputsApi;
 
 class AnalyticsApi
@@ -43,6 +44,9 @@ class AnalyticsApi
     /** @var LicensesApi */
     public $licenses;
 
+    /** @var VirtualLicensesApi */
+    public $virtualLicenses;
+
     /** @var OutputsApi */
     public $outputs;
 
@@ -63,6 +67,7 @@ class AnalyticsApi
         $this->ads = new AdsApi(null, $this->httpWrapper);
         $this->queries = new QueriesApi(null, $this->httpWrapper);
         $this->licenses = new LicensesApi(null, $this->httpWrapper);
+        $this->virtualLicenses = new VirtualLicensesApi(null, $this->httpWrapper);
         $this->outputs = new OutputsApi(null, $this->httpWrapper);
     }
 }

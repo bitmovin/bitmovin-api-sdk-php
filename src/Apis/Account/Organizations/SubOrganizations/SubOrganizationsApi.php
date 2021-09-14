@@ -29,16 +29,17 @@ class SubOrganizationsApi
      * Organizations under given parent organization
      *
      * @param string $organizationId
+     * @param OrganizationListQueryParams|null $queryParams
      * @return OrganizationPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(string $organizationId) : OrganizationPaginationResponse
+    public function list(string $organizationId, OrganizationListQueryParams $queryParams = null) : OrganizationPaginationResponse
     {
         $pathParams = [
             'organization_id' => $organizationId,
         ];
 
-        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/sub-organizations', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/sub-organizations', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, OrganizationPaginationResponse::class);
     }
