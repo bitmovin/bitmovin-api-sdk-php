@@ -48,7 +48,7 @@ class TimeBasedTrimmingInputStream extends InputStream
     }
 
     /**
-     * Defines how many seconds of the input will be encoded
+     * Defines how many seconds of the input will be encoded. Not defining or setting it to null indicates that the remaining input (considering offset) will be encoded.
      *
      * @param float $duration
      * @return $this

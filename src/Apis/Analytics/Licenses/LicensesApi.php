@@ -66,12 +66,13 @@ class LicensesApi
     /**
      * List Analytics Licenses
      *
+     * @param AnalyticsLicenseListQueryParams|null $queryParams
      * @return AnalyticsLicensePaginationResponse
      * @throws BitmovinApiException
      */
-    public function list() : AnalyticsLicensePaginationResponse
+    public function list(AnalyticsLicenseListQueryParams $queryParams = null) : AnalyticsLicensePaginationResponse
     {
-        $response = $this->httpWrapper->request('GET', '/analytics/licenses', [],  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/analytics/licenses', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, AnalyticsLicensePaginationResponse::class);
     }

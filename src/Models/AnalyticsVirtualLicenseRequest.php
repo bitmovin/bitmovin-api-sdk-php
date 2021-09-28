@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class VirtualLicense extends BitmovinResponse
+class AnalyticsVirtualLicenseRequest extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $name;
@@ -13,17 +13,17 @@ class VirtualLicense extends BitmovinResponse
     /** @var string */
     public $timezone;
 
-    /** @var VirtualLicenseLicensesListItem[] */
+    /** @var AnalyticsVirtualLicenseLicensesListItem[] */
     public $licenses;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->licenses = ObjectMapper::map($this->licenses, VirtualLicenseLicensesListItem::class);
+        $this->licenses = ObjectMapper::map($this->licenses, AnalyticsVirtualLicenseLicensesListItem::class);
     }
 
     /**
-     * Name of the Virtual License
+     * Name of the Analytics Virtual License (required)
      *
      * @param string $name
      * @return $this
@@ -36,7 +36,7 @@ class VirtualLicense extends BitmovinResponse
     }
 
     /**
-     * The timezone of the Virtual License
+     * The timezone of the Analytics Virtual License (required)
      *
      * @param string $timezone
      * @return $this
@@ -49,9 +49,9 @@ class VirtualLicense extends BitmovinResponse
     }
 
     /**
-     * List of Analytics Licenses
+     * List of Analytics Licenses (required)
      *
-     * @param VirtualLicenseLicensesListItem[] $licenses
+     * @param AnalyticsVirtualLicenseLicensesListItem[] $licenses
      * @return $this
      */
     public function licenses(array $licenses)

@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class VirtualLicenseLicensesListItem extends \BitmovinApiSdk\Common\ApiResource
+class AnalyticsVirtualLicenseLicensesListItem extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $id;
@@ -15,6 +15,9 @@ class VirtualLicenseLicensesListItem extends \BitmovinApiSdk\Common\ApiResource
 
     /** @var string */
     public $orgId;
+
+    /** @var string */
+    public $name;
 
     public function __construct($attributes = null)
     {

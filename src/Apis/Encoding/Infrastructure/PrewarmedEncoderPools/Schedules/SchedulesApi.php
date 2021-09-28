@@ -88,11 +88,11 @@ class SchedulesApi
      * List prewarmed encoder pool schedules
      *
      * @param string $poolId
-     * @param PrewarmedEncoderPoolListQueryParams|null $queryParams
-     * @return PrewarmedEncoderPoolPaginationResponse
+     * @param PrewarmedEncoderPoolScheduleListQueryParams|null $queryParams
+     * @return PrewarmedEncoderPoolSchedulePaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(string $poolId, PrewarmedEncoderPoolListQueryParams $queryParams = null) : PrewarmedEncoderPoolPaginationResponse
+    public function list(string $poolId, PrewarmedEncoderPoolScheduleListQueryParams $queryParams = null) : PrewarmedEncoderPoolSchedulePaginationResponse
     {
         $pathParams = [
             'pool_id' => $poolId,
@@ -100,6 +100,6 @@ class SchedulesApi
 
         $response = $this->httpWrapper->request('GET', '/encoding/infrastructure/prewarmed-encoder-pools/{pool_id}/schedules', $pathParams, $queryParams, null, true);
 
-        return ObjectMapper::map($response, PrewarmedEncoderPoolPaginationResponse::class);
+        return ObjectMapper::map($response, PrewarmedEncoderPoolSchedulePaginationResponse::class);
     }
 }

@@ -26,16 +26,67 @@ class VirtualLicensesApi
     }
 
     /**
-     * Create Virtual License
+     * Create Analytics Virtual License
      *
-     * @param \BitmovinApiSdk\Models\VirtualLicenseCreateRequest $virtualLicenseCreateRequest
-     * @return \BitmovinApiSdk\Models\VirtualLicense
+     * @param \BitmovinApiSdk\Models\AnalyticsVirtualLicenseRequest $analyticsVirtualLicenseRequest
+     * @return \BitmovinApiSdk\Models\AnalyticsVirtualLicense
      * @throws BitmovinApiException
      */
-    public function create(\BitmovinApiSdk\Models\VirtualLicenseCreateRequest $virtualLicenseCreateRequest) : \BitmovinApiSdk\Models\VirtualLicense
+    public function create(\BitmovinApiSdk\Models\AnalyticsVirtualLicenseRequest $analyticsVirtualLicenseRequest) : \BitmovinApiSdk\Models\AnalyticsVirtualLicense
     {
-        $response = $this->httpWrapper->request('POST', '/analytics/virtual-licenses', [],  null, $virtualLicenseCreateRequest, true);
+        $response = $this->httpWrapper->request('POST', '/analytics/virtual-licenses', [],  null, $analyticsVirtualLicenseRequest, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\VirtualLicense::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsVirtualLicense::class);
+    }
+
+    /**
+     * Delete Analytics Virtual License
+     *
+     * @param string $virtualLicenseId
+     * @return \BitmovinApiSdk\Models\BitmovinResponse
+     * @throws BitmovinApiException
+     */
+    public function delete(string $virtualLicenseId) : \BitmovinApiSdk\Models\BitmovinResponse
+    {
+        $pathParams = [
+            'virtual_license_id' => $virtualLicenseId,
+        ];
+
+        $response = $this->httpWrapper->request('DELETE', '/analytics/virtual-licenses/{virtual_license_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
+    }
+
+    /**
+     * List Analytics Virtual Licenses
+     *
+     * @param AnalyticsVirtualLicenseListQueryParams|null $queryParams
+     * @return AnalyticsVirtualLicensePaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list(AnalyticsVirtualLicenseListQueryParams $queryParams = null) : AnalyticsVirtualLicensePaginationResponse
+    {
+        $response = $this->httpWrapper->request('GET', '/analytics/virtual-licenses', [], $queryParams, null, true);
+
+        return ObjectMapper::map($response, AnalyticsVirtualLicensePaginationResponse::class);
+    }
+
+    /**
+     * Update Analytics Virtual License
+     *
+     * @param string $virtualLicenseId
+     * @param \BitmovinApiSdk\Models\AnalyticsVirtualLicenseRequest $analyticsVirtualLicenseRequest
+     * @return \BitmovinApiSdk\Models\AnalyticsVirtualLicense
+     * @throws BitmovinApiException
+     */
+    public function update(string $virtualLicenseId, \BitmovinApiSdk\Models\AnalyticsVirtualLicenseRequest $analyticsVirtualLicenseRequest) : \BitmovinApiSdk\Models\AnalyticsVirtualLicense
+    {
+        $pathParams = [
+            'virtual_license_id' => $virtualLicenseId,
+        ];
+
+        $response = $this->httpWrapper->request('PUT', '/analytics/virtual-licenses/{virtual_license_id}', $pathParams,  null, $analyticsVirtualLicenseRequest, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsVirtualLicense::class);
     }
 }

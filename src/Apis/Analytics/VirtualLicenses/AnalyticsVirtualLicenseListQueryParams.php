@@ -1,11 +1,11 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Infrastructure\PrewarmedEncoderPools\Schedules;
+namespace BitmovinApiSdk\Apis\Analytics\VirtualLicenses;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class PrewarmedEncoderPoolListQueryParams implements QueryParams
+class AnalyticsVirtualLicenseListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -14,18 +14,18 @@ class PrewarmedEncoderPoolListQueryParams implements QueryParams
     private $limit;
 
     /**
-     * @return PrewarmedEncoderPoolListQueryParams
+     * @return AnalyticsVirtualLicenseListQueryParams
      */
-    public static function create(): PrewarmedEncoderPoolListQueryParams
+    public static function create(): AnalyticsVirtualLicenseListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return PrewarmedEncoderPoolListQueryParams
+     * @return AnalyticsVirtualLicenseListQueryParams
      */
-    public function offset(int $offset): PrewarmedEncoderPoolListQueryParams
+    public function offset(int $offset): AnalyticsVirtualLicenseListQueryParams
     {
         $this->offset = $offset;
 
@@ -34,9 +34,9 @@ class PrewarmedEncoderPoolListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return PrewarmedEncoderPoolListQueryParams
+     * @return AnalyticsVirtualLicenseListQueryParams
      */
-    public function limit(int $limit): PrewarmedEncoderPoolListQueryParams
+    public function limit(int $limit): AnalyticsVirtualLicenseListQueryParams
     {
         $this->limit = $limit;
 
