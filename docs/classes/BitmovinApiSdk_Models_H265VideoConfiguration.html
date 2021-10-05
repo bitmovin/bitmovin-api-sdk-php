@@ -68,6 +68,7 @@
         <div class="synopsis">class H265VideoConfiguration
                 extends <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">VideoConfiguration</a>
             {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\PresetConfiguration">PresetConfiguration</span> <a href="#members">$presetConfiguration</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\H265DynamicRangeFormat">H265DynamicRangeFormat</span> <a href="#members">$dynamicRangeFormat</a>;
                     </li><li>public float <a href="#members">$crf</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\ProfileH265">ProfileH265</span> <a href="#members">$profile</a>;
                     </li><li>public int <a href="#members">$bframes</a>;
@@ -182,6 +183,7 @@
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/presetConfiguration.html">presetConfiguration</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/dynamicRangeFormat.html">dynamicRangeFormat</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/crf.html">crf</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/profile.html">profile</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/bframes.html">bframes</a>()
@@ -390,6 +392,9 @@
             <li id="displayAspectRatio"><strong>$displayAspectRatio</strong>
                 —
                 <a title="BitmovinApiSdk\Models\DisplayAspectRatio" href="../classes/BitmovinApiSdk_Models_DisplayAspectRatio.html">BitmovinApiSdk\Models\DisplayAspectRatio</a></li>
+            <li id="dynamicRangeFormat"><strong>$dynamicRangeFormat</strong>
+                —
+                <a title="BitmovinApiSdk\Models\H265DynamicRangeFormat" href="../classes/BitmovinApiSdk_Models_H265DynamicRangeFormat.html">BitmovinApiSdk\Models\H265DynamicRangeFormat</a></li>
             <li id="dynamicRateDistortionStrength"><strong>$dynamicRateDistortionStrength</strong>
                 —
                 int</li>
@@ -696,6 +701,8 @@
                 — Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</li>
             <li id="cutree"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/cutree.html">cutree()</a>
                 — Enables the use of lookahead’s lowres motion vector fields to determine the amount of reuse of each block to tune adaptive quantization factors.</li>
+            <li id="dynamicRangeFormat"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/dynamicRangeFormat.html">dynamicRangeFormat()</a>
+                — Automatically configures the H265 Video Codec to be compatible with the given SDR/HDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</li>
             <li id="dynamicRateDistortionStrength"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/dynamicRateDistortionStrength.html">dynamicRateDistortionStrength()</a>
                 — Increases the RD level at points where quality drops due to VBV rate control enforcement. Default 0.</li>
             <li id="earlySkip"><a title="BitmovinApiSdk\Models\H265VideoConfiguration" href="../classes/BitmovinApiSdk_Models_H265VideoConfiguration/earlySkip.html">earlySkip()</a>

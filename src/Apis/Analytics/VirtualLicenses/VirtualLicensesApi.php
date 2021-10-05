@@ -58,6 +58,24 @@ class VirtualLicensesApi
     }
 
     /**
+     * Analytics Virtual License
+     *
+     * @param string $virtualLicenseId
+     * @return \BitmovinApiSdk\Models\AnalyticsVirtualLicense
+     * @throws BitmovinApiException
+     */
+    public function get(string $virtualLicenseId) : \BitmovinApiSdk\Models\AnalyticsVirtualLicense
+    {
+        $pathParams = [
+            'virtual_license_id' => $virtualLicenseId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/analytics/virtual-licenses/{virtual_license_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsVirtualLicense::class);
+    }
+
+    /**
      * List Analytics Virtual Licenses
      *
      * @param AnalyticsVirtualLicenseListQueryParams|null $queryParams

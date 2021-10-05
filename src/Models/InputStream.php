@@ -22,6 +22,7 @@ class InputStream extends BitmovinResource
         "DVB_SUBTITLE" => DvbSubtitleInputStream::class,
         "DVB_TELETEXT" => DvbTeletextInputStream::class,
         "DOLBY_ATMOS" => DolbyAtmosIngestInputStream::class,
+        "DOLBY_VISION" => DolbyVisionInputStream::class,
     ];
 
     public function __construct($attributes = null)

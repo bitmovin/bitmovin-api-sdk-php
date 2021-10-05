@@ -10,6 +10,9 @@ class H265VideoConfiguration extends VideoConfiguration
     /** @var PresetConfiguration */
     public $presetConfiguration;
 
+    /** @var H265DynamicRangeFormat */
+    public $dynamicRangeFormat;
+
     /** @var float */
     public $crf;
 
@@ -296,6 +299,7 @@ class H265VideoConfiguration extends VideoConfiguration
     {
         parent::__construct($attributes);
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, PresetConfiguration::class);
+        $this->dynamicRangeFormat = ObjectMapper::map($this->dynamicRangeFormat, H265DynamicRangeFormat::class);
         $this->profile = ObjectMapper::map($this->profile, ProfileH265::class);
         $this->level = ObjectMapper::map($this->level, LevelH265::class);
         $this->bAdapt = ObjectMapper::map($this->bAdapt, BAdapt::class);
@@ -326,6 +330,19 @@ class H265VideoConfiguration extends VideoConfiguration
     public function presetConfiguration(PresetConfiguration $presetConfiguration)
     {
         $this->presetConfiguration = $presetConfiguration;
+
+        return $this;
+    }
+
+    /**
+     * Automatically configures the H265 Video Codec to be compatible with the given SDR/HDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+     *
+     * @param H265DynamicRangeFormat $dynamicRangeFormat
+     * @return $this
+     */
+    public function dynamicRangeFormat(H265DynamicRangeFormat $dynamicRangeFormat)
+    {
+        $this->dynamicRangeFormat = $dynamicRangeFormat;
 
         return $this;
     }

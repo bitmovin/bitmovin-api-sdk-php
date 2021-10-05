@@ -43,6 +43,9 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const DOLBY_ATMOS = 'DOLBY_ATMOS';
 
+    /** @var string */
+    private const DOLBY_VISION = 'DOLBY_VISION';
+
     /**
      * @param string $value
      * @return InputStreamType
@@ -180,6 +183,16 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function DOLBY_ATMOS()
     {
         return new InputStreamType(self::DOLBY_ATMOS);
+    }
+
+    /**
+     * DOLBY_VISION
+     *
+     * @return InputStreamType
+     */
+    public static function DOLBY_VISION()
+    {
+        return new InputStreamType(self::DOLBY_VISION);
     }
 }
 
