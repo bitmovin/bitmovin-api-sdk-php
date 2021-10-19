@@ -22,6 +22,12 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     /** @var string */
     public $customData5;
 
+    /** @var string */
+    public $customData6;
+
+    /** @var string */
+    public $customData7;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -88,6 +94,32 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     public function customData5(string $customData5)
     {
         $this->customData5 = $customData5;
+
+        return $this;
+    }
+
+    /**
+     * Custom Data 6
+     *
+     * @param string $customData6
+     * @return $this
+     */
+    public function customData6(string $customData6)
+    {
+        $this->customData6 = $customData6;
+
+        return $this;
+    }
+
+    /**
+     * Custom Data 7
+     *
+     * @param string $customData7
+     * @return $this
+     */
+    public function customData7(string $customData7)
+    {
+        $this->customData7 = $customData7;
 
         return $this;
     }

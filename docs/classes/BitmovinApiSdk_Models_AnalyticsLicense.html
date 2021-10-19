@@ -66,24 +66,34 @@
         <p/>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class AnalyticsLicense
-                extends <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse.html">BitmovinResponse</a>
-            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$name</a>;
-                    </li><li>public string <a href="#members">$licenseKey</a>;
+                extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$id</a>;
                     </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
-                    </li><li>public int <a href="#members">$maxImpressions</a>;
-                    </li><li>public int <a href="#members">$impressions</a>;
-                    </li><li>public array <a href="#members">$domains</a>;
+                    </li><li>public mixed <a href="#members">$customData</a>;
+                    </li><li>public string <a href="#members">$licenseKey</a>;
+                    </li><li>public string <a href="#members">$name</a>;
+                    </li><li>public string <a href="#members">$industry</a>;
+                    </li><li>public string <a href="#members">$subIndustry</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$ignoreDNT</a>;
+                    </li><li>public int <a href="#members">$impressions</a>;
+                    </li><li>public int <a href="#members">$maxImpressions</a>;
                     </li><li>public string <a href="#members">$timeZone</a>;
+                    </li><li>public string <a href="#members">$retentionTime</a>;
+                    </li><li>public array <a href="#members">$domains</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$includeInInsights</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\AnalyticsLicenseCustomDataFieldLabels">AnalyticsLicenseCustomDataFieldLabels</span> <a href="#members">$customDataFieldLabels</a>;
+                    </li><li>public int <a href="#members">$customDataFieldsCount</a>;
+                    </li><li>public int <a href="#members">$orderIndex</a>;
+                    </li><li>public string <a href="#members">$rateLimit</a>;
                     </li><li>public <span title="\BitmovinApiSdk\Models\AnalyticsLicenseFeatures">AnalyticsLicenseFeatures</span> <a href="#members">$features</a>;
-                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
-                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/__construct.html">__construct</a>()
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/name.html">name</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/ignoreDNT.html">ignoreDNT</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/timeZone.html">timeZone</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/customDataFieldLabels.html">customDataFieldLabels</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/rateLimit.html">rateLimit</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/features.html">features</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse/__construct.html">__construct</a>()
-                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
                         </li></ul>
@@ -94,7 +104,7 @@
           <h4>Extends</h4>
           <ul>
             <li>
-              <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse.html">BitmovinApiSdk\Models\BitmovinResponse</a>
+              <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a>
             </li>
           </ul>
         </div>
@@ -105,9 +115,15 @@
             <li id="createdAt"><strong>$createdAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
+            <li id="customData"><strong>$customData</strong>
+                —
+                mixed</li>
             <li id="customDataFieldLabels"><strong>$customDataFieldLabels</strong>
                 —
                 <a title="BitmovinApiSdk\Models\AnalyticsLicenseCustomDataFieldLabels" href="../classes/BitmovinApiSdk_Models_AnalyticsLicenseCustomDataFieldLabels.html">BitmovinApiSdk\Models\AnalyticsLicenseCustomDataFieldLabels</a></li>
+            <li id="customDataFieldsCount"><strong>$customDataFieldsCount</strong>
+                —
+                int</li>
             <li id="domains"><strong>$domains</strong>
                 —
                 <a title="\BitmovinApiSdk\Models\AnalyticsLicenseDomain" href="../classes/_BitmovinApiSdk_Models_AnalyticsLicenseDomain.html">\BitmovinApiSdk\Models\AnalyticsLicenseDomain</a>[]
@@ -124,6 +140,12 @@
             <li id="impressions"><strong>$impressions</strong>
                 —
                 int</li>
+            <li id="includeInInsights"><strong>$includeInInsights</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="industry"><strong>$industry</strong>
+                —
+                string</li>
             <li id="licenseKey"><strong>$licenseKey</strong>
                 —
                 string</li>
@@ -131,6 +153,18 @@
                 —
                 int</li>
             <li id="name"><strong>$name</strong>
+                —
+                string</li>
+            <li id="orderIndex"><strong>$orderIndex</strong>
+                —
+                int</li>
+            <li id="rateLimit"><strong>$rateLimit</strong>
+                —
+                string</li>
+            <li id="retentionTime"><strong>$retentionTime</strong>
+                —
+                string</li>
+            <li id="subIndustry"><strong>$subIndustry</strong>
                 —
                 string</li>
             <li id="timeZone"><strong>$timeZone</strong>
@@ -149,8 +183,14 @@
                 — Labels for CustomData fields</li>
             <li id="features"><a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/features.html">features()</a>
                 — features</li>
+            <li id="ignoreDNT"><a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/ignoreDNT.html">ignoreDNT()</a>
+                — Whether the Do Not Track request from the browser should be ignored</li>
             <li id="name"><a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/name.html">name()</a>
                 — Name of the Analytics License</li>
+            <li id="rateLimit"><a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/rateLimit.html">rateLimit()</a>
+                — The rate limit of this license</li>
+            <li id="timeZone"><a title="BitmovinApiSdk\Models\AnalyticsLicense" href="../classes/BitmovinApiSdk_Models_AnalyticsLicense/timeZone.html">timeZone()</a>
+                — The timezone of the Analytics License</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>

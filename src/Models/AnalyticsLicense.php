@@ -5,34 +5,61 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class AnalyticsLicense extends BitmovinResponse
+class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
-    public $name;
-
-    /** @var string */
-    public $licenseKey;
+    public $id;
 
     /** @var Carbon */
     public $createdAt;
 
-    /** @var int */
-    public $maxImpressions;
+    /** @var mixed */
+    public $customData;
+
+    /** @var string */
+    public $licenseKey;
+
+    /** @var string */
+    public $name;
+
+    /** @var string */
+    public $industry;
+
+    /** @var string */
+    public $subIndustry;
+
+    /** @var bool */
+    public $ignoreDNT;
 
     /** @var int */
     public $impressions;
+
+    /** @var int */
+    public $maxImpressions;
+
+    /** @var string */
+    public $timeZone;
+
+    /** @var string */
+    public $retentionTime;
 
     /** @var \BitmovinApiSdk\Models\AnalyticsLicenseDomain[] */
     public $domains;
 
     /** @var bool */
-    public $ignoreDNT;
-
-    /** @var string */
-    public $timeZone;
+    public $includeInInsights;
 
     /** @var AnalyticsLicenseCustomDataFieldLabels */
     public $customDataFieldLabels;
+
+    /** @var int */
+    public $customDataFieldsCount;
+
+    /** @var int */
+    public $orderIndex;
+
+    /** @var string */
+    public $rateLimit;
 
     /** @var \BitmovinApiSdk\Models\AnalyticsLicenseFeatures */
     public $features;
@@ -60,6 +87,32 @@ class AnalyticsLicense extends BitmovinResponse
     }
 
     /**
+     * Whether the Do Not Track request from the browser should be ignored
+     *
+     * @param bool $ignoreDNT
+     * @return $this
+     */
+    public function ignoreDNT(bool $ignoreDNT)
+    {
+        $this->ignoreDNT = $ignoreDNT;
+
+        return $this;
+    }
+
+    /**
+     * The timezone of the Analytics License
+     *
+     * @param string $timeZone
+     * @return $this
+     */
+    public function timeZone(string $timeZone)
+    {
+        $this->timeZone = $timeZone;
+
+        return $this;
+    }
+
+    /**
      * Labels for CustomData fields
      *
      * @param AnalyticsLicenseCustomDataFieldLabels $customDataFieldLabels
@@ -68,6 +121,19 @@ class AnalyticsLicense extends BitmovinResponse
     public function customDataFieldLabels(AnalyticsLicenseCustomDataFieldLabels $customDataFieldLabels)
     {
         $this->customDataFieldLabels = $customDataFieldLabels;
+
+        return $this;
+    }
+
+    /**
+     * The rate limit of this license
+     *
+     * @param string $rateLimit
+     * @return $this
+     */
+    public function rateLimit(string $rateLimit)
+    {
+        $this->rateLimit = $rateLimit;
 
         return $this;
     }

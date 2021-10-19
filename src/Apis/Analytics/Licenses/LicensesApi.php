@@ -81,17 +81,17 @@ class LicensesApi
      * Update Analytics License
      *
      * @param string $licenseId
-     * @param \BitmovinApiSdk\Models\AnalyticsLicenseUpdateRequest $analyticsLicenseUpdateRequest
+     * @param \BitmovinApiSdk\Models\AnalyticsLicense $analyticsLicense
      * @return \BitmovinApiSdk\Models\AnalyticsLicense
      * @throws BitmovinApiException
      */
-    public function update(string $licenseId, \BitmovinApiSdk\Models\AnalyticsLicenseUpdateRequest $analyticsLicenseUpdateRequest) : \BitmovinApiSdk\Models\AnalyticsLicense
+    public function update(string $licenseId, \BitmovinApiSdk\Models\AnalyticsLicense $analyticsLicense) : \BitmovinApiSdk\Models\AnalyticsLicense
     {
         $pathParams = [
             'license_id' => $licenseId,
         ];
 
-        $response = $this->httpWrapper->request('PUT', '/analytics/licenses/{license_id}', $pathParams,  null, $analyticsLicenseUpdateRequest, true);
+        $response = $this->httpWrapper->request('PUT', '/analytics/licenses/{license_id}', $pathParams,  null, $analyticsLicense, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsLicense::class);
     }
