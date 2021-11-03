@@ -30,7 +30,7 @@ class Webhook extends BitmovinResource
     }
 
     /**
-     * Webhook url (required)
+     * Webhook URL (required)
      *
      * @param string $url
      * @return $this
@@ -56,7 +56,7 @@ class Webhook extends BitmovinResource
     }
 
     /**
-     * Whether to skip SSL certification verification or not
+     * Skip verification of the SSL certificate
      *
      * @param bool $insecureSsl
      * @return $this

@@ -97,6 +97,12 @@ class StatisticsPerStream extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $dolbyVisionToSdrMultiplicator;
 
+    /** @var bool */
+    public $hdrHlgToSdr;
+
+    /** @var float */
+    public $hdrHlgToSdrMultiplicator;
+
     /** @var \BitmovinApiSdk\Models\NexGuardABWatermarkingFeature */
     public $nexGuardABWatermarkingType;
 

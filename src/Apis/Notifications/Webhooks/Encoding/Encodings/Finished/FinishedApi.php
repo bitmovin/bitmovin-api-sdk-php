@@ -32,7 +32,7 @@ class FinishedApi
     }
 
     /**
-     * Add Encoding Finished Webhook
+     * Add &#39;Encoding Finished&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
      * @return \BitmovinApiSdk\Models\Webhook
@@ -46,7 +46,7 @@ class FinishedApi
     }
 
     /**
-     * Add Encoding Finished Webhook for specific Encoding Resource.
+     * Add &#39;Encoding Finished&#39; Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Webhook $webhook
@@ -65,7 +65,7 @@ class FinishedApi
     }
 
     /**
-     * Delete Encoding Finished Webhook for specific Encoding Resource
+     * Delete &#39;Encoding Finished&#39; Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -85,7 +85,7 @@ class FinishedApi
     }
 
     /**
-     * Delete Encoding Finished Webhook
+     * Delete &#39;Encoding Finished&#39; Webhook
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -103,7 +103,7 @@ class FinishedApi
     }
 
     /**
-     * Encoding Finished Webhook Details for specific Encoding Resource
+     * &#39;Encoding Finished&#39; Webhook Details for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -123,7 +123,7 @@ class FinishedApi
     }
 
     /**
-     * Encoding Finished Webhook Details
+     * &#39;Encoding Finished&#39; Webhook Details
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\Webhook
@@ -141,7 +141,7 @@ class FinishedApi
     }
 
     /**
-     * List Encoding Finished Webhooks
+     * List &#39;Encoding Finished&#39; Webhooks
      *
      * @param WebhookListQueryParams|null $queryParams
      * @return WebhookPaginationResponse
@@ -155,7 +155,7 @@ class FinishedApi
     }
 
     /**
-     * List Encoding Finished Webhooks for specific Encoding Resource
+     * List &#39;Encoding Finished&#39; Webhooks for a specific Encoding
      *
      * @param string $encodingId
      * @param WebhookListByEncodingIdQueryParams|null $queryParams

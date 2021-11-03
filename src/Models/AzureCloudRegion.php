@@ -38,6 +38,9 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     private const BRAZIL_SOUTH = 'BRAZIL_SOUTH';
 
     /** @var string */
+    private const BRAZIL_SOUTHEAST = 'BRAZIL_SOUTHEAST';
+
+    /** @var string */
     private const EUROPE_NORTH = 'EUROPE_NORTH';
 
     /** @var string */
@@ -48,6 +51,30 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
 
     /** @var string */
     private const UK_WEST = 'UK_WEST';
+
+    /** @var string */
+    private const FRANCE_CENTRAL = 'FRANCE_CENTRAL';
+
+    /** @var string */
+    private const FRANCE_SOUTH = 'FRANCE_SOUTH';
+
+    /** @var string */
+    private const SWITZERLAND_NORTH = 'SWITZERLAND_NORTH';
+
+    /** @var string */
+    private const SWITZERLAND_WEST = 'SWITZERLAND_WEST';
+
+    /** @var string */
+    private const GERMANY_NORTH = 'GERMANY_NORTH';
+
+    /** @var string */
+    private const GERMANY_WESTCENTRAL = 'GERMANY_WESTCENTRAL';
+
+    /** @var string */
+    private const NORWAY_WEST = 'NORWAY_WEST';
+
+    /** @var string */
+    private const NORWAY_EAST = 'NORWAY_EAST';
 
     /** @var string */
     private const ASIA_EAST = 'ASIA_EAST';
@@ -68,6 +95,12 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AUSTRALIA_SOUTHEAST = 'AUSTRALIA_SOUTHEAST';
 
     /** @var string */
+    private const AUSTRALIA_CENTRAL = 'AUSTRALIA_CENTRAL';
+
+    /** @var string */
+    private const AUSTRALIA_CENTRAL2 = 'AUSTRALIA_CENTRAL2';
+
+    /** @var string */
     private const INDIA_CENTRAL = 'INDIA_CENTRAL';
 
     /** @var string */
@@ -83,10 +116,28 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     private const KOREA_SOUTH = 'KOREA_SOUTH';
 
     /** @var string */
+    private const UAE_CENTRAL = 'UAE_CENTRAL';
+
+    /** @var string */
+    private const UAE_NORTH = 'UAE_NORTH';
+
+    /** @var string */
+    private const SOUTHAFRICA_NORTH = 'SOUTHAFRICA_NORTH';
+
+    /** @var string */
+    private const SOUTHAFRICA_WEST = 'SOUTHAFRICA_WEST';
+
+    /** @var string */
     private const CHINA_NORTH = 'CHINA_NORTH';
 
     /** @var string */
     private const CHINA_EAST = 'CHINA_EAST';
+
+    /** @var string */
+    private const CHINA_NORTH2 = 'CHINA_NORTH2';
+
+    /** @var string */
+    private const CHINA_EAST2 = 'CHINA_EAST2';
 
     /** @var string */
     private const GERMANY_CENTRAL = 'GERMANY_CENTRAL';
@@ -99,6 +150,18 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
 
     /** @var string */
     private const GOV_US_IOWA = 'GOV_US_IOWA';
+
+    /** @var string */
+    private const GOV_US_ARIZONA = 'GOV_US_ARIZONA';
+
+    /** @var string */
+    private const GOV_US_TEXAS = 'GOV_US_TEXAS';
+
+    /** @var string */
+    private const GOV_US_DOD_EAST = 'GOV_US_DOD_EAST';
+
+    /** @var string */
+    private const GOV_US_DOD_CENTRAL = 'GOV_US_DOD_CENTRAL';
 
     /**
      * @param string $value
@@ -140,7 +203,7 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * US_EAST
+     * Virginia
      *
      * @return AzureCloudRegion
      */
@@ -220,6 +283,16 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * Rio de Janeiro - Reserved for Brazil South customers requiring scenario-based in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function BRAZIL_SOUTHEAST()
+    {
+        return new AzureCloudRegion(self::BRAZIL_SOUTHEAST);
+    }
+
+    /**
      * Ireland
      *
      * @return AzureCloudRegion
@@ -257,6 +330,86 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function UK_WEST()
     {
         return new AzureCloudRegion(self::UK_WEST);
+    }
+
+    /**
+     * Paris
+     *
+     * @return AzureCloudRegion
+     */
+    public static function FRANCE_CENTRAL()
+    {
+        return new AzureCloudRegion(self::FRANCE_CENTRAL);
+    }
+
+    /**
+     * Marseille - Reserved for France Central customers requiring in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function FRANCE_SOUTH()
+    {
+        return new AzureCloudRegion(self::FRANCE_SOUTH);
+    }
+
+    /**
+     * Zürich
+     *
+     * @return AzureCloudRegion
+     */
+    public static function SWITZERLAND_NORTH()
+    {
+        return new AzureCloudRegion(self::SWITZERLAND_NORTH);
+    }
+
+    /**
+     * Geneva - Reserved for Switzerland North customers requiring in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function SWITZERLAND_WEST()
+    {
+        return new AzureCloudRegion(self::SWITZERLAND_WEST);
+    }
+
+    /**
+     * Berlin - Reserved for Germany West Central customers requiring in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function GERMANY_NORTH()
+    {
+        return new AzureCloudRegion(self::GERMANY_NORTH);
+    }
+
+    /**
+     * Frankfurt
+     *
+     * @return AzureCloudRegion
+     */
+    public static function GERMANY_WESTCENTRAL()
+    {
+        return new AzureCloudRegion(self::GERMANY_WESTCENTRAL);
+    }
+
+    /**
+     * Stavanger - Reserved for Norway East customers requiring in-country diaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function NORWAY_WEST()
+    {
+        return new AzureCloudRegion(self::NORWAY_WEST);
+    }
+
+    /**
+     * Oslo
+     *
+     * @return AzureCloudRegion
+     */
+    public static function NORWAY_EAST()
+    {
+        return new AzureCloudRegion(self::NORWAY_EAST);
     }
 
     /**
@@ -320,6 +473,26 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * Canberra
+     *
+     * @return AzureCloudRegion
+     */
+    public static function AUSTRALIA_CENTRAL()
+    {
+        return new AzureCloudRegion(self::AUSTRALIA_CENTRAL);
+    }
+
+    /**
+     * Canberra - Reserved for Australia Central customers requiring in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function AUSTRALIA_CENTRAL2()
+    {
+        return new AzureCloudRegion(self::AUSTRALIA_CENTRAL2);
+    }
+
+    /**
      * Pune
      *
      * @return AzureCloudRegion
@@ -370,6 +543,46 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * Abu Dhabi - Reserved for UAE North customers requiring in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function UAE_CENTRAL()
+    {
+        return new AzureCloudRegion(self::UAE_CENTRAL);
+    }
+
+    /**
+     * Dubai
+     *
+     * @return AzureCloudRegion
+     */
+    public static function UAE_NORTH()
+    {
+        return new AzureCloudRegion(self::UAE_NORTH);
+    }
+
+    /**
+     * Johannesburg
+     *
+     * @return AzureCloudRegion
+     */
+    public static function SOUTHAFRICA_NORTH()
+    {
+        return new AzureCloudRegion(self::SOUTHAFRICA_NORTH);
+    }
+
+    /**
+     * Cape Town - Reserved for South Africa North customers requiring in-country disaster recovery
+     *
+     * @return AzureCloudRegion
+     */
+    public static function SOUTHAFRICA_WEST()
+    {
+        return new AzureCloudRegion(self::SOUTHAFRICA_WEST);
+    }
+
+    /**
      * Beijing
      *
      * @return AzureCloudRegion
@@ -390,7 +603,27 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Frankfurt
+     * Beijing
+     *
+     * @return AzureCloudRegion
+     */
+    public static function CHINA_NORTH2()
+    {
+        return new AzureCloudRegion(self::CHINA_NORTH2);
+    }
+
+    /**
+     * Shanghai
+     *
+     * @return AzureCloudRegion
+     */
+    public static function CHINA_EAST2()
+    {
+        return new AzureCloudRegion(self::CHINA_EAST2);
+    }
+
+    /**
+     * Frankfurt - No longer listed by https://azure.microsoft.com/en-us/global-infrastructure/data-residency
      *
      * @return AzureCloudRegion
      */
@@ -400,7 +633,7 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Magdeburg
+     * Magdeburg - No longer listed by https://azure.microsoft.com/en-us/global-infrastructure/data-residency
      *
      * @return AzureCloudRegion
      */
@@ -410,7 +643,7 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Virginia
+     * US Government Virginia - Reserved for US government entities and their partners only
      *
      * @return AzureCloudRegion
      */
@@ -420,13 +653,53 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Iowa
+     * US Government Iowa - Reserved for US government entities and their partners only
      *
      * @return AzureCloudRegion
      */
     public static function GOV_US_IOWA()
     {
         return new AzureCloudRegion(self::GOV_US_IOWA);
+    }
+
+    /**
+     * US Government Arizona - Reserved for US government entities and their partners only
+     *
+     * @return AzureCloudRegion
+     */
+    public static function GOV_US_ARIZONA()
+    {
+        return new AzureCloudRegion(self::GOV_US_ARIZONA);
+    }
+
+    /**
+     * US Government Texas - Reserved for US government entities and their partners only
+     *
+     * @return AzureCloudRegion
+     */
+    public static function GOV_US_TEXAS()
+    {
+        return new AzureCloudRegion(self::GOV_US_TEXAS);
+    }
+
+    /**
+     * Virginia - Reserved for exclusive use by the Department of Defense
+     *
+     * @return AzureCloudRegion
+     */
+    public static function GOV_US_DOD_EAST()
+    {
+        return new AzureCloudRegion(self::GOV_US_DOD_EAST);
+    }
+
+    /**
+     * Iowa - Reserved for exclusive use by the Department of Defense
+     *
+     * @return AzureCloudRegion
+     */
+    public static function GOV_US_DOD_CENTRAL()
+    {
+        return new AzureCloudRegion(self::GOV_US_DOD_CENTRAL);
     }
 }
 

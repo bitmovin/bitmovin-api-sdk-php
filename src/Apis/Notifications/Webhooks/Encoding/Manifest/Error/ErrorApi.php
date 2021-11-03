@@ -26,7 +26,7 @@ class ErrorApi
     }
 
     /**
-     * Add Manifest Error Webhook (All Manifests)
+     * Add &#39;Manifest Error&#39; Webhook (All Manifests)
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
      * @return \BitmovinApiSdk\Models\Webhook
@@ -40,7 +40,7 @@ class ErrorApi
     }
 
     /**
-     * Add Manifest Error Webhook Notification (Specific Manifest)
+     * Add &#39;Manifest Error&#39; Webhook Notification (Specific Manifest)
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\Webhook $webhook
@@ -59,7 +59,7 @@ class ErrorApi
     }
 
     /**
-     * Delete Manifest Error Webhook
+     * Delete &#39;Manifest Error&#39; Webhook
      *
      * @param string $notificationId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -77,7 +77,7 @@ class ErrorApi
     }
 
     /**
-     * Replace Manifest Error Webhook Notification
+     * Replace &#39;Manifest Error&#39; Webhook Notification
      *
      * @param string $notificationId
      * @param \BitmovinApiSdk\Models\Webhook $webhook

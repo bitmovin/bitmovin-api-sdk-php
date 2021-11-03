@@ -26,7 +26,7 @@ class FinishedApi
     }
 
     /**
-     * Add Manifest Finished Successfully Webhook (All Manifests)
+     * Add &#39;Manifest Finished Successfully&#39; Webhook (All Manifests)
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
      * @return \BitmovinApiSdk\Models\Webhook
@@ -40,7 +40,7 @@ class FinishedApi
     }
 
     /**
-     * Add Manifest Finished Successfully Webhook Notification (Specific Manifest)
+     * Add &#39;Manifest Finished Successfully&#39; Webhook Notification (Specific Manifest)
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\Webhook $webhook

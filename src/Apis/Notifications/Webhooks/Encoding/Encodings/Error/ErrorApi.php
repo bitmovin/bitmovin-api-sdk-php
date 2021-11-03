@@ -32,7 +32,7 @@ class ErrorApi
     }
 
     /**
-     * Add Encoding Error Webhook
+     * Add &#39;Encoding Error&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
      * @return \BitmovinApiSdk\Models\Webhook
@@ -46,7 +46,7 @@ class ErrorApi
     }
 
     /**
-     * Add Encoding Error Webhook for specific Encoding Resource. **Note:** A maximum number of 5 webhooks is allowed
+     * Add Error Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Webhook $webhook
@@ -65,7 +65,7 @@ class ErrorApi
     }
 
     /**
-     * Delete Encoding Error Webhook for specific Encoding Resource
+     * Delete &#39;Encoding Error&#39; Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -85,7 +85,7 @@ class ErrorApi
     }
 
     /**
-     * Delete Encoding Error Webhook
+     * Delete &#39;Encoding Error&#39; Webhook
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -103,7 +103,7 @@ class ErrorApi
     }
 
     /**
-     * Encoding Error Webhook Details for specific Encoding Resource
+     * &#39;Encoding Error&#39; Webhook Details for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -123,7 +123,7 @@ class ErrorApi
     }
 
     /**
-     * Encoding Error Webhook Details
+     * &#39;Encoding Error&#39; Webhook Details
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\Webhook
@@ -141,7 +141,7 @@ class ErrorApi
     }
 
     /**
-     * List Encoding Error Webhooks
+     * List &#39;Encoding Error&#39; Webhooks
      *
      * @param WebhookListQueryParams|null $queryParams
      * @return WebhookPaginationResponse
@@ -155,7 +155,7 @@ class ErrorApi
     }
 
     /**
-     * List Encoding Error Webhooks for specific Encoding Resource
+     * List &#39;Encoding Error&#39; Webhooks for a specific Encoding
      *
      * @param string $encodingId
      * @param WebhookListByEncodingIdQueryParams|null $queryParams

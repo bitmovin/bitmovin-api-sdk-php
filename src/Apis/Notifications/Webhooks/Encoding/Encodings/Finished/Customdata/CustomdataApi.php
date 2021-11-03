@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Encoding Finished Webhook Custom Data for specific Encoding Resource
+     * &#39;Encoding Finished&#39; Webhook Custom Data for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -46,7 +46,7 @@ class CustomdataApi
     }
 
     /**
-     * Encoding Finished Webhook Custom Data
+     * &#39;Encoding Finished&#39; Webhook Custom Data
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\CustomData

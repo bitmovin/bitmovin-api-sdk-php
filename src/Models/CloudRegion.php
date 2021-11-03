@@ -107,6 +107,9 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AZURE_EUROPE_WEST = 'AZURE_EUROPE_WEST';
 
     /** @var string */
+    private const AZURE_EUROPE_NORTH = 'AZURE_EUROPE_NORTH';
+
+    /** @var string */
     private const AZURE_US_WEST2 = 'AZURE_US_WEST2';
 
     /** @var string */
@@ -117,6 +120,15 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
 
     /** @var string */
     private const AZURE_AUSTRALIA_EAST = 'AZURE_AUSTRALIA_EAST';
+
+    /** @var string */
+    private const AZURE_GERMANY_WESTCENTRAL = 'AZURE_GERMANY_WESTCENTRAL';
+
+    /** @var string */
+    private const AZURE_UAE_CENTRAL = 'AZURE_UAE_CENTRAL';
+
+    /** @var string */
+    private const AZURE_UAE_NORTH = 'AZURE_UAE_NORTH';
 
     /** @var string */
     private const NORTH_AMERICA = 'NORTH_AMERICA';
@@ -488,7 +500,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AZURE_EUROPE_WEST
+     * Azure Netherlands
      *
      * @return CloudRegion
      */
@@ -498,7 +510,17 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AZURE_US_WEST2
+     * Azure Ireland
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_EUROPE_NORTH()
+    {
+        return new CloudRegion(self::AZURE_EUROPE_NORTH);
+    }
+
+    /**
+     * Azure Washington, USA
      *
      * @return CloudRegion
      */
@@ -508,7 +530,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AZURE_US_EAST
+     * Azure Virginia, USA
      *
      * @return CloudRegion
      */
@@ -518,7 +540,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AZURE_AUSTRALIA_SOUTHEAST
+     * Azure Victoria, Australia
      *
      * @return CloudRegion
      */
@@ -528,13 +550,43 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AZURE_AUSTRALIA_EAST
+     * Azure New South Wales, Australia
      *
      * @return CloudRegion
      */
     public static function AZURE_AUSTRALIA_EAST()
     {
         return new CloudRegion(self::AZURE_AUSTRALIA_EAST);
+    }
+
+    /**
+     * Azure Frankfurt, Germany
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_GERMANY_WESTCENTRAL()
+    {
+        return new CloudRegion(self::AZURE_GERMANY_WESTCENTRAL);
+    }
+
+    /**
+     * Azure Abu Dhabi, United Arab Emirates - Reserved for UAE North customers requiring in-country disaster recovery
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_UAE_CENTRAL()
+    {
+        return new CloudRegion(self::AZURE_UAE_CENTRAL);
+    }
+
+    /**
+     * Azure Dubai, United Arab Emirates
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_UAE_NORTH()
+    {
+        return new CloudRegion(self::AZURE_UAE_NORTH);
     }
 
     /**

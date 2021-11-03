@@ -59,7 +59,7 @@ class Bif extends BitmovinResource
     }
 
     /**
-     * Distance in seconds between a screenshot
+     * Distance in seconds between a screenshot (required)
      *
      * @param float $distance
      * @return $this
