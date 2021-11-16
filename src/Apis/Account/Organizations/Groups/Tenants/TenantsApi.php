@@ -95,17 +95,18 @@ class TenantsApi
      *
      * @param string $organizationId
      * @param string $groupId
+     * @param TenantListQueryParams|null $queryParams
      * @return TenantPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(string $organizationId, string $groupId) : TenantPaginationResponse
+    public function list(string $organizationId, string $groupId, TenantListQueryParams $queryParams = null) : TenantPaginationResponse
     {
         $pathParams = [
             'organization_id' => $organizationId,
             'group_id' => $groupId,
         ];
 
-        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}/tenants', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups/{group_id}/tenants', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, TenantPaginationResponse::class);
     }

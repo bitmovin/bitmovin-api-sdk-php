@@ -68,6 +68,7 @@
         <div class="synopsis">class Vp9VideoConfiguration
                 extends <a title="BitmovinApiSdk\Models\VideoConfiguration" href="../classes/BitmovinApiSdk_Models_VideoConfiguration.html">VideoConfiguration</a>
             {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\PresetConfiguration">PresetConfiguration</span> <a href="#members">$presetConfiguration</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\Vp9DynamicRangeFormat">Vp9DynamicRangeFormat</span> <a href="#members">$dynamicRangeFormat</a>;
                     </li><li>public int <a href="#members">$crf</a>;
                     </li><li>public int <a href="#members">$lagInFrames</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$errorResiliencyEnabled</a>;
@@ -119,6 +120,7 @@
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/presetConfiguration.html">presetConfiguration</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/dynamicRangeFormat.html">dynamicRangeFormat</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/crf.html">crf</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/lagInFrames.html">lagInFrames</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/errorResiliencyEnabled.html">errorResiliencyEnabled</a>()
@@ -240,6 +242,9 @@
             <li id="displayAspectRatio"><strong>$displayAspectRatio</strong>
                 —
                 <a title="BitmovinApiSdk\Models\DisplayAspectRatio" href="../classes/BitmovinApiSdk_Models_DisplayAspectRatio.html">BitmovinApiSdk\Models\DisplayAspectRatio</a></li>
+            <li id="dynamicRangeFormat"><strong>$dynamicRangeFormat</strong>
+                —
+                <a title="BitmovinApiSdk\Models\Vp9DynamicRangeFormat" href="../classes/BitmovinApiSdk_Models_Vp9DynamicRangeFormat.html">BitmovinApiSdk\Models\Vp9DynamicRangeFormat</a></li>
             <li id="encodingMode"><strong>$encodingMode</strong>
                 —
                 <a title="BitmovinApiSdk\Models\EncodingMode" href="../classes/BitmovinApiSdk_Models_EncodingMode.html">BitmovinApiSdk\Models\EncodingMode</a></li>
@@ -365,6 +370,8 @@
                 — Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding. The minimum value for width * height &amp;gt;&amp;#x3D; 1280 * 720 is 2. If the value is too low it will be overridden.</li>
             <li id="crf"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/crf.html">crf()</a>
                 — Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</li>
+            <li id="dynamicRangeFormat"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/dynamicRangeFormat.html">dynamicRangeFormat()</a>
+                — Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</li>
             <li id="errorResiliencyEnabled"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/errorResiliencyEnabled.html">errorResiliencyEnabled()</a>
                 — Enables error resiliency feature</li>
             <li id="frameParallel"><a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration/frameParallel.html">frameParallel()</a>

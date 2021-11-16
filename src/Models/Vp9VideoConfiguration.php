@@ -10,6 +10,9 @@ class Vp9VideoConfiguration extends VideoConfiguration
     /** @var PresetConfiguration */
     public $presetConfiguration;
 
+    /** @var Vp9DynamicRangeFormat */
+    public $dynamicRangeFormat;
+
     /** @var int */
     public $crf;
 
@@ -107,6 +110,7 @@ class Vp9VideoConfiguration extends VideoConfiguration
     {
         parent::__construct($attributes);
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, PresetConfiguration::class);
+        $this->dynamicRangeFormat = ObjectMapper::map($this->dynamicRangeFormat, Vp9DynamicRangeFormat::class);
         $this->quality = ObjectMapper::map($this->quality, Vp9Quality::class);
         $this->aqMode = ObjectMapper::map($this->aqMode, Vp9AqMode::class);
         $this->arnrType = ObjectMapper::map($this->arnrType, Vp9ArnrType::class);
@@ -121,6 +125,19 @@ class Vp9VideoConfiguration extends VideoConfiguration
     public function presetConfiguration(PresetConfiguration $presetConfiguration)
     {
         $this->presetConfiguration = $presetConfiguration;
+
+        return $this;
+    }
+
+    /**
+     * Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+     *
+     * @param Vp9DynamicRangeFormat $dynamicRangeFormat
+     * @return $this
+     */
+    public function dynamicRangeFormat(Vp9DynamicRangeFormat $dynamicRangeFormat)
+    {
+        $this->dynamicRangeFormat = $dynamicRangeFormat;
 
         return $this;
     }

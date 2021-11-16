@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantsApi::list</title>
+    <title>phpDox - BitmovinApiSdk\Models\Vp9VideoConfiguration::dynamicRangeFormat</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -36,12 +36,12 @@
             <a href="../../classes.html">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.html#BitmovinApiSdk_Apis_Account_Organizations_Groups_Tenants">BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants</a>
+            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
           <li class="separator">
-            <a title="BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantsApi" href="../../classes/BitmovinApiSdk_Apis_Account_Organizations_Groups_Tenants_TenantsApi.html">TenantsApi</a>
+            <a title="BitmovinApiSdk\Models\Vp9VideoConfiguration" href="../../classes/BitmovinApiSdk_Models_Vp9VideoConfiguration.html">Vp9VideoConfiguration</a>
           </li>
-          <li class="separator">list</li>
+          <li class="separator">dynamicRangeFormat</li>
         </ul>
       </div>
       <nav class="box">
@@ -58,55 +58,32 @@
           <li>
             <a href="#return">Return</a>
           </li>
-          <li>
-            <a href="#throws">Throws</a>
-          </li>
         </ul>
       </nav>
       <section>
-        <h1><small>BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantsApi::</small>list</h1>
-        <h4>List Tenants</h4>
+        <h1><small>BitmovinApiSdk\Models\Vp9VideoConfiguration::</small>dynamicRangeFormat</h1>
+        <h4>Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</h4>
         <p/>
+        <ul/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function list(string
-        $organizationId,
-            string
-        $groupId,
-            [<a title="BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantListQueryParams" href="../../classes/BitmovinApiSdk_Apis_Account_Organizations_Groups_Tenants_TenantListQueryParams.html">TenantListQueryParams</a>
-        $queryParams = NULL] )
+          <code>public function dynamicRangeFormat(<a title="BitmovinApiSdk\Models\Vp9DynamicRangeFormat" href="../../classes/BitmovinApiSdk_Models_Vp9DynamicRangeFormat.html">Vp9DynamicRangeFormat</a>
+        $dynamicRangeFormat )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$organizationId</code>
+          <dt><code>$dynamicRangeFormat</code>
                 —
-                string</dt>
-          <dd/>
-          <dt><code>$groupId</code>
-                —
-                string</dt>
-          <dd/>
-          <dt><code>$queryParams</code>
-                —
-                <a title="BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantListQueryParams|null" href="../../classes/BitmovinApiSdk_Apis_Account_Organizations_Groups_Tenants_TenantListQueryParams|null.html">BitmovinApiSdk\Apis\Account\Organizations\Groups\Tenants\TenantListQueryParams|null</a></dt>
+                <a title="BitmovinApiSdk\Models\Vp9DynamicRangeFormat" href="../../classes/BitmovinApiSdk_Models_Vp9DynamicRangeFormat.html">BitmovinApiSdk\Models\Vp9DynamicRangeFormat</a></dt>
           <dd><br/><br/><br/>      </dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>TenantPaginationResponse</dt>
+          <dt>$this</dt>
           <dd><br/>
         </dd>
-        </dl>
-        <h2 id="throws">Errors/Exceptions</h2>
-        <dl class="styled">
-          <dt>
-            <code>
-              <a title="BitmovinApiSdk\Common\BitmovinApiException" href="../../classes/BitmovinApiSdk_Common_BitmovinApiException.html">BitmovinApiException</a>
-            </code>
-          </dt>
-          <dd/>
         </dl>
       </section>
     </div>

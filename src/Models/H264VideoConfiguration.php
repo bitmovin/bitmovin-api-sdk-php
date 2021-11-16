@@ -10,6 +10,9 @@ class H264VideoConfiguration extends VideoConfiguration
     /** @var PresetConfiguration */
     public $presetConfiguration;
 
+    /** @var H264DynamicRangeFormat */
+    public $dynamicRangeFormat;
+
     /** @var float */
     public $crf;
 
@@ -143,6 +146,7 @@ class H264VideoConfiguration extends VideoConfiguration
     {
         parent::__construct($attributes);
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, PresetConfiguration::class);
+        $this->dynamicRangeFormat = ObjectMapper::map($this->dynamicRangeFormat, H264DynamicRangeFormat::class);
         $this->profile = ObjectMapper::map($this->profile, ProfileH264::class);
         $this->mvPredictionMode = ObjectMapper::map($this->mvPredictionMode, MvPredictionMode::class);
         $this->level = ObjectMapper::map($this->level, LevelH264::class);
@@ -168,6 +172,19 @@ class H264VideoConfiguration extends VideoConfiguration
     public function presetConfiguration(PresetConfiguration $presetConfiguration)
     {
         $this->presetConfiguration = $presetConfiguration;
+
+        return $this;
+    }
+
+    /**
+     * Automatically configures the H264 Video Codec to be compatible with the given SDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+     *
+     * @param H264DynamicRangeFormat $dynamicRangeFormat
+     * @return $this
+     */
+    public function dynamicRangeFormat(H264DynamicRangeFormat $dynamicRangeFormat)
+    {
+        $this->dynamicRangeFormat = $dynamicRangeFormat;
 
         return $this;
     }
