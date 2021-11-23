@@ -26,7 +26,7 @@ class CustomTagsApi
     }
 
     /**
-     * Add Custom Tag to Audio Media
+     * Add Custom Tag to a Audio Media or a Subtitle media
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -91,7 +91,7 @@ class CustomTagsApi
     }
 
     /**
-     * List all Custom Tags of a Audio media
+     * List all Custom Tags of a Audio media or a Subtitle media
      *
      * @param string $manifestId
      * @param string $mediaId

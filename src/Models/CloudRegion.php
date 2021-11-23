@@ -125,9 +125,6 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AZURE_GERMANY_WESTCENTRAL = 'AZURE_GERMANY_WESTCENTRAL';
 
     /** @var string */
-    private const AZURE_UAE_CENTRAL = 'AZURE_UAE_CENTRAL';
-
-    /** @var string */
     private const AZURE_UAE_NORTH = 'AZURE_UAE_NORTH';
 
     /** @var string */
@@ -567,16 +564,6 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AZURE_GERMANY_WESTCENTRAL()
     {
         return new CloudRegion(self::AZURE_GERMANY_WESTCENTRAL);
-    }
-
-    /**
-     * Azure Abu Dhabi, United Arab Emirates - Reserved for UAE North customers requiring in-country disaster recovery
-     *
-     * @return CloudRegion
-     */
-    public static function AZURE_UAE_CENTRAL()
-    {
-        return new CloudRegion(self::AZURE_UAE_CENTRAL);
     }
 
     /**

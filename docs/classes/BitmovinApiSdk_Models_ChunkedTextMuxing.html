@@ -70,6 +70,7 @@
             {<br/><ul class="none"><li>// members</li><li>public float <a href="#members">$segmentLength</a>;
                     </li><li>public string <a href="#members">$segmentNaming</a>;
                     </li><li>public string <a href="#members">$segmentNamingTemplate</a>;
+                    </li><li>public int <a href="#members">$startOffset</a>;
                     </li><li>public int <a href="#members">$segmentsMuxed</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Muxing">Muxing</span></li><li>public array <a href="#members">$streams</a>;
                         </li><li>public array <a href="#members">$outputs</a>;
@@ -90,6 +91,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ChunkedTextMuxing" href="../classes/BitmovinApiSdk_Models_ChunkedTextMuxing/segmentLength.html">segmentLength</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ChunkedTextMuxing" href="../classes/BitmovinApiSdk_Models_ChunkedTextMuxing/segmentNaming.html">segmentNaming</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ChunkedTextMuxing" href="../classes/BitmovinApiSdk_Models_ChunkedTextMuxing/segmentNamingTemplate.html">segmentNamingTemplate</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\ChunkedTextMuxing" href="../classes/BitmovinApiSdk_Models_ChunkedTextMuxing/startOffset.html">startOffset</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Muxing">Muxing</span></li><li>public void <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/streams.html">streams</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/outputs.html">outputs</a>()
@@ -171,6 +173,9 @@
             <li id="segmentsMuxed"><strong>$segmentsMuxed</strong>
                 —
                 int</li>
+            <li id="startOffset"><strong>$startOffset</strong>
+                —
+                int</li>
             <li id="streamConditionsMode"><strong>$streamConditionsMode</strong>
                 —
                 <a title="BitmovinApiSdk\Models\StreamConditionsMode" href="../classes/BitmovinApiSdk_Models_StreamConditionsMode.html">BitmovinApiSdk\Models\StreamConditionsMode</a></li>
@@ -193,6 +198,8 @@
                 — Segment naming template</li>
             <li id="segmentNamingTemplate"><a title="BitmovinApiSdk\Models\ChunkedTextMuxing" href="../classes/BitmovinApiSdk_Models_ChunkedTextMuxing/segmentNamingTemplate.html">segmentNamingTemplate()</a>
                 — Segment naming template with placeholders which will be replaced during the encoding. The result will be saved in segmentNaming. {rand:4} gets replaced with an alphanumeric string of length specified after the colon. Defaults to 32. If this field is set, segmentNaming must not be specified.</li>
+            <li id="startOffset"><a title="BitmovinApiSdk\Models\ChunkedTextMuxing" href="../classes/BitmovinApiSdk_Models_ChunkedTextMuxing/startOffset.html">startOffset()</a>
+                — Offset of MPEG-TS timestamps in seconds. This only affects streams with [WebVttConfiguration](#/Encoding/PostEncodingConfigurationsSubtitlesWebVtt). If set, the X-TIMESTAMP-MAP will be added as described in the [HLS specification](https://datatracker.ietf.org/doc/html/rfc8216#section-3.5). For example, if set to 10 seconds, *X-TIMESTAMP-MAP&amp;#x3D;MPEGTS:900000,LOCAL:00:00:00.000* will be added after each *WEBVTT* header. The default for ChunkedTextMuxing is that the X-TIMESTAMP-MAP will not be written. Important to note is that the default for &amp;#x60;startOffset&amp;#x60; for [TsMuxings](#/Encoding/PostEncodingEncodingsMuxingsTsByEncodingId) and [ProgressiveTsMuxings](#/Encoding/PostEncodingEncodingsMuxingsProgressiveTsByEncodingId) is 10 seconds. If the output of this muxing is used for HLS together with video/audio streams using TsMuxings and ProgressiveTsMuxings, this value should be set to the same &amp;#x60;startOffset&amp;#x60;.</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing.html">BitmovinApiSdk\Models\Muxing</a></h3>
           <h4>public</h4>

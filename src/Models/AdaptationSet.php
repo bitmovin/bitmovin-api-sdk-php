@@ -16,12 +16,16 @@ class AdaptationSet extends BitmovinResponse
     /** @var \BitmovinApiSdk\Models\Accessibility[] */
     public $accessibilities;
 
+    /** @var \BitmovinApiSdk\Models\Label[] */
+    public $labels;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->customAttributes = ObjectMapper::map($this->customAttributes, CustomAttribute::class);
         $this->roles = ObjectMapper::map($this->roles, AdaptationSetRole::class);
         $this->accessibilities = ObjectMapper::map($this->accessibilities, Accessibility::class);
+        $this->labels = ObjectMapper::map($this->labels, Label::class);
     }
 
     /**
@@ -59,6 +63,19 @@ class AdaptationSet extends BitmovinResponse
     public function accessibilities(array $accessibilities)
     {
         $this->accessibilities = $accessibilities;
+
+        return $this;
+    }
+
+    /**
+     * List of labels
+     *
+     * @param \BitmovinApiSdk\Models\Label[] $labels
+     * @return $this
+     */
+    public function labels(array $labels)
+    {
+        $this->labels = $labels;
 
         return $this;
     }

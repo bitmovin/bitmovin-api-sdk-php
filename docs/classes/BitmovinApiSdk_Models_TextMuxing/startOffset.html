@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags\CustomTagsApi::list</title>
+    <title>phpDox - BitmovinApiSdk\Models\TextMuxing::startOffset</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -36,12 +36,12 @@
             <a href="../../classes.html">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.html#BitmovinApiSdk_Apis_Encoding_Manifests_Hls_Media_CustomTags">BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags</a>
+            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
           <li class="separator">
-            <a title="BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags\CustomTagsApi" href="../../classes/BitmovinApiSdk_Apis_Encoding_Manifests_Hls_Media_CustomTags_CustomTagsApi.html">CustomTagsApi</a>
+            <a title="BitmovinApiSdk\Models\TextMuxing" href="../../classes/BitmovinApiSdk_Models_TextMuxing.html">TextMuxing</a>
           </li>
-          <li class="separator">list</li>
+          <li class="separator">startOffset</li>
         </ul>
       </div>
       <nav class="box">
@@ -58,55 +58,32 @@
           <li>
             <a href="#return">Return</a>
           </li>
-          <li>
-            <a href="#throws">Throws</a>
-          </li>
         </ul>
       </nav>
       <section>
-        <h1><small>BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags\CustomTagsApi::</small>list</h1>
-        <h4>List all Custom Tags of a Audio media or a Subtitle media</h4>
+        <h1><small>BitmovinApiSdk\Models\TextMuxing::</small>startOffset</h1>
+        <h4>Offset of MPEG-TS timestamps in seconds. This only affects streams with [WebVttConfiguration](#/Encoding/PostEncodingConfigurationsSubtitlesWebVtt). If set, the X-TIMESTAMP-MAP will be added as described in the [HLS specification](https://datatracker.ietf.org/doc/html/rfc8216#section-3.5). For example, if set to 10 seconds, *X-TIMESTAMP-MAP&amp;#x3D;MPEGTS:900000,LOCAL:00:00:00.000* will be added after each *WEBVTT* header. The default for TextMuxing is that the X-TIMESTAMP-MAP will not be written. Important to note is that the default for &amp;#x60;startOffset&amp;#x60; for [TsMuxings](#/Encoding/PostEncodingEncodingsMuxingsTsByEncodingId) and [ProgressiveTsMuxings](#/Encoding/PostEncodingEncodingsMuxingsProgressiveTsByEncodingId) is 10 seconds. If the output of this muxing is used for HLS together with video/audio streams using TsMuxings and ProgressiveTsMuxings, this value should be set to the same &amp;#x60;startOffset&amp;#x60;.</h4>
         <p/>
+        <ul/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function list(string
-        $manifestId,
-            string
-        $mediaId,
-            [<a title="BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags\CustomTagListQueryParams" href="../../classes/BitmovinApiSdk_Apis_Encoding_Manifests_Hls_Media_CustomTags_CustomTagListQueryParams.html">CustomTagListQueryParams</a>
-        $queryParams = NULL] )
+          <code>public function startOffset(int
+        $startOffset )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$manifestId</code>
+          <dt><code>$startOffset</code>
                 —
-                string</dt>
+                int</dt>
           <dd/>
-          <dt><code>$mediaId</code>
-                —
-                string</dt>
-          <dd/>
-          <dt><code>$queryParams</code>
-                —
-                <a title="BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags\CustomTagListQueryParams|null" href="../../classes/BitmovinApiSdk_Apis_Encoding_Manifests_Hls_Media_CustomTags_CustomTagListQueryParams|null.html">BitmovinApiSdk\Apis\Encoding\Manifests\Hls\Media\CustomTags\CustomTagListQueryParams|null</a></dt>
-          <dd><br/><br/><br/>      </dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>CustomTagPaginationResponse</dt>
+          <dt>$this</dt>
           <dd><br/>
         </dd>
-        </dl>
-        <h2 id="throws">Errors/Exceptions</h2>
-        <dl class="styled">
-          <dt>
-            <code>
-              <a title="BitmovinApiSdk\Common\BitmovinApiException" href="../../classes/BitmovinApiSdk_Common_BitmovinApiException.html">BitmovinApiException</a>
-            </code>
-          </dt>
-          <dd/>
         </dl>
       </section>
     </div>

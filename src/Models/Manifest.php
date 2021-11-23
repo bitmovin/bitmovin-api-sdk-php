@@ -36,18 +36,5 @@ class Manifest extends BitmovinResource
 
         return $this;
     }
-
-    /**
-     * Current status
-     *
-     * @param Status $status
-     * @return $this
-     */
-    public function status(Status $status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
 }
 
