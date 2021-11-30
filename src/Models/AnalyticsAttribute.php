@@ -68,6 +68,66 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CUSTOM_DATA_5 = 'CUSTOM_DATA_5';
 
     /** @var string */
+    private const CUSTOM_DATA_6 = 'CUSTOM_DATA_6';
+
+    /** @var string */
+    private const CUSTOM_DATA_7 = 'CUSTOM_DATA_7';
+
+    /** @var string */
+    private const CUSTOM_DATA_8 = 'CUSTOM_DATA_8';
+
+    /** @var string */
+    private const CUSTOM_DATA_9 = 'CUSTOM_DATA_9';
+
+    /** @var string */
+    private const CUSTOM_DATA_10 = 'CUSTOM_DATA_10';
+
+    /** @var string */
+    private const CUSTOM_DATA_11 = 'CUSTOM_DATA_11';
+
+    /** @var string */
+    private const CUSTOM_DATA_12 = 'CUSTOM_DATA_12';
+
+    /** @var string */
+    private const CUSTOM_DATA_13 = 'CUSTOM_DATA_13';
+
+    /** @var string */
+    private const CUSTOM_DATA_14 = 'CUSTOM_DATA_14';
+
+    /** @var string */
+    private const CUSTOM_DATA_15 = 'CUSTOM_DATA_15';
+
+    /** @var string */
+    private const CUSTOM_DATA_16 = 'CUSTOM_DATA_16';
+
+    /** @var string */
+    private const CUSTOM_DATA_17 = 'CUSTOM_DATA_17';
+
+    /** @var string */
+    private const CUSTOM_DATA_18 = 'CUSTOM_DATA_18';
+
+    /** @var string */
+    private const CUSTOM_DATA_19 = 'CUSTOM_DATA_19';
+
+    /** @var string */
+    private const CUSTOM_DATA_20 = 'CUSTOM_DATA_20';
+
+    /** @var string */
+    private const CUSTOM_DATA_21 = 'CUSTOM_DATA_21';
+
+    /** @var string */
+    private const CUSTOM_DATA_22 = 'CUSTOM_DATA_22';
+
+    /** @var string */
+    private const CUSTOM_DATA_23 = 'CUSTOM_DATA_23';
+
+    /** @var string */
+    private const CUSTOM_DATA_24 = 'CUSTOM_DATA_24';
+
+    /** @var string */
+    private const CUSTOM_DATA_25 = 'CUSTOM_DATA_25';
+
+    /** @var string */
     private const CUSTOM_USER_ID = 'CUSTOM_USER_ID';
 
     /** @var string */
@@ -503,6 +563,206 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function CUSTOM_DATA_5()
     {
         return new AnalyticsAttribute(self::CUSTOM_DATA_5);
+    }
+
+    /**
+     * CUSTOM_DATA_6
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_6()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_6);
+    }
+
+    /**
+     * CUSTOM_DATA_7
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_7()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_7);
+    }
+
+    /**
+     * CUSTOM_DATA_8
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_8()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_8);
+    }
+
+    /**
+     * CUSTOM_DATA_9
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_9()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_9);
+    }
+
+    /**
+     * CUSTOM_DATA_10
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_10()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_10);
+    }
+
+    /**
+     * CUSTOM_DATA_11
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_11()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_11);
+    }
+
+    /**
+     * CUSTOM_DATA_12
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_12()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_12);
+    }
+
+    /**
+     * CUSTOM_DATA_13
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_13()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_13);
+    }
+
+    /**
+     * CUSTOM_DATA_14
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_14()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_14);
+    }
+
+    /**
+     * CUSTOM_DATA_15
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_15()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_15);
+    }
+
+    /**
+     * CUSTOM_DATA_16
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_16()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_16);
+    }
+
+    /**
+     * CUSTOM_DATA_17
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_17()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_17);
+    }
+
+    /**
+     * CUSTOM_DATA_18
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_18()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_18);
+    }
+
+    /**
+     * CUSTOM_DATA_19
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_19()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_19);
+    }
+
+    /**
+     * CUSTOM_DATA_20
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_20()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_20);
+    }
+
+    /**
+     * CUSTOM_DATA_21
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_21()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_21);
+    }
+
+    /**
+     * CUSTOM_DATA_22
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_22()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_22);
+    }
+
+    /**
+     * CUSTOM_DATA_23
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_23()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_23);
+    }
+
+    /**
+     * CUSTOM_DATA_24
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_24()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_24);
+    }
+
+    /**
+     * CUSTOM_DATA_25
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_25()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_25);
     }
 
     /**
