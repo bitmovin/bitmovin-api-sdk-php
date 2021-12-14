@@ -16,10 +16,14 @@ class AnalyticsVirtualLicenseRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var AnalyticsVirtualLicenseLicensesListItem[] */
     public $licenses;
 
+    /** @var AnalyticsLicenseCustomDataFieldLabels */
+    public $customDataFieldLabels;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->licenses = ObjectMapper::map($this->licenses, AnalyticsVirtualLicenseLicensesListItem::class);
+        $this->customDataFieldLabels = ObjectMapper::map($this->customDataFieldLabels, AnalyticsLicenseCustomDataFieldLabels::class);
     }
 
     /**
@@ -57,6 +61,19 @@ class AnalyticsVirtualLicenseRequest extends \BitmovinApiSdk\Common\ApiResource
     public function licenses(array $licenses)
     {
         $this->licenses = $licenses;
+
+        return $this;
+    }
+
+    /**
+     * Labels for Custom Data fields
+     *
+     * @param AnalyticsLicenseCustomDataFieldLabels $customDataFieldLabels
+     * @return $this
+     */
+    public function customDataFieldLabels(AnalyticsLicenseCustomDataFieldLabels $customDataFieldLabels)
+    {
+        $this->customDataFieldLabels = $customDataFieldLabels;
 
         return $this;
     }

@@ -88,7 +88,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 1
+     * Label for field Custom Data 1
      *
      * @param string $customData1
      * @return $this
@@ -101,7 +101,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 2
+     * Label for field Custom Data 2
      *
      * @param string $customData2
      * @return $this
@@ -114,7 +114,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 3
+     * Label for field Custom Data 3
      *
      * @param string $customData3
      * @return $this
@@ -127,7 +127,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 4
+     * Label for field Custom Data 4
      *
      * @param string $customData4
      * @return $this
@@ -140,7 +140,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 5
+     * Label for field Custom Data 5
      *
      * @param string $customData5
      * @return $this
@@ -153,7 +153,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 6
+     * Label for field Custom Data 6
      *
      * @param string $customData6
      * @return $this
@@ -166,7 +166,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 7
+     * Label for field Custom Data 7
      *
      * @param string $customData7
      * @return $this
@@ -179,7 +179,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 8
+     * Label for field Custom Data 8
      *
      * @param string $customData8
      * @return $this
@@ -192,7 +192,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 9
+     * Label for field Custom Data 9
      *
      * @param string $customData9
      * @return $this
@@ -205,7 +205,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 10
+     * Label for field Custom Data 10
      *
      * @param string $customData10
      * @return $this
@@ -218,7 +218,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 11
+     * Label for field Custom Data 11
      *
      * @param string $customData11
      * @return $this
@@ -231,7 +231,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 12
+     * Label for field Custom Data 12
      *
      * @param string $customData12
      * @return $this
@@ -244,7 +244,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 13
+     * Label for field Custom Data 13
      *
      * @param string $customData13
      * @return $this
@@ -257,7 +257,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 14
+     * Label for field Custom Data 14
      *
      * @param string $customData14
      * @return $this
@@ -270,7 +270,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 15
+     * Label for field Custom Data 15
      *
      * @param string $customData15
      * @return $this
@@ -283,7 +283,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 16
+     * Label for field Custom Data 16
      *
      * @param string $customData16
      * @return $this
@@ -296,7 +296,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 17
+     * Label for field Custom Data 17
      *
      * @param string $customData17
      * @return $this
@@ -309,7 +309,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 18
+     * Label for field Custom Data 18
      *
      * @param string $customData18
      * @return $this
@@ -322,7 +322,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 19
+     * Label for field Custom Data 19
      *
      * @param string $customData19
      * @return $this
@@ -335,7 +335,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 20
+     * Label for field Custom Data 20
      *
      * @param string $customData20
      * @return $this
@@ -348,7 +348,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 21
+     * Label for field Custom Data 21
      *
      * @param string $customData21
      * @return $this
@@ -361,7 +361,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 22
+     * Label for field Custom Data 22
      *
      * @param string $customData22
      * @return $this
@@ -374,7 +374,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 23
+     * Label for field Custom Data 23
      *
      * @param string $customData23
      * @return $this
@@ -387,7 +387,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 24
+     * Label for field Custom Data 24
      *
      * @param string $customData24
      * @return $this
@@ -400,7 +400,7 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     }
 
     /**
-     * Custom Data 25
+     * Label for field Custom Data 25
      *
      * @param string $customData25
      * @return $this

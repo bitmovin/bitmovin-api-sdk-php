@@ -19,6 +19,14 @@ class AdaptationSet extends BitmovinResponse
     /** @var \BitmovinApiSdk\Models\Label[] */
     public $labels;
 
+    public static $discriminatorName = "type";
+    public static $discriminatorMapping = [
+        "VIDEO" => VideoAdaptationSet::class,
+        "AUDIO" => AudioAdaptationSet::class,
+        "IMAGE" => ImageAdaptationSet::class,
+        "SUBTITLE" => SubtitleAdaptationSet::class,
+    ];
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
