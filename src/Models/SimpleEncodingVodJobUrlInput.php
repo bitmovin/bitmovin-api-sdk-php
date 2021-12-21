@@ -53,7 +53,7 @@ class SimpleEncodingVodJobUrlInput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Defines the type of the input file, if no type is set it is assumed that the input file contains at least one video stream and optionally one or multiple audio streams.
+     * Defines the type of the input file, if no type is set it is assumed that the input file contains at least one video stream and optionally one or multiple audio streams.  Note that when defining video and audio inputs, you can either - add one single input without inputType, in which case that source file must contain a video stream and (if you want audio) one audio stream, or - add one single input with inputType&#x3D;VIDEO and (if you want audio) one or more inputs with inputType&#x3D;AUDIO (each containing one audio stream)  Other combinations are not valid.
      *
      * @param SimpleEncodingVodJobInputType $inputType
      * @return $this
