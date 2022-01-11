@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Type\TypeApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Vtt\VttApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Imsc\ImscApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\Dash\Periods\Adaptationsets\Representations\Sprite\SpriteApi;
@@ -22,6 +23,9 @@ class RepresentationsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var TypeApi */
+    public $type;
 
     /** @var VttApi */
     public $vtt;
@@ -60,6 +64,7 @@ class RepresentationsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->type = new TypeApi(null, $this->httpWrapper);
         $this->vtt = new VttApi(null, $this->httpWrapper);
         $this->imsc = new ImscApi(null, $this->httpWrapper);
         $this->sprite = new SpriteApi(null, $this->httpWrapper);
@@ -69,5 +74,28 @@ class RepresentationsApi
         $this->mp4 = new Mp4Api(null, $this->httpWrapper);
         $this->webm = new WebmApi(null, $this->httpWrapper);
         $this->progressiveWebm = new ProgressiveWebmApi(null, $this->httpWrapper);
+    }
+
+    /**
+     * List all DASH Representations
+     *
+     * @param string $manifestId
+     * @param string $periodId
+     * @param string $adaptationsetId
+     * @param DashRepresentationListQueryParams|null $queryParams
+     * @return DashRepresentationPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list(string $manifestId, string $periodId, string $adaptationsetId, DashRepresentationListQueryParams $queryParams = null) : DashRepresentationPaginationResponse
+    {
+        $pathParams = [
+            'manifest_id' => $manifestId,
+            'period_id' => $periodId,
+            'adaptationset_id' => $adaptationsetId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/periods/{period_id}/adaptationsets/{adaptationset_id}/representations', $pathParams, $queryParams, null, true);
+
+        return ObjectMapper::map($response, DashRepresentationPaginationResponse::class);
     }
 }

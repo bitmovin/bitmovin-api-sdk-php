@@ -20,7 +20,7 @@ class DashRepresentationTypeMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Generates representations containing segment templates. This is the default.
+     * Generates representations containing segment templates.
      *
      * @return DashRepresentationTypeMode
      */

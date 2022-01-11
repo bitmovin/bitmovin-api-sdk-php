@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class DashSegmentedRepresentation extends DashRepresentation
+class DashSegmentedRepresentation extends DashMuxingRepresentation
 {
     /** @var DashRepresentationType */
     public $type;

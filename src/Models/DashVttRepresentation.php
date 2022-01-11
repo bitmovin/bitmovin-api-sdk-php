@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class DashVttRepresentation extends BitmovinResource
+class DashVttRepresentation extends DashRepresentation
 {
     /** @var string */
     public $vttUrl;

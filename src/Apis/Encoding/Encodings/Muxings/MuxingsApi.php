@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Type\TypeApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Fmp4\Fmp4Api;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\ChunkedText\ChunkedTextApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\Cmaf\CmafApi;
@@ -28,6 +29,9 @@ class MuxingsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var TypeApi */
+    public $type;
 
     /** @var Fmp4Api */
     public $fmp4;
@@ -84,6 +88,7 @@ class MuxingsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->type = new TypeApi(null, $this->httpWrapper);
         $this->fmp4 = new Fmp4Api(null, $this->httpWrapper);
         $this->chunkedText = new ChunkedTextApi(null, $this->httpWrapper);
         $this->cmaf = new CmafApi(null, $this->httpWrapper);

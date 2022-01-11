@@ -28,9 +28,13 @@ class Fmp4Muxing extends Muxing
     /** @var int */
     public $segmentsMuxed;
 
+    /** @var PTSAlignMode */
+    public $ptsAlignMode;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->ptsAlignMode = ObjectMapper::map($this->ptsAlignMode, PTSAlignMode::class);
     }
 
     /**
@@ -107,6 +111,19 @@ class Fmp4Muxing extends Muxing
     public function writeDurationPerSample(bool $writeDurationPerSample)
     {
         $this->writeDurationPerSample = $writeDurationPerSample;
+
+        return $this;
+    }
+
+    /**
+     * Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265
+     *
+     * @param PTSAlignMode $ptsAlignMode
+     * @return $this
+     */
+    public function ptsAlignMode(PTSAlignMode $ptsAlignMode)
+    {
+        $this->ptsAlignMode = $ptsAlignMode;
 
         return $this;
     }

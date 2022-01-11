@@ -74,6 +74,7 @@
                     </li><li>public string <a href="#members">$initSegmentNameTemplate</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$writeDurationPerSample</a>;
                     </li><li>public int <a href="#members">$segmentsMuxed</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\PTSAlignMode">PTSAlignMode</span> <a href="#members">$ptsAlignMode</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Muxing">Muxing</span></li><li>public array <a href="#members">$streams</a>;
                         </li><li>public array <a href="#members">$outputs</a>;
                         </li><li>public int <a href="#members">$avgBitrate</a>;
@@ -96,6 +97,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentName.html">initSegmentName</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentNameTemplate.html">initSegmentNameTemplate</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/writeDurationPerSample.html">writeDurationPerSample</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/ptsAlignMode.html">ptsAlignMode</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Muxing">Muxing</span></li><li>public void <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/streams.html">streams</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/outputs.html">outputs</a>()
@@ -171,6 +173,9 @@
                 —
                 <a title="\BitmovinApiSdk\Models\EncodingOutput" href="../classes/_BitmovinApiSdk_Models_EncodingOutput.html">\BitmovinApiSdk\Models\EncodingOutput</a>[]
                     </li>
+            <li id="ptsAlignMode"><strong>$ptsAlignMode</strong>
+                —
+                <a title="BitmovinApiSdk\Models\PTSAlignMode" href="../classes/BitmovinApiSdk_Models_PTSAlignMode.html">BitmovinApiSdk\Models\PTSAlignMode</a></li>
             <li id="segmentLength"><strong>$segmentLength</strong>
                 —
                 float</li>
@@ -206,6 +211,8 @@
                 — Init segment name</li>
             <li id="initSegmentNameTemplate"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentNameTemplate.html">initSegmentNameTemplate()</a>
                 — Segment naming policy containing a placeholder of the format &amp;#39;{rand_chars:x}&amp;#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the initSegmentName property. Intended to avoid re-use of segment names after restarting a live encoding. If initSegmentNameTemplate is set, initSegmentName must not be set.</li>
+            <li id="ptsAlignMode"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/ptsAlignMode.html">ptsAlignMode()</a>
+                — Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265</li>
             <li id="segmentLength"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentLength.html">segmentLength()</a>
                 — Length of the fragments in seconds (required)</li>
             <li id="segmentNaming"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentNaming.html">segmentNaming()</a>
@@ -248,7 +255,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2022 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

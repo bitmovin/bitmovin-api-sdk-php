@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class SpriteRepresentation extends BitmovinResponse
+class SpriteRepresentation extends DashRepresentation
 {
     /** @var string */
     public $encodingId;

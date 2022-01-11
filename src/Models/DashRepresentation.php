@@ -7,57 +7,25 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class DashRepresentation extends BitmovinResponse
 {
-    /** @var string */
-    public $encodingId;
-
-    /** @var string */
-    public $muxingId;
-
-    /** @var string */
-    public $dependencyId;
+    public static $discriminatorName = "typeDiscriminator";
+    public static $discriminatorMapping = [
+        "DRM_FMP4" => DashFmp4DrmRepresentation::class,
+        "FMP4" => DashFmp4Representation::class,
+        "WEBM" => DashWebmRepresentation::class,
+        "CMAF" => DashCmafRepresentation::class,
+        "CHUNKED_TEXT" => DashChunkedTextRepresentation::class,
+        "MP4" => DashMp4Representation::class,
+        "DRM_MP4" => DashMp4DrmRepresentation::class,
+        "PROGRESSIVE_WEBM" => DashProgressiveWebmRepresentation::class,
+        "VTT" => DashVttRepresentation::class,
+        "SPRITE" => SpriteRepresentation::class,
+        "IMSC" => DashImscRepresentation::class,
+        "CONTENT_PROTECTION" => ContentProtection::class,
+    ];
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-    }
-
-    /**
-     * UUID of an encoding (required)
-     *
-     * @param string $encodingId
-     * @return $this
-     */
-    public function encodingId(string $encodingId)
-    {
-        $this->encodingId = $encodingId;
-
-        return $this;
-    }
-
-    /**
-     * UUID of a muxing (required)
-     *
-     * @param string $muxingId
-     * @return $this
-     */
-    public function muxingId(string $muxingId)
-    {
-        $this->muxingId = $muxingId;
-
-        return $this;
-    }
-
-    /**
-     * Used to signal a dependency with another representation. The representation may belong to a different adaptation set
-     *
-     * @param string $dependencyId
-     * @return $this
-     */
-    public function dependencyId(string $dependencyId)
-    {
-        $this->dependencyId = $dependencyId;
-
-        return $this;
     }
 }
 

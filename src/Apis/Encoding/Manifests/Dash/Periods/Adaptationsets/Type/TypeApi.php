@@ -26,7 +26,7 @@ class TypeApi
     }
 
     /**
-     * Get Input Type
+     * Get adaptation set type
      *
      * @param string $manifestId
      * @param string $periodId

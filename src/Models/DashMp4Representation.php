@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class DashMp4Representation extends DashRepresentation
+class DashMp4Representation extends DashMuxingRepresentation
 {
     /** @var string */
     public $filePath;

@@ -66,20 +66,23 @@
         <p/>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class DashMp4Representation
-                extends <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation.html">DashRepresentation</a>
+                extends <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation.html">DashMuxingRepresentation</a>
             {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$filePath</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\DashOnDemandRepresentationType">DashOnDemandRepresentationType</span> <a href="#members">$type</a>;
-                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\DashRepresentation">DashRepresentation</span></li><li>public string <a href="#members">$encodingId</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\DashMuxingRepresentation">DashMuxingRepresentation</span></li><li>public string <a href="#members">$encodingId</a>;
                         </li><li>public string <a href="#members">$muxingId</a>;
                         </li><li>public string <a href="#members">$dependencyId</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\DashRepresentation">DashRepresentation</span></li><li>public static string <a href="#members">$discriminatorName</a>;
+                        </li><li>public static array <a href="#members">$discriminatorMapping</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\DashMp4Representation" href="../classes/BitmovinApiSdk_Models_DashMp4Representation/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\DashMp4Representation" href="../classes/BitmovinApiSdk_Models_DashMp4Representation/filePath.html">filePath</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\DashMp4Representation" href="../classes/BitmovinApiSdk_Models_DashMp4Representation/type.html">type</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\DashRepresentation">DashRepresentation</span></li><li>public void <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/__construct.html">__construct</a>()
-                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/encodingId.html">encodingId</a>()
-                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/muxingId.html">muxingId</a>()
-                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/dependencyId.html">dependencyId</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\DashMuxingRepresentation">DashMuxingRepresentation</span></li><li>public void <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/__construct.html">__construct</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/encodingId.html">encodingId</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/muxingId.html">muxingId</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/dependencyId.html">dependencyId</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\DashRepresentation">DashRepresentation</span></li><li>public void <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/__construct.html">__construct</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse/__construct.html">__construct</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
@@ -92,7 +95,7 @@
           <h4>Extends</h4>
           <ul>
             <li>
-              <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation.html">BitmovinApiSdk\Models\DashRepresentation</a>
+              <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation.html">BitmovinApiSdk\Models\DashMuxingRepresentation</a>
             </li>
           </ul>
         </div>
@@ -103,6 +106,12 @@
             <li id="dependencyId"><strong>$dependencyId</strong>
                 —
                 string</li>
+            <li id="discriminatorMapping">
+              <strong>$discriminatorMapping</strong>
+            </li>
+            <li id="discriminatorName">
+              <strong>$discriminatorName</strong>
+            </li>
             <li id="encodingId"><strong>$encodingId</strong>
                 —
                 string</li>
@@ -132,14 +141,14 @@
             <li id="type"><a title="BitmovinApiSdk\Models\DashMp4Representation" href="../classes/BitmovinApiSdk_Models_DashMp4Representation/type.html">type()</a>
                 — The type of the dash representation</li>
           </ul>
-          <h3>Inherited from <a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation.html">BitmovinApiSdk\Models\DashRepresentation</a></h3>
+          <h3>Inherited from <a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation.html">BitmovinApiSdk\Models\DashMuxingRepresentation</a></h3>
           <h4>public</h4>
           <ul>
-            <li id="dependencyId"><a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/dependencyId.html">dependencyId()</a>
+            <li id="dependencyId"><a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/dependencyId.html">dependencyId()</a>
                 — Used to signal a dependency with another representation. The representation may belong to a different adaptation set</li>
-            <li id="encodingId"><a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/encodingId.html">encodingId()</a>
+            <li id="encodingId"><a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/encodingId.html">encodingId()</a>
                 — UUID of an encoding (required)</li>
-            <li id="muxingId"><a title="BitmovinApiSdk\Models\DashRepresentation" href="../classes/BitmovinApiSdk_Models_DashRepresentation/muxingId.html">muxingId()</a>
+            <li id="muxingId"><a title="BitmovinApiSdk\Models\DashMuxingRepresentation" href="../classes/BitmovinApiSdk_Models_DashMuxingRepresentation/muxingId.html">muxingId()</a>
                 — UUID of a muxing (required)</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
@@ -155,7 +164,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2022 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>
