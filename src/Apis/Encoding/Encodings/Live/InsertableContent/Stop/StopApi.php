@@ -26,7 +26,7 @@ class StopApi
     }
 
     /**
-     * Stops Currently Running Inserted Content
+     * Stops currently running Inserted Content
      *
      * @param string $encodingId
      * @throws BitmovinApiException

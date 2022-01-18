@@ -8,10 +8,15 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Vod\Daily\DailyApi;
+
 class VodApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var DailyApi */
+    public $daily;
 
     /**
      * VodApi constructor.
@@ -23,6 +28,7 @@ class VodApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->daily = new DailyApi(null, $this->httpWrapper);
     }
 
     /**

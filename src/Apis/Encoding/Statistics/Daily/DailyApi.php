@@ -44,18 +44,17 @@ class DailyApi
      *
      * @param Carbon $from
      * @param Carbon $to
-     * @param DailyStatisticsListByDateRangeQueryParams|null $queryParams
      * @return DailyStatisticsPaginationResponse
      * @throws BitmovinApiException
      */
-    public function listByDateRange(Carbon $from, Carbon $to, DailyStatisticsListByDateRangeQueryParams $queryParams = null) : DailyStatisticsPaginationResponse
+    public function listByDateRange(Carbon $from, Carbon $to) : DailyStatisticsPaginationResponse
     {
         $pathParams = [
             'from' => $from->format('Y-m-d'),
             'to' => $to->format('Y-m-d'),
         ];
 
-        $response = $this->httpWrapper->request('GET', '/encoding/statistics/daily/{from}/{to}', $pathParams, $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/daily/{from}/{to}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, DailyStatisticsPaginationResponse::class);
     }

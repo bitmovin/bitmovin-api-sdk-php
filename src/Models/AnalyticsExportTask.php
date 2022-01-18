@@ -43,6 +43,9 @@ class AnalyticsExportTask extends BitmovinResponse
     /** @var string[] */
     public $columns;
 
+    /** @var AnalyticsExportFileFormat */
+    public $fileFormat;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -53,6 +56,7 @@ class AnalyticsExportTask extends BitmovinResponse
         $this->startedAt = ObjectMapper::map($this->startedAt, Carbon::class);
         $this->finishedAt = ObjectMapper::map($this->finishedAt, Carbon::class);
         $this->type = ObjectMapper::map($this->type, AnalyticsExportType::class);
+        $this->fileFormat = ObjectMapper::map($this->fileFormat, AnalyticsExportFileFormat::class);
     }
 
     /**
@@ -155,6 +159,19 @@ class AnalyticsExportTask extends BitmovinResponse
     public function columns(array $columns)
     {
         $this->columns = $columns;
+
+        return $this;
+    }
+
+    /**
+     * File format of export file
+     *
+     * @param AnalyticsExportFileFormat $fileFormat
+     * @return $this
+     */
+    public function fileFormat(AnalyticsExportFileFormat $fileFormat)
+    {
+        $this->fileFormat = $fileFormat;
 
         return $this;
     }

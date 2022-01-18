@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Live\Daily;
+namespace BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Vod\Daily;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -26,22 +26,22 @@ class DailyApi
     }
 
     /**
-     * List daily live encoding statistics within specific dates
+     * List daily VoD encoding statistics within specific dates
      *
      * @param Carbon $from
      * @param Carbon $to
-     * @return EncodingStatisticsLivePaginationResponse
+     * @return EncodingStatisticsPaginationResponse
      * @throws BitmovinApiException
      */
-    public function listByDateRange(Carbon $from, Carbon $to) : EncodingStatisticsLivePaginationResponse
+    public function listByDateRange(Carbon $from, Carbon $to) : EncodingStatisticsPaginationResponse
     {
         $pathParams = [
             'from' => $from->format('Y-m-d'),
             'to' => $to->format('Y-m-d'),
         ];
 
-        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/live/daily/{from}/{to}', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/statistics/encodings/vod/daily/{from}/{to}', $pathParams,  null, null, true);
 
-        return ObjectMapper::map($response, EncodingStatisticsLivePaginationResponse::class);
+        return ObjectMapper::map($response, EncodingStatisticsPaginationResponse::class);
     }
 }

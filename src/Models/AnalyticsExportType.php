@@ -20,7 +20,7 @@ class AnalyticsExportType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * ADS
+     * Export ads sessions
      *
      * @return AnalyticsExportType
      */
@@ -30,7 +30,7 @@ class AnalyticsExportType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * SESSIONS
+     * Export sessions
      *
      * @return AnalyticsExportType
      */

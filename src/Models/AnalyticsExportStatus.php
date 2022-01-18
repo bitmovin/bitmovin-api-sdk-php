@@ -26,7 +26,7 @@ class AnalyticsExportStatus extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * STARTED
+     * Export has started
      *
      * @return AnalyticsExportStatus
      */
@@ -36,7 +36,7 @@ class AnalyticsExportStatus extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * FINISHED
+     * Export has finished
      *
      * @return AnalyticsExportStatus
      */
@@ -46,7 +46,7 @@ class AnalyticsExportStatus extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * QUEUED
+     * Export is queued and will be stared soon
      *
      * @return AnalyticsExportStatus
      */
@@ -56,7 +56,7 @@ class AnalyticsExportStatus extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * ERROR
+     * Error has happened during export
      *
      * @return AnalyticsExportStatus
      */
