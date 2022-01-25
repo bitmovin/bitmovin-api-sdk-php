@@ -49,6 +49,9 @@ class AwsCloudRegion extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const CA_CENTRAL_1 = 'CA_CENTRAL_1';
 
+    /** @var string */
+    private const EU_NORTH_1 = 'EU_NORTH_1';
+
     /**
      * @param string $value
      * @return AwsCloudRegion
@@ -99,7 +102,7 @@ class AwsCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * EU (Ireland)
+     * Europe (Ireland)
      *
      * @return AwsCloudRegion
      */
@@ -109,7 +112,7 @@ class AwsCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * EU (Frankfurt)
+     * Europe (Frankfurt)
      *
      * @return AwsCloudRegion
      */
@@ -179,7 +182,7 @@ class AwsCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * EU (London)
+     * Europe (London)
      *
      * @return AwsCloudRegion
      */
@@ -189,7 +192,7 @@ class AwsCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * EU (Paris)
+     * Europe (Paris)
      *
      * @return AwsCloudRegion
      */
@@ -206,6 +209,16 @@ class AwsCloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function CA_CENTRAL_1()
     {
         return new AwsCloudRegion(self::CA_CENTRAL_1);
+    }
+
+    /**
+     * Europe (Stockholm)
+     *
+     * @return AwsCloudRegion
+     */
+    public static function EU_NORTH_1()
+    {
+        return new AwsCloudRegion(self::EU_NORTH_1);
     }
 }
 

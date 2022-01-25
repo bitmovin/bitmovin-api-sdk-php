@@ -50,6 +50,9 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AWS_CA_CENTRAL_1 = 'AWS_CA_CENTRAL_1';
 
     /** @var string */
+    private const AWS_EU_NORTH_1 = 'AWS_EU_NORTH_1';
+
+    /** @var string */
     private const GOOGLE_US_CENTRAL_1 = 'GOOGLE_US_CENTRAL_1';
 
     /** @var string */
@@ -207,7 +210,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AWS EU (Ireland)
+     * AWS Europe (Ireland)
      *
      * @return CloudRegion
      */
@@ -217,7 +220,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AWS EU (Frankfurt)
+     * AWS Europe (Frankfurt)
      *
      * @return CloudRegion
      */
@@ -287,7 +290,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AWS EU (London)
+     * AWS Europe (London)
      *
      * @return CloudRegion
      */
@@ -297,7 +300,7 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * AWS EU (Paris)
+     * AWS Europe (Paris)
      *
      * @return CloudRegion
      */
@@ -314,6 +317,16 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AWS_CA_CENTRAL_1()
     {
         return new CloudRegion(self::AWS_CA_CENTRAL_1);
+    }
+
+    /**
+     * AWS Europe (Stockholm)
+     *
+     * @return CloudRegion
+     */
+    public static function AWS_EU_NORTH_1()
+    {
+        return new CloudRegion(self::AWS_EU_NORTH_1);
     }
 
     /**
