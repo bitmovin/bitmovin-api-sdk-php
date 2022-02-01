@@ -114,17 +114,17 @@ class HlsApi
      * Start HLS Manifest Creation
      *
      * @param string $manifestId
-     * @param object $body
+     * @param \BitmovinApiSdk\Models\StartManifestRequest $startManifestRequest
      * @return \BitmovinApiSdk\Models\BitmovinResponse
      * @throws BitmovinApiException
      */
-    public function start(string $manifestId, object $body = null) : \BitmovinApiSdk\Models\BitmovinResponse
+    public function start(string $manifestId, \BitmovinApiSdk\Models\StartManifestRequest $startManifestRequest = null) : \BitmovinApiSdk\Models\BitmovinResponse
     {
         $pathParams = [
             'manifest_id' => $manifestId,
         ];
 
-        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/start', $pathParams,  null, $body, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/manifests/hls/{manifest_id}/start', $pathParams,  null, $startManifestRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }

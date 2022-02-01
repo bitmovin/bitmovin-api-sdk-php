@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Apis\Encoding\Manifests\Hls\HlsApi::start</title>
+    <title>phpDox - BitmovinApiSdk\Models\StartManifestRequest::manifestGenerator</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -36,12 +36,12 @@
             <a href="../../classes.html">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.html#BitmovinApiSdk_Apis_Encoding_Manifests_Hls">BitmovinApiSdk\Apis\Encoding\Manifests\Hls</a>
+            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
           <li class="separator">
-            <a title="BitmovinApiSdk\Apis\Encoding\Manifests\Hls\HlsApi" href="../../classes/BitmovinApiSdk_Apis_Encoding_Manifests_Hls_HlsApi.html">HlsApi</a>
+            <a title="BitmovinApiSdk\Models\StartManifestRequest" href="../../classes/BitmovinApiSdk_Models_StartManifestRequest.html">StartManifestRequest</a>
           </li>
-          <li class="separator">start</li>
+          <li class="separator">manifestGenerator</li>
         </ul>
       </div>
       <nav class="box">
@@ -58,49 +58,32 @@
           <li>
             <a href="#return">Return</a>
           </li>
-          <li>
-            <a href="#throws">Throws</a>
-          </li>
         </ul>
       </nav>
       <section>
-        <h1><small>BitmovinApiSdk\Apis\Encoding\Manifests\Hls\HlsApi::</small>start</h1>
-        <h4>Start HLS Manifest Creation</h4>
+        <h1><small>BitmovinApiSdk\Models\StartManifestRequest::</small>manifestGenerator</h1>
+        <h4>Sets the version of the manifest generation engine. The &amp;#x60;V2&amp;#x60; option is currently only supported for manifests including resources from a single encoding and is only valid in combination with encoder versions &amp;gt;&amp;#x3D;  &amp;#x60;2.108.0&amp;#x60;.</h4>
         <p/>
+        <ul/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function start(string
-        $manifestId,
-            [<a title="BitmovinApiSdk\Models\StartManifestRequest" href="../../classes/BitmovinApiSdk_Models_StartManifestRequest.html">StartManifestRequest</a>
-        $startManifestRequest = NULL] )
+          <code>public function manifestGenerator(<a title="BitmovinApiSdk\Models\ManifestGenerator" href="../../classes/BitmovinApiSdk_Models_ManifestGenerator.html">ManifestGenerator</a>
+        $manifestGenerator )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$manifestId</code>
+          <dt><code>$manifestGenerator</code>
                 —
-                string</dt>
-          <dd/>
-          <dt><code>$startManifestRequest</code>
-                —
-                <a title="\BitmovinApiSdk\Models\StartManifestRequest" href="../../classes/_BitmovinApiSdk_Models_StartManifestRequest.html">\BitmovinApiSdk\Models\StartManifestRequest</a></dt>
+                <a title="BitmovinApiSdk\Models\ManifestGenerator" href="../../classes/BitmovinApiSdk_Models_ManifestGenerator.html">BitmovinApiSdk\Models\ManifestGenerator</a></dt>
           <dd><br/><br/><br/>      </dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>BitmovinResponse</dt>
+          <dt>$this</dt>
           <dd><br/>
         </dd>
-        </dl>
-        <h2 id="throws">Errors/Exceptions</h2>
-        <dl class="styled">
-          <dt>
-            <code>
-              <a title="BitmovinApiSdk\Common\BitmovinApiException" href="../../classes/BitmovinApiSdk_Common_BitmovinApiException.html">BitmovinApiException</a>
-            </code>
-          </dt>
-          <dd/>
         </dl>
       </section>
     </div>
