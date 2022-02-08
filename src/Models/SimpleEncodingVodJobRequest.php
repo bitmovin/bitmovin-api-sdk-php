@@ -7,6 +7,9 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class SimpleEncodingVodJobRequest extends \BitmovinApiSdk\Common\ApiResource
 {
+    /** @var EncodingTemplate */
+    public $encodingTemplate;
+
     /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobUrlInput[] */
     public $inputs;
 
@@ -19,8 +22,22 @@ class SimpleEncodingVodJobRequest extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->encodingTemplate = ObjectMapper::map($this->encodingTemplate, EncodingTemplate::class);
         $this->inputs = ObjectMapper::map($this->inputs, SimpleEncodingVodJobUrlInput::class);
         $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingVodJobUrlOutput::class);
+    }
+
+    /**
+     * The template that will be used for the encoding.
+     *
+     * @param EncodingTemplate $encodingTemplate
+     * @return $this
+     */
+    public function encodingTemplate(EncodingTemplate $encodingTemplate)
+    {
+        $this->encodingTemplate = $encodingTemplate;
+
+        return $this;
     }
 
     /**
