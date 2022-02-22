@@ -13,6 +13,9 @@ class SimpleEncodingVodJobResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var SimpleEncodingVodJobStatus */
     public $status;
 
+    /** @var EncodingTemplate */
+    public $encodingTemplate;
+
     /** @var string */
     public $encodingId;
 
@@ -38,11 +41,25 @@ class SimpleEncodingVodJobResponse extends \BitmovinApiSdk\Common\ApiResource
     {
         parent::__construct($attributes);
         $this->status = ObjectMapper::map($this->status, SimpleEncodingVodJobStatus::class);
+        $this->encodingTemplate = ObjectMapper::map($this->encodingTemplate, EncodingTemplate::class);
         $this->inputs = ObjectMapper::map($this->inputs, SimpleEncodingVodJobUrlInput::class);
         $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingVodJobUrlOutput::class);
         $this->errors = ObjectMapper::map($this->errors, SimpleEncodingVodJobErrors::class);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->modifiedAt = ObjectMapper::map($this->modifiedAt, Carbon::class);
+    }
+
+    /**
+     * The template that has been used for the encoding.
+     *
+     * @param EncodingTemplate $encodingTemplate
+     * @return $this
+     */
+    public function encodingTemplate(EncodingTemplate $encodingTemplate)
+    {
+        $this->encodingTemplate = $encodingTemplate;
+
+        return $this;
     }
 
     /**
