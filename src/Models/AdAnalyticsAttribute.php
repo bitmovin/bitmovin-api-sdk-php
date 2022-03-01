@@ -380,16 +380,10 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const TIME = 'TIME';
 
     /** @var string */
-    private const TIME_FROM_CONTENT = 'TIME_FROM_CONTENT';
-
-    /** @var string */
     private const TIME_IN_VIEWPORT = 'TIME_IN_VIEWPORT';
 
     /** @var string */
     private const TIME_PLAYED = 'TIME_PLAYED';
-
-    /** @var string */
-    private const TIME_TO_CONTENT = 'TIME_TO_CONTENT';
 
     /** @var string */
     private const UNIVERSAL_AD_ID_REGISTRY = 'UNIVERSAL_AD_ID_REGISTRY';
@@ -1681,16 +1675,6 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * TIME_FROM_CONTENT
-     *
-     * @return AdAnalyticsAttribute
-     */
-    public static function TIME_FROM_CONTENT()
-    {
-        return new AdAnalyticsAttribute(self::TIME_FROM_CONTENT);
-    }
-
-    /**
      * TIME_IN_VIEWPORT
      *
      * @return AdAnalyticsAttribute
@@ -1708,16 +1692,6 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function TIME_PLAYED()
     {
         return new AdAnalyticsAttribute(self::TIME_PLAYED);
-    }
-
-    /**
-     * TIME_TO_CONTENT
-     *
-     * @return AdAnalyticsAttribute
-     */
-    public static function TIME_TO_CONTENT()
-    {
-        return new AdAnalyticsAttribute(self::TIME_TO_CONTENT);
     }
 
     /**

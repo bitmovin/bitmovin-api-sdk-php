@@ -386,22 +386,10 @@ class AnalyticsAdsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public $time;
 
     /** @var int */
-    public $timeFromContent;
-
-    /** @var int */
-    public $timeHovered;
-
-    /** @var int */
     public $timeInViewport;
 
     /** @var int */
     public $timePlayed;
-
-    /** @var int */
-    public $timeToContent;
-
-    /** @var int */
-    public $timeToHover;
 
     /** @var string */
     public $universalAdIdRegistry;
@@ -2074,32 +2062,6 @@ class AnalyticsAdsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Time from content
-     *
-     * @param int $timeFromContent
-     * @return $this
-     */
-    public function timeFromContent(int $timeFromContent)
-    {
-        $this->timeFromContent = $timeFromContent;
-
-        return $this;
-    }
-
-    /**
-     * Time hovered
-     *
-     * @param int $timeHovered
-     * @return $this
-     */
-    public function timeHovered(int $timeHovered)
-    {
-        $this->timeHovered = $timeHovered;
-
-        return $this;
-    }
-
-    /**
      * Time in viewport
      *
      * @param int $timeInViewport
@@ -2121,32 +2083,6 @@ class AnalyticsAdsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public function timePlayed(int $timePlayed)
     {
         $this->timePlayed = $timePlayed;
-
-        return $this;
-    }
-
-    /**
-     * Time to content
-     *
-     * @param int $timeToContent
-     * @return $this
-     */
-    public function timeToContent(int $timeToContent)
-    {
-        $this->timeToContent = $timeToContent;
-
-        return $this;
-    }
-
-    /**
-     * Time to hover
-     *
-     * @param int $timeToHover
-     * @return $this
-     */
-    public function timeToHover(int $timeToHover)
-    {
-        $this->timeToHover = $timeToHover;
 
         return $this;
     }
