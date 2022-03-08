@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Simple\Jobs\Vod\VodApi;
+use BitmovinApiSdk\Apis\Encoding\Simple\Jobs\Live\LiveApi;
 
 class JobsApi
 {
@@ -17,6 +18,9 @@ class JobsApi
 
     /** @var VodApi */
     public $vod;
+
+    /** @var LiveApi */
+    public $live;
 
     /**
      * JobsApi constructor.
@@ -29,5 +33,6 @@ class JobsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->vod = new VodApi(null, $this->httpWrapper);
+        $this->live = new LiveApi(null, $this->httpWrapper);
     }
 }

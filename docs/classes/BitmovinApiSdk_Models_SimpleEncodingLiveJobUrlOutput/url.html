@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput::url</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.html">Classes</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
+          </li>
+          <li class="separator">
+            <a title="BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput" href="../../classes/BitmovinApiSdk_Models_SimpleEncodingLiveJobUrlOutput.html">SimpleEncodingLiveJobUrlOutput</a>
+          </li>
+          <li class="separator">url</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput::</small>url</h1>
+        <h4>Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: &amp;lt;br&amp;gt;&amp;lt;br&amp;gt; &amp;#x60;http://host/my-folder&amp;#x60;     &amp;lt;ul&amp;gt;       &amp;lt;li&amp;gt;         &amp;#x60;/video&amp;#x60;         &amp;lt;ul&amp;gt;           &amp;lt;li&amp;gt;&amp;#x60;/{width}x{height}/&amp;#x60; (multiple subfolders containing different output renditions)&amp;lt;/li&amp;gt;         &amp;lt;/ul&amp;gt;       &amp;lt;/li&amp;gt;       &amp;lt;li&amp;gt;&amp;#x60;/audio&amp;#x60; &amp;lt;/li&amp;gt;       &amp;lt;li&amp;gt;&amp;#x60;/index.m3u8&amp;#x60; (HLS manifest file) &amp;lt;/li&amp;gt;       &amp;lt;li&amp;gt;&amp;#x60;/stream.mpd&amp;#x60; (DASH manifest file) &amp;lt;/li&amp;gt;     &amp;lt;/ul&amp;gt;  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage. Note that most protocols will require &amp;#x60;credentials&amp;#x60; to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * &amp;#x60;s3://&amp;lt;my-bucket&amp;gt;/path/&amp;#x60;  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * &amp;#x60;gcs://&amp;lt;my-bucket&amp;gt;/path/&amp;#x60;  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * &amp;#x60;https://&amp;lt;account&amp;gt;.blob.core.windows.net/&amp;lt;container&amp;gt;/path/&amp;#x60;  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * &amp;#x60;https://&amp;lt;host&amp;gt;-nsu.akamaihd.net/&amp;lt;CP-code&amp;gt;/path/&amp;#x60;  It is required to provider username/password credentials for authentication. (required)</h4>
+        <p/>
+        <ul/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function url(string
+        $url )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$url</code>
+                —
+                string</dt>
+          <dd/>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>$this</dt>
+          <dd><br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2022 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
