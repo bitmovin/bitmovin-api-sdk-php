@@ -82,6 +82,21 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     /** @var string */
     public $customData25;
 
+    /** @var string */
+    public $customData26;
+
+    /** @var string */
+    public $customData27;
+
+    /** @var string */
+    public $customData28;
+
+    /** @var string */
+    public $customData29;
+
+    /** @var string */
+    public $customData30;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -408,6 +423,71 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     public function customData25(string $customData25)
     {
         $this->customData25 = $customData25;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 26
+     *
+     * @param string $customData26
+     * @return $this
+     */
+    public function customData26(string $customData26)
+    {
+        $this->customData26 = $customData26;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 27
+     *
+     * @param string $customData27
+     * @return $this
+     */
+    public function customData27(string $customData27)
+    {
+        $this->customData27 = $customData27;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 28
+     *
+     * @param string $customData28
+     * @return $this
+     */
+    public function customData28(string $customData28)
+    {
+        $this->customData28 = $customData28;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 29
+     *
+     * @param string $customData29
+     * @return $this
+     */
+    public function customData29(string $customData29)
+    {
+        $this->customData29 = $customData29;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 30
+     *
+     * @param string $customData30
+     * @return $this
+     */
+    public function customData30(string $customData30)
+    {
+        $this->customData30 = $customData30;
 
         return $this;
     }

@@ -131,6 +131,21 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public $customData25;
 
     /** @var string */
+    public $customData26;
+
+    /** @var string */
+    public $customData27;
+
+    /** @var string */
+    public $customData28;
+
+    /** @var string */
+    public $customData29;
+
+    /** @var string */
+    public $customData30;
+
+    /** @var string */
     public $deviceClass;
 
     /** @var string */
@@ -863,6 +878,71 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public function customData25(string $customData25)
     {
         $this->customData25 = $customData25;
+
+        return $this;
+    }
+
+    /**
+     * Free form data set via the customData26 field in the analytics collector configuration
+     *
+     * @param string $customData26
+     * @return $this
+     */
+    public function customData26(string $customData26)
+    {
+        $this->customData26 = $customData26;
+
+        return $this;
+    }
+
+    /**
+     * Free form data set via the customData27 field in the analytics collector configuration
+     *
+     * @param string $customData27
+     * @return $this
+     */
+    public function customData27(string $customData27)
+    {
+        $this->customData27 = $customData27;
+
+        return $this;
+    }
+
+    /**
+     * Free form data set via the customData28 field in the analytics collector configuration
+     *
+     * @param string $customData28
+     * @return $this
+     */
+    public function customData28(string $customData28)
+    {
+        $this->customData28 = $customData28;
+
+        return $this;
+    }
+
+    /**
+     * Free form data set via the customData29 field in the analytics collector configuration
+     *
+     * @param string $customData29
+     * @return $this
+     */
+    public function customData29(string $customData29)
+    {
+        $this->customData29 = $customData29;
+
+        return $this;
+    }
+
+    /**
+     * Free form data set via the customData30 field in the analytics collector configuration
+     *
+     * @param string $customData30
+     * @return $this
+     */
+    public function customData30(string $customData30)
+    {
+        $this->customData30 = $customData30;
 
         return $this;
     }

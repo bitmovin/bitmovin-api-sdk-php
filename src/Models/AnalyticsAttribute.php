@@ -128,6 +128,21 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CUSTOM_DATA_25 = 'CUSTOM_DATA_25';
 
     /** @var string */
+    private const CUSTOM_DATA_26 = 'CUSTOM_DATA_26';
+
+    /** @var string */
+    private const CUSTOM_DATA_27 = 'CUSTOM_DATA_27';
+
+    /** @var string */
+    private const CUSTOM_DATA_28 = 'CUSTOM_DATA_28';
+
+    /** @var string */
+    private const CUSTOM_DATA_29 = 'CUSTOM_DATA_29';
+
+    /** @var string */
+    private const CUSTOM_DATA_30 = 'CUSTOM_DATA_30';
+
+    /** @var string */
     private const CUSTOM_USER_ID = 'CUSTOM_USER_ID';
 
     /** @var string */
@@ -763,6 +778,56 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function CUSTOM_DATA_25()
     {
         return new AnalyticsAttribute(self::CUSTOM_DATA_25);
+    }
+
+    /**
+     * CUSTOM_DATA_26
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_26()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_26);
+    }
+
+    /**
+     * CUSTOM_DATA_27
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_27()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_27);
+    }
+
+    /**
+     * CUSTOM_DATA_28
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_28()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_28);
+    }
+
+    /**
+     * CUSTOM_DATA_29
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_29()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_29);
+    }
+
+    /**
+     * CUSTOM_DATA_30
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_30()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_30);
     }
 
     /**
