@@ -16,6 +16,9 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var SimpleEncodingLiveCloudRegion */
     public $cloudRegion;
 
+    /** @var string */
+    public $name;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -59,6 +62,19 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     public function cloudRegion(SimpleEncodingLiveCloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
+
+        return $this;
+    }
+
+    /**
+     * This property will be used for naming the encoding.
+     *
+     * @param string $name
+     * @return $this
+     */
+    public function name(string $name)
+    {
+        $this->name = $name;
 
         return $this;
     }
