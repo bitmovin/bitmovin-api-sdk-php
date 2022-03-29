@@ -13,7 +13,7 @@ class SimpleEncodingVodJobRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobUrlInput[] */
     public $inputs;
 
-    /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobUrlOutput[] */
+    /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobOutput[] */
     public $outputs;
 
     /** @var string */
@@ -24,7 +24,7 @@ class SimpleEncodingVodJobRequest extends \BitmovinApiSdk\Common\ApiResource
         parent::__construct($attributes);
         $this->encodingTemplate = ObjectMapper::map($this->encodingTemplate, EncodingTemplate::class);
         $this->inputs = ObjectMapper::map($this->inputs, SimpleEncodingVodJobUrlInput::class);
-        $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingVodJobUrlOutput::class);
+        $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingVodJobOutput::class);
     }
 
     /**
@@ -54,9 +54,9 @@ class SimpleEncodingVodJobRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * outputs
+     * Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
      *
-     * @param \BitmovinApiSdk\Models\SimpleEncodingVodJobUrlOutput[] $outputs
+     * @param \BitmovinApiSdk\Models\SimpleEncodingVodJobOutput[] $outputs
      * @return $this
      */
     public function outputs(array $outputs)
