@@ -26,7 +26,7 @@ class AccountInformation extends BitmovinResource
     public $company;
 
     /** @var bool */
-    public $isVerified;
+    public $verified;
 
     public function __construct($attributes = null)
     {

@@ -21,6 +21,7 @@ use BitmovinApiSdk\Apis\Encoding\Outputs\Sftp\SftpApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\AkamaiMsl\AkamaiMslApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\AkamaiNetstorage\AkamaiNetstorageApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\LiveMediaIngest\LiveMediaIngestApi;
+use BitmovinApiSdk\Apis\Encoding\Outputs\Cdn\CdnApi;
 
 class OutputsApi
 {
@@ -66,6 +67,9 @@ class OutputsApi
     /** @var LiveMediaIngestApi */
     public $liveMediaIngest;
 
+    /** @var CdnApi */
+    public $cdn;
+
     /**
      * OutputsApi constructor.
      *
@@ -89,6 +93,7 @@ class OutputsApi
         $this->akamaiMsl = new AkamaiMslApi(null, $this->httpWrapper);
         $this->akamaiNetstorage = new AkamaiNetstorageApi(null, $this->httpWrapper);
         $this->liveMediaIngest = new LiveMediaIngestApi(null, $this->httpWrapper);
+        $this->cdn = new CdnApi(null, $this->httpWrapper);
     }
 
     /**

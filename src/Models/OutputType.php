@@ -40,6 +40,9 @@ class OutputType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const GCS_SERVICE_ACCOUNT = 'GCS_SERVICE_ACCOUNT';
 
+    /** @var string */
+    private const CDN = 'CDN';
+
     /**
      * @param string $value
      * @return OutputType
@@ -167,6 +170,16 @@ class OutputType extends \BitmovinApiSdk\Common\Enum
     public static function GCS_SERVICE_ACCOUNT()
     {
         return new OutputType(self::GCS_SERVICE_ACCOUNT);
+    }
+
+    /**
+     * CDN
+     *
+     * @return OutputType
+     */
+    public static function CDN()
+    {
+        return new OutputType(self::CDN);
     }
 }
 

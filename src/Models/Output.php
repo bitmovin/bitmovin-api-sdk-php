@@ -14,6 +14,7 @@ class Output extends BitmovinResource
     public static $discriminatorMapping = [
         "AKAMAI_NETSTORAGE" => AkamaiNetStorageOutput::class,
         "AZURE" => AzureOutput::class,
+        "CDN" => CdnOutput::class,
         "GENERIC_S3" => GenericS3Output::class,
         "GCS" => GcsOutput::class,
         "FTP" => FtpOutput::class,
