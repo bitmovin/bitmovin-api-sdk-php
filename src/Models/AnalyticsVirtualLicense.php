@@ -16,6 +16,9 @@ class AnalyticsVirtualLicense extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $timezone;
 
+    /** @var string */
+    public $retentionTime;
+
     /** @var AnalyticsVirtualLicenseLicensesListItem[] */
     public $licenses;
 
