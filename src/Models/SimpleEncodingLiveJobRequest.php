@@ -10,7 +10,7 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var SimpleEncodingLiveJobInput */
     public $input;
 
-    /** @var \BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput[] */
+    /** @var \BitmovinApiSdk\Models\SimpleEncodingLiveJobOutput[] */
     public $outputs;
 
     /** @var SimpleEncodingLiveCloudRegion */
@@ -23,7 +23,7 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     {
         parent::__construct($attributes);
         $this->input = ObjectMapper::map($this->input, SimpleEncodingLiveJobInput::class);
-        $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingLiveJobUrlOutput::class);
+        $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingLiveJobOutput::class);
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, SimpleEncodingLiveCloudRegion::class);
     }
 
@@ -41,9 +41,9 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * output of the live encoding job (required)
+     * Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#outputs) (required)
      *
-     * @param \BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput[] $outputs
+     * @param \BitmovinApiSdk\Models\SimpleEncodingLiveJobOutput[] $outputs
      * @return $this
      */
     public function outputs(array $outputs)

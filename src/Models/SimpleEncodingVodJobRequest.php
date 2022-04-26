@@ -54,7 +54,7 @@ class SimpleEncodingVodJobRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
+     * Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api#inputs-outputs) (required)
      *
      * @param \BitmovinApiSdk\Models\SimpleEncodingVodJobOutput[] $outputs
      * @return $this

@@ -5,10 +5,16 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class SimpleEncodingVodJobCdnOutput extends SimpleEncodingVodJobOutput
+class SimpleEncodingLiveJobOutput extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var SimpleEncodingLiveMaxResolution */
     public $maxResolution;
+
+    public static $discriminatorName = "type";
+    public static $discriminatorMapping = [
+        "URL" => SimpleEncodingLiveJobUrlOutput::class,
+        "CDN" => SimpleEncodingLiveJobCdnOutput::class,
+    ];
 
     public function __construct($attributes = null)
     {

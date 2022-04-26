@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class SimpleEncodingLiveJobUrlOutput extends \BitmovinApiSdk\Common\ApiResource
+class SimpleEncodingLiveJobUrlOutput extends SimpleEncodingLiveJobOutput
 {
     /** @var string */
     public $url;
@@ -16,18 +16,14 @@ class SimpleEncodingLiveJobUrlOutput extends \BitmovinApiSdk\Common\ApiResource
     /** @var bool */
     public $makePublic;
 
-    /** @var SimpleEncodingLiveMaxResolution */
-    public $maxResolution;
-
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->credentials = ObjectMapper::map($this->credentials, SimpleEncodingLiveJobCredentials::class);
-        $this->maxResolution = ObjectMapper::map($this->maxResolution, SimpleEncodingLiveMaxResolution::class);
     }
 
     /**
-     * Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: &lt;br&gt;&lt;br&gt; &#x60;http://host/my-folder&#x60;     &lt;ul&gt;       &lt;li&gt;         &#x60;/video&#x60;         &lt;ul&gt;           &lt;li&gt;&#x60;/{width}x{height}/&#x60; (multiple subfolders containing different output renditions)&lt;/li&gt;         &lt;/ul&gt;       &lt;/li&gt;       &lt;li&gt;&#x60;/audio&#x60; &lt;/li&gt;       &lt;li&gt;&#x60;/index.m3u8&#x60; (HLS manifest file) &lt;/li&gt;       &lt;li&gt;&#x60;/stream.mpd&#x60; (DASH manifest file) &lt;/li&gt;     &lt;/ul&gt;  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage.  Note that most protocols will require &#x60;credentials&#x60; to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * &#x60;s3://&lt;my-bucket&gt;/path/&#x60;  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * &#x60;gcs://&lt;my-bucket&gt;/path/&#x60;  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * &#x60;https://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/path/&#x60;  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * &#x60;https://&lt;host&gt;-nsu.akamaihd.net/&lt;CP-code&gt;/path/&#x60;  It is required to provide username/password credentials for authentication. (required)
+     * Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: &lt;br&gt;&lt;br&gt; &#x60;http://host/my-folder&#x60;     &lt;ul&gt;       &lt;li&gt;         &#x60;/video&#x60;         &lt;ul&gt;           &lt;li&gt;&#x60;/{width}x{height}_{bitrate}/&#x60; (multiple subfolders containing different output renditions)&lt;/li&gt;         &lt;/ul&gt;       &lt;/li&gt;       &lt;li&gt;&#x60;/audio&#x60; &lt;/li&gt;       &lt;li&gt;&#x60;/index.m3u8&#x60; (HLS manifest file) &lt;/li&gt;       &lt;li&gt;&#x60;/stream.mpd&#x60; (DASH manifest file) &lt;/li&gt;     &lt;/ul&gt;  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage.  Note that most protocols will require &#x60;credentials&#x60; to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * &#x60;s3://&lt;my-bucket&gt;/path/&#x60;  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * &#x60;gcs://&lt;my-bucket&gt;/path/&#x60;  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * &#x60;https://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/path/&#x60;  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * &#x60;https://&lt;host&gt;-nsu.akamaihd.net/&lt;CP-code&gt;/path/&#x60;  It is required to provide username/password credentials for authentication. (required)
      *
      * @param string $url
      * @return $this
@@ -61,19 +57,6 @@ class SimpleEncodingLiveJobUrlOutput extends \BitmovinApiSdk\Common\ApiResource
     public function makePublic(bool $makePublic)
     {
         $this->makePublic = $makePublic;
-
-        return $this;
-    }
-
-    /**
-     * This sets the maximum output resolution that will be generated.
-     *
-     * @param SimpleEncodingLiveMaxResolution $maxResolution
-     * @return $this
-     */
-    public function maxResolution(SimpleEncodingLiveMaxResolution $maxResolution)
-    {
-        $this->maxResolution = $maxResolution;
 
         return $this;
     }

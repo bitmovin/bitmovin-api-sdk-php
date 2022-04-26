@@ -25,7 +25,7 @@ class SimpleEncodingLiveJobResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var SimpleEncodingLiveJobInput */
     public $input;
 
-    /** @var \BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput[] */
+    /** @var \BitmovinApiSdk\Models\SimpleEncodingLiveJobOutput[] */
     public $outputs;
 
     /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobErrors[] */
@@ -48,7 +48,7 @@ class SimpleEncodingLiveJobResponse extends \BitmovinApiSdk\Common\ApiResource
         parent::__construct($attributes);
         $this->status = ObjectMapper::map($this->status, SimpleEncodingLiveJobStatus::class);
         $this->input = ObjectMapper::map($this->input, SimpleEncodingLiveJobInput::class);
-        $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingLiveJobUrlOutput::class);
+        $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingLiveJobOutput::class);
         $this->errors = ObjectMapper::map($this->errors, SimpleEncodingVodJobErrors::class);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->modifiedAt = ObjectMapper::map($this->modifiedAt, Carbon::class);
@@ -71,7 +71,7 @@ class SimpleEncodingLiveJobResponse extends \BitmovinApiSdk\Common\ApiResource
     /**
      * outputs
      *
-     * @param \BitmovinApiSdk\Models\SimpleEncodingLiveJobUrlOutput[] $outputs
+     * @param \BitmovinApiSdk\Models\SimpleEncodingLiveJobOutput[] $outputs
      * @return $this
      */
     public function outputs(array $outputs)
