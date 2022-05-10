@@ -26,7 +26,7 @@ class DvbSubtitleInputStream extends InputStream
     }
 
     /**
-     * Id of input
+     * ID of an Input resource defining the input storage
      *
      * @param string $inputId
      * @return $this
@@ -39,7 +39,7 @@ class DvbSubtitleInputStream extends InputStream
     }
 
     /**
-     * Path to media file
+     * Path to an input media file
      *
      * @param string $inputPath
      * @return $this
@@ -52,7 +52,7 @@ class DvbSubtitleInputStream extends InputStream
     }
 
     /**
-     * Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
+     * Specifies the strategy for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
      *
      * @param StreamSelectionMode $selectionMode
      * @return $this
@@ -65,7 +65,7 @@ class DvbSubtitleInputStream extends InputStream
     }
 
     /**
-     * Position of the stream, starting from 0.
+     * Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &#39;AUTO&#39;, defaults to 0 for any other selectionMode.
      *
      * @param int $position
      * @return $this

@@ -16,7 +16,7 @@ class AnalyticsImpressionListItem extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Impression ID (required)
+     * Random UUID that is used to identify a session (required)
      *
      * @param string $impressionId
      * @return $this

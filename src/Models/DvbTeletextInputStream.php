@@ -29,7 +29,7 @@ class DvbTeletextInputStream extends InputStream
     }
 
     /**
-     * Id of input
+     * ID of an Input resource defining the input storage
      *
      * @param string $inputId
      * @return $this
@@ -42,7 +42,7 @@ class DvbTeletextInputStream extends InputStream
     }
 
     /**
-     * Path to media file
+     * Path to an input media file
      *
      * @param string $inputPath
      * @return $this
@@ -55,7 +55,7 @@ class DvbTeletextInputStream extends InputStream
     }
 
     /**
-     * Specifies the algorithm how the stream in the input file will be selected
+     * Specifies the strategy for selecting a stream from the input file
      *
      * @param StreamSelectionMode $selectionMode
      * @return $this
@@ -68,7 +68,7 @@ class DvbTeletextInputStream extends InputStream
     }
 
     /**
-     * Position of the stream, starting from 0.
+     * Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &#39;AUTO&#39;, defaults to 0 for any other selectionMode.
      *
      * @param int $position
      * @return $this

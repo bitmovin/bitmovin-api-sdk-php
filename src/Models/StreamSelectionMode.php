@@ -29,7 +29,7 @@ class StreamSelectionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Automatically select a stream that fits the codec
+     * Automatically select the first stream that fits the Stream&#39;s codec configuration
      *
      * @return StreamSelectionMode
      */
@@ -39,7 +39,7 @@ class StreamSelectionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Use the stream specified by the position attribute
+     * Use the stream specified by &#39;position&#39;
      *
      * @return StreamSelectionMode
      */
@@ -49,7 +49,7 @@ class StreamSelectionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Use the stream specified by position but count only video streams
+     * Use the stream specified by &#39;position&#39;, counting video streams only
      *
      * @return StreamSelectionMode
      */
@@ -59,7 +59,7 @@ class StreamSelectionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Use the stream specified by position but count only audio streams
+     * Use the stream specified by &#39;position&#39;, counting audio streams only
      *
      * @return StreamSelectionMode
      */
@@ -69,7 +69,7 @@ class StreamSelectionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Use the stream specified by position but count only subtitle streams
+     * Use the stream specified by &#39;position&#39;, counting subtitle streams only
      *
      * @return StreamSelectionMode
      */

@@ -33,7 +33,7 @@ class StreamInput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Id of input
+     * ID of an Input resource defining the input storage. Required if &#39;inputStreamId&#39; is not set.
      *
      * @param string $inputId
      * @return $this
@@ -46,7 +46,7 @@ class StreamInput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Path to media file
+     * Path to an input media file. Required if &#39;inputStreamId&#39; is not set.
      *
      * @param string $inputPath
      * @return $this
@@ -59,7 +59,7 @@ class StreamInput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Specifies the algorithm how the stream in the input file will be selected
+     * Specifies the strategy for selecting a stream from the input file. Must not be set when &#39;inputStreamId&#39; is set.
      *
      * @param StreamSelectionMode $selectionMode
      * @return $this
@@ -72,7 +72,7 @@ class StreamInput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Position of the stream, starting from 0.
+     * Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &#39;AUTO&#39;, defaults to 0 for any other selectionMode.
      *
      * @param int $position
      * @return $this
@@ -85,7 +85,7 @@ class StreamInput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Set this property instead of all others to reference an ingest, trimming or concatenation input stream
+     * Set this property instead of all others to reference an InputStream resource (e.g. an Ingest-, Trimming- or ConcatenationInputStream)
      *
      * @param string $inputStreamId
      * @return $this

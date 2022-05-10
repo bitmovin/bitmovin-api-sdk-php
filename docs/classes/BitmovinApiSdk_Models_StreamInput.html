@@ -126,15 +126,15 @@
               <a title="BitmovinApiSdk\Models\StreamInput" href="../classes/BitmovinApiSdk_Models_StreamInput/__construct.html">__construct()</a>
             </li>
             <li id="inputId"><a title="BitmovinApiSdk\Models\StreamInput" href="../classes/BitmovinApiSdk_Models_StreamInput/inputId.html">inputId()</a>
-                — Id of input</li>
+                — ID of an Input resource defining the input storage. Required if &amp;#39;inputStreamId&amp;#39; is not set.</li>
             <li id="inputPath"><a title="BitmovinApiSdk\Models\StreamInput" href="../classes/BitmovinApiSdk_Models_StreamInput/inputPath.html">inputPath()</a>
-                — Path to media file</li>
+                — Path to an input media file. Required if &amp;#39;inputStreamId&amp;#39; is not set.</li>
             <li id="inputStreamId"><a title="BitmovinApiSdk\Models\StreamInput" href="../classes/BitmovinApiSdk_Models_StreamInput/inputStreamId.html">inputStreamId()</a>
-                — Set this property instead of all others to reference an ingest, trimming or concatenation input stream</li>
+                — Set this property instead of all others to reference an InputStream resource (e.g. an Ingest-, Trimming- or ConcatenationInputStream)</li>
             <li id="position"><a title="BitmovinApiSdk\Models\StreamInput" href="../classes/BitmovinApiSdk_Models_StreamInput/position.html">position()</a>
-                — Position of the stream, starting from 0.</li>
+                — Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &amp;#39;AUTO&amp;#39;, defaults to 0 for any other selectionMode.</li>
             <li id="selectionMode"><a title="BitmovinApiSdk\Models\StreamInput" href="../classes/BitmovinApiSdk_Models_StreamInput/selectionMode.html">selectionMode()</a>
-                — Specifies the algorithm how the stream in the input file will be selected</li>
+                — Specifies the strategy for selecting a stream from the input file. Must not be set when &amp;#39;inputStreamId&amp;#39; is set.</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>

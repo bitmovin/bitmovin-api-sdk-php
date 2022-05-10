@@ -1078,7 +1078,7 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Random UUID that is used to identify a sessions (required)
+     * Random UUID that is used to identify a session (required)
      *
      * @param string $impressionId
      * @return $this
