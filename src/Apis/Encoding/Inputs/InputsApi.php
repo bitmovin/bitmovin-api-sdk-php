@@ -25,9 +25,6 @@ use BitmovinApiSdk\Apis\Encoding\Inputs\Https\HttpsApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Aspera\AsperaApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\AkamaiNetstorage\AkamaiNetstorageApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Srt\SrtApi;
-use BitmovinApiSdk\Apis\Encoding\Inputs\Tcp\TcpApi;
-use BitmovinApiSdk\Apis\Encoding\Inputs\Udp\UdpApi;
-use BitmovinApiSdk\Apis\Encoding\Inputs\UdpMulticast\UdpMulticastApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Zixi\ZixiApi;
 
 class InputsApi
@@ -86,15 +83,6 @@ class InputsApi
     /** @var SrtApi */
     public $srt;
 
-    /** @var TcpApi */
-    public $tcp;
-
-    /** @var UdpApi */
-    public $udp;
-
-    /** @var UdpMulticastApi */
-    public $udpMulticast;
-
     /** @var ZixiApi */
     public $zixi;
 
@@ -125,9 +113,6 @@ class InputsApi
         $this->aspera = new AsperaApi(null, $this->httpWrapper);
         $this->akamaiNetstorage = new AkamaiNetstorageApi(null, $this->httpWrapper);
         $this->srt = new SrtApi(null, $this->httpWrapper);
-        $this->tcp = new TcpApi(null, $this->httpWrapper);
-        $this->udp = new UdpApi(null, $this->httpWrapper);
-        $this->udpMulticast = new UdpMulticastApi(null, $this->httpWrapper);
         $this->zixi = new ZixiApi(null, $this->httpWrapper);
     }
 

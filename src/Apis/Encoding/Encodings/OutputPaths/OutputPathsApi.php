@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Encoding\Inputs\UdpMulticast\Customdata;
+namespace BitmovinApiSdk\Apis\Encoding\Encodings\OutputPaths;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -8,13 +8,13 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-class CustomdataApi
+class OutputPathsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
 
     /**
-     * CustomdataApi constructor.
+     * OutputPathsApi constructor.
      *
      * @param Configuration $config
      * @param HttpWrapper $httpWrapper
@@ -26,20 +26,20 @@ class CustomdataApi
     }
 
     /**
-     * UDP multicast input Custom Data
+     * Encoding Output Paths Retrieval
      *
-     * @param string $inputId
-     * @return \BitmovinApiSdk\Models\CustomData
+     * @param string $encodingId
+     * @return \BitmovinApiSdk\Models\EncodingOutputPaths[]
      * @throws BitmovinApiException
      */
-    public function get(string $inputId) : \BitmovinApiSdk\Models\CustomData
+    public function get(string $encodingId) : array
     {
         $pathParams = [
-            'input_id' => $inputId,
+            'encoding_id' => $encodingId,
         ];
 
-        $response = $this->httpWrapper->request('GET', '/encoding/inputs/udp-multicast/{input_id}/customData', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/encoding/encodings/{encoding_id}/output-paths', $pathParams,  null, null, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\CustomData::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\EncodingOutputPaths::class);
     }
 }

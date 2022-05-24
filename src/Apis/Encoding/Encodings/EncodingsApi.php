@@ -15,6 +15,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\StreamsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\InputStreamsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Muxings\MuxingsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\TransferRetries\TransferRetriesApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\OutputPaths\OutputPathsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Captions\CaptionsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Sidecars\SidecarsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Keyframes\KeyframesApi;
@@ -45,6 +46,9 @@ class EncodingsApi
     /** @var TransferRetriesApi */
     public $transferRetries;
 
+    /** @var OutputPathsApi */
+    public $outputPaths;
+
     /** @var CaptionsApi */
     public $captions;
 
@@ -71,6 +75,7 @@ class EncodingsApi
         $this->inputStreams = new InputStreamsApi(null, $this->httpWrapper);
         $this->muxings = new MuxingsApi(null, $this->httpWrapper);
         $this->transferRetries = new TransferRetriesApi(null, $this->httpWrapper);
+        $this->outputPaths = new OutputPathsApi(null, $this->httpWrapper);
         $this->captions = new CaptionsApi(null, $this->httpWrapper);
         $this->sidecars = new SidecarsApi(null, $this->httpWrapper);
         $this->keyframes = new KeyframesApi(null, $this->httpWrapper);

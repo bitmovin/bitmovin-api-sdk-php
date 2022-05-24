@@ -47,15 +47,6 @@ class InputType extends \BitmovinApiSdk\Common\Enum
     private const SFTP = 'SFTP';
 
     /** @var string */
-    private const TCP = 'TCP';
-
-    /** @var string */
-    private const UDP = 'UDP';
-
-    /** @var string */
-    private const UDP_MULTICAST = 'UDP_MULTICAST';
-
-    /** @var string */
     private const ZIXI = 'ZIXI';
 
     /** @var string */
@@ -211,36 +202,6 @@ class InputType extends \BitmovinApiSdk\Common\Enum
     public static function SFTP()
     {
         return new InputType(self::SFTP);
-    }
-
-    /**
-     * TCP
-     *
-     * @return InputType
-     */
-    public static function TCP()
-    {
-        return new InputType(self::TCP);
-    }
-
-    /**
-     * UDP
-     *
-     * @return InputType
-     */
-    public static function UDP()
-    {
-        return new InputType(self::UDP);
-    }
-
-    /**
-     * UDP_MULTICAST
-     *
-     * @return InputType
-     */
-    public static function UDP_MULTICAST()
-    {
-        return new InputType(self::UDP_MULTICAST);
     }
 
     /**
