@@ -41,7 +41,7 @@ class Trimming extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Defines how many seconds from the input will be encoded.
+     * Defines how many seconds from the input will be encoded. If not set, the input will be encoded until its end.
      *
      * @param float $duration
      * @return $this
@@ -54,7 +54,7 @@ class Trimming extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * If set, \&quot;duration\&quot; will be interpreted as a maximum and not cause an error if the input is too short
+     * When true, \&quot;duration\&quot; will be interpreted as a maximum and not cause an error if the input is too short
      *
      * @param bool $ignoreDurationIfInputTooShort
      * @return $this

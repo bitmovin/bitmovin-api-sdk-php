@@ -1494,7 +1494,7 @@ class AnalyticsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Sequence number of the sample in which it occured in the session
+     * Sequence number of the sample in which it occurred in the session
      *
      * @param int $sequenceNumber
      * @return $this

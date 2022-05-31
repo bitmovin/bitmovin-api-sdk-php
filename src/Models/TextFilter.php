@@ -253,7 +253,7 @@ class TextFilter extends Filter
     }
 
     /**
-     * If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied
+     * If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied. Drop-frame timecodes (containing \&quot;;\&quot; or \&quot;.\&quot;) must only be used with video frame rates of 29.97, 30, 59.94 or 60 FPS, according to the SMPTE standard
      *
      * @param string $timecode
      * @return $this
@@ -305,7 +305,7 @@ class TextFilter extends Filter
     }
 
     /**
-     * rate
+     * Video frame rate
      *
      * @param string $rate
      * @return $this
