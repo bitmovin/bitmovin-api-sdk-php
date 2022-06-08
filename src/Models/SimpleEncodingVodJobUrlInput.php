@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class SimpleEncodingVodJobUrlInput extends \BitmovinApiSdk\Common\ApiResource
+class SimpleEncodingVodJobUrlInput extends SimpleEncodingVodJobInput
 {
     /** @var string */
     public $url;
