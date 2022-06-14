@@ -26,6 +26,7 @@ use BitmovinApiSdk\Apis\Encoding\Inputs\Aspera\AsperaApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\AkamaiNetstorage\AkamaiNetstorageApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Srt\SrtApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Zixi\ZixiApi;
+use BitmovinApiSdk\Apis\Encoding\Inputs\DirectFileUpload\DirectFileUploadApi;
 
 class InputsApi
 {
@@ -86,6 +87,9 @@ class InputsApi
     /** @var ZixiApi */
     public $zixi;
 
+    /** @var DirectFileUploadApi */
+    public $directFileUpload;
+
     /**
      * InputsApi constructor.
      *
@@ -114,6 +118,7 @@ class InputsApi
         $this->akamaiNetstorage = new AkamaiNetstorageApi(null, $this->httpWrapper);
         $this->srt = new SrtApi(null, $this->httpWrapper);
         $this->zixi = new ZixiApi(null, $this->httpWrapper);
+        $this->directFileUpload = new DirectFileUploadApi(null, $this->httpWrapper);
     }
 
     /**

@@ -26,6 +26,7 @@ class Input extends BitmovinResource
         "ZIXI" => ZixiInput::class,
         "SRT" => SrtInput::class,
         "GCS_SERVICE_ACCOUNT" => GcsServiceAccountInput::class,
+        "DIRECT_FILE_UPLOAD" => DirectFileUploadInput::class,
     ];
 
     public function __construct($attributes = null)

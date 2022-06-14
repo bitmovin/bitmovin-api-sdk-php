@@ -10,6 +10,7 @@ class SimpleEncodingVodJobInput extends \BitmovinApiSdk\Common\ApiResource
     public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "URL" => SimpleEncodingVodJobUrlInput::class,
+        "DIRECT_FILE_UPLOAD" => SimpleEncodingVodJobDirectFileUploadInput::class,
     ];
 
     public function __construct($attributes = null)
