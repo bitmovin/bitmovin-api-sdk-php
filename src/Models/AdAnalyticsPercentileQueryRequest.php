@@ -16,7 +16,7 @@ class AdAnalyticsPercentileQueryRequest extends AdAnalyticsQueryRequest
     }
 
     /**
-     * The percentage (0-99) used for percentile queries.
+     * The percentage (0-99) used for percentile queries. (required)
      *
      * @param int $percentile
      * @return $this

@@ -55,7 +55,7 @@ class AdAnalyticsQueryRequest extends AnalyticsQueryTimeframe
     }
 
     /**
-     * filters
+     * Analytics Query Filters  Each filter requires 3 properties: name, operator and value.   Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS]
      *
      * @param \BitmovinApiSdk\Models\AdAnalyticsAbstractFilter[] $filters
      * @return $this

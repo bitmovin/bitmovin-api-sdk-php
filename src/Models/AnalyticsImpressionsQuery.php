@@ -23,7 +23,7 @@ class AnalyticsImpressionsQuery extends AnalyticsQueryTimeframe
     }
 
     /**
-     * Analytics license key
+     * Analytics license key (required)
      *
      * @param string $licenseKey
      * @return $this
@@ -36,7 +36,7 @@ class AnalyticsImpressionsQuery extends AnalyticsQueryTimeframe
     }
 
     /**
-     * filters
+     * Analytics Query Filters  Each filter requires 3 properties: name, operator and value.  Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS]
      *
      * @param \BitmovinApiSdk\Models\AnalyticsAbstractFilter[] $filters
      * @return $this
