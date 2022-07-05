@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Statistics\Cdn\CdnApi;
 use BitmovinApiSdk\Apis\Encoding\Statistics\Daily\DailyApi;
 use BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\EncodingsApi;
 use BitmovinApiSdk\Apis\Encoding\Statistics\Labels\LabelsApi;
@@ -16,6 +17,9 @@ class StatisticsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var CdnApi */
+    public $cdn;
 
     /** @var DailyApi */
     public $daily;
@@ -36,6 +40,7 @@ class StatisticsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->cdn = new CdnApi(null, $this->httpWrapper);
         $this->daily = new DailyApi(null, $this->httpWrapper);
         $this->encodings = new EncodingsApi(null, $this->httpWrapper);
         $this->labels = new LabelsApi(null, $this->httpWrapper);
