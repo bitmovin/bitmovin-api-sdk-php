@@ -32,7 +32,7 @@ class Period extends BitmovinResponse
     }
 
     /**
-     * Duration in seconds
+     * Duration in seconds.&lt;br/&gt;Please note that the duration of a Period is usually determined by the media contained therein.&lt;br/&gt;Setting the &#x60;duration&#x60; property to a specific value will override this default behaviour.&lt;br/&gt;Warning: Use at your own risk!
      *
      * @param float $duration
      * @return $this
