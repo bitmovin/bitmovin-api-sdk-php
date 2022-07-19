@@ -127,19 +127,6 @@ class Stream extends BitmovinResource
     }
 
     /**
-     * If this is set and contains objects, then this stream has been ignored during the encoding process
-     *
-     * @param \BitmovinApiSdk\Models\Ignoring[] $ignoredBy
-     * @return $this
-     */
-    public function ignoredBy(array $ignoredBy)
-    {
-        $this->ignoredBy = $ignoredBy;
-
-        return $this;
-    }
-
-    /**
      * Mode of the stream
      *
      * @param StreamMode $mode

@@ -20,7 +20,7 @@ class DashProfile extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * LIVE can only use fMP4 muxing
+     * The profile to be used for fMP4 muxings
      *
      * @return DashProfile
      */
@@ -30,7 +30,7 @@ class DashProfile extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * ON_DEMAND can only use MP4 muxing
+     * The profile to be used for MP4 muxings
      *
      * @return DashProfile
      */
