@@ -43,6 +43,12 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     /** @var InputColorRange */
     public $inputColorRange;
 
+    /** @var InputColorPrimaries */
+    public $inputColorPrimaries;
+
+    /** @var InputColorTransfer */
+    public $inputColorTransfer;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -53,6 +59,8 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
         $this->colorTransfer = ObjectMapper::map($this->colorTransfer, ColorTransfer::class);
         $this->inputColorSpace = ObjectMapper::map($this->inputColorSpace, InputColorSpace::class);
         $this->inputColorRange = ObjectMapper::map($this->inputColorRange, InputColorRange::class);
+        $this->inputColorPrimaries = ObjectMapper::map($this->inputColorPrimaries, InputColorPrimaries::class);
+        $this->inputColorTransfer = ObjectMapper::map($this->inputColorTransfer, InputColorTransfer::class);
     }
 
     /**
@@ -207,6 +215,32 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     public function inputColorRange(InputColorRange $inputColorRange)
     {
         $this->inputColorRange = $inputColorRange;
+
+        return $this;
+    }
+
+    /**
+     * Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.
+     *
+     * @param InputColorPrimaries $inputColorPrimaries
+     * @return $this
+     */
+    public function inputColorPrimaries(InputColorPrimaries $inputColorPrimaries)
+    {
+        $this->inputColorPrimaries = $inputColorPrimaries;
+
+        return $this;
+    }
+
+    /**
+     * Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.
+     *
+     * @param InputColorTransfer $inputColorTransfer
+     * @return $this
+     */
+    public function inputColorTransfer(InputColorTransfer $inputColorTransfer)
+    {
+        $this->inputColorTransfer = $inputColorTransfer;
 
         return $this;
     }

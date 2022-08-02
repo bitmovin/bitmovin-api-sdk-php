@@ -96,9 +96,9 @@
           <h4>public</h4>
           <ul>
             <li id="DROP_MUXING"><a title="BitmovinApiSdk\Models\StreamConditionsMode" href="../classes/BitmovinApiSdk_Models_StreamConditionsMode/DROP_MUXING.html">DROP_MUXING()</a>
-                — The whole muxing will be omitted if one or more of its stream conditions are not fulfilled</li>
+                — The whole muxing will be ignored if at least one of its Streams is ignored</li>
             <li id="DROP_STREAM"><a title="BitmovinApiSdk\Models\StreamConditionsMode" href="../classes/BitmovinApiSdk_Models_StreamConditionsMode/DROP_STREAM.html">DROP_STREAM()</a>
-                — Streams not fulfilling the stream conditions will be omitted from the muxing. The muxing will be omitted if there is no stream meeting the conditions.</li>
+                — Ignored Streams will be omitted from the muxing. The muxing will only be ignored if all of its Streams are ignored</li>
             <li id="create">
               <a title="BitmovinApiSdk\Models\StreamConditionsMode" href="../classes/BitmovinApiSdk_Models_StreamConditionsMode/create.html">create()</a>
             </li>

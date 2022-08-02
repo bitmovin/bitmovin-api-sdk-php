@@ -16,6 +16,9 @@ class InputListQueryParams implements QueryParams
     /** @var string */
     private $name;
 
+    /** @var string */
+    private $sort;
+
     /**
      * @return InputListQueryParams
      */
@@ -53,6 +56,17 @@ class InputListQueryParams implements QueryParams
     public function name(string $name): InputListQueryParams
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return InputListQueryParams
+     */
+    public function sort(string $sort): InputListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

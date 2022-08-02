@@ -79,6 +79,8 @@
                     </li><li>public <span title="BitmovinApiSdk\Models\ColorTransfer">ColorTransfer</span> <a href="#members">$colorTransfer</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\InputColorSpace">InputColorSpace</span> <a href="#members">$inputColorSpace</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\InputColorRange">InputColorRange</span> <a href="#members">$inputColorRange</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\InputColorPrimaries">InputColorPrimaries</span> <a href="#members">$inputColorPrimaries</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\InputColorTransfer">InputColorTransfer</span> <a href="#members">$inputColorTransfer</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/copyChromaLocationFlag.html">copyChromaLocationFlag</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/copyColorSpaceFlag.html">copyColorSpaceFlag</a>()
@@ -92,6 +94,8 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/colorTransfer.html">colorTransfer</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorSpace.html">inputColorSpace</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorRange.html">inputColorRange</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorPrimaries.html">inputColorPrimaries</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorTransfer.html">inputColorTransfer</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -141,12 +145,18 @@
             <li id="copyColorTransferFlag"><strong>$copyColorTransferFlag</strong>
                 —
                 <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="inputColorPrimaries"><strong>$inputColorPrimaries</strong>
+                —
+                <a title="BitmovinApiSdk\Models\InputColorPrimaries" href="../classes/BitmovinApiSdk_Models_InputColorPrimaries.html">BitmovinApiSdk\Models\InputColorPrimaries</a></li>
             <li id="inputColorRange"><strong>$inputColorRange</strong>
                 —
                 <a title="BitmovinApiSdk\Models\InputColorRange" href="../classes/BitmovinApiSdk_Models_InputColorRange.html">BitmovinApiSdk\Models\InputColorRange</a></li>
             <li id="inputColorSpace"><strong>$inputColorSpace</strong>
                 —
                 <a title="BitmovinApiSdk\Models\InputColorSpace" href="../classes/BitmovinApiSdk_Models_InputColorSpace.html">BitmovinApiSdk\Models\InputColorSpace</a></li>
+            <li id="inputColorTransfer"><strong>$inputColorTransfer</strong>
+                —
+                <a title="BitmovinApiSdk\Models\InputColorTransfer" href="../classes/BitmovinApiSdk_Models_InputColorTransfer.html">BitmovinApiSdk\Models\InputColorTransfer</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -176,10 +186,14 @@
                 — Copy the color space setting from the input source</li>
             <li id="copyColorTransferFlag"><a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/copyColorTransferFlag.html">copyColorTransferFlag()</a>
                 — Copy the color transfer setting from the input source</li>
+            <li id="inputColorPrimaries"><a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorPrimaries.html">inputColorPrimaries()</a>
+                — Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.</li>
             <li id="inputColorRange"><a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorRange.html">inputColorRange()</a>
                 — Override the color range detected in the input file. If not set the input color range will be automatically detected if possible.</li>
             <li id="inputColorSpace"><a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorSpace.html">inputColorSpace()</a>
                 — Override the color space detected in the input file. If not set the input color space will be automatically detected if possible.</li>
+            <li id="inputColorTransfer"><a title="BitmovinApiSdk\Models\ColorConfig" href="../classes/BitmovinApiSdk_Models_ColorConfig/inputColorTransfer.html">inputColorTransfer()</a>
+                — Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>

@@ -83,7 +83,7 @@ class Muxing extends BitmovinResource
     }
 
     /**
-     * Specifies how to handle streams that don&#39;t fulfill stream conditions
+     * Specifies how to proceed with the Muxing when some of its Streams are ignored (see &#39;condition&#39; property of the Stream resource). The settings only make a difference for Muxings with more than one Stream. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored.
      *
      * @param StreamConditionsMode $streamConditionsMode
      * @return $this

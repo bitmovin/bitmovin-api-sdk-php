@@ -20,7 +20,7 @@ class StreamConditionsMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * The whole muxing will be omitted if one or more of its stream conditions are not fulfilled
+     * The whole muxing will be ignored if at least one of its Streams is ignored
      *
      * @return StreamConditionsMode
      */
@@ -30,7 +30,7 @@ class StreamConditionsMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Streams not fulfilling the stream conditions will be omitted from the muxing. The muxing will be omitted if there is no stream meeting the conditions.
+     * Ignored Streams will be omitted from the muxing. The muxing will only be ignored if all of its Streams are ignored
      *
      * @return StreamConditionsMode
      */
