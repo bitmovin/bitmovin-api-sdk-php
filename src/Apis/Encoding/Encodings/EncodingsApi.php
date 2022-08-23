@@ -9,7 +9,6 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\LiveApi;
-use BitmovinApiSdk\Apis\Encoding\Encodings\MachineLearning\MachineLearningApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Customdata\CustomdataApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\StreamsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\InputStreams\InputStreamsApi;
@@ -27,9 +26,6 @@ class EncodingsApi
 
     /** @var LiveApi */
     public $live;
-
-    /** @var MachineLearningApi */
-    public $machineLearning;
 
     /** @var CustomdataApi */
     public $customdata;
@@ -69,7 +65,6 @@ class EncodingsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->live = new LiveApi(null, $this->httpWrapper);
-        $this->machineLearning = new MachineLearningApi(null, $this->httpWrapper);
         $this->customdata = new CustomdataApi(null, $this->httpWrapper);
         $this->streams = new StreamsApi(null, $this->httpWrapper);
         $this->inputStreams = new InputStreamsApi(null, $this->httpWrapper);
