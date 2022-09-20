@@ -31,6 +31,9 @@ class BitmovinStreamResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\BitmovinStreamQuality[] */
     public $availableQualities;
 
+    /** @var \BitmovinApiSdk\Models\BitmovinStreamEncodingTask[] */
+    public $encodingTasks;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -38,6 +41,7 @@ class BitmovinStreamResponse extends \BitmovinApiSdk\Common\ApiResource
         $this->status = ObjectMapper::map($this->status, BitmovinStreamStatus::class);
         $this->targetQuality = ObjectMapper::map($this->targetQuality, BitmovinStreamQuality::class);
         $this->availableQualities = ObjectMapper::map($this->availableQualities, BitmovinStreamQuality::class);
+        $this->encodingTasks = ObjectMapper::map($this->encodingTasks, BitmovinStreamEncodingTask::class);
     }
 }
 
