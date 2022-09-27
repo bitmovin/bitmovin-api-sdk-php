@@ -751,7 +751,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * By enabling this video stream will be signaled as HLG
+     * Enable SDR compatible HLG signaling. The container and bitstream will indicate BT.2020 but ARIB STD-B67 will be signaled in the alternative transfer characteristics SEI message.
      *
      * @param bool $enableHlgSignaling
      * @return $this
