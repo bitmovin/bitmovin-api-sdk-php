@@ -4,6 +4,7 @@ namespace BitmovinApiSdk\Apis\Encoding\Outputs;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
+use \BitmovinApiSdk\Models\OutputType;
 
 class OutputListQueryParams implements QueryParams
 {
@@ -15,6 +16,9 @@ class OutputListQueryParams implements QueryParams
 
     /** @var string */
     private $name;
+
+    /** @var OutputType */
+    private $type;
 
     /**
      * @return OutputListQueryParams
@@ -53,6 +57,17 @@ class OutputListQueryParams implements QueryParams
     public function name(string $name): OutputListQueryParams
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param OutputType $type
+     * @return OutputListQueryParams
+     */
+    public function type(OutputType $type): OutputListQueryParams
+    {
+        $this->type = $type;
 
         return $this;
     }
