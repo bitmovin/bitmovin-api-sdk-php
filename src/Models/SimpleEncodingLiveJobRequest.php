@@ -7,6 +7,9 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
 {
+    /** @var SimpleEncodingLiveProfile */
+    public $encodingProfile;
+
     /** @var SimpleEncodingLiveJobInput */
     public $input;
 
@@ -22,9 +25,23 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->encodingProfile = ObjectMapper::map($this->encodingProfile, SimpleEncodingLiveProfile::class);
         $this->input = ObjectMapper::map($this->input, SimpleEncodingLiveJobInput::class);
         $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingLiveJobOutput::class);
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, SimpleEncodingLiveCloudRegion::class);
+    }
+
+    /**
+     * The profile that will be used for the live encoding.
+     *
+     * @param SimpleEncodingLiveProfile $encodingProfile
+     * @return $this
+     */
+    public function encodingProfile(SimpleEncodingLiveProfile $encodingProfile)
+    {
+        $this->encodingProfile = $encodingProfile;
+
+        return $this;
     }
 
     /**

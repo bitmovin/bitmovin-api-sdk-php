@@ -43,6 +43,9 @@ class SimpleEncodingLiveJobResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var SimpleEncodingLiveCloudRegion */
     public $cloudRegion;
 
+    /** @var SimpleEncodingLiveProfile */
+    public $encodingProfile;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -53,6 +56,7 @@ class SimpleEncodingLiveJobResponse extends \BitmovinApiSdk\Common\ApiResource
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->modifiedAt = ObjectMapper::map($this->modifiedAt, Carbon::class);
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, SimpleEncodingLiveCloudRegion::class);
+        $this->encodingProfile = ObjectMapper::map($this->encodingProfile, SimpleEncodingLiveProfile::class);
     }
 
     /**
@@ -142,6 +146,19 @@ class SimpleEncodingLiveJobResponse extends \BitmovinApiSdk\Common\ApiResource
     public function cloudRegion(SimpleEncodingLiveCloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
+
+        return $this;
+    }
+
+    /**
+     * The profile that will be used for the live encoding.
+     *
+     * @param SimpleEncodingLiveProfile $encodingProfile
+     * @return $this
+     */
+    public function encodingProfile(SimpleEncodingLiveProfile $encodingProfile)
+    {
+        $this->encodingProfile = $encodingProfile;
 
         return $this;
     }
