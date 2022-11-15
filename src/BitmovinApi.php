@@ -10,11 +10,11 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Account\AccountApi;
 use BitmovinApiSdk\Apis\Analytics\AnalyticsApi;
-use BitmovinApiSdk\Apis\Streams\StreamsApi;
 use BitmovinApiSdk\Apis\Encoding\EncodingApi;
 use BitmovinApiSdk\Apis\General\GeneralApi;
 use BitmovinApiSdk\Apis\Notifications\NotificationsApi;
 use BitmovinApiSdk\Apis\Player\PlayerApi;
+use BitmovinApiSdk\Apis\Streams\StreamsApi;
 
 class BitmovinApi
 {
@@ -26,9 +26,6 @@ class BitmovinApi
 
     /** @var AnalyticsApi */
     public $analytics;
-
-    /** @var StreamsApi */
-    public $streams;
 
     /** @var EncodingApi */
     public $encoding;
@@ -42,6 +39,9 @@ class BitmovinApi
     /** @var PlayerApi */
     public $player;
 
+    /** @var StreamsApi */
+    public $streams;
+
     /**
      * BitmovinApi constructor.
      *
@@ -54,10 +54,10 @@ class BitmovinApi
 
         $this->account = new AccountApi(null, $this->httpWrapper);
         $this->analytics = new AnalyticsApi(null, $this->httpWrapper);
-        $this->streams = new StreamsApi(null, $this->httpWrapper);
         $this->encoding = new EncodingApi(null, $this->httpWrapper);
         $this->general = new GeneralApi(null, $this->httpWrapper);
         $this->notifications = new NotificationsApi(null, $this->httpWrapper);
         $this->player = new PlayerApi(null, $this->httpWrapper);
+        $this->streams = new StreamsApi(null, $this->httpWrapper);
     }
 }

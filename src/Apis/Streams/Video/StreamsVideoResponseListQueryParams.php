@@ -1,11 +1,11 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Streams;
+namespace BitmovinApiSdk\Apis\Streams\Video;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\QueryParams;
 
-class BitmovinStreamResponseListQueryParams implements QueryParams
+class StreamsVideoResponseListQueryParams implements QueryParams
 {
     /** @var int */
     private $offset;
@@ -17,18 +17,18 @@ class BitmovinStreamResponseListQueryParams implements QueryParams
     private $sort;
 
     /**
-     * @return BitmovinStreamResponseListQueryParams
+     * @return StreamsVideoResponseListQueryParams
      */
-    public static function create(): BitmovinStreamResponseListQueryParams
+    public static function create(): StreamsVideoResponseListQueryParams
     {
         return new static();
     }
 
     /**
      * @param int $offset
-     * @return BitmovinStreamResponseListQueryParams
+     * @return StreamsVideoResponseListQueryParams
      */
-    public function offset(int $offset): BitmovinStreamResponseListQueryParams
+    public function offset(int $offset): StreamsVideoResponseListQueryParams
     {
         $this->offset = $offset;
 
@@ -37,9 +37,9 @@ class BitmovinStreamResponseListQueryParams implements QueryParams
 
     /**
      * @param int $limit
-     * @return BitmovinStreamResponseListQueryParams
+     * @return StreamsVideoResponseListQueryParams
      */
-    public function limit(int $limit): BitmovinStreamResponseListQueryParams
+    public function limit(int $limit): StreamsVideoResponseListQueryParams
     {
         $this->limit = $limit;
 
@@ -48,9 +48,9 @@ class BitmovinStreamResponseListQueryParams implements QueryParams
 
     /**
      * @param string $sort
-     * @return BitmovinStreamResponseListQueryParams
+     * @return StreamsVideoResponseListQueryParams
      */
-    public function sort(string $sort): BitmovinStreamResponseListQueryParams
+    public function sort(string $sort): StreamsVideoResponseListQueryParams
     {
         $this->sort = $sort;
 

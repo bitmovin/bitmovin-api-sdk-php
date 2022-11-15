@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\SimpleEncodingVodJobOutput</title>
+    <title>phpDox - BitmovinApiSdk\Models\StreamsVideoCreateRequest</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -38,7 +38,7 @@
           <li class="separator">
             <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
-          <li class="separator">SimpleEncodingVodJobOutput</li>
+          <li class="separator">StreamsVideoCreateRequest</li>
         </ul>
       </div>
       <nav class="box">
@@ -61,18 +61,19 @@
         </ul>
       </nav>
       <section>
-        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>SimpleEncodingVodJobOutput</h1>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsVideoCreateRequest</h1>
         <h4/>
         <p/>
         <h2 id="synopsis">Synopsis</h2>
-        <div class="synopsis">class SimpleEncodingVodJobOutput
+        <div class="synopsis">class StreamsVideoCreateRequest
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public array <a href="#members">$artifacts</a>;
-                    </li><li>public static string <a href="#members">$discriminatorName</a> =
-                        "type";
-                    </li><li>public static array <a href="#members">$discriminatorMapping</a> =
-                        ;
-                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\SimpleEncodingVodJobOutput" href="../classes/BitmovinApiSdk_Models_SimpleEncodingVodJobOutput/__construct.html">__construct</a>()
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$assetUrl</a>;
+                    </li><li>public string <a href="#members">$title</a>;
+                    </li><li>public string <a href="#members">$description</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/assetUrl.html">assetUrl</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/title.html">title</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/description.html">description</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -92,20 +93,31 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="artifacts"><strong>$artifacts</strong>
+            <li id="assetUrl"><strong>$assetUrl</strong>
                 —
-                <a title="\BitmovinApiSdk\Models\SimpleEncodingVodJobOutputArtifact" href="../classes/_BitmovinApiSdk_Models_SimpleEncodingVodJobOutputArtifact.html">\BitmovinApiSdk\Models\SimpleEncodingVodJobOutputArtifact</a>[]
-                    </li>
-            <li id="discriminatorMapping">
-              <strong>$discriminatorMapping</strong>
-            </li>
-            <li id="discriminatorName">
-              <strong>$discriminatorName</strong>
-            </li>
+                string</li>
+            <li id="description"><strong>$description</strong>
+                —
+                string</li>
+            <li id="title"><strong>$title</strong>
+                —
+                string</li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/__construct.html">__construct()</a>
+            </li>
+            <li id="assetUrl"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/assetUrl.html">assetUrl()</a>
+                — The streams input asset URL</li>
+            <li id="description"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/description.html">description()</a>
+                — Description of the stream</li>
+            <li id="title"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/title.html">title()</a>
+                — Title of the stream</li>
+          </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>
           <ul>

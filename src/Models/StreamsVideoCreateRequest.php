@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class CreateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
+class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $assetUrl;
@@ -22,7 +22,7 @@ class CreateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The Streams input asset URL
+     * The streams input asset URL
      *
      * @param string $assetUrl
      * @return $this
@@ -35,7 +35,7 @@ class CreateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Title of the Stream
+     * Title of the stream
      *
      * @param string $title
      * @return $this
@@ -48,7 +48,7 @@ class CreateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Description of the Stream
+     * Description of the stream
      *
      * @param string $description
      * @return $this

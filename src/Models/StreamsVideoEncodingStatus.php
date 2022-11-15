@@ -2,7 +2,7 @@
 
 namespace BitmovinApiSdk\Models;
 
-class BitmovinStreamEncodingStatus extends \BitmovinApiSdk\Common\Enum
+class StreamsVideoEncodingStatus extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
     private const STARTED = 'STARTED';
@@ -15,7 +15,7 @@ class BitmovinStreamEncodingStatus extends \BitmovinApiSdk\Common\Enum
 
     /**
      * @param string $value
-     * @return BitmovinStreamEncodingStatus
+     * @return StreamsVideoEncodingStatus
      */
     public static function create(string $value)
     {
@@ -25,31 +25,31 @@ class BitmovinStreamEncodingStatus extends \BitmovinApiSdk\Common\Enum
     /**
      * The encoding has been started and is in progress
      *
-     * @return BitmovinStreamEncodingStatus
+     * @return StreamsVideoEncodingStatus
      */
     public static function STARTED()
     {
-        return new BitmovinStreamEncodingStatus(self::STARTED);
+        return new StreamsVideoEncodingStatus(self::STARTED);
     }
 
     /**
      * The encoding did not succeed
      *
-     * @return BitmovinStreamEncodingStatus
+     * @return StreamsVideoEncodingStatus
      */
     public static function ERROR()
     {
-        return new BitmovinStreamEncodingStatus(self::ERROR);
+        return new StreamsVideoEncodingStatus(self::ERROR);
     }
 
     /**
      * The encoding finished successfully
      *
-     * @return BitmovinStreamEncodingStatus
+     * @return StreamsVideoEncodingStatus
      */
     public static function FINISHED()
     {
-        return new BitmovinStreamEncodingStatus(self::FINISHED);
+        return new StreamsVideoEncodingStatus(self::FINISHED);
     }
 }
 

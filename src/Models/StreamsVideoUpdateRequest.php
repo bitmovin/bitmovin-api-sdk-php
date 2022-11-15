@@ -5,9 +5,9 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class UpdateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
+class StreamsVideoUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
 {
-    /** @var BitmovinStreamStatus */
+    /** @var StreamsVideoStatus */
     public $status;
 
     /** @var string */
@@ -19,16 +19,16 @@ class UpdateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->status = ObjectMapper::map($this->status, BitmovinStreamStatus::class);
+        $this->status = ObjectMapper::map($this->status, StreamsVideoStatus::class);
     }
 
     /**
-     * The status of the Stream
+     * The new status of the stream
      *
-     * @param BitmovinStreamStatus $status
+     * @param StreamsVideoStatus $status
      * @return $this
      */
-    public function status(BitmovinStreamStatus $status)
+    public function status(StreamsVideoStatus $status)
     {
         $this->status = $status;
 
@@ -36,7 +36,7 @@ class UpdateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Title of the Stream
+     * The new title of the stream
      *
      * @param string $title
      * @return $this
@@ -49,7 +49,7 @@ class UpdateBitmovinStreamRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Description of the Stream
+     * The new description of the stream
      *
      * @param string $description
      * @return $this

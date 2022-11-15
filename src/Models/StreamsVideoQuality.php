@@ -2,7 +2,7 @@
 
 namespace BitmovinApiSdk\Models;
 
-class BitmovinStreamQuality extends \BitmovinApiSdk\Common\Enum
+class StreamsVideoQuality extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
     private const NONE = 'NONE';
@@ -15,7 +15,7 @@ class BitmovinStreamQuality extends \BitmovinApiSdk\Common\Enum
 
     /**
      * @param string $value
-     * @return BitmovinStreamQuality
+     * @return StreamsVideoQuality
      */
     public static function create(string $value)
     {
@@ -25,31 +25,31 @@ class BitmovinStreamQuality extends \BitmovinApiSdk\Common\Enum
     /**
      * The loading placeholder displayed until the first encoding is done
      *
-     * @return BitmovinStreamQuality
+     * @return StreamsVideoQuality
      */
     public static function NONE()
     {
-        return new BitmovinStreamQuality(self::NONE);
+        return new StreamsVideoQuality(self::NONE);
     }
 
     /**
      * A lower quality preview encoding
      *
-     * @return BitmovinStreamQuality
+     * @return StreamsVideoQuality
      */
     public static function PREVIEW()
     {
-        return new BitmovinStreamQuality(self::PREVIEW);
+        return new StreamsVideoQuality(self::PREVIEW);
     }
 
     /**
      * The default Per-title encoding
      *
-     * @return BitmovinStreamQuality
+     * @return StreamsVideoQuality
      */
     public static function DEFAULT()
     {
-        return new BitmovinStreamQuality(self::DEFAULT);
+        return new StreamsVideoQuality(self::DEFAULT);
     }
 }
 

@@ -2,7 +2,7 @@
 
 namespace BitmovinApiSdk\Models;
 
-class BitmovinStreamStatus extends \BitmovinApiSdk\Common\Enum
+class StreamsVideoStatus extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
     private const PUBLISHED = 'PUBLISHED';
@@ -12,7 +12,7 @@ class BitmovinStreamStatus extends \BitmovinApiSdk\Common\Enum
 
     /**
      * @param string $value
-     * @return BitmovinStreamStatus
+     * @return StreamsVideoStatus
      */
     public static function create(string $value)
     {
@@ -20,23 +20,23 @@ class BitmovinStreamStatus extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * The Stream is published and can be accessed
+     * The stream is published and can be accessed
      *
-     * @return BitmovinStreamStatus
+     * @return StreamsVideoStatus
      */
     public static function PUBLISHED()
     {
-        return new BitmovinStreamStatus(self::PUBLISHED);
+        return new StreamsVideoStatus(self::PUBLISHED);
     }
 
     /**
-     * The Stream can&#39;t be accessed
+     * The stream cannot be accessed
      *
-     * @return BitmovinStreamStatus
+     * @return StreamsVideoStatus
      */
     public static function UNPUBLISHED()
     {
-        return new BitmovinStreamStatus(self::UNPUBLISHED);
+        return new StreamsVideoStatus(self::UNPUBLISHED);
     }
 }
 

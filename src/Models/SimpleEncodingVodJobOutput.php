@@ -7,6 +7,9 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class SimpleEncodingVodJobOutput extends \BitmovinApiSdk\Common\ApiResource
 {
+    /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobOutputArtifact[] */
+    public $artifacts;
+
     public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "URL" => SimpleEncodingVodJobUrlOutput::class,
@@ -16,6 +19,7 @@ class SimpleEncodingVodJobOutput extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->artifacts = ObjectMapper::map($this->artifacts, SimpleEncodingVodJobOutputArtifact::class);
     }
 }
 
