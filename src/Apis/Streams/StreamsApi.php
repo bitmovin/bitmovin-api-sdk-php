@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Streams\Video\VideoApi;
+use BitmovinApiSdk\Apis\Streams\Live\LiveApi;
 
 class StreamsApi
 {
@@ -17,6 +18,9 @@ class StreamsApi
 
     /** @var VideoApi */
     public $video;
+
+    /** @var LiveApi */
+    public $live;
 
     /**
      * StreamsApi constructor.
@@ -29,5 +33,6 @@ class StreamsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->video = new VideoApi(null, $this->httpWrapper);
+        $this->live = new LiveApi(null, $this->httpWrapper);
     }
 }

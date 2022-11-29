@@ -34,7 +34,7 @@ class Output extends BitmovinResource
     }
 
     /**
-     * acl
+     * Deprecation notice: This property does not have any effect and will not be returned by GET endpoints
      *
      * @param \BitmovinApiSdk\Models\AclEntry[] $acl
      * @return $this
