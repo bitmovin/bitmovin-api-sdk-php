@@ -143,7 +143,7 @@ class Vp9VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+     * Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
      *
      * @param int $crf
      * @return $this
@@ -234,7 +234,7 @@ class Vp9VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the minimum of quantization factor.
+     * Minimum quantization factor.
      *
      * @param int $qpMin
      * @return $this
@@ -247,7 +247,7 @@ class Vp9VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the maximum of quantization factor.
+     * Maximum quantization factor.
      *
      * @param int $qpMax
      * @return $this

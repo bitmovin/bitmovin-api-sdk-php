@@ -348,7 +348,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+     * Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
      *
      * @param float $crf
      * @return $this
@@ -374,7 +374,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the amount of b frames
+     * Amount of b frames
      *
      * @param int $bframes
      * @return $this
@@ -387,7 +387,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the amount of reference frames
+     * Amount of reference frames
      *
      * @param int $refFrames
      * @return $this
@@ -400,7 +400,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the quantization factor
+     * Quantization factor
      *
      * @param int $qp
      * @return $this
@@ -1011,7 +1011,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the minimum of quantization factor. Valid value range: 0 - 69
+     * Minimum quantization factor. Valid value range: 0 - 69
      *
      * @param int $qpMin
      * @return $this
@@ -1024,7 +1024,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the maximum of quantization factor. Valid value range: 0 - 69
+     * Maximum quantization factor. Valid value range: 0 - 69
      *
      * @param int $qpMax
      * @return $this
@@ -1453,7 +1453,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
+     * Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
      *
      * @param float $quantizerCurveCompressionFactor
      * @return $this

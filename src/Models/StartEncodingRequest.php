@@ -73,7 +73,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Set scheduling parameters of the encoding.
+     * Scheduling parameters of the encoding.
      *
      * @param Scheduling $scheduling
      * @return $this
@@ -86,7 +86,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Set special tweaks for your encoding job.
+     * Special tweaks for your encoding job.
      *
      * @param Tweaks $tweaks
      * @return $this
@@ -190,7 +190,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Sets the version of the manifest generation engine
+     * Version of the manifest generation engine to be used
      *
      * @param ManifestGenerator $manifestGenerator
      * @return $this

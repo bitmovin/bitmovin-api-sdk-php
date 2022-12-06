@@ -109,7 +109,7 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Sets the version of the manifest generation engine
+     * Version of the manifest generation engine to be used
      *
      * @param ManifestGenerator $manifestGenerator
      * @return $this

@@ -34,7 +34,7 @@ class HeAacV2AudioConfiguration extends AudioConfiguration
     }
 
     /**
-     * Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
+     * Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
      *
      * @param HeAacV2Signaling $signaling
      * @return $this

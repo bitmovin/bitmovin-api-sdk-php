@@ -23,7 +23,7 @@ class SimpleEncodingLiveJobOutput extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * This sets the maximum output resolution that will be generated.
+     * The maximum output resolution to be generated
      *
      * @param SimpleEncodingLiveMaxResolution $maxResolution
      * @return $this

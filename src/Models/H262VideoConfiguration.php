@@ -70,7 +70,7 @@ class H262VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the amount of b frames.
+     * Amount of b frames.
      *
      * @param int $bframes
      * @return $this

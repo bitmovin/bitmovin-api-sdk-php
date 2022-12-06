@@ -190,7 +190,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+     * Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
      *
      * @param float $crf
      * @return $this
@@ -216,7 +216,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the amount of b frames.
+     * Amount of b frames
      *
      * @param int $bframes
      * @return $this
@@ -229,7 +229,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the amount of reference frames.
+     * Amount of reference frames.
      *
      * @param int $refFrames
      * @return $this
@@ -242,7 +242,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the minimum of quantization factor.
+     * Minimum quantization factor
      *
      * @param int $qpMin
      * @return $this
@@ -255,7 +255,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the maximum of quantization factor.
+     * Maximum quantization factor
      *
      * @param int $qpMax
      * @return $this
@@ -281,7 +281,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Sets the maximum Motion-Vector-Search-Range
+     * Maximum motion vector search range
      *
      * @param int $mvSearchRangeMax
      * @return $this

@@ -17,7 +17,7 @@ class SimpleEncodingVodJobCdnOutput extends SimpleEncodingVodJobOutput
     }
 
     /**
-     * This sets the maximum output resolution that will be generated.
+     * The maximum output resolution to be generated
      *
      * @param SimpleEncodingLiveMaxResolution $maxResolution
      * @return $this

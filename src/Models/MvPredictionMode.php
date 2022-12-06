@@ -26,7 +26,7 @@ class MvPredictionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Sets the Motion Vector Prediction Mode.
+     * Motion vector prediction mode
      *
      * @return MvPredictionMode
      */
@@ -36,7 +36,7 @@ class MvPredictionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Sets the Motion Vector Prediction Mode.
+     * Motion vector prediction mode
      *
      * @return MvPredictionMode
      */
@@ -46,7 +46,7 @@ class MvPredictionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Sets the Motion Vector Prediction Mode.
+     * Motion vector prediction mode
      *
      * @return MvPredictionMode
      */
@@ -56,7 +56,7 @@ class MvPredictionMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Sets the Motion Vector Prediction Mode.
+     * Motion vector prediction mode
      *
      * @return MvPredictionMode
      */
