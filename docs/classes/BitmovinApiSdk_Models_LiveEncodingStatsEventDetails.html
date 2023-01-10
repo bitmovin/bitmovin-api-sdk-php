@@ -67,15 +67,9 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class LiveEncodingStatsEventDetails
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public <span title="\BitmovinApiSdk\Models\LiveEncodingEventName">LiveEncodingEventName</span> <a href="#members">$eventName</a>;
-                    </li><li>public int <a href="#members">$avDriftInSeconds</a>;
-                    </li><li>public int <a href="#members">$idleDurationInSeconds</a>;
-                    </li><li>public string <a href="#members">$errorMessage</a>;
+            {<br/><ul class="none"><li>// members</li><li>public <span title="\BitmovinApiSdk\Models\LiveEncodingEventName">LiveEncodingEventName</span> <a href="#members">$eventType</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/__construct.html">__construct</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/eventName.html">eventName</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/avDriftInSeconds.html">avDriftInSeconds</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/idleDurationInSeconds.html">idleDurationInSeconds</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/errorMessage.html">errorMessage</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/eventType.html">eventType</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -95,18 +89,9 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="avDriftInSeconds"><strong>$avDriftInSeconds</strong>
-                —
-                int</li>
-            <li id="errorMessage"><strong>$errorMessage</strong>
-                —
-                string</li>
-            <li id="eventName"><strong>$eventName</strong>
+            <li id="eventType"><strong>$eventType</strong>
                 —
                 <a title="\BitmovinApiSdk\Models\LiveEncodingEventName" href="../classes/_BitmovinApiSdk_Models_LiveEncodingEventName.html">\BitmovinApiSdk\Models\LiveEncodingEventName</a></li>
-            <li id="idleDurationInSeconds"><strong>$idleDurationInSeconds</strong>
-                —
-                int</li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -116,14 +101,8 @@
             <li id="__construct">
               <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/__construct.html">__construct()</a>
             </li>
-            <li id="avDriftInSeconds"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/avDriftInSeconds.html">avDriftInSeconds()</a>
-                — The Audio/Video Drift in seconds. The drift was corrected by the RESYNCING event (occurs at event: RESYNCING)</li>
-            <li id="errorMessage"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/errorMessage.html">errorMessage()</a>
-                — An optional error message, when the event is in error state (occurs at event: ERROR)</li>
-            <li id="eventName"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/eventName.html">eventName()</a>
-                — eventName</li>
-            <li id="idleDurationInSeconds"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/idleDurationInSeconds.html">idleDurationInSeconds()</a>
-                — The time the stream was in idle state in seconds (occurs at event: IDLE)</li>
+            <li id="eventType"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/eventType.html">eventType()</a>
+                — eventType</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>
@@ -138,7 +117,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2022 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2023 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>
