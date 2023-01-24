@@ -92,7 +92,7 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * supported for H264
+     * supported for H264, H265
      *
      * @return PresetConfiguration
      */
