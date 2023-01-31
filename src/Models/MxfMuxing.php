@@ -16,7 +16,7 @@ class MxfMuxing extends Muxing
     }
 
     /**
-     * Name of the new file (required)
+     * Name of the output file (required)
      *
      * @param string $filename
      * @return $this

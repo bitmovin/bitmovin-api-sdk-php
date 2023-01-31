@@ -16,7 +16,7 @@ class ProgressiveMovMuxing extends Muxing
     }
 
     /**
-     * The output file name
+     * Name of the output file
      *
      * @param string $filename
      * @return $this

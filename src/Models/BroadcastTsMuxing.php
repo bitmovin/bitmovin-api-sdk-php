@@ -36,7 +36,7 @@ class BroadcastTsMuxing extends Muxing
     }
 
     /**
-     * Name of the new Video
+     * Name of the output file
      *
      * @param string $filename
      * @return $this

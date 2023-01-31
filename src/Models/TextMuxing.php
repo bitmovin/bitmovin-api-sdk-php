@@ -19,7 +19,7 @@ class TextMuxing extends Muxing
     }
 
     /**
-     * The output file name (required)
+     * Name of the output file (required)
      *
      * @param string $filename
      * @return $this

@@ -97,6 +97,25 @@ class OutputsApi
     }
 
     /**
+     * Check output permissions (S3 only)
+     *
+     * @param string $outputId
+     * @param \BitmovinApiSdk\Models\CheckOutputPermissionsRequest $checkOutputPermissionsRequest
+     * @return \BitmovinApiSdk\Models\CheckOutputPermissionsResponse
+     * @throws BitmovinApiException
+     */
+    public function checkPermissions(string $outputId, \BitmovinApiSdk\Models\CheckOutputPermissionsRequest $checkOutputPermissionsRequest = null) : \BitmovinApiSdk\Models\CheckOutputPermissionsResponse
+    {
+        $pathParams = [
+            'output_id' => $outputId,
+        ];
+
+        $response = $this->httpWrapper->request('POST', '/encoding/outputs/{output_id}/check-permissions', $pathParams,  null, $checkOutputPermissionsRequest, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\CheckOutputPermissionsResponse::class);
+    }
+
+    /**
      * Get Output Details
      *
      * @param string $outputId

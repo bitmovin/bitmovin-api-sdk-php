@@ -99,7 +99,7 @@ class Message extends BitmovinResponse
     }
 
     /**
-     * Timestamp when the message occured
+     * Timestamp when the message occurred
      *
      * @param Carbon $date
      * @return $this

@@ -32,7 +32,7 @@ class TsMuxing extends Muxing
     }
 
     /**
-     * Length of the fragments in seconds (required)
+     * Length of the fragments in seconds
      *
      * @param float $segmentLength
      * @return $this

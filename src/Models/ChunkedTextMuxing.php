@@ -41,7 +41,7 @@ class ChunkedTextMuxing extends Muxing
     }
 
     /**
-     * Segment naming template
+     * Segment naming policy
      *
      * @param string $segmentNaming
      * @return $this
