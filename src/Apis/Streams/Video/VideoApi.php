@@ -26,7 +26,7 @@ class VideoApi
     }
 
     /**
-     * Create new Stream
+     * Create new Streams video
      *
      * @param \BitmovinApiSdk\Models\StreamsVideoCreateRequest $streamsVideoCreateRequest
      * @return \BitmovinApiSdk\Models\StreamsVideoResponse
@@ -40,7 +40,7 @@ class VideoApi
     }
 
     /**
-     * Get stream by id
+     * Get Streams video by id
      *
      * @param string $streamId
      * @return \BitmovinApiSdk\Models\StreamsVideoResponse
@@ -58,7 +58,7 @@ class VideoApi
     }
 
     /**
-     * Get paginated list of streams
+     * Get paginated list of Streams videos
      *
      * @param StreamsVideoResponseListQueryParams|null $queryParams
      * @return StreamsVideoResponsePaginationResponse
@@ -72,7 +72,7 @@ class VideoApi
     }
 
     /**
-     * Update stream by id
+     * Update Streams video by id
      *
      * @param string $streamId
      * @param \BitmovinApiSdk\Models\StreamsVideoUpdateRequest $streamsVideoUpdateRequest

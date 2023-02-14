@@ -26,7 +26,7 @@ class LiveApi
     }
 
     /**
-     * Update stream by id
+     * Update live stream by id
      *
      * @param string $streamId
      * @param \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest
