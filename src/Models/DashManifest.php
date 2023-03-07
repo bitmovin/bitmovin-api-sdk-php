@@ -32,7 +32,7 @@ class DashManifest extends Manifest
     }
 
     /**
-     * profile
+     * Determines if segmented or progressive representations can appear in the manifest
      *
      * @param DashProfile $profile
      * @return $this

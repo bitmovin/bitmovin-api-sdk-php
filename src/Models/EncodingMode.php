@@ -26,7 +26,7 @@ class EncodingMode extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * The standard encoding mode is currently TWO_PASS
+     * The standard encoding mode is ONE_PASS for LIVE encodings and TWO_PASS for VOD encodings
      *
      * @return EncodingMode
      */

@@ -45,7 +45,7 @@ class SimpleEncodingLiveJobRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * input
+     * Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#inputs) (required)
      *
      * @param SimpleEncodingLiveJobInput $input
      * @return $this

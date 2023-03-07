@@ -20,7 +20,7 @@ class DashProfile extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * The profile to be used for fMP4 muxings
+     * Profile that supports segmented representations/muxings (FMP4, CMAF, WEBM, CHUNKED_TEXT)
      *
      * @return DashProfile
      */
@@ -30,7 +30,7 @@ class DashProfile extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * The profile to be used for MP4 muxings
+     * Profile that supports progressive representations/muxings (MP4, PROGRESSIVE_WEBM)
      *
      * @return DashProfile
      */
