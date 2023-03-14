@@ -20,7 +20,7 @@ class AclEntry extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * scope
+     * Deprecation notice: The value of this property is not being used. It can be chosen arbitrarily or not set at all
      *
      * @param string $scope
      * @return $this

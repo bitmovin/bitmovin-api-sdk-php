@@ -5,10 +5,10 @@ namespace BitmovinApiSdk\Models;
 class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
-    private const US_WEST2 = 'AUSTRALIA_EAST';
+    private const AUSTRALIA_EAST = 'AUSTRALIA_EAST';
 
     /** @var string */
-    private const US_EAST = 'AUSTRALIA_SOUTHEAST';
+    private const AUSTRALIA_SOUTHEAST = 'AUSTRALIA_SOUTHEAST';
 
     /** @var string */
     private const EUROPE_NORTH = 'EUROPE_NORTH';
@@ -20,13 +20,13 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     private const GERMANY_WESTCENTRAL = 'GERMANY_WESTCENTRAL';
 
     /** @var string */
-    private const AUSTRALIA_EAST = 'UAE_NORTH';
+    private const UAE_NORTH = 'UAE_NORTH';
 
     /** @var string */
-    private const AUSTRALIA_SOUTHEAST = 'US_EAST';
+    private const US_EAST = 'US_EAST';
 
     /** @var string */
-    private const UAE_NORTH = 'US_WEST2';
+    private const US_WEST2 = 'US_WEST2';
 
     /**
      * @param string $value
@@ -38,23 +38,23 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Washington
+     * New South Wales
      *
      * @return AzureCloudRegion
      */
-    public static function US_WEST2()
+    public static function AUSTRALIA_EAST()
     {
-        return new AzureCloudRegion(self::US_WEST2);
+        return new AzureCloudRegion(self::AUSTRALIA_EAST);
     }
 
     /**
-     * Virginia
+     * Victoria
      *
      * @return AzureCloudRegion
      */
-    public static function US_EAST()
+    public static function AUSTRALIA_SOUTHEAST()
     {
-        return new AzureCloudRegion(self::US_EAST);
+        return new AzureCloudRegion(self::AUSTRALIA_SOUTHEAST);
     }
 
     /**
@@ -88,26 +88,6 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * New South Wales
-     *
-     * @return AzureCloudRegion
-     */
-    public static function AUSTRALIA_EAST()
-    {
-        return new AzureCloudRegion(self::AUSTRALIA_EAST);
-    }
-
-    /**
-     * Victoria
-     *
-     * @return AzureCloudRegion
-     */
-    public static function AUSTRALIA_SOUTHEAST()
-    {
-        return new AzureCloudRegion(self::AUSTRALIA_SOUTHEAST);
-    }
-
-    /**
      * Dubai
      *
      * @return AzureCloudRegion
@@ -115,6 +95,26 @@ class AzureCloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function UAE_NORTH()
     {
         return new AzureCloudRegion(self::UAE_NORTH);
+    }
+
+    /**
+     * Virginia
+     *
+     * @return AzureCloudRegion
+     */
+    public static function US_EAST()
+    {
+        return new AzureCloudRegion(self::US_EAST);
+    }
+
+    /**
+     * Washington
+     *
+     * @return AzureCloudRegion
+     */
+    public static function US_WEST2()
+    {
+        return new AzureCloudRegion(self::US_WEST2);
     }
 }
 
