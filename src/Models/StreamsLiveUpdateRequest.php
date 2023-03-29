@@ -13,6 +13,9 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $description;
 
+    /** @var string */
+    public $configId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -40,6 +43,19 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function description(string $description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Id of the stream config to use
+     *
+     * @param string $configId
+     * @return $this
+     */
+    public function configId(string $configId)
+    {
+        $this->configId = $configId;
 
         return $this;
     }

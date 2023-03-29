@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\StreamsVideoUpdateRequest</title>
+    <title>phpDox - BitmovinApiSdk\Models\StreamsConfigResponse</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -38,7 +38,7 @@
           <li class="separator">
             <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
-          <li class="separator">StreamsVideoUpdateRequest</li>
+          <li class="separator">StreamsConfigResponse</li>
         </ul>
       </div>
       <nav class="box">
@@ -61,21 +61,18 @@
         </ul>
       </nav>
       <section>
-        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsVideoUpdateRequest</h1>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsConfigResponse</h1>
         <h4/>
         <p/>
         <h2 id="synopsis">Synopsis</h2>
-        <div class="synopsis">class StreamsVideoUpdateRequest
+        <div class="synopsis">class StreamsConfigResponse
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\StreamsVideoStatus">StreamsVideoStatus</span> <a href="#members">$status</a>;
-                    </li><li>public string <a href="#members">$title</a>;
-                    </li><li>public string <a href="#members">$description</a>;
-                    </li><li>public string <a href="#members">$configId</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/__construct.html">__construct</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/status.html">status</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/title.html">title</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/description.html">description</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/configId.html">configId</a>()
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$id</a>;
+                    </li><li>public string <a href="#members">$orgId</a>;
+                    </li><li>public object <a href="#members">$playerStyle</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsConfigResponse/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsConfigResponse/orgId.html">orgId</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsConfigResponse/playerStyle.html">playerStyle</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -95,18 +92,15 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="configId"><strong>$configId</strong>
+            <li id="id"><strong>$id</strong>
                 —
                 string</li>
-            <li id="description"><strong>$description</strong>
+            <li id="orgId"><strong>$orgId</strong>
                 —
                 string</li>
-            <li id="status"><strong>$status</strong>
+            <li id="playerStyle"><strong>$playerStyle</strong>
                 —
-                <a title="BitmovinApiSdk\Models\StreamsVideoStatus" href="../classes/BitmovinApiSdk_Models_StreamsVideoStatus.html">BitmovinApiSdk\Models\StreamsVideoStatus</a></li>
-            <li id="title"><strong>$title</strong>
-                —
-                string</li>
+                object</li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -114,16 +108,12 @@
           <h4>public</h4>
           <ul>
             <li id="__construct">
-              <a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/__construct.html">__construct()</a>
+              <a title="BitmovinApiSdk\Models\StreamsConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsConfigResponse/__construct.html">__construct()</a>
             </li>
-            <li id="configId"><a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/configId.html">configId()</a>
-                — Id of the stream config to use</li>
-            <li id="description"><a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/description.html">description()</a>
-                — The new description of the stream</li>
-            <li id="status"><a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/status.html">status()</a>
-                — The new status of the stream</li>
-            <li id="title"><a title="BitmovinApiSdk\Models\StreamsVideoUpdateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoUpdateRequest/title.html">title()</a>
-                — The new title of the stream</li>
+            <li id="orgId"><a title="BitmovinApiSdk\Models\StreamsConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsConfigResponse/orgId.html">orgId()</a>
+                — UUID of the associated organization</li>
+            <li id="playerStyle"><a title="BitmovinApiSdk\Models\StreamsConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsConfigResponse/playerStyle.html">playerStyle()</a>
+                — Player style config</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>
