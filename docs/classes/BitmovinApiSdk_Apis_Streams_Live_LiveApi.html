@@ -50,6 +50,9 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
             <a href="#methods">Methods</a>
           </li>
         </ul>
@@ -60,17 +63,40 @@
         <p/>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class LiveApi
-            {<br/><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/__construct.html">__construct</a>()
+            {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Apis\Streams\Live\Stop\StopApi">StopApi</span> <a href="#members">$stop</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Apis\Streams\Live\Start\StartApi">StartApi</span> <a href="#members">$start</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/__construct.html">__construct</a>()
+                    </li><li>public <span title="StreamsLiveResponse">StreamsLiveResponse</span> <a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/create.html">create</a>()
+                    </li><li>public <span title="StreamsLiveResponse">StreamsLiveResponse</span> <a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/get.html">get</a>()
+                    </li><li>public <span title="StreamsLiveResponsePaginationResponse">StreamsLiveResponsePaginationResponse</span> <a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/list.html">list</a>()
                     </li><li>public <span title="StreamsLiveUpdateRequest">StreamsLiveUpdateRequest</span> <a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/patchStreamsLive.html">patchStreamsLive</a>()
                     </li></ul>
 
             }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>public</h4>
+          <ul class="members">
+            <li id="start"><strong>$start</strong>
+                —
+                <a title="BitmovinApiSdk\Apis\Streams\Live\Start\StartApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_Start_StartApi.html">BitmovinApiSdk\Apis\Streams\Live\Start\StartApi</a></li>
+            <li id="stop"><strong>$stop</strong>
+                —
+                <a title="BitmovinApiSdk\Apis\Streams\Live\Stop\StopApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_Stop_StopApi.html">BitmovinApiSdk\Apis\Streams\Live\Stop\StopApi</a></li>
+          </ul>
+        </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
           <h4>public</h4>
           <ul>
             <li id="__construct"><a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/__construct.html">__construct()</a>
                 — LiveApi constructor.</li>
+            <li id="create"><a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/create.html">create()</a>
+                — Create new live stream</li>
+            <li id="get"><a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/get.html">get()</a>
+                — Get live stream by id</li>
+            <li id="list"><a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/list.html">list()</a>
+                — Get paginated list of live streams</li>
             <li id="patchStreamsLive"><a title="BitmovinApiSdk\Apis\Streams\Live\LiveApi" href="../classes/BitmovinApiSdk_Apis_Streams_Live_LiveApi/patchStreamsLive.html">patchStreamsLive()</a>
                 — Update live stream by id</li>
           </ul>

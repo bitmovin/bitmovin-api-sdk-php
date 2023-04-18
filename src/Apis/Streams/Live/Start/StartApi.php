@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Streams;
+namespace BitmovinApiSdk\Apis\Streams\Live\Start;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -8,22 +8,13 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\Streams\Video\VideoApi;
-use BitmovinApiSdk\Apis\Streams\Live\LiveApi;
-
-class StreamsApi
+class StartApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
 
-    /** @var VideoApi */
-    public $video;
-
-    /** @var LiveApi */
-    public $live;
-
     /**
-     * StreamsApi constructor.
+     * StartApi constructor.
      *
      * @param Configuration $config
      * @param HttpWrapper $httpWrapper
@@ -32,7 +23,20 @@ class StreamsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
-        $this->video = new VideoApi(null, $this->httpWrapper);
-        $this->live = new LiveApi(null, $this->httpWrapper);
+    }
+
+    /**
+     * Start live stream by id
+     *
+     * @param string $streamId
+     * @throws BitmovinApiException
+     */
+    public function update(string $streamId)
+    {
+        $pathParams = [
+            'stream_id' => $streamId,
+        ];
+
+        $this->httpWrapper->request('PUT', '/streams/live/{stream_id}/start', $pathParams,  null, null, false);
     }
 }
