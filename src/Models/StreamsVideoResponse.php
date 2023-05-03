@@ -31,6 +31,9 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\StreamsVideoEncodingTask[] */
     public $encodingTasks;
 
+    /** @var string */
+    public $posterUrl;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);

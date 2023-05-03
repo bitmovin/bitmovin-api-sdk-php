@@ -72,7 +72,7 @@ class VideoApi
     }
 
     /**
-     * Update Streams video by id
+     * Partially update stream config by id
      *
      * @param string $streamId
      * @param \BitmovinApiSdk\Models\StreamsVideoUpdateRequest $streamsVideoUpdateRequest

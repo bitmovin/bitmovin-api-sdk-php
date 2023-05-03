@@ -142,6 +142,9 @@ class H264VideoConfiguration extends VideoConfiguration
     /** @var float */
     public $psyTrellis;
 
+    /** @var AutoLevelSetup */
+    public $autoLevelSetup;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -161,6 +164,7 @@ class H264VideoConfiguration extends VideoConfiguration
         $this->cea608708SubtitleConfig = ObjectMapper::map($this->cea608708SubtitleConfig, Cea608708SubtitleConfiguration::class);
         $this->adaptiveQuantizationMode = ObjectMapper::map($this->adaptiveQuantizationMode, AdaptiveQuantMode::class);
         $this->weightedPredictionPFrames = ObjectMapper::map($this->weightedPredictionPFrames, WeightedPredictionPFrames::class);
+        $this->autoLevelSetup = ObjectMapper::map($this->autoLevelSetup, AutoLevelSetup::class);
     }
 
     /**
@@ -744,6 +748,19 @@ class H264VideoConfiguration extends VideoConfiguration
     public function psyTrellis(float $psyTrellis)
     {
         $this->psyTrellis = $psyTrellis;
+
+        return $this;
+    }
+
+    /**
+     * Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+     *
+     * @param AutoLevelSetup $autoLevelSetup
+     * @return $this
+     */
+    public function autoLevelSetup(AutoLevelSetup $autoLevelSetup)
+    {
+        $this->autoLevelSetup = $autoLevelSetup;
 
         return $this;
     }

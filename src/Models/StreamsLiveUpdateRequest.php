@@ -16,6 +16,9 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $configId;
 
+    /** @var string */
+    public $posterUrl;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -56,6 +59,19 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function configId(string $configId)
     {
         $this->configId = $configId;
+
+        return $this;
+    }
+
+    /**
+     * URL to hosted poster image
+     *
+     * @param string $posterUrl
+     * @return $this
+     */
+    public function posterUrl(string $posterUrl)
+    {
+        $this->posterUrl = $posterUrl;
 
         return $this;
     }

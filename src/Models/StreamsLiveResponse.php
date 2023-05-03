@@ -28,6 +28,9 @@ class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\StreamsConfigResponse */
     public $config;
 
+    /** @var string */
+    public $posterUrl;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);

@@ -83,7 +83,7 @@ class LiveApi
     }
 
     /**
-     * Update live stream by id
+     * Partially update live stream by id
      *
      * @param string $streamId
      * @param \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest
@@ -97,6 +97,25 @@ class LiveApi
         ];
 
         $response = $this->httpWrapper->request('PATCH', '/streams/live/{stream_id}', $pathParams,  null, $streamsLiveUpdateRequest, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest::class);
+    }
+
+    /**
+     * Update live stream by id
+     *
+     * @param string $streamId
+     * @param \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest
+     * @return \BitmovinApiSdk\Models\StreamsLiveUpdateRequest
+     * @throws BitmovinApiException
+     */
+    public function update(string $streamId, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest) : \BitmovinApiSdk\Models\StreamsLiveUpdateRequest
+    {
+        $pathParams = [
+            'stream_id' => $streamId,
+        ];
+
+        $response = $this->httpWrapper->request('PUT', '/streams/live/{stream_id}', $pathParams,  null, $streamsLiveUpdateRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest::class);
     }

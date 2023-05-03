@@ -106,6 +106,9 @@ class Vp9VideoConfiguration extends VideoConfiguration
     /** @var Vp9ArnrType */
     public $arnrType;
 
+    /** @var AutoLevelSetup */
+    public $autoLevelSetup;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -114,6 +117,7 @@ class Vp9VideoConfiguration extends VideoConfiguration
         $this->quality = ObjectMapper::map($this->quality, Vp9Quality::class);
         $this->aqMode = ObjectMapper::map($this->aqMode, Vp9AqMode::class);
         $this->arnrType = ObjectMapper::map($this->arnrType, Vp9ArnrType::class);
+        $this->autoLevelSetup = ObjectMapper::map($this->autoLevelSetup, AutoLevelSetup::class);
     }
 
     /**
@@ -541,6 +545,19 @@ class Vp9VideoConfiguration extends VideoConfiguration
     public function arnrType(Vp9ArnrType $arnrType)
     {
         $this->arnrType = $arnrType;
+
+        return $this;
+    }
+
+    /**
+     * Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.
+     *
+     * @param AutoLevelSetup $autoLevelSetup
+     * @return $this
+     */
+    public function autoLevelSetup(AutoLevelSetup $autoLevelSetup)
+    {
+        $this->autoLevelSetup = $autoLevelSetup;
 
         return $this;
     }

@@ -295,6 +295,9 @@ class H265VideoConfiguration extends VideoConfiguration
     /** @var Cea608708SubtitleConfiguration */
     public $cea608708SubtitleConfig;
 
+    /** @var AutoLevelSetup */
+    public $autoLevelSetup;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -319,6 +322,7 @@ class H265VideoConfiguration extends VideoConfiguration
         $this->forceFlush = ObjectMapper::map($this->forceFlush, ForceFlushMode::class);
         $this->quantizationGroupSize = ObjectMapper::map($this->quantizationGroupSize, QuantizationGroupSize::class);
         $this->cea608708SubtitleConfig = ObjectMapper::map($this->cea608708SubtitleConfig, Cea608708SubtitleConfiguration::class);
+        $this->autoLevelSetup = ObjectMapper::map($this->autoLevelSetup, AutoLevelSetup::class);
     }
 
     /**
@@ -1565,6 +1569,19 @@ class H265VideoConfiguration extends VideoConfiguration
     public function cea608708SubtitleConfig(Cea608708SubtitleConfiguration $cea608708SubtitleConfig)
     {
         $this->cea608708SubtitleConfig = $cea608708SubtitleConfig;
+
+        return $this;
+    }
+
+    /**
+     * Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+     *
+     * @param AutoLevelSetup $autoLevelSetup
+     * @return $this
+     */
+    public function autoLevelSetup(AutoLevelSetup $autoLevelSetup)
+    {
+        $this->autoLevelSetup = $autoLevelSetup;
 
         return $this;
     }
