@@ -19,6 +19,9 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $configId;
 
+    /** @var string */
+    public $adConfigId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -72,6 +75,19 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function configId(string $configId)
     {
         $this->configId = $configId;
+
+        return $this;
+    }
+
+    /**
+     * Id of the advertisement config to use
+     *
+     * @param string $adConfigId
+     * @return $this
+     */
+    public function adConfigId(string $adConfigId)
+    {
+        $this->adConfigId = $adConfigId;
 
         return $this;
     }

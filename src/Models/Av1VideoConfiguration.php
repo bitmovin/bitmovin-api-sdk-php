@@ -34,7 +34,7 @@ class Av1VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate.
+     * Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting maxBitrate, or bufsize properties will disable the automatic calculation.
      *
      * @param AutoLevelSetup $autoLevelSetup
      * @return $this

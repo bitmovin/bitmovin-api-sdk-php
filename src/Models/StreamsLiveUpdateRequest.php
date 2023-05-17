@@ -19,6 +19,9 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $posterUrl;
 
+    /** @var string */
+    public $adConfigId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -72,6 +75,19 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function posterUrl(string $posterUrl)
     {
         $this->posterUrl = $posterUrl;
+
+        return $this;
+    }
+
+    /**
+     * Id of the advertisement config to use
+     *
+     * @param string $adConfigId
+     * @return $this
+     */
+    public function adConfigId(string $adConfigId)
+    {
+        $this->adConfigId = $adConfigId;
 
         return $this;
     }

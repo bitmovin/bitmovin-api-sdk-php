@@ -19,9 +19,13 @@ class LiveHlsManifest extends \BitmovinApiSdk\Common\ApiResource
     /** @var bool */
     public $insertProgramDateTime;
 
+    /** @var ProgramDateTimeSettings */
+    public $programDateTimeSettings;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->programDateTimeSettings = ObjectMapper::map($this->programDateTimeSettings, ProgramDateTimeSettings::class);
     }
 
     /**
@@ -72,6 +76,19 @@ class LiveHlsManifest extends \BitmovinApiSdk\Common\ApiResource
     public function insertProgramDateTime(bool $insertProgramDateTime)
     {
         $this->insertProgramDateTime = $insertProgramDateTime;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for the EXT-X-PROGRAM-DATETIME tag
+     *
+     * @param ProgramDateTimeSettings $programDateTimeSettings
+     * @return $this
+     */
+    public function programDateTimeSettings(ProgramDateTimeSettings $programDateTimeSettings)
+    {
+        $this->programDateTimeSettings = $programDateTimeSettings;
 
         return $this;
     }

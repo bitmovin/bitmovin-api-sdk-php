@@ -34,6 +34,9 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $posterUrl;
 
+    /** @var \BitmovinApiSdk\Models\StreamsAdConfigResponse */
+    public $adConfig;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -41,6 +44,7 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
         $this->status = ObjectMapper::map($this->status, StreamsVideoStatus::class);
         $this->config = ObjectMapper::map($this->config, StreamsConfigResponse::class);
         $this->encodingTasks = ObjectMapper::map($this->encodingTasks, StreamsVideoEncodingTask::class);
+        $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);
     }
 
     /**
@@ -52,6 +56,19 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     public function config(\BitmovinApiSdk\Models\StreamsConfigResponse $config)
     {
         $this->config = $config;
+
+        return $this;
+    }
+
+    /**
+     * adConfig
+     *
+     * @param \BitmovinApiSdk\Models\StreamsAdConfigResponse $adConfig
+     * @return $this
+     */
+    public function adConfig(\BitmovinApiSdk\Models\StreamsAdConfigResponse $adConfig)
+    {
+        $this->adConfig = $adConfig;
 
         return $this;
     }

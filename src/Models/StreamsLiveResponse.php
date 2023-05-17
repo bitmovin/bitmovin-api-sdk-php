@@ -31,12 +31,16 @@ class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $posterUrl;
 
+    /** @var \BitmovinApiSdk\Models\StreamsAdConfigResponse */
+    public $adConfig;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->lifeCycle = ObjectMapper::map($this->lifeCycle, StreamsLiveLifeCycle::class);
         $this->config = ObjectMapper::map($this->config, StreamsConfigResponse::class);
+        $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);
     }
 
     /**
@@ -48,6 +52,19 @@ class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
     public function config(\BitmovinApiSdk\Models\StreamsConfigResponse $config)
     {
         $this->config = $config;
+
+        return $this;
+    }
+
+    /**
+     * adConfig
+     *
+     * @param \BitmovinApiSdk\Models\StreamsAdConfigResponse $adConfig
+     * @return $this
+     */
+    public function adConfig(\BitmovinApiSdk\Models\StreamsAdConfigResponse $adConfig)
+    {
+        $this->adConfig = $adConfig;
 
         return $this;
     }
