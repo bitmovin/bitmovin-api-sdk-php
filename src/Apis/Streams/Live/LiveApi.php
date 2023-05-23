@@ -87,10 +87,10 @@ class LiveApi
      *
      * @param string $streamId
      * @param \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest
-     * @return \BitmovinApiSdk\Models\StreamsLiveUpdateRequest
+     * @return \BitmovinApiSdk\Models\StreamsLiveResponse
      * @throws BitmovinApiException
      */
-    public function patchStreamsLive(string $streamId, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest) : \BitmovinApiSdk\Models\StreamsLiveUpdateRequest
+    public function patchStreamsLive(string $streamId, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest) : \BitmovinApiSdk\Models\StreamsLiveResponse
     {
         $pathParams = [
             'stream_id' => $streamId,
@@ -98,7 +98,7 @@ class LiveApi
 
         $response = $this->httpWrapper->request('PATCH', '/streams/live/{stream_id}', $pathParams,  null, $streamsLiveUpdateRequest, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveResponse::class);
     }
 
     /**
@@ -106,10 +106,10 @@ class LiveApi
      *
      * @param string $streamId
      * @param \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest
-     * @return \BitmovinApiSdk\Models\StreamsLiveUpdateRequest
+     * @return \BitmovinApiSdk\Models\StreamsLiveResponse
      * @throws BitmovinApiException
      */
-    public function update(string $streamId, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest) : \BitmovinApiSdk\Models\StreamsLiveUpdateRequest
+    public function update(string $streamId, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest) : \BitmovinApiSdk\Models\StreamsLiveResponse
     {
         $pathParams = [
             'stream_id' => $streamId,
@@ -117,6 +117,6 @@ class LiveApi
 
         $response = $this->httpWrapper->request('PUT', '/streams/live/{stream_id}', $pathParams,  null, $streamsLiveUpdateRequest, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveResponse::class);
     }
 }

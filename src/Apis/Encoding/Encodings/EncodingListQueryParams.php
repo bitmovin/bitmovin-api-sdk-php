@@ -15,6 +15,9 @@ class EncodingListQueryParams implements QueryParams
     /** @var int */
     private $limit;
 
+    /** @var bool */
+    private $includeTotalCount;
+
     /** @var string */
     private $sort;
 
@@ -89,6 +92,17 @@ class EncodingListQueryParams implements QueryParams
     public function limit(int $limit): EncodingListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param bool $includeTotalCount
+     * @return EncodingListQueryParams
+     */
+    public function includeTotalCount(bool $includeTotalCount): EncodingListQueryParams
+    {
+        $this->includeTotalCount = $includeTotalCount;
 
         return $this;
     }
