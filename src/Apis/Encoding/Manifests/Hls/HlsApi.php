@@ -47,7 +47,7 @@ class HlsApi
     }
 
     /**
-     * Create HLS Manifest
+     * Create Custom HLS Manifest
      *
      * @param \BitmovinApiSdk\Models\HlsManifest $hlsManifest
      * @return \BitmovinApiSdk\Models\HlsManifest
@@ -94,6 +94,24 @@ class HlsApi
         $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\HlsManifest::class);
+    }
+
+    /**
+     * Manifest Start Details
+     *
+     * @param string $manifestId
+     * @return \BitmovinApiSdk\Models\StartManifestRequest
+     * @throws BitmovinApiException
+     */
+    public function getStartRequest(string $manifestId) : \BitmovinApiSdk\Models\StartManifestRequest
+    {
+        $pathParams = [
+            'manifest_id' => $manifestId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/hls/{manifest_id}/start', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StartManifestRequest::class);
     }
 
     /**

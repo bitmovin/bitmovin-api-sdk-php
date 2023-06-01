@@ -42,7 +42,7 @@ class DashApi
     }
 
     /**
-     * Create DASH Manifest
+     * Create Custom DASH Manifest
      *
      * @param \BitmovinApiSdk\Models\DashManifest $dashManifest
      * @return \BitmovinApiSdk\Models\DashManifest
@@ -89,6 +89,24 @@ class DashApi
         $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\DashManifest::class);
+    }
+
+    /**
+     * Manifest Start Details
+     *
+     * @param string $manifestId
+     * @return \BitmovinApiSdk\Models\StartManifestRequest
+     * @throws BitmovinApiException
+     */
+    public function getStartRequest(string $manifestId) : \BitmovinApiSdk\Models\StartManifestRequest
+    {
+        $pathParams = [
+            'manifest_id' => $manifestId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/dash/{manifest_id}/start', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StartManifestRequest::class);
     }
 
     /**

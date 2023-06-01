@@ -443,7 +443,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Specify the size of the VBV buffer (kbits)
+     * Size of the VBV buffer (kbits)
      *
      * @param int $bufsize
      * @return $this
@@ -1002,7 +1002,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Specify the amount of rate-distortion analysis to use within quantization.
+     * Specifies the amount of rate-distortion analysis to use within quantization.
      *
      * @param RateDistortionLevelForQuantization $rateDistortionLevelForQuantization
      * @return $this

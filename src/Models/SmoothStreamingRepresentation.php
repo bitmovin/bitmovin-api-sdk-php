@@ -96,7 +96,7 @@ class SmoothStreamingRepresentation extends BitmovinResource
     }
 
     /**
-     * Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+     * Specifies the priority of this representation. In the manifest, representations will appear ordered by descending priority values.
      *
      * @param int $priority
      * @return $this

@@ -97,6 +97,24 @@ class SmoothApi
     }
 
     /**
+     * Manifest Start Details
+     *
+     * @param string $manifestId
+     * @return \BitmovinApiSdk\Models\StartManifestRequest
+     * @throws BitmovinApiException
+     */
+    public function getStartRequest(string $manifestId) : \BitmovinApiSdk\Models\StartManifestRequest
+    {
+        $pathParams = [
+            'manifest_id' => $manifestId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/encoding/manifests/smooth/{manifest_id}/start', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StartManifestRequest::class);
+    }
+
+    /**
      * List Smooth Streaming Manifests
      *
      * @param SmoothStreamingManifestListQueryParams|null $queryParams

@@ -25,6 +25,9 @@ class SimpleEncodingVodJobResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobOutput[] */
     public $outputs;
 
+    /** @var SimpleEncodingVodJobOptions */
+    public $options;
+
     /** @var \BitmovinApiSdk\Models\SimpleEncodingVodJobErrors[] */
     public $errors;
 
@@ -44,6 +47,7 @@ class SimpleEncodingVodJobResponse extends \BitmovinApiSdk\Common\ApiResource
         $this->encodingTemplate = ObjectMapper::map($this->encodingTemplate, EncodingTemplate::class);
         $this->inputs = ObjectMapper::map($this->inputs, SimpleEncodingVodJobInput::class);
         $this->outputs = ObjectMapper::map($this->outputs, SimpleEncodingVodJobOutput::class);
+        $this->options = ObjectMapper::map($this->options, SimpleEncodingVodJobOptions::class);
         $this->errors = ObjectMapper::map($this->errors, SimpleEncodingVodJobErrors::class);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->modifiedAt = ObjectMapper::map($this->modifiedAt, Carbon::class);
@@ -84,6 +88,19 @@ class SimpleEncodingVodJobResponse extends \BitmovinApiSdk\Common\ApiResource
     public function outputs(array $outputs)
     {
         $this->outputs = $outputs;
+
+        return $this;
+    }
+
+    /**
+     * Options to customize the Simple Encoding Job
+     *
+     * @param SimpleEncodingVodJobOptions $options
+     * @return $this
+     */
+    public function options(SimpleEncodingVodJobOptions $options)
+    {
+        $this->options = $options;
 
         return $this;
     }

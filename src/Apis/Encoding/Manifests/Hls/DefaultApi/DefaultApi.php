@@ -26,7 +26,7 @@ class DefaultApi
     }
 
     /**
-     * Create HLS Manifest Default
+     * Create Default HLS Manifest
      *
      * @param \BitmovinApiSdk\Models\HlsManifestDefault $hlsManifestDefault
      * @return \BitmovinApiSdk\Models\HlsManifestDefault

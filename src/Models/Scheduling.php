@@ -19,7 +19,7 @@ class Scheduling extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Specify the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.
+     * Specifies the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.
      *
      * @param int $priority
      * @return $this

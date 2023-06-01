@@ -26,7 +26,7 @@ class DefaultApi
     }
 
     /**
-     * Create DASH Manifest Default
+     * Create Default DASH Manifest
      *
      * @param \BitmovinApiSdk\Models\DashManifestDefault $dashManifestDefault
      * @return \BitmovinApiSdk\Models\DashManifestDefault

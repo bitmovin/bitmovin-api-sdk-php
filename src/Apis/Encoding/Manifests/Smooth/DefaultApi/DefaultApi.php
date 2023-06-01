@@ -26,7 +26,7 @@ class DefaultApi
     }
 
     /**
-     * Create Smooth Streaming Manifest Default
+     * Create Default Smooth Streaming Manifest
      *
      * @param \BitmovinApiSdk\Models\SmoothManifestDefault $smoothManifestDefault
      * @return \BitmovinApiSdk\Models\SmoothManifestDefault
