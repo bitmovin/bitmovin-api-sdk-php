@@ -20,7 +20,7 @@ class HlsManifestDefault extends HlsManifest
     }
 
     /**
-     * The id of the encoding to create a default manifest from. (required)
+     * The id of the encoding to create a default manifest for (required)
      *
      * @param string $encodingId
      * @return $this
@@ -33,7 +33,7 @@ class HlsManifestDefault extends HlsManifest
     }
 
     /**
-     * Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \&quot;manifestGenerator\&quot; version of the \&quot;Start\&quot; request.
+     * Currently not in use
      *
      * @param HlsManifestDefaultVersion $version
      * @return $this

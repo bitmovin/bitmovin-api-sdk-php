@@ -129,7 +129,7 @@ class SmoothApi
     }
 
     /**
-     * Start Smooth Streaming Manifest Creation
+     * Start Smooth Streaming manifest generation
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\StartManifestRequest $startManifestRequest
@@ -148,7 +148,7 @@ class SmoothApi
     }
 
     /**
-     * Smooth Streaming Manifest Creation Status
+     * Smooth Streaming manifest generation status
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\Task
@@ -166,7 +166,7 @@ class SmoothApi
     }
 
     /**
-     * Stop Smooth Streaming Manifest Creation
+     * Stop Smooth Streaming manifest generation
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\BitmovinResponse

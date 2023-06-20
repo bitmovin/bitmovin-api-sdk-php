@@ -124,7 +124,7 @@ class DashApi
     }
 
     /**
-     * Start DASH Manifest Creation
+     * Start DASH manifest generation
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\StartManifestRequest $startManifestRequest
@@ -143,7 +143,7 @@ class DashApi
     }
 
     /**
-     * DASH Manifest Creation Status
+     * DASH manifest generation status
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\Task
@@ -161,7 +161,7 @@ class DashApi
     }
 
     /**
-     * Stop DASH Manifest Creation
+     * Stop DASH manifest generation
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\BitmovinResponse

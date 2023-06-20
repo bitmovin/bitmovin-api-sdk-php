@@ -37,6 +37,9 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\StreamsAdConfigResponse */
     public $adConfig;
 
+    /** @var \BitmovinApiSdk\Models\StreamsContentProtectionResponse */
+    public $contentProtection;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -45,6 +48,7 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
         $this->config = ObjectMapper::map($this->config, StreamsConfigResponse::class);
         $this->encodingTasks = ObjectMapper::map($this->encodingTasks, StreamsVideoEncodingTask::class);
         $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);
+        $this->contentProtection = ObjectMapper::map($this->contentProtection, StreamsContentProtectionResponse::class);
     }
 
     /**
@@ -69,6 +73,19 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     public function adConfig(\BitmovinApiSdk\Models\StreamsAdConfigResponse $adConfig)
     {
         $this->adConfig = $adConfig;
+
+        return $this;
+    }
+
+    /**
+     * contentProtection
+     *
+     * @param \BitmovinApiSdk\Models\StreamsContentProtectionResponse $contentProtection
+     * @return $this
+     */
+    public function contentProtection(\BitmovinApiSdk\Models\StreamsContentProtectionResponse $contentProtection)
+    {
+        $this->contentProtection = $contentProtection;
 
         return $this;
     }

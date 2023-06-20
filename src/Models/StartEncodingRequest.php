@@ -125,7 +125,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of preview DASH manifests to be created
+     * DASH manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\ManifestResource[] $previewDashManifests
      * @return $this
@@ -138,7 +138,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of preview HLS manifests to be created
+     * HLS manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\ManifestResource[] $previewHlsManifests
      * @return $this
@@ -151,7 +151,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of VoD DASH manifests to be created after encoding finished successfully
+     * DASH manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\ManifestResource[] $vodDashManifests
      * @return $this
@@ -164,7 +164,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of VoD HLS manifests to be created after encoding finished successfully
+     * HLS manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\ManifestResource[] $vodHlsManifests
      * @return $this
@@ -177,7 +177,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of VoD SMOOTH manifests to be created after encoding finished successfully
+     * Smooth Streaming manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\ManifestResource[] $vodSmoothManifests
      * @return $this

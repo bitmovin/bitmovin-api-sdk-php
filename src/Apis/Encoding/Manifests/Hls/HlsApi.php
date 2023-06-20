@@ -129,7 +129,7 @@ class HlsApi
     }
 
     /**
-     * Start HLS Manifest Creation
+     * Start HLS manifest generation
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\StartManifestRequest $startManifestRequest
@@ -148,7 +148,7 @@ class HlsApi
     }
 
     /**
-     * HLS Manifest Creation Status
+     * HLS manifest generation status
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\Task
@@ -166,7 +166,7 @@ class HlsApi
     }
 
     /**
-     * Stop HLS Manifest Creation
+     * Stop HLS manifest generation
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\BitmovinResponse

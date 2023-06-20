@@ -57,7 +57,7 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of Hls manifests to use for this live encoding
+     * HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\LiveHlsManifest[] $hlsManifests
      * @return $this
@@ -70,7 +70,7 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * List of Dash manifests to use for this live encoding
+     * DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
      *
      * @param \BitmovinApiSdk\Models\LiveDashManifest[] $dashManifests
      * @return $this

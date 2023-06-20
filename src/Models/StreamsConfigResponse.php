@@ -13,7 +13,7 @@ class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $orgId;
 
-    /** @var object */
+    /** @var \BitmovinApiSdk\Models\StreamsConfigPlayerStyle */
     public $playerStyle;
 
     /** @var string */
@@ -25,6 +25,7 @@ class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->playerStyle = ObjectMapper::map($this->playerStyle, StreamsConfigPlayerStyle::class);
     }
 
     /**
@@ -41,12 +42,12 @@ class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Player style config
+     * playerStyle
      *
-     * @param object $playerStyle
+     * @param \BitmovinApiSdk\Models\StreamsConfigPlayerStyle $playerStyle
      * @return $this
      */
-    public function playerStyle(object $playerStyle)
+    public function playerStyle(\BitmovinApiSdk\Models\StreamsConfigPlayerStyle $playerStyle)
     {
         $this->playerStyle = $playerStyle;
 

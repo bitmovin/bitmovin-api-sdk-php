@@ -24,7 +24,7 @@ class DashManifestDefault extends DashManifest
     }
 
     /**
-     * The id of the encoding to create a default manifest from. Either \&quot;encodingId\&quot; or \&quot;periods\&quot; is required.
+     * The id of the encoding to create a default manifest for. Either \&quot;encodingId\&quot; or \&quot;periods\&quot; is required.
      *
      * @param string $encodingId
      * @return $this
@@ -50,7 +50,7 @@ class DashManifestDefault extends DashManifest
     }
 
     /**
-     * Adds a period for every item. Either \&quot;periods\&quot; or \&quot;encodingId\&quot; is required.
+     * Adds a period for every item. Can only be used when setting \&quot;version\&quot; to \&quot;V2\&quot;. Either \&quot;periods\&quot; or \&quot;encodingId\&quot; is required.
      *
      * @param \BitmovinApiSdk\Models\DefaultDashManifestPeriod[] $periods
      * @return $this

@@ -197,7 +197,7 @@ class EncodingsApi
     }
 
     /**
-     * Start Encoding
+     * Start VoD Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\StartEncodingRequest $startEncodingRequest
