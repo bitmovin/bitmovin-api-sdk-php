@@ -17,6 +17,9 @@ class SpekeDrmProvider extends \BitmovinApiSdk\Common\ApiResource
     public $password;
 
     /** @var string */
+    public $apiKey;
+
+    /** @var string */
     public $roleArn;
 
     /** @var string */
@@ -69,6 +72,19 @@ class SpekeDrmProvider extends \BitmovinApiSdk\Common\ApiResource
     public function password(string $password)
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Your API key for authentication via X-API-Key HTTP Header
+     *
+     * @param string $apiKey
+     * @return $this
+     */
+    public function apiKey(string $apiKey)
+    {
+        $this->apiKey = $apiKey;
 
         return $this;
     }

@@ -42,7 +42,7 @@ class InsertableContentApi
     }
 
     /**
-     * Make Insertable Content Available For A Live Encoding
+     * Create Insertable Content
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\InsertableContent $insertableContent
@@ -61,7 +61,7 @@ class InsertableContentApi
     }
 
     /**
-     * List All Insertable Content Available For A Live Encoding
+     * List Insertable Content
      *
      * @param string $encodingId
      * @param InsertableContentListQueryParams|null $queryParams

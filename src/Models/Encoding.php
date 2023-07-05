@@ -58,6 +58,9 @@ class Encoding extends BitmovinResource
     /** @var string[] */
     public $labels;
 
+    /** @var LiveOptionsType */
+    public $liveOptionsType;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -73,6 +76,7 @@ class Encoding extends BitmovinResource
         $this->selectedEncodingMode = ObjectMapper::map($this->selectedEncodingMode, EncodingMode::class);
         $this->selectedCloudRegion = ObjectMapper::map($this->selectedCloudRegion, CloudRegion::class);
         $this->status = ObjectMapper::map($this->status, Status::class);
+        $this->liveOptionsType = ObjectMapper::map($this->liveOptionsType, LiveOptionsType::class);
     }
 
     /**

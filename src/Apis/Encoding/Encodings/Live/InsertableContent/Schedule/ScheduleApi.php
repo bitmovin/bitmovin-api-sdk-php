@@ -26,7 +26,7 @@ class ScheduleApi
     }
 
     /**
-     * Schedule Insertable Content For a Live Encoding
+     * Schedule Insertable Content
      *
      * @param string $encodingId
      * @param string $contentId

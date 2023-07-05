@@ -16,6 +16,9 @@ class StreamsContentProtectionResponse extends \BitmovinApiSdk\Common\ApiResourc
     /** @var bool */
     public $allowNoReferer;
 
+    /** @var bool */
+    public $allowShare;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -43,6 +46,19 @@ class StreamsContentProtectionResponse extends \BitmovinApiSdk\Common\ApiResourc
     public function allowNoReferer(bool $allowNoReferer)
     {
         $this->allowNoReferer = $allowNoReferer;
+
+        return $this;
+    }
+
+    /**
+     * Controls if Stream is accessible via sharing URL or not
+     *
+     * @param bool $allowShare
+     * @return $this
+     */
+    public function allowShare(bool $allowShare)
+    {
+        $this->allowShare = $allowShare;
 
         return $this;
     }

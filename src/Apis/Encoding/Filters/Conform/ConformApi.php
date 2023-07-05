@@ -32,7 +32,7 @@ class ConformApi
     }
 
     /**
-     * Create Conform Filter. Keeps all the frames of the input. The playback time of the output will be slower or faster.
+     * Create Conform Filter
      *
      * @param \BitmovinApiSdk\Models\ConformFilter $conformFilter
      * @return \BitmovinApiSdk\Models\ConformFilter

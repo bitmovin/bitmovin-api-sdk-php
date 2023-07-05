@@ -26,7 +26,7 @@ class PsnrApi
     }
 
     /**
-     * Activate PSNR quality metrics for the selected stream
+     * PSNR quality metrics
      *
      * @param string $encodingId
      * @param string $streamId

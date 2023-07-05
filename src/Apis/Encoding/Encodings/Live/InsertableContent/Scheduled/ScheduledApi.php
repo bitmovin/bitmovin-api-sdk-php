@@ -26,7 +26,7 @@ class ScheduledApi
     }
 
     /**
-     * List All Scheduled Insertable Content For A Live Encoding
+     * List Scheduled Insertable Content
      *
      * @param string $encodingId
      * @param ScheduledInsertableContentListQueryParams|null $queryParams

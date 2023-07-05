@@ -22,6 +22,9 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $adConfigId;
 
+    /** @var string */
+    public $contentProtectionId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -88,6 +91,19 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function adConfigId(string $adConfigId)
     {
         $this->adConfigId = $adConfigId;
+
+        return $this;
+    }
+
+    /**
+     * Id of the content protection config to use
+     *
+     * @param string $contentProtectionId
+     * @return $this
+     */
+    public function contentProtectionId(string $contentProtectionId)
+    {
+        $this->contentProtectionId = $contentProtectionId;
 
         return $this;
     }

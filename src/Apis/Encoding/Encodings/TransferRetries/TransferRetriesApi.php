@@ -26,7 +26,7 @@ class TransferRetriesApi
     }
 
     /**
-     * Starts transfer retry. A transfer retry is only possible within 72 hours.
+     * Transfer retry
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\TransferRetry

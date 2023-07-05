@@ -32,7 +32,7 @@ class Ac3Api
     }
 
     /**
-     * Create AC3 Codec Configuration.  Deprecation notice: use Dolby Digital instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings
+     * Create AC3 Codec Configuration
      *
      * @param \BitmovinApiSdk\Models\Ac3AudioConfiguration $ac3AudioConfiguration
      * @return \BitmovinApiSdk\Models\Ac3AudioConfiguration
@@ -46,7 +46,7 @@ class Ac3Api
     }
 
     /**
-     * Delete AC3 Codec Configuration.  Deprecation notice: use Dolby Digital instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings
+     * Delete AC3 Codec Configuration
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -64,7 +64,7 @@ class Ac3Api
     }
 
     /**
-     * AC3 Codec Configuration Details  Deprecation notice: use Dolby Digital instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings
+     * AC3 Codec Configuration Details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Ac3AudioConfiguration
@@ -82,7 +82,7 @@ class Ac3Api
     }
 
     /**
-     * List AC3 Configurations.  Deprecation notice: use Dolby Digital instead. For more information check out our tutorial here:  https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings
+     * List AC3 Configurations
      *
      * @param Ac3AudioConfigurationListQueryParams|null $queryParams
      * @return Ac3AudioConfigurationPaginationResponse

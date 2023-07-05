@@ -52,6 +52,9 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const VOD_ULTRAHIGH_SPEED = 'VOD_ULTRAHIGH_SPEED';
 
+    /** @var string */
+    private const VOD_HARDWARE_SHORTFORM = 'VOD_HARDWARE_SHORTFORM';
+
     /**
      * @param string $value
      * @return PresetConfiguration
@@ -219,6 +222,16 @@ class PresetConfiguration extends \BitmovinApiSdk\Common\Enum
     public static function VOD_ULTRAHIGH_SPEED()
     {
         return new PresetConfiguration(self::VOD_ULTRAHIGH_SPEED);
+    }
+
+    /**
+     * supported for H264, H265
+     *
+     * @return PresetConfiguration
+     */
+    public static function VOD_HARDWARE_SHORTFORM()
+    {
+        return new PresetConfiguration(self::VOD_HARDWARE_SHORTFORM);
     }
 }
 
