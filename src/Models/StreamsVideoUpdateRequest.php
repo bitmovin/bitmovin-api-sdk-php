@@ -17,7 +17,7 @@ class StreamsVideoUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public $description;
 
     /** @var string */
-    public $configId;
+    public $styleConfigId;
 
     /** @var string */
     public $posterUrl;
@@ -74,14 +74,14 @@ class StreamsVideoUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Id of the stream config to use
+     * Id of the style config to use
      *
-     * @param string $configId
+     * @param string $styleConfigId
      * @return $this
      */
-    public function configId(string $configId)
+    public function styleConfigId(string $styleConfigId)
     {
-        $this->configId = $configId;
+        $this->styleConfigId = $styleConfigId;
 
         return $this;
     }

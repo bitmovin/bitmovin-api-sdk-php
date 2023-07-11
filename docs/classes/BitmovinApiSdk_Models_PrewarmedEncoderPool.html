@@ -72,6 +72,7 @@
                     </li><li>public string <a href="#members">$infrastructureId</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\PrewarmedEncoderDiskSize">PrewarmedEncoderDiskSize</span> <a href="#members">$diskSize</a>;
                     </li><li>public int <a href="#members">$targetPoolSize</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$gpuEnabled</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\PrewarmedEncoderPoolStatus">PrewarmedEncoderPoolStatus</span> <a href="#members">$status</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
                         </li><li>public string <a href="#members">$description</a>;
@@ -85,6 +86,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/infrastructureId.html">infrastructureId</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/diskSize.html">diskSize</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/targetPoolSize.html">targetPoolSize</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/gpuEnabled.html">gpuEnabled</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/description.html">description</a>()
@@ -127,6 +129,9 @@
             <li id="encoderVersion"><strong>$encoderVersion</strong>
                 —
                 string</li>
+            <li id="gpuEnabled"><strong>$gpuEnabled</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
             <li id="id"><strong>$id</strong>
                 —
                 string</li>
@@ -160,6 +165,8 @@
                 — Disk size of the prewarmed instances in GB. Needs to be chosen depending on input file sizes and encoding features used. (required)</li>
             <li id="encoderVersion"><a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/encoderVersion.html">encoderVersion()</a>
                 — The encoder version which the pool&amp;#39;s instances will be running (required)</li>
+            <li id="gpuEnabled"><a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/gpuEnabled.html">gpuEnabled()</a>
+                — Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).</li>
             <li id="infrastructureId"><a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/infrastructureId.html">infrastructureId()</a>
                 — Define an external infrastructure to run the pool on.</li>
             <li id="targetPoolSize"><a title="BitmovinApiSdk\Models\PrewarmedEncoderPool" href="../classes/BitmovinApiSdk_Models_PrewarmedEncoderPool/targetPoolSize.html">targetPoolSize()</a>

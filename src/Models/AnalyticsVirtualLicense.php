@@ -28,11 +28,15 @@ class AnalyticsVirtualLicense extends \BitmovinApiSdk\Common\ApiResource
     /** @var AnalyticsLicenseCustomDataFieldLabels */
     public $customDataFieldLabels;
 
+    /** @var Carbon */
+    public $planExpiredAt;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->licenses = ObjectMapper::map($this->licenses, AnalyticsVirtualLicenseLicensesListItem::class);
         $this->customDataFieldLabels = ObjectMapper::map($this->customDataFieldLabels, AnalyticsLicenseCustomDataFieldLabels::class);
+        $this->planExpiredAt = ObjectMapper::map($this->planExpiredAt, Carbon::class);
     }
 
     /**

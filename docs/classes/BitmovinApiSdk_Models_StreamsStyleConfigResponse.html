@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\StreamsLiveCreateRequest</title>
+    <title>phpDox - BitmovinApiSdk\Models\StreamsStyleConfigResponse</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -38,7 +38,7 @@
           <li class="separator">
             <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
-          <li class="separator">StreamsLiveCreateRequest</li>
+          <li class="separator">StreamsStyleConfigResponse</li>
         </ul>
       </div>
       <nav class="box">
@@ -61,21 +61,22 @@
         </ul>
       </nav>
       <section>
-        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsLiveCreateRequest</h1>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsStyleConfigResponse</h1>
         <h4/>
         <p/>
         <h2 id="synopsis">Synopsis</h2>
-        <div class="synopsis">class StreamsLiveCreateRequest
+        <div class="synopsis">class StreamsStyleConfigResponse
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$title</a>;
-                    </li><li>public string <a href="#members">$description</a>;
-                    </li><li>public string <a href="#members">$styleConfigId</a>;
-                    </li><li>public string <a href="#members">$adConfigId</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/__construct.html">__construct</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/title.html">title</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/description.html">description</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/styleConfigId.html">styleConfigId</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/adConfigId.html">adConfigId</a>()
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$id</a>;
+                    </li><li>public string <a href="#members">$orgId</a>;
+                    </li><li>public <span title="\BitmovinApiSdk\Models\StreamsStyleConfigPlayerStyle">StreamsStyleConfigPlayerStyle</span> <a href="#members">$playerStyle</a>;
+                    </li><li>public string <a href="#members">$watermarkUrl</a>;
+                    </li><li>public string <a href="#members">$watermarkTargetLink</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/orgId.html">orgId</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/playerStyle.html">playerStyle</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/watermarkUrl.html">watermarkUrl</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/watermarkTargetLink.html">watermarkTargetLink</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -95,16 +96,19 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="adConfigId"><strong>$adConfigId</strong>
+            <li id="id"><strong>$id</strong>
                 —
                 string</li>
-            <li id="description"><strong>$description</strong>
+            <li id="orgId"><strong>$orgId</strong>
                 —
                 string</li>
-            <li id="styleConfigId"><strong>$styleConfigId</strong>
+            <li id="playerStyle"><strong>$playerStyle</strong>
+                —
+                <a title="\BitmovinApiSdk\Models\StreamsStyleConfigPlayerStyle" href="../classes/_BitmovinApiSdk_Models_StreamsStyleConfigPlayerStyle.html">\BitmovinApiSdk\Models\StreamsStyleConfigPlayerStyle</a></li>
+            <li id="watermarkTargetLink"><strong>$watermarkTargetLink</strong>
                 —
                 string</li>
-            <li id="title"><strong>$title</strong>
+            <li id="watermarkUrl"><strong>$watermarkUrl</strong>
                 —
                 string</li>
           </ul>
@@ -114,16 +118,16 @@
           <h4>public</h4>
           <ul>
             <li id="__construct">
-              <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/__construct.html">__construct()</a>
+              <a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/__construct.html">__construct()</a>
             </li>
-            <li id="adConfigId"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/adConfigId.html">adConfigId()</a>
-                — Id of the advertisement config to use</li>
-            <li id="description"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/description.html">description()</a>
-                — Description of the stream</li>
-            <li id="styleConfigId"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/styleConfigId.html">styleConfigId()</a>
-                — Id of the style config to use</li>
-            <li id="title"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/title.html">title()</a>
-                — Title of the stream</li>
+            <li id="orgId"><a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/orgId.html">orgId()</a>
+                — UUID of the associated organization</li>
+            <li id="playerStyle"><a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/playerStyle.html">playerStyle()</a>
+                — playerStyle</li>
+            <li id="watermarkTargetLink"><a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/watermarkTargetLink.html">watermarkTargetLink()</a>
+                — Target link of the watermark image</li>
+            <li id="watermarkUrl"><a title="BitmovinApiSdk\Models\StreamsStyleConfigResponse" href="../classes/BitmovinApiSdk_Models_StreamsStyleConfigResponse/watermarkUrl.html">watermarkUrl()</a>
+                — URL of the watermark image</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>

@@ -31,7 +31,7 @@ class Mp4Muxing extends Muxing
     }
 
     /**
-     * Name of the output file
+     * Name of the output file (either &#x60;filename&#x60; or &#x60;name&#x60; is required, prefer &#x60;filename&#x60;)
      *
      * @param string $filename
      * @return $this

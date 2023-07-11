@@ -22,6 +22,9 @@ class PrewarmedEncoderPool extends BitmovinResource
     /** @var int */
     public $targetPoolSize;
 
+    /** @var bool */
+    public $gpuEnabled;
+
     /** @var PrewarmedEncoderPoolStatus */
     public $status;
 
@@ -94,6 +97,19 @@ class PrewarmedEncoderPool extends BitmovinResource
     public function targetPoolSize(int $targetPoolSize)
     {
         $this->targetPoolSize = $targetPoolSize;
+
+        return $this;
+    }
+
+    /**
+     * Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).
+     *
+     * @param bool $gpuEnabled
+     * @return $this
+     */
+    public function gpuEnabled(bool $gpuEnabled)
+    {
+        $this->gpuEnabled = $gpuEnabled;
 
         return $this;
     }

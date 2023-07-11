@@ -25,8 +25,8 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var StreamsVideoStatus */
     public $status;
 
-    /** @var \BitmovinApiSdk\Models\StreamsConfigResponse */
-    public $config;
+    /** @var \BitmovinApiSdk\Models\StreamsStyleConfigResponse */
+    public $styleConfig;
 
     /** @var \BitmovinApiSdk\Models\StreamsVideoEncodingTask[] */
     public $encodingTasks;
@@ -45,21 +45,21 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
         parent::__construct($attributes);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->status = ObjectMapper::map($this->status, StreamsVideoStatus::class);
-        $this->config = ObjectMapper::map($this->config, StreamsConfigResponse::class);
+        $this->styleConfig = ObjectMapper::map($this->styleConfig, StreamsStyleConfigResponse::class);
         $this->encodingTasks = ObjectMapper::map($this->encodingTasks, StreamsVideoEncodingTask::class);
         $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);
         $this->contentProtection = ObjectMapper::map($this->contentProtection, StreamsContentProtectionResponse::class);
     }
 
     /**
-     * config
+     * styleConfig
      *
-     * @param \BitmovinApiSdk\Models\StreamsConfigResponse $config
+     * @param \BitmovinApiSdk\Models\StreamsStyleConfigResponse $styleConfig
      * @return $this
      */
-    public function config(\BitmovinApiSdk\Models\StreamsConfigResponse $config)
+    public function styleConfig(\BitmovinApiSdk\Models\StreamsStyleConfigResponse $styleConfig)
     {
-        $this->config = $config;
+        $this->styleConfig = $styleConfig;
 
         return $this;
     }

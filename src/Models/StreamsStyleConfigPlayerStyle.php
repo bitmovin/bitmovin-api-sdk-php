@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class StreamsConfigPlayerStyle extends \BitmovinApiSdk\Common\ApiResource
+class StreamsStyleConfigPlayerStyle extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $playbackMarkerBgColor;

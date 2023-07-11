@@ -64,6 +64,9 @@ class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\AnalyticsLicenseFeatures */
     public $features;
 
+    /** @var Carbon */
+    public $planExpiredAt;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -71,6 +74,7 @@ class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
         $this->domains = ObjectMapper::map($this->domains, AnalyticsLicenseDomain::class);
         $this->customDataFieldLabels = ObjectMapper::map($this->customDataFieldLabels, AnalyticsLicenseCustomDataFieldLabels::class);
         $this->features = ObjectMapper::map($this->features, AnalyticsLicenseFeatures::class);
+        $this->planExpiredAt = ObjectMapper::map($this->planExpiredAt, Carbon::class);
     }
 
     /**

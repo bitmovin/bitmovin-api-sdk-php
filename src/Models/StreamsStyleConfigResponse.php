@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
+class StreamsStyleConfigResponse extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $id;
@@ -13,7 +13,7 @@ class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $orgId;
 
-    /** @var \BitmovinApiSdk\Models\StreamsConfigPlayerStyle */
+    /** @var \BitmovinApiSdk\Models\StreamsStyleConfigPlayerStyle */
     public $playerStyle;
 
     /** @var string */
@@ -25,7 +25,7 @@ class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->playerStyle = ObjectMapper::map($this->playerStyle, StreamsConfigPlayerStyle::class);
+        $this->playerStyle = ObjectMapper::map($this->playerStyle, StreamsStyleConfigPlayerStyle::class);
     }
 
     /**
@@ -44,10 +44,10 @@ class StreamsConfigResponse extends \BitmovinApiSdk\Common\ApiResource
     /**
      * playerStyle
      *
-     * @param \BitmovinApiSdk\Models\StreamsConfigPlayerStyle $playerStyle
+     * @param \BitmovinApiSdk\Models\StreamsStyleConfigPlayerStyle $playerStyle
      * @return $this
      */
-    public function playerStyle(\BitmovinApiSdk\Models\StreamsConfigPlayerStyle $playerStyle)
+    public function playerStyle(\BitmovinApiSdk\Models\StreamsStyleConfigPlayerStyle $playerStyle)
     {
         $this->playerStyle = $playerStyle;
 
