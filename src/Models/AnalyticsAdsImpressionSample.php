@@ -377,6 +377,9 @@ class AnalyticsAdsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public $screenWidth;
 
     /** @var string */
+    public $screenOrientation;
+
+    /** @var string */
     public $size;
 
     /** @var int */
@@ -2033,6 +2036,19 @@ class AnalyticsAdsImpressionSample extends \BitmovinApiSdk\Common\ApiResource
     public function screenWidth(int $screenWidth)
     {
         $this->screenWidth = $screenWidth;
+
+        return $this;
+    }
+
+    /**
+     * Screen orientation (PORTRAIT, LANDSCAPE OR UNKNOWN)
+     *
+     * @param string $screenOrientation
+     * @return $this
+     */
+    public function screenOrientation(string $screenOrientation)
+    {
+        $this->screenOrientation = $screenOrientation;
 
         return $this;
     }

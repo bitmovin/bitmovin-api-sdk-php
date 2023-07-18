@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Hd\HdApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\InsertableContent\InsertableContentApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Scte35Cue\Scte35CueApi;
 
@@ -15,6 +16,9 @@ class LiveApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var HdApi */
+    public $hd;
 
     /** @var InsertableContentApi */
     public $insertableContent;
@@ -32,6 +36,7 @@ class LiveApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->hd = new HdApi(null, $this->httpWrapper);
         $this->insertableContent = new InsertableContentApi(null, $this->httpWrapper);
         $this->scte35Cue = new Scte35CueApi(null, $this->httpWrapper);
     }

@@ -287,6 +287,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const SCREEN_WIDTH = 'SCREEN_WIDTH';
 
     /** @var string */
+    private const SCREEN_ORIENTATION = 'SCREEN_ORIENTATION';
+
+    /** @var string */
     private const SEEKED = 'SEEKED';
 
     /** @var string */
@@ -1308,6 +1311,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function SCREEN_WIDTH()
     {
         return new AnalyticsAttribute(self::SCREEN_WIDTH);
+    }
+
+    /**
+     * SCREEN_ORIENTATION
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function SCREEN_ORIENTATION()
+    {
+        return new AnalyticsAttribute(self::SCREEN_ORIENTATION);
     }
 
     /**

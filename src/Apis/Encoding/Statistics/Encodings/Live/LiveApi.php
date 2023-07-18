@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Live\Daily\DailyApi;
+use BitmovinApiSdk\Apis\Encoding\Statistics\Encodings\Live\Options\OptionsApi;
 
 class LiveApi
 {
@@ -17,6 +18,9 @@ class LiveApi
 
     /** @var DailyApi */
     public $daily;
+
+    /** @var OptionsApi */
+    public $options;
 
     /**
      * LiveApi constructor.
@@ -29,6 +33,7 @@ class LiveApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->daily = new DailyApi(null, $this->httpWrapper);
+        $this->options = new OptionsApi(null, $this->httpWrapper);
     }
 
     /**

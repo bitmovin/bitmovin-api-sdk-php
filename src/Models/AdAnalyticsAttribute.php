@@ -371,6 +371,9 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const SCREEN_WIDTH = 'SCREEN_WIDTH';
 
     /** @var string */
+    private const SCREEN_ORIENTATION = 'SCREEN_ORIENTATION';
+
+    /** @var string */
     private const SIZE = 'SIZE';
 
     /** @var string */
@@ -1657,6 +1660,16 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function SCREEN_WIDTH()
     {
         return new AdAnalyticsAttribute(self::SCREEN_WIDTH);
+    }
+
+    /**
+     * SCREEN_ORIENTATION
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function SCREEN_ORIENTATION()
+    {
+        return new AdAnalyticsAttribute(self::SCREEN_ORIENTATION);
     }
 
     /**
