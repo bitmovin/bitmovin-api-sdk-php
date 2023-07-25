@@ -42,4 +42,23 @@ class HdApi
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StartLiveChannelEncodingRequest::class);
     }
+
+    /**
+     * Start Live Encoding
+     *
+     * @param string $encodingId
+     * @param \BitmovinApiSdk\Models\StartLiveChannelEncodingRequest $startLiveChannelEncodingRequest
+     * @return \BitmovinApiSdk\Models\BitmovinResponse
+     * @throws BitmovinApiException
+     */
+    public function start(string $encodingId, \BitmovinApiSdk\Models\StartLiveChannelEncodingRequest $startLiveChannelEncodingRequest) : \BitmovinApiSdk\Models\BitmovinResponse
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+        ];
+
+        $response = $this->httpWrapper->request('POST', '/encoding/encodings/{encoding_id}/live/hd/start', $pathParams,  null, $startLiveChannelEncodingRequest, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
+    }
 }
