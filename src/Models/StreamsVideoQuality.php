@@ -13,6 +13,9 @@ class StreamsVideoQuality extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const DEFAULT = 'DEFAULT';
 
+    /** @var string */
+    private const TRIMMED = 'TRIMMED';
+
     /**
      * @param string $value
      * @return StreamsVideoQuality
@@ -50,6 +53,16 @@ class StreamsVideoQuality extends \BitmovinApiSdk\Common\Enum
     public static function DEFAULT()
     {
         return new StreamsVideoQuality(self::DEFAULT);
+    }
+
+    /**
+     * The trimmed Video
+     *
+     * @return StreamsVideoQuality
+     */
+    public static function TRIMMED()
+    {
+        return new StreamsVideoQuality(self::TRIMMED);
     }
 }
 

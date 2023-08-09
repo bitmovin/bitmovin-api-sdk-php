@@ -364,6 +364,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const VIDEOSTART_FAILED_REASON = 'VIDEOSTART_FAILED_REASON';
 
+    /** @var string */
+    private const VIEWTIME = 'VIEWTIME';
+
     /**
      * @param string $value
      * @return AnalyticsAttribute
@@ -1571,6 +1574,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function VIDEOSTART_FAILED_REASON()
     {
         return new AnalyticsAttribute(self::VIDEOSTART_FAILED_REASON);
+    }
+
+    /**
+     * VIEWTIME
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function VIEWTIME()
+    {
+        return new AnalyticsAttribute(self::VIEWTIME);
     }
 }
 
