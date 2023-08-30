@@ -37,6 +37,9 @@ class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\StreamsContentProtectionResponse */
     public $contentProtection;
 
+    /** @var StreamsTrimmingStatus */
+    public $trimming;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -45,6 +48,7 @@ class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
         $this->styleConfig = ObjectMapper::map($this->styleConfig, StreamsStyleConfigResponse::class);
         $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);
         $this->contentProtection = ObjectMapper::map($this->contentProtection, StreamsContentProtectionResponse::class);
+        $this->trimming = ObjectMapper::map($this->trimming, StreamsTrimmingStatus::class);
     }
 
     /**

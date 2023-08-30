@@ -20,7 +20,7 @@ class NexGuardWatermarkingType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * A/B watermarking
+     * A/B watermarking (for video streams only)
      *
      * @return NexGuardWatermarkingType
      */
@@ -30,7 +30,7 @@ class NexGuardWatermarkingType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Required for Audio to duplicate the stream
+     * Stream duplication to match A/B video streams in CDN delivery (for audio streams only)
      *
      * @return NexGuardWatermarkingType
      */
