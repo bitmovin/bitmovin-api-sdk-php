@@ -179,6 +179,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const ERROR_RATE = 'ERROR_RATE';
 
     /** @var string */
+    private const ERROR_PERCENTAGE = 'ERROR_PERCENTAGE';
+
+    /** @var string */
     private const EXPERIMENT_NAME = 'EXPERIMENT_NAME';
 
     /** @var string */
@@ -954,6 +957,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function ERROR_RATE()
     {
         return new AnalyticsAttribute(self::ERROR_RATE);
+    }
+
+    /**
+     * ERROR_PERCENTAGE
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function ERROR_PERCENTAGE()
+    {
+        return new AnalyticsAttribute(self::ERROR_PERCENTAGE);
     }
 
     /**

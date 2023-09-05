@@ -28,10 +28,14 @@ class AccountInformation extends BitmovinResource
     /** @var bool */
     public $verified;
 
+    /** @var Marketplace */
+    public $marketplace;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->apiKeys = ObjectMapper::map($this->apiKeys, AccountApiKey::class);
+        $this->marketplace = ObjectMapper::map($this->marketplace, Marketplace::class);
     }
 
     /**
