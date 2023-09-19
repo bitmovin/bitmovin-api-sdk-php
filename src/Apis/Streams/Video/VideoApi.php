@@ -40,6 +40,21 @@ class VideoApi
     }
 
     /**
+     * Delete Stream
+     *
+     * @param string $streamId
+     * @throws BitmovinApiException
+     */
+    public function delete(string $streamId)
+    {
+        $pathParams = [
+            'stream_id' => $streamId,
+        ];
+
+        $this->httpWrapper->request('DELETE', '/streams/video/{stream_id}', $pathParams,  null, null, false);
+    }
+
+    /**
      * Get Streams video by id
      *
      * @param string $streamId
