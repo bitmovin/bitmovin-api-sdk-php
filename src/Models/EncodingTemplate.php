@@ -8,6 +8,9 @@ class EncodingTemplate extends \BitmovinApiSdk\Common\Enum
     private const H264 = 'H264';
 
     /** @var string */
+    private const H264_FIXED_RESOLUTIONS = 'H264_FIXED_RESOLUTIONS';
+
+    /** @var string */
     private const AV1 = 'AV1';
 
     /**
@@ -27,6 +30,16 @@ class EncodingTemplate extends \BitmovinApiSdk\Common\Enum
     public static function H264()
     {
         return new EncodingTemplate(self::H264);
+    }
+
+    /**
+     * H264_FIXED_RESOLUTIONS
+     *
+     * @return EncodingTemplate
+     */
+    public static function H264_FIXED_RESOLUTIONS()
+    {
+        return new EncodingTemplate(self::H264_FIXED_RESOLUTIONS);
     }
 
     /**
