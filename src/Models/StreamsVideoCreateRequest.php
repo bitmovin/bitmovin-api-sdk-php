@@ -22,9 +22,13 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $adConfigId;
 
+    /** @var StreamsEncodingProfile */
+    public $encodingProfile;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->encodingProfile = ObjectMapper::map($this->encodingProfile, StreamsEncodingProfile::class);
     }
 
     /**
@@ -88,6 +92,19 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function adConfigId(string $adConfigId)
     {
         $this->adConfigId = $adConfigId;
+
+        return $this;
+    }
+
+    /**
+     * Profile to be used in encoding
+     *
+     * @param StreamsEncodingProfile $encodingProfile
+     * @return $this
+     */
+    public function encodingProfile(StreamsEncodingProfile $encodingProfile)
+    {
+        $this->encodingProfile = $encodingProfile;
 
         return $this;
     }

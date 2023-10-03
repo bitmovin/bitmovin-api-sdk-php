@@ -11,7 +11,7 @@ class EncodingStatisticsVod extends EncodingStatistics
     public $timeEnqueued;
 
     /** @var float */
-    public $realTimeFactor;
+    public $realtimeFactor;
 
     public function __construct($attributes = null)
     {
@@ -34,12 +34,12 @@ class EncodingStatisticsVod extends EncodingStatistics
     /**
      * The realtime factor. (required)
      *
-     * @param float $realTimeFactor
+     * @param float $realtimeFactor
      * @return $this
      */
-    public function realTimeFactor(float $realTimeFactor)
+    public function realtimeFactor(float $realtimeFactor)
     {
-        $this->realTimeFactor = $realTimeFactor;
+        $this->realtimeFactor = $realtimeFactor;
 
         return $this;
     }

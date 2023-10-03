@@ -52,6 +52,9 @@ class Encoding extends BitmovinResource
     /** @var CloudRegion */
     public $selectedCloudRegion;
 
+    /** @var \BitmovinApiSdk\Models\CloudRegion[] */
+    public $selectedFallbackCloudRegions;
+
     /** @var Status */
     public $status;
 
@@ -75,6 +78,7 @@ class Encoding extends BitmovinResource
         $this->infrastructure = ObjectMapper::map($this->infrastructure, InfrastructureSettings::class);
         $this->selectedEncodingMode = ObjectMapper::map($this->selectedEncodingMode, EncodingMode::class);
         $this->selectedCloudRegion = ObjectMapper::map($this->selectedCloudRegion, CloudRegion::class);
+        $this->selectedFallbackCloudRegions = ObjectMapper::map($this->selectedFallbackCloudRegions, CloudRegion::class);
         $this->status = ObjectMapper::map($this->status, Status::class);
         $this->liveOptionsType = ObjectMapper::map($this->liveOptionsType, LiveOptionsType::class);
     }
