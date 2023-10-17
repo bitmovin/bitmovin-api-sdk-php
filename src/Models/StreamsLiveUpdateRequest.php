@@ -14,16 +14,7 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public $description;
 
     /** @var string */
-    public $styleConfigId;
-
-    /** @var string */
     public $posterUrl;
-
-    /** @var string */
-    public $adConfigId;
-
-    /** @var string */
-    public $contentProtectionId;
 
     public function __construct($attributes = null)
     {
@@ -57,19 +48,6 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Id of the style config to use
-     *
-     * @param string $styleConfigId
-     * @return $this
-     */
-    public function styleConfigId(string $styleConfigId)
-    {
-        $this->styleConfigId = $styleConfigId;
-
-        return $this;
-    }
-
-    /**
      * URL to hosted poster image
      *
      * @param string $posterUrl
@@ -78,32 +56,6 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function posterUrl(string $posterUrl)
     {
         $this->posterUrl = $posterUrl;
-
-        return $this;
-    }
-
-    /**
-     * Id of the advertisement config to use
-     *
-     * @param string $adConfigId
-     * @return $this
-     */
-    public function adConfigId(string $adConfigId)
-    {
-        $this->adConfigId = $adConfigId;
-
-        return $this;
-    }
-
-    /**
-     * Id of the content protection config to use
-     *
-     * @param string $contentProtectionId
-     * @return $this
-     */
-    public function contentProtectionId(string $contentProtectionId)
-    {
-        $this->contentProtectionId = $contentProtectionId;
 
         return $this;
     }

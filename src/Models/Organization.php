@@ -19,11 +19,15 @@ class Organization extends BitmovinResource
     /** @var \BitmovinApiSdk\Models\ResourceLimitContainer[] */
     public $limitsPerResource;
 
+    /** @var SignupSource */
+    public $signupSource;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->type = ObjectMapper::map($this->type, OrganizationType::class);
         $this->limitsPerResource = ObjectMapper::map($this->limitsPerResource, ResourceLimitContainer::class);
+        $this->signupSource = ObjectMapper::map($this->signupSource, SignupSource::class);
     }
 
     /**

@@ -115,23 +115,4 @@ class LiveApi
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveResponse::class);
     }
-
-    /**
-     * Update live stream by id
-     *
-     * @param string $streamId
-     * @param \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest
-     * @return \BitmovinApiSdk\Models\StreamsLiveResponse
-     * @throws BitmovinApiException
-     */
-    public function update(string $streamId, \BitmovinApiSdk\Models\StreamsLiveUpdateRequest $streamsLiveUpdateRequest) : \BitmovinApiSdk\Models\StreamsLiveResponse
-    {
-        $pathParams = [
-            'stream_id' => $streamId,
-        ];
-
-        $response = $this->httpWrapper->request('PUT', '/streams/live/{stream_id}', $pathParams,  null, $streamsLiveUpdateRequest, true);
-
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsLiveResponse::class);
-    }
 }

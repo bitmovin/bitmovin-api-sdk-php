@@ -16,12 +16,6 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $description;
 
-    /** @var string */
-    public $styleConfigId;
-
-    /** @var string */
-    public $adConfigId;
-
     /** @var StreamsEncodingProfile */
     public $encodingProfile;
 
@@ -66,32 +60,6 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function description(string $description)
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Id of the style config to use
-     *
-     * @param string $styleConfigId
-     * @return $this
-     */
-    public function styleConfigId(string $styleConfigId)
-    {
-        $this->styleConfigId = $styleConfigId;
-
-        return $this;
-    }
-
-    /**
-     * Id of the advertisement config to use
-     *
-     * @param string $adConfigId
-     * @return $this
-     */
-    public function adConfigId(string $adConfigId)
-    {
-        $this->adConfigId = $adConfigId;
 
         return $this;
     }

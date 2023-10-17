@@ -16,6 +16,12 @@ class FilterListQueryParams implements QueryParams
     /** @var string */
     private $name;
 
+    /** @var string */
+    private $sort;
+
+    /** @var string */
+    private $type;
+
     /**
      * @return FilterListQueryParams
      */
@@ -53,6 +59,28 @@ class FilterListQueryParams implements QueryParams
     public function name(string $name): FilterListQueryParams
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return FilterListQueryParams
+     */
+    public function sort(string $sort): FilterListQueryParams
+    {
+        $this->sort = $sort;
+
+        return $this;
+    }
+
+    /**
+     * @param string $type
+     * @return FilterListQueryParams
+     */
+    public function type(string $type): FilterListQueryParams
+    {
+        $this->type = $type;
 
         return $this;
     }
