@@ -23,6 +23,9 @@ class PrewarmedEncoderPool extends BitmovinResource
     public $targetPoolSize;
 
     /** @var bool */
+    public $dynamicPool;
+
+    /** @var bool */
     public $gpuEnabled;
 
     /** @var PrewarmedEncoderPoolStatus */
@@ -97,6 +100,19 @@ class PrewarmedEncoderPool extends BitmovinResource
     public function targetPoolSize(int $targetPoolSize)
     {
         $this->targetPoolSize = $targetPoolSize;
+
+        return $this;
+    }
+
+    /**
+     * Activate dynamic pool behaviour. Pool will increase/decrease based on usage. Minimum pool size is set by targetPoolSize.
+     *
+     * @param bool $dynamicPool
+     * @return $this
+     */
+    public function dynamicPool(bool $dynamicPool)
+    {
+        $this->dynamicPool = $dynamicPool;
 
         return $this;
     }
