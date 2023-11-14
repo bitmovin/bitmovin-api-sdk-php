@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Account\Organizations\SubOrganizations\SubOrganizationsApi;
+use BitmovinApiSdk\Apis\Account\Organizations\Tenants\TenantsApi;
 use BitmovinApiSdk\Apis\Account\Organizations\Groups\GroupsApi;
 
 class OrganizationsApi
@@ -18,6 +19,9 @@ class OrganizationsApi
 
     /** @var SubOrganizationsApi */
     public $subOrganizations;
+
+    /** @var TenantsApi */
+    public $tenants;
 
     /** @var GroupsApi */
     public $groups;
@@ -33,6 +37,7 @@ class OrganizationsApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->subOrganizations = new SubOrganizationsApi(null, $this->httpWrapper);
+        $this->tenants = new TenantsApi(null, $this->httpWrapper);
         $this->groups = new GroupsApi(null, $this->httpWrapper);
     }
 

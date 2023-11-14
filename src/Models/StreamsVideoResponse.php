@@ -46,6 +46,9 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $downloadUrl;
 
+    /** @var bool */
+    public $signed;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);

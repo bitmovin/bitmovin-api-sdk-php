@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\StreamsVideoCreateRequest</title>
+    <title>phpDox - BitmovinApiSdk\Models\StreamsSigningKeyResponse</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -38,7 +38,7 @@
           <li class="separator">
             <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
-          <li class="separator">StreamsVideoCreateRequest</li>
+          <li class="separator">StreamsSigningKeyResponse</li>
         </ul>
       </div>
       <nav class="box">
@@ -61,23 +61,19 @@
         </ul>
       </nav>
       <section>
-        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsVideoCreateRequest</h1>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsSigningKeyResponse</h1>
         <h4/>
         <p/>
         <h2 id="synopsis">Synopsis</h2>
-        <div class="synopsis">class StreamsVideoCreateRequest
+        <div class="synopsis">class StreamsSigningKeyResponse
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$assetUrl</a>;
-                    </li><li>public string <a href="#members">$title</a>;
-                    </li><li>public string <a href="#members">$description</a>;
-                    </li><li>public <span title="BitmovinApiSdk\Models\StreamsEncodingProfile">StreamsEncodingProfile</span> <a href="#members">$encodingProfile</a>;
-                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$signed</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/__construct.html">__construct</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/assetUrl.html">assetUrl</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/title.html">title</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/description.html">description</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/encodingProfile.html">encodingProfile</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/signed.html">signed</a>()
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$privateKey</a>;
+                    </li><li>public string <a href="#members">$keyId</a>;
+                    </li><li>public string <a href="#members">$message</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/privateKey.html">privateKey</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/keyId.html">keyId</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/message.html">message</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -97,19 +93,13 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="assetUrl"><strong>$assetUrl</strong>
+            <li id="keyId"><strong>$keyId</strong>
                 —
                 string</li>
-            <li id="description"><strong>$description</strong>
+            <li id="message"><strong>$message</strong>
                 —
                 string</li>
-            <li id="encodingProfile"><strong>$encodingProfile</strong>
-                —
-                <a title="BitmovinApiSdk\Models\StreamsEncodingProfile" href="../classes/BitmovinApiSdk_Models_StreamsEncodingProfile.html">BitmovinApiSdk\Models\StreamsEncodingProfile</a></li>
-            <li id="signed"><strong>$signed</strong>
-                —
-                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
-            <li id="title"><strong>$title</strong>
+            <li id="privateKey"><strong>$privateKey</strong>
                 —
                 string</li>
           </ul>
@@ -119,18 +109,14 @@
           <h4>public</h4>
           <ul>
             <li id="__construct">
-              <a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/__construct.html">__construct()</a>
+              <a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/__construct.html">__construct()</a>
             </li>
-            <li id="assetUrl"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/assetUrl.html">assetUrl()</a>
-                — The streams input asset URL</li>
-            <li id="description"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/description.html">description()</a>
-                — Description of the stream</li>
-            <li id="encodingProfile"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/encodingProfile.html">encodingProfile()</a>
-                — Profile to be used in encoding</li>
-            <li id="signed"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/signed.html">signed()</a>
-                — If set to true the Stream is only accessible via a token</li>
-            <li id="title"><a title="BitmovinApiSdk\Models\StreamsVideoCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsVideoCreateRequest/title.html">title()</a>
-                — Title of the stream</li>
+            <li id="keyId"><a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/keyId.html">keyId()</a>
+                — The unique identifier of the key</li>
+            <li id="message"><a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/message.html">message()</a>
+                — message</li>
+            <li id="privateKey"><a title="BitmovinApiSdk\Models\StreamsSigningKeyResponse" href="../classes/BitmovinApiSdk_Models_StreamsSigningKeyResponse/privateKey.html">privateKey()</a>
+                — base64-encoded PEM file of the private key</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>

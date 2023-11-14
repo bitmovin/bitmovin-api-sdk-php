@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Streams\Search\SearchApi;
 use BitmovinApiSdk\Apis\Streams\Video\VideoApi;
 use BitmovinApiSdk\Apis\Streams\Live\LiveApi;
+use BitmovinApiSdk\Apis\Streams\SigningKeys\SigningKeysApi;
 
 class StreamsApi
 {
@@ -26,6 +27,9 @@ class StreamsApi
     /** @var LiveApi */
     public $live;
 
+    /** @var SigningKeysApi */
+    public $signingKeys;
+
     /**
      * StreamsApi constructor.
      *
@@ -39,5 +43,6 @@ class StreamsApi
         $this->search = new SearchApi(null, $this->httpWrapper);
         $this->video = new VideoApi(null, $this->httpWrapper);
         $this->live = new LiveApi(null, $this->httpWrapper);
+        $this->signingKeys = new SigningKeysApi(null, $this->httpWrapper);
     }
 }

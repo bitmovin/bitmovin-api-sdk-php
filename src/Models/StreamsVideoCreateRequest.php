@@ -19,6 +19,9 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var StreamsEncodingProfile */
     public $encodingProfile;
 
+    /** @var bool */
+    public $signed;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -73,6 +76,19 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function encodingProfile(StreamsEncodingProfile $encodingProfile)
     {
         $this->encodingProfile = $encodingProfile;
+
+        return $this;
+    }
+
+    /**
+     * If set to true the Stream is only accessible via a token
+     *
+     * @param bool $signed
+     * @return $this
+     */
+    public function signed(bool $signed)
+    {
+        $this->signed = $signed;
 
         return $this;
     }

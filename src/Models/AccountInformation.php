@@ -31,6 +31,9 @@ class AccountInformation extends BitmovinResource
     /** @var Marketplace */
     public $marketplace;
 
+    /** @var bool */
+    public $mfaEnabled;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
