@@ -17,6 +17,9 @@ class OutputListQueryParams implements QueryParams
     /** @var string */
     private $name;
 
+    /** @var string */
+    private $sort;
+
     /** @var OutputType */
     private $type;
 
@@ -57,6 +60,17 @@ class OutputListQueryParams implements QueryParams
     public function name(string $name): OutputListQueryParams
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return OutputListQueryParams
+     */
+    public function sort(string $sort): OutputListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

@@ -13,6 +13,9 @@ class ProfileH264 extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const HIGH = 'HIGH';
 
+    /** @var string */
+    private const HIGH422 = 'HIGH422';
+
     /**
      * @param string $value
      * @return ProfileH264
@@ -50,6 +53,16 @@ class ProfileH264 extends \BitmovinApiSdk\Common\Enum
     public static function HIGH()
     {
         return new ProfileH264(self::HIGH);
+    }
+
+    /**
+     * High profile 422
+     *
+     * @return ProfileH264
+     */
+    public static function HIGH422()
+    {
+        return new ProfileH264(self::HIGH422);
     }
 }
 

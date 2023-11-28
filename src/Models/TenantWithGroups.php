@@ -13,21 +13,17 @@ class TenantWithGroups extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $email;
 
-    /** @var \BitmovinApiSdk\Models\InvitationStatus */
-    public $invitationStatus;
-
     /** @var \BitmovinApiSdk\Models\TenantGroupDetail[] */
     public $groups;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->invitationStatus = ObjectMapper::map($this->invitationStatus, InvitationStatus::class);
         $this->groups = ObjectMapper::map($this->groups, TenantGroupDetail::class);
     }
 
     /**
-     * Id of Tenant
+     * Id of Tenant (required)
      *
      * @param string $id
      * @return $this
@@ -40,7 +36,7 @@ class TenantWithGroups extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Email of Tenant
+     * Email of Tenant (required)
      *
      * @param string $email
      * @return $this
@@ -53,20 +49,7 @@ class TenantWithGroups extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * invitationStatus
-     *
-     * @param \BitmovinApiSdk\Models\InvitationStatus $invitationStatus
-     * @return $this
-     */
-    public function invitationStatus(\BitmovinApiSdk\Models\InvitationStatus $invitationStatus)
-    {
-        $this->invitationStatus = $invitationStatus;
-
-        return $this;
-    }
-
-    /**
-     * List of all groups of Tenant
+     * List of all groups of Tenant (required)
      *
      * @param \BitmovinApiSdk\Models\TenantGroupDetail[] $groups
      * @return $this
