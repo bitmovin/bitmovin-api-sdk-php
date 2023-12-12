@@ -34,6 +34,9 @@ class AccountInformation extends BitmovinResource
     /** @var bool */
     public $mfaEnabled;
 
+    /** @var string */
+    public $intercomIdVerification;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
