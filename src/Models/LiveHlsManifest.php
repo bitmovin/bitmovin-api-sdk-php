@@ -22,10 +22,14 @@ class LiveHlsManifest extends \BitmovinApiSdk\Common\ApiResource
     /** @var ProgramDateTimeSettings */
     public $programDateTimeSettings;
 
+    /** @var HlsManifestAdMarkerSettings */
+    public $adMarkerSettings;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->programDateTimeSettings = ObjectMapper::map($this->programDateTimeSettings, ProgramDateTimeSettings::class);
+        $this->adMarkerSettings = ObjectMapper::map($this->adMarkerSettings, HlsManifestAdMarkerSettings::class);
     }
 
     /**
@@ -89,6 +93,19 @@ class LiveHlsManifest extends \BitmovinApiSdk\Common\ApiResource
     public function programDateTimeSettings(ProgramDateTimeSettings $programDateTimeSettings)
     {
         $this->programDateTimeSettings = $programDateTimeSettings;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for tags related to ad markers (e.g. Scte35)
+     *
+     * @param HlsManifestAdMarkerSettings $adMarkerSettings
+     * @return $this
+     */
+    public function adMarkerSettings(HlsManifestAdMarkerSettings $adMarkerSettings)
+    {
+        $this->adMarkerSettings = $adMarkerSettings;
 
         return $this;
     }

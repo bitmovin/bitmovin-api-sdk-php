@@ -13,6 +13,9 @@ class ManifestListQueryParams implements QueryParams
     /** @var int */
     private $limit;
 
+    /** @var string */
+    private $sort;
+
     /**
      * @return ManifestListQueryParams
      */
@@ -39,6 +42,17 @@ class ManifestListQueryParams implements QueryParams
     public function limit(int $limit): ManifestListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return ManifestListQueryParams
+     */
+    public function sort(string $sort): ManifestListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

@@ -5,22 +5,10 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
+class StreamsVideoResponse extends StreamsResponse
 {
     /** @var string */
-    public $id;
-
-    /** @var string */
     public $assetUrl;
-
-    /** @var string */
-    public $title;
-
-    /** @var string */
-    public $description;
-
-    /** @var Carbon */
-    public $createdAt;
 
     /** @var StreamsVideoStatus */
     public $status;
@@ -52,7 +40,6 @@ class StreamsVideoResponse extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->status = ObjectMapper::map($this->status, StreamsVideoStatus::class);
         $this->styleConfig = ObjectMapper::map($this->styleConfig, StreamsStyleConfigResponse::class);
         $this->encodingTasks = ObjectMapper::map($this->encodingTasks, StreamsVideoEncodingTask::class);

@@ -14,6 +14,9 @@ class DashManifestListQueryParams implements QueryParams
     private $limit;
 
     /** @var string */
+    private $sort;
+
+    /** @var string */
     private $encodingId;
 
     /**
@@ -42,6 +45,17 @@ class DashManifestListQueryParams implements QueryParams
     public function limit(int $limit): DashManifestListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return DashManifestListQueryParams
+     */
+    public function sort(string $sort): DashManifestListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

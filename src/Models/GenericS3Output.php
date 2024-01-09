@@ -25,13 +25,20 @@ class GenericS3Output extends Output
     /** @var bool */
     public $ssl;
 
+    /** @var string */
+    public $signingRegion;
+
     /** @var S3SignatureVersion */
     public $signatureVersion;
+
+    /** @var S3AccessStyle */
+    public $accessStyle;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->signatureVersion = ObjectMapper::map($this->signatureVersion, S3SignatureVersion::class);
+        $this->accessStyle = ObjectMapper::map($this->accessStyle, S3AccessStyle::class);
     }
 
     /**
@@ -113,6 +120,19 @@ class GenericS3Output extends Output
     }
 
     /**
+     * The signing region to use
+     *
+     * @param string $signingRegion
+     * @return $this
+     */
+    public function signingRegion(string $signingRegion)
+    {
+        $this->signingRegion = $signingRegion;
+
+        return $this;
+    }
+
+    /**
      * Specifies the method used for authentication
      *
      * @param S3SignatureVersion $signatureVersion
@@ -121,6 +141,19 @@ class GenericS3Output extends Output
     public function signatureVersion(S3SignatureVersion $signatureVersion)
     {
         $this->signatureVersion = $signatureVersion;
+
+        return $this;
+    }
+
+    /**
+     * Specifies the URL access style to use
+     *
+     * @param S3AccessStyle $accessStyle
+     * @return $this
+     */
+    public function accessStyle(S3AccessStyle $accessStyle)
+    {
+        $this->accessStyle = $accessStyle;
 
         return $this;
     }

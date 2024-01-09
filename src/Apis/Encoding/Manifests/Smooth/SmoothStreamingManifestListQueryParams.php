@@ -14,6 +14,9 @@ class SmoothStreamingManifestListQueryParams implements QueryParams
     private $limit;
 
     /** @var string */
+    private $sort;
+
+    /** @var string */
     private $encodingId;
 
     /**
@@ -42,6 +45,17 @@ class SmoothStreamingManifestListQueryParams implements QueryParams
     public function limit(int $limit): SmoothStreamingManifestListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return SmoothStreamingManifestListQueryParams
+     */
+    public function sort(string $sort): SmoothStreamingManifestListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

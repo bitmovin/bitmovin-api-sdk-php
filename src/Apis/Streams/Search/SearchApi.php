@@ -28,14 +28,14 @@ class SearchApi
     /**
      * Get paginated search results of VOD and Live streams
      *
-     * @param StreamsSearchResponseListQueryParams|null $queryParams
-     * @return StreamsSearchResponsePaginationResponse
+     * @param StreamsResponseListQueryParams|null $queryParams
+     * @return StreamsResponsePaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(StreamsSearchResponseListQueryParams $queryParams = null) : StreamsSearchResponsePaginationResponse
+    public function list(StreamsResponseListQueryParams $queryParams = null) : StreamsResponsePaginationResponse
     {
         $response = $this->httpWrapper->request('GET', '/streams/search', [], $queryParams, null, true);
 
-        return ObjectMapper::map($response, StreamsSearchResponsePaginationResponse::class);
+        return ObjectMapper::map($response, StreamsResponsePaginationResponse::class);
     }
 }

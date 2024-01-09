@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class StreamsSearchResponse extends \BitmovinApiSdk\Common\ApiResource
+class StreamsResponse extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $id;
@@ -21,6 +21,12 @@ class StreamsSearchResponse extends \BitmovinApiSdk\Common\ApiResource
 
     /** @var StreamsType */
     public $type;
+
+    public static $discriminatorName = "type";
+    public static $discriminatorMapping = [
+        "VIDEO" => StreamsVideoResponse::class,
+        "LIVE" => StreamsLiveResponse::class,
+    ];
 
     public function __construct($attributes = null)
     {

@@ -14,6 +14,9 @@ class HlsManifestListQueryParams implements QueryParams
     private $limit;
 
     /** @var string */
+    private $sort;
+
+    /** @var string */
     private $encodingId;
 
     /**
@@ -42,6 +45,17 @@ class HlsManifestListQueryParams implements QueryParams
     public function limit(int $limit): HlsManifestListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return HlsManifestListQueryParams
+     */
+    public function sort(string $sort): HlsManifestListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

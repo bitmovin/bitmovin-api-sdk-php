@@ -71,9 +71,11 @@
                     </li><li>public string <a href="#members">$host</a>;
                     </li><li>public int <a href="#members">$port</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$ssl</a>;
+                    </li><li>public string <a href="#members">$signingRegion</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\S3SignatureVersion">S3SignatureVersion</span> <a href="#members">$signatureVersion</a>;
                     </li><li>public string <a href="#members">$accessKey</a>;
                     </li><li>public string <a href="#members">$secretKey</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\S3AccessStyle">S3AccessStyle</span> <a href="#members">$accessStyle</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Input">Input</span></li><li>public static string <a href="#members">$discriminatorName</a>;
                         </li><li>public static array <a href="#members">$discriminatorMapping</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
@@ -87,9 +89,11 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/host.html">host</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/port.html">port</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/ssl.html">ssl</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/signingRegion.html">signingRegion</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/signatureVersion.html">signatureVersion</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/accessKey.html">accessKey</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/secretKey.html">secretKey</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/accessStyle.html">accessStyle</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Input">Input</span></li><li>public void <a title="BitmovinApiSdk\Models\Input" href="../classes/BitmovinApiSdk_Models_Input/__construct.html">__construct</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/name.html">name</a>()
@@ -118,6 +122,9 @@
             <li id="accessKey"><strong>$accessKey</strong>
                 —
                 string</li>
+            <li id="accessStyle"><strong>$accessStyle</strong>
+                —
+                <a title="BitmovinApiSdk\Models\S3AccessStyle" href="../classes/BitmovinApiSdk_Models_S3AccessStyle.html">BitmovinApiSdk\Models\S3AccessStyle</a></li>
             <li id="bucketName"><strong>$bucketName</strong>
                 —
                 string</li>
@@ -157,6 +164,9 @@
             <li id="signatureVersion"><strong>$signatureVersion</strong>
                 —
                 <a title="BitmovinApiSdk\Models\S3SignatureVersion" href="../classes/BitmovinApiSdk_Models_S3SignatureVersion.html">BitmovinApiSdk\Models\S3SignatureVersion</a></li>
+            <li id="signingRegion"><strong>$signingRegion</strong>
+                —
+                string</li>
             <li id="ssl"><strong>$ssl</strong>
                 —
                 <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
@@ -171,6 +181,8 @@
             </li>
             <li id="accessKey"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/accessKey.html">accessKey()</a>
                 — Your generic S3 access key (required)</li>
+            <li id="accessStyle"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/accessStyle.html">accessStyle()</a>
+                — Specifies the URL access style to use</li>
             <li id="bucketName"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/bucketName.html">bucketName()</a>
                 — Your generic S3 bucket name (required)</li>
             <li id="host"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/host.html">host()</a>
@@ -181,6 +193,8 @@
                 — Your generic S3 secret key (required)</li>
             <li id="signatureVersion"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/signatureVersion.html">signatureVersion()</a>
                 — Specifies the method used for authentication</li>
+            <li id="signingRegion"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/signingRegion.html">signingRegion()</a>
+                — The signing region to use</li>
             <li id="ssl"><a title="BitmovinApiSdk\Models\GenericS3Input" href="../classes/BitmovinApiSdk_Models_GenericS3Input/ssl.html">ssl()</a>
                 — Controls whether SSL is used or not</li>
           </ul>
@@ -207,7 +221,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2023 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2024 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

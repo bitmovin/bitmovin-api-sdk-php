@@ -5,22 +5,10 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
+class StreamsLiveResponse extends StreamsResponse
 {
     /** @var string */
-    public $id;
-
-    /** @var string */
     public $streamKey;
-
-    /** @var string */
-    public $title;
-
-    /** @var string */
-    public $description;
-
-    /** @var Carbon */
-    public $createdAt;
 
     /** @var StreamsLiveLifeCycle */
     public $lifeCycle;
@@ -43,7 +31,6 @@ class StreamsLiveResponse extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->lifeCycle = ObjectMapper::map($this->lifeCycle, StreamsLiveLifeCycle::class);
         $this->styleConfig = ObjectMapper::map($this->styleConfig, StreamsStyleConfigResponse::class);
         $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);

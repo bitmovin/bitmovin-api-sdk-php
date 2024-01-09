@@ -66,12 +66,8 @@
         <p/>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class StreamsVideoResponse
-                extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$id</a>;
-                    </li><li>public string <a href="#members">$assetUrl</a>;
-                    </li><li>public string <a href="#members">$title</a>;
-                    </li><li>public string <a href="#members">$description</a>;
-                    </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
+                extends <a title="BitmovinApiSdk\Models\StreamsResponse" href="../classes/BitmovinApiSdk_Models_StreamsResponse.html">StreamsResponse</a>
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$assetUrl</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\StreamsVideoStatus">StreamsVideoStatus</span> <a href="#members">$status</a>;
                     </li><li>public <span title="\BitmovinApiSdk\Models\StreamsStyleConfigResponse">StreamsStyleConfigResponse</span> <a href="#members">$styleConfig</a>;
                     </li><li>public array <a href="#members">$encodingTasks</a>;
@@ -81,11 +77,19 @@
                     </li><li>public <span title="BitmovinApiSdk\Models\StreamsTrimmingStatus">StreamsTrimmingStatus</span> <a href="#members">$trimming</a>;
                     </li><li>public string <a href="#members">$downloadUrl</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$signed</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsVideoResponse" href="../classes/BitmovinApiSdk_Models_StreamsVideoResponse/__construct.html">__construct</a>()
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\StreamsResponse">StreamsResponse</span></li><li>public string <a href="#members">$id</a>;
+                        </li><li>public string <a href="#members">$title</a>;
+                        </li><li>public string <a href="#members">$description</a>;
+                        </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
+                        </li><li>public <span title="BitmovinApiSdk\Models\StreamsType">StreamsType</span> <a href="#members">$type</a>;
+                        </li><li>public static string <a href="#members">$discriminatorName</a>;
+                        </li><li>public static array <a href="#members">$discriminatorMapping</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsVideoResponse" href="../classes/BitmovinApiSdk_Models_StreamsVideoResponse/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoResponse" href="../classes/BitmovinApiSdk_Models_StreamsVideoResponse/styleConfig.html">styleConfig</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoResponse" href="../classes/BitmovinApiSdk_Models_StreamsVideoResponse/adConfig.html">adConfig</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsVideoResponse" href="../classes/BitmovinApiSdk_Models_StreamsVideoResponse/contentProtection.html">contentProtection</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\StreamsResponse">StreamsResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\StreamsResponse" href="../classes/BitmovinApiSdk_Models_StreamsResponse/__construct.html">__construct</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
                         </li></ul>
@@ -96,7 +100,7 @@
           <h4>Extends</h4>
           <ul>
             <li>
-              <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a>
+              <a title="BitmovinApiSdk\Models\StreamsResponse" href="../classes/BitmovinApiSdk_Models_StreamsResponse.html">BitmovinApiSdk\Models\StreamsResponse</a>
             </li>
           </ul>
         </div>
@@ -119,6 +123,12 @@
             <li id="description"><strong>$description</strong>
                 —
                 string</li>
+            <li id="discriminatorMapping">
+              <strong>$discriminatorMapping</strong>
+            </li>
+            <li id="discriminatorName">
+              <strong>$discriminatorName</strong>
+            </li>
             <li id="downloadUrl"><strong>$downloadUrl</strong>
                 —
                 string</li>
@@ -147,6 +157,9 @@
             <li id="trimming"><strong>$trimming</strong>
                 —
                 <a title="BitmovinApiSdk\Models\StreamsTrimmingStatus" href="../classes/BitmovinApiSdk_Models_StreamsTrimmingStatus.html">BitmovinApiSdk\Models\StreamsTrimmingStatus</a></li>
+            <li id="type"><strong>$type</strong>
+                —
+                <a title="BitmovinApiSdk\Models\StreamsType" href="../classes/BitmovinApiSdk_Models_StreamsType.html">BitmovinApiSdk\Models\StreamsType</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -176,7 +189,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2023 by Arne Blankerts and Contributors</span>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2024 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>
