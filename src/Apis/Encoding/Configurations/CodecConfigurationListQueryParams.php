@@ -16,6 +16,9 @@ class CodecConfigurationListQueryParams implements QueryParams
     /** @var string */
     private $name;
 
+    /** @var string */
+    private $sort;
+
     /**
      * @return CodecConfigurationListQueryParams
      */
@@ -53,6 +56,17 @@ class CodecConfigurationListQueryParams implements QueryParams
     public function name(string $name): CodecConfigurationListQueryParams
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $sort
+     * @return CodecConfigurationListQueryParams
+     */
+    public function sort(string $sort): CodecConfigurationListQueryParams
+    {
+        $this->sort = $sort;
 
         return $this;
     }

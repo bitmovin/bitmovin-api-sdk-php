@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Account\Organizations\SubOrganizations\SubOrganizationsApi;
 use BitmovinApiSdk\Apis\Account\Organizations\Tenants\TenantsApi;
+use BitmovinApiSdk\Apis\Account\Organizations\Invitations\InvitationsApi;
 use BitmovinApiSdk\Apis\Account\Organizations\Groups\GroupsApi;
 
 class OrganizationsApi
@@ -22,6 +23,9 @@ class OrganizationsApi
 
     /** @var TenantsApi */
     public $tenants;
+
+    /** @var InvitationsApi */
+    public $invitations;
 
     /** @var GroupsApi */
     public $groups;
@@ -38,6 +42,7 @@ class OrganizationsApi
 
         $this->subOrganizations = new SubOrganizationsApi(null, $this->httpWrapper);
         $this->tenants = new TenantsApi(null, $this->httpWrapper);
+        $this->invitations = new InvitationsApi(null, $this->httpWrapper);
         $this->groups = new GroupsApi(null, $this->httpWrapper);
     }
 
