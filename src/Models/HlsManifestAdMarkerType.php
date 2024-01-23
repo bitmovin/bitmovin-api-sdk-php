@@ -13,6 +13,12 @@ class HlsManifestAdMarkerType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const EXT_X_SPLICEPOINT_SCTE35 = 'EXT_X_SPLICEPOINT_SCTE35';
 
+    /** @var string */
+    private const EXT_X_DATERANGE = 'EXT_X_DATERANGE';
+
+    /** @var string */
+    private const EXT_X_SCTE35 = 'EXT_X_SCTE35';
+
     /**
      * @param string $value
      * @return HlsManifestAdMarkerType
@@ -50,6 +56,26 @@ class HlsManifestAdMarkerType extends \BitmovinApiSdk\Common\Enum
     public static function EXT_X_SPLICEPOINT_SCTE35()
     {
         return new HlsManifestAdMarkerType(self::EXT_X_SPLICEPOINT_SCTE35);
+    }
+
+    /**
+     * Ad markers will be inserted using &#x60;#EXT-X-DATERANGE&#x60; tags. They contain the ID, start timestamp and hex encoded raw bytes of the original SCTE-35 trigger.
+     *
+     * @return HlsManifestAdMarkerType
+     */
+    public static function EXT_X_DATERANGE()
+    {
+        return new HlsManifestAdMarkerType(self::EXT_X_DATERANGE);
+    }
+
+    /**
+     * Ad markers will be inserted using &#x60;#EXT-X-SCTE35&#x60; tags. They contain the base64 encoded raw bytes of the original SCTE-35 trigger.
+     *
+     * @return HlsManifestAdMarkerType
+     */
+    public static function EXT_X_SCTE35()
+    {
+        return new HlsManifestAdMarkerType(self::EXT_X_SCTE35);
     }
 }
 
