@@ -13,6 +13,7 @@ use BitmovinApiSdk\Apis\Encoding\Outputs\OutputsApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\ConfigurationsApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\FiltersApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\EncodingsApi;
+use BitmovinApiSdk\Apis\Encoding\Live\LiveApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\ManifestsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\InfrastructureApi;
 use BitmovinApiSdk\Apis\Encoding\Statistics\StatisticsApi;
@@ -40,6 +41,9 @@ class EncodingApi
 
     /** @var EncodingsApi */
     public $encodings;
+
+    /** @var LiveApi */
+    public $live;
 
     /** @var ManifestsApi */
     public $manifests;
@@ -77,6 +81,7 @@ class EncodingApi
         $this->configurations = new ConfigurationsApi(null, $this->httpWrapper);
         $this->filters = new FiltersApi(null, $this->httpWrapper);
         $this->encodings = new EncodingsApi(null, $this->httpWrapper);
+        $this->live = new LiveApi(null, $this->httpWrapper);
         $this->manifests = new ManifestsApi(null, $this->httpWrapper);
         $this->infrastructure = new InfrastructureApi(null, $this->httpWrapper);
         $this->statistics = new StatisticsApi(null, $this->httpWrapper);
