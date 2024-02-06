@@ -38,9 +38,6 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     private const DVB_SUBTITLE = 'DVB_SUBTITLE';
 
     /** @var string */
-    private const DVB_TELETEXT = 'DVB_TELETEXT';
-
-    /** @var string */
     private const DOLBY_ATMOS = 'DOLBY_ATMOS';
 
     /** @var string */
@@ -163,16 +160,6 @@ class InputStreamType extends \BitmovinApiSdk\Common\Enum
     public static function DVB_SUBTITLE()
     {
         return new InputStreamType(self::DVB_SUBTITLE);
-    }
-
-    /**
-     * DVB_TELETEXT
-     *
-     * @return InputStreamType
-     */
-    public static function DVB_TELETEXT()
-    {
-        return new InputStreamType(self::DVB_TELETEXT);
     }
 
     /**
