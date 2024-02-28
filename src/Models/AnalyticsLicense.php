@@ -43,6 +43,9 @@ class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $retentionTime;
 
+    /** @var string */
+    public $compressedRetentionTime;
+
     /** @var \BitmovinApiSdk\Models\AnalyticsLicenseDomain[] */
     public $domains;
 
