@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\StreamsLiveCreateRequest</title>
+    <title>phpDox - BitmovinApiSdk\Models\StreamsDomainRestrictionResponse</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -38,7 +38,7 @@
           <li class="separator">
             <a href="../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
-          <li class="separator">StreamsLiveCreateRequest</li>
+          <li class="separator">StreamsDomainRestrictionResponse</li>
         </ul>
       </div>
       <nav class="box">
@@ -61,19 +61,20 @@
         </ul>
       </nav>
       <section>
-        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsLiveCreateRequest</h1>
+        <h1 id="introduction"><small>BitmovinApiSdk\Models\</small>StreamsDomainRestrictionResponse</h1>
         <h4/>
         <p/>
         <h2 id="synopsis">Synopsis</h2>
-        <div class="synopsis">class StreamsLiveCreateRequest
+        <div class="synopsis">class StreamsDomainRestrictionResponse
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$title</a>;
-                    </li><li>public string <a href="#members">$description</a>;
-                    </li><li>public string <a href="#members">$domainRestrictionId</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/__construct.html">__construct</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/title.html">title</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/description.html">description</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/domainRestrictionId.html">domainRestrictionId</a>()
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$id</a>;
+                    </li><li>public array <a href="#members">$allowedDomains</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$allowNoReferer</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$allowShare</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/allowedDomains.html">allowedDomains</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/allowNoReferer.html">allowNoReferer</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/allowShare.html">allowShare</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -93,13 +94,17 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="description"><strong>$description</strong>
+            <li id="allowNoReferer"><strong>$allowNoReferer</strong>
                 —
-                string</li>
-            <li id="domainRestrictionId"><strong>$domainRestrictionId</strong>
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="allowShare"><strong>$allowShare</strong>
                 —
-                string</li>
-            <li id="title"><strong>$title</strong>
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
+            <li id="allowedDomains"><strong>$allowedDomains</strong>
+                —
+                <a title="BitmovinApiSdk\Models\string" href="../classes/BitmovinApiSdk_Models_string.html">BitmovinApiSdk\Models\string</a>[]
+                    </li>
+            <li id="id"><strong>$id</strong>
                 —
                 string</li>
           </ul>
@@ -109,14 +114,14 @@
           <h4>public</h4>
           <ul>
             <li id="__construct">
-              <a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/__construct.html">__construct()</a>
+              <a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/__construct.html">__construct()</a>
             </li>
-            <li id="description"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/description.html">description()</a>
-                — Description of the stream</li>
-            <li id="domainRestrictionId"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/domainRestrictionId.html">domainRestrictionId()</a>
-                — Id of the domain restriction config to use</li>
-            <li id="title"><a title="BitmovinApiSdk\Models\StreamsLiveCreateRequest" href="../classes/BitmovinApiSdk_Models_StreamsLiveCreateRequest/title.html">title()</a>
-                — Title of the stream</li>
+            <li id="allowNoReferer"><a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/allowNoReferer.html">allowNoReferer()</a>
+                — Controls if requests to domain restricted streams without referer header should be allowed or denied</li>
+            <li id="allowShare"><a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/allowShare.html">allowShare()</a>
+                — Controls if Stream is accessible via sharing URL or not</li>
+            <li id="allowedDomains"><a title="BitmovinApiSdk\Models\StreamsDomainRestrictionResponse" href="../classes/BitmovinApiSdk_Models_StreamsDomainRestrictionResponse/allowedDomains.html">allowedDomains()</a>
+                — The list of allowed domains</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>

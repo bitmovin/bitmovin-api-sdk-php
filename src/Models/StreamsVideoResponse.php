@@ -25,8 +25,8 @@ class StreamsVideoResponse extends StreamsResponse
     /** @var \BitmovinApiSdk\Models\StreamsAdConfigResponse */
     public $adConfig;
 
-    /** @var \BitmovinApiSdk\Models\StreamsContentProtectionResponse */
-    public $contentProtection;
+    /** @var \BitmovinApiSdk\Models\StreamsDomainRestrictionResponse */
+    public $domainRestriction;
 
     /** @var StreamsTrimmingStatus */
     public $trimming;
@@ -44,7 +44,7 @@ class StreamsVideoResponse extends StreamsResponse
         $this->styleConfig = ObjectMapper::map($this->styleConfig, StreamsStyleConfigResponse::class);
         $this->encodingTasks = ObjectMapper::map($this->encodingTasks, StreamsVideoEncodingTask::class);
         $this->adConfig = ObjectMapper::map($this->adConfig, StreamsAdConfigResponse::class);
-        $this->contentProtection = ObjectMapper::map($this->contentProtection, StreamsContentProtectionResponse::class);
+        $this->domainRestriction = ObjectMapper::map($this->domainRestriction, StreamsDomainRestrictionResponse::class);
         $this->trimming = ObjectMapper::map($this->trimming, StreamsTrimmingStatus::class);
     }
 
@@ -75,14 +75,14 @@ class StreamsVideoResponse extends StreamsResponse
     }
 
     /**
-     * contentProtection
+     * domainRestriction
      *
-     * @param \BitmovinApiSdk\Models\StreamsContentProtectionResponse $contentProtection
+     * @param \BitmovinApiSdk\Models\StreamsDomainRestrictionResponse $domainRestriction
      * @return $this
      */
-    public function contentProtection(\BitmovinApiSdk\Models\StreamsContentProtectionResponse $contentProtection)
+    public function domainRestriction(\BitmovinApiSdk\Models\StreamsDomainRestrictionResponse $domainRestriction)
     {
-        $this->contentProtection = $contentProtection;
+        $this->domainRestriction = $domainRestriction;
 
         return $this;
     }

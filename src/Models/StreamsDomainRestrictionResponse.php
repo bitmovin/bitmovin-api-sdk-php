@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class StreamsContentProtectionResponse extends \BitmovinApiSdk\Common\ApiResource
+class StreamsDomainRestrictionResponse extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $id;
@@ -38,7 +38,7 @@ class StreamsContentProtectionResponse extends \BitmovinApiSdk\Common\ApiResourc
     }
 
     /**
-     * Controls if requests to content protected streams without referer header should be allowed or denied
+     * Controls if requests to domain restricted streams without referer header should be allowed or denied
      *
      * @param bool $allowNoReferer
      * @return $this

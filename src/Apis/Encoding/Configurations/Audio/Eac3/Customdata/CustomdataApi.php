@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * E-AC3 Codec Configuration Custom Data.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings
+     * E-AC3 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

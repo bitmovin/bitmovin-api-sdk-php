@@ -16,6 +16,9 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $posterUrl;
 
+    /** @var string */
+    public $domainRestrictionId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -56,6 +59,19 @@ class StreamsLiveUpdateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function posterUrl(string $posterUrl)
     {
         $this->posterUrl = $posterUrl;
+
+        return $this;
+    }
+
+    /**
+     * Id of the domain restriction config to use
+     *
+     * @param string $domainRestrictionId
+     * @return $this
+     */
+    public function domainRestrictionId(string $domainRestrictionId)
+    {
+        $this->domainRestrictionId = $domainRestrictionId;
 
         return $this;
     }

@@ -16,6 +16,9 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $description;
 
+    /** @var string */
+    public $domainRestrictionId;
+
     /** @var StreamsEncodingProfile */
     public $encodingProfile;
 
@@ -63,6 +66,19 @@ class StreamsVideoCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function description(string $description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Id of the domain restriction config to use
+     *
+     * @param string $domainRestrictionId
+     * @return $this
+     */
+    public function domainRestrictionId(string $domainRestrictionId)
+    {
+        $this->domainRestrictionId = $domainRestrictionId;
 
         return $this;
     }

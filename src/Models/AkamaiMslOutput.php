@@ -53,7 +53,7 @@ class AkamaiMslOutput extends Output
     }
 
     /**
-     * The stream format. Only DASH is supported at the moment. (required)
+     * - DASH: configure the Encoding with fMP4 or CMAF muxings and a DASH manifest. - HLS: configure the Encoding with TS muxings and an HLS manifest. - CMAF: configure the Encoding with fMP4 or CMAF muxings with both DASH and HLS manifests. (required)
      *
      * @param AkamaiMslStreamFormat $streamFormat
      * @return $this

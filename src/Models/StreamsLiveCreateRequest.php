@@ -13,6 +13,9 @@ class StreamsLiveCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $description;
 
+    /** @var string */
+    public $domainRestrictionId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -40,6 +43,19 @@ class StreamsLiveCreateRequest extends \BitmovinApiSdk\Common\ApiResource
     public function description(string $description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Id of the domain restriction config to use
+     *
+     * @param string $domainRestrictionId
+     * @return $this
+     */
+    public function domainRestrictionId(string $domainRestrictionId)
+    {
+        $this->domainRestrictionId = $domainRestrictionId;
 
         return $this;
     }
