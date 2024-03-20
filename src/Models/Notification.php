@@ -80,45 +80,6 @@ class Notification extends BitmovinResponse
     }
 
     /**
-     * eventType
-     *
-     * @param string $eventType
-     * @return $this
-     */
-    public function eventType(string $eventType)
-    {
-        $this->eventType = $eventType;
-
-        return $this;
-    }
-
-    /**
-     * category
-     *
-     * @param string $category
-     * @return $this
-     */
-    public function category(string $category)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * resourceType
-     *
-     * @param string $resourceType
-     * @return $this
-     */
-    public function resourceType(string $resourceType)
-    {
-        $this->resourceType = $resourceType;
-
-        return $this;
-    }
-
-    /**
      * muted
      *
      * @param bool $muted

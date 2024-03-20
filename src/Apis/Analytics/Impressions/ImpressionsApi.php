@@ -41,10 +41,10 @@ class ImpressionsApi
      *
      * @param string $impressionId
      * @param \BitmovinApiSdk\Models\AnalyticsLicenseKey $analyticsLicenseKey
-     * @return \BitmovinApiSdk\Models\AnalyticsImpressionDetails
+     * @return \BitmovinApiSdk\Models\AnalyticsImpressionSample[]
      * @throws BitmovinApiException
      */
-    public function create(string $impressionId, \BitmovinApiSdk\Models\AnalyticsLicenseKey $analyticsLicenseKey) : \BitmovinApiSdk\Models\AnalyticsImpressionDetails
+    public function create(string $impressionId, \BitmovinApiSdk\Models\AnalyticsLicenseKey $analyticsLicenseKey) : array
     {
         $pathParams = [
             'impression_id' => $impressionId,
@@ -52,7 +52,7 @@ class ImpressionsApi
 
         $response = $this->httpWrapper->request('POST', '/analytics/impressions/{impression_id}', $pathParams,  null, $analyticsLicenseKey, true);
 
-        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsImpressionDetails::class);
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\AnalyticsImpressionSample::class);
     }
 
     /**
