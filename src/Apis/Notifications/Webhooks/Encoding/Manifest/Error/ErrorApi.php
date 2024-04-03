@@ -77,6 +77,19 @@ class ErrorApi
     }
 
     /**
+     * Get &#39;Manifest Error&#39; Webhooks (All Manifests)
+     *
+     * @return WebhookPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list() : WebhookPaginationResponse
+    {
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/manifest/error', [],  null, null, true);
+
+        return ObjectMapper::map($response, WebhookPaginationResponse::class);
+    }
+
+    /**
      * Replace &#39;Manifest Error&#39; Webhook Notification
      *
      * @param string $notificationId

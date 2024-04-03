@@ -77,6 +77,19 @@ class FinishedApi
     }
 
     /**
+     * Get &#39;Manifest Finished&#39; Webhooks (All Manifests)
+     *
+     * @return WebhookPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list() : WebhookPaginationResponse
+    {
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/manifest/finished', [],  null, null, true);
+
+        return ObjectMapper::map($response, WebhookPaginationResponse::class);
+    }
+
+    /**
      * Replace Manifest Finished Webhook Notification
      *
      * @param string $notificationId
