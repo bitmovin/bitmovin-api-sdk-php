@@ -22,6 +22,9 @@ class Organization extends BitmovinResource
     /** @var SignupSource */
     public $signupSource;
 
+    /** @var bool */
+    public $mfaRequired;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);

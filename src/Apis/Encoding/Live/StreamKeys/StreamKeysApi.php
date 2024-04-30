@@ -8,10 +8,15 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Live\StreamKeys\Actions\ActionsApi;
+
 class StreamKeysApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var ActionsApi */
+    public $actions;
 
     /**
      * StreamKeysApi constructor.
@@ -23,6 +28,7 @@ class StreamKeysApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->actions = new ActionsApi(null, $this->httpWrapper);
     }
 
     /**
