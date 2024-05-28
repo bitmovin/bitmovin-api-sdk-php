@@ -173,6 +173,12 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AZURE_US_SOUTH_CENTRAL = 'AZURE_US_SOUTH_CENTRAL';
 
     /** @var string */
+    private const AZURE_US_NORTH_CENTRAL = 'AZURE_US_NORTH_CENTRAL';
+
+    /** @var string */
+    private const AZURE_UK_SOUTH = 'AZURE_UK_SOUTH';
+
+    /** @var string */
     private const AKAMAI_BR_GRU = 'AKAMAI_BR_GRU';
 
     /** @var string */
@@ -781,6 +787,26 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AZURE_US_SOUTH_CENTRAL()
     {
         return new CloudRegion(self::AZURE_US_SOUTH_CENTRAL);
+    }
+
+    /**
+     * Azure North Central US, Illinois, USA
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_US_NORTH_CENTRAL()
+    {
+        return new CloudRegion(self::AZURE_US_NORTH_CENTRAL);
+    }
+
+    /**
+     * Azure UK South, London, UK
+     *
+     * @return CloudRegion
+     */
+    public static function AZURE_UK_SOUTH()
+    {
+        return new CloudRegion(self::AZURE_UK_SOUTH);
     }
 
     /**

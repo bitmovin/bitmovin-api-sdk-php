@@ -10,6 +10,7 @@ class CodecConfiguration extends BitmovinResource
     public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "AAC" => AacAudioConfiguration::class,
+        "AUDIO_PASSTHROUGH" => PassthroughAudioConfiguration::class,
         "DTS_PASSTHROUGH" => DtsPassthroughAudioConfiguration::class,
         "DTS" => DtsAudioConfiguration::class,
         "DTSX" => DtsXAudioConfiguration::class,

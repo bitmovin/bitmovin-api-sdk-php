@@ -17,6 +17,9 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     private const DTS_PASSTHROUGH = 'DTS_PASSTHROUGH';
 
     /** @var string */
+    private const AUDIO_PASSTHROUGH = 'AUDIO_PASSTHROUGH';
+
+    /** @var string */
     private const HE_AAC_V1 = 'HE_AAC_V1';
 
     /** @var string */
@@ -129,6 +132,16 @@ class CodecConfigType extends \BitmovinApiSdk\Common\Enum
     public static function DTS_PASSTHROUGH()
     {
         return new CodecConfigType(self::DTS_PASSTHROUGH);
+    }
+
+    /**
+     * AUDIO_PASSTHROUGH
+     *
+     * @return CodecConfigType
+     */
+    public static function AUDIO_PASSTHROUGH()
+    {
+        return new CodecConfigType(self::AUDIO_PASSTHROUGH);
     }
 
     /**

@@ -15,6 +15,7 @@ use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Dtsx\DtsxApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\DolbyAtmos\DolbyAtmosApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV1\HeAacV1Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\HeAacV2\HeAacV2Api;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Passthrough\PassthroughApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Vorbis\VorbisApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Opus\OpusApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Audio\Pcm\PcmApi;
@@ -50,6 +51,9 @@ class AudioApi
 
     /** @var HeAacV2Api */
     public $heAacV2;
+
+    /** @var PassthroughApi */
+    public $passthrough;
 
     /** @var VorbisApi */
     public $vorbis;
@@ -95,6 +99,7 @@ class AudioApi
         $this->dolbyAtmos = new DolbyAtmosApi(null, $this->httpWrapper);
         $this->heAacV1 = new HeAacV1Api(null, $this->httpWrapper);
         $this->heAacV2 = new HeAacV2Api(null, $this->httpWrapper);
+        $this->passthrough = new PassthroughApi(null, $this->httpWrapper);
         $this->vorbis = new VorbisApi(null, $this->httpWrapper);
         $this->opus = new OpusApi(null, $this->httpWrapper);
         $this->pcm = new PcmApi(null, $this->httpWrapper);
