@@ -191,6 +191,12 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AKAMAI_US_SEA = 'AKAMAI_US_SEA';
 
     /** @var string */
+    private const OCI_EU_FRANKFURT_1 = 'OCI_EU_FRANKFURT_1';
+
+    /** @var string */
+    private const OCI_US_ASHBURN_1 = 'OCI_US_ASHBURN_1';
+
+    /** @var string */
     private const NORTH_AMERICA = 'NORTH_AMERICA';
 
     /** @var string */
@@ -847,6 +853,26 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AKAMAI_US_SEA()
     {
         return new CloudRegion(self::AKAMAI_US_SEA);
+    }
+
+    /**
+     * OCI Frankfurt, Germany.  The Oracle Cloud integration is in beta and still undergoing testing.  Some issues or limitations may be present.
+     *
+     * @return CloudRegion
+     */
+    public static function OCI_EU_FRANKFURT_1()
+    {
+        return new CloudRegion(self::OCI_EU_FRANKFURT_1);
+    }
+
+    /**
+     * OCI Ashburn, VA, USA.  The Oracle Cloud integration is in beta and still undergoing testing. Some issues or limitations may be present.
+     *
+     * @return CloudRegion
+     */
+    public static function OCI_US_ASHBURN_1()
+    {
+        return new CloudRegion(self::OCI_US_ASHBURN_1);
     }
 
     /**
