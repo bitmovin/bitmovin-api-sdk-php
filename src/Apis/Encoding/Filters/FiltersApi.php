@@ -12,6 +12,7 @@ use BitmovinApiSdk\Apis\Encoding\Filters\Type\TypeApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Conform\ConformApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Watermark\WatermarkApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\AudioVolume\AudioVolumeApi;
+use BitmovinApiSdk\Apis\Encoding\Filters\AzureSpeechToCaptions\AzureSpeechToCaptionsApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\EnhancedWatermark\EnhancedWatermarkApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Crop\CropApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Rotate\RotateApi;
@@ -41,6 +42,9 @@ class FiltersApi
 
     /** @var AudioVolumeApi */
     public $audioVolume;
+
+    /** @var AzureSpeechToCaptionsApi */
+    public $azureSpeechToCaptions;
 
     /** @var EnhancedWatermarkApi */
     public $enhancedWatermark;
@@ -92,6 +96,7 @@ class FiltersApi
         $this->conform = new ConformApi(null, $this->httpWrapper);
         $this->watermark = new WatermarkApi(null, $this->httpWrapper);
         $this->audioVolume = new AudioVolumeApi(null, $this->httpWrapper);
+        $this->azureSpeechToCaptions = new AzureSpeechToCaptionsApi(null, $this->httpWrapper);
         $this->enhancedWatermark = new EnhancedWatermarkApi(null, $this->httpWrapper);
         $this->crop = new CropApi(null, $this->httpWrapper);
         $this->rotate = new RotateApi(null, $this->httpWrapper);

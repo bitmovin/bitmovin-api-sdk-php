@@ -49,6 +49,9 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const EBU_R128_SINGLE_PASS = 'EBU_R128_SINGLE_PASS';
 
+    /** @var string */
+    private const AZURE_SPEECH_TO_CAPTIONS = 'AZURE_SPEECH_TO_CAPTIONS';
+
     /**
      * @param string $value
      * @return FilterType
@@ -206,6 +209,16 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     public static function EBU_R128_SINGLE_PASS()
     {
         return new FilterType(self::EBU_R128_SINGLE_PASS);
+    }
+
+    /**
+     * AZURE_SPEECH_TO_CAPTIONS
+     *
+     * @return FilterType
+     */
+    public static function AZURE_SPEECH_TO_CAPTIONS()
+    {
+        return new FilterType(self::AZURE_SPEECH_TO_CAPTIONS);
     }
 }
 

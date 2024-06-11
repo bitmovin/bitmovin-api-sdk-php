@@ -24,6 +24,7 @@ class Filter extends BitmovinResource
         "INTERLACE" => InterlaceFilter::class,
         "AUDIO_VOLUME" => AudioVolumeFilter::class,
         "EBU_R128_SINGLE_PASS" => EbuR128SinglePassFilter::class,
+        "AZURE_SPEECH_TO_CAPTIONS" => AzureSpeechToCaptionsFilter::class,
     ];
 
     public function __construct($attributes = null)
