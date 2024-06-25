@@ -26,6 +26,9 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     private const MXF = 'MXF';
 
     /** @var string */
+    private const PROGRESSIVE_WAV = 'PROGRESSIVE_WAV';
+
+    /** @var string */
     private const PROGRESSIVE_WEBM = 'PROGRESSIVE_WEBM';
 
     /** @var string */
@@ -126,6 +129,16 @@ class MuxingType extends \BitmovinApiSdk\Common\Enum
     public static function MXF()
     {
         return new MuxingType(self::MXF);
+    }
+
+    /**
+     * Single file output as Waveform Audio File Format containing a single PCM audio stream
+     *
+     * @return MuxingType
+     */
+    public static function PROGRESSIVE_WAV()
+    {
+        return new MuxingType(self::PROGRESSIVE_WAV);
     }
 
     /**

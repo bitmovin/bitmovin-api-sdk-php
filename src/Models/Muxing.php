@@ -37,6 +37,7 @@ class Muxing extends BitmovinResource
         "WEBM" => WebmMuxing::class,
         "MP3" => Mp3Muxing::class,
         "MXF" => MxfMuxing::class,
+        "PROGRESSIVE_WAV" => ProgressiveWavMuxing::class,
         "PROGRESSIVE_WEBM" => ProgressiveWebmMuxing::class,
         "PROGRESSIVE_MOV" => ProgressiveMovMuxing::class,
         "PROGRESSIVE_TS" => ProgressiveTsMuxing::class,
