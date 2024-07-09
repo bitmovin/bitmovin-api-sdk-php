@@ -311,7 +311,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Maximum Bitrate
+     * Maximum Bitrate (bps)
      *
      * @param int $maxBitrate
      * @return $this
@@ -324,7 +324,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Minimum Bitrate
+     * Minimum Bitrate (bps)
      *
      * @param int $minBitrate
      * @return $this
@@ -337,7 +337,7 @@ class H264VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Playback device buffer size
+     * Playback device buffer size (bits)
      *
      * @param int $bufsize
      * @return $this

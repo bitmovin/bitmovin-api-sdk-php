@@ -58,6 +58,9 @@ class GoogleCloudRegion extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const US_WEST_2 = 'US_WEST_2';
 
+    /** @var string */
+    private const ME_CENTRAL_2 = 'ME_CENTRAL_2';
+
     /**
      * @param string $value
      * @return GoogleCloudRegion
@@ -245,6 +248,16 @@ class GoogleCloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function US_WEST_2()
     {
         return new GoogleCloudRegion(self::US_WEST_2);
+    }
+
+    /**
+     * Dammam, Saudi Arabia
+     *
+     * @return GoogleCloudRegion
+     */
+    public static function ME_CENTRAL_2()
+    {
+        return new GoogleCloudRegion(self::ME_CENTRAL_2);
     }
 }
 

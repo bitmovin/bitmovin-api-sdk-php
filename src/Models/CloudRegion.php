@@ -107,6 +107,9 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const GOOGLE_US_WEST_2 = 'GOOGLE_US_WEST_2';
 
     /** @var string */
+    private const GOOGLE_ME_CENTRAL_2 = 'GOOGLE_ME_CENTRAL_2';
+
+    /** @var string */
     private const AZURE_ASIA_EAST = 'AZURE_ASIA_EAST';
 
     /** @var string */
@@ -573,6 +576,16 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function GOOGLE_US_WEST_2()
     {
         return new CloudRegion(self::GOOGLE_US_WEST_2);
+    }
+
+    /**
+     * Google Dammam, Saudi Arabia
+     *
+     * @return CloudRegion
+     */
+    public static function GOOGLE_ME_CENTRAL_2()
+    {
+        return new CloudRegion(self::GOOGLE_ME_CENTRAL_2);
     }
 
     /**

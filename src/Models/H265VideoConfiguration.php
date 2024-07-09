@@ -417,7 +417,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Maximum Bitrate
+     * Maximum Bitrate (bps)
      *
      * @param int $maxBitrate
      * @return $this
@@ -430,7 +430,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Minimum Bitrate
+     * Minimum Bitrate (bps)
      *
      * @param int $minBitrate
      * @return $this
@@ -443,7 +443,7 @@ class H265VideoConfiguration extends VideoConfiguration
     }
 
     /**
-     * Size of the VBV buffer (kbits)
+     * Size of the VBV buffer (bits)
      *
      * @param int $bufsize
      * @return $this

@@ -10,6 +10,9 @@ class PcmSampleFormat extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const S24LE = 'S24LE';
 
+    /** @var string */
+    private const S32LE = 'S32LE';
+
     /**
      * @param string $value
      * @return PcmSampleFormat
@@ -37,6 +40,16 @@ class PcmSampleFormat extends \BitmovinApiSdk\Common\Enum
     public static function S24LE()
     {
         return new PcmSampleFormat(self::S24LE);
+    }
+
+    /**
+     * Singed 32 bit little endian sampling
+     *
+     * @return PcmSampleFormat
+     */
+    public static function S32LE()
+    {
+        return new PcmSampleFormat(self::S32LE);
     }
 }
 
