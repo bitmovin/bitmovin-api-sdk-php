@@ -13,6 +13,9 @@ class ResetLiveManifestTimeShift extends BitmovinResponse
     /** @var string[] */
     public $manifestIds;
 
+    /** @var bool */
+    public $shiftProgressiveMuxingStartPosition;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -40,6 +43,19 @@ class ResetLiveManifestTimeShift extends BitmovinResponse
     public function manifestIds(array $manifestIds)
     {
         $this->manifestIds = $manifestIds;
+
+        return $this;
+    }
+
+    /**
+     * If set to true, the Progressive muxing start position will be shifted to the start of the first remaining segment after the removal.  NOTE: This only works for Progressive MP4 muxings.
+     *
+     * @param bool $shiftProgressiveMuxingStartPosition
+     * @return $this
+     */
+    public function shiftProgressiveMuxingStartPosition(bool $shiftProgressiveMuxingStartPosition)
+    {
+        $this->shiftProgressiveMuxingStartPosition = $shiftProgressiveMuxingStartPosition;
 
         return $this;
     }

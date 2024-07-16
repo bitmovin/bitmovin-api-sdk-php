@@ -10,9 +10,6 @@ class Keyframe extends BitmovinResource
     /** @var float */
     public $time;
 
-    /** @var bool */
-    public $segmentCut;
-
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -27,19 +24,6 @@ class Keyframe extends BitmovinResource
     public function time(float $time)
     {
         $this->time = $time;
-
-        return $this;
-    }
-
-    /**
-     * Instructs the encoder to cut the segment at this position
-     *
-     * @param bool $segmentCut
-     * @return $this
-     */
-    public function segmentCut(bool $segmentCut)
-    {
-        $this->segmentCut = $segmentCut;
 
         return $this;
     }
