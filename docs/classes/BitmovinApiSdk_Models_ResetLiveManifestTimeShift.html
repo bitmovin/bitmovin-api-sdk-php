@@ -68,11 +68,13 @@
         <div class="synopsis">class ResetLiveManifestTimeShift
                 extends <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse.html">BitmovinResponse</a>
             {<br/><ul class="none"><li>// members</li><li>public float <a href="#members">$residualPeriodInSeconds</a>;
+                    </li><li>public float <a href="#members">$offsetInSeconds</a>;
                     </li><li>public array <a href="#members">$manifestIds</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$shiftProgressiveMuxingStartPosition</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/residualPeriodInSeconds.html">residualPeriodInSeconds</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/offsetInSeconds.html">offsetInSeconds</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/manifestIds.html">manifestIds</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/shiftProgressiveMuxingStartPosition.html">shiftProgressiveMuxingStartPosition</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResponse" href="../classes/BitmovinApiSdk_Models_BitmovinResponse/__construct.html">__construct</a>()
@@ -102,6 +104,9 @@
                 —
                 <a title="BitmovinApiSdk\Models\string" href="../classes/BitmovinApiSdk_Models_string.html">BitmovinApiSdk\Models\string</a>[]
                     </li>
+            <li id="offsetInSeconds"><strong>$offsetInSeconds</strong>
+                —
+                float</li>
             <li id="residualPeriodInSeconds"><strong>$residualPeriodInSeconds</strong>
                 —
                 float</li>
@@ -119,6 +124,8 @@
             </li>
             <li id="manifestIds"><a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/manifestIds.html">manifestIds()</a>
                 — The ids of the manifests to update. If this property is not set, all manifests tied to the encoding are updated.</li>
+            <li id="offsetInSeconds"><a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/offsetInSeconds.html">offsetInSeconds()</a>
+                — Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (&amp;#x60;segment_80.ts&amp;#x60;).  This means the manifest contains &amp;#x60;segment_20.ts&amp;#x60; to &amp;#x60;segment_80.ts&amp;#x60; (timeshift of 2 minutes equals 60 segments in manifest) If you set &amp;#x60;offsetInSeconds&amp;#x60; to &amp;#x60;120&amp;#x60;, all segments below segment number 60 (&amp;#x60;segment_60.ts&amp;#x60;) will be removed. (&amp;#x60;targetSegmentNumber &amp;#x3D; offsetInSeconds / segmentLength&amp;#x60;) The manifests will then contain &amp;#x60;segment_60.ts&amp;#x60; to &amp;#x60;segment_80.ts&amp;#x60; *Note:* Only &amp;#x60;offsetInSeconds&amp;#x60; or &amp;#x60;residualPeriodInSeconds&amp;#x60; can be set.</li>
             <li id="residualPeriodInSeconds"><a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/residualPeriodInSeconds.html">residualPeriodInSeconds()</a>
                 — Determines how many seconds will be left in the manifest after segments are removed. If this is not set, all but one segment will be removed.</li>
             <li id="shiftProgressiveMuxingStartPosition"><a title="BitmovinApiSdk\Models\ResetLiveManifestTimeShift" href="../classes/BitmovinApiSdk_Models_ResetLiveManifestTimeShift/shiftProgressiveMuxingStartPosition.html">shiftProgressiveMuxingStartPosition()</a>

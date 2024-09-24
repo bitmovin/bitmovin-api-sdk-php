@@ -10,6 +10,9 @@ class ResetLiveManifestTimeShift extends BitmovinResponse
     /** @var float */
     public $residualPeriodInSeconds;
 
+    /** @var float */
+    public $offsetInSeconds;
+
     /** @var string[] */
     public $manifestIds;
 
@@ -30,6 +33,19 @@ class ResetLiveManifestTimeShift extends BitmovinResponse
     public function residualPeriodInSeconds(float $residualPeriodInSeconds)
     {
         $this->residualPeriodInSeconds = $residualPeriodInSeconds;
+
+        return $this;
+    }
+
+    /**
+     * Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (&#x60;segment_80.ts&#x60;).  This means the manifest contains &#x60;segment_20.ts&#x60; to &#x60;segment_80.ts&#x60; (timeshift of 2 minutes equals 60 segments in manifest) If you set &#x60;offsetInSeconds&#x60; to &#x60;120&#x60;, all segments below segment number 60 (&#x60;segment_60.ts&#x60;) will be removed. (&#x60;targetSegmentNumber &#x3D; offsetInSeconds / segmentLength&#x60;) The manifests will then contain &#x60;segment_60.ts&#x60; to &#x60;segment_80.ts&#x60; *Note:* Only &#x60;offsetInSeconds&#x60; or &#x60;residualPeriodInSeconds&#x60; can be set.
+     *
+     * @param float $offsetInSeconds
+     * @return $this
+     */
+    public function offsetInSeconds(float $offsetInSeconds)
+    {
+        $this->offsetInSeconds = $offsetInSeconds;
 
         return $this;
     }
