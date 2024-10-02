@@ -67,8 +67,7 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class H265PerTitleConfiguration
                 extends <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration.html">PerTitleConfiguration</a>
-            {<br/><ul class="none"><li>// members</li><li>public float <a href="#members">$targetQualityCrf</a>;
-                    </li><li>public float <a href="#members">$codecMinBitrateFactor</a>;
+            {<br/><ul class="none"><li>// members</li><li>public float <a href="#members">$codecMinBitrateFactor</a>;
                     </li><li>public float <a href="#members">$codecMaxBitrateFactor</a>;
                     </li><li>public float <a href="#members">$codecBufsizeFactor</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\PerTitleConfiguration">PerTitleConfiguration</span></li><li>public int <a href="#members">$minBitrate</a>;
@@ -78,8 +77,9 @@
                         </li><li>public <span title="BitmovinApiSdk\Models\AutoRepresentation">AutoRepresentation</span> <a href="#members">$autoRepresentations</a>;
                         </li><li>public float <a href="#members">$complexityFactor</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\PerTitleFixedResolutionAndBitrateConfiguration">PerTitleFixedResolutionAndBitrateConfiguration</span> <a href="#members">$fixedResolutionAndBitrateConfiguration</a>;
+                        </li><li>public float <a href="#members">$targetQualityCrf</a>;
+                        </li><li>public float <a href="#members">$resolutionScaleFactor</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/__construct.html">__construct</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/targetQualityCrf.html">targetQualityCrf</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/codecMinBitrateFactor.html">codecMinBitrateFactor</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/codecMaxBitrateFactor.html">codecMaxBitrateFactor</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/codecBufsizeFactor.html">codecBufsizeFactor</a>()
@@ -91,6 +91,8 @@
                         </li><li>public $this <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/autoRepresentations.html">autoRepresentations</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/complexityFactor.html">complexityFactor</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/fixedResolutionAndBitrateConfiguration.html">fixedResolutionAndBitrateConfiguration</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/targetQualityCrf.html">targetQualityCrf</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/resolutionScaleFactor.html">resolutionScaleFactor</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -140,6 +142,9 @@
             <li id="minBitrateStepSize"><strong>$minBitrateStepSize</strong>
                 —
                 float</li>
+            <li id="resolutionScaleFactor"><strong>$resolutionScaleFactor</strong>
+                —
+                float</li>
             <li id="targetQualityCrf"><strong>$targetQualityCrf</strong>
                 —
                 float</li>
@@ -158,8 +163,6 @@
                 — This factor is used to calculate the maxBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate</li>
             <li id="codecMinBitrateFactor"><a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/codecMinBitrateFactor.html">codecMinBitrateFactor()</a>
                 — This factor is used to calculate the minBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate</li>
-            <li id="targetQualityCrf"><a title="BitmovinApiSdk\Models\H265PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_H265PerTitleConfiguration/targetQualityCrf.html">targetQualityCrf()</a>
-                — Desired target quality of the highest representation expressed as CRF value</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration.html">BitmovinApiSdk\Models\PerTitleConfiguration</a></h3>
           <h4>public</h4>
@@ -178,6 +181,10 @@
                 — The minimum bitrate that will be used by the Per-Title algorithm.</li>
             <li id="minBitrateStepSize"><a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/minBitrateStepSize.html">minBitrateStepSize()</a>
                 — The minimum ratio between the bitrates of generated renditions, e.g. if the first bitrate is 240,000, a minimum ratio of 1.5 will require the next higher bitrate to be at least 360,000</li>
+            <li id="resolutionScaleFactor"><a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/resolutionScaleFactor.html">resolutionScaleFactor()</a>
+                — This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.</li>
+            <li id="targetQualityCrf"><a title="BitmovinApiSdk\Models\PerTitleConfiguration" href="../classes/BitmovinApiSdk_Models_PerTitleConfiguration/targetQualityCrf.html">targetQualityCrf()</a>
+                — Desired target quality of the highest representation expressed as CRF value</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">BitmovinApiSdk\Common\ApiResource</a></h3>
           <h4>public</h4>
