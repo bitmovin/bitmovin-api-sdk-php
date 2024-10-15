@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Captions\Cea\Scc\SccApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\Captions\Cea\Srt\SrtApi;
 
 class CeaApi
 {
@@ -17,6 +18,9 @@ class CeaApi
 
     /** @var SccApi */
     public $scc;
+
+    /** @var SrtApi */
+    public $srt;
 
     /**
      * CeaApi constructor.
@@ -29,5 +33,6 @@ class CeaApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->scc = new SccApi(null, $this->httpWrapper);
+        $this->srt = new SrtApi(null, $this->httpWrapper);
     }
 }

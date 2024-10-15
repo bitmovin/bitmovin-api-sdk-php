@@ -14,9 +14,6 @@ class DolbyVisionProfile extends \BitmovinApiSdk\Common\Enum
     private const DVHE_07 = 'DVHE_07';
 
     /** @var string */
-    private const DVHE_08_1 = 'DVHE_08_1';
-
-    /** @var string */
     private const HEV1_08 = 'HEV1_08';
 
     /** @var string */
@@ -59,16 +56,6 @@ class DolbyVisionProfile extends \BitmovinApiSdk\Common\Enum
     public static function DVHE_07()
     {
         return new DolbyVisionProfile(self::DVHE_07);
-    }
-
-    /**
-     * Dolby Vision Profile 8.1 (HDR10 cross-compatibility)
-     *
-     * @return DolbyVisionProfile
-     */
-    public static function DVHE_08_1()
-    {
-        return new DolbyVisionProfile(self::DVHE_08_1);
     }
 
     /**
