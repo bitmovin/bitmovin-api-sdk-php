@@ -185,10 +185,37 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AKAMAI_BR_GRU = 'AKAMAI_BR_GRU';
 
     /** @var string */
+    private const AKAMAI_ES_MAD = 'AKAMAI_ES_MAD';
+
+    /** @var string */
     private const AKAMAI_FR_PAR = 'AKAMAI_FR_PAR';
 
     /** @var string */
+    private const AKAMAI_ID_CGK = 'AKAMAI_ID_CGK';
+
+    /** @var string */
+    private const AKAMAI_IN_MAA = 'AKAMAI_IN_MAA';
+
+    /** @var string */
+    private const AKAMAI_IT_MIL = 'AKAMAI_IT_MIL';
+
+    /** @var string */
     private const AKAMAI_JP_OSA = 'AKAMAI_JP_OSA';
+
+    /** @var string */
+    private const AKAMAI_NL_AMS = 'AKAMAI_NL_AMS';
+
+    /** @var string */
+    private const AKAMAI_SE_STO = 'AKAMAI_SE_STO';
+
+    /** @var string */
+    private const AKAMAI_US_LAX = 'AKAMAI_US_LAX';
+
+    /** @var string */
+    private const AKAMAI_US_MIA = 'AKAMAI_US_MIA';
+
+    /** @var string */
+    private const AKAMAI_US_ORD = 'AKAMAI_US_ORD';
 
     /** @var string */
     private const AKAMAI_US_SEA = 'AKAMAI_US_SEA';
@@ -839,6 +866,16 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * Akamai Madrid, Spain
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_ES_MAD()
+    {
+        return new CloudRegion(self::AKAMAI_ES_MAD);
+    }
+
+    /**
      * Akamai Paris, France
      *
      * @return CloudRegion
@@ -849,6 +886,36 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * Akamai Jakarta, Indonesia
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_ID_CGK()
+    {
+        return new CloudRegion(self::AKAMAI_ID_CGK);
+    }
+
+    /**
+     * Akamai Chennai, India
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_IN_MAA()
+    {
+        return new CloudRegion(self::AKAMAI_IN_MAA);
+    }
+
+    /**
+     * Akamai Milan, Italy
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_IT_MIL()
+    {
+        return new CloudRegion(self::AKAMAI_IT_MIL);
+    }
+
+    /**
      * Akamai Osaka, Japan
      *
      * @return CloudRegion
@@ -856,6 +923,56 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AKAMAI_JP_OSA()
     {
         return new CloudRegion(self::AKAMAI_JP_OSA);
+    }
+
+    /**
+     * Akamai Amsterdam, Netherlands
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_NL_AMS()
+    {
+        return new CloudRegion(self::AKAMAI_NL_AMS);
+    }
+
+    /**
+     * Akamai Stockholm, Sweden
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_SE_STO()
+    {
+        return new CloudRegion(self::AKAMAI_SE_STO);
+    }
+
+    /**
+     * Akamai Los Angeles, USA
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_US_LAX()
+    {
+        return new CloudRegion(self::AKAMAI_US_LAX);
+    }
+
+    /**
+     * Akamai Miami, USA
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_US_MIA()
+    {
+        return new CloudRegion(self::AKAMAI_US_MIA);
+    }
+
+    /**
+     * Akamai Chicago, USA
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_US_ORD()
+    {
+        return new CloudRegion(self::AKAMAI_US_ORD);
     }
 
     /**
