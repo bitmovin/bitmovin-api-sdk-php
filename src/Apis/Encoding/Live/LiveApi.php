@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Live\StreamKeys\StreamKeysApi;
+use BitmovinApiSdk\Apis\Encoding\Live\StandbyPools\StandbyPoolsApi;
 
 class LiveApi
 {
@@ -17,6 +18,9 @@ class LiveApi
 
     /** @var StreamKeysApi */
     public $streamKeys;
+
+    /** @var StandbyPoolsApi */
+    public $standbyPools;
 
     /**
      * LiveApi constructor.
@@ -29,5 +33,6 @@ class LiveApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->streamKeys = new StreamKeysApi(null, $this->httpWrapper);
+        $this->standbyPools = new StandbyPoolsApi(null, $this->httpWrapper);
     }
 }

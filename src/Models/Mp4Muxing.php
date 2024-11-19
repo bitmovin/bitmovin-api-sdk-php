@@ -13,9 +13,6 @@ class Mp4Muxing extends Muxing
     /** @var int */
     public $fragmentDuration;
 
-    /** @var TimeCode */
-    public $timeCode;
-
     /** @var FragmentedMp4MuxingManifestType */
     public $fragmentedMP4MuxingManifestType;
 
@@ -25,7 +22,6 @@ class Mp4Muxing extends Muxing
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
-        $this->timeCode = ObjectMapper::map($this->timeCode, TimeCode::class);
         $this->fragmentedMP4MuxingManifestType = ObjectMapper::map($this->fragmentedMP4MuxingManifestType, FragmentedMp4MuxingManifestType::class);
         $this->dolbyVisionConfiguration = ObjectMapper::map($this->dolbyVisionConfiguration, DolbyVisionMuxingConfiguration::class);
     }
@@ -52,19 +48,6 @@ class Mp4Muxing extends Muxing
     public function fragmentDuration(int $fragmentDuration)
     {
         $this->fragmentDuration = $fragmentDuration;
-
-        return $this;
-    }
-
-    /**
-     * timeCode
-     *
-     * @param TimeCode $timeCode
-     * @return $this
-     */
-    public function timeCode(TimeCode $timeCode)
-    {
-        $this->timeCode = $timeCode;
 
         return $this;
     }
