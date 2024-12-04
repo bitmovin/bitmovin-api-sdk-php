@@ -10,6 +10,15 @@ class LiveEncodingStatsEventDetails extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\LiveEncodingEventName */
     public $eventType;
 
+    /** @var string */
+    public $message;
+
+    /** @var string[] */
+    public $midRollAssetNames;
+
+    /** @var float */
+    public $durationInSeconds;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
