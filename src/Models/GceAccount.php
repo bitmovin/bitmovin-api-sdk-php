@@ -8,6 +8,9 @@ use BitmovinApiSdk\Common\ObjectMapper;
 class GceAccount extends BitmovinResource
 {
     /** @var string */
+    public $serviceAccountCredentials;
+
+    /** @var string */
     public $serviceAccountEmail;
 
     /** @var string */
@@ -22,7 +25,20 @@ class GceAccount extends BitmovinResource
     }
 
     /**
-     * Email address of the Google service account that will be used to spin up VMs (required)
+     * GCP service account credentials JSON
+     *
+     * @param string $serviceAccountCredentials
+     * @return $this
+     */
+    public function serviceAccountCredentials(string $serviceAccountCredentials)
+    {
+        $this->serviceAccountCredentials = $serviceAccountCredentials;
+
+        return $this;
+    }
+
+    /**
+     * Email address of the Google service account that will be used to spin up VMs
      *
      * @param string $serviceAccountEmail
      * @return $this
@@ -35,7 +51,7 @@ class GceAccount extends BitmovinResource
     }
 
     /**
-     * Google private key of the Google service account that will be used to spin up VMs (required)
+     * Google private key of the Google service account that will be used to spin up VMs
      *
      * @param string $privateKey
      * @return $this
@@ -48,7 +64,7 @@ class GceAccount extends BitmovinResource
     }
 
     /**
-     * ID of the GCP project in which the VMs are supposed to run. (required)
+     * ID of the GCP project in which the VMs are supposed to run.
      *
      * @param string $projectId
      * @return $this

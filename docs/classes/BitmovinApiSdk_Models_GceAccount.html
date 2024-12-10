@@ -67,7 +67,8 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class GceAccount
                 extends <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinResource</a>
-            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$serviceAccountEmail</a>;
+            {<br/><ul class="none"><li>// members</li><li>public string <a href="#members">$serviceAccountCredentials</a>;
+                    </li><li>public string <a href="#members">$serviceAccountEmail</a>;
                     </li><li>public string <a href="#members">$privateKey</a>;
                     </li><li>public string <a href="#members">$projectId</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public string <a href="#members">$name</a>;
@@ -77,6 +78,7 @@
                         </li><li>public mixed <a href="#members">$customData</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/__construct.html">__construct</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/serviceAccountCredentials.html">serviceAccountCredentials</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/serviceAccountEmail.html">serviceAccountEmail</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/privateKey.html">privateKey</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/projectId.html">projectId</a>()
@@ -128,6 +130,9 @@
             <li id="projectId"><strong>$projectId</strong>
                 —
                 string</li>
+            <li id="serviceAccountCredentials"><strong>$serviceAccountCredentials</strong>
+                —
+                string</li>
             <li id="serviceAccountEmail"><strong>$serviceAccountEmail</strong>
                 —
                 string</li>
@@ -141,11 +146,13 @@
               <a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/__construct.html">__construct()</a>
             </li>
             <li id="privateKey"><a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/privateKey.html">privateKey()</a>
-                — Google private key of the Google service account that will be used to spin up VMs (required)</li>
+                — Google private key of the Google service account that will be used to spin up VMs</li>
             <li id="projectId"><a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/projectId.html">projectId()</a>
-                — ID of the GCP project in which the VMs are supposed to run. (required)</li>
+                — ID of the GCP project in which the VMs are supposed to run.</li>
+            <li id="serviceAccountCredentials"><a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/serviceAccountCredentials.html">serviceAccountCredentials()</a>
+                — GCP service account credentials JSON</li>
             <li id="serviceAccountEmail"><a title="BitmovinApiSdk\Models\GceAccount" href="../classes/BitmovinApiSdk_Models_GceAccount/serviceAccountEmail.html">serviceAccountEmail()</a>
-                — Email address of the Google service account that will be used to spin up VMs (required)</li>
+                — Email address of the Google service account that will be used to spin up VMs</li>
           </ul>
           <h3>Inherited from <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource.html">BitmovinApiSdk\Models\BitmovinResource</a></h3>
           <h4>public</h4>
