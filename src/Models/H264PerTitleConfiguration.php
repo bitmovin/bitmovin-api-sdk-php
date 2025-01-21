@@ -22,7 +22,7 @@ class H264PerTitleConfiguration extends PerTitleConfiguration
     }
 
     /**
-     * This factor is used to calculate the minBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate
+     * This factor doesn&#39;t have any impact!
      *
      * @param float $codecMinBitrateFactor
      * @return $this
