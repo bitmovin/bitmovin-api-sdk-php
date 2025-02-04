@@ -22,6 +22,9 @@ class DashManifest extends Manifest
     /** @var DashEditionCompatibility */
     public $dashEditionCompatibility;
 
+    /** @var DashISO8601TimestampFormat */
+    public $iso8601TimestampFormat;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -29,6 +32,7 @@ class DashManifest extends Manifest
         $this->namespaces = ObjectMapper::map($this->namespaces, XmlNamespace::class);
         $this->utcTimings = ObjectMapper::map($this->utcTimings, UtcTiming::class);
         $this->dashEditionCompatibility = ObjectMapper::map($this->dashEditionCompatibility, DashEditionCompatibility::class);
+        $this->iso8601TimestampFormat = ObjectMapper::map($this->iso8601TimestampFormat, DashISO8601TimestampFormat::class);
     }
 
     /**
@@ -92,6 +96,19 @@ class DashManifest extends Manifest
     public function dashEditionCompatibility(DashEditionCompatibility $dashEditionCompatibility)
     {
         $this->dashEditionCompatibility = $dashEditionCompatibility;
+
+        return $this;
+    }
+
+    /**
+     * Determines how timestamps should appear in the manifest
+     *
+     * @param DashISO8601TimestampFormat $iso8601TimestampFormat
+     * @return $this
+     */
+    public function iso8601TimestampFormat(DashISO8601TimestampFormat $iso8601TimestampFormat)
+    {
+        $this->iso8601TimestampFormat = $iso8601TimestampFormat;
 
         return $this;
     }

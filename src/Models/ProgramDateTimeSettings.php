@@ -10,10 +10,14 @@ class ProgramDateTimeSettings extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\ProgramDateTimeSource */
     public $programDateTimeSource;
 
+    /** @var \BitmovinApiSdk\Models\ProgramDateTimePlacement */
+    public $programDateTimePlacement;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->programDateTimeSource = ObjectMapper::map($this->programDateTimeSource, ProgramDateTimeSource::class);
+        $this->programDateTimePlacement = ObjectMapper::map($this->programDateTimePlacement, ProgramDateTimePlacement::class);
     }
 
     /**
@@ -25,6 +29,19 @@ class ProgramDateTimeSettings extends \BitmovinApiSdk\Common\ApiResource
     public function programDateTimeSource(\BitmovinApiSdk\Models\ProgramDateTimeSource $programDateTimeSource)
     {
         $this->programDateTimeSource = $programDateTimeSource;
+
+        return $this;
+    }
+
+    /**
+     * programDateTimePlacement
+     *
+     * @param \BitmovinApiSdk\Models\ProgramDateTimePlacement $programDateTimePlacement
+     * @return $this
+     */
+    public function programDateTimePlacement(\BitmovinApiSdk\Models\ProgramDateTimePlacement $programDateTimePlacement)
+    {
+        $this->programDateTimePlacement = $programDateTimePlacement;
 
         return $this;
     }
