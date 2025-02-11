@@ -29,9 +29,6 @@ class PerTitleConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public $fixedResolutionAndBitrateConfiguration;
 
     /** @var float */
-    public $targetQualityCrf;
-
-    /** @var float */
     public $resolutionScaleFactor;
 
     public function __construct($attributes = null)
@@ -81,7 +78,7 @@ class PerTitleConfiguration extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The maximum ratio between the bitrates of neighbouring renditions, e.g., if the first bitrate is 240,000, a maximum ratio of 1.5 will require the next higher bitrate to be at most 360,000
+     * The maximum ratio between the bitrates of neighbouring renditions, e.g., if the first bitrate is 240,000, a maximum ratio of 1.9 will require the next higher bitrate to be at most 456,000
      *
      * @param float $maxBitrateStepSize
      * @return $this
@@ -128,19 +125,6 @@ class PerTitleConfiguration extends \BitmovinApiSdk\Common\ApiResource
     public function fixedResolutionAndBitrateConfiguration(PerTitleFixedResolutionAndBitrateConfiguration $fixedResolutionAndBitrateConfiguration)
     {
         $this->fixedResolutionAndBitrateConfiguration = $fixedResolutionAndBitrateConfiguration;
-
-        return $this;
-    }
-
-    /**
-     * Desired target quality of the highest representation expressed as CRF value
-     *
-     * @param float $targetQualityCrf
-     * @return $this
-     */
-    public function targetQualityCrf(float $targetQualityCrf)
-    {
-        $this->targetQualityCrf = $targetQualityCrf;
 
         return $this;
     }

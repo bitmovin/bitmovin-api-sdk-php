@@ -16,6 +16,9 @@ class H265PerTitleConfiguration extends PerTitleConfiguration
     /** @var float */
     public $codecBufsizeFactor;
 
+    /** @var float */
+    public $targetQualityCrf;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -56,6 +59,19 @@ class H265PerTitleConfiguration extends PerTitleConfiguration
     public function codecBufsizeFactor(float $codecBufsizeFactor)
     {
         $this->codecBufsizeFactor = $codecBufsizeFactor;
+
+        return $this;
+    }
+
+    /**
+     * Desired target quality of the highest representation expressed as CRF value
+     *
+     * @param float $targetQualityCrf
+     * @return $this
+     */
+    public function targetQualityCrf(float $targetQualityCrf)
+    {
+        $this->targetQualityCrf = $targetQualityCrf;
 
         return $this;
     }
