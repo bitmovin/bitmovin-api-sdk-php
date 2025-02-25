@@ -97,6 +97,66 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     /** @var string */
     public $customData30;
 
+    /** @var string */
+    public $customData31;
+
+    /** @var string */
+    public $customData32;
+
+    /** @var string */
+    public $customData33;
+
+    /** @var string */
+    public $customData34;
+
+    /** @var string */
+    public $customData35;
+
+    /** @var string */
+    public $customData36;
+
+    /** @var string */
+    public $customData37;
+
+    /** @var string */
+    public $customData38;
+
+    /** @var string */
+    public $customData39;
+
+    /** @var string */
+    public $customData40;
+
+    /** @var string */
+    public $customData41;
+
+    /** @var string */
+    public $customData42;
+
+    /** @var string */
+    public $customData43;
+
+    /** @var string */
+    public $customData44;
+
+    /** @var string */
+    public $customData45;
+
+    /** @var string */
+    public $customData46;
+
+    /** @var string */
+    public $customData47;
+
+    /** @var string */
+    public $customData48;
+
+    /** @var string */
+    public $customData49;
+
+    /** @var string */
+    public $customData50;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -488,6 +548,266 @@ class AnalyticsLicenseCustomDataFieldLabels extends \BitmovinApiSdk\Common\ApiRe
     public function customData30(string $customData30)
     {
         $this->customData30 = $customData30;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 31
+     *
+     * @param string $customData31
+     * @return $this
+     */
+    public function customData31(string $customData31)
+    {
+        $this->customData31 = $customData31;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 32
+     *
+     * @param string $customData32
+     * @return $this
+     */
+    public function customData32(string $customData32)
+    {
+        $this->customData32 = $customData32;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 33
+     *
+     * @param string $customData33
+     * @return $this
+     */
+    public function customData33(string $customData33)
+    {
+        $this->customData33 = $customData33;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 34
+     *
+     * @param string $customData34
+     * @return $this
+     */
+    public function customData34(string $customData34)
+    {
+        $this->customData34 = $customData34;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 35
+     *
+     * @param string $customData35
+     * @return $this
+     */
+    public function customData35(string $customData35)
+    {
+        $this->customData35 = $customData35;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 36
+     *
+     * @param string $customData36
+     * @return $this
+     */
+    public function customData36(string $customData36)
+    {
+        $this->customData36 = $customData36;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 37
+     *
+     * @param string $customData37
+     * @return $this
+     */
+    public function customData37(string $customData37)
+    {
+        $this->customData37 = $customData37;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 38
+     *
+     * @param string $customData38
+     * @return $this
+     */
+    public function customData38(string $customData38)
+    {
+        $this->customData38 = $customData38;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 39
+     *
+     * @param string $customData39
+     * @return $this
+     */
+    public function customData39(string $customData39)
+    {
+        $this->customData39 = $customData39;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 40
+     *
+     * @param string $customData40
+     * @return $this
+     */
+    public function customData40(string $customData40)
+    {
+        $this->customData40 = $customData40;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 41
+     *
+     * @param string $customData41
+     * @return $this
+     */
+    public function customData41(string $customData41)
+    {
+        $this->customData41 = $customData41;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 42
+     *
+     * @param string $customData42
+     * @return $this
+     */
+    public function customData42(string $customData42)
+    {
+        $this->customData42 = $customData42;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 43
+     *
+     * @param string $customData43
+     * @return $this
+     */
+    public function customData43(string $customData43)
+    {
+        $this->customData43 = $customData43;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 44
+     *
+     * @param string $customData44
+     * @return $this
+     */
+    public function customData44(string $customData44)
+    {
+        $this->customData44 = $customData44;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 45
+     *
+     * @param string $customData45
+     * @return $this
+     */
+    public function customData45(string $customData45)
+    {
+        $this->customData45 = $customData45;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 46
+     *
+     * @param string $customData46
+     * @return $this
+     */
+    public function customData46(string $customData46)
+    {
+        $this->customData46 = $customData46;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 47
+     *
+     * @param string $customData47
+     * @return $this
+     */
+    public function customData47(string $customData47)
+    {
+        $this->customData47 = $customData47;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 48
+     *
+     * @param string $customData48
+     * @return $this
+     */
+    public function customData48(string $customData48)
+    {
+        $this->customData48 = $customData48;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 49
+     *
+     * @param string $customData49
+     * @return $this
+     */
+    public function customData49(string $customData49)
+    {
+        $this->customData49 = $customData49;
+
+        return $this;
+    }
+
+    /**
+     * Label for field Custom Data 50
+     *
+     * @param string $customData50
+     * @return $this
+     */
+    public function customData50(string $customData50)
+    {
+        $this->customData50 = $customData50;
 
         return $this;
     }
