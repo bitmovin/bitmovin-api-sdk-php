@@ -43,6 +43,9 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var PerTitle */
     public $perTitle;
 
+    /** @var AiContentAnalysis */
+    public $aiContentAnalysis;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -57,6 +60,7 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->vodSmoothManifests = ObjectMapper::map($this->vodSmoothManifests, ManifestResource::class);
         $this->manifestGenerator = ObjectMapper::map($this->manifestGenerator, ManifestGenerator::class);
         $this->perTitle = ObjectMapper::map($this->perTitle, PerTitle::class);
+        $this->aiContentAnalysis = ObjectMapper::map($this->aiContentAnalysis, AiContentAnalysis::class);
     }
 
     /**
@@ -211,6 +215,19 @@ class StartEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function perTitle(PerTitle $perTitle)
     {
         $this->perTitle = $perTitle;
+
+        return $this;
+    }
+
+    /**
+     * AI content analysis settings
+     *
+     * @param AiContentAnalysis $aiContentAnalysis
+     * @return $this
+     */
+    public function aiContentAnalysis(AiContentAnalysis $aiContentAnalysis)
+    {
+        $this->aiContentAnalysis = $aiContentAnalysis;
 
         return $this;
     }
