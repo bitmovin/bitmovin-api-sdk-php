@@ -86,4 +86,23 @@ class LicensesApi
 
         return ObjectMapper::map($response, PlayerLicensePaginationResponse::class);
     }
+
+    /**
+     * Update License
+     *
+     * @param string $licenseId
+     * @param \BitmovinApiSdk\Models\PlayerLicenseUpdateRequest $playerLicenseUpdateRequest
+     * @return \BitmovinApiSdk\Models\PlayerLicense
+     * @throws BitmovinApiException
+     */
+    public function update(string $licenseId, \BitmovinApiSdk\Models\PlayerLicenseUpdateRequest $playerLicenseUpdateRequest) : \BitmovinApiSdk\Models\PlayerLicense
+    {
+        $pathParams = [
+            'license_id' => $licenseId,
+        ];
+
+        $response = $this->httpWrapper->request('PUT', '/player/licenses/{license_id}', $pathParams,  null, $playerLicenseUpdateRequest, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\PlayerLicense::class);
+    }
 }

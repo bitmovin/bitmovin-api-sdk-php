@@ -31,6 +31,12 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var LiveAutoShutdownConfiguration */
     public $autoShutdownConfiguration;
 
+    /** @var EsamSettings */
+    public $esamSettings;
+
+    /** @var CacheControlSettings */
+    public $cacheControlSettings;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -41,6 +47,8 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->manifestGenerator = ObjectMapper::map($this->manifestGenerator, ManifestGenerator::class);
         $this->autoRestartConfiguration = ObjectMapper::map($this->autoRestartConfiguration, AutoRestartConfiguration::class);
         $this->autoShutdownConfiguration = ObjectMapper::map($this->autoShutdownConfiguration, LiveAutoShutdownConfiguration::class);
+        $this->esamSettings = ObjectMapper::map($this->esamSettings, EsamSettings::class);
+        $this->cacheControlSettings = ObjectMapper::map($this->cacheControlSettings, CacheControlSettings::class);
     }
 
     /**
@@ -143,6 +151,32 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function autoShutdownConfiguration(LiveAutoShutdownConfiguration $autoShutdownConfiguration)
     {
         $this->autoShutdownConfiguration = $autoShutdownConfiguration;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.&#39;
+     *
+     * @param EsamSettings $esamSettings
+     * @return $this
+     */
+    public function esamSettings(EsamSettings $esamSettings)
+    {
+        $this->esamSettings = $esamSettings;
+
+        return $this;
+    }
+
+    /**
+     * Configuration of cache control policies for media segments, HLS, and DASH manifests.  You can set caching for the HLS multivariant playlist, HLS media playlist, DASH timeline manifest,  DASH template manifest, initialization segment, and media segment.
+     *
+     * @param CacheControlSettings $cacheControlSettings
+     * @return $this
+     */
+    public function cacheControlSettings(CacheControlSettings $cacheControlSettings)
+    {
+        $this->cacheControlSettings = $cacheControlSettings;
 
         return $this;
     }

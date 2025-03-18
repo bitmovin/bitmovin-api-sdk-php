@@ -13,6 +13,7 @@ use BitmovinApiSdk\Apis\Encoding\Infrastructure\StaticIps\StaticIpsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Gce\GceApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\Akamai\AkamaiApi;
+use BitmovinApiSdk\Apis\Encoding\Infrastructure\Oci\OciApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\PrewarmedEncoderPools\PrewarmedEncoderPoolsApi;
 
 class InfrastructureApi
@@ -35,6 +36,9 @@ class InfrastructureApi
     /** @var AkamaiApi */
     public $akamai;
 
+    /** @var OciApi */
+    public $oci;
+
     /** @var PrewarmedEncoderPoolsApi */
     public $prewarmedEncoderPools;
 
@@ -53,6 +57,7 @@ class InfrastructureApi
         $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->gce = new GceApi(null, $this->httpWrapper);
         $this->akamai = new AkamaiApi(null, $this->httpWrapper);
+        $this->oci = new OciApi(null, $this->httpWrapper);
         $this->prewarmedEncoderPools = new PrewarmedEncoderPoolsApi(null, $this->httpWrapper);
     }
 }
