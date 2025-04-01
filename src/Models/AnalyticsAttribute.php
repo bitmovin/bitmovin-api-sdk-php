@@ -143,6 +143,66 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CUSTOM_DATA_30 = 'CUSTOM_DATA_30';
 
     /** @var string */
+    private const CUSTOM_DATA_31 = 'CUSTOM_DATA_31';
+
+    /** @var string */
+    private const CUSTOM_DATA_32 = 'CUSTOM_DATA_32';
+
+    /** @var string */
+    private const CUSTOM_DATA_33 = 'CUSTOM_DATA_33';
+
+    /** @var string */
+    private const CUSTOM_DATA_34 = 'CUSTOM_DATA_34';
+
+    /** @var string */
+    private const CUSTOM_DATA_35 = 'CUSTOM_DATA_35';
+
+    /** @var string */
+    private const CUSTOM_DATA_36 = 'CUSTOM_DATA_36';
+
+    /** @var string */
+    private const CUSTOM_DATA_37 = 'CUSTOM_DATA_37';
+
+    /** @var string */
+    private const CUSTOM_DATA_38 = 'CUSTOM_DATA_38';
+
+    /** @var string */
+    private const CUSTOM_DATA_39 = 'CUSTOM_DATA_39';
+
+    /** @var string */
+    private const CUSTOM_DATA_40 = 'CUSTOM_DATA_40';
+
+    /** @var string */
+    private const CUSTOM_DATA_41 = 'CUSTOM_DATA_41';
+
+    /** @var string */
+    private const CUSTOM_DATA_42 = 'CUSTOM_DATA_42';
+
+    /** @var string */
+    private const CUSTOM_DATA_43 = 'CUSTOM_DATA_43';
+
+    /** @var string */
+    private const CUSTOM_DATA_44 = 'CUSTOM_DATA_44';
+
+    /** @var string */
+    private const CUSTOM_DATA_45 = 'CUSTOM_DATA_45';
+
+    /** @var string */
+    private const CUSTOM_DATA_46 = 'CUSTOM_DATA_46';
+
+    /** @var string */
+    private const CUSTOM_DATA_47 = 'CUSTOM_DATA_47';
+
+    /** @var string */
+    private const CUSTOM_DATA_48 = 'CUSTOM_DATA_48';
+
+    /** @var string */
+    private const CUSTOM_DATA_49 = 'CUSTOM_DATA_49';
+
+    /** @var string */
+    private const CUSTOM_DATA_50 = 'CUSTOM_DATA_50';
+
+    /** @var string */
     private const CUSTOM_USER_ID = 'CUSTOM_USER_ID';
 
     /** @var string */
@@ -252,6 +312,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
 
     /** @var string */
     private const PLATFORM = 'PLATFORM';
+
+    /** @var string */
+    private const PLAY_ATTEMPTS = 'PLAY_ATTEMPTS';
 
     /** @var string */
     private const PLAYED = 'PLAYED';
@@ -840,6 +903,206 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * CUSTOM_DATA_31
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_31()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_31);
+    }
+
+    /**
+     * CUSTOM_DATA_32
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_32()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_32);
+    }
+
+    /**
+     * CUSTOM_DATA_33
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_33()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_33);
+    }
+
+    /**
+     * CUSTOM_DATA_34
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_34()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_34);
+    }
+
+    /**
+     * CUSTOM_DATA_35
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_35()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_35);
+    }
+
+    /**
+     * CUSTOM_DATA_36
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_36()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_36);
+    }
+
+    /**
+     * CUSTOM_DATA_37
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_37()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_37);
+    }
+
+    /**
+     * CUSTOM_DATA_38
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_38()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_38);
+    }
+
+    /**
+     * CUSTOM_DATA_39
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_39()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_39);
+    }
+
+    /**
+     * CUSTOM_DATA_40
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_40()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_40);
+    }
+
+    /**
+     * CUSTOM_DATA_41
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_41()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_41);
+    }
+
+    /**
+     * CUSTOM_DATA_42
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_42()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_42);
+    }
+
+    /**
+     * CUSTOM_DATA_43
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_43()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_43);
+    }
+
+    /**
+     * CUSTOM_DATA_44
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_44()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_44);
+    }
+
+    /**
+     * CUSTOM_DATA_45
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_45()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_45);
+    }
+
+    /**
+     * CUSTOM_DATA_46
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_46()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_46);
+    }
+
+    /**
+     * CUSTOM_DATA_47
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_47()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_47);
+    }
+
+    /**
+     * CUSTOM_DATA_48
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_48()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_48);
+    }
+
+    /**
+     * CUSTOM_DATA_49
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_49()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_49);
+    }
+
+    /**
+     * CUSTOM_DATA_50
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_50()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_50);
+    }
+
+    /**
      * CUSTOM_USER_ID
      *
      * @return AnalyticsAttribute
@@ -1207,6 +1470,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function PLATFORM()
     {
         return new AnalyticsAttribute(self::PLATFORM);
+    }
+
+    /**
+     * PLAY_ATTEMPTS
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function PLAY_ATTEMPTS()
+    {
+        return new AnalyticsAttribute(self::PLAY_ATTEMPTS);
     }
 
     /**
