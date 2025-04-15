@@ -73,6 +73,7 @@
                     </li><li>public string <a href="#members">$initSegmentName</a>;
                     </li><li>public string <a href="#members">$initSegmentNameTemplate</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$writeDurationPerSample</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\bool">bool</span> <a href="#members">$signalScte35AsEmsg</a>;
                     </li><li>public int <a href="#members">$segmentsMuxed</a>;
                     </li><li>public <span title="BitmovinApiSdk\Models\PTSAlignMode">PTSAlignMode</span> <a href="#members">$ptsAlignMode</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Muxing">Muxing</span></li><li>public array <a href="#members">$streams</a>;
@@ -97,6 +98,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentName.html">initSegmentName</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentNameTemplate.html">initSegmentNameTemplate</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/writeDurationPerSample.html">writeDurationPerSample</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/signalScte35AsEmsg.html">signalScte35AsEmsg</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/ptsAlignMode.html">ptsAlignMode</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Muxing">Muxing</span></li><li>public void <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing/streams.html">streams</a>()
@@ -188,6 +190,9 @@
             <li id="segmentsMuxed"><strong>$segmentsMuxed</strong>
                 —
                 int</li>
+            <li id="signalScte35AsEmsg"><strong>$signalScte35AsEmsg</strong>
+                —
+                <a title="BitmovinApiSdk\Models\bool" href="../classes/BitmovinApiSdk_Models_bool.html">BitmovinApiSdk\Models\bool</a></li>
             <li id="streamConditionsMode"><strong>$streamConditionsMode</strong>
                 —
                 <a title="BitmovinApiSdk\Models\StreamConditionsMode" href="../classes/BitmovinApiSdk_Models_StreamConditionsMode.html">BitmovinApiSdk\Models\StreamConditionsMode</a></li>
@@ -219,6 +224,8 @@
                 — Segment naming policy</li>
             <li id="segmentNamingTemplate"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentNamingTemplate.html">segmentNamingTemplate()</a>
                 — Segment naming policy containing one or both of the following placeholders: - &amp;#39;{rand_chars:x}&amp;#39;, which will be replaced by a random alphanumeric string of length x (default 32)   on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property.   Intended to avoid re-use of segment names after restarting a live encoding. - &amp;#39;{segment_rand_chars:x}&amp;#39;, which will be replaced by a random alphanumeric string of length x (default 32)   for each different segment. This is intended to avoid guessing segment URLs by replacing segment numbers.  If segmentNamingTemplate is set, segmentNaming must not be set.</li>
+            <li id="signalScte35AsEmsg"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/signalScte35AsEmsg.html">signalScte35AsEmsg()</a>
+                — Insert scte35 triggers as emsg boxes into the fMP4 segments.</li>
             <li id="writeDurationPerSample"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/writeDurationPerSample.html">writeDurationPerSample()</a>
                 — Writes the duration per sample into the sample entry in the Track Fragment Run Box. This could help to fix playback issues on legacy players. Enabling this flag increases the muxing overhead by 4 bytes per sample/frame.</li>
           </ul>

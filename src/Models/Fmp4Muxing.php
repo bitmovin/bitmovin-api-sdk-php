@@ -25,6 +25,9 @@ class Fmp4Muxing extends Muxing
     /** @var bool */
     public $writeDurationPerSample;
 
+    /** @var bool */
+    public $signalScte35AsEmsg;
+
     /** @var int */
     public $segmentsMuxed;
 
@@ -111,6 +114,19 @@ class Fmp4Muxing extends Muxing
     public function writeDurationPerSample(bool $writeDurationPerSample)
     {
         $this->writeDurationPerSample = $writeDurationPerSample;
+
+        return $this;
+    }
+
+    /**
+     * Insert scte35 triggers as emsg boxes into the fMP4 segments.
+     *
+     * @param bool $signalScte35AsEmsg
+     * @return $this
+     */
+    public function signalScte35AsEmsg(bool $signalScte35AsEmsg)
+    {
+        $this->signalScte35AsEmsg = $signalScte35AsEmsg;
 
         return $this;
     }

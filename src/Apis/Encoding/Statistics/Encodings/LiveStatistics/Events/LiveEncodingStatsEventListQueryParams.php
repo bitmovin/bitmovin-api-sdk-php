@@ -13,6 +13,9 @@ class LiveEncodingStatsEventListQueryParams implements QueryParams
     /** @var int */
     private $limit;
 
+    /** @var bool */
+    private $sortByTime;
+
     /**
      * @return LiveEncodingStatsEventListQueryParams
      */
@@ -39,6 +42,17 @@ class LiveEncodingStatsEventListQueryParams implements QueryParams
     public function limit(int $limit): LiveEncodingStatsEventListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param bool $sortByTime
+     * @return LiveEncodingStatsEventListQueryParams
+     */
+    public function sortByTime(bool $sortByTime): LiveEncodingStatsEventListQueryParams
+    {
+        $this->sortByTime = $sortByTime;
 
         return $this;
     }

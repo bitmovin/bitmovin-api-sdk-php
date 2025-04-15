@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Account\AccountApi;
+use BitmovinApiSdk\Apis\AiSceneAnalysis\AiSceneAnalysisApi;
 use BitmovinApiSdk\Apis\Analytics\AnalyticsApi;
 use BitmovinApiSdk\Apis\Encoding\EncodingApi;
 use BitmovinApiSdk\Apis\General\GeneralApi;
@@ -23,6 +24,9 @@ class BitmovinApi
 
     /** @var AccountApi */
     public $account;
+
+    /** @var AiSceneAnalysisApi */
+    public $aiSceneAnalysis;
 
     /** @var AnalyticsApi */
     public $analytics;
@@ -53,6 +57,7 @@ class BitmovinApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->account = new AccountApi(null, $this->httpWrapper);
+        $this->aiSceneAnalysis = new AiSceneAnalysisApi(null, $this->httpWrapper);
         $this->analytics = new AnalyticsApi(null, $this->httpWrapper);
         $this->encoding = new EncodingApi(null, $this->httpWrapper);
         $this->general = new GeneralApi(null, $this->httpWrapper);
