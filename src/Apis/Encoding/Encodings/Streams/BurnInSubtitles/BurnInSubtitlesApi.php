@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\BurnInSubtitles\Dvbsub\DvbsubApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\BurnInSubtitles\Srt\SrtApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Streams\BurnInSubtitles\Assa\AssaApi;
 
 class BurnInSubtitlesApi
 {
@@ -21,6 +22,9 @@ class BurnInSubtitlesApi
 
     /** @var SrtApi */
     public $srt;
+
+    /** @var AssaApi */
+    public $assa;
 
     /**
      * BurnInSubtitlesApi constructor.
@@ -34,5 +38,6 @@ class BurnInSubtitlesApi
 
         $this->dvbsub = new DvbsubApi(null, $this->httpWrapper);
         $this->srt = new SrtApi(null, $this->httpWrapper);
+        $this->assa = new AssaApi(null, $this->httpWrapper);
     }
 }
