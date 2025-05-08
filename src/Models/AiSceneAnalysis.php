@@ -5,19 +5,19 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class AiContentAnalysis extends \BitmovinApiSdk\Common\ApiResource
+class AiSceneAnalysis extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var AiService */
     public $aiService;
 
-    /** @var AiContentAnalysisFeatures */
+    /** @var AiSceneAnalysisFeatures */
     public $features;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->aiService = ObjectMapper::map($this->aiService, AiService::class);
-        $this->features = ObjectMapper::map($this->features, AiContentAnalysisFeatures::class);
+        $this->features = ObjectMapper::map($this->features, AiSceneAnalysisFeatures::class);
     }
 
     /**
@@ -34,12 +34,12 @@ class AiContentAnalysis extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Features of the AI content analysis
+     * Features of the AI scene analysis
      *
-     * @param AiContentAnalysisFeatures $features
+     * @param AiSceneAnalysisFeatures $features
      * @return $this
      */
-    public function features(AiContentAnalysisFeatures $features)
+    public function features(AiSceneAnalysisFeatures $features)
     {
         $this->features = $features;
 

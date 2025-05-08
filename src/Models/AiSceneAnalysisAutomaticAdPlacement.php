@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class AiContentAnalysisAutomaticAdPlacement extends \BitmovinApiSdk\Common\ApiResource
+class AiSceneAnalysisAutomaticAdPlacement extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var \BitmovinApiSdk\Models\AutomaticAdPlacementPosition[] */
     public $schedule;

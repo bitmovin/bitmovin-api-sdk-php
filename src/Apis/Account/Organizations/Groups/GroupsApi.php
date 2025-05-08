@@ -104,16 +104,17 @@ class GroupsApi
      * List Groups
      *
      * @param string $organizationId
+     * @param GroupListQueryParams|null $queryParams
      * @return GroupPaginationResponse
      * @throws BitmovinApiException
      */
-    public function list(string $organizationId) : GroupPaginationResponse
+    public function list(string $organizationId, GroupListQueryParams $queryParams = null) : GroupPaginationResponse
     {
         $pathParams = [
             'organization_id' => $organizationId,
         ];
 
-        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('GET', '/account/organizations/{organization_id}/groups', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, GroupPaginationResponse::class);
     }

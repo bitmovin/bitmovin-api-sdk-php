@@ -5,7 +5,7 @@ namespace BitmovinApiSdk\Models;
 use Carbon\Carbon;
 use BitmovinApiSdk\Common\ObjectMapper;
 
-class AiContentAnalysisAssetDescription extends \BitmovinApiSdk\Common\ApiResource
+class AiSceneAnalysisAssetDescription extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
     public $filename;
