@@ -25,11 +25,15 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string[] */
     public $iabSensitiveTopicTaxonomies;
 
+    /** @var \BitmovinApiSdk\Models\Metadata */
+    public $metadata;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->scenes = ObjectMapper::map($this->scenes, Scene::class);
         $this->ratings = ObjectMapper::map($this->ratings, Rating::class);
+        $this->metadata = ObjectMapper::map($this->metadata, Metadata::class);
     }
 
     /**
@@ -106,6 +110,19 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function iabSensitiveTopicTaxonomies(array $iabSensitiveTopicTaxonomies)
     {
         $this->iabSensitiveTopicTaxonomies = $iabSensitiveTopicTaxonomies;
+
+        return $this;
+    }
+
+    /**
+     * metadata
+     *
+     * @param \BitmovinApiSdk\Models\Metadata $metadata
+     * @return $this
+     */
+    public function metadata(\BitmovinApiSdk\Models\Metadata $metadata)
+    {
+        $this->metadata = $metadata;
 
         return $this;
     }

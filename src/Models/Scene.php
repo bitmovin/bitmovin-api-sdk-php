@@ -7,6 +7,9 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class Scene extends \BitmovinApiSdk\Common\ApiResource
 {
+    /** @var string */
+    public $title;
+
     /** @var float */
     public $startInSeconds;
 
@@ -36,6 +39,19 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
         parent::__construct($attributes);
         $this->content = ObjectMapper::map($this->content, Content::class);
         $this->iab = ObjectMapper::map($this->iab, IABTaxonomy::class);
+    }
+
+    /**
+     * title
+     *
+     * @param string $title
+     * @return $this
+     */
+    public function title(string $title)
+    {
+        $this->title = $title;
+
+        return $this;
     }
 
     /**
