@@ -37,6 +37,9 @@ class AccountInformation extends BitmovinResource
     /** @var string */
     public $intercomIdVerification;
 
+    /** @var string */
+    public $samlDomain;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);

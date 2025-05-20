@@ -90,7 +90,7 @@ class TemplatesApi
     }
 
     /**
-     * BETA: Start an Encoding defined with an Encoding Template
+     * Start an Encoding defined with an Encoding Template
      *
      * @param  $encodingTemplateRequest
      * @return \BitmovinApiSdk\Models\EncodingTemplateStartResponse
