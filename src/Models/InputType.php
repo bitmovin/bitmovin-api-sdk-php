@@ -20,6 +20,9 @@ class InputType extends \BitmovinApiSdk\Common\Enum
     private const FTP = 'FTP';
 
     /** @var string */
+    private const HLS = 'HLS';
+
+    /** @var string */
     private const GENERIC_S3 = 'GENERIC_S3';
 
     /** @var string */
@@ -115,6 +118,16 @@ class InputType extends \BitmovinApiSdk\Common\Enum
     public static function FTP()
     {
         return new InputType(self::FTP);
+    }
+
+    /**
+     * HLS
+     *
+     * @return InputType
+     */
+    public static function HLS()
+    {
+        return new InputType(self::HLS);
     }
 
     /**

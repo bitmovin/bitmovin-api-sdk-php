@@ -18,6 +18,7 @@ class Input extends BitmovinResource
         "GCS" => GcsInput::class,
         "HTTP" => HttpInput::class,
         "HTTPS" => HttpsInput::class,
+        "HLS" => HlsInput::class,
         "LOCAL" => LocalInput::class,
         "RTMP" => RtmpInput::class,
         "S3" => S3Input::class,
