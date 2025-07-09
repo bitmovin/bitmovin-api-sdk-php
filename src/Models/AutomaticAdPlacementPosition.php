@@ -22,7 +22,7 @@ class AutomaticAdPlacementPosition extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Position of the ad placement in seconds.
+     * Position of the ad placement in seconds. (required)
      *
      * @param float $position
      * @return $this
@@ -35,7 +35,7 @@ class AutomaticAdPlacementPosition extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Maximum deviation in seconds to the ad placement position.
+     * Maximum deviation in seconds to the ad placement position. (required)
      *
      * @param float $maxDeviation
      * @return $this
