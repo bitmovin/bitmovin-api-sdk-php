@@ -25,10 +25,14 @@ class LiveDashManifest extends \BitmovinApiSdk\Common\ApiResource
     /** @var AvailabilityStartTimeMode */
     public $availabilityStartTimeMode;
 
+    /** @var DashManifestAdMarkerSettings */
+    public $adMarkerSettings;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->availabilityStartTimeMode = ObjectMapper::map($this->availabilityStartTimeMode, AvailabilityStartTimeMode::class);
+        $this->adMarkerSettings = ObjectMapper::map($this->adMarkerSettings, DashManifestAdMarkerSettings::class);
     }
 
     /**
@@ -105,6 +109,19 @@ class LiveDashManifest extends \BitmovinApiSdk\Common\ApiResource
     public function availabilityStartTimeMode(AvailabilityStartTimeMode $availabilityStartTimeMode)
     {
         $this->availabilityStartTimeMode = $availabilityStartTimeMode;
+
+        return $this;
+    }
+
+    /**
+     * adMarkerSettings
+     *
+     * @param DashManifestAdMarkerSettings $adMarkerSettings
+     * @return $this
+     */
+    public function adMarkerSettings(DashManifestAdMarkerSettings $adMarkerSettings)
+    {
+        $this->adMarkerSettings = $adMarkerSettings;
 
         return $this;
     }

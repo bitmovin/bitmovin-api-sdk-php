@@ -25,6 +25,9 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $summary;
 
+    /** @var string */
+    public $verboseSummary;
+
     /** @var string[] */
     public $sensitiveTopics;
 
@@ -115,6 +118,19 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     public function summary(string $summary)
     {
         $this->summary = $summary;
+
+        return $this;
+    }
+
+    /**
+     * verboseSummary
+     *
+     * @param string $verboseSummary
+     * @return $this
+     */
+    public function verboseSummary(string $verboseSummary)
+    {
+        $this->verboseSummary = $verboseSummary;
 
         return $this;
     }

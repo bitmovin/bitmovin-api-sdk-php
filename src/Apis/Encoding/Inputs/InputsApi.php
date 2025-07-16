@@ -19,6 +19,7 @@ use BitmovinApiSdk\Apis\Encoding\Inputs\Gcs\GcsApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\GcsServiceAccount\GcsServiceAccountApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Azure\AzureApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Ftp\FtpApi;
+use BitmovinApiSdk\Apis\Encoding\Inputs\Hls\HlsApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Sftp\SftpApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Http\HttpApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\Https\HttpsApi;
@@ -66,6 +67,9 @@ class InputsApi
     /** @var FtpApi */
     public $ftp;
 
+    /** @var HlsApi */
+    public $hls;
+
     /** @var SftpApi */
     public $sftp;
 
@@ -111,6 +115,7 @@ class InputsApi
         $this->gcsServiceAccount = new GcsServiceAccountApi(null, $this->httpWrapper);
         $this->azure = new AzureApi(null, $this->httpWrapper);
         $this->ftp = new FtpApi(null, $this->httpWrapper);
+        $this->hls = new HlsApi(null, $this->httpWrapper);
         $this->sftp = new SftpApi(null, $this->httpWrapper);
         $this->http = new HttpApi(null, $this->httpWrapper);
         $this->https = new HttpsApi(null, $this->httpWrapper);

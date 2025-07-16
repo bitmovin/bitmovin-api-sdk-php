@@ -16,13 +16,19 @@ class AwsAccount extends BitmovinResource
     /** @var string */
     public $accountNumber;
 
+    /** @var string */
+    public $roleName;
+
+    /** @var string */
+    public $externalId;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
     }
 
     /**
-     * Amazon access key (required)
+     * Deprecated: Amazon access key for legacy support. Use roleName instead
      *
      * @param string $accessKey
      * @return $this
@@ -35,7 +41,7 @@ class AwsAccount extends BitmovinResource
     }
 
     /**
-     * Amazon secret key (required)
+     * Deprecated: Amazon secret key for legacy support. Use roleName instead
      *
      * @param string $secretKey
      * @return $this
@@ -56,6 +62,19 @@ class AwsAccount extends BitmovinResource
     public function accountNumber(string $accountNumber)
     {
         $this->accountNumber = $accountNumber;
+
+        return $this;
+    }
+
+    /**
+     * Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}
+     *
+     * @param string $roleName
+     * @return $this
+     */
+    public function roleName(string $roleName)
+    {
+        $this->roleName = $roleName;
 
         return $this;
     }
