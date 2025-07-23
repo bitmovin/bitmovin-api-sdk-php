@@ -10,6 +10,9 @@ class TsMuxing extends Muxing
     /** @var float */
     public $segmentLength;
 
+    /** @var float */
+    public $minimumSegmentLength;
+
     /** @var string */
     public $segmentNaming;
 
@@ -40,6 +43,19 @@ class TsMuxing extends Muxing
     public function segmentLength(float $segmentLength)
     {
         $this->segmentLength = $segmentLength;
+
+        return $this;
+    }
+
+    /**
+     * Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.
+     *
+     * @param float $minimumSegmentLength
+     * @return $this
+     */
+    public function minimumSegmentLength(float $minimumSegmentLength)
+    {
+        $this->minimumSegmentLength = $minimumSegmentLength;
 
         return $this;
     }

@@ -68,6 +68,7 @@
         <div class="synopsis">class TsMuxing
                 extends <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing.html">Muxing</a>
             {<br/><ul class="none"><li>// members</li><li>public float <a href="#members">$segmentLength</a>;
+                    </li><li>public float <a href="#members">$minimumSegmentLength</a>;
                     </li><li>public string <a href="#members">$segmentNaming</a>;
                     </li><li>public string <a href="#members">$segmentNamingTemplate</a>;
                     </li><li>public int <a href="#members">$startOffset</a>;
@@ -90,6 +91,7 @@
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentLength.html">segmentLength</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/minimumSegmentLength.html">minimumSegmentLength</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentNaming.html">segmentNaming</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentNamingTemplate.html">segmentNamingTemplate</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/startOffset.html">startOffset</a>()
@@ -156,6 +158,9 @@
             <li id="minBitrate"><strong>$minBitrate</strong>
                 —
                 int</li>
+            <li id="minimumSegmentLength"><strong>$minimumSegmentLength</strong>
+                —
+                float</li>
             <li id="modifiedAt"><strong>$modifiedAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -199,6 +204,8 @@
             </li>
             <li id="configuration"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/configuration.html">configuration()</a>
                 — Advanced Configuration of the MPEG Transport Stream Parameters</li>
+            <li id="minimumSegmentLength"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/minimumSegmentLength.html">minimumSegmentLength()</a>
+                — Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.</li>
             <li id="segmentLength"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentLength.html">segmentLength()</a>
                 — Length of the fragments in seconds</li>
             <li id="segmentNaming"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentNaming.html">segmentNaming()</a>

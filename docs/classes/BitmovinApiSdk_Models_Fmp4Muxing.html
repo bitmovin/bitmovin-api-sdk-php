@@ -68,6 +68,7 @@
         <div class="synopsis">class Fmp4Muxing
                 extends <a title="BitmovinApiSdk\Models\Muxing" href="../classes/BitmovinApiSdk_Models_Muxing.html">Muxing</a>
             {<br/><ul class="none"><li>// members</li><li>public float <a href="#members">$segmentLength</a>;
+                    </li><li>public float <a href="#members">$minimumSegmentLength</a>;
                     </li><li>public string <a href="#members">$segmentNaming</a>;
                     </li><li>public string <a href="#members">$segmentNamingTemplate</a>;
                     </li><li>public string <a href="#members">$initSegmentName</a>;
@@ -93,6 +94,7 @@
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\BitmovinResponse">BitmovinResponse</span></li><li>public string <a href="#members">$id</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentLength.html">segmentLength</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/minimumSegmentLength.html">minimumSegmentLength</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentNaming.html">segmentNaming</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentNamingTemplate.html">segmentNamingTemplate</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentName.html">initSegmentName</a>()
@@ -165,6 +167,9 @@
             <li id="minBitrate"><strong>$minBitrate</strong>
                 —
                 int</li>
+            <li id="minimumSegmentLength"><strong>$minimumSegmentLength</strong>
+                —
+                float</li>
             <li id="modifiedAt"><strong>$modifiedAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -216,6 +221,8 @@
                 — Init segment name</li>
             <li id="initSegmentNameTemplate"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/initSegmentNameTemplate.html">initSegmentNameTemplate()</a>
                 — Segment naming policy containing a placeholder of the format &amp;#39;{rand_chars:x}&amp;#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the initSegmentName property. Intended to avoid re-use of segment names after restarting a live encoding. If initSegmentNameTemplate is set, initSegmentName must not be set.</li>
+            <li id="minimumSegmentLength"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/minimumSegmentLength.html">minimumSegmentLength()</a>
+                — Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.</li>
             <li id="ptsAlignMode"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/ptsAlignMode.html">ptsAlignMode()</a>
                 — Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265</li>
             <li id="segmentLength"><a title="BitmovinApiSdk\Models\Fmp4Muxing" href="../classes/BitmovinApiSdk_Models_Fmp4Muxing/segmentLength.html">segmentLength()</a>

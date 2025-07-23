@@ -10,6 +10,9 @@ class HlsManifestAdMarkerSettings extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\HlsManifestAdMarkerType[] */
     public $enabledMarkerTypes;
 
+    /** @var bool */
+    public $disablePreannouncing;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -25,6 +28,19 @@ class HlsManifestAdMarkerSettings extends \BitmovinApiSdk\Common\ApiResource
     public function enabledMarkerTypes(array $enabledMarkerTypes)
     {
         $this->enabledMarkerTypes = $enabledMarkerTypes;
+
+        return $this;
+    }
+
+    /**
+     * Certain tags, such as EXT_X_DATERANGE, may be preannounced in the HLS manifest. This means they are inserted as early as possible, before the actual ad break begins or ends. Preannouncing helps clients anticipate upcoming splice points, but may cause compatibility issues with some downstream consumers (e.g., AWS MediaTailor SSAI). When this setting is enabled, preannouncing of tags is disabled, and tags are inserted at the segment corresponding to the event&#39;s splice time.
+     *
+     * @param bool $disablePreannouncing
+     * @return $this
+     */
+    public function disablePreannouncing(bool $disablePreannouncing)
+    {
+        $this->disablePreannouncing = $disablePreannouncing;
 
         return $this;
     }
