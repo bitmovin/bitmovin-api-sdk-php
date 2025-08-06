@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\ByEncodingId\Details\DetailsApi;
+use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\ByEncodingId\Languages\LanguagesApi;
 
 class ByEncodingIdApi
 {
@@ -17,6 +18,9 @@ class ByEncodingIdApi
 
     /** @var DetailsApi */
     public $details;
+
+    /** @var LanguagesApi */
+    public $languages;
 
     /**
      * ByEncodingIdApi constructor.
@@ -29,5 +33,6 @@ class ByEncodingIdApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->details = new DetailsApi(null, $this->httpWrapper);
+        $this->languages = new LanguagesApi(null, $this->httpWrapper);
     }
 }
