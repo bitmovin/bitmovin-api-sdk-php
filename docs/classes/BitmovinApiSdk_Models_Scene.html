@@ -77,6 +77,8 @@
                     </li><li>public array <a href="#members">$sensitiveTopics</a>;
                     </li><li>public array <a href="#members">$keywords</a>;
                     </li><li>public <span title="\BitmovinApiSdk\Models\IABTaxonomy">IABTaxonomy</span> <a href="#members">$iab</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\SceneType">SceneType</span> <a href="#members">$type</a>;
+                    </li><li>public float <a href="#members">$typeConfidence</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/title.html">title</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/startInSeconds.html">startInSeconds</a>()
@@ -88,6 +90,8 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/sensitiveTopics.html">sensitiveTopics</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/keywords.html">keywords</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/iab.html">iab</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/type.html">type</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/typeConfidence.html">typeConfidence</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -136,6 +140,12 @@
             <li id="title"><strong>$title</strong>
                 —
                 string</li>
+            <li id="type"><strong>$type</strong>
+                —
+                <a title="BitmovinApiSdk\Models\SceneType" href="../classes/BitmovinApiSdk_Models_SceneType.html">BitmovinApiSdk\Models\SceneType</a></li>
+            <li id="typeConfidence"><strong>$typeConfidence</strong>
+                —
+                float</li>
             <li id="verboseSummary"><strong>$verboseSummary</strong>
                 —
                 string</li>
@@ -166,6 +176,10 @@
                 — summary</li>
             <li id="title"><a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/title.html">title()</a>
                 — title</li>
+            <li id="type"><a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/type.html">type()</a>
+                — The detected type of scene based on content analysis</li>
+            <li id="typeConfidence"><a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/typeConfidence.html">typeConfidence()</a>
+                — Confidence score for the detected scene type (0.0 to 1.0)</li>
             <li id="verboseSummary"><a title="BitmovinApiSdk\Models\Scene" href="../classes/BitmovinApiSdk_Models_Scene/verboseSummary.html">verboseSummary()</a>
                 — verboseSummary</li>
           </ul>

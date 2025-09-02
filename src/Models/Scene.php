@@ -37,11 +37,18 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\IABTaxonomy */
     public $iab;
 
+    /** @var SceneType */
+    public $type;
+
+    /** @var float */
+    public $typeConfidence;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->content = ObjectMapper::map($this->content, Content::class);
         $this->iab = ObjectMapper::map($this->iab, IABTaxonomy::class);
+        $this->type = ObjectMapper::map($this->type, SceneType::class);
     }
 
     /**
@@ -170,6 +177,32 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     public function iab(\BitmovinApiSdk\Models\IABTaxonomy $iab)
     {
         $this->iab = $iab;
+
+        return $this;
+    }
+
+    /**
+     * The detected type of scene based on content analysis
+     *
+     * @param SceneType $type
+     * @return $this
+     */
+    public function type(SceneType $type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Confidence score for the detected scene type (0.0 to 1.0)
+     *
+     * @param float $typeConfidence
+     * @return $this
+     */
+    public function typeConfidence(float $typeConfidence)
+    {
+        $this->typeConfidence = $typeConfidence;
 
         return $this;
     }

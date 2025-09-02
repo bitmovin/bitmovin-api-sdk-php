@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\ByEncodingId\Details\DetailsApi;
 use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\ByEncodingId\Languages\LanguagesApi;
+use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\ByEncodingId\AdPlacements\AdPlacementsApi;
 
 class ByEncodingIdApi
 {
@@ -21,6 +22,9 @@ class ByEncodingIdApi
 
     /** @var LanguagesApi */
     public $languages;
+
+    /** @var AdPlacementsApi */
+    public $adPlacements;
 
     /**
      * ByEncodingIdApi constructor.
@@ -34,5 +38,6 @@ class ByEncodingIdApi
 
         $this->details = new DetailsApi(null, $this->httpWrapper);
         $this->languages = new LanguagesApi(null, $this->httpWrapper);
+        $this->adPlacements = new AdPlacementsApi(null, $this->httpWrapper);
     }
 }
