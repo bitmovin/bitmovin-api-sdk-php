@@ -13,6 +13,9 @@ class Mp4Muxing extends Muxing
     /** @var int */
     public $fragmentDuration;
 
+    /** @var float */
+    public $minimumFragmentDuration;
+
     /** @var FragmentedMp4MuxingManifestType */
     public $fragmentedMP4MuxingManifestType;
 
@@ -48,6 +51,19 @@ class Mp4Muxing extends Muxing
     public function fragmentDuration(int $fragmentDuration)
     {
         $this->fragmentDuration = $fragmentDuration;
+
+        return $this;
+    }
+
+    /**
+     * Prevents creation of very short fragments (in seconds). If the last fragment is shorter than minimumFragmentDuration or there is a custom keyframe too close to a fragment boundary, short fragments will be omitted by removing fragment boundaries, resulting in a fragment of a size up to fragmentDuration + minimumFragmentDuration.
+     *
+     * @param float $minimumFragmentDuration
+     * @return $this
+     */
+    public function minimumFragmentDuration(float $minimumFragmentDuration)
+    {
+        $this->minimumFragmentDuration = $minimumFragmentDuration;
 
         return $this;
     }

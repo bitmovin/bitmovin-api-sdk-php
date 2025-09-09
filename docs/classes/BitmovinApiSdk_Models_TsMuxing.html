@@ -205,7 +205,7 @@
             <li id="configuration"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/configuration.html">configuration()</a>
                 — Advanced Configuration of the MPEG Transport Stream Parameters</li>
             <li id="minimumSegmentLength"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/minimumSegmentLength.html">minimumSegmentLength()</a>
-                — Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.</li>
+                — Prevents creation of very short segments (in seconds). If the last segment is shorter than minimumSegmentLength or there is a custom keyframe too close to a segment boundary, short segments will be omitted by removing segment boundaries, resulting in a segment of a size up to segmentLength + minimumSegmentLength.</li>
             <li id="segmentLength"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentLength.html">segmentLength()</a>
                 — Length of the fragments in seconds</li>
             <li id="segmentNaming"><a title="BitmovinApiSdk\Models\TsMuxing" href="../classes/BitmovinApiSdk_Models_TsMuxing/segmentNaming.html">segmentNaming()</a>

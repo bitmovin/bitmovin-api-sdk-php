@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - BitmovinApiSdk\Models\TsMuxing::minimumSegmentLength</title>
+    <title>phpDox - BitmovinApiSdk\Models\HlsInput::adMarkersSource</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -39,9 +39,9 @@
             <a href="../../classes.html#BitmovinApiSdk_Models">BitmovinApiSdk\Models</a>
           </li>
           <li class="separator">
-            <a title="BitmovinApiSdk\Models\TsMuxing" href="../../classes/BitmovinApiSdk_Models_TsMuxing.html">TsMuxing</a>
+            <a title="BitmovinApiSdk\Models\HlsInput" href="../../classes/BitmovinApiSdk_Models_HlsInput.html">HlsInput</a>
           </li>
-          <li class="separator">minimumSegmentLength</li>
+          <li class="separator">adMarkersSource</li>
         </ul>
       </div>
       <nav class="box">
@@ -61,23 +61,23 @@
         </ul>
       </nav>
       <section>
-        <h1><small>BitmovinApiSdk\Models\TsMuxing::</small>minimumSegmentLength</h1>
-        <h4>Prevents creation of very short segments (in seconds). If the last segment is shorter than minimumSegmentLength or there is a custom keyframe too close to a segment boundary, short segments will be omitted by removing segment boundaries, resulting in a segment of a size up to segmentLength + minimumSegmentLength.</h4>
+        <h1><small>BitmovinApiSdk\Models\HlsInput::</small>adMarkersSource</h1>
+        <h4>Specifies the source for ad markers messages: - MANIFEST: Ad marker messages are read from tags in the HLS manifest - SEGMENTS: Ad marker messages are read from the content segments from the data stream</h4>
         <p/>
         <ul/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function minimumSegmentLength(float
-        $minimumSegmentLength )
+          <code>public function adMarkersSource(<a title="BitmovinApiSdk\Models\AdMarkersSource" href="../../classes/BitmovinApiSdk_Models_AdMarkersSource.html">AdMarkersSource</a>
+        $adMarkersSource )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$minimumSegmentLength</code>
+          <dt><code>$adMarkersSource</code>
                 —
-                float</dt>
-          <dd/>
+                <a title="BitmovinApiSdk\Models\AdMarkersSource" href="../../classes/BitmovinApiSdk_Models_AdMarkersSource.html">BitmovinApiSdk\Models\AdMarkersSource</a></dt>
+          <dd><br/><br/><br/>      </dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
