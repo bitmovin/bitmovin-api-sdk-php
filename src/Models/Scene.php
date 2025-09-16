@@ -40,9 +40,6 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     /** @var SceneType */
     public $type;
 
-    /** @var float */
-    public $typeConfidence;
-
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -190,19 +187,6 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     public function type(SceneType $type)
     {
         $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Confidence score for the detected scene type (0.0 to 1.0)
-     *
-     * @param float $typeConfidence
-     * @return $this
-     */
-    public function typeConfidence(float $typeConfidence)
-    {
-        $this->typeConfidence = $typeConfidence;
 
         return $this;
     }
