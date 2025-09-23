@@ -49,6 +49,9 @@ class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\AnalyticsLicenseDomain[] */
     public $domains;
 
+    /** @var string[] */
+    public $playerDomains;
+
     /** @var bool */
     public $includeInInsights;
 
