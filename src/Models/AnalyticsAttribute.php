@@ -233,6 +233,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const ERROR_CODE = 'ERROR_CODE';
 
     /** @var string */
+    private const ERROR_SEVERITY = 'ERROR_SEVERITY';
+
+    /** @var string */
     private const ERROR_MESSAGE = 'ERROR_MESSAGE';
 
     /** @var string */
@@ -1200,6 +1203,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function ERROR_CODE()
     {
         return new AnalyticsAttribute(self::ERROR_CODE);
+    }
+
+    /**
+     * ERROR_SEVERITY
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function ERROR_SEVERITY()
+    {
+        return new AnalyticsAttribute(self::ERROR_SEVERITY);
     }
 
     /**

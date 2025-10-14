@@ -260,6 +260,9 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const ERROR_CODE = 'ERROR_CODE';
 
     /** @var string */
+    private const ERROR_SEVERITY = 'ERROR_SEVERITY';
+
+    /** @var string */
     private const ERROR_PERCENTAGE = 'ERROR_PERCENTAGE';
 
     /** @var string */
@@ -1290,6 +1293,16 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function ERROR_CODE()
     {
         return new AdAnalyticsAttribute(self::ERROR_CODE);
+    }
+
+    /**
+     * ERROR_SEVERITY
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function ERROR_SEVERITY()
+    {
+        return new AdAnalyticsAttribute(self::ERROR_SEVERITY);
     }
 
     /**
