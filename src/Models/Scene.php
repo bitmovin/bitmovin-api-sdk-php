@@ -40,12 +40,16 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     /** @var SceneType */
     public $type;
 
+    /** @var \BitmovinApiSdk\Models\Shot[] */
+    public $shots;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->content = ObjectMapper::map($this->content, Content::class);
         $this->iab = ObjectMapper::map($this->iab, IABTaxonomy::class);
         $this->type = ObjectMapper::map($this->type, SceneType::class);
+        $this->shots = ObjectMapper::map($this->shots, Shot::class);
     }
 
     /**
@@ -187,6 +191,19 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     public function type(SceneType $type)
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+     *
+     * @param \BitmovinApiSdk\Models\Shot[] $shots
+     * @return $this
+     */
+    public function shots(array $shots)
+    {
+        $this->shots = $shots;
 
         return $this;
     }

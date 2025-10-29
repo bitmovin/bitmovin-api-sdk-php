@@ -46,6 +46,9 @@ class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $compressedRetentionTime;
 
+    /** @var Carbon */
+    public $compressionAvailableTo;
+
     /** @var \BitmovinApiSdk\Models\AnalyticsLicenseDomain[] */
     public $domains;
 
@@ -77,6 +80,7 @@ class AnalyticsLicense extends \BitmovinApiSdk\Common\ApiResource
     {
         parent::__construct($attributes);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
+        $this->compressionAvailableTo = ObjectMapper::map($this->compressionAvailableTo, Carbon::class);
         $this->domains = ObjectMapper::map($this->domains, AnalyticsLicenseDomain::class);
         $this->customDataFieldLabels = ObjectMapper::map($this->customDataFieldLabels, AnalyticsLicenseCustomDataFieldLabels::class);
         $this->features = ObjectMapper::map($this->features, AnalyticsLicenseFeatures::class);

@@ -71,6 +71,7 @@
                     </li><li>public int <a href="#members">$progress</a>;
                     </li><li>public string <a href="#members">$name</a>;
                     </li><li>public array <a href="#members">$messages</a>;
+                    </li><li>public array <a href="#members">$metadata</a>;
                     </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$createdAt</a>;
                     </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$updatedAt</a>;
                     </li><li>public <span title="Carbon\Carbon">Carbon</span> <a href="#members">$startedAt</a>;
@@ -84,6 +85,7 @@
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/progress.html">progress</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/name.html">name</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/messages.html">messages</a>()
+                    </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/metadata.html">metadata</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/createdAt.html">createdAt</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/updatedAt.html">updatedAt</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/startedAt.html">startedAt</a>()
@@ -127,6 +129,10 @@
                 —
                 <a title="\BitmovinApiSdk\Models\Message" href="../classes/_BitmovinApiSdk_Models_Message.html">\BitmovinApiSdk\Models\Message</a>[]
                     </li>
+            <li id="metadata"><strong>$metadata</strong>
+                —
+                <a title="\BitmovinApiSdk\Models\SubtaskMetadata" href="../classes/_BitmovinApiSdk_Models_SubtaskMetadata.html">\BitmovinApiSdk\Models\SubtaskMetadata</a>[]
+                    </li>
             <li id="name"><strong>$name</strong>
                 —
                 string</li>
@@ -165,6 +171,8 @@
                 — Timestamp when the subtask status changed to a final state like  &amp;#39;FINISHED&amp;#39;, &amp;#39;ERROR&amp;#39;, &amp;#39;CANCELED&amp;#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest).</li>
             <li id="messages"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/messages.html">messages()</a>
                 — Task specific messages</li>
+            <li id="metadata"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/metadata.html">metadata()</a>
+                — Task specific metadata</li>
             <li id="name"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/name.html">name()</a>
                 — Name of the subtask (required)</li>
             <li id="progress"><a title="BitmovinApiSdk\Models\Subtask" href="../classes/BitmovinApiSdk_Models_Subtask/progress.html">progress()</a>

@@ -19,6 +19,9 @@ class Subtask extends BitmovinResponse
     /** @var \BitmovinApiSdk\Models\Message[] */
     public $messages;
 
+    /** @var \BitmovinApiSdk\Models\SubtaskMetadata[] */
+    public $metadata;
+
     /** @var Carbon */
     public $createdAt;
 
@@ -45,6 +48,7 @@ class Subtask extends BitmovinResponse
         parent::__construct($attributes);
         $this->status = ObjectMapper::map($this->status, Status::class);
         $this->messages = ObjectMapper::map($this->messages, Message::class);
+        $this->metadata = ObjectMapper::map($this->metadata, SubtaskMetadata::class);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
         $this->updatedAt = ObjectMapper::map($this->updatedAt, Carbon::class);
         $this->startedAt = ObjectMapper::map($this->startedAt, Carbon::class);
@@ -102,6 +106,19 @@ class Subtask extends BitmovinResponse
     public function messages(array $messages)
     {
         $this->messages = $messages;
+
+        return $this;
+    }
+
+    /**
+     * Task specific metadata
+     *
+     * @param \BitmovinApiSdk\Models\SubtaskMetadata[] $metadata
+     * @return $this
+     */
+    public function metadata(array $metadata)
+    {
+        $this->metadata = $metadata;
 
         return $this;
     }
