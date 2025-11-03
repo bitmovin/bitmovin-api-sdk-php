@@ -17,7 +17,7 @@ class CustomApiHeaders
             'Content-Type' => 'application/json',
             'X-Api-Key' => $apiKey,
             'X-Api-Client' => 'bitmovin-api-sdk-php',
-            'X-Api-Client-Version' => '1.248.2',
+            'X-Api-Client-Version' => '1.249.0',
         ];
 
         if ($tenantOrgId !== null) {

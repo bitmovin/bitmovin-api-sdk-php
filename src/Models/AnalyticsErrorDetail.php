@@ -25,6 +25,9 @@ class AnalyticsErrorDetail extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\AnalyticsErrorData */
     public $errorData;
 
+    /** @var string */
+    public $severity;
+
     /** @var \BitmovinApiSdk\Models\AnalyticsHttpRequest[] */
     public $httpRequests;
 
@@ -111,6 +114,19 @@ class AnalyticsErrorDetail extends \BitmovinApiSdk\Common\ApiResource
     public function errorData(\BitmovinApiSdk\Models\AnalyticsErrorData $errorData)
     {
         $this->errorData = $errorData;
+
+        return $this;
+    }
+
+    /**
+     * Severity of the error
+     *
+     * @param string $severity
+     * @return $this
+     */
+    public function severity(string $severity)
+    {
+        $this->severity = $severity;
 
         return $this;
     }
