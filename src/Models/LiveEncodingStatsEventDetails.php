@@ -7,17 +7,14 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class LiveEncodingStatsEventDetails extends \BitmovinApiSdk\Common\ApiResource
 {
-    /** @var \BitmovinApiSdk\Models\LiveEncodingEventName */
+    /** @var LiveEncodingEventName */
     public $eventType;
 
     /** @var string */
     public $message;
 
-    /** @var string[] */
-    public $midRollAssetNames;
-
-    /** @var float */
-    public $durationInSeconds;
+    /** @var string */
+    public $additionalProperties;
 
     public function __construct($attributes = null)
     {
@@ -28,12 +25,25 @@ class LiveEncodingStatsEventDetails extends \BitmovinApiSdk\Common\ApiResource
     /**
      * eventType
      *
-     * @param \BitmovinApiSdk\Models\LiveEncodingEventName $eventType
+     * @param LiveEncodingEventName $eventType
      * @return $this
      */
-    public function eventType(\BitmovinApiSdk\Models\LiveEncodingEventName $eventType)
+    public function eventType(LiveEncodingEventName $eventType)
     {
         $this->eventType = $eventType;
+
+        return $this;
+    }
+
+    /**
+     * Additional event details as key-value pairs
+     *
+     * @param string $additionalProperties
+     * @return $this
+     */
+    public function additionalProperties(string $additionalProperties)
+    {
+        $this->additionalProperties = $additionalProperties;
 
         return $this;
     }

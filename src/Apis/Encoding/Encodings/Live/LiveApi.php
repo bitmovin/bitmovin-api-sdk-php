@@ -9,6 +9,7 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\ResetLiveManifestTimeshift\ResetLiveManifestTimeshiftApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Heartbeat\HeartbeatApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Hd\HdApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\InsertableContent\InsertableContentApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Scte35Cue\Scte35CueApi;
@@ -20,6 +21,9 @@ class LiveApi
 
     /** @var ResetLiveManifestTimeshiftApi */
     public $resetLiveManifestTimeshift;
+
+    /** @var HeartbeatApi */
+    public $heartbeat;
 
     /** @var HdApi */
     public $hd;
@@ -41,6 +45,7 @@ class LiveApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->resetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(null, $this->httpWrapper);
+        $this->heartbeat = new HeartbeatApi(null, $this->httpWrapper);
         $this->hd = new HdApi(null, $this->httpWrapper);
         $this->insertableContent = new InsertableContentApi(null, $this->httpWrapper);
         $this->scte35Cue = new Scte35CueApi(null, $this->httpWrapper);

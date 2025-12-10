@@ -22,6 +22,15 @@ class LiveEncodingEventName extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const ERROR = 'ERROR';
 
+    /** @var string */
+    private const WARNING = 'WARNING';
+
+    /** @var string */
+    private const PICTURE_TIMING = 'PICTURE_TIMING';
+
+    /** @var string */
+    private const INFO = 'INFO';
+
     /**
      * @param string $value
      * @return LiveEncodingEventName
@@ -89,6 +98,36 @@ class LiveEncodingEventName extends \BitmovinApiSdk\Common\Enum
     public static function ERROR()
     {
         return new LiveEncodingEventName(self::ERROR);
+    }
+
+    /**
+     * Warning message
+     *
+     * @return LiveEncodingEventName
+     */
+    public static function WARNING()
+    {
+        return new LiveEncodingEventName(self::WARNING);
+    }
+
+    /**
+     * Picture timing was found in respective source
+     *
+     * @return LiveEncodingEventName
+     */
+    public static function PICTURE_TIMING()
+    {
+        return new LiveEncodingEventName(self::PICTURE_TIMING);
+    }
+
+    /**
+     * Information message
+     *
+     * @return LiveEncodingEventName
+     */
+    public static function INFO()
+    {
+        return new LiveEncodingEventName(self::INFO);
     }
 }
 

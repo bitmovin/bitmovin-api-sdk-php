@@ -76,6 +76,7 @@
                         </li><li>public array <a href="#members">$utcTimings</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\DashEditionCompatibility">DashEditionCompatibility</span> <a href="#members">$dashEditionCompatibility</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\DashISO8601TimestampFormat">DashISO8601TimestampFormat</span> <a href="#members">$iso8601TimestampFormat</a>;
+                        </li><li>public float <a href="#members">$minBufferTime</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="BitmovinApiSdk\Models\Manifest">Manifest</span></li><li>public <span title="BitmovinApiSdk\Models\ManifestType">ManifestType</span> <a href="#members">$type</a>;
                         </li><li>public array <a href="#members">$outputs</a>;
                         </li><li>public <span title="BitmovinApiSdk\Models\Status">Status</span> <a href="#members">$status</a>;
@@ -96,6 +97,7 @@
                         </li><li>public $this <a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/utcTimings.html">utcTimings</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/dashEditionCompatibility.html">dashEditionCompatibility</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/iso8601TimestampFormat.html">iso8601TimestampFormat</a>()
+                        </li><li>public $this <a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/minBufferTime.html">minBufferTime</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\Manifest">Manifest</span></li><li>public void <a title="BitmovinApiSdk\Models\Manifest" href="../classes/BitmovinApiSdk_Models_Manifest/__construct.html">__construct</a>()
                         </li><li>public $this <a title="BitmovinApiSdk\Models\Manifest" href="../classes/BitmovinApiSdk_Models_Manifest/outputs.html">outputs</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Models\BitmovinResource">BitmovinResource</span></li><li>public void <a title="BitmovinApiSdk\Models\BitmovinResource" href="../classes/BitmovinApiSdk_Models_BitmovinResource/__construct.html">__construct</a>()
@@ -146,6 +148,9 @@
             <li id="manifestName"><strong>$manifestName</strong>
                 —
                 string</li>
+            <li id="minBufferTime"><strong>$minBufferTime</strong>
+                —
+                float</li>
             <li id="modifiedAt"><strong>$modifiedAt</strong>
                 —
                 <a title="Carbon\Carbon" href="../classes/Carbon_Carbon.html">Carbon\Carbon</a></li>
@@ -205,6 +210,8 @@
                 — Determines how timestamps should appear in the manifest</li>
             <li id="manifestName"><a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/manifestName.html">manifestName()</a>
                 — The filename of your manifest</li>
+            <li id="minBufferTime"><a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/minBufferTime.html">minBufferTime()</a>
+                — The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set.</li>
             <li id="namespaces"><a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/namespaces.html">namespaces()</a>
                 — List of additional XML namespaces to add to the DASH Manifest</li>
             <li id="profile"><a title="BitmovinApiSdk\Models\DashManifest" href="../classes/BitmovinApiSdk_Models_DashManifest/profile.html">profile()</a>

@@ -25,6 +25,9 @@ class DashManifest extends Manifest
     /** @var DashISO8601TimestampFormat */
     public $iso8601TimestampFormat;
 
+    /** @var float */
+    public $minBufferTime;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -109,6 +112,19 @@ class DashManifest extends Manifest
     public function iso8601TimestampFormat(DashISO8601TimestampFormat $iso8601TimestampFormat)
     {
         $this->iso8601TimestampFormat = $iso8601TimestampFormat;
+
+        return $this;
+    }
+
+    /**
+     * The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set.
+     *
+     * @param float $minBufferTime
+     * @return $this
+     */
+    public function minBufferTime(float $minBufferTime)
+    {
+        $this->minBufferTime = $minBufferTime;
 
         return $this;
     }
