@@ -18,6 +18,7 @@ use BitmovinApiSdk\Apis\Encoding\Encodings\TransferRetries\TransferRetriesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\OutputPaths\OutputPathsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Captions\CaptionsApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Sidecars\SidecarsApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\KantarWatermark\KantarWatermarkApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Keyframes\KeyframesApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Scte35Triggers\Scte35TriggersApi;
 
@@ -56,6 +57,9 @@ class EncodingsApi
     /** @var SidecarsApi */
     public $sidecars;
 
+    /** @var KantarWatermarkApi */
+    public $kantarWatermark;
+
     /** @var KeyframesApi */
     public $keyframes;
 
@@ -82,6 +86,7 @@ class EncodingsApi
         $this->outputPaths = new OutputPathsApi(null, $this->httpWrapper);
         $this->captions = new CaptionsApi(null, $this->httpWrapper);
         $this->sidecars = new SidecarsApi(null, $this->httpWrapper);
+        $this->kantarWatermark = new KantarWatermarkApi(null, $this->httpWrapper);
         $this->keyframes = new KeyframesApi(null, $this->httpWrapper);
         $this->scte35Triggers = new Scte35TriggersApi(null, $this->httpWrapper);
     }

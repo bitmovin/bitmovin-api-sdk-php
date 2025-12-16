@@ -69,10 +69,16 @@
                 extends <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource.html">ApiResource</a>
             {<br/><ul class="none"><li>// members</li><li>public <span title="BitmovinApiSdk\Models\LiveEncodingEventName">LiveEncodingEventName</span> <a href="#members">$eventType</a>;
                     </li><li>public string <a href="#members">$message</a>;
-                    </li><li>public string <a href="#members">$additionalProperties</a>;
+                    </li><li>public <span title="BitmovinApiSdk\Models\ClockSynchronizationMode">ClockSynchronizationMode</span> <a href="#members">$source</a>;
+                    </li><li>public int <a href="#members">$year</a>;
+                    </li><li>public int <a href="#members">$month</a>;
+                    </li><li>public int <a href="#members">$day</a>;
+                    </li><li>public int <a href="#members">$hours</a>;
+                    </li><li>public int <a href="#members">$minutes</a>;
+                    </li><li>public int <a href="#members">$seconds</a>;
+                    </li><li>public int <a href="#members">$microSeconds</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/__construct.html">__construct</a>()
                     </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/eventType.html">eventType</a>()
-                    </li><li>public $this <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/additionalProperties.html">additionalProperties</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="BitmovinApiSdk\Common\ApiResource">ApiResource</span></li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/__construct.html">__construct</a>()
                         </li><li>public static $this <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/create.html">create</a>()
                         </li><li>public void <a title="BitmovinApiSdk\Common\ApiResource" href="../classes/BitmovinApiSdk_Common_ApiResource/toArray.html">toArray</a>()
@@ -92,15 +98,36 @@
         <div class="styled members">
           <h4>public</h4>
           <ul class="members">
-            <li id="additionalProperties"><strong>$additionalProperties</strong>
+            <li id="day"><strong>$day</strong>
                 —
-                string</li>
+                int</li>
             <li id="eventType"><strong>$eventType</strong>
                 —
                 <a title="BitmovinApiSdk\Models\LiveEncodingEventName" href="../classes/BitmovinApiSdk_Models_LiveEncodingEventName.html">BitmovinApiSdk\Models\LiveEncodingEventName</a></li>
+            <li id="hours"><strong>$hours</strong>
+                —
+                int</li>
             <li id="message"><strong>$message</strong>
                 —
                 string</li>
+            <li id="microSeconds"><strong>$microSeconds</strong>
+                —
+                int</li>
+            <li id="minutes"><strong>$minutes</strong>
+                —
+                int</li>
+            <li id="month"><strong>$month</strong>
+                —
+                int</li>
+            <li id="seconds"><strong>$seconds</strong>
+                —
+                int</li>
+            <li id="source"><strong>$source</strong>
+                —
+                <a title="BitmovinApiSdk\Models\ClockSynchronizationMode" href="../classes/BitmovinApiSdk_Models_ClockSynchronizationMode.html">BitmovinApiSdk\Models\ClockSynchronizationMode</a></li>
+            <li id="year"><strong>$year</strong>
+                —
+                int</li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -110,8 +137,6 @@
             <li id="__construct">
               <a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/__construct.html">__construct()</a>
             </li>
-            <li id="additionalProperties"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/additionalProperties.html">additionalProperties()</a>
-                — Additional event details as key-value pairs</li>
             <li id="eventType"><a title="BitmovinApiSdk\Models\LiveEncodingStatsEventDetails" href="../classes/BitmovinApiSdk_Models_LiveEncodingStatsEventDetails/eventType.html">eventType()</a>
                 — eventType</li>
           </ul>

@@ -8,7 +8,10 @@ use BitmovinApiSdk\Common\ObjectMapper;
 class IABTaxonomy extends \BitmovinApiSdk\Common\ApiResource
 {
     /** @var string */
-    public $version;
+    public $contentVersion;
+
+    /** @var string */
+    public $adProductVersion;
 
     /** @var string[] */
     public $contentTaxonomies;
@@ -25,14 +28,27 @@ class IABTaxonomy extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * version
+     * contentVersion
      *
-     * @param string $version
+     * @param string $contentVersion
      * @return $this
      */
-    public function version(string $version)
+    public function contentVersion(string $contentVersion)
     {
-        $this->version = $version;
+        $this->contentVersion = $contentVersion;
+
+        return $this;
+    }
+
+    /**
+     * adProductVersion
+     *
+     * @param string $adProductVersion
+     * @return $this
+     */
+    public function adProductVersion(string $adProductVersion)
+    {
+        $this->adProductVersion = $adProductVersion;
 
         return $this;
     }

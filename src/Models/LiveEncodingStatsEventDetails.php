@@ -13,13 +13,35 @@ class LiveEncodingStatsEventDetails extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $message;
 
-    /** @var string */
-    public $additionalProperties;
+    /** @var ClockSynchronizationMode */
+    public $source;
+
+    /** @var int */
+    public $year;
+
+    /** @var int */
+    public $month;
+
+    /** @var int */
+    public $day;
+
+    /** @var int */
+    public $hours;
+
+    /** @var int */
+    public $minutes;
+
+    /** @var int */
+    public $seconds;
+
+    /** @var int */
+    public $microSeconds;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->eventType = ObjectMapper::map($this->eventType, LiveEncodingEventName::class);
+        $this->source = ObjectMapper::map($this->source, ClockSynchronizationMode::class);
     }
 
     /**
@@ -31,19 +53,6 @@ class LiveEncodingStatsEventDetails extends \BitmovinApiSdk\Common\ApiResource
     public function eventType(LiveEncodingEventName $eventType)
     {
         $this->eventType = $eventType;
-
-        return $this;
-    }
-
-    /**
-     * Additional event details as key-value pairs
-     *
-     * @param string $additionalProperties
-     * @return $this
-     */
-    public function additionalProperties(string $additionalProperties)
-    {
-        $this->additionalProperties = $additionalProperties;
 
         return $this;
     }
