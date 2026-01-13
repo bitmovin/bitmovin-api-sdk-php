@@ -37,6 +37,9 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     /** @var CacheControlSettings */
     public $cacheControlSettings;
 
+    /** @var AdInsertionSettings */
+    public $adInsertionSettings;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -49,6 +52,7 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
         $this->autoShutdownConfiguration = ObjectMapper::map($this->autoShutdownConfiguration, LiveAutoShutdownConfiguration::class);
         $this->esamSettings = ObjectMapper::map($this->esamSettings, EsamSettings::class);
         $this->cacheControlSettings = ObjectMapper::map($this->cacheControlSettings, CacheControlSettings::class);
+        $this->adInsertionSettings = ObjectMapper::map($this->adInsertionSettings, AdInsertionSettings::class);
     }
 
     /**
@@ -177,6 +181,19 @@ class StartLiveEncodingRequest extends \BitmovinApiSdk\Common\ApiResource
     public function cacheControlSettings(CacheControlSettings $cacheControlSettings)
     {
         $this->cacheControlSettings = $cacheControlSettings;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for ad insertion features like ESAM MediaPoint insertion
+     *
+     * @param AdInsertionSettings $adInsertionSettings
+     * @return $this
+     */
+    public function adInsertionSettings(AdInsertionSettings $adInsertionSettings)
+    {
+        $this->adInsertionSettings = $adInsertionSettings;
 
         return $this;
     }

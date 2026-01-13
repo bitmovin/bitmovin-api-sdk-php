@@ -8,6 +8,7 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Esam\EsamApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\ResetLiveManifestTimeshift\ResetLiveManifestTimeshiftApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Heartbeat\HeartbeatApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Hd\HdApi;
@@ -18,6 +19,9 @@ class LiveApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var EsamApi */
+    public $esam;
 
     /** @var ResetLiveManifestTimeshiftApi */
     public $resetLiveManifestTimeshift;
@@ -44,6 +48,7 @@ class LiveApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->esam = new EsamApi(null, $this->httpWrapper);
         $this->resetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(null, $this->httpWrapper);
         $this->heartbeat = new HeartbeatApi(null, $this->httpWrapper);
         $this->hd = new HdApi(null, $this->httpWrapper);

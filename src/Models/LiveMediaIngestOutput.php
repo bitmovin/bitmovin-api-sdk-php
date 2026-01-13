@@ -10,6 +10,9 @@ class LiveMediaIngestOutput extends Output
     /** @var string */
     public $publishingPoint;
 
+    /** @var bool */
+    public $scte35Passthrough;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -24,6 +27,19 @@ class LiveMediaIngestOutput extends Output
     public function publishingPoint(string $publishingPoint)
     {
         $this->publishingPoint = $publishingPoint;
+
+        return $this;
+    }
+
+    /**
+     * Enable passthrough of SCTE-35 messages from input to output. Default is false.
+     *
+     * @param bool $scte35Passthrough
+     * @return $this
+     */
+    public function scte35Passthrough(bool $scte35Passthrough)
+    {
+        $this->scte35Passthrough = $scte35Passthrough;
 
         return $this;
     }

@@ -8,11 +8,11 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Encoding\Encodings\EncodingsApi;
 use BitmovinApiSdk\Apis\Encoding\Inputs\InputsApi;
 use BitmovinApiSdk\Apis\Encoding\Outputs\OutputsApi;
 use BitmovinApiSdk\Apis\Encoding\Configurations\ConfigurationsApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\FiltersApi;
-use BitmovinApiSdk\Apis\Encoding\Encodings\EncodingsApi;
 use BitmovinApiSdk\Apis\Encoding\Live\LiveApi;
 use BitmovinApiSdk\Apis\Encoding\Manifests\ManifestsApi;
 use BitmovinApiSdk\Apis\Encoding\Infrastructure\InfrastructureApi;
@@ -26,6 +26,9 @@ class EncodingApi
     /** @var HttpWrapper */
     private $httpWrapper;
 
+    /** @var EncodingsApi */
+    public $encodings;
+
     /** @var InputsApi */
     public $inputs;
 
@@ -37,9 +40,6 @@ class EncodingApi
 
     /** @var FiltersApi */
     public $filters;
-
-    /** @var EncodingsApi */
-    public $encodings;
 
     /** @var LiveApi */
     public $live;
@@ -72,11 +72,11 @@ class EncodingApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->encodings = new EncodingsApi(null, $this->httpWrapper);
         $this->inputs = new InputsApi(null, $this->httpWrapper);
         $this->outputs = new OutputsApi(null, $this->httpWrapper);
         $this->configurations = new ConfigurationsApi(null, $this->httpWrapper);
         $this->filters = new FiltersApi(null, $this->httpWrapper);
-        $this->encodings = new EncodingsApi(null, $this->httpWrapper);
         $this->live = new LiveApi(null, $this->httpWrapper);
         $this->manifests = new ManifestsApi(null, $this->httpWrapper);
         $this->infrastructure = new InfrastructureApi(null, $this->httpWrapper);
