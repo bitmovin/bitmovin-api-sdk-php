@@ -17,5 +17,31 @@ class LiveStandbyPoolEncodingIngestPoint extends \BitmovinApiSdk\Common\ApiResou
     {
         parent::__construct($attributes);
     }
+
+    /**
+     * URL to the RTMP/RTMPS endpoint for this live encoding
+     *
+     * @param string $streamBaseUrl
+     * @return $this
+     */
+    public function streamBaseUrl(string $streamBaseUrl)
+    {
+        $this->streamBaseUrl = $streamBaseUrl;
+
+        return $this;
+    }
+
+    /**
+     * Stream key value of this live encoding
+     *
+     * @param string $streamKey
+     * @return $this
+     */
+    public function streamKey(string $streamKey)
+    {
+        $this->streamKey = $streamKey;
+
+        return $this;
+    }
 }
 

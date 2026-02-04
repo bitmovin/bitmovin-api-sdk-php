@@ -50,19 +50,6 @@ class LiveStandbyPoolEncoding extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * ingestPoints
-     *
-     * @param \BitmovinApiSdk\Models\LiveStandbyPoolEncodingIngestPoint[] $ingestPoints
-     * @return $this
-     */
-    public function ingestPoints(array $ingestPoints)
-    {
-        $this->ingestPoints = $ingestPoints;
-
-        return $this;
-    }
-
-    /**
      * status
      *
      * @param LiveStandbyPoolEncodingStatus $status

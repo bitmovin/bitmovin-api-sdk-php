@@ -29,16 +29,17 @@ class ActionsApi
      * Acquire an encoding from a standby pool
      *
      * @param string $poolId
+     * @param \BitmovinApiSdk\Models\LiveStandbyPoolAcquireEncoding $liveStandbyPoolAcquireEncoding
      * @return \BitmovinApiSdk\Models\LiveStandbyPoolEncoding
      * @throws BitmovinApiException
      */
-    public function acquireEncoding(string $poolId) : \BitmovinApiSdk\Models\LiveStandbyPoolEncoding
+    public function acquireEncoding(string $poolId, \BitmovinApiSdk\Models\LiveStandbyPoolAcquireEncoding $liveStandbyPoolAcquireEncoding = null) : \BitmovinApiSdk\Models\LiveStandbyPoolEncoding
     {
         $pathParams = [
             'pool_id' => $poolId,
         ];
 
-        $response = $this->httpWrapper->request('POST', '/encoding/live/standby-pools/{pool_id}/actions/acquire-encoding', $pathParams,  null, null, true);
+        $response = $this->httpWrapper->request('POST', '/encoding/live/standby-pools/{pool_id}/actions/acquire-encoding', $pathParams,  null, $liveStandbyPoolAcquireEncoding, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveStandbyPoolEncoding::class);
     }
