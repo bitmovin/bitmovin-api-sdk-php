@@ -16,12 +16,16 @@ class Content extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\Setting[] */
     public $settings;
 
+    /** @var \BitmovinApiSdk\Models\SceneDynamics */
+    public $dynamics;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->characters = ObjectMapper::map($this->characters, Character::class);
         $this->objects = ObjectMapper::map($this->objects, SceneObject::class);
         $this->settings = ObjectMapper::map($this->settings, Setting::class);
+        $this->dynamics = ObjectMapper::map($this->dynamics, SceneDynamics::class);
     }
 
     /**
@@ -59,6 +63,19 @@ class Content extends \BitmovinApiSdk\Common\ApiResource
     public function settings(array $settings)
     {
         $this->settings = $settings;
+
+        return $this;
+    }
+
+    /**
+     * dynamics
+     *
+     * @param \BitmovinApiSdk\Models\SceneDynamics $dynamics
+     * @return $this
+     */
+    public function dynamics(\BitmovinApiSdk\Models\SceneDynamics $dynamics)
+    {
+        $this->dynamics = $dynamics;
 
         return $this;
     }

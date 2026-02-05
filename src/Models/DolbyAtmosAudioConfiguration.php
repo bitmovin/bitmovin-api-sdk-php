@@ -10,10 +10,14 @@ class DolbyAtmosAudioConfiguration extends AudioConfiguration
     /** @var DolbyAtmosLoudnessControl */
     public $loudnessControl;
 
+    /** @var DolbyAtmosPreprocessing */
+    public $preprocessing;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->loudnessControl = ObjectMapper::map($this->loudnessControl, DolbyAtmosLoudnessControl::class);
+        $this->preprocessing = ObjectMapper::map($this->preprocessing, DolbyAtmosPreprocessing::class);
     }
 
     /**
@@ -25,6 +29,19 @@ class DolbyAtmosAudioConfiguration extends AudioConfiguration
     public function loudnessControl(DolbyAtmosLoudnessControl $loudnessControl)
     {
         $this->loudnessControl = $loudnessControl;
+
+        return $this;
+    }
+
+    /**
+     * preprocessing
+     *
+     * @param DolbyAtmosPreprocessing $preprocessing
+     * @return $this
+     */
+    public function preprocessing(DolbyAtmosPreprocessing $preprocessing)
+    {
+        $this->preprocessing = $preprocessing;
 
         return $this;
     }

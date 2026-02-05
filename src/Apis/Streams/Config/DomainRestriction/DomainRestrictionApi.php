@@ -34,7 +34,7 @@ class DomainRestrictionApi
      */
     public function create(\BitmovinApiSdk\Models\StreamsDomainRestrictionCreateRequest $streamsDomainRestrictionCreateRequest) : \BitmovinApiSdk\Models\StreamsDomainRestrictionResponse
     {
-        $response = $this->httpWrapper->request('POST', '/streams/config/domain-restriction/', [],  null, $streamsDomainRestrictionCreateRequest, true);
+        $response = $this->httpWrapper->request('POST', '/streams/config/domain-restriction', [],  null, $streamsDomainRestrictionCreateRequest, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\StreamsDomainRestrictionResponse::class);
     }
@@ -81,7 +81,7 @@ class DomainRestrictionApi
      */
     public function list(StreamsDomainRestrictionResponseListQueryParams $queryParams = null) : StreamsDomainRestrictionResponsePaginationResponse
     {
-        $response = $this->httpWrapper->request('GET', '/streams/config/domain-restriction/', [], $queryParams, null, true);
+        $response = $this->httpWrapper->request('GET', '/streams/config/domain-restriction', [], $queryParams, null, true);
 
         return ObjectMapper::map($response, StreamsDomainRestrictionResponsePaginationResponse::class);
     }

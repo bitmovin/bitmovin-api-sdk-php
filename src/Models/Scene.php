@@ -43,6 +43,9 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\Shot[] */
     public $shots;
 
+    /** @var \BitmovinApiSdk\Models\AdOpportunity */
+    public $adOpportunityInformation;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -50,6 +53,7 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
         $this->iab = ObjectMapper::map($this->iab, IABTaxonomy::class);
         $this->type = ObjectMapper::map($this->type, SceneType::class);
         $this->shots = ObjectMapper::map($this->shots, Shot::class);
+        $this->adOpportunityInformation = ObjectMapper::map($this->adOpportunityInformation, AdOpportunity::class);
     }
 
     /**
@@ -204,6 +208,19 @@ class Scene extends \BitmovinApiSdk\Common\ApiResource
     public function shots(array $shots)
     {
         $this->shots = $shots;
+
+        return $this;
+    }
+
+    /**
+     * adOpportunityInformation
+     *
+     * @param \BitmovinApiSdk\Models\AdOpportunity $adOpportunityInformation
+     * @return $this
+     */
+    public function adOpportunityInformation(\BitmovinApiSdk\Models\AdOpportunity $adOpportunityInformation)
+    {
+        $this->adOpportunityInformation = $adOpportunityInformation;
 
         return $this;
     }
