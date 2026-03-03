@@ -239,6 +239,96 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CUSTOM_DATA_30 = 'CUSTOM_DATA_30';
 
     /** @var string */
+    private const CUSTOM_DATA_31 = 'CUSTOM_DATA_31';
+
+    /** @var string */
+    private const CUSTOM_DATA_32 = 'CUSTOM_DATA_32';
+
+    /** @var string */
+    private const CUSTOM_DATA_33 = 'CUSTOM_DATA_33';
+
+    /** @var string */
+    private const CUSTOM_DATA_34 = 'CUSTOM_DATA_34';
+
+    /** @var string */
+    private const CUSTOM_DATA_35 = 'CUSTOM_DATA_35';
+
+    /** @var string */
+    private const CUSTOM_DATA_36 = 'CUSTOM_DATA_36';
+
+    /** @var string */
+    private const CUSTOM_DATA_37 = 'CUSTOM_DATA_37';
+
+    /** @var string */
+    private const CUSTOM_DATA_38 = 'CUSTOM_DATA_38';
+
+    /** @var string */
+    private const CUSTOM_DATA_39 = 'CUSTOM_DATA_39';
+
+    /** @var string */
+    private const CUSTOM_DATA_40 = 'CUSTOM_DATA_40';
+
+    /** @var string */
+    private const CUSTOM_DATA_41 = 'CUSTOM_DATA_41';
+
+    /** @var string */
+    private const CUSTOM_DATA_42 = 'CUSTOM_DATA_42';
+
+    /** @var string */
+    private const CUSTOM_DATA_43 = 'CUSTOM_DATA_43';
+
+    /** @var string */
+    private const CUSTOM_DATA_44 = 'CUSTOM_DATA_44';
+
+    /** @var string */
+    private const CUSTOM_DATA_45 = 'CUSTOM_DATA_45';
+
+    /** @var string */
+    private const CUSTOM_DATA_46 = 'CUSTOM_DATA_46';
+
+    /** @var string */
+    private const CUSTOM_DATA_47 = 'CUSTOM_DATA_47';
+
+    /** @var string */
+    private const CUSTOM_DATA_48 = 'CUSTOM_DATA_48';
+
+    /** @var string */
+    private const CUSTOM_DATA_49 = 'CUSTOM_DATA_49';
+
+    /** @var string */
+    private const CUSTOM_DATA_50 = 'CUSTOM_DATA_50';
+
+    /** @var string */
+    private const CUSTOM_DATA_51 = 'CUSTOM_DATA_51';
+
+    /** @var string */
+    private const CUSTOM_DATA_52 = 'CUSTOM_DATA_52';
+
+    /** @var string */
+    private const CUSTOM_DATA_53 = 'CUSTOM_DATA_53';
+
+    /** @var string */
+    private const CUSTOM_DATA_54 = 'CUSTOM_DATA_54';
+
+    /** @var string */
+    private const CUSTOM_DATA_55 = 'CUSTOM_DATA_55';
+
+    /** @var string */
+    private const CUSTOM_DATA_56 = 'CUSTOM_DATA_56';
+
+    /** @var string */
+    private const CUSTOM_DATA_57 = 'CUSTOM_DATA_57';
+
+    /** @var string */
+    private const CUSTOM_DATA_58 = 'CUSTOM_DATA_58';
+
+    /** @var string */
+    private const CUSTOM_DATA_59 = 'CUSTOM_DATA_59';
+
+    /** @var string */
+    private const CUSTOM_DATA_60 = 'CUSTOM_DATA_60';
+
+    /** @var string */
     private const CUSTOM_USER_ID = 'CUSTOM_USER_ID';
 
     /** @var string */
@@ -1223,6 +1313,306 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function CUSTOM_DATA_30()
     {
         return new AdAnalyticsAttribute(self::CUSTOM_DATA_30);
+    }
+
+    /**
+     * CUSTOM_DATA_31
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_31()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_31);
+    }
+
+    /**
+     * CUSTOM_DATA_32
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_32()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_32);
+    }
+
+    /**
+     * CUSTOM_DATA_33
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_33()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_33);
+    }
+
+    /**
+     * CUSTOM_DATA_34
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_34()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_34);
+    }
+
+    /**
+     * CUSTOM_DATA_35
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_35()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_35);
+    }
+
+    /**
+     * CUSTOM_DATA_36
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_36()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_36);
+    }
+
+    /**
+     * CUSTOM_DATA_37
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_37()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_37);
+    }
+
+    /**
+     * CUSTOM_DATA_38
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_38()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_38);
+    }
+
+    /**
+     * CUSTOM_DATA_39
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_39()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_39);
+    }
+
+    /**
+     * CUSTOM_DATA_40
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_40()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_40);
+    }
+
+    /**
+     * CUSTOM_DATA_41
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_41()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_41);
+    }
+
+    /**
+     * CUSTOM_DATA_42
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_42()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_42);
+    }
+
+    /**
+     * CUSTOM_DATA_43
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_43()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_43);
+    }
+
+    /**
+     * CUSTOM_DATA_44
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_44()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_44);
+    }
+
+    /**
+     * CUSTOM_DATA_45
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_45()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_45);
+    }
+
+    /**
+     * CUSTOM_DATA_46
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_46()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_46);
+    }
+
+    /**
+     * CUSTOM_DATA_47
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_47()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_47);
+    }
+
+    /**
+     * CUSTOM_DATA_48
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_48()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_48);
+    }
+
+    /**
+     * CUSTOM_DATA_49
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_49()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_49);
+    }
+
+    /**
+     * CUSTOM_DATA_50
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_50()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_50);
+    }
+
+    /**
+     * CUSTOM_DATA_51
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_51()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_51);
+    }
+
+    /**
+     * CUSTOM_DATA_52
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_52()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_52);
+    }
+
+    /**
+     * CUSTOM_DATA_53
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_53()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_53);
+    }
+
+    /**
+     * CUSTOM_DATA_54
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_54()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_54);
+    }
+
+    /**
+     * CUSTOM_DATA_55
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_55()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_55);
+    }
+
+    /**
+     * CUSTOM_DATA_56
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_56()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_56);
+    }
+
+    /**
+     * CUSTOM_DATA_57
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_57()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_57);
+    }
+
+    /**
+     * CUSTOM_DATA_58
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_58()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_58);
+    }
+
+    /**
+     * CUSTOM_DATA_59
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_59()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_59);
+    }
+
+    /**
+     * CUSTOM_DATA_60
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_60()
+    {
+        return new AdAnalyticsAttribute(self::CUSTOM_DATA_60);
     }
 
     /**

@@ -203,6 +203,36 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CUSTOM_DATA_50 = 'CUSTOM_DATA_50';
 
     /** @var string */
+    private const CUSTOM_DATA_51 = 'CUSTOM_DATA_51';
+
+    /** @var string */
+    private const CUSTOM_DATA_52 = 'CUSTOM_DATA_52';
+
+    /** @var string */
+    private const CUSTOM_DATA_53 = 'CUSTOM_DATA_53';
+
+    /** @var string */
+    private const CUSTOM_DATA_54 = 'CUSTOM_DATA_54';
+
+    /** @var string */
+    private const CUSTOM_DATA_55 = 'CUSTOM_DATA_55';
+
+    /** @var string */
+    private const CUSTOM_DATA_56 = 'CUSTOM_DATA_56';
+
+    /** @var string */
+    private const CUSTOM_DATA_57 = 'CUSTOM_DATA_57';
+
+    /** @var string */
+    private const CUSTOM_DATA_58 = 'CUSTOM_DATA_58';
+
+    /** @var string */
+    private const CUSTOM_DATA_59 = 'CUSTOM_DATA_59';
+
+    /** @var string */
+    private const CUSTOM_DATA_60 = 'CUSTOM_DATA_60';
+
+    /** @var string */
     private const CUSTOM_USER_ID = 'CUSTOM_USER_ID';
 
     /** @var string */
@@ -270,6 +300,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
 
     /** @var string */
     private const IS_MUTED = 'IS_MUTED';
+
+    /** @var string */
+    private const IS_PROGRAM_CHANGE = 'IS_PROGRAM_CHANGE';
 
     /** @var string */
     private const ISP = 'ISP';
@@ -1106,6 +1139,106 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
+     * CUSTOM_DATA_51
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_51()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_51);
+    }
+
+    /**
+     * CUSTOM_DATA_52
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_52()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_52);
+    }
+
+    /**
+     * CUSTOM_DATA_53
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_53()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_53);
+    }
+
+    /**
+     * CUSTOM_DATA_54
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_54()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_54);
+    }
+
+    /**
+     * CUSTOM_DATA_55
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_55()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_55);
+    }
+
+    /**
+     * CUSTOM_DATA_56
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_56()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_56);
+    }
+
+    /**
+     * CUSTOM_DATA_57
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_57()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_57);
+    }
+
+    /**
+     * CUSTOM_DATA_58
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_58()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_58);
+    }
+
+    /**
+     * CUSTOM_DATA_59
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_59()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_59);
+    }
+
+    /**
+     * CUSTOM_DATA_60
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_60()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_60);
+    }
+
+    /**
      * CUSTOM_USER_ID
      *
      * @return AnalyticsAttribute
@@ -1333,6 +1466,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function IS_MUTED()
     {
         return new AnalyticsAttribute(self::IS_MUTED);
+    }
+
+    /**
+     * IS_PROGRAM_CHANGE
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function IS_PROGRAM_CHANGE()
+    {
+        return new AnalyticsAttribute(self::IS_PROGRAM_CHANGE);
     }
 
     /**

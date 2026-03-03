@@ -10,6 +10,9 @@ class AdPosition extends \BitmovinApiSdk\Common\ApiResource
     /** @var float */
     public $position;
 
+    /** @var float */
+    public $duration;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -24,6 +27,19 @@ class AdPosition extends \BitmovinApiSdk\Common\ApiResource
     public function position(float $position)
     {
         $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * duration
+     *
+     * @param float $duration
+     * @return $this
+     */
+    public function duration(float $duration)
+    {
+        $this->duration = $duration;
 
         return $this;
     }

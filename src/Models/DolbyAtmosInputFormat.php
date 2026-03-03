@@ -10,6 +10,9 @@ class DolbyAtmosInputFormat extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const ADM = 'ADM';
 
+    /** @var string */
+    private const MXF = 'MXF';
+
     /**
      * @param string $value
      * @return DolbyAtmosInputFormat
@@ -37,6 +40,16 @@ class DolbyAtmosInputFormat extends \BitmovinApiSdk\Common\Enum
     public static function ADM()
     {
         return new DolbyAtmosInputFormat(self::ADM);
+    }
+
+    /**
+     * MXF
+     *
+     * @return DolbyAtmosInputFormat
+     */
+    public static function MXF()
+    {
+        return new DolbyAtmosInputFormat(self::MXF);
     }
 }
 
