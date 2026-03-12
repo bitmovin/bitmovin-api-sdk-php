@@ -233,6 +233,51 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const CUSTOM_DATA_60 = 'CUSTOM_DATA_60';
 
     /** @var string */
+    private const CUSTOM_DATA_61 = 'CUSTOM_DATA_61';
+
+    /** @var string */
+    private const CUSTOM_DATA_62 = 'CUSTOM_DATA_62';
+
+    /** @var string */
+    private const CUSTOM_DATA_63 = 'CUSTOM_DATA_63';
+
+    /** @var string */
+    private const CUSTOM_DATA_64 = 'CUSTOM_DATA_64';
+
+    /** @var string */
+    private const CUSTOM_DATA_65 = 'CUSTOM_DATA_65';
+
+    /** @var string */
+    private const CUSTOM_DATA_66 = 'CUSTOM_DATA_66';
+
+    /** @var string */
+    private const CUSTOM_DATA_67 = 'CUSTOM_DATA_67';
+
+    /** @var string */
+    private const CUSTOM_DATA_68 = 'CUSTOM_DATA_68';
+
+    /** @var string */
+    private const CUSTOM_DATA_69 = 'CUSTOM_DATA_69';
+
+    /** @var string */
+    private const CUSTOM_DATA_70 = 'CUSTOM_DATA_70';
+
+    /** @var string */
+    private const CUSTOM_DATA_71 = 'CUSTOM_DATA_71';
+
+    /** @var string */
+    private const CUSTOM_DATA_72 = 'CUSTOM_DATA_72';
+
+    /** @var string */
+    private const CUSTOM_DATA_73 = 'CUSTOM_DATA_73';
+
+    /** @var string */
+    private const CUSTOM_DATA_74 = 'CUSTOM_DATA_74';
+
+    /** @var string */
+    private const CUSTOM_DATA_75 = 'CUSTOM_DATA_75';
+
+    /** @var string */
     private const CUSTOM_USER_ID = 'CUSTOM_USER_ID';
 
     /** @var string */
@@ -1236,6 +1281,156 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function CUSTOM_DATA_60()
     {
         return new AnalyticsAttribute(self::CUSTOM_DATA_60);
+    }
+
+    /**
+     * CUSTOM_DATA_61
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_61()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_61);
+    }
+
+    /**
+     * CUSTOM_DATA_62
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_62()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_62);
+    }
+
+    /**
+     * CUSTOM_DATA_63
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_63()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_63);
+    }
+
+    /**
+     * CUSTOM_DATA_64
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_64()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_64);
+    }
+
+    /**
+     * CUSTOM_DATA_65
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_65()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_65);
+    }
+
+    /**
+     * CUSTOM_DATA_66
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_66()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_66);
+    }
+
+    /**
+     * CUSTOM_DATA_67
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_67()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_67);
+    }
+
+    /**
+     * CUSTOM_DATA_68
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_68()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_68);
+    }
+
+    /**
+     * CUSTOM_DATA_69
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_69()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_69);
+    }
+
+    /**
+     * CUSTOM_DATA_70
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_70()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_70);
+    }
+
+    /**
+     * CUSTOM_DATA_71
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_71()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_71);
+    }
+
+    /**
+     * CUSTOM_DATA_72
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_72()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_72);
+    }
+
+    /**
+     * CUSTOM_DATA_73
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_73()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_73);
+    }
+
+    /**
+     * CUSTOM_DATA_74
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_74()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_74);
+    }
+
+    /**
+     * CUSTOM_DATA_75
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function CUSTOM_DATA_75()
+    {
+        return new AnalyticsAttribute(self::CUSTOM_DATA_75);
     }
 
     /**

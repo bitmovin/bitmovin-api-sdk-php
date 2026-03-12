@@ -13,15 +13,11 @@ class EsamMediaPoint extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\EsamSignal[] */
     public $signals;
 
-    /** @var \BitmovinApiSdk\Models\EsamCondition[] */
-    public $conditions;
-
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->matchTime = ObjectMapper::map($this->matchTime, Carbon::class);
         $this->signals = ObjectMapper::map($this->signals, EsamSignal::class);
-        $this->conditions = ObjectMapper::map($this->conditions, EsamCondition::class);
     }
 
     /**
@@ -46,19 +42,6 @@ class EsamMediaPoint extends \BitmovinApiSdk\Common\ApiResource
     public function signals(array $signals)
     {
         $this->signals = $signals;
-
-        return $this;
-    }
-
-    /**
-     * Optional array of ESAM conditions with timing offsets and directional markers (OUT/IN) for signaling content boundaries
-     *
-     * @param \BitmovinApiSdk\Models\EsamCondition[] $conditions
-     * @return $this
-     */
-    public function conditions(array $conditions)
-    {
-        $this->conditions = $conditions;
 
         return $this;
     }
