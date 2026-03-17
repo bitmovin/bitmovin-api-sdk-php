@@ -11,6 +11,7 @@ class AgentChatMessagePart extends \BitmovinApiSdk\Common\ApiResource
     public static $discriminatorMapping = [
         "text" => AgentChatTextPart::class,
         "data-attachments" => AgentChatAttachmentsPart::class,
+        "dynamic-tool" => AgentChatDynamicToolPart::class,
     ];
 
     public function __construct($attributes = null)

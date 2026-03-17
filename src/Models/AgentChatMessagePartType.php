@@ -10,6 +10,9 @@ class AgentChatMessagePartType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const DATA_ATTACHMENTS = 'data-attachments';
 
+    /** @var string */
+    private const DYNAMIC_TOOL = 'dynamic-tool';
+
     /**
      * @param string $value
      * @return AgentChatMessagePartType
@@ -37,6 +40,16 @@ class AgentChatMessagePartType extends \BitmovinApiSdk\Common\Enum
     public static function DATA_ATTACHMENTS()
     {
         return new AgentChatMessagePartType(self::DATA_ATTACHMENTS);
+    }
+
+    /**
+     * DYNAMIC_TOOL
+     *
+     * @return AgentChatMessagePartType
+     */
+    public static function DYNAMIC_TOOL()
+    {
+        return new AgentChatMessagePartType(self::DYNAMIC_TOOL);
     }
 }
 

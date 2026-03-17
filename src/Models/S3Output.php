@@ -25,11 +25,15 @@ class S3Output extends Output
     /** @var S3SignatureVersion */
     public $signatureVersion;
 
+    /** @var S3StorageClass */
+    public $storageClass;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->cloudRegion = ObjectMapper::map($this->cloudRegion, AwsCloudRegion::class);
         $this->signatureVersion = ObjectMapper::map($this->signatureVersion, S3SignatureVersion::class);
+        $this->storageClass = ObjectMapper::map($this->storageClass, S3StorageClass::class);
     }
 
     /**
@@ -106,6 +110,19 @@ class S3Output extends Output
     public function signatureVersion(S3SignatureVersion $signatureVersion)
     {
         $this->signatureVersion = $signatureVersion;
+
+        return $this;
+    }
+
+    /**
+     * Specifies the storage class used for the bucket. This depends on the requirements of workloads, like performance, data access, resiliency, and cost.
+     *
+     * @param S3StorageClass $storageClass
+     * @return $this
+     */
+    public function storageClass(S3StorageClass $storageClass)
+    {
+        $this->storageClass = $storageClass;
 
         return $this;
     }
