@@ -10,10 +10,14 @@ class AiSceneAnalysisAutomaticAdPlacement extends \BitmovinApiSdk\Common\ApiReso
     /** @var \BitmovinApiSdk\Models\AutomaticAdPlacementPosition[] */
     public $schedule;
 
+    /** @var AllSceneBoundaries */
+    public $allSceneBoundaries;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->schedule = ObjectMapper::map($this->schedule, AutomaticAdPlacementPosition::class);
+        $this->allSceneBoundaries = ObjectMapper::map($this->allSceneBoundaries, AllSceneBoundaries::class);
     }
 
     /**
@@ -25,6 +29,19 @@ class AiSceneAnalysisAutomaticAdPlacement extends \BitmovinApiSdk\Common\ApiReso
     public function schedule(array $schedule)
     {
         $this->schedule = $schedule;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for placing keyframes and optional cue tags at every detected scene boundary.
+     *
+     * @param AllSceneBoundaries $allSceneBoundaries
+     * @return $this
+     */
+    public function allSceneBoundaries(AllSceneBoundaries $allSceneBoundaries)
+    {
+        $this->allSceneBoundaries = $allSceneBoundaries;
 
         return $this;
     }
