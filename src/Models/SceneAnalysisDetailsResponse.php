@@ -10,6 +10,9 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\Scene[] */
     public $scenes;
 
+    /** @var float */
+    public $duration;
+
     /** @var string */
     public $description;
 
@@ -24,6 +27,9 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
 
     /** @var string[] */
     public $iabSensitiveTopicTaxonomies;
+
+    /** @var string[] */
+    public $inputLanguageCodes;
 
     /** @var \BitmovinApiSdk\Models\Metadata */
     public $metadata;
@@ -45,6 +51,19 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function scenes(array $scenes)
     {
         $this->scenes = $scenes;
+
+        return $this;
+    }
+
+    /**
+     * duration
+     *
+     * @param float $duration
+     * @return $this
+     */
+    public function duration(float $duration)
+    {
+        $this->duration = $duration;
 
         return $this;
     }
@@ -110,6 +129,19 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function iabSensitiveTopicTaxonomies(array $iabSensitiveTopicTaxonomies)
     {
         $this->iabSensitiveTopicTaxonomies = $iabSensitiveTopicTaxonomies;
+
+        return $this;
+    }
+
+    /**
+     * inputLanguageCodes
+     *
+     * @param string[] $inputLanguageCodes
+     * @return $this
+     */
+    public function inputLanguageCodes(array $inputLanguageCodes)
+    {
+        $this->inputLanguageCodes = $inputLanguageCodes;
 
         return $this;
     }

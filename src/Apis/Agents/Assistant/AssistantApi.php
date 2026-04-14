@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\Agents;
+namespace BitmovinApiSdk\Apis\Agents\Assistant;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -8,22 +8,18 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\Agents\Aisa\AisaApi;
-use BitmovinApiSdk\Apis\Agents\Assistant\AssistantApi;
+use BitmovinApiSdk\Apis\Agents\Assistant\Sessions\SessionsApi;
 
-class AgentsApi
+class AssistantApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
 
-    /** @var AisaApi */
-    public $aisa;
-
-    /** @var AssistantApi */
-    public $assistant;
+    /** @var SessionsApi */
+    public $sessions;
 
     /**
-     * AgentsApi constructor.
+     * AssistantApi constructor.
      *
      * @param Configuration $config
      * @param HttpWrapper $httpWrapper
@@ -32,7 +28,6 @@ class AgentsApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
-        $this->aisa = new AisaApi(null, $this->httpWrapper);
-        $this->assistant = new AssistantApi(null, $this->httpWrapper);
+        $this->sessions = new SessionsApi(null, $this->httpWrapper);
     }
 }
