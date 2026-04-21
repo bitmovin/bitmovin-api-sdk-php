@@ -44,6 +44,12 @@ class LiveEncodingHeartbeatIngestStream extends \BitmovinApiSdk\Common\ApiResour
     public $keyFrameIntervalAvg;
 
     /** @var int */
+    public $keyFrameIntervalMaxLastMinute;
+
+    /** @var float */
+    public $keyFrameIntervalAvgLastMinute;
+
+    /** @var int */
     public $lastTimestamp;
 
     /** @var int */
@@ -219,6 +225,32 @@ class LiveEncodingHeartbeatIngestStream extends \BitmovinApiSdk\Common\ApiResour
     public function keyFrameIntervalAvg(float $keyFrameIntervalAvg)
     {
         $this->keyFrameIntervalAvg = $keyFrameIntervalAvg;
+
+        return $this;
+    }
+
+    /**
+     * Largest key-frame interval observed over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+     *
+     * @param int $keyFrameIntervalMaxLastMinute
+     * @return $this
+     */
+    public function keyFrameIntervalMaxLastMinute(int $keyFrameIntervalMaxLastMinute)
+    {
+        $this->keyFrameIntervalMaxLastMinute = $keyFrameIntervalMaxLastMinute;
+
+        return $this;
+    }
+
+    /**
+     * Average key-frame interval over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+     *
+     * @param float $keyFrameIntervalAvgLastMinute
+     * @return $this
+     */
+    public function keyFrameIntervalAvgLastMinute(float $keyFrameIntervalAvgLastMinute)
+    {
+        $this->keyFrameIntervalAvgLastMinute = $keyFrameIntervalAvgLastMinute;
 
         return $this;
     }
