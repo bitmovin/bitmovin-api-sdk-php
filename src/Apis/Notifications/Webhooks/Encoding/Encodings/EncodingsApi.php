@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\Finished\FinishedApi;
 use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\Error\ErrorApi;
 use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\LiveEncodingHeartbeat\LiveEncodingHeartbeatApi;
+use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\LiveManifestReady\LiveManifestReadyApi;
 use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\TransferError\TransferErrorApi;
 use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\LiveInputStreamChanged\LiveInputStreamChangedApi;
 use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\EncodingStatusChanged\EncodingStatusChangedApi;
@@ -28,6 +29,9 @@ class EncodingsApi
 
     /** @var LiveEncodingHeartbeatApi */
     public $liveEncodingHeartbeat;
+
+    /** @var LiveManifestReadyApi */
+    public $liveManifestReady;
 
     /** @var TransferErrorApi */
     public $transferError;
@@ -51,6 +55,7 @@ class EncodingsApi
         $this->finished = new FinishedApi(null, $this->httpWrapper);
         $this->error = new ErrorApi(null, $this->httpWrapper);
         $this->liveEncodingHeartbeat = new LiveEncodingHeartbeatApi(null, $this->httpWrapper);
+        $this->liveManifestReady = new LiveManifestReadyApi(null, $this->httpWrapper);
         $this->transferError = new TransferErrorApi(null, $this->httpWrapper);
         $this->liveInputStreamChanged = new LiveInputStreamChangedApi(null, $this->httpWrapper);
         $this->encodingStatusChanged = new EncodingStatusChangedApi(null, $this->httpWrapper);

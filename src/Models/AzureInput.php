@@ -13,12 +13,16 @@ class AzureInput extends Input
     /** @var string */
     public $accountKey;
 
+    /** @var AzureServicePrincipal */
+    public $servicePrincipal;
+
     /** @var string */
     public $container;
 
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->servicePrincipal = ObjectMapper::map($this->servicePrincipal, AzureServicePrincipal::class);
     }
 
     /**
@@ -35,7 +39,7 @@ class AzureInput extends Input
     }
 
     /**
-     * Azure Account Key (required)
+     * Azure Account Key
      *
      * @param string $accountKey
      * @return $this
@@ -43,6 +47,19 @@ class AzureInput extends Input
     public function accountKey(string $accountKey)
     {
         $this->accountKey = $accountKey;
+
+        return $this;
+    }
+
+    /**
+     * servicePrincipal
+     *
+     * @param AzureServicePrincipal $servicePrincipal
+     * @return $this
+     */
+    public function servicePrincipal(AzureServicePrincipal $servicePrincipal)
+    {
+        $this->servicePrincipal = $servicePrincipal;
 
         return $this;
     }
