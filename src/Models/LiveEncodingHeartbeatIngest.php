@@ -22,6 +22,18 @@ class LiveEncodingHeartbeatIngest extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\RtmpUserIngestInfo */
     public $rtmpUserIngestInfo;
 
+    /** @var int */
+    public $droppedPacketsVideo;
+
+    /** @var int */
+    public $droppedPacketsAudio;
+
+    /** @var int */
+    public $corruptPacketsVideo;
+
+    /** @var int */
+    public $corruptPacketsAudio;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -92,6 +104,58 @@ class LiveEncodingHeartbeatIngest extends \BitmovinApiSdk\Common\ApiResource
     public function rtmpUserIngestInfo(\BitmovinApiSdk\Models\RtmpUserIngestInfo $rtmpUserIngestInfo)
     {
         $this->rtmpUserIngestInfo = $rtmpUserIngestInfo;
+
+        return $this;
+    }
+
+    /**
+     * Total number of dropped video packets since the live encoding started.
+     *
+     * @param int $droppedPacketsVideo
+     * @return $this
+     */
+    public function droppedPacketsVideo(int $droppedPacketsVideo)
+    {
+        $this->droppedPacketsVideo = $droppedPacketsVideo;
+
+        return $this;
+    }
+
+    /**
+     * Total number of dropped audio packets since the live encoding started.
+     *
+     * @param int $droppedPacketsAudio
+     * @return $this
+     */
+    public function droppedPacketsAudio(int $droppedPacketsAudio)
+    {
+        $this->droppedPacketsAudio = $droppedPacketsAudio;
+
+        return $this;
+    }
+
+    /**
+     * Total number of corrupt video packets since the live encoding started.
+     *
+     * @param int $corruptPacketsVideo
+     * @return $this
+     */
+    public function corruptPacketsVideo(int $corruptPacketsVideo)
+    {
+        $this->corruptPacketsVideo = $corruptPacketsVideo;
+
+        return $this;
+    }
+
+    /**
+     * Total number of corrupt audio packets since the live encoding started.
+     *
+     * @param int $corruptPacketsAudio
+     * @return $this
+     */
+    public function corruptPacketsAudio(int $corruptPacketsAudio)
+    {
+        $this->corruptPacketsAudio = $corruptPacketsAudio;
 
         return $this;
     }

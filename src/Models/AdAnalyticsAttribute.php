@@ -419,6 +419,9 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const IS_LINEAR = 'IS_LINEAR';
 
     /** @var string */
+    private const IS_SLATE = 'IS_SLATE';
+
+    /** @var string */
     private const ISP = 'ISP';
 
     /** @var string */
@@ -1958,6 +1961,16 @@ class AdAnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function IS_LINEAR()
     {
         return new AdAnalyticsAttribute(self::IS_LINEAR);
+    }
+
+    /**
+     * IS_SLATE
+     *
+     * @return AdAnalyticsAttribute
+     */
+    public static function IS_SLATE()
+    {
+        return new AdAnalyticsAttribute(self::IS_SLATE);
     }
 
     /**
