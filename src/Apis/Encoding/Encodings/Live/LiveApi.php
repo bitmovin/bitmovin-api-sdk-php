@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Esam\EsamApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\ResetLiveManifestTimeshift\ResetLiveManifestTimeshiftApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Heartbeat\HeartbeatApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Live\HeartbeatFinal\HeartbeatFinalApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Hd\HdApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\InsertableContent\InsertableContentApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Scte35Cue\Scte35CueApi;
@@ -28,6 +29,9 @@ class LiveApi
 
     /** @var HeartbeatApi */
     public $heartbeat;
+
+    /** @var HeartbeatFinalApi */
+    public $heartbeatFinal;
 
     /** @var HdApi */
     public $hd;
@@ -51,6 +55,7 @@ class LiveApi
         $this->esam = new EsamApi(null, $this->httpWrapper);
         $this->resetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(null, $this->httpWrapper);
         $this->heartbeat = new HeartbeatApi(null, $this->httpWrapper);
+        $this->heartbeatFinal = new HeartbeatFinalApi(null, $this->httpWrapper);
         $this->hd = new HdApi(null, $this->httpWrapper);
         $this->insertableContent = new InsertableContentApi(null, $this->httpWrapper);
         $this->scte35Cue = new Scte35CueApi(null, $this->httpWrapper);
