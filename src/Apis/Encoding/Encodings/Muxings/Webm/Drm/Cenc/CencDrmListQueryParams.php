@@ -7,10 +7,10 @@ use BitmovinApiSdk\Common\QueryParams;
 
 class CencDrmListQueryParams implements QueryParams
 {
-    /** @var string */
+    /** @var int */
     private $offset;
 
-    /** @var string */
+    /** @var int */
     private $limit;
 
     /**
@@ -22,10 +22,10 @@ class CencDrmListQueryParams implements QueryParams
     }
 
     /**
-     * @param string $offset
+     * @param int $offset
      * @return CencDrmListQueryParams
      */
-    public function offset(string $offset): CencDrmListQueryParams
+    public function offset(int $offset): CencDrmListQueryParams
     {
         $this->offset = $offset;
 
@@ -33,10 +33,10 @@ class CencDrmListQueryParams implements QueryParams
     }
 
     /**
-     * @param string $limit
+     * @param int $limit
      * @return CencDrmListQueryParams
      */
-    public function limit(string $limit): CencDrmListQueryParams
+    public function limit(int $limit): CencDrmListQueryParams
     {
         $this->limit = $limit;
 

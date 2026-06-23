@@ -7,10 +7,10 @@ use BitmovinApiSdk\Common\QueryParams;
 
 class SpekeDrmListQueryParams implements QueryParams
 {
-    /** @var string */
+    /** @var int */
     private $offset;
 
-    /** @var string */
+    /** @var int */
     private $limit;
 
     /**
@@ -22,10 +22,10 @@ class SpekeDrmListQueryParams implements QueryParams
     }
 
     /**
-     * @param string $offset
+     * @param int $offset
      * @return SpekeDrmListQueryParams
      */
-    public function offset(string $offset): SpekeDrmListQueryParams
+    public function offset(int $offset): SpekeDrmListQueryParams
     {
         $this->offset = $offset;
 
@@ -33,10 +33,10 @@ class SpekeDrmListQueryParams implements QueryParams
     }
 
     /**
-     * @param string $limit
+     * @param int $limit
      * @return SpekeDrmListQueryParams
      */
-    public function limit(string $limit): SpekeDrmListQueryParams
+    public function limit(int $limit): SpekeDrmListQueryParams
     {
         $this->limit = $limit;
 
