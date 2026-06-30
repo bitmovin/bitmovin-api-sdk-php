@@ -16,6 +16,9 @@ class EncodingMode extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const THREE_PASS = 'THREE_PASS';
 
+    /** @var string */
+    private const SMART_PASS = 'SMART_PASS';
+
     /**
      * @param string $value
      * @return EncodingMode
@@ -63,6 +66,16 @@ class EncodingMode extends \BitmovinApiSdk\Common\Enum
     public static function THREE_PASS()
     {
         return new EncodingMode(self::THREE_PASS);
+    }
+
+    /**
+     * Smart pass encoding
+     *
+     * @return EncodingMode
+     */
+    public static function SMART_PASS()
+    {
+        return new EncodingMode(self::SMART_PASS);
     }
 }
 

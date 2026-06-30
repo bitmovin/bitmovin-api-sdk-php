@@ -19,6 +19,9 @@ class PerTitle extends \BitmovinApiSdk\Common\ApiResource
     /** @var Av1PerTitleConfiguration */
     public $av1Configuration;
 
+    /** @var H265V2PerTitleConfiguration */
+    public $h265V2Configuration;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
@@ -26,6 +29,7 @@ class PerTitle extends \BitmovinApiSdk\Common\ApiResource
         $this->h265Configuration = ObjectMapper::map($this->h265Configuration, H265PerTitleConfiguration::class);
         $this->vp9Configuration = ObjectMapper::map($this->vp9Configuration, Vp9PerTitleConfiguration::class);
         $this->av1Configuration = ObjectMapper::map($this->av1Configuration, Av1PerTitleConfiguration::class);
+        $this->h265V2Configuration = ObjectMapper::map($this->h265V2Configuration, H265V2PerTitleConfiguration::class);
     }
 
     /**
@@ -76,6 +80,19 @@ class PerTitle extends \BitmovinApiSdk\Common\ApiResource
     public function av1Configuration(Av1PerTitleConfiguration $av1Configuration)
     {
         $this->av1Configuration = $av1Configuration;
+
+        return $this;
+    }
+
+    /**
+     * Per-Title configuration for H265 V2
+     *
+     * @param H265V2PerTitleConfiguration $h265V2Configuration
+     * @return $this
+     */
+    public function h265V2Configuration(H265V2PerTitleConfiguration $h265V2Configuration)
+    {
+        $this->h265V2Configuration = $h265V2Configuration;
 
         return $this;
     }
