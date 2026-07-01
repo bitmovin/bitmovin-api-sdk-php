@@ -16,12 +16,16 @@ class LiveEncodingHeartbeat extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\LiveEncodingHeartbeatEvent[] */
     public $events;
 
+    /** @var LiveEncodingHeartbeatOutput */
+    public $output;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->timestamp = ObjectMapper::map($this->timestamp, Carbon::class);
         $this->ingest = ObjectMapper::map($this->ingest, LiveEncodingHeartbeatIngest::class);
         $this->events = ObjectMapper::map($this->events, LiveEncodingHeartbeatEvent::class);
+        $this->output = ObjectMapper::map($this->output, LiveEncodingHeartbeatOutput::class);
     }
 
     /**
@@ -59,6 +63,19 @@ class LiveEncodingHeartbeat extends \BitmovinApiSdk\Common\ApiResource
     public function events(array $events)
     {
         $this->events = $events;
+
+        return $this;
+    }
+
+    /**
+     * Output statistics for the live encoding
+     *
+     * @param LiveEncodingHeartbeatOutput $output
+     * @return $this
+     */
+    public function output(LiveEncodingHeartbeatOutput $output)
+    {
+        $this->output = $output;
 
         return $this;
     }

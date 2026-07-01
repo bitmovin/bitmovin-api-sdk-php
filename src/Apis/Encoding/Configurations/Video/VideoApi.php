@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Video\H262\H262Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Video\H264\H264Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Video\H265\H265Api;
+use BitmovinApiSdk\Apis\Encoding\Configurations\Video\H265v2\H265v2Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Video\Vp8\Vp8Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Video\Vp9\Vp9Api;
 use BitmovinApiSdk\Apis\Encoding\Configurations\Video\Av1\Av1Api;
@@ -29,6 +30,9 @@ class VideoApi
 
     /** @var H265Api */
     public $h265;
+
+    /** @var H265v2Api */
+    public $h265v2;
 
     /** @var Vp8Api */
     public $vp8;
@@ -55,6 +59,7 @@ class VideoApi
         $this->h262 = new H262Api(null, $this->httpWrapper);
         $this->h264 = new H264Api(null, $this->httpWrapper);
         $this->h265 = new H265Api(null, $this->httpWrapper);
+        $this->h265v2 = new H265v2Api(null, $this->httpWrapper);
         $this->vp8 = new Vp8Api(null, $this->httpWrapper);
         $this->vp9 = new Vp9Api(null, $this->httpWrapper);
         $this->av1 = new Av1Api(null, $this->httpWrapper);

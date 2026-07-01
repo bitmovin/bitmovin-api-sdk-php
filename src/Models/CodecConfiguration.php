@@ -36,6 +36,7 @@ class CodecConfiguration extends BitmovinResource
         "PCM" => PcmAudioConfiguration::class,
         "WEBVTT" => WebVttConfiguration::class,
         "IMSC" => ImscConfiguration::class,
+        "H265V2" => H265V2VideoConfiguration::class,
     ];
 
     public function __construct($attributes = null)
