@@ -7,20 +7,20 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class H265V2PerceptualQualityModeConfig extends H265V2RateControlModeConfig
 {
-    /** @var int */
-    public $percept;
+    /** @var H265V2PerceptualEncodingMode */
+    public $perceptualEncodingMode;
 
     /** @var float */
-    public $percStr;
+    public $perceptualStrength;
 
     /** @var float */
-    public $percPenaltyStr;
+    public $perceptualPenaltyStrength;
 
     /** @var float */
-    public $percPenaltyKnee;
+    public $perceptualPenaltyKnee;
 
     /** @var float */
-    public $percTemporalStr;
+    public $perceptualTemporalStrength;
 
     /** @var float */
     public $pixelPerDegree;
@@ -28,17 +28,18 @@ class H265V2PerceptualQualityModeConfig extends H265V2RateControlModeConfig
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->perceptualEncodingMode = ObjectMapper::map($this->perceptualEncodingMode, H265V2PerceptualEncodingMode::class);
     }
 
     /**
-     * HVS-based perceptual encoding mode (0:off 1:cudqp 2:+quant).
+     * HVS-based perceptual encoding mode.
      *
-     * @param int $percept
+     * @param H265V2PerceptualEncodingMode $perceptualEncodingMode
      * @return $this
      */
-    public function percept(int $percept)
+    public function perceptualEncodingMode(H265V2PerceptualEncodingMode $perceptualEncodingMode)
     {
-        $this->percept = $percept;
+        $this->perceptualEncodingMode = $perceptualEncodingMode;
 
         return $this;
     }
@@ -46,12 +47,12 @@ class H265V2PerceptualQualityModeConfig extends H265V2RateControlModeConfig
     /**
      * Overall strength of perceptual model (0.0-1.0).
      *
-     * @param float $percStr
+     * @param float $perceptualStrength
      * @return $this
      */
-    public function percStr(float $percStr)
+    public function perceptualStrength(float $perceptualStrength)
     {
-        $this->percStr = $percStr;
+        $this->perceptualStrength = $perceptualStrength;
 
         return $this;
     }
@@ -59,12 +60,12 @@ class H265V2PerceptualQualityModeConfig extends H265V2RateControlModeConfig
     /**
      * Strength of penalties from perceptual model (0.0-1.0).
      *
-     * @param float $percPenaltyStr
+     * @param float $perceptualPenaltyStrength
      * @return $this
      */
-    public function percPenaltyStr(float $percPenaltyStr)
+    public function perceptualPenaltyStrength(float $perceptualPenaltyStrength)
     {
-        $this->percPenaltyStr = $percPenaltyStr;
+        $this->perceptualPenaltyStrength = $perceptualPenaltyStrength;
 
         return $this;
     }
@@ -72,12 +73,12 @@ class H265V2PerceptualQualityModeConfig extends H265V2RateControlModeConfig
     /**
      * Knee point of penalty strength modulation (0.0-1.0).
      *
-     * @param float $percPenaltyKnee
+     * @param float $perceptualPenaltyKnee
      * @return $this
      */
-    public function percPenaltyKnee(float $percPenaltyKnee)
+    public function perceptualPenaltyKnee(float $perceptualPenaltyKnee)
     {
-        $this->percPenaltyKnee = $percPenaltyKnee;
+        $this->perceptualPenaltyKnee = $perceptualPenaltyKnee;
 
         return $this;
     }
@@ -85,12 +86,12 @@ class H265V2PerceptualQualityModeConfig extends H265V2RateControlModeConfig
     /**
      * Strength of temporal component of perceptual model (0.0-1.0).
      *
-     * @param float $percTemporalStr
+     * @param float $perceptualTemporalStrength
      * @return $this
      */
-    public function percTemporalStr(float $percTemporalStr)
+    public function perceptualTemporalStrength(float $perceptualTemporalStrength)
     {
-        $this->percTemporalStr = $percTemporalStr;
+        $this->perceptualTemporalStrength = $perceptualTemporalStrength;
 
         return $this;
     }
