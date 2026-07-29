@@ -16,6 +16,9 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string */
     public $description;
 
+    /** @var string */
+    public $title;
+
     /** @var string[] */
     public $keywords;
 
@@ -31,6 +34,9 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     /** @var string[] */
     public $inputLanguageCodes;
 
+    /** @var \BitmovinApiSdk\Models\Credits */
+    public $credits;
+
     /** @var \BitmovinApiSdk\Models\Metadata */
     public $metadata;
 
@@ -39,6 +45,7 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
         parent::__construct($attributes);
         $this->scenes = ObjectMapper::map($this->scenes, Scene::class);
         $this->ratings = ObjectMapper::map($this->ratings, Rating::class);
+        $this->credits = ObjectMapper::map($this->credits, Credits::class);
         $this->metadata = ObjectMapper::map($this->metadata, Metadata::class);
     }
 
@@ -77,6 +84,19 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function description(string $description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Inferred title representing the analyzed content as a whole. If omitted or null, the title is not available.
+     *
+     * @param string $title
+     * @return $this
+     */
+    public function title(string $title)
+    {
+        $this->title = $title;
 
         return $this;
     }
@@ -142,6 +162,19 @@ class SceneAnalysisDetailsResponse extends \BitmovinApiSdk\Common\ApiResource
     public function inputLanguageCodes(array $inputLanguageCodes)
     {
         $this->inputLanguageCodes = $inputLanguageCodes;
+
+        return $this;
+    }
+
+    /**
+     * credits
+     *
+     * @param \BitmovinApiSdk\Models\Credits $credits
+     * @return $this
+     */
+    public function credits(\BitmovinApiSdk\Models\Credits $credits)
+    {
+        $this->credits = $credits;
 
         return $this;
     }

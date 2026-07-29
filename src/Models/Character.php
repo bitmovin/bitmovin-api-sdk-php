@@ -7,11 +7,14 @@ use BitmovinApiSdk\Common\ObjectMapper;
 
 class Character extends \BitmovinApiSdk\Common\ApiResource
 {
-    /** @var string */
-    public $appearance;
+    /** @var \BitmovinApiSdk\Models\CharacterAppearance */
+    public $characterAppearance;
 
     /** @var string */
     public $name;
+
+    /** @var string */
+    public $playedBy;
 
     /** @var string */
     public $description;
@@ -19,17 +22,18 @@ class Character extends \BitmovinApiSdk\Common\ApiResource
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
+        $this->characterAppearance = ObjectMapper::map($this->characterAppearance, CharacterAppearance::class);
     }
 
     /**
-     * appearance
+     * characterAppearance
      *
-     * @param string $appearance
+     * @param \BitmovinApiSdk\Models\CharacterAppearance $characterAppearance
      * @return $this
      */
-    public function appearance(string $appearance)
+    public function characterAppearance(\BitmovinApiSdk\Models\CharacterAppearance $characterAppearance)
     {
-        $this->appearance = $appearance;
+        $this->characterAppearance = $characterAppearance;
 
         return $this;
     }
@@ -43,6 +47,19 @@ class Character extends \BitmovinApiSdk\Common\ApiResource
     public function name(string $name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * playedBy
+     *
+     * @param string $playedBy
+     * @return $this
+     */
+    public function playedBy(string $playedBy)
+    {
+        $this->playedBy = $playedBy;
 
         return $this;
     }

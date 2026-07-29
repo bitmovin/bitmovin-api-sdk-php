@@ -30,4 +30,18 @@ class AnalysesApi
 
         $this->byEncodingId = new ByEncodingIdApi(null, $this->httpWrapper);
     }
+
+    /**
+     * List AI scene analyses
+     *
+     * @param SceneAnalysisListItemListQueryParams|null $queryParams
+     * @return SceneAnalysisListItemPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function list(SceneAnalysisListItemListQueryParams $queryParams = null) : SceneAnalysisListItemPaginationResponse
+    {
+        $response = $this->httpWrapper->request('GET', '/ai-scene-analysis/analyses', [], $queryParams, null, true);
+
+        return ObjectMapper::map($response, SceneAnalysisListItemPaginationResponse::class);
+    }
 }
