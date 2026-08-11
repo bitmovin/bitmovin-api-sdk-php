@@ -64,7 +64,7 @@ class AzureApi
     }
 
     /**
-     * Azure Input Details
+     * Get Azure Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\AzureInput

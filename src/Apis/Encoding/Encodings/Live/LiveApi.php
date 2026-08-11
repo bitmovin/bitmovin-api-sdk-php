@@ -80,7 +80,7 @@ class LiveApi
     }
 
     /**
-     * Live Encoding Start Details
+     * Get Live Encoding Start Details
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\StartLiveEncodingRequest

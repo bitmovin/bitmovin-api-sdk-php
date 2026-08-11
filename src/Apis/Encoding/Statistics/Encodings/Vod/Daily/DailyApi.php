@@ -26,7 +26,7 @@ class DailyApi
     }
 
     /**
-     * List daily VoD encoding statistics within specific dates
+     * List daily VOD encoding statistics within specific dates
      *
      * @param Carbon $from
      * @param Carbon $to

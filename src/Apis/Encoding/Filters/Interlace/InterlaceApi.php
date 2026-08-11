@@ -64,7 +64,7 @@ class InterlaceApi
     }
 
     /**
-     * Interlace Filter Details
+     * Get Interlace Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\InterlaceFilter

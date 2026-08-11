@@ -64,7 +64,7 @@ class Av1Api
     }
 
     /**
-     * AV1 Codec Configuration Details
+     * Get AV1 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Av1VideoConfiguration

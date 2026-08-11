@@ -26,7 +26,7 @@ class SrtApi
     }
 
     /**
-     * Burn-In SRT Subtitle into Stream
+     * Create Burn-In SRT Subtitle
      *
      * @param string $encodingId
      * @param string $streamId
@@ -47,7 +47,7 @@ class SrtApi
     }
 
     /**
-     * Delete Burn-In SRT Subtitle from Stream
+     * Delete Burn-In SRT Subtitle
      *
      * @param string $encodingId
      * @param string $streamId
@@ -69,7 +69,7 @@ class SrtApi
     }
 
     /**
-     * Get Burn-In SRT Subtitle Details
+     * Get Burn-In SRT Subtitle details
      *
      * @param string $encodingId
      * @param string $streamId
@@ -91,7 +91,7 @@ class SrtApi
     }
 
     /**
-     * List the Burn-In SRT subtitles of a stream
+     * List Burn-In SRT Subtitles
      *
      * @param string $encodingId
      * @param string $streamId

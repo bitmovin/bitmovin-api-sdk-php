@@ -67,7 +67,7 @@ class RegionsApi
     }
 
     /**
-     * OCI account region settings details
+     * Get OCI account region settings details
      *
      * @param string $infrastructureId
      * @param \BitmovinApiSdk\Models\OciCloudRegion $region

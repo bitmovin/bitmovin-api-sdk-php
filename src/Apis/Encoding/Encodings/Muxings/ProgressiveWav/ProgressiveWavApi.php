@@ -37,7 +37,7 @@ class ProgressiveWavApi
     }
 
     /**
-     * Add Progressive Wav muxing
+     * Create Progressive Wav muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ProgressiveWavMuxing $progressiveWavMuxing
@@ -76,7 +76,7 @@ class ProgressiveWavApi
     }
 
     /**
-     * Progressive WAV muxing details
+     * Get Progressive WAV muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -26,7 +26,7 @@ class CdnApi
     }
 
     /**
-     * CDN Output Details
+     * Get CDN Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CdnOutput

@@ -26,7 +26,7 @@ class LanguageApi
     }
 
     /**
-     * Get translated AI scene analysis details by encoding ID and language code
+     * Get AI Scene Analysis details in a specific language
      *
      * @param string $encodingId
      * @param string $languageCode

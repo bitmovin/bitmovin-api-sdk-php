@@ -32,7 +32,7 @@ class OciApi
     }
 
     /**
-     * Add OCI account
+     * Create OCI account
      *
      * @param \BitmovinApiSdk\Models\OciAccount $ociAccount
      * @return \BitmovinApiSdk\Models\OciAccount
@@ -64,7 +64,7 @@ class OciApi
     }
 
     /**
-     * OCI account details
+     * Get OCI account details
      *
      * @param string $infrastructureId
      * @return \BitmovinApiSdk\Models\OciAccount

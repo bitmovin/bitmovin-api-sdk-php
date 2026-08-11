@@ -32,7 +32,7 @@ class DrmApi
     }
 
     /**
-     * Add DRM fMP4 Representation
+     * Create DRM fMP4 Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -79,7 +79,7 @@ class DrmApi
     }
 
     /**
-     * DRM fMP4 Representation Details
+     * Get DRM fMP4 Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class DrmApi
     }
 
     /**
-     * List all DRM fMP4 Representations
+     * List DRM fMP4 Representations
      *
      * @param string $manifestId
      * @param string $periodId

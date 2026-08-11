@@ -26,7 +26,7 @@ class AssaApi
     }
 
     /**
-     * Burn-In ASSA Subtitle into Stream
+     * Create Burn-In ASSA Subtitle
      *
      * @param string $encodingId
      * @param string $streamId
@@ -47,7 +47,7 @@ class AssaApi
     }
 
     /**
-     * Delete Burn-In ASSA Subtitle from Stream
+     * Delete Burn-In ASSA Subtitle
      *
      * @param string $encodingId
      * @param string $streamId
@@ -69,7 +69,7 @@ class AssaApi
     }
 
     /**
-     * Get Burn-In ASSA Subtitle Details
+     * Get Burn-In ASSA Subtitle details
      *
      * @param string $encodingId
      * @param string $streamId
@@ -91,7 +91,7 @@ class AssaApi
     }
 
     /**
-     * List the Burn-In ASSA subtitles of a stream
+     * List Burn-In ASSA Subtitles
      *
      * @param string $encodingId
      * @param string $streamId

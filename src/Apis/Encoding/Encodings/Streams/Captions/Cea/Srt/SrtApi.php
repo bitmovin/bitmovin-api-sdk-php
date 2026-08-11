@@ -32,7 +32,7 @@ class SrtApi
     }
 
     /**
-     * Embed SRT captions as 608/708 into Stream
+     * Create SRT captions as 608/708
      *
      * @param string $encodingId
      * @param string $streamId
@@ -53,7 +53,7 @@ class SrtApi
     }
 
     /**
-     * Delete SRT captions as 608/708 from Stream
+     * Delete SRT captions as 608/708
      *
      * @param string $encodingId
      * @param string $streamId
@@ -75,7 +75,7 @@ class SrtApi
     }
 
     /**
-     * Embed SRT captions as 608/708 Details
+     * Get SRT captions as 608/708 details
      *
      * @param string $encodingId
      * @param string $streamId
@@ -97,7 +97,7 @@ class SrtApi
     }
 
     /**
-     * List SRT captions as 608/708 from Stream
+     * List SRT captions as 608/708
      *
      * @param string $encodingId
      * @param string $streamId

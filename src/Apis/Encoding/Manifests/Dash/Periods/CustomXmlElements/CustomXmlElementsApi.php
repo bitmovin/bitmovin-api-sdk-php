@@ -26,7 +26,7 @@ class CustomXmlElementsApi
     }
 
     /**
-     * Add Custom XML Element to Period
+     * Create Custom XML Element to Period
      *
      * @param string $manifestId
      * @param string $periodId
@@ -69,7 +69,7 @@ class CustomXmlElementsApi
     }
 
     /**
-     * Custom XML Element Details
+     * Get Custom XML Element details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -91,7 +91,7 @@ class CustomXmlElementsApi
     }
 
     /**
-     * List all Custom XML Elements of Period
+     * List Custom XML Elements of Period
      *
      * @param string $manifestId
      * @param string $periodId

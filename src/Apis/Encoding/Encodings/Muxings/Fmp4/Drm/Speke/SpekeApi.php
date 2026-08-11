@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to fMP4
+     * Create SPEKE DRM key provider to fMP4
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of an fMP4 muxing
+     * Get SPEKE DRM from an fMP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

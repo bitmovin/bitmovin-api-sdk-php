@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * PCM Codec Configuration Custom Data
+     * Get PCM Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

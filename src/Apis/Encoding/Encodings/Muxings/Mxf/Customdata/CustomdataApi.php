@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * MXF muxing Custom Data
+     * Get MXF muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -64,7 +64,7 @@ class ScaleApi
     }
 
     /**
-     * Scale Filter Details
+     * Get Scale Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\ScaleFilter

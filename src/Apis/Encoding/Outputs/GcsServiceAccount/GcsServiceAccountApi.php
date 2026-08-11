@@ -64,7 +64,7 @@ class GcsServiceAccountApi
     }
 
     /**
-     * Service Account based GCS Output Details
+     * Get Service Account based GCS Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\GcsServiceAccountOutput

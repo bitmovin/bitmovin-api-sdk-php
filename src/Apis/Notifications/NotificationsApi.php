@@ -60,7 +60,7 @@ class NotificationsApi
     }
 
     /**
-     * Get Notification
+     * Get Notification details
      *
      * @param string $notificationId
      * @return \BitmovinApiSdk\Models\Notification
@@ -92,7 +92,7 @@ class NotificationsApi
     }
 
     /**
-     * List Notification State History (All Resources)
+     * List Notification State History
      *
      * @param string $notificationId
      * @param NotificationStateEntryListByNotificationIdQueryParams|null $queryParams

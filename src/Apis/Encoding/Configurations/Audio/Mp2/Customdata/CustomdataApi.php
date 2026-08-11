@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * MP2 Codec Configuration Custom Data
+     * Get MP2 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

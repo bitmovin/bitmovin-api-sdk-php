@@ -26,7 +26,7 @@ class VttApi
     }
 
     /**
-     * Add VTT Representation
+     * Create VTT Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -73,7 +73,7 @@ class VttApi
     }
 
     /**
-     * VTT Representation Details
+     * Get VTT Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -97,7 +97,7 @@ class VttApi
     }
 
     /**
-     * List all VTT Representations
+     * List VTT Representations
      *
      * @param string $manifestId
      * @param string $periodId

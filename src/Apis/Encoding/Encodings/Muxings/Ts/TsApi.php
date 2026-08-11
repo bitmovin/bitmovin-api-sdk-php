@@ -37,7 +37,7 @@ class TsApi
     }
 
     /**
-     * Add TS muxing
+     * Create TS muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\TsMuxing $tsMuxing
@@ -76,7 +76,7 @@ class TsApi
     }
 
     /**
-     * TS muxing details
+     * Get TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

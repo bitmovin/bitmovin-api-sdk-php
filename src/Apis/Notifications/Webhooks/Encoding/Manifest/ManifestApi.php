@@ -37,7 +37,7 @@ class ManifestApi
     }
 
     /**
-     * List Webhook Notifications (Specific Manifest)
+     * List Webhooks for a specific Manifest
      *
      * @param string $manifestId
      * @param NotificationListQueryParams|null $queryParams

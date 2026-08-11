@@ -64,7 +64,7 @@ class AsperaApi
     }
 
     /**
-     * Aspera Input Details
+     * Get Aspera Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\AsperaInput

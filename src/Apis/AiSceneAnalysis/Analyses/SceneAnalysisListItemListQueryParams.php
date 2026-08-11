@@ -14,6 +14,9 @@ class SceneAnalysisListItemListQueryParams implements QueryParams
     /** @var int */
     private $limit;
 
+    /** @var string */
+    private $searchText;
+
     /** @var SceneAnalysisListSort */
     private $sort;
 
@@ -49,6 +52,17 @@ class SceneAnalysisListItemListQueryParams implements QueryParams
     public function limit(int $limit): SceneAnalysisListItemListQueryParams
     {
         $this->limit = $limit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $searchText
+     * @return SceneAnalysisListItemListQueryParams
+     */
+    public function searchText(string $searchText): SceneAnalysisListItemListQueryParams
+    {
+        $this->searchText = $searchText;
 
         return $this;
     }

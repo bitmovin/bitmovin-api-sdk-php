@@ -26,7 +26,7 @@ class VideoApi
     }
 
     /**
-     * Add Video AdaptationSet
+     * Create Video AdaptationSet
      *
      * @param string $manifestId
      * @param string $periodId
@@ -69,7 +69,7 @@ class VideoApi
     }
 
     /**
-     * Video AdaptationSet Details
+     * Get Video AdaptationSet details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -91,7 +91,7 @@ class VideoApi
     }
 
     /**
-     * List all Video AdaptationSets
+     * List Video AdaptationSets
      *
      * @param string $manifestId
      * @param string $periodId

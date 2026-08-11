@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Embed SRT captions as 608/708 Custom Data
+     * Get SRT captions as 608/708 Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

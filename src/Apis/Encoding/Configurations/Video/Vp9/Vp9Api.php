@@ -64,7 +64,7 @@ class Vp9Api
     }
 
     /**
-     * VP9 Codec Configuration Details
+     * Get VP9 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Vp9VideoConfiguration

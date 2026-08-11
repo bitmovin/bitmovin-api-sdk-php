@@ -58,7 +58,7 @@ class PassthroughApi
     }
 
     /**
-     * Audio Passthrough Configuration Details
+     * Get Audio Passthrough Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\PassthroughAudioConfiguration

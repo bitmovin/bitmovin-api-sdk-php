@@ -64,7 +64,7 @@ class LocalApi
     }
 
     /**
-     * Local Input Details
+     * Get Local Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\LocalInput

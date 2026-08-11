@@ -26,7 +26,7 @@ class RtmpApi
     }
 
     /**
-     * RTMP Input Details
+     * Get RTMP Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\RtmpInput

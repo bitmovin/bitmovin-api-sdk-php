@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * S3 Role-based Output Custom Data
+     * Get S3 Role-based Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

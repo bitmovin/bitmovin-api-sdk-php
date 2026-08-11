@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Packed Audio muxing Custom Data
+     * Get Packed Audio muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

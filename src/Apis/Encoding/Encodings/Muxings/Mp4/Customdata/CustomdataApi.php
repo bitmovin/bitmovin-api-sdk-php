@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * MP4 muxing Custom Data
+     * Get MP4 muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

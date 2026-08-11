@@ -64,7 +64,7 @@ class UnsharpApi
     }
 
     /**
-     * Unsharp Filter Details
+     * Get Unsharp Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\UnsharpFilter

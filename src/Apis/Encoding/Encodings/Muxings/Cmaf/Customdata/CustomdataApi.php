@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * CMAF muxing custom data
+     * Get CMAF muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

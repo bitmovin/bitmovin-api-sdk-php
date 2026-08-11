@@ -47,7 +47,7 @@ class ProgressiveTsApi
     }
 
     /**
-     * Add Progressive TS muxing
+     * Create Progressive TS muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ProgressiveTsMuxing $progressiveTsMuxing
@@ -86,7 +86,7 @@ class ProgressiveTsApi
     }
 
     /**
-     * Progressive TS muxing details
+     * Get Progressive TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

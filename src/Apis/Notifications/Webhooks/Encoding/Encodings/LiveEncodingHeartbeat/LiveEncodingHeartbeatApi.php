@@ -26,7 +26,7 @@ class LiveEncodingHeartbeatApi
     }
 
     /**
-     * Add &#39;Live Encoding Heartbeat&#39; Webhook
+     * Create &#39;Live Encoding Heartbeat&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook $liveEncodingHeartbeatWebhook
      * @return \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook
@@ -58,7 +58,7 @@ class LiveEncodingHeartbeatApi
     }
 
     /**
-     * &#39;Live Encoding Heartbeat&#39; Webhook Details
+     * Get &#39;Live Encoding Heartbeat&#39; Webhook details
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook

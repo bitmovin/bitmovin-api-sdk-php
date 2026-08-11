@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Enhanced Watermark Filter Custom Data
+     * Get Enhanced Watermark Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

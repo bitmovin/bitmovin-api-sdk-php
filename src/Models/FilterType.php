@@ -52,6 +52,9 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const AZURE_SPEECH_TO_CAPTIONS = 'AZURE_SPEECH_TO_CAPTIONS';
 
+    /** @var string */
+    private const DOLBY_LOUDNESS = 'DOLBY_LOUDNESS';
+
     /**
      * @param string $value
      * @return FilterType
@@ -219,6 +222,16 @@ class FilterType extends \BitmovinApiSdk\Common\Enum
     public static function AZURE_SPEECH_TO_CAPTIONS()
     {
         return new FilterType(self::AZURE_SPEECH_TO_CAPTIONS);
+    }
+
+    /**
+     * DOLBY_LOUDNESS
+     *
+     * @return FilterType
+     */
+    public static function DOLBY_LOUDNESS()
+    {
+        return new FilterType(self::DOLBY_LOUDNESS);
     }
 }
 

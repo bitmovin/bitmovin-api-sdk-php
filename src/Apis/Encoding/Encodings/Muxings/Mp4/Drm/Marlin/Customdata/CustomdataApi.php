@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Marlin DRM Custom Data of an MP4 muxing
+     * Get Marlin DRM from an MP4 muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

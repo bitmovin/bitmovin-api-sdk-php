@@ -79,7 +79,7 @@ class SmoothApi
     }
 
     /**
-     * Smooth Streaming Manifest Details
+     * Get Smooth Streaming Manifest details
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\SmoothStreamingManifest
@@ -97,7 +97,7 @@ class SmoothApi
     }
 
     /**
-     * Manifest Start Details
+     * Smooth Streaming Manifest Start Details
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\StartManifestRequest

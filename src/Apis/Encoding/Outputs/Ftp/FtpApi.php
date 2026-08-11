@@ -64,7 +64,7 @@ class FtpApi
     }
 
     /**
-     * FTP Output Details
+     * Get FTP Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\FtpOutput

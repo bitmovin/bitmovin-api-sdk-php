@@ -26,7 +26,7 @@ class SrtApi
     }
 
     /**
-     * List Stream Infos of Live Statistics from an Encoding
+     * List Live Statistics SRT
      *
      * @param string $encodingId
      * @param SrtStatisticsListQueryParams|null $queryParams

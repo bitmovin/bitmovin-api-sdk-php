@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * FTP Custom Data
+     * Get FTP Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

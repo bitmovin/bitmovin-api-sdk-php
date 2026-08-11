@@ -32,7 +32,7 @@ class AkamaiApi
     }
 
     /**
-     * Add Akamai account
+     * Create Akamai account
      *
      * @param \BitmovinApiSdk\Models\AkamaiAccount $akamaiAccount
      * @return \BitmovinApiSdk\Models\AkamaiAccount
@@ -64,7 +64,7 @@ class AkamaiApi
     }
 
     /**
-     * Akamai account details
+     * Get Akamai account details
      *
      * @param string $infrastructureId
      * @return \BitmovinApiSdk\Models\AkamaiAccount

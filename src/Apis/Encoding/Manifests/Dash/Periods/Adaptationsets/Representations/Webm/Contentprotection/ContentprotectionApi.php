@@ -26,7 +26,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Add Content Protection to WebM Representation
+     * Create Content Protection to WebM Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -77,7 +77,7 @@ class ContentprotectionApi
     }
 
     /**
-     * WebM Representation Content Protection Details
+     * Get WebM Representation Content Protection details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class ContentprotectionApi
     }
 
     /**
-     * List all WebM Representation Content Protections
+     * List WebM Representation Content Protections
      *
      * @param string $manifestId
      * @param string $periodId

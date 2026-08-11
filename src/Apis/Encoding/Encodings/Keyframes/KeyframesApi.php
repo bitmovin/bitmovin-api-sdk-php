@@ -65,7 +65,7 @@ class KeyframesApi
     }
 
     /**
-     * Keyframe Details
+     * Get Keyframe details
      *
      * @param string $encodingId
      * @param string $keyframeId
@@ -85,7 +85,7 @@ class KeyframesApi
     }
 
     /**
-     * List all Keyframes
+     * List Keyframes
      *
      * @param string $encodingId
      * @param KeyframeListQueryParams|null $queryParams

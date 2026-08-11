@@ -64,7 +64,7 @@ class DolbyAtmosApi
     }
 
     /**
-     * Dolby Atmos Codec Configuration Details
+     * Get Dolby Atmos Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\DolbyAtmosAudioConfiguration

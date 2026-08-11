@@ -32,7 +32,7 @@ class CencApi
     }
 
     /**
-     * Add CENC DRM to a WebM muxing
+     * Create CENC DRM to a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class CencApi
     }
 
     /**
-     * CENC DRM Details of a WebM muxing
+     * Get CENC DRM from a WebM muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

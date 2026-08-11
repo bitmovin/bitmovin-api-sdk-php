@@ -64,7 +64,7 @@ class HttpApi
     }
 
     /**
-     * HTTP Input Details
+     * Get HTTP Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\HttpInput

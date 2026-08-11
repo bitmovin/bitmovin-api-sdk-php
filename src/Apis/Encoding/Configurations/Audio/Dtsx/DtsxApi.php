@@ -64,7 +64,7 @@ class DtsxApi
     }
 
     /**
-     * DTS:X Codec Configuration Details
+     * Get DTS:X Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\DtsXAudioConfiguration

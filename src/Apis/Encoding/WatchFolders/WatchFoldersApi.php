@@ -58,7 +58,7 @@ class WatchFoldersApi
     }
 
     /**
-     * Watch Folder details
+     * Get Watch Folder details
      *
      * @param string $watchFolderId
      * @return \BitmovinApiSdk\Models\WatchFolder
@@ -76,7 +76,7 @@ class WatchFoldersApi
     }
 
     /**
-     * List all Watch Folders
+     * List Watch Folders
      *
      * @param WatchFolderListQueryParams|null $queryParams
      * @return WatchFolderPaginationResponse

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * GCS input Custom Data
+     * Get Service Account based GCS Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

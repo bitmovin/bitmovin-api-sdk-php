@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * VP8 Codec Configuration Custom Data
+     * Get VP8 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

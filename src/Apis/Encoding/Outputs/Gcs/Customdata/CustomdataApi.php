@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * GCS Output Custom Data
+     * Get GCS Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

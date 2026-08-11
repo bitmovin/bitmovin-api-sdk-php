@@ -37,7 +37,7 @@ class Fmp4Api
     }
 
     /**
-     * Add fMP4 Representation
+     * Create fMP4 Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -84,7 +84,7 @@ class Fmp4Api
     }
 
     /**
-     * fMP4 Representation Details
+     * Get fMP4 Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -108,7 +108,7 @@ class Fmp4Api
     }
 
     /**
-     * List all fMP4 Representations
+     * List fMP4 Representations
      *
      * @param string $manifestId
      * @param string $periodId

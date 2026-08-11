@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Progressive Wav muxing Custom Data
+     * Get Progressive WAV muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

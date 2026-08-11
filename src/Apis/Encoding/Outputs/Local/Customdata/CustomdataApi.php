@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Local Output Custom Data
+     * Get Local Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

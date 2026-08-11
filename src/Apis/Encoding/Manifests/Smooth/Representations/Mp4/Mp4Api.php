@@ -26,7 +26,7 @@ class Mp4Api
     }
 
     /**
-     * Add MP4 Representation to Smooth Streaming Manifest
+     * Create MP4 Representation to Smooth Streaming Manifest
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\SmoothStreamingRepresentation $smoothStreamingRepresentation
@@ -65,7 +65,7 @@ class Mp4Api
     }
 
     /**
-     * Smooth Streaming MP4 Representation Details
+     * Get Smooth Streaming MP4 Representation details
      *
      * @param string $manifestId
      * @param string $representationId

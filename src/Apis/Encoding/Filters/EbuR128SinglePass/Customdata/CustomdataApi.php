@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * EBU R128 Single Pass Filter Custom Data
+     * Get EBU R128 Single Pass Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

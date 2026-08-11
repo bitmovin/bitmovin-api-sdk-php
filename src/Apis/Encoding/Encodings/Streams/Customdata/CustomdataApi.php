@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Stream Custom Data
+     * Get Stream Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

@@ -32,7 +32,7 @@ class Mp4Api
     }
 
     /**
-     * Add MP4 Representation
+     * Create MP4 Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -79,7 +79,7 @@ class Mp4Api
     }
 
     /**
-     * MP4 Representation Details
+     * Get MP4 Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class Mp4Api
     }
 
     /**
-     * List all MP4 Representations
+     * List MP4 Representations
      *
      * @param string $manifestId
      * @param string $periodId

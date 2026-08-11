@@ -32,7 +32,7 @@ class AesApi
     }
 
     /**
-     * Add AES encryption configuration to fMP4
+     * Create AES encryption configuration to fMP4
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class AesApi
     }
 
     /**
-     * AES encryption Details of an fMP4 muxing
+     * Get AES encryption configuration from an fMP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

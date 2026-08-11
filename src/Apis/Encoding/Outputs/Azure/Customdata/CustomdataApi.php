@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Azure Output Custom Data
+     * Get Azure Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

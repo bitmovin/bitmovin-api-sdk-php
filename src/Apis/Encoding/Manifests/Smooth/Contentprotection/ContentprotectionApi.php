@@ -26,7 +26,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Add Content Protection to Smooth Streaming
+     * Create Content Protection to Smooth Streaming
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\SmoothManifestContentProtection $smoothManifestContentProtection
@@ -45,7 +45,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Delete Content Protection of Smooth Streaming
+     * Delete Content Protection of Smooth Streaming Representation
      *
      * @param string $manifestId
      * @param string $protectionId
@@ -65,7 +65,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Content Protection of Smooth Streaming Representation Details
+     * Get Content Protection of Smooth Streaming Representation details
      *
      * @param string $manifestId
      * @param string $protectionId

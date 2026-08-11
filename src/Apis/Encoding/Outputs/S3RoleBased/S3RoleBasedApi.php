@@ -64,7 +64,7 @@ class S3RoleBasedApi
     }
 
     /**
-     * S3 Role-based Output Details
+     * Get S3 Role-based Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\S3RoleBasedOutput

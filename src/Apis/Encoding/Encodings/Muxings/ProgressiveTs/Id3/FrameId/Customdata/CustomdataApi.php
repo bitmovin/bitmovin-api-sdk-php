@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Frame ID ID3 Tag Custom Data of a Progressive TS muxing
+     * Get Frame ID ID3 Tag of a Progressive TS muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

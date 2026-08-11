@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * S3 Output Custom Data
+     * Get S3 Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

@@ -32,7 +32,7 @@ class WebmApi
     }
 
     /**
-     * Add WebM Representation
+     * Create WebM Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -79,7 +79,7 @@ class WebmApi
     }
 
     /**
-     * WebM Representation Details
+     * Get WebM Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class WebmApi
     }
 
     /**
-     * List all WebM Representations
+     * List WebM Representations
      *
      * @param string $manifestId
      * @param string $periodId

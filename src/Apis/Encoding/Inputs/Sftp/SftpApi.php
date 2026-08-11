@@ -64,7 +64,7 @@ class SftpApi
     }
 
     /**
-     * SFTP Input Details
+     * Get SFTP Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\SftpInput

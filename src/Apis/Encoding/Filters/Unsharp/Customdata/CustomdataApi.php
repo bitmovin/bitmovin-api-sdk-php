@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Unsharp Filter Custom Data
+     * Get Unsharp Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

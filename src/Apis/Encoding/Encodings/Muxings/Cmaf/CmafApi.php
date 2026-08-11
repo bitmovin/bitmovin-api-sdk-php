@@ -32,7 +32,7 @@ class CmafApi
     }
 
     /**
-     * Add CMAF muxing
+     * Create CMAF muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\CmafMuxing $cmafMuxing
@@ -71,7 +71,7 @@ class CmafApi
     }
 
     /**
-     * CMAF muxing details
+     * Get CMAF muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

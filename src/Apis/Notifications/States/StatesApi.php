@@ -26,7 +26,7 @@ class StatesApi
     }
 
     /**
-     * List Notification State History (Specific Resource)
+     * List Notification State History for a specific Resource
      *
      * @param string $notificationId
      * @param string $resourceId

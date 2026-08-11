@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Convert SCC captions Custom Data
+     * Get SCC Caption Conversion Custom Data
      *
      * @param string $encodingId
      * @param string $captionsId

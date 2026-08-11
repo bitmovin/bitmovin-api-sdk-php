@@ -64,7 +64,7 @@ class DolbyDigitalPlusApi
     }
 
     /**
-     * Dolby Digital Plus Codec Configuration Details
+     * Get Dolby Digital Plus Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\DolbyDigitalPlusAudioConfiguration

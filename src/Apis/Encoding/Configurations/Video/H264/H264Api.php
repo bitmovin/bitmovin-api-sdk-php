@@ -64,7 +64,7 @@ class H264Api
     }
 
     /**
-     * H264/AVC Codec Configuration Details
+     * Get H264/AVC Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\H264VideoConfiguration

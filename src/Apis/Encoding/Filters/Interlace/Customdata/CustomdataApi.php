@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Interlace Filter Custom Data
+     * Get Interlace Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

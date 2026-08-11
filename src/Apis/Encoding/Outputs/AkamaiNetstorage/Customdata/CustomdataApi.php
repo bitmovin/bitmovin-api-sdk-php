@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Akamai NetStorage Output Custom Data
+     * Get Akamai NetStorage Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

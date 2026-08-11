@@ -32,7 +32,7 @@ class LiveManifestReadyApi
     }
 
     /**
-     * Add &#39;Live Manifest Ready&#39; Webhook
+     * Create &#39;Live Manifest Ready&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
      * @return \BitmovinApiSdk\Models\Webhook
@@ -46,7 +46,7 @@ class LiveManifestReadyApi
     }
 
     /**
-     * Add &#39;Live Manifest Ready&#39; Webhook for a specific Encoding
+     * Create &#39;Live Manifest Ready&#39; Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Webhook $webhook
@@ -103,7 +103,7 @@ class LiveManifestReadyApi
     }
 
     /**
-     * &#39;Live Manifest Ready&#39; Webhook Details for a specific Encoding
+     * Get &#39;Live Manifest Ready&#39; Webhook details for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -123,7 +123,7 @@ class LiveManifestReadyApi
     }
 
     /**
-     * &#39;Live Manifest Ready&#39; Webhook Details
+     * Get &#39;Live Manifest Ready&#39; Webhook details
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\Webhook

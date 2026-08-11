@@ -64,7 +64,7 @@ class AkamaiMslApi
     }
 
     /**
-     * Akamai MSL Output Details
+     * Get Akamai MSL Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\AkamaiMslOutput

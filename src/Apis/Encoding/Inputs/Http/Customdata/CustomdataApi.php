@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * HTTP Custom Data
+     * Get HTTP Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

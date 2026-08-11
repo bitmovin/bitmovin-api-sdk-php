@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Nexguard file marker watermarking configuration Custom Data
+     * Get Nexguard file marker watermarking configurations Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

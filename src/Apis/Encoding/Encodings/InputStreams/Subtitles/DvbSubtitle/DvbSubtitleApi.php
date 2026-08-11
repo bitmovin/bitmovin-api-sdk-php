@@ -26,7 +26,7 @@ class DvbSubtitleApi
     }
 
     /**
-     * Add DVB Subtitle Input Stream
+     * Create DVB Subtitle Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\DvbSubtitleInputStream $dvbSubtitleInputStream
@@ -65,7 +65,7 @@ class DvbSubtitleApi
     }
 
     /**
-     * DVB Subtitle Input Stream Details
+     * Get DVB Subtitle Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

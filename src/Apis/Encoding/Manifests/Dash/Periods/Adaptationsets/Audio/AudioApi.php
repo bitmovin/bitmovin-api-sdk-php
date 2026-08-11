@@ -26,7 +26,7 @@ class AudioApi
     }
 
     /**
-     * Add Audio AdaptationSet
+     * Create Audio AdaptationSet
      *
      * @param string $manifestId
      * @param string $periodId
@@ -69,7 +69,7 @@ class AudioApi
     }
 
     /**
-     * Audio AdaptationSet Details
+     * Get Audio AdaptationSet details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -91,7 +91,7 @@ class AudioApi
     }
 
     /**
-     * List all Audio AdaptationSets
+     * List Audio AdaptationSets
      *
      * @param string $manifestId
      * @param string $periodId

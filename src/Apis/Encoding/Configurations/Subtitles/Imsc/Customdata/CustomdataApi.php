@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * IMSC subtitle configuration custom data
+     * Get IMSC subtitle configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

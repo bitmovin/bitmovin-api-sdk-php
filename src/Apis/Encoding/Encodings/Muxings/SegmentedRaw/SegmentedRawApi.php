@@ -32,7 +32,7 @@ class SegmentedRawApi
     }
 
     /**
-     * Add Segmented RAW muxing
+     * Create Segmented RAW muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\SegmentedRawMuxing $segmentedRawMuxing
@@ -71,7 +71,7 @@ class SegmentedRawApi
     }
 
     /**
-     * Segmented RAW muxing details
+     * Get Segmented RAW muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

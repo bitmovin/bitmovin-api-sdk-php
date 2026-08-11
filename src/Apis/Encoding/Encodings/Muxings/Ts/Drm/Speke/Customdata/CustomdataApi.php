@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * SPEKE DRM Custom Data of a TS muxing
+     * Get SPEKE DRM from a TS muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

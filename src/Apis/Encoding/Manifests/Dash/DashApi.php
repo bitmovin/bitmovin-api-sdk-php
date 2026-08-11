@@ -74,7 +74,7 @@ class DashApi
     }
 
     /**
-     * DASH Manifest Details
+     * Get DASH Manifest details
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\DashManifest
@@ -92,7 +92,7 @@ class DashApi
     }
 
     /**
-     * Manifest Start Details
+     * DASH Manifest Start Details
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\StartManifestRequest

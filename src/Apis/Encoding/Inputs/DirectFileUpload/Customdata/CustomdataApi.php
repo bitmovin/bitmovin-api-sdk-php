@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Direct File Upload Custom Data
+     * Get Direct File Upload Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * DTS Passthrough Codec Configuration Custom Data
+     * Get DTS Passthrough Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

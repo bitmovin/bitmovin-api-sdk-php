@@ -26,7 +26,7 @@ class VttApi
     }
 
     /**
-     * Add VTT Media
+     * Create VTT Media
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\VttMediaInfo $vttMediaInfo
@@ -65,7 +65,7 @@ class VttApi
     }
 
     /**
-     * VTT Media Details
+     * Get VTT Media details
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -85,7 +85,7 @@ class VttApi
     }
 
     /**
-     * List all VTT Media
+     * List VTT Media
      *
      * @param string $manifestId
      * @param VttMediaInfoListQueryParams|null $queryParams

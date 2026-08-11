@@ -64,7 +64,7 @@ class AacApi
     }
 
     /**
-     * AAC Codec Configuration Details
+     * Get AAC Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\AacAudioConfiguration

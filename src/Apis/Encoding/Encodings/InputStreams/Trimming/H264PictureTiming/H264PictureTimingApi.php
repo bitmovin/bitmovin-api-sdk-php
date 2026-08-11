@@ -26,7 +26,7 @@ class H264PictureTimingApi
     }
 
     /**
-     * Add H264 Picture Timing Trimming Input Stream
+     * Create H264 Picture Timing Trimming Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\H264PictureTimingTrimmingInputStream $h264PictureTimingTrimmingInputStream
@@ -65,7 +65,7 @@ class H264PictureTimingApi
     }
 
     /**
-     * H264 Picture Timing Trimming Input Stream Details
+     * Get H264 Picture Timing Trimming Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

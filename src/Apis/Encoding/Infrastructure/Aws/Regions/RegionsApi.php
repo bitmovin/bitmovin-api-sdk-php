@@ -67,7 +67,7 @@ class RegionsApi
     }
 
     /**
-     * AWS Region Settings Details
+     * Get AWS Region Settings details
      *
      * @param string $infrastructureId
      * @param \BitmovinApiSdk\Models\AwsCloudRegion $region

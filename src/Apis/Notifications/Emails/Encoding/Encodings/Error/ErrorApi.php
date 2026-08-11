@@ -26,7 +26,7 @@ class ErrorApi
     }
 
     /**
-     * Add Encoding Error Email Notification (All Encodings)
+     * Create &#39;Encoding Error&#39; Email Notification
      *
      * @param \BitmovinApiSdk\Models\EncodingErrorEmailNotification $encodingErrorEmailNotification
      * @return EncodingErrorEmailNotificationPaginationResponse
@@ -40,7 +40,7 @@ class ErrorApi
     }
 
     /**
-     * Add Encoding Error Email Notification (Specific Encoding)
+     * Create &#39;Encoding Error&#39; Email Notification for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\EmailNotification $emailNotification
@@ -59,7 +59,7 @@ class ErrorApi
     }
 
     /**
-     * Replace Encoding Error Email Notification
+     * Update &#39;Encoding Error&#39; Email Notification
      *
      * @param string $notificationId
      * @param \BitmovinApiSdk\Models\EmailNotification $emailNotification

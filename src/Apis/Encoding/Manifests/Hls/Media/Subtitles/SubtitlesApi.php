@@ -26,7 +26,7 @@ class SubtitlesApi
     }
 
     /**
-     * Add Subtitles Media
+     * Create Subtitles Media
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\SubtitlesMediaInfo $subtitlesMediaInfo
@@ -65,7 +65,7 @@ class SubtitlesApi
     }
 
     /**
-     * Subtitles Media Details
+     * Get Subtitles Media details
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -85,7 +85,7 @@ class SubtitlesApi
     }
 
     /**
-     * List all Subtitles Media
+     * List Subtitles Media
      *
      * @param string $manifestId
      * @param SubtitlesMediaInfoListQueryParams|null $queryParams

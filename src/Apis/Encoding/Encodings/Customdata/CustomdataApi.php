@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Encoding Custom Data
+     * Get Encoding Custom Data
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\CustomData

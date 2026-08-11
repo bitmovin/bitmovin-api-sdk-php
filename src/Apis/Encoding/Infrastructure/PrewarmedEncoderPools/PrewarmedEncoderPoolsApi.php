@@ -46,7 +46,7 @@ class PrewarmedEncoderPoolsApi
     }
 
     /**
-     * Delete prewarmed encoder pool
+     * Delete Prewarmed encoder pool
      *
      * @param string $poolId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -64,7 +64,7 @@ class PrewarmedEncoderPoolsApi
     }
 
     /**
-     * Prewarmed encoder pool details
+     * Get Prewarmed encoder pool details
      *
      * @param string $poolId
      * @return \BitmovinApiSdk\Models\PrewarmedEncoderPool

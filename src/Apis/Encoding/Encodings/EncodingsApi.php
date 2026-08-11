@@ -119,7 +119,7 @@ class EncodingsApi
     }
 
     /**
-     * Encoding Details
+     * Get Encoding details
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\Encoding
@@ -137,7 +137,7 @@ class EncodingsApi
     }
 
     /**
-     * Encoding Start Details
+     * Get Encoding Start Details
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\StartEncodingRequest
@@ -155,7 +155,7 @@ class EncodingsApi
     }
 
     /**
-     * List all Encodings
+     * List Encodings
      *
      * @param EncodingListQueryParams|null $queryParams
      * @return EncodingPaginationResponse
@@ -207,7 +207,7 @@ class EncodingsApi
     }
 
     /**
-     * Start VoD Encoding
+     * Start VOD Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\StartEncodingRequest $startEncodingRequest
@@ -226,7 +226,7 @@ class EncodingsApi
     }
 
     /**
-     * Encoding Status
+     * Get Encoding Status
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\Task
@@ -244,7 +244,7 @@ class EncodingsApi
     }
 
     /**
-     * Stop Encoding
+     * Stop VOD Encoding
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\BitmovinResponse

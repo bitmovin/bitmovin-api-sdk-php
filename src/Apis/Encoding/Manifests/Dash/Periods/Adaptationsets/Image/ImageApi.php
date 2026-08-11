@@ -26,7 +26,7 @@ class ImageApi
     }
 
     /**
-     * Add Image AdaptationSet
+     * Create Image AdaptationSet
      *
      * @param string $manifestId
      * @param string $periodId
@@ -69,7 +69,7 @@ class ImageApi
     }
 
     /**
-     * Image AdaptationSet Details
+     * Get Image AdaptationSet details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -91,7 +91,7 @@ class ImageApi
     }
 
     /**
-     * List all Image AdaptationSets
+     * List Image AdaptationSets
      *
      * @param string $manifestId
      * @param string $periodId

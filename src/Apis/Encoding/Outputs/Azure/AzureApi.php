@@ -64,7 +64,7 @@ class AzureApi
     }
 
     /**
-     * Azure Output Details
+     * Get Azure Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\AzureOutput

@@ -26,7 +26,7 @@ class EventsApi
     }
 
     /**
-     * List Events of Live Statistics from an Encoding
+     * List Live Statistics Events
      *
      * @param string $encodingId
      * @param LiveEncodingStatsEventListQueryParams|null $queryParams

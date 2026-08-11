@@ -64,7 +64,7 @@ class CropApi
     }
 
     /**
-     * Crop Filter Details
+     * Get Crop Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CropFilter

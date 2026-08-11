@@ -32,7 +32,7 @@ class RawApi
     }
 
     /**
-     * Add Raw ID3 Tag to a Progressive TS muxing
+     * Create Raw ID3 Tag to a Progressive TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class RawApi
     }
 
     /**
-     * Raw ID3 Tag Details of a Progressive TS muxing
+     * Get Raw ID3 Tag of a Progressive TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

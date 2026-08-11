@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * HLS Manifest Custom Data
+     * Get HLS Manifest Custom Data
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\CustomData

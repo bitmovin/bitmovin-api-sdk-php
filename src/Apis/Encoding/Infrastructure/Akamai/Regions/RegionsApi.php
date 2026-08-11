@@ -67,7 +67,7 @@ class RegionsApi
     }
 
     /**
-     * Akamai account region settings details
+     * Get Akamai account region settings details
      *
      * @param string $infrastructureId
      * @param \BitmovinApiSdk\Models\AkamaiCloudRegion $region

@@ -32,7 +32,7 @@ class CencApi
     }
 
     /**
-     * Add CENC DRM to an MP4 muxing
+     * Create CENC DRM to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class CencApi
     }
 
     /**
-     * CENC DRM Details of an MP4 muxing
+     * Get CENC DRM from an MP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

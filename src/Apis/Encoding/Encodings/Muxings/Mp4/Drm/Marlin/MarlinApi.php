@@ -32,7 +32,7 @@ class MarlinApi
     }
 
     /**
-     * Add Marlin DRM to an MP4 muxing
+     * Create Marlin DRM to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class MarlinApi
     }
 
     /**
-     * Marlin DRM Details of an MP4 muxing
+     * Get Marlin DRM from an MP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

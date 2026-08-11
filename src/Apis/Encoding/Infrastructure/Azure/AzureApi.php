@@ -32,7 +32,7 @@ class AzureApi
     }
 
     /**
-     * Add Azure Account
+     * Create Azure Account
      *
      * @param \BitmovinApiSdk\Models\AzureAccount $azureAccount
      * @return \BitmovinApiSdk\Models\AzureAccount
@@ -64,7 +64,7 @@ class AzureApi
     }
 
     /**
-     * Azure Account Details
+     * Get Azure Account details
      *
      * @param string $infrastructureId
      * @return \BitmovinApiSdk\Models\AzureAccount

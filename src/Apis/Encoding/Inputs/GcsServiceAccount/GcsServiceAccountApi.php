@@ -64,7 +64,7 @@ class GcsServiceAccountApi
     }
 
     /**
-     * List Service Account based GCS Input Details
+     * Get Service Account based GCS Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\GcsServiceAccountInput

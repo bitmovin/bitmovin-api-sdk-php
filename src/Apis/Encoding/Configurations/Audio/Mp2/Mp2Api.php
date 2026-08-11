@@ -64,7 +64,7 @@ class Mp2Api
     }
 
     /**
-     * MP2 Codec Configuration Details
+     * Get MP2 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Mp2AudioConfiguration

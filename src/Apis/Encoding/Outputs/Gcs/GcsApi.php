@@ -64,7 +64,7 @@ class GcsApi
     }
 
     /**
-     * GCS Output Details
+     * Get GCS Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\GcsOutput

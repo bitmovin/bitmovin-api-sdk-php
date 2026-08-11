@@ -64,7 +64,7 @@ class PcmApi
     }
 
     /**
-     * PCM Codec Configuration Details
+     * Get PCM Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\PcmAudioConfiguration

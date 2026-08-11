@@ -32,7 +32,7 @@ class ChunkedTextApi
     }
 
     /**
-     * Add Chunked Text muxing
+     * Create Chunked Text muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ChunkedTextMuxing $chunkedTextMuxing
@@ -71,7 +71,7 @@ class ChunkedTextApi
     }
 
     /**
-     * Chunked Text muxing details
+     * Get Chunked Text muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -64,7 +64,7 @@ class LocalApi
     }
 
     /**
-     * Local Output Details
+     * Get Local Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\LocalOutput

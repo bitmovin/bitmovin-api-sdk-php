@@ -64,7 +64,7 @@ class AkamaiNetstorageApi
     }
 
     /**
-     * Akamai NetStorage Input Details
+     * Get Akamai NetStorage Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\AkamaiNetStorageInput

@@ -26,7 +26,7 @@ class TimecodeTrackApi
     }
 
     /**
-     * Add Timecode Track Trimming Input Stream
+     * Create Timecode Track Trimming Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\TimecodeTrackTrimmingInputStream $timecodeTrackTrimmingInputStream
@@ -65,7 +65,7 @@ class TimecodeTrackApi
     }
 
     /**
-     * Timecode Track Trimming Input Stream Details
+     * Get Timecode Track Trimming Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

@@ -64,7 +64,7 @@ class EbuR128SinglePassApi
     }
 
     /**
-     * EBU R128 Single Pass Filter Details
+     * Get EBU R128 Single Pass Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\EbuR128SinglePassFilter

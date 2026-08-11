@@ -26,7 +26,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Add Content Protection to CMAF Representation
+     * Create Content Protection to CMAF Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -77,7 +77,7 @@ class ContentprotectionApi
     }
 
     /**
-     * CMAF Representation Content Protection Details
+     * Get CMAF Representation Content Protection details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class ContentprotectionApi
     }
 
     /**
-     * List all CMAF Representation Content Protections
+     * List CMAF Representation Content Protections
      *
      * @param string $manifestId
      * @param string $periodId

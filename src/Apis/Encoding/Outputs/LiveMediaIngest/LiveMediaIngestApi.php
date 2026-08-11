@@ -64,7 +64,7 @@ class LiveMediaIngestApi
     }
 
     /**
-     * Live Media Ingest Output Details
+     * Get Live Media Ingest Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\LiveMediaIngestOutput

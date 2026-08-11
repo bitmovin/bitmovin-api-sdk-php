@@ -47,7 +47,7 @@ class CustomTagsApi
     }
 
     /**
-     * Delete Custom Tag
+     * Delete Stream Custom Tag
      *
      * @param string $manifestId
      * @param string $streamId
@@ -69,7 +69,7 @@ class CustomTagsApi
     }
 
     /**
-     * Custom Tag Details
+     * Stream Custom Tag Details
      *
      * @param string $manifestId
      * @param string $streamId

@@ -26,7 +26,7 @@ class VideoApi
     }
 
     /**
-     * Add Video Media
+     * Create Video Media
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\VideoMediaInfo $videoMediaInfo
@@ -65,7 +65,7 @@ class VideoApi
     }
 
     /**
-     * Video Media Details
+     * Get Video Media details
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -85,7 +85,7 @@ class VideoApi
     }
 
     /**
-     * List all Video Media
+     * List Video Media
      *
      * @param string $manifestId
      * @param VideoMediaInfoListQueryParams|null $queryParams

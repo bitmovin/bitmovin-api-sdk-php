@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Embed SCC captions as 608/708 Custom Data
+     * Get SCC captions as 608/708 Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

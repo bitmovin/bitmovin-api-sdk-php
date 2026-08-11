@@ -21,6 +21,7 @@ use BitmovinApiSdk\Apis\Encoding\Filters\EnhancedDeinterlace\EnhancedDeinterlace
 use BitmovinApiSdk\Apis\Encoding\Filters\AudioMix\AudioMixApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\DenoiseHqdn3d\DenoiseHqdn3dApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\EbuR128SinglePass\EbuR128SinglePassApi;
+use BitmovinApiSdk\Apis\Encoding\Filters\DolbyLoudness\DolbyLoudnessApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Text\TextApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Interlace\InterlaceApi;
 use BitmovinApiSdk\Apis\Encoding\Filters\Unsharp\UnsharpApi;
@@ -70,6 +71,9 @@ class FiltersApi
     /** @var EbuR128SinglePassApi */
     public $ebuR128SinglePass;
 
+    /** @var DolbyLoudnessApi */
+    public $dolbyLoudness;
+
     /** @var TextApi */
     public $text;
 
@@ -105,6 +109,7 @@ class FiltersApi
         $this->audioMix = new AudioMixApi(null, $this->httpWrapper);
         $this->denoiseHqdn3d = new DenoiseHqdn3dApi(null, $this->httpWrapper);
         $this->ebuR128SinglePass = new EbuR128SinglePassApi(null, $this->httpWrapper);
+        $this->dolbyLoudness = new DolbyLoudnessApi(null, $this->httpWrapper);
         $this->text = new TextApi(null, $this->httpWrapper);
         $this->interlace = new InterlaceApi(null, $this->httpWrapper);
         $this->unsharp = new UnsharpApi(null, $this->httpWrapper);

@@ -32,7 +32,7 @@ class AnalysesApi
     }
 
     /**
-     * List AI scene analyses
+     * List AI Scene Analyses
      *
      * @param SceneAnalysisListItemListQueryParams|null $queryParams
      * @return SceneAnalysisListItemPaginationResponse

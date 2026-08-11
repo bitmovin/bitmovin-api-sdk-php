@@ -26,7 +26,7 @@ class SubtitleApi
     }
 
     /**
-     * Add Subtitle AdaptationSet
+     * Create Subtitle AdaptationSet
      *
      * @param string $manifestId
      * @param string $periodId
@@ -69,7 +69,7 @@ class SubtitleApi
     }
 
     /**
-     * Subtitle AdaptationSet Details
+     * Get Subtitle AdaptationSet details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -91,7 +91,7 @@ class SubtitleApi
     }
 
     /**
-     * List all Subtitle AdaptationSets
+     * List Subtitle AdaptationSets
      *
      * @param string $manifestId
      * @param string $periodId

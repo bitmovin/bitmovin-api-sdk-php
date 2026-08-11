@@ -42,7 +42,7 @@ class Mp4Api
     }
 
     /**
-     * Add MP4 muxing
+     * Create MP4 muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Mp4Muxing $mp4Muxing
@@ -81,7 +81,7 @@ class Mp4Api
     }
 
     /**
-     * MP4 muxing details
+     * Get MP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

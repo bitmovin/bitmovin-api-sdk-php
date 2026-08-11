@@ -32,7 +32,7 @@ class ClearkeyApi
     }
 
     /**
-     * Add ClearKey DRM to an fMP4 muxing
+     * Create ClearKey DRM to an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class ClearkeyApi
     }
 
     /**
-     * ClearKey DRM Details of an fMP4 muxing
+     * Get ClearKey DRM from an fMP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

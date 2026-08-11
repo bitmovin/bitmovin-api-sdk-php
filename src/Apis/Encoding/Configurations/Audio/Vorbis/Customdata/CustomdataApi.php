@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Vorbis Codec Configuration Custom Data
+     * Get Vorbis Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

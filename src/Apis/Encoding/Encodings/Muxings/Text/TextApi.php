@@ -32,7 +32,7 @@ class TextApi
     }
 
     /**
-     * Add Text muxing
+     * Create Text muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\TextMuxing $textMuxing
@@ -71,7 +71,7 @@ class TextApi
     }
 
     /**
-     * Text muxing details
+     * Get Text muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

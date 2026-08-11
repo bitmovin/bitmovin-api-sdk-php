@@ -58,7 +58,7 @@ class HlsApi
     }
 
     /**
-     * HLS Input Details
+     * Get HLS Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\HlsInput

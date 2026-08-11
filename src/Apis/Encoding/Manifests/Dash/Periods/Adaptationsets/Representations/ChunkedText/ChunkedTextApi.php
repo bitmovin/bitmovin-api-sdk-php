@@ -26,7 +26,7 @@ class ChunkedTextApi
     }
 
     /**
-     * Add Chunked Text Representation
+     * Create Chunked Text Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -73,7 +73,7 @@ class ChunkedTextApi
     }
 
     /**
-     * Chunked Text Representation Details
+     * Get Chunked Text Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -97,7 +97,7 @@ class ChunkedTextApi
     }
 
     /**
-     * List all Chunked Text Representations
+     * List Chunked Text Representations
      *
      * @param string $manifestId
      * @param string $periodId

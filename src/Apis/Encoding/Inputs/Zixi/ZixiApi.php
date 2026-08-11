@@ -46,7 +46,7 @@ class ZixiApi
     }
 
     /**
-     * Delete Zixi input
+     * Delete Zixi Input
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\ZixiInput
@@ -64,7 +64,7 @@ class ZixiApi
     }
 
     /**
-     * Zixi Input Details
+     * Get Zixi Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\ZixiInput

@@ -32,7 +32,7 @@ class StreamKeysApi
     }
 
     /**
-     * Create new stream key
+     * Create Stream Key
      *
      * @param \BitmovinApiSdk\Models\StreamKey $streamKey
      * @return \BitmovinApiSdk\Models\StreamKey
@@ -64,7 +64,7 @@ class StreamKeysApi
     }
 
     /**
-     * Stream Key details
+     * Get Stream Key details
      *
      * @param string $streamKeyId
      * @return \BitmovinApiSdk\Models\StreamKey

@@ -26,7 +26,7 @@ class DvbsubApi
     }
 
     /**
-     * Burn-In DVB-SUB Subtitle into Stream
+     * Create Burn-In DVB-SUB Subtitle
      *
      * @param string $encodingId
      * @param string $streamId
@@ -47,7 +47,7 @@ class DvbsubApi
     }
 
     /**
-     * Delete Burn-In DVB-SUB Subtitle from Stream
+     * Delete Burn-In DVB-SUB Subtitle
      *
      * @param string $encodingId
      * @param string $streamId
@@ -69,7 +69,7 @@ class DvbsubApi
     }
 
     /**
-     * Get Burn-In DVB-SUB Subtitle Details
+     * Get Burn-In DVB-SUB Subtitle details
      *
      * @param string $encodingId
      * @param string $streamId
@@ -91,7 +91,7 @@ class DvbsubApi
     }
 
     /**
-     * List the Burn-In DVB-SUB subtitles of a stream
+     * List Burn-In DVB-SUB Subtitles
      *
      * @param string $encodingId
      * @param string $streamId

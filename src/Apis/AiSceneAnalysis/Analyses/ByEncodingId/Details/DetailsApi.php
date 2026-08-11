@@ -32,7 +32,7 @@ class DetailsApi
     }
 
     /**
-     * Get AI scene analysis details by encoding ID
+     * Get AI Scene Analysis details
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\SceneAnalysisDetailsResponse

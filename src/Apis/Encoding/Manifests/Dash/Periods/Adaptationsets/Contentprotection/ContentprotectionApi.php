@@ -26,7 +26,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Add Content Protection to AdaptationSet
+     * Create Content Protection to AdaptationSet
      *
      * @param string $manifestId
      * @param string $periodId
@@ -73,7 +73,7 @@ class ContentprotectionApi
     }
 
     /**
-     * AdaptationSet Content Protection Details
+     * Get AdaptationSet Content Protection details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -97,7 +97,7 @@ class ContentprotectionApi
     }
 
     /**
-     * List all AdaptationSet Content Protections
+     * List AdaptationSet Content Protections
      *
      * @param string $manifestId
      * @param string $periodId

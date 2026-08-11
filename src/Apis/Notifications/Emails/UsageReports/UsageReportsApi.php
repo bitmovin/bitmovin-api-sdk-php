@@ -26,7 +26,7 @@ class UsageReportsApi
     }
 
     /**
-     * List Email Notifications (All Usage Reports)
+     * List Usage Report Email Notifications
      *
      * @param EmailNotificationListQueryParams|null $queryParams
      * @return EmailNotificationPaginationResponse

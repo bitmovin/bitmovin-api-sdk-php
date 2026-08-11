@@ -32,7 +32,7 @@ class SccApi
     }
 
     /**
-     * Embed SCC captions as 608/708 into Stream
+     * Create SCC captions as 608/708
      *
      * @param string $encodingId
      * @param string $streamId
@@ -53,7 +53,7 @@ class SccApi
     }
 
     /**
-     * Delete SCC captions as 608/708 from Stream
+     * Delete SCC captions as 608/708
      *
      * @param string $encodingId
      * @param string $streamId
@@ -75,7 +75,7 @@ class SccApi
     }
 
     /**
-     * Embed SCC captions as 608/708 Details
+     * Get SCC captions as 608/708 details
      *
      * @param string $encodingId
      * @param string $streamId
@@ -97,7 +97,7 @@ class SccApi
     }
 
     /**
-     * List SCC captions as 608/708 from Stream
+     * List SCC captions as 608/708
      *
      * @param string $encodingId
      * @param string $streamId

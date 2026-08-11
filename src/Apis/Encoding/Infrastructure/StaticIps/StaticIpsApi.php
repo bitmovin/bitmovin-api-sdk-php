@@ -26,7 +26,7 @@ class StaticIpsApi
     }
 
     /**
-     * Add Static IP Address
+     * Create Static IP Address
      *
      * @param \BitmovinApiSdk\Models\StaticIp $staticIp
      * @return \BitmovinApiSdk\Models\StaticIp
@@ -58,7 +58,7 @@ class StaticIpsApi
     }
 
     /**
-     * Static IP Address Details
+     * Get Static IP Address details
      *
      * @param string $id
      * @return \BitmovinApiSdk\Models\StaticIp
@@ -76,7 +76,7 @@ class StaticIpsApi
     }
 
     /**
-     * List all Static IP Addresses
+     * List Static IP Addresses
      *
      * @param StaticIpListQueryParams|null $queryParams
      * @return StaticIpPaginationResponse

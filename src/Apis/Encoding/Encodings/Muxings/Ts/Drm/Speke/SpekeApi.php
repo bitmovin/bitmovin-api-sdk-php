@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to a TS muxing
+     * Create SPEKE DRM key provider to a TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of a TS muxing
+     * Get SPEKE DRM from a TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

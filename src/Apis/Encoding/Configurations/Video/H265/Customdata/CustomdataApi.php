@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * H265/HEVC Codec Configuration Custom Data
+     * Get H265/HEVC Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

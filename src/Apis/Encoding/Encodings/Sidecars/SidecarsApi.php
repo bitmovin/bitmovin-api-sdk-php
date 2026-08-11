@@ -37,7 +37,7 @@ class SidecarsApi
     }
 
     /**
-     * Add Sidecar
+     * Create Sidecar
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\SidecarFile $sidecarFile
@@ -76,7 +76,7 @@ class SidecarsApi
     }
 
     /**
-     * Sidecar Details
+     * Get Sidecar details
      *
      * @param string $encodingId
      * @param string $sidecarId

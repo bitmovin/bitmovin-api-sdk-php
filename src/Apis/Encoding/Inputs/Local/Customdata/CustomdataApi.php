@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Local Input Custom Data
+     * Get Local Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

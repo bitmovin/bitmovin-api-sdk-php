@@ -32,7 +32,7 @@ class MxfApi
     }
 
     /**
-     * Add MXF muxing
+     * Create MXF muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\MxfMuxing $mxfMuxing
@@ -71,7 +71,7 @@ class MxfApi
     }
 
     /**
-     * MXF muxing details
+     * Get MXF muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

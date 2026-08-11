@@ -87,7 +87,7 @@ class StreamsApi
     }
 
     /**
-     * Add Stream
+     * Create Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Stream $stream
@@ -126,7 +126,7 @@ class StreamsApi
     }
 
     /**
-     * Stream Details
+     * Get Stream details
      *
      * @param string $encodingId
      * @param string $streamId

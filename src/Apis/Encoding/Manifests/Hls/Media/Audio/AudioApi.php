@@ -26,7 +26,7 @@ class AudioApi
     }
 
     /**
-     * Add Audio Media
+     * Create Audio Media
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\AudioMediaInfo $audioMediaInfo
@@ -65,7 +65,7 @@ class AudioApi
     }
 
     /**
-     * Audio Media Details
+     * Get Audio Media details
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -85,7 +85,7 @@ class AudioApi
     }
 
     /**
-     * List all Audio Media
+     * List Audio Media
      *
      * @param string $manifestId
      * @param AudioMediaInfoListQueryParams|null $queryParams

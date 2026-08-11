@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Aspera Custom Data
+     * Get Aspera Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

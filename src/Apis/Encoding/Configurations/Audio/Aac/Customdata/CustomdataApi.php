@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * AAC Codec Configuration Custom Data
+     * Get AAC Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

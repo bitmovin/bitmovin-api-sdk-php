@@ -32,7 +32,7 @@ class FairplayApi
     }
 
     /**
-     * Add FairPlay DRM to a TS muxing
+     * Create FairPlay DRM to a TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class FairplayApi
     }
 
     /**
-     * FairPlay DRM Details of a TS muxing
+     * Get FairPlay DRM from a TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

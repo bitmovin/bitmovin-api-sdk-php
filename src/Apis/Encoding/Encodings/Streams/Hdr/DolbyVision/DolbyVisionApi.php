@@ -26,7 +26,7 @@ class DolbyVisionApi
     }
 
     /**
-     * Add Dolby Vision Metadata
+     * Create Dolby Vision Metadata
      *
      * @param string $encodingId
      * @param string $streamId
@@ -69,7 +69,7 @@ class DolbyVisionApi
     }
 
     /**
-     * Dolby Vision Metadata Details
+     * Get Dolby Vision Metadata details
      *
      * @param string $encodingId
      * @param string $streamId

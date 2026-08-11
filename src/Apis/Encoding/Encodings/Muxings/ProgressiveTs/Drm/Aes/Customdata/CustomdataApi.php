@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * AES encryption Custom Data of a Progressive TS muxing
+     * Get AES encryption configuration from a Progressive TS muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

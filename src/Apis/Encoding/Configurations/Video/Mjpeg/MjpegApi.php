@@ -64,7 +64,7 @@ class MjpegApi
     }
 
     /**
-     * MJPEG Codec Configuration Details
+     * Get MJPEG Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\MjpegVideoConfiguration

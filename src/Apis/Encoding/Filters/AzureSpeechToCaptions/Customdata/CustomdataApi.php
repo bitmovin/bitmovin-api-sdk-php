@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Azure Speech to captions Filter Custom Data
+     * Get Azure Speech to captions Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

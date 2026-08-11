@@ -64,7 +64,7 @@ class Vp8Api
     }
 
     /**
-     * VP8 Codec Configuration Details
+     * Get VP8 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Vp8VideoConfiguration
@@ -82,7 +82,7 @@ class Vp8Api
     }
 
     /**
-     * 
+     * List VP8 Codec Configurations
      *
      * @param Vp8VideoConfigurationListQueryParams|null $queryParams
      * @return Vp8VideoConfigurationPaginationResponse

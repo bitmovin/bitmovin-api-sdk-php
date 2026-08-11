@@ -64,7 +64,7 @@ class AudioVolumeApi
     }
 
     /**
-     * Audio Volume Filter Details
+     * Get Audio Volume Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\AudioVolumeFilter

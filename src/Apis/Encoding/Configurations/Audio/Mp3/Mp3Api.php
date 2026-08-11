@@ -64,7 +64,7 @@ class Mp3Api
     }
 
     /**
-     * MP3 Codec Configuration Details
+     * Get MP3 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Mp3AudioConfiguration

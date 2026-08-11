@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Smooth Streaming Manifest Custom Data
+     * Get Smooth Streaming Manifest Custom Data
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\CustomData

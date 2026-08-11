@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * SFTP Custom Data
+     * Get SFTP Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

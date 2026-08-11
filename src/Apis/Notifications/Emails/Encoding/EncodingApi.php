@@ -32,7 +32,7 @@ class EncodingApi
     }
 
     /**
-     * List Email Notifications (All Encodings)
+     * List Encoding Email Notifications
      *
      * @param EmailNotificationListQueryParams|null $queryParams
      * @return EmailNotificationPaginationResponse

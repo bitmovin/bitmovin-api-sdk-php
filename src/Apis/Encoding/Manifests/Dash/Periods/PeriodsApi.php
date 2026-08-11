@@ -37,7 +37,7 @@ class PeriodsApi
     }
 
     /**
-     * Add Period
+     * Create Period
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\Period $period
@@ -76,7 +76,7 @@ class PeriodsApi
     }
 
     /**
-     * Period Details
+     * Get Period details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -96,7 +96,7 @@ class PeriodsApi
     }
 
     /**
-     * List all Periods
+     * List Periods
      *
      * @param string $manifestId
      * @param PeriodListQueryParams|null $queryParams

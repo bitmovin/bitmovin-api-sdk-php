@@ -45,7 +45,7 @@ class WebvttApi
     }
 
     /**
-     * Delete Sidecar
+     * Delete WebVTT Sidecar
      *
      * @param string $encodingId
      * @param string $sidecarId
@@ -65,7 +65,7 @@ class WebvttApi
     }
 
     /**
-     * WebVTT Sidecar Details
+     * Get WebVTT Sidecar details
      *
      * @param string $encodingId
      * @param string $sidecarId

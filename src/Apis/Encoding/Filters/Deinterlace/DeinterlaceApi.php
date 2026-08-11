@@ -64,7 +64,7 @@ class DeinterlaceApi
     }
 
     /**
-     * Deinterlace Filter Details
+     * Get Deinterlace Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\DeinterlaceFilter

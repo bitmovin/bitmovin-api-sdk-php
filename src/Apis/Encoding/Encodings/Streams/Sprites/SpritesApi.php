@@ -32,7 +32,7 @@ class SpritesApi
     }
 
     /**
-     * Add Sprite
+     * Create Sprite
      *
      * @param string $encodingId
      * @param string $streamId
@@ -75,7 +75,7 @@ class SpritesApi
     }
 
     /**
-     * Sprite Details
+     * Get Sprite details
      *
      * @param string $encodingId
      * @param string $streamId

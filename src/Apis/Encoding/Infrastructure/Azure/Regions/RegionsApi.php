@@ -67,7 +67,7 @@ class RegionsApi
     }
 
     /**
-     * Azure Region Settings Details
+     * Get Azure Region Settings details
      *
      * @param string $infrastructureId
      * @param \BitmovinApiSdk\Models\AzureCloudRegion $region

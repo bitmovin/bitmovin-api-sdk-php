@@ -45,7 +45,7 @@ class SchedulesApi
     }
 
     /**
-     * Delete prewarmed encoder pool schedule
+     * Delete Prewarmed encoder pool schedule
      *
      * @param string $poolId
      * @param string $scheduleId
@@ -65,7 +65,7 @@ class SchedulesApi
     }
 
     /**
-     * Prewarmed encoder pool schedule details
+     * Get Prewarmed encoder pool schedule details
      *
      * @param string $poolId
      * @param string $scheduleId

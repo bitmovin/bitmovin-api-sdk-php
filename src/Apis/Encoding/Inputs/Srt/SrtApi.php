@@ -46,7 +46,7 @@ class SrtApi
     }
 
     /**
-     * Delete SRT input
+     * Delete SRT Input
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\SrtInput
@@ -64,7 +64,7 @@ class SrtApi
     }
 
     /**
-     * SRT Input Details
+     * Get SRT Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\SrtInput

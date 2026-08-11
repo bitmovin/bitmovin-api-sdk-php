@@ -32,7 +32,7 @@ class BifsApi
     }
 
     /**
-     * Add a Roku Bif file
+     * Create a Roku Bif file
      *
      * @param string $encodingId
      * @param string $streamId
@@ -75,7 +75,7 @@ class BifsApi
     }
 
     /**
-     * Bif Details
+     * Get Bif details
      *
      * @param string $encodingId
      * @param string $streamId

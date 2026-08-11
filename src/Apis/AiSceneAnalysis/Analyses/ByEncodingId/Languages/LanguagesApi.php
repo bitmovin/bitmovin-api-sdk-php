@@ -26,7 +26,7 @@ class LanguagesApi
     }
 
     /**
-     * Get AI scene analysis languages by encoding ID
+     * Get AI Scene Analysis languages
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\SceneAnalysisLanguagesResponse

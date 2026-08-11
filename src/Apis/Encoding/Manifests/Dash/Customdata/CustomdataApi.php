@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * DASH Manifest Custom Data
+     * Get DASH Manifest Custom Data
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\CustomData

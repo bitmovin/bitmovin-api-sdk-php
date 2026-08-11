@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Azure Custom Data
+     * Get Azure Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

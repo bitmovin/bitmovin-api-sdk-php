@@ -42,7 +42,7 @@ class EncodingsApi
     }
 
     /**
-     * Get Statistics from an Encoding
+     * Get Encoding Statistics
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\EncodingStats

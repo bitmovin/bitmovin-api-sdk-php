@@ -42,7 +42,7 @@ class LiveStatisticsApi
     }
 
     /**
-     * List Live Statistics from an Encoding
+     * List Live Statistics
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\LiveEncodingStats

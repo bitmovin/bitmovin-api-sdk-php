@@ -64,7 +64,7 @@ class HeAacV2Api
     }
 
     /**
-     * HE-AAC v2 Codec Configuration Details
+     * Get HE-AAC v2 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\HeAacV2AudioConfiguration

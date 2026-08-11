@@ -26,7 +26,7 @@ class IngestApi
     }
 
     /**
-     * Add Ingest Input Stream
+     * Create Ingest Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\IngestInputStream $ingestInputStream
@@ -65,7 +65,7 @@ class IngestApi
     }
 
     /**
-     * Ingest Input Stream Details
+     * Get Ingest Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

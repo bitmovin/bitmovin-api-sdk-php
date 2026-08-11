@@ -64,7 +64,7 @@ class DtsPassthroughApi
     }
 
     /**
-     * DTS Passthrough Codec Configuration Details
+     * Get DTS Passthrough Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\DtsPassthroughAudioConfiguration

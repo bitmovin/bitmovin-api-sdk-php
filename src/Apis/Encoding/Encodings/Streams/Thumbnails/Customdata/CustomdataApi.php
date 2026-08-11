@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Thumbnail Custom Data
+     * Get Thumbnail Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

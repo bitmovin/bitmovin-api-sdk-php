@@ -26,7 +26,7 @@ class ConcatenationApi
     }
 
     /**
-     * Add Concatenation Input Stream
+     * Create Concatenation Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ConcatenationInputStream $concatenationInputStream
@@ -65,7 +65,7 @@ class ConcatenationApi
     }
 
     /**
-     * Concatenation Input Stream Details
+     * Get Concatenation Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * HE-AAC v2 Codec Configuration Custom Data
+     * Get HE-AAC v2 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

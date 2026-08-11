@@ -64,7 +64,7 @@ class H262Api
     }
 
     /**
-     * H262 Codec Configuration Details
+     * Get H262 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\H262VideoConfiguration

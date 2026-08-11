@@ -32,7 +32,7 @@ class AesApi
     }
 
     /**
-     * Add AES encryption configuration to a TS muxing
+     * Create AES encryption configuration to a TS muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class AesApi
     }
 
     /**
-     * AES encryption Details of a TS muxing
+     * Get AES encryption configuration from a TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

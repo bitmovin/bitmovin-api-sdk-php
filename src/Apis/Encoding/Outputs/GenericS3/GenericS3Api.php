@@ -64,7 +64,7 @@ class GenericS3Api
     }
 
     /**
-     * Generic S3 Output Details
+     * Get Generic S3 Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\GenericS3Output

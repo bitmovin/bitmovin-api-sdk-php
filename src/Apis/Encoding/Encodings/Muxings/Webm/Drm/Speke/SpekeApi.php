@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to a WebM muxing
+     * Create SPEKE DRM key provider to a WebM muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of a WebM muxing
+     * Get SPEKE DRM from a WebM muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

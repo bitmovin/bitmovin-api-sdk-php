@@ -37,7 +37,7 @@ class EncodingsApi
     }
 
     /**
-     * List Email Notifications (Specific Encoding)
+     * List Email Notifications for a specific Encoding
      *
      * @param string $encodingId
      * @param EmailNotificationWithStreamConditionsListQueryParams|null $queryParams

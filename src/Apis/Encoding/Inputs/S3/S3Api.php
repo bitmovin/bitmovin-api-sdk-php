@@ -64,7 +64,7 @@ class S3Api
     }
 
     /**
-     * S3 Input Details
+     * Get S3 Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\S3Input

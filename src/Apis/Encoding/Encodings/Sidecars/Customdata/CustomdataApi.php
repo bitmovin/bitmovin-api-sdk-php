@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Sidecar Custom Data
+     * Get Sidecar Custom Data
      *
      * @param string $encodingId
      * @param string $sidecarId

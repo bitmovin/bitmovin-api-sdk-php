@@ -26,7 +26,7 @@ class AudioMixApi
     }
 
     /**
-     * Add audio mix input stream
+     * Create audio mix input stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\AudioMixInputStream $audioMixInputStream
@@ -45,7 +45,7 @@ class AudioMixApi
     }
 
     /**
-     * Delete audio mix input stream
+     * Delete Audio mix input stream
      *
      * @param string $encodingId
      * @param string $inputStreamId
@@ -65,7 +65,7 @@ class AudioMixApi
     }
 
     /**
-     * Audio mix input stream details
+     * Get Audio mix input stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

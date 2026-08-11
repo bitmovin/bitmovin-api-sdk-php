@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Generic S3 Input Custom Data
+     * Get Generic S3 Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

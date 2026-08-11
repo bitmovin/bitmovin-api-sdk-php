@@ -64,7 +64,7 @@ class GenericS3Api
     }
 
     /**
-     * Generic S3 Input Details
+     * Get Generic S3 Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\GenericS3Input

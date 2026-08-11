@@ -64,7 +64,7 @@ class TextApi
     }
 
     /**
-     * Text Filter Details
+     * Get Text Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\TextFilter

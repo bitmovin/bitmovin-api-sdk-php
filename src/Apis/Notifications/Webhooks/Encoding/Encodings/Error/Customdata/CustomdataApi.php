@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * &#39;Encoding Error&#39; Webhook Custom Data for a specific Encoding
+     * Get &#39;Encoding Error&#39; Webhook Custom Data for a specific Encoding
      *
      * @param string $encodingId
      * @param string $webhookId
@@ -46,7 +46,7 @@ class CustomdataApi
     }
 
     /**
-     * &#39;Encoding Error&#39; Webhook Custom Data
+     * Get &#39;Encoding Error&#39; Webhook Custom Data
      *
      * @param string $webhookId
      * @return \BitmovinApiSdk\Models\CustomData

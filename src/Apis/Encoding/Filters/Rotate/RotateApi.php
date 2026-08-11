@@ -64,7 +64,7 @@ class RotateApi
     }
 
     /**
-     * Rotate Filter Details
+     * Get Rotate Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\RotateFilter

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Denoise hqdn3d Filter Custom Data
+     * Get Denoise hqdn3d Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

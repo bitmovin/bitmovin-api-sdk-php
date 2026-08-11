@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * SRT input Custom Data
+     * Get SRT Input Custom Data
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\CustomData

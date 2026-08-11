@@ -64,7 +64,7 @@ class EnhancedWatermarkApi
     }
 
     /**
-     * Enhanced Watermark Filter Details
+     * Get Enhanced Watermark Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\EnhancedWatermarkFilter

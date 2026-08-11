@@ -26,7 +26,7 @@ class KantarWatermarkApi
     }
 
     /**
-     * Create or replace the Kantar Watermark for an encoding
+     * Create or replace Kantar Watermark
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\KantarWatermark $kantarWatermark
@@ -45,7 +45,7 @@ class KantarWatermarkApi
     }
 
     /**
-     * Delete the Kantar Watermark for an encoding
+     * Delete Kantar Watermark
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -63,7 +63,7 @@ class KantarWatermarkApi
     }
 
     /**
-     * Get the Kantar Watermark for an encoding
+     * Get Kantar Watermark
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\KantarWatermark

@@ -32,7 +32,7 @@ class SccApi
     }
 
     /**
-     * Convert SCC captions
+     * Create SCC Caption Conversion
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ConvertSccCaption $convertSccCaption
@@ -51,7 +51,7 @@ class SccApi
     }
 
     /**
-     * Delete Convert SCC captions
+     * Delete SCC Caption Conversion
      *
      * @param string $encodingId
      * @param string $captionsId
@@ -71,7 +71,7 @@ class SccApi
     }
 
     /**
-     * Convert SCC captions Details
+     * Get SCC Caption Conversion details
      *
      * @param string $encodingId
      * @param string $captionsId
@@ -91,7 +91,7 @@ class SccApi
     }
 
     /**
-     * List Convert SCC captions
+     * List SCC Caption Conversions
      *
      * @param string $encodingId
      * @param ConvertSccCaptionListQueryParams|null $queryParams

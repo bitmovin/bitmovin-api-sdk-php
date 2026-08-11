@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * DVB-SUB subtitle configuration custom data
+     * Get DVB-SUB subtitle configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

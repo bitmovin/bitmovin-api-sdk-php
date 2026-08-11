@@ -42,7 +42,7 @@ class PackedAudioApi
     }
 
     /**
-     * Add Packed Audio muxing
+     * Create Packed Audio muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\PackedAudioMuxing $packedAudioMuxing
@@ -81,7 +81,7 @@ class PackedAudioApi
     }
 
     /**
-     * Packed Audio muxing details
+     * Get Packed Audio muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

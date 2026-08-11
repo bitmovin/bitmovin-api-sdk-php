@@ -26,7 +26,7 @@ class FinishedApi
     }
 
     /**
-     * Add &#39;Manifest Finished Successfully&#39; Webhook (All Manifests)
+     * Create &#39;Manifest Finished&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\Webhook $webhook
      * @return \BitmovinApiSdk\Models\Webhook
@@ -40,7 +40,7 @@ class FinishedApi
     }
 
     /**
-     * Add &#39;Manifest Finished Successfully&#39; Webhook Notification (Specific Manifest)
+     * Create &#39;Manifest Finished&#39; Webhook for a specific Manifest
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\Webhook $webhook
@@ -59,7 +59,7 @@ class FinishedApi
     }
 
     /**
-     * Delete Manifest Finished Webhook
+     * Delete &#39;Manifest Finished&#39; Webhook
      *
      * @param string $notificationId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -77,7 +77,7 @@ class FinishedApi
     }
 
     /**
-     * Get &#39;Manifest Finished&#39; Webhooks (All Manifests)
+     * List &#39;Manifest Finished&#39; Webhooks
      *
      * @return WebhookPaginationResponse
      * @throws BitmovinApiException
@@ -90,7 +90,7 @@ class FinishedApi
     }
 
     /**
-     * Replace Manifest Finished Webhook Notification
+     * Update &#39;Manifest Finished&#39; Webhook
      *
      * @param string $notificationId
      * @param \BitmovinApiSdk\Models\Webhook $webhook

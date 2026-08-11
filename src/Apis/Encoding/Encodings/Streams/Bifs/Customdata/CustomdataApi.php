@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Bif Custom Data
+     * Get Bif Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

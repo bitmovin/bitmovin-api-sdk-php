@@ -26,7 +26,7 @@ class TemplateApi
     }
 
     /**
-     * Encoding Template URL
+     * Get Encoding Template URL
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\EncodingTemplateUrlResponse

@@ -26,7 +26,7 @@ class ActionsApi
     }
 
     /**
-     * Unassign stream keys
+     * Unassign Stream Keys
      *
      * @param \BitmovinApiSdk\Models\StreamKeysUnassignAction $streamKeysUnassignAction
      * @return \BitmovinApiSdk\Models\StreamKeysUnassignAction

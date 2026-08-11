@@ -64,7 +64,7 @@ class DirectFileUploadApi
     }
 
     /**
-     * Direct File Upload Input Details
+     * Get Direct File Upload Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\DirectFileUploadInput

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * AV1 Codec Configuration Custom Data
+     * Get AV1 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

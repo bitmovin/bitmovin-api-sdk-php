@@ -64,7 +64,7 @@ class Eac3Api
     }
 
     /**
-     * E-AC3 Codec Configuration Details
+     * Get E-AC3 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\Eac3AudioConfiguration

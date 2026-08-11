@@ -58,7 +58,7 @@ class H265v2Api
     }
 
     /**
-     * H265 V2 Codec Configuration Details
+     * Get H265 V2 Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\H265V2VideoConfiguration

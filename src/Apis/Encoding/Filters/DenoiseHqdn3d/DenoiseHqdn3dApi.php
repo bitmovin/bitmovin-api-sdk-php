@@ -64,7 +64,7 @@ class DenoiseHqdn3dApi
     }
 
     /**
-     * Denoise hqdn3d Filter Details
+     * Get Denoise hqdn3d Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\DenoiseHqdn3dFilter

@@ -10,6 +10,9 @@ class SceneAnalysisListSort extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const CREATED_AT_ASC = 'createdAt:ASC';
 
+    /** @var string */
+    private const RELEVANCE_DESC = 'relevance:DESC';
+
     /**
      * @param string $value
      * @return SceneAnalysisListSort
@@ -37,6 +40,16 @@ class SceneAnalysisListSort extends \BitmovinApiSdk\Common\Enum
     public static function CREATED_AT_ASC()
     {
         return new SceneAnalysisListSort(self::CREATED_AT_ASC);
+    }
+
+    /**
+     * Sort by semantic relevance in descending order. Supported only when searchText contains at least one non-whitespace character
+     *
+     * @return SceneAnalysisListSort
+     */
+    public static function RELEVANCE_DESC()
+    {
+        return new SceneAnalysisListSort(self::RELEVANCE_DESC);
     }
 }
 

@@ -26,7 +26,7 @@ class StreamsApi
     }
 
     /**
-     * List Stream Infos of Live Statistics from an Encoding
+     * List Live Statistics Stream Infos
      *
      * @param string $encodingId
      * @param StreamInfosListQueryParams|null $queryParams

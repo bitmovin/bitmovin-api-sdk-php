@@ -26,7 +26,7 @@ class ContentprotectionApi
     }
 
     /**
-     * Add Content Protection to DRM fMP4 Representation
+     * Create Content Protection to DRM fMP4 Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -77,7 +77,7 @@ class ContentprotectionApi
     }
 
     /**
-     * DRM fMP4 Representation Content Protection Details
+     * Get DRM fMP4 Representation Content Protection details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class ContentprotectionApi
     }
 
     /**
-     * List all DRM fMP4 Representation Content Protections
+     * List DRM fMP4 Representation Content Protections
      *
      * @param string $manifestId
      * @param string $periodId

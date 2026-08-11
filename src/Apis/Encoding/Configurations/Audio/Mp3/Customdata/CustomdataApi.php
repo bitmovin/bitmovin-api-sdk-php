@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * MP3 Codec Configuration Custom Data
+     * Get MP3 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

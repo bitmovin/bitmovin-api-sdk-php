@@ -37,7 +37,7 @@ class StreamsApi
     }
 
     /**
-     * Add Variant Stream
+     * Create Variant Stream
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\StreamInfo $streamInfo
@@ -76,7 +76,7 @@ class StreamsApi
     }
 
     /**
-     * Variant Stream Details
+     * Get Variant Stream details
      *
      * @param string $manifestId
      * @param string $streamId
@@ -96,7 +96,7 @@ class StreamsApi
     }
 
     /**
-     * List all Variant Streams
+     * List Variant Streams
      *
      * @param string $manifestId
      * @param StreamInfoListQueryParams|null $queryParams

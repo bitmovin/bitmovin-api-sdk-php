@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Service Account based GCS Output Custom Data
+     * Get Service Account based GCS Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

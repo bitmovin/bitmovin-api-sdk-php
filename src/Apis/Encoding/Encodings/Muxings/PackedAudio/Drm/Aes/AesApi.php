@@ -32,7 +32,7 @@ class AesApi
     }
 
     /**
-     * Add AES encryption configuration to the Packed Audio muxing
+     * Create AES encryption configuration to a Packed Audio muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class AesApi
     }
 
     /**
-     * AES encryption Details of a Packed Audio muxing
+     * Get AES encryption configuration from a Packed Audio muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

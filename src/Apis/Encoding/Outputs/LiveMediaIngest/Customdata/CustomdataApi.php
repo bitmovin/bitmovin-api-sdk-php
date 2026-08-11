@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Live Media Ingest Output Custom Data
+     * Get Live Media Ingest Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

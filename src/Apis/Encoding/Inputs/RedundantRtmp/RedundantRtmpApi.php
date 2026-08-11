@@ -58,7 +58,7 @@ class RedundantRtmpApi
     }
 
     /**
-     * Redundant RTMP Input Details
+     * Get Redundant RTMP Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\RedundantRtmpInput

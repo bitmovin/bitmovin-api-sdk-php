@@ -64,7 +64,7 @@ class FtpApi
     }
 
     /**
-     * FTP Input Details
+     * Get FTP Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\FtpInput

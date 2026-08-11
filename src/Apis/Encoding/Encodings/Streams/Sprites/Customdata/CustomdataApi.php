@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Sprite Custom Data
+     * Get Sprite Custom Data
      *
      * @param string $encodingId
      * @param string $streamId

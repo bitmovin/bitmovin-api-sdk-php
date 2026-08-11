@@ -67,7 +67,7 @@ class RegionsApi
     }
 
     /**
-     * Google Cloud Region Settings Details
+     * Get Google Cloud Region Settings details
      *
      * @param string $infrastructureId
      * @param \BitmovinApiSdk\Models\GoogleCloudRegion $region

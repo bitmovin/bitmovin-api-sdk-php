@@ -26,7 +26,7 @@ class LiveInputStreamChangedApi
     }
 
     /**
-     * Add Live Input Stream Changed Webhook Notification (All Encodings)
+     * Create &#39;Live Input Stream Changed&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditionsRequest $webhookNotificationWithStreamConditionsRequest
      * @return \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditions
@@ -40,7 +40,7 @@ class LiveInputStreamChangedApi
     }
 
     /**
-     * Add Live Input Stream Changed Webhook Notification (Specific Encoding)
+     * Create &#39;Live Input Stream Changed&#39; Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditionsRequest $webhookNotificationWithStreamConditionsRequest
@@ -59,7 +59,7 @@ class LiveInputStreamChangedApi
     }
 
     /**
-     * Replace Live Input Stream Changed Webhook Notification
+     * Update &#39;Live Input Stream Changed&#39; Webhook
      *
      * @param string $notificationId
      * @param \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditionsRequest $webhookNotificationWithStreamConditionsRequest

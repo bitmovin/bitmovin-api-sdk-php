@@ -26,7 +26,7 @@ class LiveInputStreamChangedApi
     }
 
     /**
-     * Add Live Input Stream Changed Email Notification (All Encodings)
+     * Create &#39;Live Input Stream Changed&#39; Email Notification
      *
      * @param \BitmovinApiSdk\Models\EmailNotificationWithStreamConditionsRequest $emailNotificationWithStreamConditionsRequest
      * @return \BitmovinApiSdk\Models\EmailNotificationWithStreamConditions
@@ -40,7 +40,7 @@ class LiveInputStreamChangedApi
     }
 
     /**
-     * Add Live Input Stream Changed Email Notification (Specific Encoding)
+     * Create &#39;Live Input Stream Changed&#39; Email Notification for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\EmailNotificationWithStreamConditionsRequest $emailNotificationWithStreamConditionsRequest
@@ -59,7 +59,7 @@ class LiveInputStreamChangedApi
     }
 
     /**
-     * Replace Live Input Stream Changed Email Notification
+     * Update &#39;Live Input Stream Changed&#39; Email Notification
      *
      * @param string $notificationId
      * @param \BitmovinApiSdk\Models\EmailNotificationWithStreamConditionsRequest $emailNotificationWithStreamConditionsRequest

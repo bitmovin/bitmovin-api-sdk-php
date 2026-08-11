@@ -26,7 +26,7 @@ class AdPlacementsApi
     }
 
     /**
-     * Get AI scene analysis ad placements by encoding ID
+     * Get AI Scene Analysis ad placements
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\SceneAnalysisAdPlacementMetadataResponse

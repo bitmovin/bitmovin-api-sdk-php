@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * PrimeTime DRM Custom Data of an fMP4 muxing
+     * Get PrimeTime DRM from an fMP4 muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

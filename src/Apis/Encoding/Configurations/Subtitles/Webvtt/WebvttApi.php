@@ -64,7 +64,7 @@ class WebvttApi
     }
 
     /**
-     * WebVtt subtitle configuration details
+     * Get WebVtt subtitle configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\WebVttConfiguration

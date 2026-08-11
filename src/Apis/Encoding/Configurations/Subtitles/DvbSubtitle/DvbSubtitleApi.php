@@ -64,7 +64,7 @@ class DvbSubtitleApi
     }
 
     /**
-     * DVB-SUB subtitle configuration details
+     * Get DVB-SUB subtitle configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\DvbSubtitleConfiguration

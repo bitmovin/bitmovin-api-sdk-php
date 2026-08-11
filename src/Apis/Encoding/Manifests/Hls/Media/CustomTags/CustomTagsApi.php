@@ -47,7 +47,7 @@ class CustomTagsApi
     }
 
     /**
-     * Delete Custom Tag
+     * Delete Media Custom Tag
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -69,7 +69,7 @@ class CustomTagsApi
     }
 
     /**
-     * Custom Tag Details
+     * Media Custom Tag Details
      *
      * @param string $manifestId
      * @param string $mediaId

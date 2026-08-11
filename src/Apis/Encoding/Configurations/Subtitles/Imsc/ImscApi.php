@@ -64,7 +64,7 @@ class ImscApi
     }
 
     /**
-     * IMSC subtitle configuration details
+     * Get IMSC subtitle configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\ImscConfiguration

@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Akamai MSL Output Custom Data
+     * Get Akamai MSL Output Custom Data
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\CustomData

@@ -64,7 +64,7 @@ class AudioMixApi
     }
 
     /**
-     * Audio Mix Filter Details
+     * Get Audio Mix Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\AudioMixFilter

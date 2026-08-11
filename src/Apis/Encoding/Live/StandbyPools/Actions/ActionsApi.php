@@ -45,7 +45,7 @@ class ActionsApi
     }
 
     /**
-     * Delete error encodings from the standby pool
+     * Delete Error Encodings from Standby Pool
      *
      * @param string $poolId
      * @return \BitmovinApiSdk\Models\LiveStandbyPoolEncoding

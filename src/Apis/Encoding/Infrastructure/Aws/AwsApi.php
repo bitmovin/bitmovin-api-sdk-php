@@ -32,7 +32,7 @@ class AwsApi
     }
 
     /**
-     * Add AWS Account
+     * Create AWS Account
      *
      * @param \BitmovinApiSdk\Models\AwsAccount $awsAccount
      * @return \BitmovinApiSdk\Models\AwsAccount
@@ -64,7 +64,7 @@ class AwsApi
     }
 
     /**
-     * AWS Account Details
+     * Get AWS Account details
      *
      * @param string $infrastructureId
      * @return \BitmovinApiSdk\Models\AwsAccount

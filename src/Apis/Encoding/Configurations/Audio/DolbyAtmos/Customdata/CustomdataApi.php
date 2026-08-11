@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Dolby Atmos Codec Configuration Custom Data
+     * Get Dolby Atmos Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

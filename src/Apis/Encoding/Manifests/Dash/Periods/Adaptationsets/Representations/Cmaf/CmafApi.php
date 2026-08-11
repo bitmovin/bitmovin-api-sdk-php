@@ -32,7 +32,7 @@ class CmafApi
     }
 
     /**
-     * Add CMAF Representation
+     * Create CMAF Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -79,7 +79,7 @@ class CmafApi
     }
 
     /**
-     * CMAF Representation Details
+     * Get CMAF Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -103,7 +103,7 @@ class CmafApi
     }
 
     /**
-     * List all CMAF Representations
+     * List CMAF Representations
      *
      * @param string $manifestId
      * @param string $periodId

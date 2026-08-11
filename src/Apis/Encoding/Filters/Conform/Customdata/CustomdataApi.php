@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Conform Filter Custom Data
+     * Get Conform Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

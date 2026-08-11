@@ -64,7 +64,7 @@ class SftpApi
     }
 
     /**
-     * SFTP Output Details
+     * Get SFTP Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\SftpOutput

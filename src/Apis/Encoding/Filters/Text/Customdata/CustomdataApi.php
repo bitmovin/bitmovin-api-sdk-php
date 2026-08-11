@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Text Filter Custom Data
+     * Get Text Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

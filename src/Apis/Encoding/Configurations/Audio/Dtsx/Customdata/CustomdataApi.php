@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * DTS:X Codec Configuration Custom Data
+     * Get DTS:X Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

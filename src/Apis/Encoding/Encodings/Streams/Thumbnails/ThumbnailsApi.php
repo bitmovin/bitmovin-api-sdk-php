@@ -32,7 +32,7 @@ class ThumbnailsApi
     }
 
     /**
-     * Add Thumbnail
+     * Create Thumbnail
      *
      * @param string $encodingId
      * @param string $streamId
@@ -75,7 +75,7 @@ class ThumbnailsApi
     }
 
     /**
-     * Thumbnail Details
+     * Get Thumbnail details
      *
      * @param string $encodingId
      * @param string $streamId

@@ -64,7 +64,7 @@ class ConformApi
     }
 
     /**
-     * Conform Filter Details
+     * Get Conform Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\ConformFilter

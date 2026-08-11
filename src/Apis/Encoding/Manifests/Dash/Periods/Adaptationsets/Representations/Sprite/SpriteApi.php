@@ -26,7 +26,7 @@ class SpriteApi
     }
 
     /**
-     * Add Sprite Representation
+     * Create Sprite Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -73,7 +73,7 @@ class SpriteApi
     }
 
     /**
-     * Sprite Representation Details
+     * Get Sprite Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -97,7 +97,7 @@ class SpriteApi
     }
 
     /**
-     * List all Sprite Representations
+     * List Sprite Representations
      *
      * @param string $manifestId
      * @param string $periodId

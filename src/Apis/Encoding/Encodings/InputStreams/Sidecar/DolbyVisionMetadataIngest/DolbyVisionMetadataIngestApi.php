@@ -26,7 +26,7 @@ class DolbyVisionMetadataIngestApi
     }
 
     /**
-     * Add Dolby Vision Metadata Ingest Input Stream
+     * Create Dolby Vision Metadata Ingest Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\DolbyVisionMetadataIngestInputStream $dolbyVisionMetadataIngestInputStream
@@ -65,7 +65,7 @@ class DolbyVisionMetadataIngestApi
     }
 
     /**
-     * Dolby Vision Metadata Ingest Input Stream Details
+     * Get Dolby Vision Metadata Ingest Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

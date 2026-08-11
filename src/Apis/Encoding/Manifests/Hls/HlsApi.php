@@ -79,7 +79,7 @@ class HlsApi
     }
 
     /**
-     * HLS Manifest Details
+     * Get HLS Manifest details
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\HlsManifest
@@ -97,7 +97,7 @@ class HlsApi
     }
 
     /**
-     * Manifest Start Details
+     * HLS Manifest Start Details
      *
      * @param string $manifestId
      * @return \BitmovinApiSdk\Models\StartManifestRequest

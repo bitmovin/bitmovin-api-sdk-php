@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Audio Mix Filter Custom Data
+     * Get Audio Mix Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

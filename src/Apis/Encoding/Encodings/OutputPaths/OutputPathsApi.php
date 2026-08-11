@@ -26,7 +26,7 @@ class OutputPathsApi
     }
 
     /**
-     * Encoding Output Paths Retrieval
+     * Get Encoding Output Paths
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\EncodingOutputPaths[]

@@ -64,7 +64,7 @@ class GcsApi
     }
 
     /**
-     * GCS Input Details
+     * Get GCS Input details
      *
      * @param string $inputId
      * @return \BitmovinApiSdk\Models\GcsInput

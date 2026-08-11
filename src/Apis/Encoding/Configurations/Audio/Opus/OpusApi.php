@@ -64,7 +64,7 @@ class OpusApi
     }
 
     /**
-     * Opus Codec Configuration Details
+     * Get Opus Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\OpusAudioConfiguration

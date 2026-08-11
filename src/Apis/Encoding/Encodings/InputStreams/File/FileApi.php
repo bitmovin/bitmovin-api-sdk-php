@@ -26,7 +26,7 @@ class FileApi
     }
 
     /**
-     * Add File input stream
+     * Create File input stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\FileInputStream $fileInputStream
@@ -45,7 +45,7 @@ class FileApi
     }
 
     /**
-     * Delete File stream
+     * Delete File Input Stream
      *
      * @param string $encodingId
      * @param string $inputStreamId
@@ -65,7 +65,7 @@ class FileApi
     }
 
     /**
-     * File input stream details
+     * Get File Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

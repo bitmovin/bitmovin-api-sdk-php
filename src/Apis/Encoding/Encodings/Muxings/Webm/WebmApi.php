@@ -37,7 +37,7 @@ class WebmApi
     }
 
     /**
-     * Add WebM muxing
+     * Create WebM muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\WebmMuxing $webmMuxing
@@ -76,7 +76,7 @@ class WebmApi
     }
 
     /**
-     * WebM muxing details
+     * Get WebM muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

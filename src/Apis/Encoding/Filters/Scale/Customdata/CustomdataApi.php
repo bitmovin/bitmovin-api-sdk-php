@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Scale Filter Custom Data
+     * Get Scale Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

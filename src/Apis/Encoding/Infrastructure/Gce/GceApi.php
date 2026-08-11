@@ -32,7 +32,7 @@ class GceApi
     }
 
     /**
-     * Add GCE Account
+     * Create GCE Account
      *
      * @param \BitmovinApiSdk\Models\GceAccount $gceAccount
      * @return \BitmovinApiSdk\Models\GceAccount
@@ -64,7 +64,7 @@ class GceApi
     }
 
     /**
-     * GCE Account Details
+     * Get GCE Account details
      *
      * @param string $infrastructureId
      * @return \BitmovinApiSdk\Models\GceAccount

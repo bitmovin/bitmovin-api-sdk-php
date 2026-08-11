@@ -32,7 +32,7 @@ class PrimetimeApi
     }
 
     /**
-     * Add PrimeTime DRM to an fMP4 muxing
+     * Create PrimeTime DRM to an fMP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class PrimetimeApi
     }
 
     /**
-     * PrimeTime DRM Details of an fMP4 muxing
+     * Get PrimeTime DRM from an fMP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

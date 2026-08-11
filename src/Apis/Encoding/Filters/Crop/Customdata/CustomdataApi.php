@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Crop Filter Custom Data
+     * Get Crop Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

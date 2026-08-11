@@ -26,7 +26,7 @@ class ClosedCaptionsApi
     }
 
     /**
-     * Add Closed Captions Media
+     * Create Closed Captions Media
      *
      * @param string $manifestId
      * @param \BitmovinApiSdk\Models\ClosedCaptionsMediaInfo $closedCaptionsMediaInfo
@@ -65,7 +65,7 @@ class ClosedCaptionsApi
     }
 
     /**
-     * Closed Captions Media Details
+     * Get Closed Captions Media details
      *
      * @param string $manifestId
      * @param string $mediaId
@@ -85,7 +85,7 @@ class ClosedCaptionsApi
     }
 
     /**
-     * List all Closed Captions Media
+     * List Closed Captions Media
      *
      * @param string $manifestId
      * @param ClosedCaptionsMediaInfoListQueryParams|null $queryParams

@@ -26,7 +26,7 @@ class Scte35TriggersApi
     }
 
     /**
-     * Create SCTE 35 trigger
+     * Create SCTE 35 Trigger
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Scte35Trigger $scte35Trigger
@@ -85,7 +85,7 @@ class Scte35TriggersApi
     }
 
     /**
-     * List all SCTE 35 triggers for an encoding
+     * List SCTE 35 Triggers
      *
      * @param string $encodingId
      * @param Scte35TriggerListQueryParams|null $queryParams

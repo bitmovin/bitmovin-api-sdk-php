@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to an MP4 muxing
+     * Create SPEKE DRM key provider to an MP4 muxing
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of an MP4 muxing
+     * Get SPEKE DRM from an MP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

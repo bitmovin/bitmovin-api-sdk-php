@@ -42,7 +42,7 @@ class Fmp4Api
     }
 
     /**
-     * Add fMP4 muxing
+     * Create fMP4 muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\Fmp4Muxing $fmp4Muxing
@@ -81,7 +81,7 @@ class Fmp4Api
     }
 
     /**
-     * fMP4 muxing details
+     * Get fMP4 muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

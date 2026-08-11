@@ -64,7 +64,7 @@ class AkamaiNetstorageApi
     }
 
     /**
-     * Akamai NetStorage Output Details
+     * Get Akamai NetStorage Output details
      *
      * @param string $outputId
      * @return \BitmovinApiSdk\Models\AkamaiNetStorageOutput

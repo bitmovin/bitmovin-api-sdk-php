@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * MJPEG Codec Configuration Custom Data
+     * Get MJPEG Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

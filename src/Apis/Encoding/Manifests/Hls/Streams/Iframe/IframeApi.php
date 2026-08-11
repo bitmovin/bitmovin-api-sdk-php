@@ -26,7 +26,7 @@ class IframeApi
     }
 
     /**
-     * Add I-frame playlist to variant stream
+     * Create I-frame playlist to variant stream
      *
      * @param string $manifestId
      * @param string $streamId
@@ -69,7 +69,7 @@ class IframeApi
     }
 
     /**
-     * I-frame playlist Details
+     * Get I-frame playlist details
      *
      * @param string $manifestId
      * @param string $streamId
@@ -91,7 +91,7 @@ class IframeApi
     }
 
     /**
-     * List all I-frame playlists of a variant stream
+     * List I-frame playlists of a variant stream
      *
      * @param string $manifestId
      * @param string $streamId

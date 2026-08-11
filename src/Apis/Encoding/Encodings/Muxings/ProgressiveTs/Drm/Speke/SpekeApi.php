@@ -32,7 +32,7 @@ class SpekeApi
     }
 
     /**
-     * Add SPEKE DRM key provider to Progressive TS
+     * Create SPEKE DRM key provider to Progressive TS
      *
      * @param string $encodingId
      * @param string $muxingId
@@ -75,7 +75,7 @@ class SpekeApi
     }
 
     /**
-     * SPEKE DRM Details of a Progressive TS muxing
+     * Get SPEKE DRM from a Progressive TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

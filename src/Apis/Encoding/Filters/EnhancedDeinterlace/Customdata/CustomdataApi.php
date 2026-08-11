@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Enhanced Deinterlace Filter Custom Data
+     * Get Enhanced Deinterlace Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

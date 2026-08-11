@@ -32,7 +32,7 @@ class NexguardFileMarkerApi
     }
 
     /**
-     * Add a nexguard file marker watermarking configurations
+     * Create a nexguard file marker watermarking configurations
      *
      * @param string $encodingId
      * @param string $streamId
@@ -53,7 +53,7 @@ class NexguardFileMarkerApi
     }
 
     /**
-     * Delete nexguard file marker watermarking configurations
+     * Delete Nexguard file marker watermarking configurations
      *
      * @param string $encodingId
      * @param string $streamId
@@ -75,7 +75,7 @@ class NexguardFileMarkerApi
     }
 
     /**
-     * Nexguard file marker watermarking configurations details
+     * Get Nexguard file marker watermarking configurations details
      *
      * @param string $encodingId
      * @param string $streamId

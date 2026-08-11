@@ -26,7 +26,7 @@ class FiltersApi
     }
 
     /**
-     * Add Filters to Stream
+     * Create Filters to Stream
      *
      * @param string $encodingId
      * @param string $streamId
@@ -89,7 +89,7 @@ class FiltersApi
     }
 
     /**
-     * List the filters of a stream
+     * List Filters of a Stream
      *
      * @param string $encodingId
      * @param string $streamId

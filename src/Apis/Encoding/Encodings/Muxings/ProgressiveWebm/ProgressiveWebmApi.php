@@ -42,7 +42,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * Add Progressive WebM muxing
+     * Create Progressive WebM muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\ProgressiveWebmMuxing $progressiveWebmMuxing
@@ -81,7 +81,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * Progressive WebM muxing details
+     * Get Progressive WebM muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

@@ -64,7 +64,7 @@ class DtsApi
     }
 
     /**
-     * DTS Codec Configuration Details
+     * Get DTS Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\DtsAudioConfiguration

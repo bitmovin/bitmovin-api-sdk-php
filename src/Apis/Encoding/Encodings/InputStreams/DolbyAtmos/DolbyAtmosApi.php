@@ -26,7 +26,7 @@ class DolbyAtmosApi
     }
 
     /**
-     * Add Dolby Atmos input stream
+     * Create Dolby Atmos input stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\DolbyAtmosIngestInputStream $dolbyAtmosIngestInputStream
@@ -65,7 +65,7 @@ class DolbyAtmosApi
     }
 
     /**
-     * Dolby Atmos input stream details
+     * Get Dolby Atmos input stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId

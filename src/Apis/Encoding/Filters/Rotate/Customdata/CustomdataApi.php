@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * Rotate Filter Custom Data
+     * Get Rotate Filter Custom Data
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\CustomData

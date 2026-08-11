@@ -26,7 +26,7 @@ class EncodingStatusChangedApi
     }
 
     /**
-     * Add Encoding Changed Webhook Notification (All Encodings)
+     * Create &#39;Encoding Status Changed&#39; Webhook
      *
      * @param \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditionsRequest $webhookNotificationWithStreamConditionsRequest
      * @return \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditions
@@ -40,7 +40,7 @@ class EncodingStatusChangedApi
     }
 
     /**
-     * Add Encoding Changed Webhook Notification (Specific Encoding)
+     * Create &#39;Encoding Status Changed&#39; Webhook for a specific Encoding
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditionsRequest $webhookNotificationWithStreamConditionsRequest
@@ -59,7 +59,7 @@ class EncodingStatusChangedApi
     }
 
     /**
-     * Delete Encoding Status Changed Webhook
+     * Delete &#39;Encoding Status Changed&#39; Webhook
      *
      * @param string $notificationId
      * @return \BitmovinApiSdk\Models\BitmovinResponse
@@ -77,7 +77,7 @@ class EncodingStatusChangedApi
     }
 
     /**
-     * Replace Encoding Status Changed Webhook Notification
+     * Update &#39;Encoding Status Changed&#39; Webhook
      *
      * @param string $notificationId
      * @param \BitmovinApiSdk\Models\WebhookNotificationWithStreamConditionsRequest $webhookNotificationWithStreamConditionsRequest

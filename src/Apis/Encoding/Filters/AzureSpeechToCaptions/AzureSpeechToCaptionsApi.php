@@ -64,7 +64,7 @@ class AzureSpeechToCaptionsApi
     }
 
     /**
-     * Azure Speech to captions Filter details
+     * Get Azure Speech to captions Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\AzureSpeechToCaptionsFilter

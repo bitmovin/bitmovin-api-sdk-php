@@ -26,7 +26,7 @@ class HdApi
     }
 
     /**
-     * Live Encoding Start Details
+     * Get Live Encoding Channel Start Details
      *
      * @param string $encodingId
      * @return \BitmovinApiSdk\Models\StartLiveChannelEncodingRequest

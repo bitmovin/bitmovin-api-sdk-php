@@ -26,7 +26,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * Add Progressive WebM Representation
+     * Create Progressive WebM Representation
      *
      * @param string $manifestId
      * @param string $periodId
@@ -73,7 +73,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * Progressive WebM Representation Details
+     * Get Progressive WebM Representation details
      *
      * @param string $manifestId
      * @param string $periodId
@@ -97,7 +97,7 @@ class ProgressiveWebmApi
     }
 
     /**
-     * List all Progressive WebM Representations
+     * List Progressive WebM Representations
      *
      * @param string $manifestId
      * @param string $periodId

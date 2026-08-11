@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * AES encryption Custom Data of a Packed Audio muxing
+     * Get AES encryption configuration from a Packed Audio muxing Custom Data
      *
      * @param string $encodingId
      * @param string $muxingId

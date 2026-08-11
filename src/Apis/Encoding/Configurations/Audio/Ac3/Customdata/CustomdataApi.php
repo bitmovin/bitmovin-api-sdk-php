@@ -26,7 +26,7 @@ class CustomdataApi
     }
 
     /**
-     * AC3 Codec Configuration Custom Data.
+     * Get AC3 Codec Configuration Custom Data
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\CustomData

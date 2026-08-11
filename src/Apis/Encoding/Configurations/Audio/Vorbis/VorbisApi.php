@@ -64,7 +64,7 @@ class VorbisApi
     }
 
     /**
-     * Vorbis Codec Configuration Details
+     * Get Vorbis Codec Configuration details
      *
      * @param string $configurationId
      * @return \BitmovinApiSdk\Models\VorbisAudioConfiguration

@@ -64,7 +64,7 @@ class WatermarkApi
     }
 
     /**
-     * Watermark Filter Details
+     * Get Watermark Filter details
      *
      * @param string $filterId
      * @return \BitmovinApiSdk\Models\WatermarkFilter

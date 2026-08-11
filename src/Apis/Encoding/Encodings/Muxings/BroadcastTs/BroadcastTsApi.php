@@ -37,7 +37,7 @@ class BroadcastTsApi
     }
 
     /**
-     * Add Broadcast TS muxing
+     * Create Broadcast TS muxing
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\BroadcastTsMuxing $broadcastTsMuxing
@@ -76,7 +76,7 @@ class BroadcastTsApi
     }
 
     /**
-     * Broadcast TS muxing details
+     * Get Broadcast TS muxing details
      *
      * @param string $encodingId
      * @param string $muxingId

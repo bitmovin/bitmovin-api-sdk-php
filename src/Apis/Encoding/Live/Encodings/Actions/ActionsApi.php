@@ -26,7 +26,7 @@ class ActionsApi
     }
 
     /**
-     * Update the ingest points of a Redundant RTMP Input
+     * Update Ingest Points of a Redundant RTMP Input
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\UpdateEncodingRtmpIngestPointRequest $updateEncodingRtmpIngestPointRequest

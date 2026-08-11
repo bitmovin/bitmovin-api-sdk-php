@@ -26,7 +26,7 @@ class TimeBasedApi
     }
 
     /**
-     * Add Time-Based Trimming Input Stream
+     * Create Time-Based Trimming Input Stream
      *
      * @param string $encodingId
      * @param \BitmovinApiSdk\Models\TimeBasedTrimmingInputStream $timeBasedTrimmingInputStream
@@ -65,7 +65,7 @@ class TimeBasedApi
     }
 
     /**
-     * Time-Based Trimming Input Stream Details
+     * Get Time-Based Trimming Input Stream details
      *
      * @param string $encodingId
      * @param string $inputStreamId
