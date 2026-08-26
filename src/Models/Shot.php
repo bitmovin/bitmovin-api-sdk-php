@@ -22,10 +22,14 @@ class Shot extends \BitmovinApiSdk\Common\ApiResource
     /** @var \BitmovinApiSdk\Models\MainSubject[] */
     public $mainSubjects;
 
+    /** @var ShotAdvisories */
+    public $shotAdvisories;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->mainSubjects = ObjectMapper::map($this->mainSubjects, MainSubject::class);
+        $this->shotAdvisories = ObjectMapper::map($this->shotAdvisories, ShotAdvisories::class);
     }
 
     /**
@@ -89,6 +93,19 @@ class Shot extends \BitmovinApiSdk\Common\ApiResource
     public function mainSubjects(array $mainSubjects)
     {
         $this->mainSubjects = $mainSubjects;
+
+        return $this;
+    }
+
+    /**
+     * Content advisory detection results for this shot, such as tobacco or vaping imagery
+     *
+     * @param ShotAdvisories $shotAdvisories
+     * @return $this
+     */
+    public function shotAdvisories(ShotAdvisories $shotAdvisories)
+    {
+        $this->shotAdvisories = $shotAdvisories;
 
         return $this;
     }

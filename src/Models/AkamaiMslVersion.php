@@ -7,6 +7,9 @@ class AkamaiMslVersion extends \BitmovinApiSdk\Common\Enum
     /** @var string */
     private const MSL4 = 'MSL4';
 
+    /** @var string */
+    private const MSL5 = 'MSL5';
+
     /**
      * @param string $value
      * @return AkamaiMslVersion
@@ -24,6 +27,16 @@ class AkamaiMslVersion extends \BitmovinApiSdk\Common\Enum
     public static function MSL4()
     {
         return new AkamaiMslVersion(self::MSL4);
+    }
+
+    /**
+     * MSL5
+     *
+     * @return AkamaiMslVersion
+     */
+    public static function MSL5()
+    {
+        return new AkamaiMslVersion(self::MSL5);
     }
 }
 

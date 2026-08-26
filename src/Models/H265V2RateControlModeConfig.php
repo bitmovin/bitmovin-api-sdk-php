@@ -13,7 +13,6 @@ class H265V2RateControlModeConfig extends \BitmovinApiSdk\Common\ApiResource
     public static $discriminatorName = "type";
     public static $discriminatorMapping = [
         "PERCEPTUAL_QUALITY_MODE" => H265V2PerceptualQualityModeConfig::class,
-        "CONSTANT_BITRATE_MODE" => H265V2ConstantBitrateModeConfig::class,
     ];
 
     public function __construct($attributes = null)

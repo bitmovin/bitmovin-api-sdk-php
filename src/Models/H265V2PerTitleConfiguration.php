@@ -13,9 +13,6 @@ class H265V2PerTitleConfiguration extends PerTitleConfiguration
     /** @var float */
     public $codecMaxBitrateFactor;
 
-    /** @var float */
-    public $codecBufsizeFactor;
-
     /** @var int */
     public $targetQualityQp;
 
@@ -46,19 +43,6 @@ class H265V2PerTitleConfiguration extends PerTitleConfiguration
     public function codecMaxBitrateFactor(float $codecMaxBitrateFactor)
     {
         $this->codecMaxBitrateFactor = $codecMaxBitrateFactor;
-
-        return $this;
-    }
-
-    /**
-     * This factor is used to calculate the bufsize of the codec configuration for the generated representations as a multiple of the targetBitrate
-     *
-     * @param float $codecBufsizeFactor
-     * @return $this
-     */
-    public function codecBufsizeFactor(float $codecBufsizeFactor)
-    {
-        $this->codecBufsizeFactor = $codecBufsizeFactor;
 
         return $this;
     }

@@ -31,10 +31,14 @@ class SceneAnalysisListItem extends \BitmovinApiSdk\Common\ApiResource
     /** @var string[] */
     public $outputLanguageCodes;
 
+    /** @var SceneAnalysisMatchingSegment */
+    public $matchingSegment;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->createdAt = ObjectMapper::map($this->createdAt, Carbon::class);
+        $this->matchingSegment = ObjectMapper::map($this->matchingSegment, SceneAnalysisMatchingSegment::class);
     }
 
     /**
@@ -137,6 +141,19 @@ class SceneAnalysisListItem extends \BitmovinApiSdk\Common\ApiResource
     public function outputLanguageCodes(array $outputLanguageCodes)
     {
         $this->outputLanguageCodes = $outputLanguageCodes;
+
+        return $this;
+    }
+
+    /**
+     * The scene segment that best matches searchText. Present only for semantic-search requests with a non-blank searchText; omitted from ordinary list results.
+     *
+     * @param SceneAnalysisMatchingSegment $matchingSegment
+     * @return $this
+     */
+    public function matchingSegment(SceneAnalysisMatchingSegment $matchingSegment)
+    {
+        $this->matchingSegment = $matchingSegment;
 
         return $this;
     }

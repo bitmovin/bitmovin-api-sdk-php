@@ -19,11 +19,15 @@ class AkamaiMslOutput extends Output
     /** @var AkamaiMslVersion */
     public $mslVersion;
 
+    /** @var MslPublishingAuthentication */
+    public $publishingAuthentication;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->streamFormat = ObjectMapper::map($this->streamFormat, AkamaiMslStreamFormat::class);
         $this->mslVersion = ObjectMapper::map($this->mslVersion, AkamaiMslVersion::class);
+        $this->publishingAuthentication = ObjectMapper::map($this->publishingAuthentication, MslPublishingAuthentication::class);
     }
 
     /**
@@ -66,7 +70,7 @@ class AkamaiMslOutput extends Output
     }
 
     /**
-     * The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
+     * The Akamai MSL Version. MSL4 and MSL5 are supported. (required)
      *
      * @param AkamaiMslVersion $mslVersion
      * @return $this
@@ -74,6 +78,19 @@ class AkamaiMslOutput extends Output
     public function mslVersion(AkamaiMslVersion $mslVersion)
     {
         $this->mslVersion = $mslVersion;
+
+        return $this;
+    }
+
+    /**
+     * MSL5 only. HTTP Digest publishing credentials. Sending this field with &#x60;mslVersion: MSL4&#x60; is rejected. Credentials (username, password) are write-only and not returned in responses.
+     *
+     * @param MslPublishingAuthentication $publishingAuthentication
+     * @return $this
+     */
+    public function publishingAuthentication(MslPublishingAuthentication $publishingAuthentication)
+    {
+        $this->publishingAuthentication = $publishingAuthentication;
 
         return $this;
     }

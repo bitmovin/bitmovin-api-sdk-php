@@ -16,12 +16,16 @@ class AiSceneAnalysisFeatures extends \BitmovinApiSdk\Common\ApiResource
     /** @var AiSceneAnalysisOutputLanguageCodes */
     public $outputLanguageCodes;
 
+    /** @var AiSceneAnalysisRegulatoryAdvisories */
+    public $regulatoryAdvisories;
+
     public function __construct($attributes = null)
     {
         parent::__construct($attributes);
         $this->assetDescription = ObjectMapper::map($this->assetDescription, AiSceneAnalysisAssetDescription::class);
         $this->automaticAdPlacement = ObjectMapper::map($this->automaticAdPlacement, AiSceneAnalysisAutomaticAdPlacement::class);
         $this->outputLanguageCodes = ObjectMapper::map($this->outputLanguageCodes, AiSceneAnalysisOutputLanguageCodes::class);
+        $this->regulatoryAdvisories = ObjectMapper::map($this->regulatoryAdvisories, AiSceneAnalysisRegulatoryAdvisories::class);
     }
 
     /**
@@ -59,6 +63,19 @@ class AiSceneAnalysisFeatures extends \BitmovinApiSdk\Common\ApiResource
     public function outputLanguageCodes(AiSceneAnalysisOutputLanguageCodes $outputLanguageCodes)
     {
         $this->outputLanguageCodes = $outputLanguageCodes;
+
+        return $this;
+    }
+
+    /**
+     * AI scene analysis will screen the asset for content requiring a statutory on-screen advisory and report the findings per shot in the asset description. Requires assetDescription. Contact support to enable this feature for your organization.
+     *
+     * @param AiSceneAnalysisRegulatoryAdvisories $regulatoryAdvisories
+     * @return $this
+     */
+    public function regulatoryAdvisories(AiSceneAnalysisRegulatoryAdvisories $regulatoryAdvisories)
+    {
+        $this->regulatoryAdvisories = $regulatoryAdvisories;
 
         return $this;
     }
