@@ -25,6 +25,9 @@ class AdAnalyticsQueryRequest extends AnalyticsQueryTimeframe
     /** @var \BitmovinApiSdk\Models\AdAnalyticsAttribute[] */
     public $groupBy;
 
+    /** @var bool */
+    public $includeContext;
+
     /** @var int */
     public $limit;
 
@@ -115,6 +118,19 @@ class AdAnalyticsQueryRequest extends AnalyticsQueryTimeframe
     public function groupBy(array $groupBy)
     {
         $this->groupBy = $groupBy;
+
+        return $this;
+    }
+
+    /**
+     * Whether context data should be included in the response
+     *
+     * @param bool $includeContext
+     * @return $this
+     */
+    public function includeContext(bool $includeContext)
+    {
+        $this->includeContext = $includeContext;
 
         return $this;
     }
