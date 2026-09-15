@@ -5,6 +5,9 @@ namespace BitmovinApiSdk\Models;
 class AkamaiCloudRegion extends \BitmovinApiSdk\Common\Enum
 {
     /** @var string */
+    private const AU_MEL = 'AU_MEL';
+
+    /** @var string */
     private const BR_GRU = 'BR_GRU';
 
     /** @var string */
@@ -50,6 +53,16 @@ class AkamaiCloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function create(string $value)
     {
         return new static($value);
+    }
+
+    /**
+     * Melbourne, Australia
+     *
+     * @return AkamaiCloudRegion
+     */
+    public static function AU_MEL()
+    {
+        return new AkamaiCloudRegion(self::AU_MEL);
     }
 
     /**

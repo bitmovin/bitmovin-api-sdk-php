@@ -182,6 +182,9 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     private const AZURE_UK_SOUTH = 'AZURE_UK_SOUTH';
 
     /** @var string */
+    private const AKAMAI_AU_MEL = 'AKAMAI_AU_MEL';
+
+    /** @var string */
     private const AKAMAI_BR_GRU = 'AKAMAI_BR_GRU';
 
     /** @var string */
@@ -853,6 +856,16 @@ class CloudRegion extends \BitmovinApiSdk\Common\Enum
     public static function AZURE_UK_SOUTH()
     {
         return new CloudRegion(self::AZURE_UK_SOUTH);
+    }
+
+    /**
+     * Akamai Melbourne, Australia
+     *
+     * @return CloudRegion
+     */
+    public static function AKAMAI_AU_MEL()
+    {
+        return new CloudRegion(self::AKAMAI_AU_MEL);
     }
 
     /**

@@ -11,6 +11,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 use BitmovinApiSdk\Apis\Player\Channels\ChannelsApi;
 use BitmovinApiSdk\Apis\Player\Licenses\LicensesApi;
 use BitmovinApiSdk\Apis\Player\CustomBuilds\CustomBuildsApi;
+use BitmovinApiSdk\Apis\Player\Testing\TestingApi;
 
 class PlayerApi
 {
@@ -26,6 +27,9 @@ class PlayerApi
     /** @var CustomBuildsApi */
     public $customBuilds;
 
+    /** @var TestingApi */
+    public $testing;
+
     /**
      * PlayerApi constructor.
      *
@@ -39,5 +43,6 @@ class PlayerApi
         $this->channels = new ChannelsApi(null, $this->httpWrapper);
         $this->licenses = new LicensesApi(null, $this->httpWrapper);
         $this->customBuilds = new CustomBuildsApi(null, $this->httpWrapper);
+        $this->testing = new TestingApi(null, $this->httpWrapper);
     }
 }

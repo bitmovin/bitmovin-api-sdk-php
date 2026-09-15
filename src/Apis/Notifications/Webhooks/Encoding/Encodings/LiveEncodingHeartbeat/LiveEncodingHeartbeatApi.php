@@ -8,10 +8,15 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
+use BitmovinApiSdk\Apis\Notifications\Webhooks\Encoding\Encodings\LiveEncodingHeartbeat\Customdata\CustomdataApi;
+
 class LiveEncodingHeartbeatApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
+
+    /** @var CustomdataApi */
+    public $customdata;
 
     /**
      * LiveEncodingHeartbeatApi constructor.
@@ -23,6 +28,7 @@ class LiveEncodingHeartbeatApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
+        $this->customdata = new CustomdataApi(null, $this->httpWrapper);
     }
 
     /**
@@ -37,6 +43,45 @@ class LiveEncodingHeartbeatApi
         $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/encodings/live-encoding-heartbeat', [],  null, $liveEncodingHeartbeatWebhook, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook::class);
+    }
+
+    /**
+     * Create &#39;Live Encoding Heartbeat&#39; Webhook for a specific Encoding
+     *
+     * @param string $encodingId
+     * @param \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook $liveEncodingHeartbeatWebhook
+     * @return \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook
+     * @throws BitmovinApiException
+     */
+    public function createByEncodingId(string $encodingId, \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook $liveEncodingHeartbeatWebhook) : \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+        ];
+
+        $response = $this->httpWrapper->request('POST', '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat', $pathParams,  null, $liveEncodingHeartbeatWebhook, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook::class);
+    }
+
+    /**
+     * Delete &#39;Live Encoding Heartbeat&#39; Webhook for a specific Encoding
+     *
+     * @param string $encodingId
+     * @param string $webhookId
+     * @return \BitmovinApiSdk\Models\BitmovinResponse
+     * @throws BitmovinApiException
+     */
+    public function deleteByEncodingIdAndWebhookId(string $encodingId, string $webhookId) : \BitmovinApiSdk\Models\BitmovinResponse
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+            'webhook_id' => $webhookId,
+        ];
+
+        $response = $this->httpWrapper->request('DELETE', '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat/{webhook_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
     }
 
     /**
@@ -55,6 +100,26 @@ class LiveEncodingHeartbeatApi
         $response = $this->httpWrapper->request('DELETE', '/notifications/webhooks/encoding/encodings/live-encoding-heartbeat/{webhook_id}', $pathParams,  null, null, true);
 
         return ObjectMapper::map($response, \BitmovinApiSdk\Models\BitmovinResponse::class);
+    }
+
+    /**
+     * Get &#39;Live Encoding Heartbeat&#39; Webhook details for a specific Encoding
+     *
+     * @param string $encodingId
+     * @param string $webhookId
+     * @return \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook
+     * @throws BitmovinApiException
+     */
+    public function getByEncodingIdAndWebhookId(string $encodingId, string $webhookId) : \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+            'webhook_id' => $webhookId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat/{webhook_id}', $pathParams,  null, null, true);
+
+        return ObjectMapper::map($response, \BitmovinApiSdk\Models\LiveEncodingHeartbeatWebhook::class);
     }
 
     /**
@@ -85,6 +150,25 @@ class LiveEncodingHeartbeatApi
     public function list(LiveEncodingHeartbeatWebhookListQueryParams $queryParams = null) : LiveEncodingHeartbeatWebhookPaginationResponse
     {
         $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/live-encoding-heartbeat', [], $queryParams, null, true);
+
+        return ObjectMapper::map($response, LiveEncodingHeartbeatWebhookPaginationResponse::class);
+    }
+
+    /**
+     * List &#39;Live Encoding Heartbeat&#39; Webhooks for a specific Encoding
+     *
+     * @param string $encodingId
+     * @param LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams|null $queryParams
+     * @return LiveEncodingHeartbeatWebhookPaginationResponse
+     * @throws BitmovinApiException
+     */
+    public function listByEncodingId(string $encodingId, LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams $queryParams = null) : LiveEncodingHeartbeatWebhookPaginationResponse
+    {
+        $pathParams = [
+            'encoding_id' => $encodingId,
+        ];
+
+        $response = $this->httpWrapper->request('GET', '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat', $pathParams, $queryParams, null, true);
 
         return ObjectMapper::map($response, LiveEncodingHeartbeatWebhookPaginationResponse::class);
     }
