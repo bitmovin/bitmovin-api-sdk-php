@@ -1,6 +1,6 @@
 <?php
 
-namespace BitmovinApiSdk\Apis\AiSceneAnalysis;
+namespace BitmovinApiSdk\Apis\AiSceneAnalysis\LiveAnalyses\Results;
 
 use Carbon\Carbon;
 use BitmovinApiSdk\Configuration;
@@ -8,22 +8,18 @@ use BitmovinApiSdk\Common\HttpWrapper;
 use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
-use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\AnalysesApi;
-use BitmovinApiSdk\Apis\AiSceneAnalysis\LiveAnalyses\LiveAnalysesApi;
+use BitmovinApiSdk\Apis\AiSceneAnalysis\LiveAnalyses\Results\Latest\LatestApi;
 
-class AiSceneAnalysisApi
+class ResultsApi
 {
     /** @var HttpWrapper */
     private $httpWrapper;
 
-    /** @var AnalysesApi */
-    public $analyses;
-
-    /** @var LiveAnalysesApi */
-    public $liveAnalyses;
+    /** @var LatestApi */
+    public $latest;
 
     /**
-     * AiSceneAnalysisApi constructor.
+     * ResultsApi constructor.
      *
      * @param Configuration $config
      * @param HttpWrapper $httpWrapper
@@ -32,7 +28,6 @@ class AiSceneAnalysisApi
     {
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
-        $this->analyses = new AnalysesApi(null, $this->httpWrapper);
-        $this->liveAnalyses = new LiveAnalysesApi(null, $this->httpWrapper);
+        $this->latest = new LatestApi(null, $this->httpWrapper);
     }
 }
