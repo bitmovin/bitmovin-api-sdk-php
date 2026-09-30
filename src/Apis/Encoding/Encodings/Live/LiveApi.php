@@ -10,6 +10,7 @@ use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Esam\EsamApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\ResetLiveManifestTimeshift\ResetLiveManifestTimeshiftApi;
+use BitmovinApiSdk\Apis\Encoding\Encodings\Live\UpdateAutoshutdownConfig\UpdateAutoshutdownConfigApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Heartbeat\HeartbeatApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\HeartbeatFinal\HeartbeatFinalApi;
 use BitmovinApiSdk\Apis\Encoding\Encodings\Live\Hd\HdApi;
@@ -26,6 +27,9 @@ class LiveApi
 
     /** @var ResetLiveManifestTimeshiftApi */
     public $resetLiveManifestTimeshift;
+
+    /** @var UpdateAutoshutdownConfigApi */
+    public $updateAutoshutdownConfig;
 
     /** @var HeartbeatApi */
     public $heartbeat;
@@ -54,6 +58,7 @@ class LiveApi
 
         $this->esam = new EsamApi(null, $this->httpWrapper);
         $this->resetLiveManifestTimeshift = new ResetLiveManifestTimeshiftApi(null, $this->httpWrapper);
+        $this->updateAutoshutdownConfig = new UpdateAutoshutdownConfigApi(null, $this->httpWrapper);
         $this->heartbeat = new HeartbeatApi(null, $this->httpWrapper);
         $this->heartbeatFinal = new HeartbeatFinalApi(null, $this->httpWrapper);
         $this->hd = new HdApi(null, $this->httpWrapper);

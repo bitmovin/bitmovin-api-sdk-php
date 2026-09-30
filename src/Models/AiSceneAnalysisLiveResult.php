@@ -19,6 +19,9 @@ class AiSceneAnalysisLiveResult extends \BitmovinApiSdk\Common\ApiResource
     /** @var Carbon */
     public $producedAt;
 
+    /** @var int */
+    public $mediaTimeOriginUnixMs;
+
     /** @var bool */
     public $isFinal;
 
@@ -94,6 +97,19 @@ class AiSceneAnalysisLiveResult extends \BitmovinApiSdk\Common\ApiResource
     public function producedAt(Carbon $producedAt)
     {
         $this->producedAt = $producedAt;
+
+        return $this;
+    }
+
+    /**
+     * UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
+     *
+     * @param int $mediaTimeOriginUnixMs
+     * @return $this
+     */
+    public function mediaTimeOriginUnixMs(int $mediaTimeOriginUnixMs)
+    {
+        $this->mediaTimeOriginUnixMs = $mediaTimeOriginUnixMs;
 
         return $this;
     }

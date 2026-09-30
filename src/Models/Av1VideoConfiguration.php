@@ -13,6 +13,12 @@ class Av1VideoConfiguration extends VideoConfiguration
     /** @var AutoLevelSetup */
     public $autoLevelSetup;
 
+    /** @var LevelAv1 */
+    public $maxLevel;
+
+    /** @var Av1DynamicRangeFormat */
+    public $dynamicRangeFormat;
+
     /** @var string */
     public $masterDisplay;
 
@@ -27,6 +33,8 @@ class Av1VideoConfiguration extends VideoConfiguration
         parent::__construct($attributes);
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, Av1PresetConfiguration::class);
         $this->autoLevelSetup = ObjectMapper::map($this->autoLevelSetup, AutoLevelSetup::class);
+        $this->maxLevel = ObjectMapper::map($this->maxLevel, LevelAv1::class);
+        $this->dynamicRangeFormat = ObjectMapper::map($this->dynamicRangeFormat, Av1DynamicRangeFormat::class);
     }
 
     /**
@@ -51,6 +59,32 @@ class Av1VideoConfiguration extends VideoConfiguration
     public function autoLevelSetup(AutoLevelSetup $autoLevelSetup)
     {
         $this->autoLevelSetup = $autoLevelSetup;
+
+        return $this;
+    }
+
+    /**
+     * Upper bound for the automatically calculated level. The level determined by autoLevelSetup is clamped to this value, so the encoder never signals a level higher than the one given here. If the target bitrate does not fit within this level, the encoder constrains the bitrate distribution to stay conformant rather than raising the level. Has no effect when autoLevelSetup is disabled.
+     *
+     * @param LevelAv1 $maxLevel
+     * @return $this
+     */
+    public function maxLevel(LevelAv1 $maxLevel)
+    {
+        $this->maxLevel = $maxLevel;
+
+        return $this;
+    }
+
+    /**
+     * Configures what kind of dynamic range the output should conform to.
+     *
+     * @param Av1DynamicRangeFormat $dynamicRangeFormat
+     * @return $this
+     */
+    public function dynamicRangeFormat(Av1DynamicRangeFormat $dynamicRangeFormat)
+    {
+        $this->dynamicRangeFormat = $dynamicRangeFormat;
 
         return $this;
     }
