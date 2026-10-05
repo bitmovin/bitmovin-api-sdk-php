@@ -20,7 +20,7 @@ class Cea608ChannelType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Subtitle channel track
+     * Primary caption channel of field 1, the channel that carries the main captions in almost every stream
      *
      * @return Cea608ChannelType
      */
@@ -30,7 +30,7 @@ class Cea608ChannelType extends \BitmovinApiSdk\Common\Enum
     }
 
     /**
-     * Subtitle channel track
+     * Primary caption channel of field 2, typically used for a secondary language
      *
      * @return Cea608ChannelType
      */

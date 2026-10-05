@@ -449,6 +449,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const STARTUPTIME = 'STARTUPTIME';
 
     /** @var string */
+    private const START_FAILURE_PERCENTAGE = 'START_FAILURE_PERCENTAGE';
+
+    /** @var string */
     private const STREAM_FORMAT = 'STREAM_FORMAT';
 
     /** @var string */
@@ -2001,6 +2004,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function STARTUPTIME()
     {
         return new AnalyticsAttribute(self::STARTUPTIME);
+    }
+
+    /**
+     * START_FAILURE_PERCENTAGE
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function START_FAILURE_PERCENTAGE()
+    {
+        return new AnalyticsAttribute(self::START_FAILURE_PERCENTAGE);
     }
 
     /**

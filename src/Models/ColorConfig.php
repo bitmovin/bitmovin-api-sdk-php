@@ -142,7 +142,7 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The color space to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+     * The color space to be applied.
      *
      * @param ColorSpace $colorSpace
      * @return $this
@@ -155,7 +155,7 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The color primaries to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+     * The color primaries to be applied.
      *
      * @param ColorPrimaries $colorPrimaries
      * @return $this
@@ -168,7 +168,7 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The color range to be applied. If used on a Dolby Vision stream, this value must be set to JPEG.
+     * The color range to be applied.
      *
      * @param ColorRange $colorRange
      * @return $this
@@ -181,7 +181,7 @@ class ColorConfig extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * The color transfer to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+     * The color transfer to be applied.
      *
      * @param ColorTransfer $colorTransfer
      * @return $this
