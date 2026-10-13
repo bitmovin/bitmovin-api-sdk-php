@@ -16,6 +16,9 @@ class AiSceneAnalysisLiveCreateRequest extends \BitmovinApiSdk\Common\ApiResourc
     /** @var CloudRegion */
     public $cloudRegion;
 
+    /** @var string */
+    public $encoderVersion;
+
     /** @var AiSceneAnalysisLiveRecordingRequest */
     public $recording;
 
@@ -65,6 +68,19 @@ class AiSceneAnalysisLiveCreateRequest extends \BitmovinApiSdk\Common\ApiResourc
     public function cloudRegion(CloudRegion $cloudRegion)
     {
         $this->cloudRegion = $cloudRegion;
+
+        return $this;
+    }
+
+    /**
+     * Encoder release for the backing Live Encoding, using the same values and validation as &#x60;Encoding.encoderVersion&#x60; (for example, &#x60;LATEST&#x60; or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.
+     *
+     * @param string $encoderVersion
+     * @return $this
+     */
+    public function encoderVersion(string $encoderVersion)
+    {
+        $this->encoderVersion = $encoderVersion;
 
         return $this;
     }

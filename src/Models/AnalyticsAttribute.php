@@ -359,6 +359,9 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     private const LATENCY = 'LATENCY';
 
     /** @var string */
+    private const LATENCY_DELTA = 'LATENCY_DELTA';
+
+    /** @var string */
     private const LICENSE_KEY = 'LICENSE_KEY';
 
     /** @var string */
@@ -1704,6 +1707,16 @@ class AnalyticsAttribute extends \BitmovinApiSdk\Common\Enum
     public static function LATENCY()
     {
         return new AnalyticsAttribute(self::LATENCY);
+    }
+
+    /**
+     * LATENCY_DELTA
+     *
+     * @return AnalyticsAttribute
+     */
+    public static function LATENCY_DELTA()
+    {
+        return new AnalyticsAttribute(self::LATENCY_DELTA);
     }
 
     /**
