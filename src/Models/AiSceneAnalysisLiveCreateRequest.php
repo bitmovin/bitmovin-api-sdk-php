@@ -99,7 +99,7 @@ class AiSceneAnalysisLiveCreateRequest extends \BitmovinApiSdk\Common\ApiResourc
     }
 
     /**
-     * Destinations for cumulative AI analysis results (required)
+     * Destinations for incremental Live Analysis result batches (required)
      *
      * @param \BitmovinApiSdk\Models\AiSceneAnalysisLiveOutput[] $outputs
      * @return $this

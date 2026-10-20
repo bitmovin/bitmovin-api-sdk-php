@@ -25,7 +25,7 @@ class AiSceneAnalysisLiveObservation extends \BitmovinApiSdk\Common\ApiResource
     }
 
     /**
-     * Stable opaque observation ID that remains unchanged across cumulative result generations (required)
+     * Stable opaque observation ID that remains unchanged during the observation&#39;s lifetime and is never reused after removal (required)
      *
      * @param string $id
      * @return $this
