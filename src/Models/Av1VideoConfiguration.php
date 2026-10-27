@@ -16,6 +16,9 @@ class Av1VideoConfiguration extends VideoConfiguration
     /** @var LevelAv1 */
     public $maxLevel;
 
+    /** @var Av1DetailPreservationMode */
+    public $detailPreservationMode;
+
     /** @var Av1DynamicRangeFormat */
     public $dynamicRangeFormat;
 
@@ -34,6 +37,7 @@ class Av1VideoConfiguration extends VideoConfiguration
         $this->presetConfiguration = ObjectMapper::map($this->presetConfiguration, Av1PresetConfiguration::class);
         $this->autoLevelSetup = ObjectMapper::map($this->autoLevelSetup, AutoLevelSetup::class);
         $this->maxLevel = ObjectMapper::map($this->maxLevel, LevelAv1::class);
+        $this->detailPreservationMode = ObjectMapper::map($this->detailPreservationMode, Av1DetailPreservationMode::class);
         $this->dynamicRangeFormat = ObjectMapper::map($this->dynamicRangeFormat, Av1DynamicRangeFormat::class);
     }
 
@@ -72,6 +76,19 @@ class Av1VideoConfiguration extends VideoConfiguration
     public function maxLevel(LevelAv1 $maxLevel)
     {
         $this->maxLevel = $maxLevel;
+
+        return $this;
+    }
+
+    /**
+     * Tunes the encoder to preserve film grain and fine detail. Defaults to OFF.
+     *
+     * @param Av1DetailPreservationMode $detailPreservationMode
+     * @return $this
+     */
+    public function detailPreservationMode(Av1DetailPreservationMode $detailPreservationMode)
+    {
+        $this->detailPreservationMode = $detailPreservationMode;
 
         return $this;
     }

@@ -9,7 +9,6 @@ use BitmovinApiSdk\Common\ObjectMapper;
 use BitmovinApiSdk\Common\BitmovinApiException;
 
 use BitmovinApiSdk\Apis\AiSceneAnalysis\Analyses\AnalysesApi;
-use BitmovinApiSdk\Apis\AiSceneAnalysis\LiveAnalyses\LiveAnalysesApi;
 
 class AiSceneAnalysisApi
 {
@@ -18,9 +17,6 @@ class AiSceneAnalysisApi
 
     /** @var AnalysesApi */
     public $analyses;
-
-    /** @var LiveAnalysesApi */
-    public $liveAnalyses;
 
     /**
      * AiSceneAnalysisApi constructor.
@@ -33,6 +29,5 @@ class AiSceneAnalysisApi
         $this->httpWrapper = $httpWrapper ?? new HttpWrapper($config);
 
         $this->analyses = new AnalysesApi(null, $this->httpWrapper);
-        $this->liveAnalyses = new LiveAnalysesApi(null, $this->httpWrapper);
     }
 }
